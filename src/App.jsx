@@ -1,7 +1,36 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { throwCoins, randomThrows, paipan, formatForAI } from './liuyao/engine.js';
 import { WUXING_CN, YAO_NAMES } from './liuyao/data.js';
-import { aiInterpret } from './liuyao/ai.js';
+import { aiInterpret, SYSTEM_PROMPT } from './liuyao/ai.js';
+
+// ===== 铜钱动画组件 =====
+function CoinAnimation({ phase, coins }) {
+  // coins: [2|3, 2|3, 2|3] — 2=花(背), 3=字(面)
+  return (
+    <div className="flex justify-center items-center gap-5 py-4">
+      {[0, 1, 2].map((i) => {
+        const isLanding = phase === 'landing' && coins;
+        const face = isLanding ? (coins[i] === 3 ? '字' : '花') : '?';
+        const isZi = isLanding && coins[i] === 3;
+
+        return (
+          <div
+            key={i}
+            className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold border-2
+              ${phase === 'spinning' ? 'animate-coin-spin' : ''}
+              ${isLanding ? 'animate-coin-land' : ''}
+              ${isZi ? 'bg-[rgba(200,149,108,0.3)] border-[rgba(200,149,108,0.6)] text-[var(--color-gold)]' :
+                isLanding ? 'bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.2)] text-[var(--color-text-dim)]' :
+                'bg-[rgba(200,149,108,0.15)] border-[rgba(200,149,108,0.4)] text-[var(--color-gold)]'}`}
+            style={isLanding ? { animationDelay: `${i * 80}ms` } : undefined}
+          >
+            {face}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 // ===== 铜钱结果组件 =====
 function CoinThrow({ value, label }) {
@@ -197,24 +226,48 @@ export default function App() {
   const [throws, setThrows] = useState([]);
   const [shaking, setShaking] = useState(false);
   const [result, setResult] = useState(null);
-  const [aiText, setAiText] = useState('');
+  // Multi-turn chat state (replaces single aiText)
+  const [chatMessages, setChatMessages] = useState([]); // [{role, content}]
+  const [streamingText, setStreamingText] = useState('');
   const [aiLoading, setAiLoading] = useState(false);
+  const [followUpInput, setFollowUpInput] = useState('');
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('tianji-api-key') || '');
   const [showSettings, setShowSettings] = useState(false);
   const [error, setError] = useState('');
+  // Coin animation state
+  const [animatingCoins, setAnimatingCoins] = useState(null); // null | { phase, coins?, total? }
+  const chatEndRef = useRef(null);
 
-  // 逐爻摇卦
+  // Auto-scroll chat to bottom when new content arrives
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [chatMessages, streamingText]);
+
+  // 逐爻摇卦 (with coin animation)
   const shakeOnce = useCallback(() => {
-    if (throws.length >= 6) return;
-    setShaking(true);
-    setTimeout(() => {
-      const { total } = throwCoins();
-      setThrows(prev => [...prev, total]);
-      setShaking(false);
-    }, 400);
-  }, [throws.length]);
+    if (throws.length >= 6 || animatingCoins) return;
 
-  // 一键起卦
+    // Phase 1: Spinning (600ms)
+    setAnimatingCoins({ phase: 'spinning' });
+
+    setTimeout(() => {
+      // Generate result
+      const { coins, total } = throwCoins();
+
+      // Phase 2: Landing (400ms)
+      setAnimatingCoins({ phase: 'landing', coins, total });
+
+      setTimeout(() => {
+        // Phase 3: Done — commit result
+        setThrows(prev => [...prev, total]);
+        setAnimatingCoins(null);
+      }, 500); // extra 100ms buffer for animation
+    }, 600);
+  }, [throws.length, animatingCoins]);
+
+  // 一键起卦 (no animation)
   const quickThrow = useCallback(() => {
     const values = randomThrows();
     setThrows(values);
@@ -224,8 +277,11 @@ export default function App() {
   const reset = useCallback(() => {
     setThrows([]);
     setResult(null);
-    setAiText('');
+    setChatMessages([]);
+    setStreamingText('');
+    setFollowUpInput('');
     setError('');
+    setAnimatingCoins(null);
   }, []);
 
   // 摇满6爻后自动排盘
@@ -241,7 +297,7 @@ export default function App() {
     }
   }, [throws, result]);
 
-  // AI断卦
+  // AI断卦 (initial interpretation)
   const askAI = useCallback(async () => {
     if (!result) return;
     if (!apiKey) {
@@ -249,13 +305,20 @@ export default function App() {
       return;
     }
     setAiLoading(true);
-    setAiText('');
+    setStreamingText('');
     setError('');
+
+    const guaText = formatForAI(result, question || '综合运势');
+    const userMsg = { role: 'user', content: guaText };
+    const messages = [userMsg];
+
     try {
-      const guaText = formatForAI(result, question || '综合运势');
-      await aiInterpret(apiKey, guaText, (text) => {
-        setAiText(text);
+      const fullText = await aiInterpret(apiKey, SYSTEM_PROMPT, messages, (text) => {
+        setStreamingText(text);
       });
+      // Commit to chat history
+      setChatMessages([userMsg, { role: 'assistant', content: fullText }]);
+      setStreamingText('');
     } catch (e) {
       setError(`AI解读失败: ${e.message}`);
       console.error('AI解读失败:', e);
@@ -263,6 +326,50 @@ export default function App() {
       setAiLoading(false);
     }
   }, [result, apiKey, question]);
+
+  // 追问 (follow-up question)
+  const askFollowUp = useCallback(async () => {
+    const trimmed = followUpInput.trim();
+    if (!trimmed || aiLoading) return;
+    if (!apiKey) {
+      setShowSettings(true);
+      return;
+    }
+
+    setAiLoading(true);
+    setStreamingText('');
+    setFollowUpInput('');
+    setError('');
+
+    const userMsg = { role: 'user', content: trimmed };
+    const updatedHistory = [...chatMessages, userMsg];
+    setChatMessages(updatedHistory);
+
+    try {
+      const fullText = await aiInterpret(apiKey, SYSTEM_PROMPT, updatedHistory, (text) => {
+        setStreamingText(text);
+      });
+      setChatMessages(prev => [...prev, { role: 'assistant', content: fullText }]);
+      setStreamingText('');
+    } catch (e) {
+      setError(`AI回答失败: ${e.message}`);
+      console.error('AI回答失败:', e);
+    } finally {
+      setAiLoading(false);
+    }
+  }, [followUpInput, aiLoading, apiKey, chatMessages]);
+
+  // Handle Enter key in follow-up input
+  const handleFollowUpKeyDown = useCallback((e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      askFollowUp();
+    }
+  }, [askFollowUp]);
+
+  // Derive chat display state
+  const hasAIResponse = chatMessages.some(m => m.role === 'assistant');
+  const isInitialAskVisible = result && !hasAIResponse && !aiLoading && !streamingText;
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
@@ -299,16 +406,17 @@ export default function App() {
               <>
                 <button
                   onClick={shakeOnce}
-                  disabled={shaking}
+                  disabled={!!animatingCoins}
                   className="flex-1 bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] font-medium py-3 rounded-lg
                     hover:bg-[rgba(200,149,108,0.3)] disabled:opacity-50 transition-colors"
                 >
-                  {shaking ? '摇卦中...' : throws.length === 0 ? '开始摇卦' : `摇第${throws.length + 1}爻`}
+                  {animatingCoins ? '摇卦中...' : throws.length === 0 ? '开始摇卦' : `摇第${throws.length + 1}爻`}
                 </button>
                 <button
                   onClick={quickThrow}
+                  disabled={!!animatingCoins}
                   className="px-6 py-3 border border-[rgba(200,149,108,0.3)] text-[rgba(200,149,108,0.8)] rounded-lg
-                    hover:bg-[rgba(200,149,108,0.1)] transition-colors text-sm"
+                    hover:bg-[rgba(200,149,108,0.1)] disabled:opacity-50 transition-colors text-sm"
                 >
                   一键起卦
                 </button>
@@ -325,6 +433,16 @@ export default function App() {
             )}
           </div>
         </section>
+
+        {/* 铜钱动画 */}
+        {animatingCoins && (
+          <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-4">
+            <CoinAnimation phase={animatingCoins.phase} coins={animatingCoins.coins} />
+            <div className="text-center text-[var(--color-text-dim)] text-xs mt-1">
+              {animatingCoins.phase === 'spinning' ? '铜钱翻转中...' : `结果: ${animatingCoins.total}`}
+            </div>
+          </section>
+        )}
 
         {/* 摇卦过程 */}
         {throws.length > 0 && (
@@ -346,12 +464,12 @@ export default function App() {
         {/* 排盘结果 */}
         {result && <GuaDisplay result={result} />}
 
-        {/* AI断卦 */}
+        {/* AI断卦 + 多轮对话 */}
         {result && (
           <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-[var(--color-gold)] text-sm font-medium">AI 解读</h3>
-              {!aiText && !aiLoading && (
+              {isInitialAskVisible && (
                 <button
                   onClick={askAI}
                   className="bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
@@ -360,16 +478,76 @@ export default function App() {
                   请求 AI 断卦
                 </button>
               )}
-              {aiLoading && (
+            </div>
+
+            {/* Chat messages */}
+            <div className="space-y-4">
+              {chatMessages.map((msg, i) => {
+                // Skip the first user message (raw gua data, not useful to display)
+                if (i === 0 && msg.role === 'user') return null;
+
+                if (msg.role === 'user') {
+                  return (
+                    <div key={i} className="border-l-2 border-[var(--color-gold)] pl-3 py-1">
+                      <div className="text-[var(--color-gold)] text-xs mb-1">追问</div>
+                      <div className="text-[var(--color-text)] text-sm">{msg.content}</div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div key={i} className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
+                    {msg.content}
+                  </div>
+                );
+              })}
+
+              {/* Streaming text (current response being generated) */}
+              {streamingText && (
+                <div className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
+                  {streamingText}
+                </div>
+              )}
+
+              {/* Loading indicator */}
+              {aiLoading && !streamingText && (
                 <span className="text-[rgba(200,149,108,0.6)] text-sm animate-pulse">解读中...</span>
               )}
+
+              <div ref={chatEndRef} />
             </div>
-            {aiText && (
-              <div className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
-                {aiText}
+
+            {/* Follow-up input (shown after first AI response) */}
+            {hasAIResponse && !aiLoading && (
+              <div className="mt-4 pt-4 border-t border-[rgba(200,149,108,0.1)] flex gap-2">
+                <input
+                  type="text"
+                  value={followUpInput}
+                  onChange={e => setFollowUpInput(e.target.value)}
+                  onKeyDown={handleFollowUpKeyDown}
+                  placeholder="继续追问，如：能详细说说财运方面吗？"
+                  className="flex-1 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-3 py-2 text-[var(--color-text)] text-sm
+                    placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none transition-colors"
+                />
+                <button
+                  onClick={askFollowUp}
+                  disabled={!followUpInput.trim()}
+                  className="px-4 py-2 bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] rounded-lg text-sm
+                    hover:bg-[rgba(200,149,108,0.3)] disabled:opacity-30 transition-colors whitespace-nowrap"
+                >
+                  发送
+                </button>
               </div>
             )}
-            {!apiKey && !aiText && (
+
+            {/* Follow-up loading state */}
+            {hasAIResponse && aiLoading && (
+              <div className="mt-4 pt-4 border-t border-[rgba(200,149,108,0.1)]">
+                <div className="text-[rgba(200,149,108,0.6)] text-sm animate-pulse">回答中...</div>
+              </div>
+            )}
+
+            {!apiKey && !hasAIResponse && (
               <div className="text-[var(--color-text-dim)] text-xs">
                 请先在设置中输入 Claude API Key 以使用 AI 解读功能。
               </div>

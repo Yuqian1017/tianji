@@ -1,4 +1,4 @@
-const SYSTEM_PROMPT = `你是一位精通六爻占卜的术数师。说话通俗易懂，善于用比喻让人一听就明白。
+export const SYSTEM_PROMPT = `你是一位精通六爻占卜的术数师。说话通俗易懂，善于用比喻让人一听就明白。
 
 断卦流程：
 1. 先看卦名卦象，总论此卦对问事的整体方向
@@ -34,7 +34,15 @@ const SYSTEM_PROMPT = `你是一位精通六爻占卜的术数师。说话通俗
 4. 语言通俗，适当引用卦理但不要太多术语
 5. 最后加一句：以上解读仅供参考，重大决策请综合考量。`;
 
-export async function aiInterpret(apiKey, guaText, onChunk) {
+/**
+ * Multi-turn AI interpretation via Claude streaming API.
+ * @param {string} apiKey - Anthropic API key
+ * @param {string} systemPrompt - System prompt text
+ * @param {Array<{role: string, content: string}>} messages - Full conversation history
+ * @param {(text: string) => void} onChunk - Streaming callback with accumulated text
+ * @returns {Promise<string>} Full response text
+ */
+export async function aiInterpret(apiKey, systemPrompt, messages, onChunk) {
   if (!apiKey) {
     throw new Error('请先在设置中输入 Claude API Key');
   }
@@ -49,10 +57,10 @@ export async function aiInterpret(apiKey, guaText, onChunk) {
     },
     body: JSON.stringify({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 2000,
-      system: SYSTEM_PROMPT,
+      max_tokens: 4000,
+      system: systemPrompt,
       stream: true,
-      messages: [{ role: 'user', content: guaText }],
+      messages,
     }),
   });
 
