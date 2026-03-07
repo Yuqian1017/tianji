@@ -3,6 +3,133 @@ import { throwCoins, randomThrows, paipan, formatForAI } from './liuyao/engine.j
 import { WUXING_CN, YAO_NAMES } from './liuyao/data.js';
 import { aiInterpret, SYSTEM_PROMPT } from './liuyao/ai.js';
 
+// ===== History helpers =====
+const HISTORY_KEY = 'tianji-history';
+const MAX_HISTORY = 50;
+
+function loadHistoryFromStorage() {
+  try {
+    const raw = localStorage.getItem(HISTORY_KEY);
+    if (!raw) return [];
+    const items = JSON.parse(raw);
+    if (!Array.isArray(items)) {
+      console.warn('History data is not an array, resetting');
+      return [];
+    }
+    return items;
+  } catch (e) {
+    console.warn('Failed to load history from localStorage:', e);
+    return [];
+  }
+}
+
+function saveHistoryToStorage(items) {
+  const trimmed = items.slice(0, MAX_HISTORY);
+  try {
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(trimmed));
+  } catch (e) {
+    console.error('Failed to save history to localStorage:', e);
+  }
+  return trimmed;
+}
+
+function formatTimestamp(ts) {
+  const d = new Date(ts);
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+// ===== 历史抽屉组件 =====
+function HistoryDrawer({ show, history, onClose, onLoad, onDelete }) {
+  const [closing, setClosing] = useState(false);
+
+  const handleClose = useCallback(() => {
+    setClosing(true);
+    setTimeout(() => {
+      setClosing(false);
+      onClose();
+    }, 200);
+  }, [onClose]);
+
+  if (!show && !closing) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex justify-end" onClick={handleClose}>
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Drawer panel */}
+      <div
+        className={`relative w-80 max-w-[85vw] h-full bg-[#0e0d0a] border-l border-[rgba(200,149,108,0.2)] flex flex-col
+          ${closing ? 'animate-drawer-out' : 'animate-drawer-in'}`}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-[rgba(200,149,108,0.15)]">
+          <h2 className="text-[var(--color-gold)] font-bold">卜算历史</h2>
+          <button
+            onClick={handleClose}
+            className="text-[var(--color-text-dim)] hover:text-[var(--color-text)] text-lg leading-none px-1"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* History list */}
+        <div className="flex-1 overflow-y-auto">
+          {history.length === 0 ? (
+            <div className="text-[var(--color-text-dim)] text-sm text-center py-12">
+              暂无历史记录
+            </div>
+          ) : (
+            <div className="divide-y divide-[rgba(255,255,255,0.05)]">
+              {history.map((item) => (
+                <div
+                  key={item.id}
+                  className="px-4 py-3 hover:bg-[rgba(200,149,108,0.05)] cursor-pointer transition-colors group"
+                  onClick={() => onLoad(item)}
+                >
+                  <div className="text-[var(--color-text-dim)] text-xs mb-1">
+                    {formatTimestamp(item.timestamp)}
+                  </div>
+                  <div className="text-[var(--color-text)] text-sm truncate mb-1">
+                    {item.question || '综合运势'}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs">
+                      <span className="text-[var(--color-gold)]">{item.result.benGua.name}</span>
+                      {item.result.bianGua && (
+                        <>
+                          <span className="text-[var(--color-text-dim)] mx-1">→</span>
+                          <span className="text-[var(--color-jade)]">{item.result.bianGua.name}</span>
+                        </>
+                      )}
+                    </div>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onDelete(item.id);
+                      }}
+                      className="text-[var(--color-text-dim)] hover:text-[var(--color-cinnabar)] text-xs opacity-0 group-hover:opacity-100 transition-opacity px-1"
+                    >
+                      删除
+                    </button>
+                  </div>
+                  {item.chatMessages.some(m => m.role === 'assistant') && (
+                    <div className="text-[var(--color-text-dim)] text-xs mt-1 opacity-60">
+                      含 AI 解读
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ===== 铜钱动画组件 =====
 function CoinAnimation({ phase, coins }) {
   // coins: [2|3, 2|3, 2|3] — 2=花(背), 3=字(面)
@@ -226,7 +353,7 @@ export default function App() {
   const [throws, setThrows] = useState([]);
   const [shaking, setShaking] = useState(false);
   const [result, setResult] = useState(null);
-  // Multi-turn chat state (replaces single aiText)
+  // Multi-turn chat state
   const [chatMessages, setChatMessages] = useState([]); // [{role, content}]
   const [streamingText, setStreamingText] = useState('');
   const [aiLoading, setAiLoading] = useState(false);
@@ -235,7 +362,12 @@ export default function App() {
   const [showSettings, setShowSettings] = useState(false);
   const [error, setError] = useState('');
   // Coin animation state
-  const [animatingCoins, setAnimatingCoins] = useState(null); // null | { phase, coins?, total? }
+  const [animatingCoins, setAnimatingCoins] = useState(null);
+  // History state
+  const [history, setHistory] = useState(() => loadHistoryFromStorage());
+  const [showHistory, setShowHistory] = useState(false);
+  const [activeHistoryId, setActiveHistoryId] = useState(null);
+
   const chatEndRef = useRef(null);
 
   // Auto-scroll chat to bottom when new content arrives
@@ -245,6 +377,62 @@ export default function App() {
     }
   }, [chatMessages, streamingText]);
 
+  // === History CRUD ===
+
+  // Create or update history entry
+  const upsertHistory = useCallback((id, question, throws, result, chatMsgs) => {
+    setHistory(prev => {
+      const existing = prev.findIndex(h => h.id === id);
+      const item = {
+        id,
+        timestamp: existing >= 0 ? prev[existing].timestamp : Date.now(),
+        question: question || '综合运势',
+        throws,
+        result,
+        chatMessages: chatMsgs,
+      };
+      let updated;
+      if (existing >= 0) {
+        // Update in place
+        updated = [...prev];
+        updated[existing] = item;
+      } else {
+        // Prepend new entry
+        updated = [item, ...prev];
+      }
+      return saveHistoryToStorage(updated);
+    });
+  }, []);
+
+  // Load history item into current session
+  const handleLoadHistory = useCallback((item) => {
+    setQuestion(item.question || '');
+    setThrows(item.throws);
+    setResult(item.result);
+    setChatMessages(item.chatMessages || []);
+    setStreamingText('');
+    setFollowUpInput('');
+    setError('');
+    setAnimatingCoins(null);
+    setActiveHistoryId(item.id);
+    setShowHistory(false);
+    // Scroll to top after loading
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Delete history item
+  const handleDeleteHistory = useCallback((id) => {
+    setHistory(prev => {
+      const updated = prev.filter(h => h.id !== id);
+      saveHistoryToStorage(updated);
+      return updated;
+    });
+    // If deleting the active item, clear the active ID
+    if (activeHistoryId === id) {
+      setActiveHistoryId(null);
+    }
+  }, [activeHistoryId]);
+
   // 逐爻摇卦 (with coin animation)
   const shakeOnce = useCallback(() => {
     if (throws.length >= 6 || animatingCoins) return;
@@ -253,17 +441,15 @@ export default function App() {
     setAnimatingCoins({ phase: 'spinning' });
 
     setTimeout(() => {
-      // Generate result
       const { coins, total } = throwCoins();
 
       // Phase 2: Landing (400ms)
       setAnimatingCoins({ phase: 'landing', coins, total });
 
       setTimeout(() => {
-        // Phase 3: Done — commit result
         setThrows(prev => [...prev, total]);
         setAnimatingCoins(null);
-      }, 500); // extra 100ms buffer for animation
+      }, 500);
     }, 600);
   }, [throws.length, animatingCoins]);
 
@@ -282,6 +468,7 @@ export default function App() {
     setFollowUpInput('');
     setError('');
     setAnimatingCoins(null);
+    setActiveHistoryId(null);
   }, []);
 
   // 摇满6爻后自动排盘
@@ -316,16 +503,21 @@ export default function App() {
       const fullText = await aiInterpret(apiKey, SYSTEM_PROMPT, messages, (text) => {
         setStreamingText(text);
       });
-      // Commit to chat history
-      setChatMessages([userMsg, { role: 'assistant', content: fullText }]);
+      const newChatMessages = [userMsg, { role: 'assistant', content: fullText }];
+      setChatMessages(newChatMessages);
       setStreamingText('');
+
+      // Auto-save to history
+      const historyId = activeHistoryId || Date.now().toString();
+      setActiveHistoryId(historyId);
+      upsertHistory(historyId, question, throws, result, newChatMessages);
     } catch (e) {
       setError(`AI解读失败: ${e.message}`);
       console.error('AI解读失败:', e);
     } finally {
       setAiLoading(false);
     }
-  }, [result, apiKey, question]);
+  }, [result, apiKey, question, throws, activeHistoryId, upsertHistory]);
 
   // 追问 (follow-up question)
   const askFollowUp = useCallback(async () => {
@@ -342,22 +534,28 @@ export default function App() {
     setError('');
 
     const userMsg = { role: 'user', content: trimmed };
-    const updatedHistory = [...chatMessages, userMsg];
-    setChatMessages(updatedHistory);
+    const updatedMessages = [...chatMessages, userMsg];
+    setChatMessages(updatedMessages);
 
     try {
-      const fullText = await aiInterpret(apiKey, SYSTEM_PROMPT, updatedHistory, (text) => {
+      const fullText = await aiInterpret(apiKey, SYSTEM_PROMPT, updatedMessages, (text) => {
         setStreamingText(text);
       });
-      setChatMessages(prev => [...prev, { role: 'assistant', content: fullText }]);
+      const finalMessages = [...updatedMessages, { role: 'assistant', content: fullText }];
+      setChatMessages(finalMessages);
       setStreamingText('');
+
+      // Update history with new chat messages
+      if (activeHistoryId) {
+        upsertHistory(activeHistoryId, question, throws, result, finalMessages);
+      }
     } catch (e) {
       setError(`AI回答失败: ${e.message}`);
       console.error('AI回答失败:', e);
     } finally {
       setAiLoading(false);
     }
-  }, [followUpInput, aiLoading, apiKey, chatMessages]);
+  }, [followUpInput, aiLoading, apiKey, chatMessages, activeHistoryId, question, throws, result, upsertHistory]);
 
   // Handle Enter key in follow-up input
   const handleFollowUpKeyDown = useCallback((e) => {
@@ -378,12 +576,23 @@ export default function App() {
         style={{ backgroundColor: 'rgba(10,10,15,0.9)' }}>
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <h1 className="text-[var(--color-gold)] text-lg font-bold tracking-wide">天机卷 · 六爻占卜</h1>
-          <button
-            onClick={() => setShowSettings(true)}
-            className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[rgba(255,255,255,0.1)] hover:border-[rgba(200,149,108,0.3)] transition-colors"
-          >
-            设置
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowHistory(true)}
+              className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[rgba(255,255,255,0.1)] hover:border-[rgba(200,149,108,0.3)] transition-colors"
+            >
+              历史
+              {history.length > 0 && (
+                <span className="ml-1 text-xs text-[var(--color-gold)] opacity-60">{history.length}</span>
+              )}
+            </button>
+            <button
+              onClick={() => setShowSettings(true)}
+              className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[rgba(255,255,255,0.1)] hover:border-[rgba(200,149,108,0.3)] transition-colors"
+            >
+              设置
+            </button>
+          </div>
         </div>
       </header>
 
@@ -575,6 +784,15 @@ export default function App() {
         setApiKey={setApiKey}
         show={showSettings}
         setShow={setShowSettings}
+      />
+
+      {/* 历史抽屉 */}
+      <HistoryDrawer
+        show={showHistory}
+        history={history}
+        onClose={() => setShowHistory(false)}
+        onLoad={handleLoadHistory}
+        onDelete={handleDeleteHistory}
       />
     </div>
   );

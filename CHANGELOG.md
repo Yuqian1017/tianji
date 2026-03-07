@@ -2,6 +2,15 @@
 
 ## 2026-03-07
 
+### feat: divination history
+- **History drawer**: Right-side slide-out panel showing past divination sessions
+- **Auto-save**: Sessions saved to localStorage after AI interpretation, updated on follow-up questions
+- **Full restore**: Click a history entry to restore hexagram display + full AI conversation, can continue asking follow-ups
+- **Delete**: Remove individual history entries (hover to reveal delete button)
+- **Persistence**: Up to 50 entries stored in localStorage, survives page refresh
+- `App.jsx`: Add `HistoryDrawer` component, `history`/`showHistory`/`activeHistoryId` state, `upsertHistory`/`handleLoadHistory`/`handleDeleteHistory` callbacks
+- `index.css`: Add `drawer-in`/`drawer-out` keyframe animations
+
 ### feat: follow-up questions + coin animation
 - **Multi-turn AI chat**: After initial interpretation, users can ask follow-up questions with full conversation history sent to Claude
 - **Coin toss animation**: 3D rotateY spinning + bounce-landing CSS animation when shaking coins one-by-one
