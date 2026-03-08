@@ -31,8 +31,28 @@ export async function aiInterpret(apiKey, systemPrompt, messages, onChunk) {
   });
 
   if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`API 调用失败 (${response.status}): ${err}`);
+    const errText = await response.text();
+    // Parse Anthropic API error to extract user-friendly message
+    let userMessage;
+    try {
+      const errJson = JSON.parse(errText);
+      const rawMsg = errJson?.error?.message || errText;
+      // Map common Anthropic errors to Chinese
+      if (rawMsg.includes('credit balance is too low')) {
+        userMessage = 'API 余额不足，请前往 Anthropic Console 充值后重试。';
+      } else if (rawMsg.includes('invalid x-api-key') || rawMsg.includes('invalid api key')) {
+        userMessage = 'API Key 无效，请在设置中检查并重新输入。';
+      } else if (rawMsg.includes('rate limit')) {
+        userMessage = '请求过于频繁，请稍后再试。';
+      } else if (rawMsg.includes('overloaded')) {
+        userMessage = 'Claude 服务繁忙，请稍后再试。';
+      } else {
+        userMessage = rawMsg;
+      }
+    } catch {
+      userMessage = errText;
+    }
+    throw new Error(userMessage);
   }
 
   const reader = response.body.getReader();

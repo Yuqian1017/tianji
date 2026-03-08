@@ -212,8 +212,10 @@ body {
 }
 
 [data-theme="dao"] body {
-  /* Pure color with very subtle pattern — no image needed */
-  background-image: none;
+  background-image: url('/assets/bg-dao.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Scrollbar styling */

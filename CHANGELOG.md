@@ -2,6 +2,17 @@
 
 ## 2026-03-07
 
+### feat: 品牌素材集成 + API 错误优化
+- **Banner 横幅**: header 下方添加仙山云鹤全宽横幅，半透明渐隐效果
+- **Tab 图标**: 用 fal 生成的铜钱/梅花图标替换原来的 emoji (☰/❀)
+- **云纹分割线**: footer 上方添加金色云纹装饰分割线
+- **背景纹理**: 三套主题都有各自的 fal 生成背景 (ink=水墨山、jade=玉石纹、dao=宣纸)
+- **API 错误信息中文化**: 解析 Anthropic API 错误 JSON，映射为友好中文提示
+  - 余额不足 → "API 余额不足，请前往 Anthropic Console 充值后重试"
+  - Key 无效 → "API Key 无效，请在设置中检查并重新输入"
+  - 频率限制 → "请求过于频繁，请稍后再试"
+  - 服务繁忙 → "Claude 服务繁忙，请稍后再试"
+
 ### fix: CSS 变量继承 + 素材生成
 - **修复主题切换不生效 bug**: `data-theme` 属性原错误放在 `<body>` 上，导致 `[data-theme="ink"]` 选择器匹配 body 覆盖了 html 上的 jade/dao 变量。修复：移至 `<html>`，body 不再设置 data-theme
 - **移除 `@theme` 变量**: Tailwind v4 的 `@theme` 用 `@property { inherits: false }` 注册变量，阻止 html→body 继承。改为 `:root` 常规 CSS 变量 + `[data-theme]` 覆盖

@@ -7,8 +7,8 @@ import LiuyaoModule from './modules/liuyao/LiuyaoModule.jsx';
 import MeihuaModule from './modules/meihua/MeihuaModule.jsx';
 
 const TABS = [
-  { id: 'liuyao', label: '六爻占卜', icon: '☰' },
-  { id: 'meihua', label: '梅花易数', icon: '❀' },
+  { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
+  { id: 'meihua', label: '梅花易数', icon: '/assets/icon-meihua.webp' },
 ];
 
 const THEME_KEY = 'tianji-theme';
@@ -130,13 +130,23 @@ export default function App() {
                     : 'text-[var(--color-text-dim)] border-transparent hover:text-[var(--color-text)] hover:border-[var(--color-gold-border)]'
                   }`}
               >
-                <span className="mr-1.5 opacity-70">{tab.icon}</span>
+                <img src={tab.icon} alt="" className="inline-block w-5 h-5 mr-1.5 -mt-0.5 opacity-80" />
                 {tab.label}
               </button>
             ))}
           </div>
         </div>
       </header>
+
+      {/* Banner */}
+      <div className="max-w-3xl mx-auto overflow-hidden">
+        <img
+          src="/assets/banner.webp"
+          alt=""
+          className="w-full h-20 object-cover opacity-40"
+          style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)' }}
+        />
+      </div>
 
       {/* Module content */}
       <main className="max-w-3xl mx-auto px-4 py-6">
@@ -164,8 +174,13 @@ export default function App() {
         )}
       </main>
 
+      {/* Decorative divider */}
+      <div className="max-w-md mx-auto px-8 py-2">
+        <img src="/assets/divider.webp" alt="" className="w-full h-6 object-contain opacity-30" />
+      </div>
+
       {/* Footer */}
-      <footer className="text-center py-6 text-[var(--color-text-dim)] text-xs max-w-2xl mx-auto px-4 font-body">
+      <footer className="text-center py-4 text-[var(--color-text-dim)] text-xs max-w-2xl mx-auto px-4 font-body">
         本工具基于中国传统文化知识体系，所有占算和分析结果仅供参考和学习。
         不构成任何医疗、法律、财务或人生决策建议。重大决策请咨询专业人士。
       </footer>
