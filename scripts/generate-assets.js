@@ -88,13 +88,13 @@ const ASSETS = [
   // === Coin animation assets ===
   {
     name: 'coin-front',
-    prompt: 'Single ancient Chinese bronze coin, front face showing Chinese characters 开元通宝, round coin with square center hole, aged patina bronze green-brown color, detailed relief texture, isolated on pure white background, top-down view, flat lay, antique numismatic style, high detail, no shadows, no other objects',
+    prompt: 'Extreme close-up of single ancient Chinese bronze coin filling the entire frame edge to edge, front face showing Chinese characters 开元通宝, round coin with square center hole, aged patina bronze green-brown color, detailed relief texture, top-down flat lay view, the coin occupies 100% of the image with zero background visible, antique numismatic macro photography, high detail',
     width: 512,
     height: 512,
   },
   {
     name: 'coin-back',
-    prompt: 'Single ancient Chinese bronze coin, back face showing smooth surface with crescent moon mark, round coin with square center hole, aged patina bronze green-brown color, detailed relief texture, isolated on pure white background, top-down view, flat lay, antique numismatic style, high detail, no shadows, no other objects',
+    prompt: 'Extreme macro close-up photograph of ancient Chinese bronze coin back face, the coin surface completely fills the entire frame with no background visible at all, smooth worn surface with faint crescent moon mark near the square center hole, aged green-brown bronze patina with oxidation, detailed metal texture fills every pixel of the image, museum macro photography style, no edges of coin visible',
     width: 512,
     height: 512,
   },

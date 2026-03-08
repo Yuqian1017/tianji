@@ -25,7 +25,7 @@ function CoinAnimation({ phase, coins }) {
               <img
                 src={isLanding ? (isFront ? '/assets/coin-front.webp' : '/assets/coin-back.webp') : '/assets/coin-front.webp'}
                 alt={isLanding ? (isFront ? '字' : '花') : ''}
-                className="w-full h-full object-contain drop-shadow-md"
+                className="w-full h-full object-cover rounded-full drop-shadow-md"
               />
             </div>
             {/* Shadow */}
@@ -70,7 +70,7 @@ function CoinThrow({ value, label }) {
             key={i}
             src={isFront ? '/assets/coin-front.webp' : '/assets/coin-back.webp'}
             alt={isFront ? '字' : '花'}
-            className="w-7 h-7 object-contain rounded-full"
+            className="w-7 h-7 object-cover rounded-full"
           />
         ))}
       </div>
