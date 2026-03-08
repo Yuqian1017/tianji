@@ -5,13 +5,19 @@
    通过 data-theme 属性切换: ink | jade | dao
    ============================================= */
 
-/* --- Base tokens (Tailwind @theme) --- */
-@theme {
-  /* These are overridden per-theme below; default = ink */
+/* --- Base tokens ---
+   NOTE: Do NOT put custom color variables in @theme — Tailwind v4's @theme
+   registers properties with @property { inherits: false }, which breaks
+   CSS variable inheritance from html → body. Our color system relies on
+   inheritance through [data-theme] on <html>. Variables are defined in the
+   [data-theme] selectors below. --- */
+
+/* --- Fallback defaults (applied when no data-theme is set) --- */
+:root {
   --color-bg: #f5f0e8;
-  --color-bg-card: rgba(255,255,255,0.85);
+  --color-bg-card: rgba(255,255,255,0.82);
   --color-gold: #5a4a3a;
-  --color-gold-dim: rgba(90,74,58,0.2);
+  --color-gold-dim: rgba(90,74,58,0.18);
   --color-jade: #4a7a6a;
   --color-cinnabar: #b83a3e;
   --color-indigo: #4a6fa5;
@@ -22,6 +28,32 @@
   --color-wx-earth: #a07820;
   --color-wx-metal: #6a6050;
   --color-wx-water: #2a5a8a;
+  --color-header-bg: rgba(245,240,232,0.92);
+  --color-drawer-bg: #f0ebe3;
+  --color-surface-subtle: rgba(0,0,0,0.02);
+  --color-surface-dim: rgba(0,0,0,0.04);
+  --color-surface-border: rgba(0,0,0,0.08);
+  --color-surface-border-med: rgba(0,0,0,0.12);
+  --color-gold-bg: rgba(90,74,58,0.1);
+  --color-gold-bg-hover: rgba(90,74,58,0.18);
+  --color-gold-bg-faint: rgba(90,74,58,0.06);
+  --color-gold-border: rgba(90,74,58,0.15);
+  --color-gold-border-light: rgba(90,74,58,0.1);
+  --color-gold-border-med: rgba(90,74,58,0.25);
+  --color-gold-border-strong: rgba(90,74,58,0.35);
+  --color-gold-muted: rgba(90,74,58,0.5);
+  --color-gold-strong: rgba(90,74,58,0.7);
+  --color-jade-bg-faint: rgba(74,122,106,0.06);
+  --color-jade-bg: rgba(74,122,106,0.12);
+  --color-jade-border: rgba(74,122,106,0.3);
+  --color-placeholder: rgba(42,36,32,0.25);
+  --color-error-bg: rgba(184,58,62,0.08);
+  --color-error-border: rgba(184,58,62,0.25);
+  --color-wx-metal-bg: rgba(106,96,80,0.08);
+  --color-wx-wood-bg: rgba(46,125,66,0.08);
+  --color-wx-water-bg: rgba(42,90,138,0.08);
+  --color-wx-fire-bg: rgba(184,58,62,0.08);
+  --color-wx-earth-bg: rgba(160,120,32,0.08);
 }
 
 /* ===========================================

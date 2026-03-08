@@ -2,6 +2,11 @@
 
 ## 2026-03-07
 
+### fix: CSS 变量继承 + 素材生成
+- **修复主题切换不生效 bug**: `data-theme` 属性原错误放在 `<body>` 上，导致 `[data-theme="ink"]` 选择器匹配 body 覆盖了 html 上的 jade/dao 变量。修复：移至 `<html>`，body 不再设置 data-theme
+- **移除 `@theme` 变量**: Tailwind v4 的 `@theme` 用 `@property { inherits: false }` 注册变量，阻止 html→body 继承。改为 `:root` 常规 CSS 变量 + `[data-theme]` 覆盖
+- **fal API 素材生成完成**: 运行 `generate-assets.js` 生成全套 8 个素材 (3 背景 + 3 图标 + banner + divider)
+
 ### feat: 修仙风 light 主题系统 (三套方案)
 - **主题切换系统**: 三套 light 修仙风主题通过 `data-theme` CSS 变量切换
   - **水墨留白** (`ink`): 米色宣纸底、深墨棕文字、水墨远山背景
