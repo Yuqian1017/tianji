@@ -2,6 +2,27 @@
 
 ## 2026-03-07
 
+### feat: multi-module architecture + 梅花易数
+- **Tab navigation**: Header redesigned with "天机卷" title + tab bar (六爻占卜 | 梅花易数)
+- **Modular architecture**: Monolithic App.jsx (~800 lines) split into:
+  - `src/App.jsx` — Tab shell + shared state (~170 lines)
+  - `src/lib/ai.js` — Generic Claude streaming API caller (shared)
+  - `src/lib/history.js` — History persistence helpers (shared)
+  - `src/components/SettingsPanel.jsx` — Settings modal (shared)
+  - `src/components/HistoryDrawer.jsx` — History drawer with module badge & filtering (shared)
+  - `src/modules/liuyao/LiuyaoModule.jsx` — Full liuyao UI + state (~530 lines)
+  - `src/modules/meihua/MeihuaModule.jsx` — Full meihua UI + state (~450 lines)
+- **梅花易数 (Plum Blossom Divination)** — New module with:
+  - Three casting methods: 报数起卦 (numbers), 时间起卦 (time), 文字起卦 (text/strokes)
+  - Full hexagram display: 本卦, 上下卦 with 先天八卦数 symbols, 体/用 labels, 五行 colors
+  - 体用关系 analysis with verdict (用生体✅ / 体生用⚠️ / 用克体❌ / 体克用🔶 / 比和➡️)
+  - 互卦 (process) and 变卦 (result) calculation and display
+  - AI interpretation with module-specific system prompt + follow-up questions
+  - `engine.js`: castByNumber, castByTime, castByText, formatForAI
+  - `data.js`: 先天八卦数, 万物类象, 五行生克, 汉字笔画表 (~1500 characters)
+- **History**: Added `module` field to history items; drawer filters by active tab, shows module badge (六爻/梅花)
+- Page title changed to "天机卷 · 术数工具"
+
 ### feat: divination history
 - **History drawer**: Right-side slide-out panel showing past divination sessions
 - **Auto-save**: Sessions saved to localStorage after AI interpretation, updated on follow-up questions
