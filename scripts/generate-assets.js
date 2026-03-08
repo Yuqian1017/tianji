@@ -69,10 +69,22 @@ const ASSETS = [
     height: 512,
   },
 
-  // === Header banner ===
+  // === Header banners (theme-specific) ===
   {
     name: 'banner',
     prompt: 'Wide panoramic banner, ethereal Chinese landscape, misty mountains with flowing clouds, cranes flying in distance, soft watercolor ink wash style, very light and airy, pastel tones on cream background, no text, dreamy immortal realm aesthetic, xianxia cultivation world, ultra wide aspect ratio',
+    width: 1920,
+    height: 300,
+  },
+  {
+    name: 'banner-dao',
+    prompt: 'Wide panoramic banner, serene ancient Chinese Daoist temple rooftop silhouette among bamboo forest and pine trees, morning mist, very soft watercolor ink wash style, light warm cream tones, minimal and zen, subtle and ethereal, no text, ultra wide aspect ratio, peaceful Daoist mountain retreat aesthetic',
+    width: 1920,
+    height: 300,
+  },
+  {
+    name: 'banner-dark',
+    prompt: 'Wide panoramic banner, dark night sky with stars and subtle aurora, distant misty mountain silhouettes, crescent moon, deep navy blue-black tones, ethereal celestial atmosphere, Chinese xianxia night scene, very subtle and moody, no text, ultra wide aspect ratio, mystical stargazing aesthetic',
     width: 1920,
     height: 300,
   },

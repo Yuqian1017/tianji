@@ -13,6 +13,13 @@ const TABS = [
 
 const THEME_KEY = 'tianji-theme';
 
+const THEME_BANNERS = {
+  ink: '/assets/banner.webp',
+  jade: '/assets/banner.webp',
+  dao: '/assets/banner-dao.webp',
+  dark: '/assets/banner-dark.webp',
+};
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('liuyao');
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('tianji-api-key') || '');
@@ -138,12 +145,12 @@ export default function App() {
         </div>
       </header>
 
-      {/* Full-width banner */}
+      {/* Full-width banner (theme-specific) */}
       <div className="w-full overflow-hidden relative">
         <img
-          src="/assets/banner.webp"
+          src={THEME_BANNERS[theme] || '/assets/banner.webp'}
           alt=""
-          className="w-full h-24 object-cover opacity-35"
+          className={`w-full h-24 object-cover ${theme === 'dark' ? 'opacity-50' : 'opacity-35'}`}
           style={{
             maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%)',
@@ -178,8 +185,10 @@ export default function App() {
       </main>
 
       {/* Decorative divider */}
-      <div className="max-w-md mx-auto px-8 py-4">
-        <img src="/assets/divider.webp" alt="" className="w-full h-6 object-contain animate-divider-shimmer" />
+      <div className="max-w-xs mx-auto px-8 py-6 flex items-center gap-3 opacity-30">
+        <div className="flex-1 h-px bg-[var(--color-gold-border)]" />
+        <span className="text-[var(--color-gold-muted)] text-xs font-title tracking-widest">✦</span>
+        <div className="flex-1 h-px bg-[var(--color-gold-border)]" />
       </div>
 
       {/* Footer */}
