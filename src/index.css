@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* =============================================
-   天机卷 · 三套修仙风 Light 主题系统
-   通过 data-theme 属性切换: ink | jade | dao
+   天机卷 · 四套修仙风主题系统
+   通过 data-theme 属性切换: ink | jade | dao | dark
    ============================================= */
 
 /* --- Base tokens ---
@@ -183,6 +183,54 @@
   --color-wx-earth-bg: rgba(160,120,32,0.06);
 }
 
+/* ===========================================
+   Theme D: 夜观星象 — dark stargazing
+   =========================================== */
+[data-theme="dark"] {
+  --color-bg: #0f1118;
+  --color-bg-card: rgba(20,22,32,0.9);
+  --color-gold: #d4a853;
+  --color-gold-dim: rgba(212,168,83,0.2);
+  --color-jade: #7ab8a8;
+  --color-cinnabar: #e05555;
+  --color-indigo: #6b8fd4;
+  --color-text: #e8e4dc;
+  --color-text-dim: rgba(232,228,220,0.5);
+  /* Wuxing (brighter for dark bg) */
+  --color-wx-wood: #5aaa6a;
+  --color-wx-fire: #e05555;
+  --color-wx-earth: #d4a040;
+  --color-wx-metal: #9a9080;
+  --color-wx-water: #5a8ad0;
+  /* Semantic surfaces */
+  --color-header-bg: rgba(15,17,24,0.95);
+  --color-drawer-bg: #13151e;
+  --color-surface-subtle: rgba(255,255,255,0.02);
+  --color-surface-dim: rgba(255,255,255,0.05);
+  --color-surface-border: rgba(255,255,255,0.08);
+  --color-surface-border-med: rgba(255,255,255,0.12);
+  --color-gold-bg: rgba(212,168,83,0.12);
+  --color-gold-bg-hover: rgba(212,168,83,0.2);
+  --color-gold-bg-faint: rgba(212,168,83,0.06);
+  --color-gold-border: rgba(212,168,83,0.2);
+  --color-gold-border-light: rgba(212,168,83,0.1);
+  --color-gold-border-med: rgba(212,168,83,0.3);
+  --color-gold-border-strong: rgba(212,168,83,0.4);
+  --color-gold-muted: rgba(212,168,83,0.5);
+  --color-gold-strong: rgba(212,168,83,0.8);
+  --color-jade-bg-faint: rgba(122,184,168,0.06);
+  --color-jade-bg: rgba(122,184,168,0.12);
+  --color-jade-border: rgba(122,184,168,0.3);
+  --color-placeholder: rgba(232,228,220,0.25);
+  --color-error-bg: rgba(224,85,85,0.1);
+  --color-error-border: rgba(224,85,85,0.25);
+  --color-wx-metal-bg: rgba(154,144,128,0.1);
+  --color-wx-wood-bg: rgba(90,170,106,0.1);
+  --color-wx-water-bg: rgba(90,138,208,0.1);
+  --color-wx-fire-bg: rgba(224,85,85,0.1);
+  --color-wx-earth-bg: rgba(212,160,64,0.1);
+}
+
 /* ==================
    Global Base Styles
    ================== */
@@ -218,6 +266,13 @@ body {
   background-position: center;
 }
 
+[data-theme="dark"] body {
+  background-image: url('/assets/bg-dark.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
@@ -236,7 +291,7 @@ body {
   color: var(--color-text);
 }
 
-/* Card backdrop blur for jade theme */
+/* ===== Card Backdrop Effects ===== */
 [data-theme="jade"] .card-blur {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -246,10 +301,17 @@ body {
 [data-theme="ink"] .card-blur {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 [data-theme="dao"] .card-blur {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+[data-theme="dark"] .card-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 /* Font classes */
@@ -263,7 +325,74 @@ body {
   font-weight: 400;
 }
 
-/* ===== Coin Animation ===== */
+/* ===== Visual Enhancement Utilities ===== */
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+[data-theme="dark"] .card-hover:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* Button glow on hover */
+.btn-glow {
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 12px var(--color-gold-bg-hover);
+}
+
+/* Input focus ring */
+.input-focus-ring {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.input-focus-ring:focus {
+  outline: none;
+  border-color: var(--color-gold-border-med);
+  box-shadow: 0 0 0 3px var(--color-gold-bg-faint);
+}
+
+/* Divider shimmer */
+@keyframes divider-shimmer {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.4; }
+}
+.animate-divider-shimmer {
+  animation: divider-shimmer 4s ease-in-out infinite;
+}
+
+/* ===== Coin Animation — Toss & Bounce ===== */
+@keyframes coin-toss {
+  0%   { transform: translateY(0) rotateX(0deg) scale(1); opacity: 1; }
+  15%  { transform: translateY(-50px) rotateX(180deg) scale(0.92); }
+  30%  { transform: translateY(-70px) rotateX(360deg) scale(0.88); }
+  50%  { transform: translateY(-55px) rotateX(540deg) scale(0.85); }
+  70%  { transform: translateY(-30px) rotateX(720deg) scale(0.9); }
+  85%  { transform: translateY(-10px) rotateX(900deg) scale(0.95); }
+  100% { transform: translateY(0) rotateX(1080deg) scale(1); opacity: 1; }
+}
+
+@keyframes coin-bounce {
+  0%   { transform: translateY(-15px) scale(0.85); opacity: 0.5; }
+  35%  { transform: translateY(0) scale(1.1); opacity: 1; }
+  55%  { transform: translateY(-6px) scale(1); }
+  75%  { transform: translateY(0) scale(1.03); }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes coin-shadow {
+  0%   { transform: scaleX(1); opacity: 0.2; }
+  30%  { transform: scaleX(0.5); opacity: 0.08; }
+  70%  { transform: scaleX(0.7); opacity: 0.12; }
+  100% { transform: scaleX(1); opacity: 0.2; }
+}
+
+/* Legacy coin animations (kept for backwards compat) */
 @keyframes coin-spin {
   0% { transform: rotateY(0deg) scale(1); }
   25% { transform: rotateY(90deg) scale(0.85, 1); }
@@ -280,6 +409,19 @@ body {
   100% { transform: scale(1) translateY(0); opacity: 1; }
 }
 
+.animate-coin-toss {
+  animation: coin-toss 0.7s ease-in-out forwards;
+  transform-style: preserve-3d;
+}
+
+.animate-coin-bounce {
+  animation: coin-bounce 0.4s ease-out forwards;
+}
+
+.animate-coin-shadow {
+  animation: coin-shadow 0.7s ease-in-out forwards;
+}
+
 .animate-coin-spin {
   animation: coin-spin 0.4s linear infinite;
   transform-style: preserve-3d;
@@ -287,6 +429,34 @@ body {
 
 .animate-coin-land {
   animation: coin-land 0.4s ease-out forwards;
+}
+
+/* ===== Meihua Casting Animation ===== */
+@keyframes taiji-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes meihua-reveal {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes trigram-grow {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-taiji-spin {
+  animation: taiji-spin 1.2s linear infinite;
+}
+
+.animate-meihua-reveal {
+  animation: meihua-reveal 0.45s ease-out both;
+}
+
+.animate-trigram-grow {
+  animation: trigram-grow 0.35s ease-out both;
 }
 
 /* ===== History Drawer Animation ===== */

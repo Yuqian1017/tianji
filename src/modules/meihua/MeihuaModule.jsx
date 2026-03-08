@@ -21,6 +21,18 @@ const wuxingBgColor = {
   earth: 'bg-[var(--color-wx-earth-bg)]',
 };
 
+// ===== 起卦中动画组件 =====
+function CastingAnimation() {
+  return (
+    <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-8">
+      <div className="flex flex-col items-center justify-center gap-3">
+        <div className="text-5xl animate-taiji-spin" style={{ transformOrigin: 'center' }}>☯</div>
+        <div className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">起卦中...</div>
+      </div>
+    </div>
+  );
+}
+
 // ===== 排盘结果显示组件 =====
 function MeihuaDisplay({ result }) {
   if (!result) return null;
@@ -28,7 +40,7 @@ function MeihuaDisplay({ result }) {
   const { upper, lower, dong, tiGua, yongGua, benGua, huGua, bianGua, tiYong } = result;
 
   return (
-    <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4">
+    <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4 animate-meihua-reveal">
       {/* 本卦名 */}
       <div className="text-center pb-3 border-b border-[var(--color-gold-border-light)]">
         <div className="text-[var(--color-gold)] text-xl font-title mb-1">{benGua.name}</div>
@@ -50,7 +62,7 @@ function MeihuaDisplay({ result }) {
             </span>
           </div>
           <div className="text-center">
-            <div className="text-3xl mb-1">{upper.symbol}</div>
+            <div className="text-3xl mb-1 animate-trigram-grow">{upper.symbol}</div>
             <div className="text-[var(--color-text)] font-title">{upper.name}</div>
             <div className={`text-xs mt-0.5 font-body ${wuxingColor[upper.wuxing]}`}>
               {upper.nature} · {WUXING_CN[upper.wuxing]}
@@ -71,7 +83,7 @@ function MeihuaDisplay({ result }) {
             </span>
           </div>
           <div className="text-center">
-            <div className="text-3xl mb-1">{lower.symbol}</div>
+            <div className="text-3xl mb-1 animate-trigram-grow" style={{ animationDelay: '150ms' }}>{lower.symbol}</div>
             <div className="text-[var(--color-text)] font-title">{lower.name}</div>
             <div className={`text-xs mt-0.5 font-body ${wuxingColor[lower.wuxing]}`}>
               {lower.nature} · {WUXING_CN[lower.wuxing]}
@@ -87,7 +99,7 @@ function MeihuaDisplay({ result }) {
       </div>
 
       {/* 体用关系 */}
-      <div className={`rounded-lg p-4 text-center ${wuxingBgColor[tiGua.wuxing]} border border-[var(--color-surface-border)]`}>
+      <div className={`rounded-lg p-4 text-center ${wuxingBgColor[tiGua.wuxing]} border border-[var(--color-surface-border)] animate-meihua-reveal`} style={{ animationDelay: '200ms' }}>
         <div className="flex items-center justify-center gap-3 mb-2">
           <div className="text-sm font-body">
             <span className="text-[var(--color-gold)]">体</span>
@@ -107,7 +119,7 @@ function MeihuaDisplay({ result }) {
       </div>
 
       {/* 互卦 + 变卦 */}
-      <div className="grid grid-cols-2 gap-3 text-center">
+      <div className="grid grid-cols-2 gap-3 text-center animate-meihua-reveal" style={{ animationDelay: '350ms' }}>
         <div className="bg-[var(--color-surface-subtle)] rounded-lg p-3 border border-[var(--color-surface-border)]">
           <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">互卦（过程）</div>
           <div className="text-[var(--color-text)] font-title">{huGua.name}</div>
@@ -139,6 +151,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
   const [inputNum2, setInputNum2] = useState('');
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState(null);
+  const [casting, setCasting] = useState(false); // true while showing taiji spin animation
   const [chatMessages, setChatMessages] = useState([]);
   const [streamingText, setStreamingText] = useState('');
   const [aiLoading, setAiLoading] = useState(false);
@@ -178,6 +191,29 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
     }
   }, [chatMessages, streamingText]);
 
+  // Helper: show casting animation then reveal result
+  const showCastResult = useCallback((castFn) => {
+    setError('');
+    setResult(null);
+    setCasting(true);
+    setChatMessages([]);
+    setStreamingText('');
+    setActiveHistoryId(null);
+
+    // Delay for animation effect
+    setTimeout(() => {
+      try {
+        const r = castFn();
+        setCasting(false);
+        setResult(r);
+      } catch (e) {
+        setCasting(false);
+        setError(`起卦错误: ${e.message}`);
+        console.error('起卦错误:', e);
+      }
+    }, 1200);
+  }, [setActiveHistoryId]);
+
   // 报数起卦
   const handleCastByNumber = useCallback(() => {
     const n1 = parseInt(inputNum1, 10);
@@ -186,33 +222,13 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
       setError('请输入两个正整数');
       return;
     }
-    setError('');
-    try {
-      const r = castByNumber(n1, n2);
-      setResult(r);
-      setChatMessages([]);
-      setStreamingText('');
-      setActiveHistoryId(null);
-    } catch (e) {
-      setError(`起卦错误: ${e.message}`);
-      console.error('起卦错误:', e);
-    }
-  }, [inputNum1, inputNum2, setActiveHistoryId]);
+    showCastResult(() => castByNumber(n1, n2));
+  }, [inputNum1, inputNum2, showCastResult]);
 
   // 时间起卦
   const handleCastByTime = useCallback(() => {
-    setError('');
-    try {
-      const r = castByTime();
-      setResult(r);
-      setChatMessages([]);
-      setStreamingText('');
-      setActiveHistoryId(null);
-    } catch (e) {
-      setError(`起卦错误: ${e.message}`);
-      console.error('起卦错误:', e);
-    }
-  }, [setActiveHistoryId]);
+    showCastResult(() => castByTime());
+  }, [showCastResult]);
 
   // 文字起卦
   const handleCastByText = useCallback(() => {
@@ -220,18 +236,8 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
       setError('请输入至少一个汉字');
       return;
     }
-    setError('');
-    try {
-      const r = castByText(inputText.trim());
-      setResult(r);
-      setChatMessages([]);
-      setStreamingText('');
-      setActiveHistoryId(null);
-    } catch (e) {
-      setError(`起卦错误: ${e.message}`);
-      console.error('起卦错误:', e);
-    }
-  }, [inputText, setActiveHistoryId]);
+    showCastResult(() => castByText(inputText.trim()));
+  }, [inputText, showCastResult]);
 
   // 重新起卦
   const reset = useCallback(() => {
@@ -355,7 +361,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
           onChange={e => setQuestion(e.target.value)}
           placeholder="请输入你想占问的事项，如：这件事能成吗？"
           className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-4 py-3 text-[var(--color-text)]
-            placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none transition-colors font-body"
+            placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body"
         />
       </section>
 
@@ -407,8 +413,9 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
             </div>
             <button
               onClick={handleCastByNumber}
+              disabled={casting}
               className="w-full bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
+                hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 btn-glow font-body"
             >
               起卦
             </button>
@@ -426,8 +433,9 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
             </div>
             <button
               onClick={handleCastByTime}
+              disabled={casting}
               className="w-full bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
+                hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 btn-glow font-body"
             >
               以此时起卦
             </button>
@@ -450,8 +458,9 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
             />
             <button
               onClick={handleCastByText}
+              disabled={casting}
               className="w-full bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
+                hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 btn-glow font-body"
             >
               起卦
             </button>
@@ -470,6 +479,9 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
         )}
       </section>
 
+      {/* 起卦动画 */}
+      {casting && <CastingAnimation />}
+
       {/* 排盘结果 */}
       {result && <MeihuaDisplay result={result} />}
 
@@ -482,7 +494,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
               <button
                 onClick={askAI}
                 className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
-                  hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
+                  hover:bg-[var(--color-gold-bg-hover)] btn-glow font-body"
               >
                 请求 AI 断卦
               </button>

@@ -7,24 +7,41 @@ import { LIUYAO_SYSTEM_PROMPT } from './prompt.js';
 // ===== 铜钱动画组件 =====
 function CoinAnimation({ phase, coins }) {
   return (
-    <div className="flex justify-center items-center gap-5 py-4">
+    <div className="flex justify-center items-center gap-6 py-5">
       {[0, 1, 2].map((i) => {
         const isLanding = phase === 'landing' && coins;
-        const face = isLanding ? (coins[i] === 3 ? '字' : '花') : '?';
-        const isZi = isLanding && coins[i] === 3;
+        const isFront = isLanding && coins[i] === 3; // 字面 = front
 
         return (
-          <div
-            key={i}
-            className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold border-2
-              ${phase === 'spinning' ? 'animate-coin-spin' : ''}
-              ${isLanding ? 'animate-coin-land' : ''}
-              ${isZi ? 'bg-[var(--color-gold-bg)] border-[var(--color-gold-border-strong)] text-[var(--color-gold)]' :
-                isLanding ? 'bg-[var(--color-surface-dim)] border-[var(--color-surface-border-med)] text-[var(--color-text-dim)]' :
-                'bg-[var(--color-gold-bg-faint)] border-[var(--color-gold-border-med)] text-[var(--color-gold)]'}`}
-            style={isLanding ? { animationDelay: `${i * 80}ms` } : undefined}
-          >
-            {face}
+          <div key={i} className="flex flex-col items-center">
+            {/* Coin image */}
+            <div
+              className={`w-14 h-14 relative ${phase === 'spinning' ? 'animate-coin-toss' : ''} ${isLanding ? 'animate-coin-bounce' : ''}`}
+              style={{
+                animationDelay: phase === 'spinning' ? `${i * 100}ms` : isLanding ? `${i * 80}ms` : undefined,
+                perspective: '400px',
+              }}
+            >
+              <img
+                src={isLanding ? (isFront ? '/assets/coin-front.webp' : '/assets/coin-back.webp') : '/assets/coin-front.webp'}
+                alt={isLanding ? (isFront ? '字' : '花') : ''}
+                className="w-full h-full object-contain drop-shadow-md"
+              />
+            </div>
+            {/* Shadow */}
+            <div
+              className={`w-10 h-2 rounded-full bg-[var(--color-text)] mt-1 ${phase === 'spinning' ? 'animate-coin-shadow' : ''}`}
+              style={{
+                opacity: 0.12,
+                animationDelay: phase === 'spinning' ? `${i * 100}ms` : undefined,
+              }}
+            />
+            {/* Label */}
+            {isLanding && (
+              <span className={`text-xs mt-1 font-bold font-body ${isFront ? 'text-[var(--color-gold)]' : 'text-[var(--color-text-dim)]'}`}>
+                {isFront ? '字' : '花'}
+              </span>
+            )}
           </div>
         );
       })}
@@ -34,11 +51,12 @@ function CoinAnimation({ phase, coins }) {
 
 // ===== 铜钱结果组件 =====
 function CoinThrow({ value, label }) {
-  let coinDisplay;
-  if (value === 6) coinDisplay = ['花', '花', '花'];
-  else if (value === 7) coinDisplay = ['字', '花', '花'];
-  else if (value === 8) coinDisplay = ['字', '字', '花'];
-  else if (value === 9) coinDisplay = ['字', '字', '字'];
+  // value: 6=老阴(3花), 7=少阳(2花1字), 8=少阴(1花2字), 9=老阳(3字)
+  let coinFaces; // true = 字(front), false = 花(back)
+  if (value === 6) coinFaces = [false, false, false];
+  else if (value === 7) coinFaces = [true, false, false];
+  else if (value === 8) coinFaces = [true, true, false];
+  else if (value === 9) coinFaces = [true, true, true];
 
   const typeMap = { 6: '老阴 ⚋×', 7: '少阳 ⚊', 8: '少阴 ⚋', 9: '老阳 ⚊○' };
   const isMoving = value === 6 || value === 9;
@@ -47,11 +65,13 @@ function CoinThrow({ value, label }) {
     <div className={`flex items-center gap-3 py-1.5 px-3 rounded-lg ${isMoving ? 'bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)]' : 'bg-[var(--color-surface-dim)]'}`}>
       <span className="text-[var(--color-text-dim)] text-sm w-10 font-body">{label}</span>
       <div className="flex gap-1.5">
-        {coinDisplay.map((c, i) => (
-          <span key={i} className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold
-            ${c === '字' ? 'bg-[var(--color-gold-bg)] text-[var(--color-gold)]' : 'bg-[var(--color-surface-dim)] text-[var(--color-text-dim)]'}`}>
-            {c}
-          </span>
+        {coinFaces.map((isFront, i) => (
+          <img
+            key={i}
+            src={isFront ? '/assets/coin-front.webp' : '/assets/coin-back.webp'}
+            alt={isFront ? '字' : '花'}
+            className="w-7 h-7 object-contain rounded-full"
+          />
         ))}
       </div>
       <span className="text-sm text-[var(--color-text-dim)] font-body">= {value}</span>
@@ -218,8 +238,8 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
       setTimeout(() => {
         setThrows(prev => [...prev, total]);
         setAnimatingCoins(null);
-      }, 500);
-    }, 600);
+      }, 600);
+    }, 800);
   }, [throws.length, animatingCoins]);
 
   // 一键起卦
@@ -346,7 +366,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
           onChange={e => setQuestion(e.target.value)}
           placeholder="请输入你想占问的事项，如：近期事业发展如何？"
           className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-4 py-3 text-[var(--color-text)]
-            placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none transition-colors font-body"
+            placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body"
         />
 
         <div className="flex gap-3 mt-4">
@@ -356,7 +376,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
                 onClick={shakeOnce}
                 disabled={!!animatingCoins}
                 className="flex-1 bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                  hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 transition-colors font-body"
+                  hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 btn-glow font-body"
               >
                 {animatingCoins ? '摇卦中...' : throws.length === 0 ? '开始摇卦' : `摇第${throws.length + 1}爻`}
               </button>

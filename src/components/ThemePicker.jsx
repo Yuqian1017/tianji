@@ -17,6 +17,12 @@ const THEMES = [
     desc: '纯净暖白·檀木色·极简克制',
     palette: ['#faf8f4', '#7a5c3a', '#5a8a6a', '#a84040'],
   },
+  {
+    id: 'dark',
+    name: '夜观星象',
+    desc: '深邃夜空·明金·翡翠·高对比',
+    palette: ['#0f1118', '#d4a853', '#7ab8a8', '#e05555'],
+  },
 ];
 
 export default function ThemePicker({ show, onClose, theme, setTheme }) {

@@ -138,13 +138,16 @@ export default function App() {
         </div>
       </header>
 
-      {/* Banner */}
-      <div className="max-w-3xl mx-auto overflow-hidden">
+      {/* Full-width banner */}
+      <div className="w-full overflow-hidden relative">
         <img
           src="/assets/banner.webp"
           alt=""
-          className="w-full h-20 object-cover opacity-40"
-          style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)' }}
+          className="w-full h-24 object-cover opacity-35"
+          style={{
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%)',
+          }}
         />
       </div>
 
@@ -175,8 +178,8 @@ export default function App() {
       </main>
 
       {/* Decorative divider */}
-      <div className="max-w-md mx-auto px-8 py-2">
-        <img src="/assets/divider.webp" alt="" className="w-full h-6 object-contain opacity-30" />
+      <div className="max-w-md mx-auto px-8 py-4">
+        <img src="/assets/divider.webp" alt="" className="w-full h-6 object-contain animate-divider-shimmer" />
       </div>
 
       {/* Footer */}

@@ -84,6 +84,28 @@ const ASSETS = [
     width: 1920,
     height: 60,
   },
+
+  // === Coin animation assets ===
+  {
+    name: 'coin-front',
+    prompt: 'Single ancient Chinese bronze coin, front face showing Chinese characters 开元通宝, round coin with square center hole, aged patina bronze green-brown color, detailed relief texture, isolated on pure white background, top-down view, flat lay, antique numismatic style, high detail, no shadows, no other objects',
+    width: 512,
+    height: 512,
+  },
+  {
+    name: 'coin-back',
+    prompt: 'Single ancient Chinese bronze coin, back face showing smooth surface with crescent moon mark, round coin with square center hole, aged patina bronze green-brown color, detailed relief texture, isolated on pure white background, top-down view, flat lay, antique numismatic style, high detail, no shadows, no other objects',
+    width: 512,
+    height: 512,
+  },
+
+  // === Dark theme background ===
+  {
+    name: 'bg-dark',
+    prompt: 'Seamless subtle background texture, dark mystical night sky with very faint stars, distant misty mountains silhouette, deep navy blue-black color, ethereal celestial atmosphere, Chinese xianxia cultivation aesthetic, extremely subtle, low contrast on dark base, no text, no bright objects, moody and serene',
+    width: 1920,
+    height: 1080,
+  },
 ];
 
 async function generateAsset(asset) {
