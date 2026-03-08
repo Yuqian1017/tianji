@@ -15,7 +15,7 @@ const THEME_KEY = 'tianji-theme';
 
 const THEME_BANNERS = {
   ink: '/assets/banner.webp',
-  jade: '/assets/banner.webp',
+  jade: '/assets/banner-jade.webp',
   dao: '/assets/banner-dao.webp',
   dark: '/assets/banner-dark.webp',
 };

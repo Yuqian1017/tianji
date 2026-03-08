@@ -77,6 +77,12 @@ const ASSETS = [
     height: 300,
   },
   {
+    name: 'banner-jade',
+    prompt: 'Wide panoramic banner, ethereal jade mountains and immortal palace floating among clouds, translucent jade-green crystal formations and glowing jade pillars, celestial fairy realm aesthetic, soft mint-green and white mist, luminous jade glow, Chinese xianxia immortal cultivation world, dreamy and ethereal, no text, ultra wide aspect ratio, light pastel jade tones on cream background',
+    width: 1920,
+    height: 300,
+  },
+  {
     name: 'banner-dao',
     prompt: 'Wide panoramic banner, serene ancient Chinese Daoist temple rooftop silhouette among bamboo forest and pine trees, morning mist, very soft watercolor ink wash style, light warm cream tones, minimal and zen, subtle and ethereal, no text, ultra wide aspect ratio, peaceful Daoist mountain retreat aesthetic',
     width: 1920,
