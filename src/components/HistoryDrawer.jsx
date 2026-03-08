@@ -4,6 +4,7 @@ import { formatTimestamp } from '../lib/history.js';
 const MODULE_LABELS = {
   liuyao: '六爻',
   meihua: '梅花',
+  bazi: '八字',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -59,6 +60,11 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                 const moduleName = MODULE_LABELS[item.module || 'liuyao'] || item.module;
                 const guaName = item.result?.benGua?.name;
                 const bianName = item.result?.bianGua?.name;
+                // Bazi: show four pillars summary
+                const isBazi = item.module === 'bazi';
+                const baziSummary = isBazi && item.result?.pillars
+                  ? `${item.result.pillars.year.stem}${item.result.pillars.year.branch} ${item.result.pillars.month.stem}${item.result.pillars.month.branch} ${item.result.pillars.day.stem}${item.result.pillars.day.branch} ${item.result.pillars.hour.stem}${item.result.pillars.hour.branch}`
+                  : null;
 
                 return (
                   <div
@@ -79,10 +85,13 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="text-xs">
-                        {guaName && (
+                        {baziSummary && (
+                          <span className="text-[var(--color-gold)] font-title tracking-wider">{baziSummary}</span>
+                        )}
+                        {!isBazi && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {bianName && (
+                        {!isBazi && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>
