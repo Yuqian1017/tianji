@@ -2,6 +2,23 @@
 
 ## 2026-03-07
 
+### feat: 修仙风 light 主题系统 (三套方案)
+- **主题切换系统**: 三套 light 修仙风主题通过 `data-theme` CSS 变量切换
+  - **水墨留白** (`ink`): 米色宣纸底、深墨棕文字、水墨远山背景
+  - **仙府玉石** (`jade`): 月白色底、琥珀金强调、玉石半透明卡片 + backdrop-blur
+  - **道观清修** (`dao`): 纯净暖白底、檀木色强调、极简克制
+- **ThemePicker 组件**: 三套主题预览卡片 (名称+描述+色板)，一键切换，存 localStorage
+- **全局 CSS 变量重构**: 将所有组件中 50+ 处硬编码 `rgba(...)` 色值替换为语义化 CSS 变量
+  - `--color-gold-bg`, `--color-gold-border`, `--color-surface-dim`, `--color-placeholder` 等 25+ 语义变量
+  - 三套主题各自定义完整变量集，切换主题无需改动组件代码
+- **字体优化**: 引入 Google Fonts `Noto Serif SC` (标题) + `Noto Sans SC` (正文)
+  - `.font-title` 衬线体用于卦名、标题
+  - `.font-body` 无衬线体用于正文、按钮
+- **五行色 light 适配**: 加深五行颜色确保浅色背景上对比度达标
+- **fal API 素材生成脚本**: `scripts/generate-assets.js` 可批量生成背景纹理、模块图标、banner、分割线 (需 FAL_KEY)
+- **新增文件**: `src/components/ThemePicker.jsx`, `scripts/generate-assets.js`
+- **修改文件**: `index.css`, `App.jsx`, `SettingsPanel.jsx`, `HistoryDrawer.jsx`, `LiuyaoModule.jsx`, `MeihuaModule.jsx`, `index.html`
+
 ### feat: multi-module architecture + 梅花易数
 - **Tab navigation**: Header redesigned with "天机卷" title + tab bar (六爻占卜 | 梅花易数)
 - **Modular architecture**: Monolithic App.jsx (~800 lines) split into:

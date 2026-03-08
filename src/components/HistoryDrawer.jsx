@@ -27,17 +27,18 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
   return (
     <div className="fixed inset-0 z-50 flex justify-end" onClick={handleClose}>
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Drawer panel */}
       <div
-        className={`relative w-80 max-w-[85vw] h-full bg-[#0e0d0a] border-l border-[rgba(200,149,108,0.2)] flex flex-col
+        className={`relative w-80 max-w-[85vw] h-full border-l border-[var(--color-gold-border-light)] flex flex-col
           ${closing ? 'animate-drawer-out' : 'animate-drawer-in'}`}
+        style={{ backgroundColor: 'var(--color-drawer-bg)' }}
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-[rgba(200,149,108,0.15)]">
-          <h2 className="text-[var(--color-gold)] font-bold">卜算历史</h2>
+        <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--color-gold-border-light)]">
+          <h2 className="text-[var(--color-gold)] font-title">卜算历史</h2>
           <button
             onClick={handleClose}
             className="text-[var(--color-text-dim)] hover:text-[var(--color-text)] text-lg leading-none px-1"
@@ -49,36 +50,31 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
         {/* History list */}
         <div className="flex-1 overflow-y-auto">
           {filtered.length === 0 ? (
-            <div className="text-[var(--color-text-dim)] text-sm text-center py-12">
+            <div className="text-[var(--color-text-dim)] text-sm text-center py-12 font-body">
               暂无历史记录
             </div>
           ) : (
-            <div className="divide-y divide-[rgba(255,255,255,0.05)]">
+            <div className="divide-y divide-[var(--color-surface-border)]">
               {filtered.map((item) => {
                 const moduleName = MODULE_LABELS[item.module || 'liuyao'] || item.module;
-                // Get display name based on module type
-                const guaName = item.module === 'meihua'
-                  ? item.result?.benGua?.name
-                  : item.result?.benGua?.name;
-                const bianName = item.module === 'meihua'
-                  ? item.result?.bianGua?.name
-                  : item.result?.bianGua?.name;
+                const guaName = item.result?.benGua?.name;
+                const bianName = item.result?.bianGua?.name;
 
                 return (
                   <div
                     key={item.id}
-                    className="px-4 py-3 hover:bg-[rgba(200,149,108,0.05)] cursor-pointer transition-colors group"
+                    className="px-4 py-3 hover:bg-[var(--color-gold-bg-faint)] cursor-pointer transition-colors group"
                     onClick={() => onLoad(item)}
                   >
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[var(--color-text-dim)] text-xs">
+                      <span className="text-[var(--color-text-dim)] text-xs font-body">
                         {formatTimestamp(item.timestamp)}
                       </span>
-                      <span className="text-xs px-1.5 py-0.5 rounded bg-[rgba(200,149,108,0.1)] text-[var(--color-gold)] opacity-70">
+                      <span className="text-xs px-1.5 py-0.5 rounded bg-[var(--color-gold-bg-faint)] text-[var(--color-gold)] opacity-70 font-body">
                         {moduleName}
                       </span>
                     </div>
-                    <div className="text-[var(--color-text)] text-sm truncate mb-1">
+                    <div className="text-[var(--color-text)] text-sm truncate mb-1 font-body">
                       {item.question || '综合运势'}
                     </div>
                     <div className="flex items-center justify-between">
@@ -98,13 +94,13 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                           e.stopPropagation();
                           onDelete(item.id);
                         }}
-                        className="text-[var(--color-text-dim)] hover:text-[var(--color-cinnabar)] text-xs opacity-0 group-hover:opacity-100 transition-opacity px-1"
+                        className="text-[var(--color-text-dim)] hover:text-[var(--color-cinnabar)] text-xs opacity-0 group-hover:opacity-100 transition-opacity px-1 font-body"
                       >
                         删除
                       </button>
                     </div>
                     {item.chatMessages?.some(m => m.role === 'assistant') && (
-                      <div className="text-[var(--color-text-dim)] text-xs mt-1 opacity-60">
+                      <div className="text-[var(--color-text-dim)] text-xs mt-1 opacity-60 font-body">
                         含 AI 解读
                       </div>
                     )}

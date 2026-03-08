@@ -19,9 +19,9 @@ function CoinAnimation({ phase, coins }) {
             className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold border-2
               ${phase === 'spinning' ? 'animate-coin-spin' : ''}
               ${isLanding ? 'animate-coin-land' : ''}
-              ${isZi ? 'bg-[rgba(200,149,108,0.3)] border-[rgba(200,149,108,0.6)] text-[var(--color-gold)]' :
-                isLanding ? 'bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.2)] text-[var(--color-text-dim)]' :
-                'bg-[rgba(200,149,108,0.15)] border-[rgba(200,149,108,0.4)] text-[var(--color-gold)]'}`}
+              ${isZi ? 'bg-[var(--color-gold-bg)] border-[var(--color-gold-border-strong)] text-[var(--color-gold)]' :
+                isLanding ? 'bg-[var(--color-surface-dim)] border-[var(--color-surface-border-med)] text-[var(--color-text-dim)]' :
+                'bg-[var(--color-gold-bg-faint)] border-[var(--color-gold-border-med)] text-[var(--color-gold)]'}`}
             style={isLanding ? { animationDelay: `${i * 80}ms` } : undefined}
           >
             {face}
@@ -44,18 +44,18 @@ function CoinThrow({ value, label }) {
   const isMoving = value === 6 || value === 9;
 
   return (
-    <div className={`flex items-center gap-3 py-1.5 px-3 rounded-lg ${isMoving ? 'bg-[rgba(200,149,108,0.1)] border border-[rgba(200,149,108,0.3)]' : 'bg-[rgba(255,255,255,0.05)]'}`}>
-      <span className="text-[var(--color-text-dim)] text-sm w-10">{label}</span>
+    <div className={`flex items-center gap-3 py-1.5 px-3 rounded-lg ${isMoving ? 'bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)]' : 'bg-[var(--color-surface-dim)]'}`}>
+      <span className="text-[var(--color-text-dim)] text-sm w-10 font-body">{label}</span>
       <div className="flex gap-1.5">
         {coinDisplay.map((c, i) => (
           <span key={i} className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold
-            ${c === '字' ? 'bg-[rgba(200,149,108,0.3)] text-[var(--color-gold)]' : 'bg-[rgba(255,255,255,0.1)] text-[var(--color-text-dim)]'}`}>
+            ${c === '字' ? 'bg-[var(--color-gold-bg)] text-[var(--color-gold)]' : 'bg-[var(--color-surface-dim)] text-[var(--color-text-dim)]'}`}>
             {c}
           </span>
         ))}
       </div>
-      <span className="text-sm text-[var(--color-text-dim)]">= {value}</span>
-      <span className={`text-sm font-medium ${isMoving ? 'text-[var(--color-gold)]' : 'text-[var(--color-text)]'}`}>
+      <span className="text-sm text-[var(--color-text-dim)] font-body">= {value}</span>
+      <span className={`text-sm font-medium font-body ${isMoving ? 'text-[var(--color-gold)]' : 'text-[var(--color-text)]'}`}>
         {typeMap[value]}
       </span>
     </div>
@@ -77,33 +77,33 @@ function GuaDisplay({ result }) {
   };
 
   return (
-    <div className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
+    <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
       {/* 卦头信息 */}
-      <div className="text-center mb-4 pb-3 border-b border-[rgba(200,149,108,0.1)]">
-        <div className="text-[var(--color-text-dim)] text-sm mb-1">
+      <div className="text-center mb-4 pb-3 border-b border-[var(--color-gold-border-light)]">
+        <div className="text-[var(--color-text-dim)] text-sm mb-1 font-body">
           {result.date.yearStem}{result.date.yearBranch}年 {result.date.monthBranch}月 {result.date.dayStem}{result.date.dayBranch}日
         </div>
         <div className="flex justify-center items-center gap-4">
           <div>
-            <div className="text-[var(--color-gold)] text-xl font-bold">{result.benGua.name}</div>
-            <div className="text-[var(--color-text-dim)] text-xs mt-0.5">{result.benGua.palace}·{result.benGua.palaceWuxingCn}·{result.benGua.guaType}</div>
+            <div className="text-[var(--color-gold)] text-xl font-title">{result.benGua.name}</div>
+            <div className="text-[var(--color-text-dim)] text-xs mt-0.5 font-body">{result.benGua.palace}·{result.benGua.palaceWuxingCn}·{result.benGua.guaType}</div>
           </div>
           {result.bianGua && (
             <>
-              <span className="text-[rgba(200,149,108,0.5)] text-lg">→</span>
+              <span className="text-[var(--color-gold-muted)] text-lg">→</span>
               <div>
-                <div className="text-[var(--color-jade)] text-xl font-bold">{result.bianGua.name}</div>
-                <div className="text-[var(--color-text-dim)] text-xs mt-0.5">变卦</div>
+                <div className="text-[var(--color-jade)] text-xl font-title">{result.bianGua.name}</div>
+                <div className="text-[var(--color-text-dim)] text-xs mt-0.5 font-body">变卦</div>
               </div>
             </>
           )}
         </div>
-        <div className="text-[var(--color-text-dim)] text-xs mt-2">空亡：{result.kongWang.join('、')}</div>
+        <div className="text-[var(--color-text-dim)] text-xs mt-2 font-body">空亡：{result.kongWang.join('、')}</div>
       </div>
 
       {/* 六爻盘面 */}
       <div className="font-mono text-sm">
-        <div className="grid gap-x-2 pb-2 mb-2 border-b border-[rgba(200,149,108,0.1)] text-[var(--color-text-dim)] text-xs"
+        <div className="grid gap-x-2 pb-2 mb-2 border-b border-[var(--color-gold-border-light)] text-[var(--color-text-dim)] text-xs"
           style={{ gridTemplateColumns: result.bianGua ? '60px 1fr 1fr' : '60px 1fr' }}>
           <span>六神</span>
           <span>本卦：{result.benGua.name}</span>
@@ -113,8 +113,8 @@ function GuaDisplay({ result }) {
         {lines.map((line) => (
           <div
             key={line.position}
-            className={`grid gap-x-2 py-1.5 border-b border-[rgba(255,255,255,0.05)]
-              ${line.isMoving ? 'bg-[rgba(200,149,108,0.05)]' : ''}`}
+            className={`grid gap-x-2 py-1.5 border-b border-[var(--color-surface-border)]
+              ${line.isMoving ? 'bg-[var(--color-gold-bg-faint)]' : ''}`}
             style={{ gridTemplateColumns: result.bianGua ? '60px 1fr 1fr' : '60px 1fr' }}
           >
             <span className="text-[var(--color-text-dim)] text-xs flex items-center">{line.spirit}</span>
@@ -147,7 +147,7 @@ function GuaDisplay({ result }) {
                     </span>
                   </>
                 ) : (
-                  <span className="text-[rgba(255,255,255,0.1)]">—</span>
+                  <span className="text-[var(--color-surface-border)]">—</span>
                 )}
               </div>
             )}
@@ -157,10 +157,10 @@ function GuaDisplay({ result }) {
 
       {/* 伏神信息 */}
       {result.fushen.length > 0 && (
-        <div className="mt-3 pt-3 border-t border-[rgba(200,149,108,0.1)]">
-          <div className="text-[var(--color-text-dim)] text-xs mb-1">伏神：</div>
+        <div className="mt-3 pt-3 border-t border-[var(--color-gold-border-light)]">
+          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">伏神：</div>
           {result.fushen.map((f, i) => (
-            <div key={i} className="text-xs text-[var(--color-text-dim)]">
+            <div key={i} className="text-xs text-[var(--color-text-dim)] font-body">
               伏{f.liuqin} {f.najia}({WUXING_CN[f.wuxing]}) → 伏于{YAO_NAMES[f.position - 1]}下
             </div>
           ))}
@@ -338,15 +338,15 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
   return (
     <div className="space-y-6">
       {/* 输入区 */}
-      <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
-        <label className="block text-[var(--color-gold)] text-sm font-medium mb-2">占问事项</label>
+      <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
+        <label className="block text-[var(--color-gold)] text-sm font-medium mb-2 font-title">占问事项</label>
         <input
           type="text"
           value={question}
           onChange={e => setQuestion(e.target.value)}
           placeholder="请输入你想占问的事项，如：近期事业发展如何？"
-          className="w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-4 py-3 text-[var(--color-text)]
-            placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none transition-colors"
+          className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-4 py-3 text-[var(--color-text)]
+            placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none transition-colors font-body"
         />
 
         <div className="flex gap-3 mt-4">
@@ -355,16 +355,16 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
               <button
                 onClick={shakeOnce}
                 disabled={!!animatingCoins}
-                className="flex-1 bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                  hover:bg-[rgba(200,149,108,0.3)] disabled:opacity-50 transition-colors"
+                className="flex-1 bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
+                  hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 transition-colors font-body"
               >
                 {animatingCoins ? '摇卦中...' : throws.length === 0 ? '开始摇卦' : `摇第${throws.length + 1}爻`}
               </button>
               <button
                 onClick={quickThrow}
                 disabled={!!animatingCoins}
-                className="px-6 py-3 border border-[rgba(200,149,108,0.3)] text-[rgba(200,149,108,0.8)] rounded-lg
-                  hover:bg-[rgba(200,149,108,0.1)] disabled:opacity-50 transition-colors text-sm"
+                className="px-6 py-3 border border-[var(--color-gold-border)] text-[var(--color-gold-strong)] rounded-lg
+                  hover:bg-[var(--color-gold-bg-faint)] disabled:opacity-50 transition-colors text-sm font-body"
               >
                 一键起卦
               </button>
@@ -373,8 +373,8 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
           {throws.length === 6 && (
             <button
               onClick={reset}
-              className="px-6 py-3 border border-[rgba(255,255,255,0.2)] text-[var(--color-text-dim)] rounded-lg
-                hover:bg-[rgba(255,255,255,0.05)] transition-colors text-sm"
+              className="px-6 py-3 border border-[var(--color-surface-border-med)] text-[var(--color-text-dim)] rounded-lg
+                hover:bg-[var(--color-surface-dim)] transition-colors text-sm font-body"
             >
               重新起卦
             </button>
@@ -384,9 +384,9 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
 
       {/* 铜钱动画 */}
       {animatingCoins && (
-        <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-4">
+        <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4">
           <CoinAnimation phase={animatingCoins.phase} coins={animatingCoins.coins} />
-          <div className="text-center text-[var(--color-text-dim)] text-xs mt-1">
+          <div className="text-center text-[var(--color-text-dim)] text-xs mt-1 font-body">
             {animatingCoins.phase === 'spinning' ? '铜钱翻转中...' : `结果: ${animatingCoins.total}`}
           </div>
         </section>
@@ -394,15 +394,15 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
 
       {/* 摇卦过程 */}
       {throws.length > 0 && (
-        <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
-          <h3 className="text-[var(--color-gold)] text-sm font-medium mb-3">摇卦结果</h3>
+        <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
+          <h3 className="text-[var(--color-gold)] text-sm font-medium mb-3 font-title">摇卦结果</h3>
           <div className="space-y-1.5">
             {throws.map((v, i) => (
               <CoinThrow key={i} value={v} label={YAO_NAMES[i]} />
             ))}
           </div>
           {throws.length < 6 && (
-            <div className="text-[var(--color-text-dim)] text-xs mt-3">
+            <div className="text-[var(--color-text-dim)] text-xs mt-3 font-body">
               已摇 {throws.length}/6 爻，继续摇卦...
             </div>
           )}
@@ -414,14 +414,14 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
 
       {/* AI断卦 + 多轮对话 */}
       {result && (
-        <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
+        <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[var(--color-gold)] text-sm font-medium">AI 解读</h3>
+            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 解读</h3>
             {isInitialAskVisible && (
               <button
                 onClick={askAI}
-                className="bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
-                  hover:bg-[rgba(200,149,108,0.3)] transition-colors"
+                className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
+                  hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
               >
                 请求 AI 断卦
               </button>
@@ -435,48 +435,48 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
               if (msg.role === 'user') {
                 return (
                   <div key={i} className="border-l-2 border-[var(--color-gold)] pl-3 py-1">
-                    <div className="text-[var(--color-gold)] text-xs mb-1">追问</div>
-                    <div className="text-[var(--color-text)] text-sm">{msg.content}</div>
+                    <div className="text-[var(--color-gold)] text-xs mb-1 font-body">追问</div>
+                    <div className="text-[var(--color-text)] text-sm font-body">{msg.content}</div>
                   </div>
                 );
               }
 
               return (
-                <div key={i} className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
+                <div key={i} className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap font-body">
                   {msg.content}
                 </div>
               );
             })}
 
             {streamingText && (
-              <div className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
+              <div className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap font-body">
                 {streamingText}
               </div>
             )}
 
             {aiLoading && !streamingText && (
-              <span className="text-[rgba(200,149,108,0.6)] text-sm animate-pulse">解读中...</span>
+              <span className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">解读中...</span>
             )}
 
             <div ref={chatEndRef} />
           </div>
 
           {hasAIResponse && !aiLoading && (
-            <div className="mt-4 pt-4 border-t border-[rgba(200,149,108,0.1)] flex gap-2">
+            <div className="mt-4 pt-4 border-t border-[var(--color-gold-border-light)] flex gap-2">
               <input
                 type="text"
                 value={followUpInput}
                 onChange={e => setFollowUpInput(e.target.value)}
                 onKeyDown={handleFollowUpKeyDown}
                 placeholder="继续追问，如：能详细说说财运方面吗？"
-                className="flex-1 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-3 py-2 text-[var(--color-text)] text-sm
-                  placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none transition-colors"
+                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2 text-[var(--color-text)] text-sm
+                  placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none transition-colors font-body"
               />
               <button
                 onClick={askFollowUp}
                 disabled={!followUpInput.trim()}
-                className="px-4 py-2 bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] rounded-lg text-sm
-                  hover:bg-[rgba(200,149,108,0.3)] disabled:opacity-30 transition-colors whitespace-nowrap"
+                className="px-4 py-2 bg-[var(--color-gold-bg)] text-[var(--color-gold)] rounded-lg text-sm
+                  hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-30 transition-colors whitespace-nowrap font-body"
               >
                 发送
               </button>
@@ -484,13 +484,13 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
           )}
 
           {hasAIResponse && aiLoading && (
-            <div className="mt-4 pt-4 border-t border-[rgba(200,149,108,0.1)]">
-              <div className="text-[rgba(200,149,108,0.6)] text-sm animate-pulse">回答中...</div>
+            <div className="mt-4 pt-4 border-t border-[var(--color-gold-border-light)]">
+              <div className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">回答中...</div>
             </div>
           )}
 
           {!apiKey && !hasAIResponse && (
-            <div className="text-[var(--color-text-dim)] text-xs">
+            <div className="text-[var(--color-text-dim)] text-xs font-body">
               请先在设置中输入 Claude API Key 以使用 AI 解读功能。
             </div>
           )}
@@ -499,11 +499,10 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
 
       {/* 错误提示 */}
       {error && (
-        <div className="bg-[rgba(201,64,67,0.1)] border border-[rgba(201,64,67,0.3)] rounded-xl p-4 text-[var(--color-cinnabar)] text-sm">
+        <div className="bg-[var(--color-error-bg)] border border-[var(--color-error-border)] rounded-xl p-4 text-[var(--color-cinnabar)] text-sm font-body">
           {error}
         </div>
       )}
     </div>
   );
 }
-

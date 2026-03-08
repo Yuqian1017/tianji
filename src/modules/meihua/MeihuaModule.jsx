@@ -4,7 +4,7 @@ import { WUXING_CN, XIANTIAN } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { MEIHUA_SYSTEM_PROMPT } from './prompt.js';
 
-// Five-element color mapping (reuse theme CSS variables)
+// Five-element color mapping (uses theme CSS variables)
 const wuxingColor = {
   metal: 'text-[var(--color-wx-metal)]',
   wood: 'text-[var(--color-wx-wood)]',
@@ -14,11 +14,11 @@ const wuxingColor = {
 };
 
 const wuxingBgColor = {
-  metal: 'bg-[rgba(200,192,176,0.15)]',
-  wood: 'bg-[rgba(109,184,112,0.15)]',
-  water: 'bg-[rgba(91,142,201,0.15)]',
-  fire: 'bg-[rgba(212,87,74,0.15)]',
-  earth: 'bg-[rgba(212,168,67,0.15)]',
+  metal: 'bg-[var(--color-wx-metal-bg)]',
+  wood: 'bg-[var(--color-wx-wood-bg)]',
+  water: 'bg-[var(--color-wx-water-bg)]',
+  fire: 'bg-[var(--color-wx-fire-bg)]',
+  earth: 'bg-[var(--color-wx-earth-bg)]',
 };
 
 // ===== 排盘结果显示组件 =====
@@ -28,31 +28,31 @@ function MeihuaDisplay({ result }) {
   const { upper, lower, dong, tiGua, yongGua, benGua, huGua, bianGua, tiYong } = result;
 
   return (
-    <div className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5 space-y-4">
+    <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4">
       {/* 本卦名 */}
-      <div className="text-center pb-3 border-b border-[rgba(200,149,108,0.1)]">
-        <div className="text-[var(--color-gold)] text-xl font-bold mb-1">{benGua.name}</div>
-        <div className="text-[var(--color-text-dim)] text-xs">本卦</div>
+      <div className="text-center pb-3 border-b border-[var(--color-gold-border-light)]">
+        <div className="text-[var(--color-gold)] text-xl font-title mb-1">{benGua.name}</div>
+        <div className="text-[var(--color-text-dim)] text-xs font-body">本卦</div>
       </div>
 
       {/* 上下卦 + 体用 */}
       <div className="grid grid-cols-2 gap-3">
         {/* 上卦 */}
         <div className={`rounded-lg p-3 border ${tiGua.position === 'upper'
-          ? 'border-[rgba(200,149,108,0.4)] bg-[rgba(200,149,108,0.08)]'
-          : 'border-[rgba(122,184,168,0.4)] bg-[rgba(122,184,168,0.08)]'}`}>
+          ? 'border-[var(--color-gold-border-strong)] bg-[var(--color-gold-bg-faint)]'
+          : 'border-[var(--color-jade-border)] bg-[var(--color-jade-bg-faint)]'}`}>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--color-text-dim)] text-xs">上卦</span>
-            <span className={`text-xs px-2 py-0.5 rounded-full ${tiGua.position === 'upper'
-              ? 'bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)]'
-              : 'bg-[rgba(122,184,168,0.2)] text-[var(--color-jade)]'}`}>
+            <span className="text-[var(--color-text-dim)] text-xs font-body">上卦</span>
+            <span className={`text-xs px-2 py-0.5 rounded-full font-body ${tiGua.position === 'upper'
+              ? 'bg-[var(--color-gold-bg)] text-[var(--color-gold)]'
+              : 'bg-[var(--color-jade-bg)] text-[var(--color-jade)]'}`}>
               {tiGua.position === 'upper' ? '体' : '用'}
             </span>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-1">{upper.symbol}</div>
-            <div className="text-[var(--color-text)] font-bold">{upper.name}</div>
-            <div className={`text-xs mt-0.5 ${wuxingColor[upper.wuxing]}`}>
+            <div className="text-[var(--color-text)] font-title">{upper.name}</div>
+            <div className={`text-xs mt-0.5 font-body ${wuxingColor[upper.wuxing]}`}>
               {upper.nature} · {WUXING_CN[upper.wuxing]}
             </div>
           </div>
@@ -60,20 +60,20 @@ function MeihuaDisplay({ result }) {
 
         {/* 下卦 */}
         <div className={`rounded-lg p-3 border ${tiGua.position === 'lower'
-          ? 'border-[rgba(200,149,108,0.4)] bg-[rgba(200,149,108,0.08)]'
-          : 'border-[rgba(122,184,168,0.4)] bg-[rgba(122,184,168,0.08)]'}`}>
+          ? 'border-[var(--color-gold-border-strong)] bg-[var(--color-gold-bg-faint)]'
+          : 'border-[var(--color-jade-border)] bg-[var(--color-jade-bg-faint)]'}`}>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--color-text-dim)] text-xs">下卦</span>
-            <span className={`text-xs px-2 py-0.5 rounded-full ${tiGua.position === 'lower'
-              ? 'bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)]'
-              : 'bg-[rgba(122,184,168,0.2)] text-[var(--color-jade)]'}`}>
+            <span className="text-[var(--color-text-dim)] text-xs font-body">下卦</span>
+            <span className={`text-xs px-2 py-0.5 rounded-full font-body ${tiGua.position === 'lower'
+              ? 'bg-[var(--color-gold-bg)] text-[var(--color-gold)]'
+              : 'bg-[var(--color-jade-bg)] text-[var(--color-jade)]'}`}>
               {tiGua.position === 'lower' ? '体' : '用'}
             </span>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-1">{lower.symbol}</div>
-            <div className="text-[var(--color-text)] font-bold">{lower.name}</div>
-            <div className={`text-xs mt-0.5 ${wuxingColor[lower.wuxing]}`}>
+            <div className="text-[var(--color-text)] font-title">{lower.name}</div>
+            <div className={`text-xs mt-0.5 font-body ${wuxingColor[lower.wuxing]}`}>
               {lower.nature} · {WUXING_CN[lower.wuxing]}
             </div>
           </div>
@@ -81,25 +81,25 @@ function MeihuaDisplay({ result }) {
       </div>
 
       {/* 动爻 */}
-      <div className="text-center text-sm text-[var(--color-text-dim)]">
+      <div className="text-center text-sm text-[var(--color-text-dim)] font-body">
         动爻：第 <span className="text-[var(--color-gold)] font-bold">{dong}</span> 爻
         （{dong <= 3 ? '下卦动' : '上卦动'}）
       </div>
 
       {/* 体用关系 */}
-      <div className={`rounded-lg p-4 text-center ${wuxingBgColor[tiGua.wuxing]} border border-[rgba(255,255,255,0.05)]`}>
+      <div className={`rounded-lg p-4 text-center ${wuxingBgColor[tiGua.wuxing]} border border-[var(--color-surface-border)]`}>
         <div className="flex items-center justify-center gap-3 mb-2">
-          <div className="text-sm">
+          <div className="text-sm font-body">
             <span className="text-[var(--color-gold)]">体</span>
             <span className={`ml-1 ${wuxingColor[tiGua.wuxing]}`}>{tiGua.name}({WUXING_CN[tiGua.wuxing]})</span>
           </div>
           <span className="text-[var(--color-text-dim)]">←→</span>
-          <div className="text-sm">
+          <div className="text-sm font-body">
             <span className="text-[var(--color-jade)]">用</span>
             <span className={`ml-1 ${wuxingColor[yongGua.wuxing]}`}>{yongGua.name}({WUXING_CN[yongGua.wuxing]})</span>
           </div>
         </div>
-        <div className="text-lg font-bold">
+        <div className="text-lg font-title">
           <span className="mr-2">{tiYong.icon}</span>
           <span className="text-[var(--color-text)]">{tiYong.desc}</span>
           <span className="text-[var(--color-text-dim)] ml-2">— {tiYong.verdict}</span>
@@ -108,19 +108,19 @@ function MeihuaDisplay({ result }) {
 
       {/* 互卦 + 变卦 */}
       <div className="grid grid-cols-2 gap-3 text-center">
-        <div className="bg-[rgba(255,255,255,0.03)] rounded-lg p-3 border border-[rgba(255,255,255,0.05)]">
-          <div className="text-[var(--color-text-dim)] text-xs mb-1">互卦（过程）</div>
-          <div className="text-[var(--color-text)] font-medium">{huGua.name}</div>
-          <div className="text-xs text-[var(--color-text-dim)] mt-0.5">
+        <div className="bg-[var(--color-surface-subtle)] rounded-lg p-3 border border-[var(--color-surface-border)]">
+          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">互卦（过程）</div>
+          <div className="text-[var(--color-text)] font-title">{huGua.name}</div>
+          <div className="text-xs text-[var(--color-text-dim)] mt-0.5 font-body">
             <span className={wuxingColor[huGua.upper.wuxing]}>{huGua.upper.name}</span>
             <span className="mx-1">/</span>
             <span className={wuxingColor[huGua.lower.wuxing]}>{huGua.lower.name}</span>
           </div>
         </div>
-        <div className="bg-[rgba(255,255,255,0.03)] rounded-lg p-3 border border-[rgba(255,255,255,0.05)]">
-          <div className="text-[var(--color-text-dim)] text-xs mb-1">变卦（结果）</div>
-          <div className="text-[var(--color-jade)] font-medium">{bianGua.name}</div>
-          <div className="text-xs text-[var(--color-text-dim)] mt-0.5">
+        <div className="bg-[var(--color-surface-subtle)] rounded-lg p-3 border border-[var(--color-surface-border)]">
+          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">变卦（结果）</div>
+          <div className="text-[var(--color-jade)] font-title">{bianGua.name}</div>
+          <div className="text-xs text-[var(--color-text-dim)] mt-0.5 font-body">
             <span className={wuxingColor[bianGua.upper.wuxing]}>{bianGua.upper.name}</span>
             <span className="mx-1">/</span>
             <span className={wuxingColor[bianGua.lower.wuxing]}>{bianGua.lower.name}</span>
@@ -134,7 +134,7 @@ function MeihuaDisplay({ result }) {
 // ===== 梅花易数主模块 =====
 export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, activeHistoryId, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
   const [question, setQuestion] = useState('');
-  const [castMethod, setCastMethod] = useState('number'); // 'number' | 'time' | 'text'
+  const [castMethod, setCastMethod] = useState('number');
   const [inputNum1, setInputNum1] = useState('');
   const [inputNum2, setInputNum2] = useState('');
   const [inputText, setInputText] = useState('');
@@ -266,7 +266,6 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
       setChatMessages(newChatMessages);
       setStreamingText('');
 
-      // Auto-save to history
       const historyId = activeHistoryId || Date.now().toString();
       setActiveHistoryId(historyId);
       upsertHistory(historyId, question, {
@@ -348,31 +347,31 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
   return (
     <div className="space-y-6">
       {/* 占问事项 */}
-      <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
-        <label className="block text-[var(--color-gold)] text-sm font-medium mb-2">占问事项</label>
+      <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
+        <label className="block text-[var(--color-gold)] text-sm font-medium mb-2 font-title">占问事项</label>
         <input
           type="text"
           value={question}
           onChange={e => setQuestion(e.target.value)}
           placeholder="请输入你想占问的事项，如：这件事能成吗？"
-          className="w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-4 py-3 text-[var(--color-text)]
-            placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none transition-colors"
+          className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-4 py-3 text-[var(--color-text)]
+            placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none transition-colors font-body"
         />
       </section>
 
       {/* 起卦方式 */}
-      <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
-        <label className="block text-[var(--color-gold)] text-sm font-medium mb-3">起卦方式</label>
+      <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
+        <label className="block text-[var(--color-gold)] text-sm font-medium mb-3 font-title">起卦方式</label>
 
         {/* Method tabs */}
-        <div className="flex gap-1 mb-4 bg-[rgba(255,255,255,0.03)] rounded-lg p-1">
+        <div className="flex gap-1 mb-4 bg-[var(--color-surface-subtle)] rounded-lg p-1">
           {CAST_METHODS.map(m => (
             <button
               key={m.id}
               onClick={() => setCastMethod(m.id)}
-              className={`flex-1 py-2 text-sm rounded-md transition-colors
+              className={`flex-1 py-2 text-sm rounded-md transition-colors font-body
                 ${castMethod === m.id
-                  ? 'bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] font-medium'
+                  ? 'bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium'
                   : 'text-[var(--color-text-dim)] hover:text-[var(--color-text)]'}`}
             >
               {m.label}
@@ -383,7 +382,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
         {/* Number input */}
         {castMethod === 'number' && (
           <div className="space-y-3">
-            <div className="text-xs text-[var(--color-text-dim)] mb-2">
+            <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">
               心中默想所问之事，随意报出两个正整数
             </div>
             <div className="flex gap-3">
@@ -393,8 +392,8 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
                 value={inputNum1}
                 onChange={e => setInputNum1(e.target.value)}
                 placeholder="第一个数"
-                className="flex-1 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
-                  placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none"
+                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
+                  placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none font-body"
               />
               <input
                 type="number"
@@ -402,14 +401,14 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
                 value={inputNum2}
                 onChange={e => setInputNum2(e.target.value)}
                 placeholder="第二个数"
-                className="flex-1 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
-                  placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none"
+                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
+                  placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none font-body"
               />
             </div>
             <button
               onClick={handleCastByNumber}
-              className="w-full bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                hover:bg-[rgba(200,149,108,0.3)] transition-colors"
+              className="w-full bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
+                hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
             >
               起卦
             </button>
@@ -419,16 +418,16 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
         {/* Time input */}
         {castMethod === 'time' && (
           <div className="space-y-3">
-            <div className="text-xs text-[var(--color-text-dim)] mb-2">
+            <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">
               以当前时间自动计算卦象（传统用农历，此处使用公历近似）
             </div>
-            <div className="text-center py-4 bg-[rgba(255,255,255,0.03)] rounded-lg">
-              <div className="text-[var(--color-text)] text-lg">{timeDisplay}</div>
+            <div className="text-center py-4 bg-[var(--color-surface-subtle)] rounded-lg">
+              <div className="text-[var(--color-text)] text-lg font-title">{timeDisplay}</div>
             </div>
             <button
               onClick={handleCastByTime}
-              className="w-full bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                hover:bg-[rgba(200,149,108,0.3)] transition-colors"
+              className="w-full bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
+                hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
             >
               以此时起卦
             </button>
@@ -438,7 +437,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
         {/* Text input */}
         {castMethod === 'text' && (
           <div className="space-y-3">
-            <div className="text-xs text-[var(--color-text-dim)] mb-2">
+            <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">
               输入汉字，按笔画数起卦（一字取同卦，二字分上下，三字以上前半后半分）
             </div>
             <input
@@ -446,25 +445,25 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
               value={inputText}
               onChange={e => setInputText(e.target.value)}
               placeholder="输入汉字，如：平安"
-              className="w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-4 py-3 text-[var(--color-text)] text-center text-lg
-                placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none"
+              className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-4 py-3 text-[var(--color-text)] text-center text-lg
+                placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none font-body"
             />
             <button
               onClick={handleCastByText}
-              className="w-full bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] font-medium py-3 rounded-lg
-                hover:bg-[rgba(200,149,108,0.3)] transition-colors"
+              className="w-full bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
+                hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
             >
               起卦
             </button>
           </div>
         )}
 
-        {/* Reset button (shown when we have a result) */}
+        {/* Reset button */}
         {result && (
           <button
             onClick={reset}
-            className="mt-3 w-full px-6 py-2 border border-[rgba(255,255,255,0.2)] text-[var(--color-text-dim)] rounded-lg
-              hover:bg-[rgba(255,255,255,0.05)] transition-colors text-sm"
+            className="mt-3 w-full px-6 py-2 border border-[var(--color-surface-border-med)] text-[var(--color-text-dim)] rounded-lg
+              hover:bg-[var(--color-surface-dim)] transition-colors text-sm font-body"
           >
             重新起卦
           </button>
@@ -476,14 +475,14 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
 
       {/* AI断卦 + 多轮对话 */}
       {result && (
-        <section className="bg-[var(--color-bg-card)] border border-[rgba(200,149,108,0.2)] rounded-xl p-5">
+        <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[var(--color-gold)] text-sm font-medium">AI 解读</h3>
+            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 解读</h3>
             {isInitialAskVisible && (
               <button
                 onClick={askAI}
-                className="bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
-                  hover:bg-[rgba(200,149,108,0.3)] transition-colors"
+                className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
+                  hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
               >
                 请求 AI 断卦
               </button>
@@ -492,54 +491,53 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
 
           <div className="space-y-4">
             {chatMessages.map((msg, i) => {
-              // Skip the first user message (raw gua data)
               if (i === 0 && msg.role === 'user') return null;
 
               if (msg.role === 'user') {
                 return (
                   <div key={i} className="border-l-2 border-[var(--color-gold)] pl-3 py-1">
-                    <div className="text-[var(--color-gold)] text-xs mb-1">追问</div>
-                    <div className="text-[var(--color-text)] text-sm">{msg.content}</div>
+                    <div className="text-[var(--color-gold)] text-xs mb-1 font-body">追问</div>
+                    <div className="text-[var(--color-text)] text-sm font-body">{msg.content}</div>
                   </div>
                 );
               }
 
               return (
-                <div key={i} className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
+                <div key={i} className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap font-body">
                   {msg.content}
                 </div>
               );
             })}
 
             {streamingText && (
-              <div className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap">
+              <div className="text-[var(--color-text)] text-sm leading-relaxed whitespace-pre-wrap font-body">
                 {streamingText}
               </div>
             )}
 
             {aiLoading && !streamingText && (
-              <span className="text-[rgba(200,149,108,0.6)] text-sm animate-pulse">解读中...</span>
+              <span className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">解读中...</span>
             )}
 
             <div ref={chatEndRef} />
           </div>
 
           {hasAIResponse && !aiLoading && (
-            <div className="mt-4 pt-4 border-t border-[rgba(200,149,108,0.1)] flex gap-2">
+            <div className="mt-4 pt-4 border-t border-[var(--color-gold-border-light)] flex gap-2">
               <input
                 type="text"
                 value={followUpInput}
                 onChange={e => setFollowUpInput(e.target.value)}
                 onKeyDown={handleFollowUpKeyDown}
                 placeholder="继续追问，如：能详细分析一下变卦吗？"
-                className="flex-1 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-3 py-2 text-[var(--color-text)] text-sm
-                  placeholder:text-[rgba(232,224,212,0.3)] focus:border-[rgba(200,149,108,0.5)] focus:outline-none transition-colors"
+                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2 text-[var(--color-text)] text-sm
+                  placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none transition-colors font-body"
               />
               <button
                 onClick={askFollowUp}
                 disabled={!followUpInput.trim()}
-                className="px-4 py-2 bg-[rgba(200,149,108,0.2)] text-[var(--color-gold)] rounded-lg text-sm
-                  hover:bg-[rgba(200,149,108,0.3)] disabled:opacity-30 transition-colors whitespace-nowrap"
+                className="px-4 py-2 bg-[var(--color-gold-bg)] text-[var(--color-gold)] rounded-lg text-sm
+                  hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-30 transition-colors whitespace-nowrap font-body"
               >
                 发送
               </button>
@@ -547,13 +545,13 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
           )}
 
           {hasAIResponse && aiLoading && (
-            <div className="mt-4 pt-4 border-t border-[rgba(200,149,108,0.1)]">
-              <div className="text-[rgba(200,149,108,0.6)] text-sm animate-pulse">回答中...</div>
+            <div className="mt-4 pt-4 border-t border-[var(--color-gold-border-light)]">
+              <div className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">回答中...</div>
             </div>
           )}
 
           {!apiKey && !hasAIResponse && (
-            <div className="text-[var(--color-text-dim)] text-xs">
+            <div className="text-[var(--color-text-dim)] text-xs font-body">
               请先在设置中输入 Claude API Key 以使用 AI 解读功能。
             </div>
           )}
@@ -562,7 +560,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
 
       {/* 错误提示 */}
       {error && (
-        <div className="bg-[rgba(201,64,67,0.1)] border border-[rgba(201,64,67,0.3)] rounded-xl p-4 text-[var(--color-cinnabar)] text-sm">
+        <div className="bg-[var(--color-error-bg)] border border-[var(--color-error-border)] rounded-xl p-4 text-[var(--color-cinnabar)] text-sm font-body">
           {error}
         </div>
       )}

@@ -1,19 +1,24 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { loadHistoryFromStorage, saveHistoryToStorage } from './lib/history.js';
 import SettingsPanel from './components/SettingsPanel.jsx';
 import HistoryDrawer from './components/HistoryDrawer.jsx';
+import ThemePicker from './components/ThemePicker.jsx';
 import LiuyaoModule from './modules/liuyao/LiuyaoModule.jsx';
 import MeihuaModule from './modules/meihua/MeihuaModule.jsx';
 
 const TABS = [
-  { id: 'liuyao', label: '六爻占卜' },
-  { id: 'meihua', label: '梅花易数' },
+  { id: 'liuyao', label: '六爻占卜', icon: '☰' },
+  { id: 'meihua', label: '梅花易数', icon: '❀' },
 ];
+
+const THEME_KEY = 'tianji-theme';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('liuyao');
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('tianji-api-key') || '');
   const [showSettings, setShowSettings] = useState(false);
+  const [showThemePicker, setShowThemePicker] = useState(false);
+  const [theme, setTheme] = useState(() => localStorage.getItem(THEME_KEY) || 'ink');
 
   // History (shared across all modules)
   const [history, setHistory] = useState(() => loadHistoryFromStorage());
@@ -22,6 +27,12 @@ export default function App() {
 
   // When a history item is loaded, we store it here so the active module can pick it up
   const [pendingHistoryLoad, setPendingHistoryLoad] = useState(null);
+
+  // Apply theme to document
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
+  }, [theme]);
 
   // === History CRUD ===
   const upsertHistory = useCallback((id, question, moduleData, chatMsgs) => {
@@ -32,10 +43,8 @@ export default function App() {
         timestamp: existing >= 0 ? prev[existing].timestamp : Date.now(),
         question: question || '综合运势',
         module: moduleData.module || 'liuyao',
-        // Store module-specific data alongside common fields
         throws: moduleData.throws,
         result: moduleData.result,
-        // Meihua-specific
         method: moduleData.method,
         input: moduleData.input,
         chatMessages: chatMsgs,
@@ -53,10 +62,8 @@ export default function App() {
 
   const handleLoadHistory = useCallback((item) => {
     const module = item.module || 'liuyao';
-    // Switch to the correct tab
     setActiveTab(module);
     setActiveHistoryId(item.id);
-    // Set pending load — the module will pick it up
     setPendingHistoryLoad(item);
     setShowHistory(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -79,16 +86,23 @@ export default function App() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
       {/* Header */}
-      <header className="border-b border-[rgba(200,149,108,0.1)] backdrop-blur-sm sticky top-0 z-10"
-        style={{ backgroundColor: 'rgba(10,10,15,0.9)' }}>
+      <header className="border-b border-[var(--color-gold-border-light)] backdrop-blur-sm sticky top-0 z-10"
+        style={{ backgroundColor: 'var(--color-header-bg)' }}>
         <div className="max-w-3xl mx-auto px-4">
           {/* Title row */}
           <div className="py-3 flex items-center justify-between">
-            <h1 className="text-[var(--color-gold)] text-lg font-bold tracking-wide">天机卷</h1>
+            <h1 className="text-[var(--color-gold)] text-xl font-title tracking-wide">天机卷</h1>
             <div className="flex items-center gap-2">
               <button
+                onClick={() => setShowThemePicker(true)}
+                className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-2 py-1 rounded-lg border border-[var(--color-surface-border)] hover:border-[var(--color-gold-border)] transition-colors"
+                title="切换主题"
+              >
+                🎨
+              </button>
+              <button
                 onClick={() => setShowHistory(true)}
-                className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[rgba(255,255,255,0.1)] hover:border-[rgba(200,149,108,0.3)] transition-colors"
+                className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[var(--color-surface-border)] hover:border-[var(--color-gold-border)] transition-colors font-body"
               >
                 历史
                 {tabHistoryCount > 0 && (
@@ -97,7 +111,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[rgba(255,255,255,0.1)] hover:border-[rgba(200,149,108,0.3)] transition-colors"
+                className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[var(--color-surface-border)] hover:border-[var(--color-gold-border)] transition-colors font-body"
               >
                 设置
               </button>
@@ -110,12 +124,13 @@ export default function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors
+                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors font-body
                   ${activeTab === tab.id
                     ? 'text-[var(--color-gold)] border-[var(--color-gold)]'
-                    : 'text-[var(--color-text-dim)] border-transparent hover:text-[var(--color-text)] hover:border-[rgba(200,149,108,0.3)]'
+                    : 'text-[var(--color-text-dim)] border-transparent hover:text-[var(--color-text)] hover:border-[var(--color-gold-border)]'
                   }`}
               >
+                <span className="mr-1.5 opacity-70">{tab.icon}</span>
                 {tab.label}
               </button>
             ))}
@@ -150,7 +165,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="text-center py-6 text-[var(--color-text-dim)] text-xs max-w-2xl mx-auto px-4">
+      <footer className="text-center py-6 text-[var(--color-text-dim)] text-xs max-w-2xl mx-auto px-4 font-body">
         本工具基于中国传统文化知识体系，所有占算和分析结果仅供参考和学习。
         不构成任何医疗、法律、财务或人生决策建议。重大决策请咨询专业人士。
       </footer>
@@ -169,6 +184,12 @@ export default function App() {
         onLoad={handleLoadHistory}
         onDelete={handleDeleteHistory}
         activeModule={activeTab}
+      />
+      <ThemePicker
+        show={showThemePicker}
+        onClose={() => setShowThemePicker(false)}
+        theme={theme}
+        setTheme={setTheme}
       />
     </div>
   );
