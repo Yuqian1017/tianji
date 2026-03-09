@@ -6,6 +6,7 @@ const MODULE_LABELS = {
   meihua: '梅花',
   bazi: '八字',
   ziwei: '紫微',
+  qimen: '奇门',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -71,6 +72,11 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                 const ziweiSummary = isZiwei && item.result?.mingGongStars
                   ? `命宫${item.result.mingGong?.branch || ''} ${item.result.mingGongStars.join(' ') || '空宫'} · ${item.result.juName || ''}`
                   : null;
+                // Qimen: show dunType + juNum + zhifu
+                const isQimen = item.module === 'qimen';
+                const qimenSummary = isQimen && item.result?.meta
+                  ? `${item.result.meta.dunTypeCn}${item.result.meta.juNum}局 · ${item.result.zhifu} · ${item.result.zhishi}`
+                  : null;
 
                 return (
                   <div
@@ -97,10 +103,13 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                         {ziweiSummary && (
                           <span className="text-[var(--color-gold)] font-title">{ziweiSummary}</span>
                         )}
-                        {!isBazi && !isZiwei && guaName && (
+                        {qimenSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{qimenSummary}</span>
+                        )}
+                        {!isBazi && !isZiwei && !isQimen && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {!isBazi && !isZiwei && bianName && (
+                        {!isBazi && !isZiwei && !isQimen && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>

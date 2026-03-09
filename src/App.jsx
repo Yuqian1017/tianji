@@ -7,12 +7,14 @@ import LiuyaoModule from './modules/liuyao/LiuyaoModule.jsx';
 import MeihuaModule from './modules/meihua/MeihuaModule.jsx';
 import BaziModule from './modules/bazi/BaziModule.jsx';
 import ZiweiModule from './modules/ziwei/ZiweiModule.jsx';
+import QimenModule from './modules/qimen/QimenModule.jsx';
 
 const TABS = [
   { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
   { id: 'meihua', label: '梅花易数', icon: '/assets/icon-meihua.webp' },
   { id: 'bazi', label: '八字命理', icon: '/assets/icon-bazi.webp' },
   { id: 'ziwei', label: '紫微斗数', icon: '/assets/icon-bazi.webp' },
+  { id: 'qimen', label: '奇门遁甲', icon: '/assets/icon-bazi.webp' },
 ];
 
 const THEME_KEY = 'tianji-theme';
@@ -209,6 +211,17 @@ export default function App() {
         )}
         {activeTab === 'ziwei' && (
           <ZiweiModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'qimen' && (
+          <QimenModule
             aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}
