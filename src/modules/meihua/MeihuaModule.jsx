@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { castByNumber, castByTime, castByText, formatForAI } from './engine.js';
 import { WUXING_CN, XIANTIAN } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
+import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { MEIHUA_SYSTEM_PROMPT } from './prompt.js';
 
 // Five-element color mapping (uses theme CSS variables)
@@ -144,7 +145,7 @@ function MeihuaDisplay({ result }) {
 }
 
 // ===== 梅花易数主模块 =====
-export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, activeHistoryId, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
+export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory, activeHistoryId, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
   const [question, setQuestion] = useState('');
   const [castMethod, setCastMethod] = useState('number');
   const [inputNum1, setInputNum1] = useState('');
@@ -252,7 +253,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
   // AI断卦
   const askAI = useCallback(async () => {
     if (!result) return;
-    if (!apiKey) {
+    if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
     }
@@ -265,7 +266,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
     const messages = [userMsg];
 
     try {
-      const fullText = await aiInterpret(apiKey, MEIHUA_SYSTEM_PROMPT, messages, (text) => {
+      const fullText = await aiInterpret({ apiKey: getActiveApiKey(aiConfig), provider: aiConfig.provider, model: aiConfig.model }, MEIHUA_SYSTEM_PROMPT, messages, (text) => {
         setStreamingText(text);
       });
       const newChatMessages = [userMsg, { role: 'assistant', content: fullText }];
@@ -286,13 +287,13 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
     } finally {
       setAiLoading(false);
     }
-  }, [result, apiKey, question, activeHistoryId, setActiveHistoryId, upsertHistory, setShowSettings]);
+  }, [result, aiConfig, question, activeHistoryId, setActiveHistoryId, upsertHistory, setShowSettings]);
 
   // 追问
   const askFollowUp = useCallback(async () => {
     const trimmed = followUpInput.trim();
     if (!trimmed || aiLoading) return;
-    if (!apiKey) {
+    if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
     }
@@ -307,7 +308,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
     setChatMessages(updatedMessages);
 
     try {
-      const fullText = await aiInterpret(apiKey, MEIHUA_SYSTEM_PROMPT, updatedMessages, (text) => {
+      const fullText = await aiInterpret({ apiKey: getActiveApiKey(aiConfig), provider: aiConfig.provider, model: aiConfig.model }, MEIHUA_SYSTEM_PROMPT, updatedMessages, (text) => {
         setStreamingText(text);
       });
       const finalMessages = [...updatedMessages, { role: 'assistant', content: fullText }];
@@ -328,7 +329,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
     } finally {
       setAiLoading(false);
     }
-  }, [followUpInput, aiLoading, apiKey, chatMessages, activeHistoryId, question, result, upsertHistory, setShowSettings]);
+  }, [followUpInput, aiLoading, aiConfig, chatMessages, activeHistoryId, question, result, upsertHistory, setShowSettings]);
 
   const handleFollowUpKeyDown = useCallback((e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -562,7 +563,7 @@ export default function MeihuaModule({ apiKey, setShowSettings, upsertHistory, a
             </div>
           )}
 
-          {!apiKey && !hasAIResponse && (
+          {!getActiveApiKey(aiConfig) && !hasAIResponse && (
             <div className="text-[var(--color-text-dim)] text-xs font-body">
               请先在设置中输入 Claude API Key 以使用 AI 解读功能。
             </div>

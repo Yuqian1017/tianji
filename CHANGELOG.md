@@ -1,5 +1,38 @@
 # Changelog
 
+## 2026-03-08 (latest)
+
+### feat: 多 Provider 支持 + 模型选择 + 历史管理 + 八字高级设置
+
+- **多 AI Provider 支持**: 新增 OpenRouter 接入，支持在 Anthropic 直连与 OpenRouter 间切换
+  - 新建 `src/lib/aiProviders.js`: Provider/Model 配置表，`getActiveApiKey()`, `getDefaultModel()` helpers
+  - 重构 `src/lib/ai.js`: `aiInterpret(apiKey, ...)` → `aiInterpret(config, ...)` (config = {apiKey, provider, model})
+  - 拆分 `callAnthropic()` / `callOpenRouter()` + 共享 `readSSE()` SSE 解析器
+  - OpenRouter 使用 OpenAI 兼容格式 (`/api/v1/chat/completions`)
+  - 可选模型: Anthropic (Sonnet 4, Haiku 4) / OpenRouter (Sonnet 4, Haiku 4, Gemini 2.5 Flash, DeepSeek V3)
+- **设置面板重写** (`SettingsPanel.jsx`):
+  - Provider 分段切换按钮 (Anthropic 直连 / OpenRouter)
+  - 双 API Key 输入 (切换 provider 自动显示对应 key)
+  - 模型下拉选择 (按 provider 动态切换可选模型列表)
+  - 历史记录管理区: 导出/导入/清空 (两步确认)
+- **历史记录增强** (`history.js`):
+  - `MAX_HISTORY` 50 → 500
+  - 新增 `exportHistory()`: 导出 JSON 字符串
+  - 新增 `importHistory(jsonString)`: 解析 + 按 id 去重合并 + 时间排序 + 保存
+  - `saveHistoryToStorage()` 加 try/catch quota 超限保护
+- **八字高级设置** (`BaziModule.jsx`):
+  - 新增可折叠"高级设置"面板 (▶/▼ 切换)
+  - "详细分析模式"开关: 开启后 AI 综合分析完成后显示 6 个分项按钮 (财运/事业/感情/子女/父母/健康)
+  - 点击分项按钮 → 作为 follow-up 追问发送，复用完整对话历史，AI 直接深入该方面
+  - 已查看分项显示 ✓ 标记
+- **全局 aiConfig 重构** (`App.jsx`):
+  - `apiKey` state → `aiConfig` object (provider, anthropicKey, openrouterKey, model)
+  - 所有三个模块 props 统一为 `aiConfig={aiConfig}`
+  - 新增 `handleHistoryChange` 回调给 SettingsPanel
+- **Prompt 更新** (`bazi/prompt.js`): 追加分项分析指令，500-800字深入专项
+- **修改文件**: `ai.js`, `history.js`, `App.jsx`, `SettingsPanel.jsx`, `BaziModule.jsx`, `LiuyaoModule.jsx`, `MeihuaModule.jsx`, `bazi/prompt.js`
+- **新增文件**: `src/lib/aiProviders.js`
+
 ## 2026-03-08
 
 ### feat: 八字命理模块 (BaZi / Four Pillars of Destiny)

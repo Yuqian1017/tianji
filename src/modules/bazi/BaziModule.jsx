@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { paiBazi, formatForAI, getShiShen } from './engine.js';
 import { STEM_WUXING, BRANCH_WUXING, WUXING_CN, WUXING_ORDER, SHICHEN, SHISHEN_ABBR } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
+import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZI_SYSTEM_PROMPT } from './prompt.js';
 
 // Five-element color mapping (theme CSS variables)
@@ -20,6 +21,16 @@ const wuxingBgColor = {
   fire: 'bg-[var(--color-wx-fire-bg)]',
   earth: 'bg-[var(--color-wx-earth-bg)]',
 };
+
+// Detailed analysis sections for advanced mode
+const DETAIL_SECTIONS = [
+  { id: 'caiyun', label: '财运', prompt: '请详细分析此命盘的财运：正财偏财特点、求财方式、财运高低时期、适合的理财方向。' },
+  { id: 'shiye', label: '事业', prompt: '请详细分析此命盘的事业运：适合的行业、职业发展路径、贵人方向、创业还是打工更适合。' },
+  { id: 'ganqing', label: '感情', prompt: '请详细分析此命盘的感情婚姻：婚姻宫特点、配偶特征、感情稳定性、注意事项。' },
+  { id: 'zinv', label: '子女', prompt: '请详细分析此命盘的子女缘：子女星特点、子女数量倾向、与子女关系、教育方向。' },
+  { id: 'fumu', label: '父母', prompt: '请详细分析此命盘与父母的关系：印星特点、父母缘分、是否得到父母助力。' },
+  { id: 'jiankang', label: '健康', prompt: '请详细分析此命盘的健康：五行偏枯可能影响的身体部位、需要注意的健康问题、养生方向。' },
+];
 
 // ===== 排盘中动画 =====
 function CalculatingAnimation() {
@@ -248,7 +259,7 @@ function BaziDisplay({ result }) {
 
 // ===== 主组件 =====
 export default function BaziModule({
-  apiKey,
+  aiConfig,
   setShowSettings,
   upsertHistory,
   activeHistoryId,
@@ -263,6 +274,11 @@ export default function BaziModule({
   const [birthHour, setBirthHour] = useState(12);
   const [gender, setGender] = useState('male');
   const [question, setQuestion] = useState('');
+
+  // Advanced settings
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [detailedMode, setDetailedMode] = useState(false);
+  const [sectionResponses, setSectionResponses] = useState({});
 
   // Result state
   const [result, setResult] = useState(null);
@@ -301,9 +317,17 @@ export default function BaziModule({
       setError('');
       setStreamingText('');
       setFollowUpInput('');
+      setSectionResponses({});
       clearPendingHistoryLoad();
     }
   }, [pendingHistoryLoad, clearPendingHistoryLoad]);
+
+  // Build AI config object for aiInterpret calls
+  const makeAiConfig = useCallback(() => ({
+    apiKey: getActiveApiKey(aiConfig),
+    provider: aiConfig.provider,
+    model: aiConfig.model,
+  }), [aiConfig]);
 
   // Reset
   const reset = useCallback(() => {
@@ -313,6 +337,7 @@ export default function BaziModule({
     setAiLoading(false);
     setFollowUpInput('');
     setError('');
+    setSectionResponses({});
     setActiveHistoryId(null);
   }, [setActiveHistoryId]);
 
@@ -322,6 +347,7 @@ export default function BaziModule({
     setCalculating(true);
     setChatMessages([]);
     setStreamingText('');
+    setSectionResponses({});
     setActiveHistoryId(null);
 
     // Brief animation delay for UX
@@ -338,10 +364,22 @@ export default function BaziModule({
     }, 800);
   }, [birthYear, birthMonth, birthDay, birthHour, gender, setActiveHistoryId]);
 
+  // Helper to save history
+  const saveToHistory = useCallback((msgs) => {
+    const historyId = activeHistoryId || Date.now().toString();
+    setActiveHistoryId(historyId);
+    upsertHistory(historyId, question, {
+      module: 'bazi',
+      input: { year: birthYear, month: birthMonth, day: birthDay, hour: birthHour, minute: 0, gender },
+      result,
+    }, msgs);
+    return historyId;
+  }, [activeHistoryId, setActiveHistoryId, upsertHistory, question, birthYear, birthMonth, birthDay, birthHour, gender, result]);
+
   // AI interpretation
   const askAI = useCallback(async () => {
     if (!result) return;
-    if (!apiKey) {
+    if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
     }
@@ -354,33 +392,26 @@ export default function BaziModule({
     const messages = [userMsg];
 
     try {
-      const fullText = await aiInterpret(apiKey, BAZI_SYSTEM_PROMPT, messages, (text) => {
+      const fullText = await aiInterpret(makeAiConfig(), BAZI_SYSTEM_PROMPT, messages, (text) => {
         setStreamingText(text);
       });
       const newChatMessages = [userMsg, { role: 'assistant', content: fullText }];
       setChatMessages(newChatMessages);
       setStreamingText('');
-
-      const historyId = activeHistoryId || Date.now().toString();
-      setActiveHistoryId(historyId);
-      upsertHistory(historyId, question, {
-        module: 'bazi',
-        input: { year: birthYear, month: birthMonth, day: birthDay, hour: birthHour, minute: 0, gender },
-        result,
-      }, newChatMessages);
+      saveToHistory(newChatMessages);
     } catch (e) {
       setError(`AI解读失败: ${e.message}`);
       console.error('AI解读失败:', e);
     } finally {
       setAiLoading(false);
     }
-  }, [result, apiKey, question, activeHistoryId, setActiveHistoryId, upsertHistory, setShowSettings, birthYear, birthMonth, birthDay, birthHour, gender]);
+  }, [result, aiConfig, question, makeAiConfig, saveToHistory, setShowSettings]);
 
-  // Follow-up
+  // Follow-up (free text)
   const askFollowUp = useCallback(async () => {
     const trimmed = followUpInput.trim();
     if (!trimmed || aiLoading) return;
-    if (!apiKey) {
+    if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
     }
@@ -395,19 +426,14 @@ export default function BaziModule({
     setChatMessages(updatedMessages);
 
     try {
-      const fullText = await aiInterpret(apiKey, BAZI_SYSTEM_PROMPT, updatedMessages, (text) => {
+      const fullText = await aiInterpret(makeAiConfig(), BAZI_SYSTEM_PROMPT, updatedMessages, (text) => {
         setStreamingText(text);
       });
       const finalMessages = [...updatedMessages, { role: 'assistant', content: fullText }];
       setChatMessages(finalMessages);
       setStreamingText('');
-
       if (activeHistoryId) {
-        upsertHistory(activeHistoryId, question, {
-          module: 'bazi',
-          input: { year: birthYear, month: birthMonth, day: birthDay, hour: birthHour, minute: 0, gender },
-          result,
-        }, finalMessages);
+        saveToHistory(finalMessages);
       }
     } catch (e) {
       setError(`AI回答失败: ${e.message}`);
@@ -415,7 +441,42 @@ export default function BaziModule({
     } finally {
       setAiLoading(false);
     }
-  }, [followUpInput, aiLoading, apiKey, chatMessages, activeHistoryId, question, result, upsertHistory, setShowSettings, birthYear, birthMonth, birthDay, birthHour, gender]);
+  }, [followUpInput, aiLoading, aiConfig, chatMessages, activeHistoryId, makeAiConfig, saveToHistory, setShowSettings]);
+
+  // Detailed section request
+  const askSection = useCallback(async (section) => {
+    if (aiLoading) return;
+    if (!getActiveApiKey(aiConfig)) {
+      setShowSettings(true);
+      return;
+    }
+
+    setAiLoading(true);
+    setStreamingText('');
+    setError('');
+
+    const userMsg = { role: 'user', content: section.prompt };
+    const updatedMessages = [...chatMessages, userMsg];
+    setChatMessages(updatedMessages);
+
+    try {
+      const fullText = await aiInterpret(makeAiConfig(), BAZI_SYSTEM_PROMPT, updatedMessages, (text) => {
+        setStreamingText(text);
+      });
+      const finalMessages = [...updatedMessages, { role: 'assistant', content: fullText }];
+      setChatMessages(finalMessages);
+      setStreamingText('');
+      setSectionResponses(prev => ({ ...prev, [section.id]: true }));
+      if (activeHistoryId) {
+        saveToHistory(finalMessages);
+      }
+    } catch (e) {
+      setError(`AI分析失败: ${e.message}`);
+      console.error('AI section analysis failed:', e);
+    } finally {
+      setAiLoading(false);
+    }
+  }, [aiLoading, aiConfig, chatMessages, activeHistoryId, makeAiConfig, saveToHistory, setShowSettings]);
 
   const handleFollowUpKeyDown = useCallback((e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -534,6 +595,40 @@ export default function BaziModule({
           />
         </div>
 
+        {/* Advanced Settings (collapsible) */}
+        <div className="mb-3">
+          <button
+            onClick={() => setShowAdvanced(!showAdvanced)}
+            className="text-[var(--color-text-dim)] text-xs hover:text-[var(--color-text)] transition-colors font-body flex items-center gap-1"
+          >
+            <span className={`transform transition-transform text-[10px] ${showAdvanced ? 'rotate-90' : ''}`}>▶</span>
+            高级设置
+          </button>
+          {showAdvanced && (
+            <div className="mt-2 p-3 bg-[var(--color-surface-dim)] rounded-lg border border-[var(--color-surface-border)] space-y-3">
+              {/* Detailed mode toggle */}
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-sm text-[var(--color-text)] font-body">详细分析模式</div>
+                  <div className="text-xs text-[var(--color-text-dim)] font-body">
+                    先综合分析，再可分项查看财运、事业、感情等
+                  </div>
+                </div>
+                <button
+                  onClick={() => setDetailedMode(!detailedMode)}
+                  className={`w-10 h-6 rounded-full transition-colors relative flex-shrink-0 ${
+                    detailedMode ? 'bg-[var(--color-gold)]' : 'bg-[var(--color-surface-border-med)]'
+                  }`}
+                >
+                  <span className={`block w-4 h-4 rounded-full bg-white absolute top-1 transition-transform ${
+                    detailedMode ? 'translate-x-5' : 'translate-x-1'
+                  }`} />
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+
         {/* Submit button */}
         <button
           onClick={handlePaiBan}
@@ -611,8 +706,36 @@ export default function BaziModule({
             <div ref={chatEndRef} />
           </div>
 
+          {/* Detailed section tabs */}
+          {detailedMode && hasAIResponse && !aiLoading && (
+            <div className="mt-4 pt-4 border-t border-[var(--color-gold-border-light)]">
+              <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">点击查看各方面详细分析：</div>
+              <div className="flex flex-wrap gap-2">
+                {DETAIL_SECTIONS.map(section => {
+                  const done = !!sectionResponses[section.id];
+                  return (
+                    <button
+                      key={section.id}
+                      onClick={() => askSection(section)}
+                      disabled={aiLoading}
+                      className={`px-3 py-1.5 text-xs rounded-lg border transition-colors font-body
+                        ${done
+                          ? 'border-[var(--color-gold)] text-[var(--color-gold)] bg-[var(--color-gold-bg-faint)]'
+                          : 'border-[var(--color-surface-border)] text-[var(--color-text-dim)] hover:border-[var(--color-gold-border)] hover:text-[var(--color-gold)]'
+                        }`}
+                    >
+                      {section.label}
+                      {done && ' ✓'}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Follow-up input */}
           {hasAIResponse && !aiLoading && (
-            <div className="mt-4 pt-4 border-t border-[var(--color-gold-border-light)] flex gap-2">
+            <div className={`${detailedMode ? 'mt-3' : 'mt-4'} pt-4 border-t border-[var(--color-gold-border-light)] flex gap-2`}>
               <input
                 type="text"
                 value={followUpInput}
@@ -639,9 +762,9 @@ export default function BaziModule({
             </div>
           )}
 
-          {!apiKey && !hasAIResponse && (
+          {!getActiveApiKey(aiConfig) && !hasAIResponse && (
             <div className="text-[var(--color-text-dim)] text-xs font-body">
-              请先在设置中输入 Claude API Key 以使用 AI 解读功能。
+              请先在设置中输入 API Key 以使用 AI 解读功能。
             </div>
           )}
         </section>

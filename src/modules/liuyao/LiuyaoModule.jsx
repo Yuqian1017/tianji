@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { throwCoins, randomThrows, paipan, formatForAI } from './engine.js';
 import { WUXING_CN, YAO_NAMES } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
+import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { LIUYAO_SYSTEM_PROMPT } from './prompt.js';
 
 // ===== 铜钱动画组件 =====
@@ -191,7 +192,7 @@ function GuaDisplay({ result }) {
 }
 
 // ===== 六爻模块主组件 =====
-export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, activeHistoryId, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
+export default function LiuyaoModule({ aiConfig, setShowSettings, upsertHistory, activeHistoryId, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
   const [question, setQuestion] = useState('');
   const [throws, setThrows] = useState([]);
   const [result, setResult] = useState(null);
@@ -276,7 +277,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
   // AI断卦 (initial)
   const askAI = useCallback(async () => {
     if (!result) return;
-    if (!apiKey) {
+    if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
     }
@@ -289,7 +290,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
     const messages = [userMsg];
 
     try {
-      const fullText = await aiInterpret(apiKey, LIUYAO_SYSTEM_PROMPT, messages, (text) => {
+      const fullText = await aiInterpret({ apiKey: getActiveApiKey(aiConfig), provider: aiConfig.provider, model: aiConfig.model }, LIUYAO_SYSTEM_PROMPT, messages, (text) => {
         setStreamingText(text);
       });
       const newChatMessages = [userMsg, { role: 'assistant', content: fullText }];
@@ -306,13 +307,13 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
     } finally {
       setAiLoading(false);
     }
-  }, [result, apiKey, question, throws, activeHistoryId, setActiveHistoryId, upsertHistory, setShowSettings]);
+  }, [result, aiConfig, question, throws, activeHistoryId, setActiveHistoryId, upsertHistory, setShowSettings]);
 
   // 追问
   const askFollowUp = useCallback(async () => {
     const trimmed = followUpInput.trim();
     if (!trimmed || aiLoading) return;
-    if (!apiKey) {
+    if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
     }
@@ -327,7 +328,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
     setChatMessages(updatedMessages);
 
     try {
-      const fullText = await aiInterpret(apiKey, LIUYAO_SYSTEM_PROMPT, updatedMessages, (text) => {
+      const fullText = await aiInterpret({ apiKey: getActiveApiKey(aiConfig), provider: aiConfig.provider, model: aiConfig.model }, LIUYAO_SYSTEM_PROMPT, updatedMessages, (text) => {
         setStreamingText(text);
       });
       const finalMessages = [...updatedMessages, { role: 'assistant', content: fullText }];
@@ -343,7 +344,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
     } finally {
       setAiLoading(false);
     }
-  }, [followUpInput, aiLoading, apiKey, chatMessages, activeHistoryId, question, throws, result, upsertHistory, setShowSettings]);
+  }, [followUpInput, aiLoading, aiConfig, chatMessages, activeHistoryId, question, throws, result, upsertHistory, setShowSettings]);
 
   const handleFollowUpKeyDown = useCallback((e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -509,7 +510,7 @@ export default function LiuyaoModule({ apiKey, setShowSettings, upsertHistory, a
             </div>
           )}
 
-          {!apiKey && !hasAIResponse && (
+          {!getActiveApiKey(aiConfig) && !hasAIResponse && (
             <div className="text-[var(--color-text-dim)] text-xs font-body">
               请先在设置中输入 Claude API Key 以使用 AI 解读功能。
             </div>

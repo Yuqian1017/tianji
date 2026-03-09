@@ -24,7 +24,12 @@ const THEME_BANNERS = {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('liuyao');
-  const [apiKey, setApiKey] = useState(() => localStorage.getItem('tianji-api-key') || '');
+  const [aiConfig, setAiConfig] = useState(() => ({
+    provider: localStorage.getItem('tianji-ai-provider') || 'anthropic',
+    anthropicKey: localStorage.getItem('tianji-api-key') || '',
+    openrouterKey: localStorage.getItem('tianji-openrouter-key') || '',
+    model: localStorage.getItem('tianji-ai-model') || '',
+  }));
   const [showSettings, setShowSettings] = useState(false);
   const [showThemePicker, setShowThemePicker] = useState(false);
   const [theme, setTheme] = useState(() => localStorage.getItem(THEME_KEY) || 'ink');
@@ -88,6 +93,11 @@ export default function App() {
       setActiveHistoryId(null);
     }
   }, [activeHistoryId]);
+
+  // Re-read history from localStorage (after import/clear in settings)
+  const handleHistoryChange = useCallback(() => {
+    setHistory(loadHistoryFromStorage());
+  }, []);
 
   // Count history for current tab
   const tabHistoryCount = history.filter(h => (h.module || 'liuyao') === activeTab).length;
@@ -164,7 +174,7 @@ export default function App() {
       <main className="max-w-3xl mx-auto px-4 py-6">
         {activeTab === 'liuyao' && (
           <LiuyaoModule
-            apiKey={apiKey}
+            aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}
             activeHistoryId={activeHistoryId}
@@ -175,7 +185,7 @@ export default function App() {
         )}
         {activeTab === 'meihua' && (
           <MeihuaModule
-            apiKey={apiKey}
+            aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}
             activeHistoryId={activeHistoryId}
@@ -186,7 +196,7 @@ export default function App() {
         )}
         {activeTab === 'bazi' && (
           <BaziModule
-            apiKey={apiKey}
+            aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}
             activeHistoryId={activeHistoryId}
@@ -212,10 +222,12 @@ export default function App() {
 
       {/* Shared overlays */}
       <SettingsPanel
-        apiKey={apiKey}
-        setApiKey={setApiKey}
+        aiConfig={aiConfig}
+        setAiConfig={setAiConfig}
         show={showSettings}
         setShow={setShowSettings}
+        historyCount={history.length}
+        onHistoryChange={handleHistoryChange}
       />
       <HistoryDrawer
         show={showHistory}
