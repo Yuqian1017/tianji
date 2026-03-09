@@ -4,6 +4,7 @@ import { STEM_WUXING, BRANCH_WUXING, WUXING_CN, WUXING_ORDER, SHICHEN, SHISHEN_A
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZI_SYSTEM_PROMPT } from './prompt.js';
+import ModuleIntro from '../../components/ModuleIntro.jsx';
 
 // Five-element color mapping (theme CSS variables)
 const wuxingColor = {
@@ -497,6 +498,12 @@ export default function BaziModule({
 
   return (
     <div className="space-y-6">
+      <ModuleIntro
+        moduleId="bazi"
+        origin="唐代李虚中首创，宋代徐子平完善，又称「子平术」。以出生年月日时的天干地支（八个字）推算一生命运格局。"
+        strengths={['一生运势全局（性格、事业、财运、婚姻）', '大运流年走向', '五行喜忌与职业方向', '人生关键节点预判']}
+      />
+
       {/* 出生信息输入 */}
       <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
         <label className="block text-[var(--color-gold)] text-sm font-medium mb-3 font-title">出生信息</label>

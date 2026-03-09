@@ -4,6 +4,7 @@ import { WUXING_CN, XIANTIAN } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { MEIHUA_SYSTEM_PROMPT } from './prompt.js';
+import ModuleIntro from '../../components/ModuleIntro.jsx';
 
 // Five-element color mapping (uses theme CSS variables)
 const wuxingColor = {
@@ -353,6 +354,12 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
 
   return (
     <div className="space-y-6">
+      <ModuleIntro
+        moduleId="meihua"
+        origin="北宋邵雍（邵康节）所创，取「万物皆可起卦」之意。以数字、时间、汉字等随机信息起卦，快速直观，重「象」不重「爻」。"
+        strengths={['快速决断（报两个数即可）', '日常小事占问', '即兴取象（看到什么、想到什么皆可起卦）']}
+      />
+
       {/* 占问事项 */}
       <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
         <label className="block text-[var(--color-gold)] text-sm font-medium mb-2 font-title">占问事项</label>

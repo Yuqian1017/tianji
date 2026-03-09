@@ -4,6 +4,7 @@ import { WUXING_CN, YAO_NAMES } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { LIUYAO_SYSTEM_PROMPT } from './prompt.js';
+import ModuleIntro from '../../components/ModuleIntro.jsx';
 
 // ===== 铜钱动画组件 =====
 function CoinAnimation({ phase, coins }) {
@@ -358,6 +359,12 @@ export default function LiuyaoModule({ aiConfig, setShowSettings, upsertHistory,
 
   return (
     <div className="space-y-6">
+      <ModuleIntro
+        moduleId="liuyao"
+        origin="源自《周易》，西汉京房创立纳甲体系，宋代定型。三枚铜钱摇卦，配五行六亲六神，是中国传统占卜中发展最完善的预测术。"
+        strengths={['具体事件决策（做不做、成不成）', '时机判断（何时有利）', '人事吉凶（合作、诉讼、出行、求财）']}
+      />
+
       {/* 输入区 */}
       <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
         <label className="block text-[var(--color-gold)] text-sm font-medium mb-2 font-title">占问事项</label>

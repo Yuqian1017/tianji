@@ -2,6 +2,13 @@
 
 ## 2026-03-08 (latest)
 
+### feat: 模块引导介绍卡片
+- 新建共享组件 `ModuleIntro.jsx`：可折叠"关于此术"卡片，展示来源 + 擅长领域
+- 四个模块（六爻/梅花/八字/紫微）顶部各加一段引导文字
+- 折叠状态按模块分别存 localStorage，刷新后记忆
+- 用 `--color-surface-border` 浅边框，视觉上低于输入区层级
+- 四主题适配 (ink/jade/dao/dark)
+
 ### feat: 紫微斗数模块 (Ziwei Purple Star Astrology)
 - **完整排盘引擎** (`engine.js` ~300行): paiZiwei() 基于 lunar-javascript 公历→农历转换，10步排盘流程
   - Step 1-2: 定命宫身宫 + 安十二宫 (模运算公式)

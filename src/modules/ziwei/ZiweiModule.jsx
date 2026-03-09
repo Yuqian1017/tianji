@@ -4,6 +4,7 @@ import { SHICHEN, WUXING_COLORS, STAR_INFO } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { ZIWEI_SYSTEM_PROMPT } from './prompt.js';
+import ModuleIntro from '../../components/ModuleIntro.jsx';
 
 // Star wuxing → CSS color mapping using theme variables
 const starWuxingColor = (wuxing) => {
@@ -593,6 +594,12 @@ export default function ZiweiModule({
 
   return (
     <div className="space-y-6">
+      <ModuleIntro
+        moduleId="ziwei"
+        origin="相传为五代陈抟（陈希夷）所创，明清广泛流传。以紫微星为主，十四主星落十二宫，号称「天下第一神数」。"
+        strengths={['命运格局全景分析（比八字更细致）', '十二宫逐项解读（事业/财运/感情/健康等）', '大运十年周期分析', '四化飞星看人生主题']}
+      />
+
       {/* Input panel */}
       <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
         <label className="block text-[var(--color-gold)] text-sm font-medium mb-3 font-title">出生信息（阳历）</label>
