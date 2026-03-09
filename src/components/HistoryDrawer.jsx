@@ -5,6 +5,7 @@ const MODULE_LABELS = {
   liuyao: '六爻',
   meihua: '梅花',
   bazi: '八字',
+  ziwei: '紫微',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -65,6 +66,11 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                 const baziSummary = isBazi && item.result?.pillars
                   ? `${item.result.pillars.year.stem}${item.result.pillars.year.branch} ${item.result.pillars.month.stem}${item.result.pillars.month.branch} ${item.result.pillars.day.stem}${item.result.pillars.day.branch} ${item.result.pillars.hour.stem}${item.result.pillars.hour.branch}`
                   : null;
+                // Ziwei: show mingGong main stars summary
+                const isZiwei = item.module === 'ziwei';
+                const ziweiSummary = isZiwei && item.result?.mingGongStars
+                  ? `命宫${item.result.mingGong?.branch || ''} ${item.result.mingGongStars.join(' ') || '空宫'} · ${item.result.juName || ''}`
+                  : null;
 
                 return (
                   <div
@@ -88,10 +94,13 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                         {baziSummary && (
                           <span className="text-[var(--color-gold)] font-title tracking-wider">{baziSummary}</span>
                         )}
-                        {!isBazi && guaName && (
+                        {ziweiSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{ziweiSummary}</span>
+                        )}
+                        {!isBazi && !isZiwei && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {!isBazi && bianName && (
+                        {!isBazi && !isZiwei && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>
