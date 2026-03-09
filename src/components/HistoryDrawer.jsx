@@ -7,6 +7,7 @@ const MODULE_LABELS = {
   bazi: '八字',
   ziwei: '紫微',
   qimen: '奇门',
+  fengshui: '风水',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -77,6 +78,11 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                 const qimenSummary = isQimen && item.result?.meta
                   ? `${item.result.meta.dunTypeCn}${item.result.meta.juNum}局 · ${item.result.zhifu} · ${item.result.zhishi}`
                   : null;
+                // Fengshui: show sitting/facing + geju + yun
+                const isFengshui = item.module === 'fengshui';
+                const fengshuiSummary = isFengshui && item.result?.meta
+                  ? `${item.result.meta.sittingName}山${item.result.meta.facingName}向 · ${item.result.geju?.label || ''} · ${item.result.meta.yunNum}运`
+                  : null;
 
                 return (
                   <div
@@ -106,10 +112,13 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                         {qimenSummary && (
                           <span className="text-[var(--color-gold)] font-title">{qimenSummary}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && guaName && (
+                        {fengshuiSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{fengshuiSummary}</span>
+                        )}
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && bianName && (
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>

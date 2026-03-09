@@ -8,6 +8,7 @@ import MeihuaModule from './modules/meihua/MeihuaModule.jsx';
 import BaziModule from './modules/bazi/BaziModule.jsx';
 import ZiweiModule from './modules/ziwei/ZiweiModule.jsx';
 import QimenModule from './modules/qimen/QimenModule.jsx';
+import FengshuiModule from './modules/fengshui/FengshuiModule.jsx';
 
 const TABS = [
   { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
@@ -15,6 +16,7 @@ const TABS = [
   { id: 'bazi', label: '八字命理', icon: '/assets/icon-bazi.webp' },
   { id: 'ziwei', label: '紫微斗数', icon: '/assets/icon-bazi.webp' },
   { id: 'qimen', label: '奇门遁甲', icon: '/assets/icon-bazi.webp' },
+  { id: 'fengshui', label: '风水飞星', icon: '/assets/icon-bazi.webp' },
 ];
 
 const THEME_KEY = 'tianji-theme';
@@ -222,6 +224,17 @@ export default function App() {
         )}
         {activeTab === 'qimen' && (
           <QimenModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'fengshui' && (
+          <FengshuiModule
             aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}
