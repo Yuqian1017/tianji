@@ -1,6 +1,43 @@
 # Changelog
 
-## 2026-03-09 (latest)
+## 2026-03-12 (latest)
+
+### feat: Phase 4 — 中医问诊模块 (TCM Wellness Modules)
+
+Added 4 new TCM wellness modules with tab bar grouping (占算 | 问诊 divider).
+
+#### Shared Infrastructure
+- **`src/lib/tcm-data.js`** (~100行): Shared TCM reference data — WUZANG (五脏), WUXING_ORGAN_MAP, FOOD_QI (四气), FOOD_WUWEI (五味), WUXING_FOOD_THERAPY, JIEQI_YANGSHENG (24节气)
+- **`src/components/ModuleIntro.jsx`**: Fixed to accept both string and array for `strengths` prop
+- **`src/index.css`**: Added `.scrollbar-none` utility for horizontal tab scrolling
+- **Tab bar grouping**: Visual divider between 占算 and 问诊 categories, horizontal scroll for 10 tabs
+
+#### Module 7: 体质辨识 (Constitution Assessment)
+- **data.js** (~250行): 9 constitution types (王琦九种体质), 34 questions, 9 therapy plans (food/tea/acupoints/exercise)
+- **engine.js** (~80行): `assessConstitution()` scoring 0-100 per type, primary/secondary detection, `formatForAI()`
+- **TizhiModule.jsx** (~500行): Step-by-step questionnaire (5-point Likert), SVG radar chart (9 axes), constitution result card, collapsible therapy plans, AI streaming chat
+
+#### Module 8: 子午流注 (Meridian Clock)
+- **data.js** (~180行): 12 shichen entries with organ/meridian/wuxing/yangsheng/illness, per-organ acupoints
+- **engine.js** (~60行): `getCurrentShichen()` real-time detection, progress%, `formatForAI()`
+- **ZiwuModule.jsx** (~300行): SVG 12-segment circular clock with animated hand, real-time update (30s interval), meridian detail card, acupoints display, expandable full-day table, AI chat
+
+#### Module 9: 五运六气 (Five Movements Six Qi)
+- **data.js** (~130行): TIANGAN_YUN, DIZHI_QI, QI_INFO, PRIMARY_YUN/QI, RECENT_YUNQI (2024-2029)
+- **engine.js** (~120行): `getYearGanZhi()`, `getWuYun()` (太过/不及), `getKeYun()` (客运5段), `getLiuQi()` (司天/在泉), `getKeQi()` (客气6段), `analyzeYear()`, `formatForAI()`
+- **WuyunModule.jsx** (~280行): Year selector (2020-2049) with ganzi, overview card (大运+司天+在泉), five transport + six qi color-coded timelines, detail sections, AI chat
+
+#### Module 10: 八字看健康 (BaZi Health)
+- **data.js** (~100行): WUXING_HEALTH (5 elements → organs/symptoms/risks/nurture), LIUYIN (6 pathogens), QIQING (7 emotions), SHICHEN_HEALTH
+- **engine.js** (~120行): `analyzeBaziHealth()` (element distribution → organ mapping), `getLifeStageRisks()` (dayun → health focus), `getDietPlan()`, `runHealthAnalysis()` wrapper, `formatForAI()`
+- **BaziHealthModule.jsx** (~350行): Birth info form (reuses bazi SHICHEN data), five element bar chart, expandable organ risk cards, life stage timeline with current decade highlight, diet therapy cards, AI chat
+
+#### App Integration
+- **App.jsx**: Import 4 modules, tab bar with divider + horizontal scroll, 4 conditional rendering blocks
+- **HistoryDrawer.jsx**: 4 new module labels + summary formatters (constitution type / meridian / year analysis / health)
+- **Bug fix**: Fixed 5-arg `upsertHistory()` calls in tizhi/ziwu/wuyun to correct 4-arg signature
+
+## 2026-03-09
 
 ### feat: 风水飞星模块 (Fengshui Flying Star)
 - **排盘引擎** (`engine.js` ~270行): paiFengshui() 玄空飞星完整排盘

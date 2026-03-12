@@ -50,7 +50,7 @@ export default function ModuleIntro({ moduleId, origin, strengths }) {
           {/* Strengths */}
           <div className="text-[var(--color-text-dim)] text-xs leading-relaxed font-body">
             <span className="text-[var(--color-gold-muted)] font-medium">擅长：</span>
-            {strengths.join(' · ')}
+            {Array.isArray(strengths) ? strengths.join(' · ') : strengths}
           </div>
         </div>
       )}

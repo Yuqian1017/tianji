@@ -8,6 +8,10 @@ const MODULE_LABELS = {
   ziwei: '紫微',
   qimen: '奇门',
   fengshui: '风水',
+  tizhi: '体质',
+  ziwu: '子午',
+  wuyun: '运气',
+  bazihealth: '健康',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -83,6 +87,28 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                 const fengshuiSummary = isFengshui && item.result?.meta
                   ? `${item.result.meta.sittingName}山${item.result.meta.facingName}向 · ${item.result.geju?.label || ''} · ${item.result.meta.yunNum}运`
                   : null;
+                // Tizhi: primary constitution
+                const isTizhi = item.module === 'tizhi';
+                const tizhiSummary = isTizhi && item.result?.primary
+                  ? `${item.result.primary.name}${item.result.secondary ? ' · ' + item.result.secondary.name : ''}`
+                  : null;
+                // Ziwu: meridian at time
+                const isZiwu = item.module === 'ziwu';
+                const ziwuSummary = isZiwu && item.result?.shichen
+                  ? `${item.result.shichen.organ}经 · ${item.result.shichen.shichen}`
+                  : null;
+                // Wuyun: year analysis
+                const isWuyun = item.module === 'wuyun';
+                const wuyunSummary = isWuyun && item.result?.ganZhi
+                  ? `${item.result.ganZhi.ganzi}年 · ${item.result.wuYun?.label || ''}`
+                  : null;
+                // BaziHealth: pillars + weak elements
+                const isBaziHealth = item.module === 'bazihealth';
+                const baziHealthSummary = isBaziHealth && item.result?.healthResult
+                  ? (item.result.healthResult.weakElements?.length > 0
+                    ? `${item.result.healthResult.weakElements.map(e => ({wood:'木',fire:'火',earth:'土',metal:'金',water:'水'}[e])).join('')}偏弱`
+                    : '五行均衡')
+                  : null;
 
                 return (
                   <div
@@ -115,10 +141,22 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                         {fengshuiSummary && (
                           <span className="text-[var(--color-gold)] font-title">{fengshuiSummary}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && !isFengshui && guaName && (
+                        {tizhiSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{tizhiSummary}</span>
+                        )}
+                        {ziwuSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{ziwuSummary}</span>
+                        )}
+                        {wuyunSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{wuyunSummary}</span>
+                        )}
+                        {baziHealthSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{baziHealthSummary}</span>
+                        )}
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && !isFengshui && bianName && (
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>

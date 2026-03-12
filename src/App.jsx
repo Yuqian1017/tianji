@@ -9,6 +9,10 @@ import BaziModule from './modules/bazi/BaziModule.jsx';
 import ZiweiModule from './modules/ziwei/ZiweiModule.jsx';
 import QimenModule from './modules/qimen/QimenModule.jsx';
 import FengshuiModule from './modules/fengshui/FengshuiModule.jsx';
+import TizhiModule from './modules/tizhi/TizhiModule.jsx';
+import ZiwuModule from './modules/ziwu/ZiwuModule.jsx';
+import WuyunModule from './modules/wuyun/WuyunModule.jsx';
+import BaziHealthModule from './modules/bazihealth/BaziHealthModule.jsx';
 
 const TABS = [
   { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
@@ -17,6 +21,11 @@ const TABS = [
   { id: 'ziwei', label: '紫微斗数', icon: '/assets/icon-bazi.webp' },
   { id: 'qimen', label: '奇门遁甲', icon: '/assets/icon-bazi.webp' },
   { id: 'fengshui', label: '风水飞星', icon: '/assets/icon-bazi.webp' },
+  { id: 'divider' },
+  { id: 'tizhi', label: '体质辨识', icon: '/assets/icon-bazi.webp' },
+  { id: 'ziwu', label: '子午流注', icon: '/assets/icon-bazi.webp' },
+  { id: 'wuyun', label: '五运六气', icon: '/assets/icon-bazi.webp' },
+  { id: 'bazihealth', label: '八字健康', icon: '/assets/icon-bazi.webp' },
 ];
 
 const THEME_KEY = 'tianji-theme';
@@ -144,21 +153,30 @@ export default function App() {
           </div>
 
           {/* Tab bar */}
-          <div className="flex gap-1 -mb-px">
-            {TABS.map(tab => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors font-body
-                  ${activeTab === tab.id
-                    ? 'text-[var(--color-gold)] border-[var(--color-gold)]'
-                    : 'text-[var(--color-text-dim)] border-transparent hover:text-[var(--color-text)] hover:border-[var(--color-gold-border)]'
-                  }`}
-              >
-                <img src={tab.icon} alt="" className="inline-block w-5 h-5 mr-1.5 -mt-0.5 opacity-80" />
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex gap-0.5 -mb-px overflow-x-auto scrollbar-none">
+            {TABS.map(tab => {
+              if (tab.id === 'divider') {
+                return (
+                  <div key="divider" className="flex items-center px-1.5 shrink-0">
+                    <div className="w-px h-5 bg-[var(--color-gold-border)] opacity-40" />
+                    <span className="text-[9px] text-[var(--color-text-dim)] ml-1 opacity-50 font-title whitespace-nowrap">问诊</span>
+                  </div>
+                );
+              }
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-3 py-2 text-sm font-medium border-b-2 transition-colors font-body whitespace-nowrap shrink-0
+                    ${activeTab === tab.id
+                      ? 'text-[var(--color-gold)] border-[var(--color-gold)]'
+                      : 'text-[var(--color-text-dim)] border-transparent hover:text-[var(--color-text)] hover:border-[var(--color-gold-border)]'
+                    }`}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
           </div>
         </div>
       </header>
@@ -235,6 +253,50 @@ export default function App() {
         )}
         {activeTab === 'fengshui' && (
           <FengshuiModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'tizhi' && (
+          <TizhiModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'ziwu' && (
+          <ZiwuModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'wuyun' && (
+          <WuyunModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'bazihealth' && (
+          <BaziHealthModule
             aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}
