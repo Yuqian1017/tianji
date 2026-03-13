@@ -12,6 +12,7 @@ const MODULE_LABELS = {
   ziwu: '子午',
   wuyun: '运气',
   bazihealth: '健康',
+  wangzhen: '望诊',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -109,6 +110,11 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                     ? `${item.result.healthResult.weakElements.map(e => ({wood:'木',fire:'火',earth:'土',metal:'金',water:'水'}[e])).join('')}偏弱`
                     : '五行均衡')
                   : null;
+                // Wangzhen: diagnosis type
+                const isWangzhen = item.module === 'wangzhen';
+                const wangzhenSummary = isWangzhen && item.input?.type
+                  ? ({tongue:'舌诊',face:'面诊',palm:'手诊'}[item.input.type] || '望诊')
+                  : null;
 
                 return (
                   <div
@@ -153,10 +159,13 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                         {baziHealthSummary && (
                           <span className="text-[var(--color-gold)] font-title">{baziHealthSummary}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && guaName && (
+                        {wangzhenSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{wangzhenSummary}</span>
+                        )}
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && !isWangzhen && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && bianName && (
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && !isWangzhen && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>

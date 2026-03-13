@@ -6,6 +6,8 @@ import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZIHEALTH_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
+import BirthCityPicker from '../../components/BirthCityPicker.jsx';
+import { calcTrueSolarTimeOffset, adjustBirthTime, formatTrueSolarTime } from '../../lib/cities.js';
 
 const WUXING_COLORS = {
   wood: '#4CAF50', fire: '#E53935', earth: '#C6893F', metal: '#FFD54F', water: '#1E88E5',
@@ -152,6 +154,8 @@ export default function BaziHealthModule({
   const [day, setDay] = useState(15);
   const [hour, setHour] = useState(12);
   const [gender, setGender] = useState('male');
+  const [trueSolarEnabled, setTrueSolarEnabled] = useState(false);
+  const [birthCity, setBirthCity] = useState(null);
   const [result, setResult] = useState(null); // { baziResult, healthResult, lifeStages, dietPlan }
   const [hasCalculated, setHasCalculated] = useState(false);
 
@@ -192,7 +196,19 @@ export default function BaziHealthModule({
 
   // Calculate
   const handleCalculate = useCallback(() => {
-    const res = runHealthAnalysis(year, month, day, hour, 0, gender);
+    let adjYear = year, adjMonth = month, adjDay = day, adjHour = hour, adjMinute = 0;
+    if (trueSolarEnabled && birthCity) {
+      const offset = calcTrueSolarTimeOffset(birthCity.lng);
+      ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(year, month, day, hour, 0, offset));
+    }
+    const res = runHealthAnalysis(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
+    if (trueSolarEnabled && birthCity) {
+      res._trueSolar = {
+        city: birthCity.name,
+        offset: calcTrueSolarTimeOffset(birthCity.lng),
+        adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
+      };
+    }
     setResult(res);
     setHasCalculated(true);
     setChatMessages([]);
@@ -335,11 +351,22 @@ export default function BaziHealthModule({
               女
             </button>
           </div>
-          <button onClick={handleCalculate}
-            className="flex-1 py-2 bg-[var(--color-gold)] text-white rounded-lg text-sm font-title hover:opacity-90 transition-opacity">
-            健康分析
-          </button>
         </div>
+
+        {/* True Solar Time */}
+        <div className="mt-3 p-3 bg-[var(--color-surface-dim)] rounded-lg border border-[var(--color-surface-border)]">
+          <BirthCityPicker
+            enabled={trueSolarEnabled}
+            onToggle={setTrueSolarEnabled}
+            city={birthCity}
+            onCityChange={setBirthCity}
+          />
+        </div>
+
+        <button onClick={handleCalculate}
+          className="mt-3 w-full py-2 bg-[var(--color-gold)] text-white rounded-lg text-sm font-title hover:opacity-90 transition-opacity">
+          健康分析
+        </button>
       </div>
 
       {/* Results */}

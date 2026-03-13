@@ -5,6 +5,8 @@ import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { QIMEN_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
+import BirthCityPicker from '../../components/BirthCityPicker.jsx';
+import { calcTrueSolarTimeOffset, adjustBirthTime } from '../../lib/cities.js';
 
 // ===== 排盘动画 =====
 function CalculatingAnimation() {
@@ -257,6 +259,8 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
   const [inputDay, setInputDay] = useState(now.getDate());
   const [inputHour, setInputHour] = useState(now.getHours());
   const [question, setQuestion] = useState('');
+  const [trueSolarEnabled, setTrueSolarEnabled] = useState(false);
+  const [birthCity, setBirthCity] = useState(null);
 
   // Result & AI
   const [result, setResult] = useState(null);
@@ -329,7 +333,12 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
 
     setTimeout(() => {
       try {
-        const r = paiQimen(inputYear, inputMonth, inputDay, inputHour);
+        let adjYear = inputYear, adjMonth = inputMonth, adjDay = inputDay, adjHour = inputHour;
+        if (trueSolarEnabled && birthCity) {
+          const offset = calcTrueSolarTimeOffset(birthCity.lng);
+          ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour } = adjustBirthTime(inputYear, inputMonth, inputDay, inputHour, 0, offset));
+        }
+        const r = paiQimen(adjYear, adjMonth, adjDay, adjHour);
         if (!r) {
           setError('排盘失败，请检查输入参数');
           setCalculating(false);
@@ -554,12 +563,16 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
             高级设置
           </button>
           {detailMode && (
-            <div className="mt-2 pl-3 border-l border-[var(--color-surface-border)]">
-              <div className="flex items-center justify-between">
-                <span className="text-[var(--color-text-dim)] text-xs font-body">详细分析模式</span>
-                <span className="text-[var(--color-text-dim)] text-[10px] font-body">
-                  排盘后可分项深入分析
-                </span>
+            <div className="mt-2 p-3 bg-[var(--color-surface-dim)] rounded-lg border border-[var(--color-surface-border)] space-y-3">
+              {/* True Solar Time (optional for Qimen) */}
+              <BirthCityPicker
+                enabled={trueSolarEnabled}
+                onToggle={setTrueSolarEnabled}
+                city={birthCity}
+                onCityChange={setBirthCity}
+              />
+              <div className="text-[10px] text-[var(--color-text-dim)] font-body">
+                部分派别使用真太阳时起课，可根据需要开启
               </div>
             </div>
           )}

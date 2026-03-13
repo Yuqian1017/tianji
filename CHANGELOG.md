@@ -1,6 +1,36 @@
 # Changelog
 
-## 2026-03-12 (latest)
+## 2026-03-13 (latest)
+
+### feat: 望诊模块 + 真太阳时校正
+
+Added visual diagnosis (望诊) as the 11th module, and true solar time correction for birth-time modules.
+
+#### Module 11: 望诊 (Visual Diagnosis via AI Vision)
+- **`src/modules/wangzhen/data.js`** (~70行): 3 diagnosis types — tongue (舌诊, 6 dimensions), face (面诊, 8 dimensions), palm (手诊, 5 dimensions), each with capture guidance
+- **`src/modules/wangzhen/engine.js`** (~50行): `buildVisionMessage()` constructs Anthropic multimodal message (image + text), `buildFollowUpMessage()` for follow-up
+- **`src/modules/wangzhen/prompt.js`**: 6-step analysis system prompt (整体印象→逐项分析→脏腑判断→体质倾向→调养建议→进一步建议) + medical disclaimer
+- **`src/modules/wangzhen/WangzhenModule.jsx`** (~280行): Standard 7-prop module — diagnosis type picker (3 cards), capture guidance with dimensions, optional symptom input, camera/upload → AI vision analysis (streaming) → follow-up chat. History stores type+note only (no base64 images)
+
+#### Camera & Vision Infrastructure
+- **`src/lib/camera.js`** (~60行): `openCamera()` (prefers user-facing camera, Chinese error messages), `captureFrame()` (canvas→JPEG base64 at 0.85 quality), `stopCamera()`
+- **`src/components/CameraCapture.jsx`** (~210行): States: idle→requesting→streaming→captured→error. Supports live camera capture AND file upload fallback. Mirror preview, dashed guide overlay, 10MB file size limit
+- **`src/lib/ai.js`**: Added `normalizeMessagesForOpenAI()` to convert Anthropic image blocks to OpenAI `image_url` format for OpenRouter compatibility. `callAnthropic()` unchanged (native support)
+
+#### True Solar Time Correction (真太阳时校正)
+- **`src/lib/cities.js`** (~480行): ~300 Chinese cities (all provinces + municipalities + overseas Chinese centers like Singapore, Tokyo, Vancouver) with `{ name, province, lng }`. Key functions: `searchCities()`, `calcTrueSolarTimeOffset()` (`(120-lng)*4` minutes), `adjustBirthTime()` (handles day/month boundaries via Date.UTC), `adjustHourBranch()` (for Ziwei branch-string hours), `formatTrueSolarTime()`, `formatOffset()`
+- **`src/components/BirthCityPicker.jsx`** (~130行): Shared toggle+search component — "真太阳时校正" switch → fuzzy city search dropdown → displays longitude + offset. Outside-click to close
+- **Integrated into 4 modules**:
+  - `bazi/BaziModule.jsx`: Advanced settings, adjusts numeric time before paiBazi, shows "☀ 真太阳时" indicator
+  - `bazihealth/BaziHealthModule.jsx`: Below gender buttons, adjusts before runHealthAnalysis
+  - `ziwei/ZiweiModule.jsx`: Advanced settings, uses `adjustHourBranch()` for branch-string conversion
+  - `qimen/QimenModule.jsx`: Advanced settings with caveat "部分派别使用真太阳时起课"
+
+#### App Integration
+- **App.jsx**: Import + register wangzhen tab (after bazihealth, before divider end)
+- **HistoryDrawer.jsx**: `wangzhen: '望诊'` label + diagnosis type summary
+
+## 2026-03-12
 
 ### feat: Phase 4 — 中医问诊模块 (TCM Wellness Modules)
 

@@ -5,6 +5,8 @@ import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZI_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
+import BirthCityPicker from '../../components/BirthCityPicker.jsx';
+import { calcTrueSolarTimeOffset, adjustBirthTime, formatTrueSolarTime } from '../../lib/cities.js';
 
 // Five-element color mapping (theme CSS variables)
 const wuxingColor = {
@@ -280,6 +282,8 @@ export default function BaziModule({
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [detailedMode, setDetailedMode] = useState(false);
   const [sectionResponses, setSectionResponses] = useState({});
+  const [trueSolarEnabled, setTrueSolarEnabled] = useState(false);
+  const [birthCity, setBirthCity] = useState(null);
 
   // Result state
   const [result, setResult] = useState(null);
@@ -354,7 +358,20 @@ export default function BaziModule({
     // Brief animation delay for UX
     setTimeout(() => {
       try {
-        const r = paiBazi(birthYear, birthMonth, birthDay, birthHour, 0, gender);
+        let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHour = birthHour, adjMinute = 0;
+        if (trueSolarEnabled && birthCity) {
+          const offset = calcTrueSolarTimeOffset(birthCity.lng);
+          ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(birthYear, birthMonth, birthDay, birthHour, 0, offset));
+        }
+        const r = paiBazi(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
+        // Attach true solar time info to result for display
+        if (trueSolarEnabled && birthCity) {
+          r._trueSolar = {
+            city: birthCity.name,
+            offset: calcTrueSolarTimeOffset(birthCity.lng),
+            adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
+          };
+        }
         setResult(r);
       } catch (e) {
         setError(`排盘失败: ${e.message}`);
@@ -363,7 +380,7 @@ export default function BaziModule({
         setCalculating(false);
       }
     }, 800);
-  }, [birthYear, birthMonth, birthDay, birthHour, gender, setActiveHistoryId]);
+  }, [birthYear, birthMonth, birthDay, birthHour, gender, trueSolarEnabled, birthCity, setActiveHistoryId]);
 
   // Helper to save history
   const saveToHistory = useCallback((msgs) => {
@@ -613,6 +630,14 @@ export default function BaziModule({
           </button>
           {showAdvanced && (
             <div className="mt-2 p-3 bg-[var(--color-surface-dim)] rounded-lg border border-[var(--color-surface-border)] space-y-3">
+              {/* True Solar Time */}
+              <BirthCityPicker
+                enabled={trueSolarEnabled}
+                onToggle={setTrueSolarEnabled}
+                city={birthCity}
+                onCityChange={setBirthCity}
+              />
+
               {/* Detailed mode toggle */}
               <div className="flex items-center justify-between">
                 <div>
@@ -660,6 +685,14 @@ export default function BaziModule({
 
       {/* 排盘动画 */}
       {calculating && <CalculatingAnimation />}
+
+      {/* 真太阳时提示 */}
+      {result && !calculating && result._trueSolar && (
+        <div className="bg-[var(--color-surface-dim)] border border-[var(--color-gold-border)] rounded-lg px-4 py-2 text-sm font-body">
+          <span className="text-[var(--color-gold)]">☀ {formatTrueSolarTime(result._trueSolar.adjusted, result._trueSolar.offset)}</span>
+          <span className="text-[var(--color-text-dim)] ml-2">({result._trueSolar.city})</span>
+        </div>
+      )}
 
       {/* 排盘结果 */}
       {result && !calculating && <BaziDisplay result={result} />}

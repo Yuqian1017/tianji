@@ -5,6 +5,8 @@ import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { ZIWEI_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
+import BirthCityPicker from '../../components/BirthCityPicker.jsx';
+import { calcTrueSolarTimeOffset, adjustHourBranch, formatOffset } from '../../lib/cities.js';
 
 // Star wuxing → CSS color mapping using theme variables
 const starWuxingColor = (wuxing) => {
@@ -363,6 +365,8 @@ export default function ZiweiModule({
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [detailedMode, setDetailedMode] = useState(false);
   const [sectionResponses, setSectionResponses] = useState({});
+  const [trueSolarEnabled, setTrueSolarEnabled] = useState(false);
+  const [birthCity, setBirthCity] = useState(null);
 
   // Result state
   const [result, setResult] = useState(null);
@@ -450,7 +454,20 @@ export default function ZiweiModule({
 
     setTimeout(() => {
       try {
-        const r = paiZiwei(birthYear, birthMonth, birthDay, birthHour, gender);
+        let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHourBranch = birthHour;
+        if (trueSolarEnabled && birthCity) {
+          const offset = calcTrueSolarTimeOffset(birthCity.lng);
+          ({ year: adjYear, month: adjMonth, day: adjDay, branch: adjHourBranch } = adjustHourBranch(birthYear, birthMonth, birthDay, birthHour, offset));
+        }
+        const r = paiZiwei(adjYear, adjMonth, adjDay, adjHourBranch, gender);
+        if (trueSolarEnabled && birthCity) {
+          r._trueSolar = {
+            city: birthCity.name,
+            offset: calcTrueSolarTimeOffset(birthCity.lng),
+            originalBranch: birthHour,
+            adjustedBranch: adjHourBranch,
+          };
+        }
         setResult(r);
       } catch (e) {
         setError(`排盘失败: ${e.message}`);
@@ -459,7 +476,7 @@ export default function ZiweiModule({
         setCalculating(false);
       }
     }, 800);
-  }, [birthYear, birthMonth, birthDay, birthHour, gender, setActiveHistoryId]);
+  }, [birthYear, birthMonth, birthDay, birthHour, gender, trueSolarEnabled, birthCity, setActiveHistoryId]);
 
   // Save history
   const saveToHistory = useCallback((msgs) => {
@@ -716,6 +733,14 @@ export default function ZiweiModule({
           </button>
           {showAdvanced && (
             <div className="mt-2 p-3 bg-[var(--color-surface-dim)] rounded-lg border border-[var(--color-surface-border)] space-y-3">
+              {/* True Solar Time */}
+              <BirthCityPicker
+                enabled={trueSolarEnabled}
+                onToggle={setTrueSolarEnabled}
+                city={birthCity}
+                onCityChange={setBirthCity}
+              />
+
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-sm text-[var(--color-text)] font-body">详细分析模式</div>

@@ -13,6 +13,7 @@ import TizhiModule from './modules/tizhi/TizhiModule.jsx';
 import ZiwuModule from './modules/ziwu/ZiwuModule.jsx';
 import WuyunModule from './modules/wuyun/WuyunModule.jsx';
 import BaziHealthModule from './modules/bazihealth/BaziHealthModule.jsx';
+import WangzhenModule from './modules/wangzhen/WangzhenModule.jsx';
 
 const TABS = [
   { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
@@ -26,6 +27,7 @@ const TABS = [
   { id: 'ziwu', label: '子午流注', icon: '/assets/icon-bazi.webp' },
   { id: 'wuyun', label: '五运六气', icon: '/assets/icon-bazi.webp' },
   { id: 'bazihealth', label: '八字健康', icon: '/assets/icon-bazi.webp' },
+  { id: 'wangzhen', label: '望诊', icon: '/assets/icon-bazi.webp' },
 ];
 
 const THEME_KEY = 'tianji-theme';
@@ -297,6 +299,17 @@ export default function App() {
         )}
         {activeTab === 'bazihealth' && (
           <BaziHealthModule
+            aiConfig={aiConfig}
+            setShowSettings={setShowSettings}
+            upsertHistory={upsertHistory}
+            activeHistoryId={activeHistoryId}
+            setActiveHistoryId={setActiveHistoryId}
+            pendingHistoryLoad={pendingHistoryLoad}
+            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
+          />
+        )}
+        {activeTab === 'wangzhen' && (
+          <WangzhenModule
             aiConfig={aiConfig}
             setShowSettings={setShowSettings}
             upsertHistory={upsertHistory}

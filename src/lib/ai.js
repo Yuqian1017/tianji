@@ -74,12 +74,39 @@ async function parseAnthropicError(response) {
   }
 }
 
+// --- Vision message format normalization ---
+
+/**
+ * Convert Anthropic-style image blocks to OpenAI-style for OpenRouter.
+ * Anthropic: { type: 'image', source: { type: 'base64', media_type, data } }
+ * OpenAI:    { type: 'image_url', image_url: { url: 'data:{media_type};base64,{data}' } }
+ */
+function normalizeMessagesForOpenAI(messages) {
+  return messages.map(msg => {
+    if (!Array.isArray(msg.content)) return msg;
+    return {
+      ...msg,
+      content: msg.content.map(block => {
+        if (block.type === 'image' && block.source?.type === 'base64') {
+          return {
+            type: 'image_url',
+            image_url: {
+              url: `data:${block.source.media_type};base64,${block.source.data}`,
+            },
+          };
+        }
+        return block;
+      }),
+    };
+  });
+}
+
 // --- OpenRouter (OpenAI-compatible) API ---
 
 async function callOpenRouter(apiKey, model, systemPrompt, messages, onChunk) {
   const openaiMessages = [
     { role: 'system', content: systemPrompt },
-    ...messages,
+    ...normalizeMessagesForOpenAI(messages),
   ];
 
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
