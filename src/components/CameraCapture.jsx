@@ -7,7 +7,7 @@ import { openCamera, captureFrame, stopCamera } from '../lib/camera.js';
  *
  * Also supports file upload as fallback (e.g., existing photos).
  */
-export default function CameraCapture({ onCapture, onCancel }) {
+export default function CameraCapture({ onCapture, onCancel, facingMode = 'user' }) {
   const [state, setState] = useState('idle'); // idle | requesting | streaming | captured | error
   const [error, setError] = useState('');
   const [capturedImage, setCapturedImage] = useState(null); // base64
@@ -28,7 +28,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
     setState('requesting');
     setError('');
     try {
-      const stream = await openCamera();
+      const stream = await openCamera(facingMode);
       streamRef.current = stream;
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
@@ -147,7 +147,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
               playsInline
               muted
               className="w-full rounded-xl"
-              style={{ transform: 'scaleX(-1)' }}
+              style={facingMode === 'user' ? { transform: 'scaleX(-1)' } : undefined}
             />
             {/* Guide overlay */}
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
@@ -181,7 +181,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
               src={`data:image/jpeg;base64,${capturedImage}`}
               alt="拍摄预览"
               className="w-full rounded-xl"
-              style={{ transform: 'scaleX(-1)' }}
+              style={facingMode === 'user' ? { transform: 'scaleX(-1)' } : undefined}
             />
           </div>
           <div className="flex gap-2">

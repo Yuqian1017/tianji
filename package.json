@@ -4,13 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"node server/index.js\"",
+    "dev:frontend": "vite",
+    "dev:server": "node server/index.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@fal-ai/client": "^1.9.4",
+    "@mediapipe/tasks-vision": "^0.10.32",
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.6.2",
+    "concurrently": "^9.2.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "lunar-javascript": "^1.7.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

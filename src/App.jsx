@@ -1,5 +1,8 @@
-import { useState, useCallback, useEffect } from 'react';
-import { loadHistoryFromStorage, saveHistoryToStorage } from './lib/history.js';
+import { useState, useCallback, useEffect, useRef } from 'react';
+import { loadHistoryFromServer, saveHistoryRecord, deleteHistoryRecord, loadHistoryFromStorage, migrateLocalHistory, HISTORY_KEY } from './lib/history.js';
+import { getToken, clearToken, setLogoutCallback } from './lib/api.js';
+import { apiFetch } from './lib/api.js';
+import LoginPage from './components/LoginPage.jsx';
 import SettingsPanel from './components/SettingsPanel.jsx';
 import HistoryDrawer from './components/HistoryDrawer.jsx';
 import ThemePicker from './components/ThemePicker.jsx';
@@ -40,6 +43,10 @@ const THEME_BANNERS = {
 };
 
 export default function App() {
+  // === Auth state ===
+  const [user, setUser] = useState(null); // { username, role } or null
+  const [authLoading, setAuthLoading] = useState(true);
+
   const [activeTab, setActiveTab] = useState('liuyao');
   const [aiConfig, setAiConfig] = useState(() => ({
     provider: localStorage.getItem('tianji-ai-provider') || 'anthropic',
@@ -52,12 +59,16 @@ export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem(THEME_KEY) || 'ink');
 
   // History (shared across all modules)
-  const [history, setHistory] = useState(() => loadHistoryFromStorage());
+  const [history, setHistory] = useState([]);
+  const [historyLoading, setHistoryLoading] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
   const [activeHistoryId, setActiveHistoryId] = useState(null);
 
   // When a history item is loaded, we store it here so the active module can pick it up
   const [pendingHistoryLoad, setPendingHistoryLoad] = useState(null);
+
+  // Track if migration has been attempted this session
+  const migrationDone = useRef(false);
 
   // Apply theme to document
   useEffect(() => {
@@ -65,30 +76,103 @@ export default function App() {
     localStorage.setItem(THEME_KEY, theme);
   }, [theme]);
 
-  // === History CRUD ===
+  // === Auth check on mount ===
+  useEffect(() => {
+    const token = getToken();
+    if (!token) {
+      setAuthLoading(false);
+      return;
+    }
+
+    apiFetch('/api/auth/me')
+      .then(data => {
+        setUser({ username: data.username, role: data.role });
+      })
+      .catch(() => {
+        clearToken();
+      })
+      .finally(() => {
+        setAuthLoading(false);
+      });
+  }, []);
+
+  // Set up logout callback for 401 handling
+  useEffect(() => {
+    setLogoutCallback(() => {
+      setUser(null);
+      setHistory([]);
+    });
+  }, []);
+
+  // === Load history from server when user is set ===
+  useEffect(() => {
+    if (!user) return;
+
+    setHistoryLoading(true);
+    loadHistoryFromServer()
+      .then(items => setHistory(items))
+      .finally(() => setHistoryLoading(false));
+  }, [user]);
+
+  // === Migrate localStorage history on first login ===
+  useEffect(() => {
+    if (!user || migrationDone.current) return;
+    migrationDone.current = true;
+
+    const migrated = localStorage.getItem('tianji-history-migrated');
+    if (migrated) return;
+
+    const localItems = loadHistoryFromStorage();
+    if (localItems.length === 0) return;
+
+    console.log(`[migration] Found ${localItems.length} local history records, migrating to server...`);
+
+    migrateLocalHistory(localItems)
+      .then(result => {
+        console.log(`[migration] Migrated ${result.inserted}/${result.total} records`);
+        localStorage.setItem('tianji-history-migrated', 'true');
+        localStorage.removeItem(HISTORY_KEY);
+        // Reload history from server to get the merged results
+        return loadHistoryFromServer();
+      })
+      .then(items => {
+        if (items) setHistory(items);
+      })
+      .catch(err => {
+        console.error('[migration] Failed to migrate localStorage history:', err);
+        // Don't delete localStorage data on failure
+      });
+  }, [user]);
+
+  // === History CRUD (optimistic update + server sync) ===
   const upsertHistory = useCallback((id, question, moduleData, chatMsgs) => {
+    const item = {
+      id,
+      timestamp: Date.now(),
+      question: question || '综合运势',
+      module: moduleData.module || 'liuyao',
+      throws: moduleData.throws,
+      result: moduleData.result,
+      method: moduleData.method,
+      input: moduleData.input,
+      chatMessages: chatMsgs,
+    };
+
+    // Optimistic update: update local state immediately
     setHistory(prev => {
       const existing = prev.findIndex(h => h.id === id);
-      const item = {
-        id,
-        timestamp: existing >= 0 ? prev[existing].timestamp : Date.now(),
-        question: question || '综合运势',
-        module: moduleData.module || 'liuyao',
-        throws: moduleData.throws,
-        result: moduleData.result,
-        method: moduleData.method,
-        input: moduleData.input,
-        chatMessages: chatMsgs,
-      };
-      let updated;
       if (existing >= 0) {
-        updated = [...prev];
+        // Preserve original timestamp on update
+        item.timestamp = prev[existing].timestamp;
+        const updated = [...prev];
         updated[existing] = item;
-      } else {
-        updated = [item, ...prev];
+        return updated;
       }
-      return saveHistoryToStorage(updated);
+      return [item, ...prev];
     });
+
+    // Async server sync (fire-and-forget)
+    saveHistoryRecord(item);
   }, []);
 
   const handleLoadHistory = useCallback((item) => {
@@ -101,23 +185,59 @@ export default function App() {
   }, []);
 
   const handleDeleteHistory = useCallback((id) => {
-    setHistory(prev => {
-      const updated = prev.filter(h => h.id !== id);
-      saveHistoryToStorage(updated);
-      return updated;
-    });
+    setHistory(prev => prev.filter(h => h.id !== id));
     if (activeHistoryId === id) {
       setActiveHistoryId(null);
     }
+    // Async server delete
+    deleteHistoryRecord(id);
   }, [activeHistoryId]);
 
-  // Re-read history from localStorage (after import/clear in settings)
+  // Re-read history from server (after import/clear in settings)
   const handleHistoryChange = useCallback(() => {
-    setHistory(loadHistoryFromStorage());
+    loadHistoryFromServer().then(items => setHistory(items));
+  }, []);
+
+  // === Login / Logout ===
+  const handleLogin = useCallback((userData) => {
+    setUser(userData);
+  }, []);
+
+  const handleLogout = useCallback(() => {
+    clearToken();
+    setUser(null);
+    setHistory([]);
+    setActiveHistoryId(null);
+    setPendingHistoryLoad(null);
   }, []);
 
   // Count history for current tab
   const tabHistoryCount = history.filter(h => (h.module || 'liuyao') === activeTab).length;
+
+  // === Auth loading state ===
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--color-bg)' }}>
+        <div className="text-[var(--color-gold)] font-title text-xl animate-pulse">天机卷</div>
+      </div>
+    );
+  }
+
+  // === Not logged in → show login page ===
+  if (!user) {
+    return <LoginPage onLogin={handleLogin} />;
+  }
+
+  // === Standard 7-prop object for modules ===
+  const moduleProps = {
+    aiConfig,
+    setShowSettings,
+    upsertHistory,
+    activeHistoryId,
+    setActiveHistoryId,
+    pendingHistoryLoad,
+    clearPendingHistoryLoad: () => setPendingHistoryLoad(null),
+  };
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
@@ -129,6 +249,10 @@ export default function App() {
           <div className="py-3 flex items-center justify-between">
             <h1 className="text-[var(--color-gold)] text-xl font-title tracking-wide">天机卷</h1>
             <div className="flex items-center gap-2">
+              {/* User badge */}
+              <span className="text-[var(--color-text-dim)] text-xs font-body px-2 py-1 rounded-lg border border-[var(--color-surface-border)] opacity-70">
+                {user.username}
+              </span>
               <button
                 onClick={() => setShowThemePicker(true)}
                 className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-2 py-1 rounded-lg border border-[var(--color-surface-border)] hover:border-[var(--color-gold-border)] transition-colors"
@@ -150,6 +274,13 @@ export default function App() {
                 className="text-[var(--color-text-dim)] hover:text-[var(--color-gold)] text-sm px-3 py-1 rounded-lg border border-[var(--color-surface-border)] hover:border-[var(--color-gold-border)] transition-colors font-body"
               >
                 设置
+              </button>
+              <button
+                onClick={handleLogout}
+                className="text-[var(--color-text-dim)] hover:text-red-400 text-sm px-2 py-1 rounded-lg border border-[var(--color-surface-border)] hover:border-red-300 transition-colors font-body"
+                title="登出"
+              >
+                退出
               </button>
             </div>
           </div>
@@ -198,127 +329,22 @@ export default function App() {
 
       {/* Module content */}
       <main className="max-w-3xl mx-auto px-4 py-6">
-        {activeTab === 'liuyao' && (
-          <LiuyaoModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
+        {historyLoading && (
+          <div className="text-center text-[var(--color-text-dim)] text-sm font-body py-4 animate-pulse">
+            加载历史记录...
+          </div>
         )}
-        {activeTab === 'meihua' && (
-          <MeihuaModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'bazi' && (
-          <BaziModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'ziwei' && (
-          <ZiweiModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'qimen' && (
-          <QimenModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'fengshui' && (
-          <FengshuiModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'tizhi' && (
-          <TizhiModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'ziwu' && (
-          <ZiwuModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'wuyun' && (
-          <WuyunModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'bazihealth' && (
-          <BaziHealthModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
-        {activeTab === 'wangzhen' && (
-          <WangzhenModule
-            aiConfig={aiConfig}
-            setShowSettings={setShowSettings}
-            upsertHistory={upsertHistory}
-            activeHistoryId={activeHistoryId}
-            setActiveHistoryId={setActiveHistoryId}
-            pendingHistoryLoad={pendingHistoryLoad}
-            clearPendingHistoryLoad={() => setPendingHistoryLoad(null)}
-          />
-        )}
+        {activeTab === 'liuyao' && <LiuyaoModule {...moduleProps} />}
+        {activeTab === 'meihua' && <MeihuaModule {...moduleProps} />}
+        {activeTab === 'bazi' && <BaziModule {...moduleProps} />}
+        {activeTab === 'ziwei' && <ZiweiModule {...moduleProps} />}
+        {activeTab === 'qimen' && <QimenModule {...moduleProps} />}
+        {activeTab === 'fengshui' && <FengshuiModule {...moduleProps} />}
+        {activeTab === 'tizhi' && <TizhiModule {...moduleProps} />}
+        {activeTab === 'ziwu' && <ZiwuModule {...moduleProps} />}
+        {activeTab === 'wuyun' && <WuyunModule {...moduleProps} />}
+        {activeTab === 'bazihealth' && <BaziHealthModule {...moduleProps} />}
+        {activeTab === 'wangzhen' && <WangzhenModule {...moduleProps} />}
       </main>
 
       {/* Decorative divider */}
@@ -342,6 +368,8 @@ export default function App() {
         setShow={setShowSettings}
         historyCount={history.length}
         onHistoryChange={handleHistoryChange}
+        user={user}
+        onLogout={handleLogout}
       />
       <HistoryDrawer
         show={showHistory}

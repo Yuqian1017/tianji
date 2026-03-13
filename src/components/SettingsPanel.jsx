@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { PROVIDERS, MODELS, getDefaultModel } from '../lib/aiProviders.js';
-import { exportHistory, importHistory, loadHistoryFromStorage, saveHistoryToStorage } from '../lib/history.js';
+import { exportHistoryFromServer, importHistoryFromJson, clearAllHistory } from '../lib/history.js';
 
-export default function SettingsPanel({ aiConfig, setAiConfig, show, setShow, historyCount, onHistoryChange }) {
+export default function SettingsPanel({ aiConfig, setAiConfig, show, setShow, historyCount, onHistoryChange, user, onLogout }) {
   const [inputProvider, setInputProvider] = useState(aiConfig.provider);
   const [inputAnthropicKey, setInputAnthropicKey] = useState(aiConfig.anthropicKey);
   const [inputOpenrouterKey, setInputOpenrouterKey] = useState(aiConfig.openrouterKey);
@@ -47,28 +47,33 @@ export default function SettingsPanel({ aiConfig, setAiConfig, show, setShow, hi
     setShow(false);
   };
 
-  const handleExport = () => {
-    const json = exportHistory();
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    const d = new Date();
-    const pad = (n) => String(n).padStart(2, '0');
-    a.href = url;
-    a.download = `tianji-history-${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
+  const handleExport = async () => {
+    try {
+      const json = await exportHistoryFromServer();
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const d = new Date();
+      const pad = (n) => String(n).padStart(2, '0');
+      a.href = url;
+      a.download = `tianji-history-${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      setImportMsg(`导出失败：${err.message}`);
+      console.error('History export failed:', err);
+    }
   };
 
   const handleImportFile = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = async () => {
       try {
-        const merged = importHistory(reader.result);
+        const result = await importHistoryFromJson(reader.result);
         onHistoryChange();
-        setImportMsg(`导入成功，当前共 ${merged.length} 条记录`);
+        setImportMsg(`导入成功，新增 ${result.inserted} 条记录`);
       } catch (err) {
         setImportMsg(`导入失败：${err.message}`);
         console.error('History import failed:', err);
@@ -79,15 +84,20 @@ export default function SettingsPanel({ aiConfig, setAiConfig, show, setShow, hi
     e.target.value = '';
   };
 
-  const handleClearHistory = () => {
+  const handleClearHistory = async () => {
     if (!confirmClear) {
       setConfirmClear(true);
       return;
     }
-    saveHistoryToStorage([]);
-    onHistoryChange();
-    setConfirmClear(false);
-    setImportMsg('历史已清空');
+    try {
+      const result = await clearAllHistory();
+      onHistoryChange();
+      setConfirmClear(false);
+      setImportMsg(`已清空 ${result.deleted} 条记录`);
+    } catch (err) {
+      setImportMsg(`清空失败：${err.message}`);
+      console.error('History clear failed:', err);
+    }
   };
 
   if (!show) return null;
@@ -100,6 +110,27 @@ export default function SettingsPanel({ aiConfig, setAiConfig, show, setShow, hi
     <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4" onClick={() => setShow(false)}>
       <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-6 max-w-md w-full max-h-[85vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
         <h3 className="text-[var(--color-gold)] text-lg font-title mb-5">设置</h3>
+
+        {/* === User Info Section === */}
+        {user && (
+          <div className="mb-5 pb-4 border-b border-[var(--color-surface-border)]">
+            <label className="block text-sm text-[var(--color-text)] mb-2 font-body font-medium">账号信息</label>
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-[var(--color-text-dim)] font-body">
+                <span className="text-[var(--color-text)]">{user.username}</span>
+                {user.role === 'admin' && (
+                  <span className="ml-2 text-xs px-1.5 py-0.5 rounded bg-[var(--color-gold-bg)] text-[var(--color-gold)]">管理员</span>
+                )}
+              </div>
+              <button
+                onClick={() => { setShow(false); onLogout(); }}
+                className="px-3 py-1 text-xs rounded-lg border border-red-300/30 text-red-400 hover:border-red-400 hover:bg-red-400/10 transition-colors font-body"
+              >
+                退出登录
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* === AI Service Section === */}
         <div className="mb-5">

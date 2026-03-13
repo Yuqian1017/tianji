@@ -7,7 +7,7 @@
  * Open the camera and return a MediaStream.
  * Prefers user-facing camera (selfie mode for face/tongue photos).
  */
-export async function openCamera() {
+export async function openCamera(facingMode = 'user') {
   if (!navigator.mediaDevices?.getUserMedia) {
     throw new Error('此浏览器不支持摄像头功能');
   }
@@ -15,7 +15,7 @@ export async function openCamera() {
   try {
     return await navigator.mediaDevices.getUserMedia({
       video: {
-        facingMode: 'user',
+        facingMode,
         width: { ideal: 1280 },
         height: { ideal: 960 },
       },

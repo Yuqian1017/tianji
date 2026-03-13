@@ -1,6 +1,41 @@
 # Changelog
 
-## 2026-03-13 (latest)
+## 2026-03-13b (latest)
+
+### feat: 用户账号系统 (Username/Password Authentication)
+
+Added Express + SQLite backend with JWT authentication. Each user has isolated history records.
+
+#### Backend (`server/`)
+- **`server/db.js`**: SQLite database (`tianji.db`) with `users`, `history`, `config` tables. Auto-seeds `junshi` (user) and `admin` (admin) accounts on first run. WAL mode for concurrent reads.
+- **`server/auth.js`**: bcryptjs password hashing + JWT (30-day expiry) sign/verify utilities. Secret auto-generated and stored in SQLite `config` table.
+- **`server/middleware.js`**: `requireAuth` middleware — extracts Bearer token, validates JWT, attaches `req.userId/username/role`.
+- **`server/routes/auth.js`**: `POST /register`, `POST /login`, `GET /me` endpoints. Input validation, duplicate username check, role assignment.
+- **`server/routes/history.js`**: Full CRUD (`GET /`, `POST /`, `DELETE /:id`) + `POST /migrate` (bulk import, idempotent INSERT OR IGNORE) + `GET /export` + `DELETE /all`. All queries scoped to authenticated user.
+- **`server/index.js`**: Express entry point on port 5821, JSON body limit 10MB, health check at `/api/health`.
+
+#### Frontend Changes
+- **`src/lib/api.js`** (new): Auth-aware `apiFetch()` wrapper — auto-injects JWT from localStorage, handles 401 with logout callback.
+- **`src/lib/history.js`** (rewritten): All functions now call server API instead of localStorage. Keeps `loadHistoryFromStorage()` for one-time migration detection. Retains `formatTimestamp()`.
+- **`src/components/LoginPage.jsx`** (new): Xianxia-themed login/register page with toggle, form validation, error display. Uses existing CSS variables for consistent theming.
+- **`src/App.jsx`**: Added `user`/`authLoading` state, token validation on mount (`GET /me`), conditional `<LoginPage>` rendering, localStorage→server migration on first login, optimistic history upsert with async server sync, logout handler. All 11 module components unchanged (same 7-prop interface).
+- **`src/components/SettingsPanel.jsx`**: Added "账号信息" section showing username + admin badge + logout button. Export/import/clear now use API endpoints.
+
+#### Config Changes
+- **`vite.config.js`**: Added `/api` proxy to `http://localhost:5821` for dev
+- **`package.json`**: Added `express`, `better-sqlite3`, `bcryptjs`, `jsonwebtoken`, `concurrently`. Dev script runs both Vite and Express via `concurrently`.
+- **`.gitignore`**: Added `tianji.db`
+
+#### Seed Accounts
+- `junshi` / `tianji123` (role: user) — existing localStorage records auto-migrate here
+- `admin` / `admin123` (role: admin) — empty history
+
+#### Migration
+On first login, if `tianji-history` exists in localStorage, all records are bulk-imported to the user's server account via `/api/history/migrate` (idempotent). localStorage is cleaned after successful migration.
+
+---
+
+## 2026-03-13
 
 ### feat: 望诊模块 + 真太阳时校正
 
