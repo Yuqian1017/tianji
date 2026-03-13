@@ -1,20 +1,31 @@
 import express from 'express';
+import { fileURLToPath } from 'url';
+import path from 'path';
 import authRoutes from './routes/auth.js';
 import historyRoutes from './routes/history.js';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT = 5821;
+const PORT = process.env.PORT || 5821;
 
 // Parse JSON bodies (history records with chatMessages can be large)
 app.use(express.json({ limit: '10mb' }));
 
-// Mount routes
+// Mount API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/history', historyRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
+});
+
+// --- Production: serve Vite build output ---
+const distPath = path.join(__dirname, '..', 'dist');
+app.use(express.static(distPath));
+// SPA fallback: any non-API route → index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 // Error handler
