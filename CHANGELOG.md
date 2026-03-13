@@ -1,6 +1,31 @@
 # Changelog
 
-## 2026-03-13b (latest)
+## 2026-03-13c (latest)
+
+### feat: 面相 + 手相模块 (Face & Palm Reading Modules)
+
+Added two new xiangshu (相术) modules using MediaPipe browser-side ML for feature extraction. Photos never leave the device — only structured text is sent to the LLM.
+
+#### Face Module (`src/modules/face/`)
+- **`data.js`**: Five-element face types (金/木/水/火/土), three-stop labels, twelve palaces, descriptor functions for eyes/nose/mouth/brows/chin/yintang/symmetry
+- **`engine.js`**: `buildFaceTextMessage()` converts ML-extracted 468-point features into structured Chinese text for LLM
+- **`prompt.js`**: System prompt with embedded 面相学 knowledge — 五行面型, 三停, 五官, 十二宫, analysis order, style requirements
+- **`FaceModule.jsx`**: Camera capture → MediaPipe face detection → feature extraction → text-only LLM analysis → chat with follow-up
+
+#### Palm Module (`src/modules/palm/`)
+- **`data.js`**: Five-element hand types, 4-question palm line questionnaire (life/head/heart/fate lines with multiple-choice options), mound names (九大掌丘), finger meanings, descriptor functions
+- **`engine.js`**: `buildPalmTextMessage()` combines ML features + questionnaire answers into structured text; `buildPalmVisionMessage()` for optional Vision API deep analysis
+- **`prompt.js`**: System prompt with hand reading knowledge — palm lines (includes "生命线长短≠寿命" disclaimer), mounds, finger analysis, 2D:4D ratio
+- **`PalmModule.jsx`**: Multi-step flow: capture → ML hand analysis → palm line questionnaire → text LLM → chat. Optional "AI视觉深度分析" button sends photo to Vision API for detailed palmistry
+
+#### Shared Components
+- **`PalmLineQuestionnaire.jsx`**: 4-question radio-button questionnaire for palm lines (MediaPipe can't detect fine skin lines)
+
+#### App Integration
+- **`App.jsx`**: Added face/palm imports, two new tabs under "相术" divider section, multi-divider support (`tab.id.startsWith('divider')`)
+- **`HistoryDrawer.jsx`**: Added `face: '面相'` and `palm: '手相'` to MODULE_LABELS with face shape / hand type summaries
+
+## 2026-03-13b
 
 ### feat: 用户账号系统 (Username/Password Authentication)
 

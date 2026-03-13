@@ -13,6 +13,8 @@ const MODULE_LABELS = {
   wuyun: '运气',
   bazihealth: '健康',
   wangzhen: '望诊',
+  face: '面相',
+  palm: '手相',
 };
 
 export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete, activeModule }) {
@@ -115,6 +117,16 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                 const wangzhenSummary = isWangzhen && item.input?.type
                   ? ({tongue:'舌诊',face:'面诊',palm:'手诊'}[item.input.type] || '望诊')
                   : null;
+                // Face: face shape
+                const isFace = item.module === 'face';
+                const faceSummary = isFace && item.result?.faceShape
+                  ? ({metal:'金形面',wood:'木形面',water:'水形面',fire:'火形面',earth:'土形面'}[item.result.faceShape] || '面相')
+                  : null;
+                // Palm: hand type
+                const isPalm = item.module === 'palm';
+                const palmSummary = isPalm && item.result?.handType
+                  ? ({metal:'金形手',wood:'木形手',water:'水形手',fire:'火形手',earth:'土形手'}[item.result.handType] || '手相')
+                  : null;
 
                 return (
                   <div
@@ -162,10 +174,16 @@ export default function HistoryDrawer({ show, history, onClose, onLoad, onDelete
                         {wangzhenSummary && (
                           <span className="text-[var(--color-gold)] font-title">{wangzhenSummary}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && !isWangzhen && guaName && (
+                        {faceSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{faceSummary}</span>
+                        )}
+                        {palmSummary && (
+                          <span className="text-[var(--color-gold)] font-title">{palmSummary}</span>
+                        )}
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && !isWangzhen && !isFace && !isPalm && guaName && (
                           <span className="text-[var(--color-gold)]">{guaName}</span>
                         )}
-                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && !isWangzhen && bianName && (
+                        {!isBazi && !isZiwei && !isQimen && !isFengshui && !isTizhi && !isZiwu && !isWuyun && !isBaziHealth && !isWangzhen && !isFace && !isPalm && bianName && (
                           <>
                             <span className="text-[var(--color-text-dim)] mx-1">→</span>
                             <span className="text-[var(--color-jade)]">{bianName}</span>

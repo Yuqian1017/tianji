@@ -17,6 +17,8 @@ import ZiwuModule from './modules/ziwu/ZiwuModule.jsx';
 import WuyunModule from './modules/wuyun/WuyunModule.jsx';
 import BaziHealthModule from './modules/bazihealth/BaziHealthModule.jsx';
 import WangzhenModule from './modules/wangzhen/WangzhenModule.jsx';
+import FaceModule from './modules/face/FaceModule.jsx';
+import PalmModule from './modules/palm/PalmModule.jsx';
 
 const TABS = [
   { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
@@ -25,12 +27,15 @@ const TABS = [
   { id: 'ziwei', label: '紫微斗数', icon: '/assets/icon-bazi.webp' },
   { id: 'qimen', label: '奇门遁甲', icon: '/assets/icon-bazi.webp' },
   { id: 'fengshui', label: '风水飞星', icon: '/assets/icon-bazi.webp' },
-  { id: 'divider' },
+  { id: 'divider-health', label: '问诊' },
   { id: 'tizhi', label: '体质辨识', icon: '/assets/icon-bazi.webp' },
   { id: 'ziwu', label: '子午流注', icon: '/assets/icon-bazi.webp' },
   { id: 'wuyun', label: '五运六气', icon: '/assets/icon-bazi.webp' },
   { id: 'bazihealth', label: '八字健康', icon: '/assets/icon-bazi.webp' },
   { id: 'wangzhen', label: '望诊', icon: '/assets/icon-bazi.webp' },
+  { id: 'divider-xiangshu', label: '相术' },
+  { id: 'face', label: '面相', icon: '/assets/icon-bazi.webp' },
+  { id: 'palm', label: '手相', icon: '/assets/icon-bazi.webp' },
 ];
 
 const THEME_KEY = 'tianji-theme';
@@ -288,11 +293,11 @@ export default function App() {
           {/* Tab bar */}
           <div className="flex gap-0.5 -mb-px overflow-x-auto scrollbar-none">
             {TABS.map(tab => {
-              if (tab.id === 'divider') {
+              if (tab.id.startsWith('divider')) {
                 return (
-                  <div key="divider" className="flex items-center px-1.5 shrink-0">
+                  <div key={tab.id} className="flex items-center px-1.5 shrink-0">
                     <div className="w-px h-5 bg-[var(--color-gold-border)] opacity-40" />
-                    <span className="text-[9px] text-[var(--color-text-dim)] ml-1 opacity-50 font-title whitespace-nowrap">问诊</span>
+                    {tab.label && <span className="text-[9px] text-[var(--color-text-dim)] ml-1 opacity-50 font-title whitespace-nowrap">{tab.label}</span>}
                   </div>
                 );
               }
@@ -345,6 +350,8 @@ export default function App() {
         {activeTab === 'wuyun' && <WuyunModule {...moduleProps} />}
         {activeTab === 'bazihealth' && <BaziHealthModule {...moduleProps} />}
         {activeTab === 'wangzhen' && <WangzhenModule {...moduleProps} />}
+        {activeTab === 'face' && <FaceModule {...moduleProps} />}
+        {activeTab === 'palm' && <PalmModule {...moduleProps} />}
       </main>
 
       {/* Decorative divider */}
