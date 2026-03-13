@@ -23,8 +23,8 @@ app.get('/api/health', (req, res) => {
 // --- Production: serve Vite build output ---
 const distPath = path.join(__dirname, '..', 'dist');
 app.use(express.static(distPath));
-// SPA fallback: any non-API route → index.html
-app.get('*', (req, res) => {
+// SPA fallback: any non-API route → index.html (Express 5 wildcard syntax)
+app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
