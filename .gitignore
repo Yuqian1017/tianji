@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # SQLite database
-tianji.db
+tianji.db*
