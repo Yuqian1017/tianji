@@ -122,7 +122,8 @@ export function getMonthPillar(yearStem, monthIdx) {
 
 /**
  * 日柱
- * 基准日：2024-02-04 = 甲子日 (ganzhiIdx 0)，与 liuyao/engine.js 一致
+ * 基准日：2024-01-01 = 甲子日 (ganzhiIdx 0)
+ * 注意：2024-02-04 是立春，用于年柱换算，不是日柱基准日
  * ⚠️ 子时(23:00)属于次日
  */
 export function getDayPillar(year, month, day, hour) {
@@ -134,7 +135,7 @@ export function getDayPillar(year, month, day, hour) {
     adjDay = d.getDate();
   }
 
-  const baseDate = new Date(2024, 1, 4); // 2024-02-04 = 甲子
+  const baseDate = new Date(2024, 0, 1); // 2024-01-01 = 甲子
   const target = new Date(adjYear, adjMonth - 1, adjDay);
   const diffDays = Math.round((target - baseDate) / 86400000);
   const idx = ((diffDays % 60) + 60) % 60;
