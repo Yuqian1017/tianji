@@ -153,6 +153,96 @@ async function parseOpenRouterError(response) {
   }
 }
 
+// --- Non-streaming Vision API call for structured JSON extraction ---
+
+/**
+ * Send a Vision API call expecting a short JSON response.
+ * Used for palm line identification. Never throws — returns null on any failure.
+ */
+export async function aiIdentifyPalmLines(config, systemPrompt, message) {
+  const { apiKey, provider = 'anthropic', model } = config;
+  if (!apiKey) return null;
+
+  try {
+    if (provider === 'openrouter') {
+      return await callOpenRouterJSON(apiKey, model, systemPrompt, [message]);
+    }
+    return await callAnthropicJSON(apiKey, model, systemPrompt, [message]);
+  } catch (e) {
+    console.warn('[aiIdentifyPalmLines] Vision call failed:', e.message);
+    return null;
+  }
+}
+
+async function callAnthropicJSON(apiKey, model, systemPrompt, messages) {
+  const response = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: model || 'claude-sonnet-4-20250514',
+      max_tokens: 500,
+      system: systemPrompt,
+      messages,
+    }),
+  });
+
+  if (!response.ok) {
+    console.warn('[callAnthropicJSON] API error:', response.status);
+    return null;
+  }
+
+  const json = await response.json();
+  const text = json.content?.[0]?.text || '';
+  // Extract JSON from potential markdown code block
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) {
+    console.warn('[callAnthropicJSON] No JSON found in response:', text.slice(0, 200));
+    return null;
+  }
+  return JSON.parse(jsonMatch[0]);
+}
+
+async function callOpenRouterJSON(apiKey, model, systemPrompt, messages) {
+  const openaiMessages = [
+    { role: 'system', content: systemPrompt },
+    ...normalizeMessagesForOpenAI(messages),
+  ];
+
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+      'HTTP-Referer': window.location.origin,
+      'X-Title': '天机卷',
+    },
+    body: JSON.stringify({
+      model: model || 'anthropic/claude-sonnet-4-20250514',
+      messages: openaiMessages,
+      max_tokens: 500,
+    }),
+  });
+
+  if (!response.ok) {
+    console.warn('[callOpenRouterJSON] API error:', response.status);
+    return null;
+  }
+
+  const json = await response.json();
+  const text = json.choices?.[0]?.message?.content || '';
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) {
+    console.warn('[callOpenRouterJSON] No JSON found in response:', text.slice(0, 200));
+    return null;
+  }
+  return JSON.parse(jsonMatch[0]);
+}
+
 // --- Shared SSE stream reader ---
 
 async function readSSE(response, extractDelta, onChunk) {

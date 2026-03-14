@@ -2,12 +2,73 @@
 
 import {
   HAND_WUXING_TYPES,
+  PALM_LINE_QUESTIONS,
   describeHandType,
   describeFingerRatio,
   describeFingerGaps,
   describePalmLineAnswer,
   MOUND_NAMES,
 } from './data.js';
+
+// ===== Palm Line Identification (Vision API pre-fill) =====
+
+export const PALM_LINE_ID_PROMPT = `你是掌纹识别专家。观察手掌照片，识别四条主要掌纹的外观特征。
+严格以JSON格式返回，不要其他文字。`;
+
+export function buildPalmLineIdentificationMessage(base64) {
+  const optionsText = PALM_LINE_QUESTIONS.map(q =>
+    `- ${q.id} (${q.label}): ${JSON.stringify(q.options)}`
+  ).join('\n');
+
+  return {
+    role: 'user',
+    content: [
+      { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: base64 } },
+      { type: 'text', text: `请观察这张手掌照片，从以下选项中为每条掌纹选择最匹配的描述。
+
+各线可选值：
+${optionsText}
+
+返回JSON格式：
+{"lifeLine":"选项","headLine":"选项","heartLine":"选项","fateLine":"选项"}
+
+如果某条线看不清，选"看不清"。只返回JSON。` },
+    ],
+  };
+}
+
+export function parsePalmLineIdentification(raw) {
+  if (!raw || typeof raw !== 'object') return null;
+
+  const answers = {};
+  const validQuestions = {};
+  for (const q of PALM_LINE_QUESTIONS) {
+    validQuestions[q.id] = q.options;
+  }
+
+  let validCount = 0;
+  for (const [id, options] of Object.entries(validQuestions)) {
+    const value = raw[id];
+    if (value && options.includes(value)) {
+      answers[id] = value;
+      validCount++;
+    } else if (value) {
+      // Try fuzzy match: find option containing the value or vice versa
+      const match = options.find(opt =>
+        opt.includes(value) || value.includes(opt) ||
+        opt.replace(/·/g, '').includes(value.replace(/·/g, ''))
+      );
+      if (match) {
+        answers[id] = match;
+        validCount++;
+      } else {
+        console.warn(`[parsePalmLineIdentification] Invalid value for ${id}: "${value}"`);
+      }
+    }
+  }
+
+  return validCount > 0 ? { answers } : null;
+}
 
 /**
  * Build a text-only user message from ML hand features + questionnaire answers.

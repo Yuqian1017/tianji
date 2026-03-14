@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { buildPalmTextMessage, buildPalmVisionMessage, buildFollowUpMessage } from './engine.js';
+import { buildPalmTextMessage, buildPalmVisionMessage, buildFollowUpMessage, buildPalmLineIdentificationMessage, parsePalmLineIdentification, PALM_LINE_ID_PROMPT } from './engine.js';
 import { PALM_SYSTEM_PROMPT } from './prompt.js';
 import { HAND_WUXING_TYPES } from './data.js';
-import { aiInterpret } from '../../lib/ai.js';
+import { aiInterpret, aiIdentifyPalmLines } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { detectHand, analyzeHandFeatures } from '../../lib/mediapipe.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
@@ -59,6 +59,7 @@ export default function PalmModule({
 
   // Questionnaire
   const [palmLineAnswers, setPalmLineAnswers] = useState(null);
+  const [aiLineSuggestions, setAiLineSuggestions] = useState(null);
 
   // AI chat state
   const [chatMessages, setChatMessages] = useState([]);
@@ -109,6 +110,7 @@ export default function PalmModule({
     setExtractedFeatures(null);
     setPalmBase64(null);
     setPalmLineAnswers(null);
+    setAiLineSuggestions(null);
     setChatMessages([]);
     setStreamingText('');
     setAiLoading(false);
@@ -162,6 +164,32 @@ export default function PalmModule({
       const features = analyzeHandFeatures(result.landmarks, result.handedness);
       setExtractedFeatures(features);
 
+      // Vision API: identify palm lines from photo
+      const activeKey = getActiveApiKey(aiConfig);
+      if (activeKey) {
+        setMlStatus('正在AI识别掌纹...');
+        try {
+          const visionMessage = buildPalmLineIdentificationMessage(base64);
+          const rawResult = await aiIdentifyPalmLines(
+            { apiKey: activeKey, provider: aiConfig.provider, model: aiConfig.model },
+            PALM_LINE_ID_PROMPT,
+            visionMessage
+          );
+          if (rawResult) {
+            const validated = parsePalmLineIdentification(rawResult);
+            if (validated) {
+              setAiLineSuggestions(validated);
+            } else {
+              console.warn('[PalmModule] Vision API returned data but validation failed:', rawResult);
+            }
+          } else {
+            console.warn('[PalmModule] Vision API returned null — falling back to blank questionnaire');
+          }
+        } catch (e) {
+          console.warn('[PalmModule] Vision palm line identification failed, using blank questionnaire:', e.message);
+        }
+      }
+
       // Move to questionnaire
       setStep('questionnaire');
     } catch (e) {
@@ -169,7 +197,7 @@ export default function PalmModule({
       console.error('Hand analysis failed:', e);
       setStep('input');
     }
-  }, []);
+  }, [aiConfig]);
 
   // Step 2: Questionnaire completed → send to LLM
   const handleQuestionnaireComplete = useCallback(async (answers) => {
@@ -356,6 +384,7 @@ export default function PalmModule({
           <PalmLineQuestionnaire
             onComplete={handleQuestionnaireComplete}
             onBack={() => setStep('input')}
+            aiSuggestions={aiLineSuggestions}
           />
         </section>
       )}

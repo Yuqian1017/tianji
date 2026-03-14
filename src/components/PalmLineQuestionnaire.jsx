@@ -3,11 +3,10 @@ import { PALM_LINE_QUESTIONS } from '../modules/palm/data.js';
 
 /**
  * 4-question palm line questionnaire.
- * MediaPipe can detect hand skeleton but NOT skin-level palm lines,
- * so we ask the user to self-report what they see.
+ * Optionally pre-filled with AI Vision suggestions.
  */
-export default function PalmLineQuestionnaire({ onComplete, onBack }) {
-  const [answers, setAnswers] = useState({});
+export default function PalmLineQuestionnaire({ onComplete, onBack, aiSuggestions }) {
+  const [answers, setAnswers] = useState(() => aiSuggestions?.answers || {});
 
   const handleSelect = useCallback((questionId, option) => {
     setAnswers(prev => ({ ...prev, [questionId]: option }));
@@ -26,7 +25,9 @@ export default function PalmLineQuestionnaire({ onComplete, onBack }) {
       <div className="text-center">
         <div className="text-[var(--color-gold)] text-sm font-medium font-title mb-1">掌纹自述</div>
         <div className="text-[var(--color-text-dim)] text-xs font-body leading-relaxed">
-          AI已分析手部骨骼结构。掌纹（皮肤纹路）需要您自行观察选择，帮助AI更准确解读。
+          {aiSuggestions
+            ? 'AI已初步识别掌纹特征（金色标记），请确认或修改后继续。'
+            : 'AI已分析手部骨骼结构。掌纹（皮肤纹路）需要您自行观察选择，帮助AI更准确解读。'}
         </div>
       </div>
 
@@ -38,17 +39,24 @@ export default function PalmLineQuestionnaire({ onComplete, onBack }) {
           <div className="flex flex-wrap gap-1.5">
             {q.options.map(opt => {
               const selected = answers[q.id] === opt;
+              const isAiSuggested = aiSuggestions?.answers?.[q.id] === opt;
               return (
                 <button
                   key={opt}
                   onClick={() => handleSelect(q.id, opt)}
-                  className={`text-xs px-2.5 py-1.5 rounded-md border transition-colors font-body ${
+                  className={`text-xs px-2.5 py-1.5 rounded-md border transition-colors font-body relative ${
                     selected
                       ? 'bg-[var(--color-gold-bg)] border-[var(--color-gold-border)] text-[var(--color-gold)]'
                       : 'bg-[var(--color-bg-card)] border-[var(--color-surface-border)] text-[var(--color-text-dim)] hover:border-[var(--color-gold-border)] hover:text-[var(--color-text)]'
                   }`}
                 >
                   {opt}
+                  {isAiSuggested && !selected && (
+                    <span className="ml-1 text-[10px] text-[var(--color-gold)] opacity-70">AI</span>
+                  )}
+                  {isAiSuggested && selected && (
+                    <span className="ml-1 text-[10px] opacity-70">AI</span>
+                  )}
                 </button>
               );
             })}
@@ -63,7 +71,9 @@ export default function PalmLineQuestionnaire({ onComplete, onBack }) {
           className="flex-1 bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
             hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-40 disabled:cursor-not-allowed btn-glow font-body"
         >
-          {allAnswered ? '开始AI解读' : `请完成所有问题 (${Object.keys(answers).length}/${PALM_LINE_QUESTIONS.length})`}
+          {allAnswered
+            ? (aiSuggestions ? '确认并开始AI解读' : '开始AI解读')
+            : `请完成所有问题 (${Object.keys(answers).length}/${PALM_LINE_QUESTIONS.length})`}
         </button>
         <button
           onClick={onBack}
