@@ -410,39 +410,51 @@ function computeDayun(yearStem, monthPillar, gender, year, month, day, hour, min
   const birthUtc = Date.UTC(year, month - 1, day, hour - 8, minute);
   let startAge = 1; // 默认起运年龄
 
-  // 获取当年节气
-  const precise = JIEQI_PRECISE[year];
-  if (precise) {
-    if (forward) {
-      // 顺排：找出生后最近的节气
-      let nextJieqi = null;
-      for (const t of precise) {
-        if (t > birthUtc) { nextJieqi = t; break; }
-      }
-      // 如果当年没有，查下一年
-      if (!nextJieqi) {
-        const nextYear = JIEQI_PRECISE[year + 1];
-        if (nextYear) nextJieqi = nextYear[0];
-      }
-      if (nextJieqi) {
-        const diffDays = (nextJieqi - birthUtc) / 86400000;
-        startAge = Math.max(1, Math.round(diffDays / 3));
-      }
-    } else {
-      // 逆排：找出生前最近的节气
-      let prevJieqi = null;
-      for (let i = precise.length - 1; i >= 0; i--) {
-        if (precise[i] <= birthUtc) { prevJieqi = precise[i]; break; }
-      }
-      // 如果当年没有，查上一年
-      if (!prevJieqi) {
-        const prevYear = JIEQI_PRECISE[year - 1];
-        if (prevYear) prevJieqi = prevYear[prevYear.length - 1];
-      }
-      if (prevJieqi) {
-        const diffDays = (birthUtc - prevJieqi) / 86400000;
-        startAge = Math.max(1, Math.round(diffDays / 3));
-      }
+  // 获取当年节气（优先精确数据，不可用时用近似公式）
+  const jieqiNames12 = ['立春','惊蛰','清明','立夏','芒种','小暑','立秋','白露','寒露','立冬','大雪','小寒'];
+
+  function getJieqiTimestamps(y) {
+    const precise = JIEQI_PRECISE[y];
+    if (precise) return precise;
+    // Fallback: use approximate formula for any year
+    return jieqiNames12.map((name, i) => {
+      // 小寒 belongs to next year's January
+      const jYear = (name === '小寒') ? y + 1 : y;
+      return approxJieqiDate(jYear, name);
+    });
+  }
+
+  const jieqiTimes = getJieqiTimestamps(year);
+
+  if (forward) {
+    // 顺排：找出生后最近的节气
+    let nextJieqi = null;
+    for (const t of jieqiTimes) {
+      if (t > birthUtc) { nextJieqi = t; break; }
+    }
+    // 如果当年没有，查下一年
+    if (!nextJieqi) {
+      const nextYearTimes = getJieqiTimestamps(year + 1);
+      nextJieqi = nextYearTimes[0];
+    }
+    if (nextJieqi) {
+      const diffDays = (nextJieqi - birthUtc) / 86400000;
+      startAge = Math.max(1, Math.round(diffDays / 3));
+    }
+  } else {
+    // 逆排：找出生前最近的节气
+    let prevJieqi = null;
+    for (let i = jieqiTimes.length - 1; i >= 0; i--) {
+      if (jieqiTimes[i] <= birthUtc) { prevJieqi = jieqiTimes[i]; break; }
+    }
+    // 如果当年没有，查上一年
+    if (!prevJieqi) {
+      const prevYearTimes = getJieqiTimestamps(year - 1);
+      prevJieqi = prevYearTimes[prevYearTimes.length - 1];
+    }
+    if (prevJieqi) {
+      const diffDays = (birthUtc - prevJieqi) / 86400000;
+      startAge = Math.max(1, Math.round(diffDays / 3));
     }
   }
 
