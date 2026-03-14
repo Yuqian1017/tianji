@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { buildPalmTextMessage, buildFollowUpMessage, buildPalmVisionMessage } from './engine.js';
+import { buildPalmTextMessage, buildPalmVisionMessage, buildFollowUpMessage } from './engine.js';
 import { PALM_SYSTEM_PROMPT } from './prompt.js';
 import { HAND_WUXING_TYPES } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
@@ -9,7 +9,7 @@ import ModuleIntro from '../../components/ModuleIntro.jsx';
 import CameraCapture from '../../components/CameraCapture.jsx';
 import PalmLineQuestionnaire from '../../components/PalmLineQuestionnaire.jsx';
 
-// ===== ML Processing Animation =====
+// ===== ML处理动画 =====
 function MLProcessingStatus({ status }) {
   return (
     <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-8">
@@ -21,23 +21,23 @@ function MLProcessingStatus({ status }) {
   );
 }
 
-// ===== Hand Feature Summary =====
+// ===== 特征摘要 =====
 function HandFeatureSummary({ features }) {
-  const handType = HAND_WUXING_TYPES[features.handType] || HAND_WUXING_TYPES.earth;
+  const wuxing = HAND_WUXING_TYPES[features.handType] || HAND_WUXING_TYPES.earth;
   return (
     <div className="bg-[var(--color-surface-dim)] rounded-lg p-3 border border-[var(--color-surface-border)]">
       <div className="text-xs text-[var(--color-gold)] font-medium mb-2 font-body">✅ 手部特征已提取</div>
       <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-[var(--color-text-dim)] font-body">
-        <div>手型：<span className="text-[var(--color-text)]">{handType.name}</span></div>
-        <div>惯用手：<span className="text-[var(--color-text)]">{features.handedness === 'Left' ? '左手' : '右手'}</span></div>
+        <div>手型：<span className="text-[var(--color-text)]">{wuxing.name}</span></div>
+        <div>手别：<span className="text-[var(--color-text)]">{features.handedness === 'Right' ? '右手' : '左手'}</span></div>
         <div>掌指比：<span className="text-[var(--color-text)]">{features.palmRatio}</span></div>
-        <div>2D:4D：<span className="text-[var(--color-text)]">{features.indexRingRatio}</span></div>
+        <div>食/无名指比：<span className="text-[var(--color-text)]">{features.indexRingRatio}</span></div>
       </div>
     </div>
   );
 }
 
-// ===== Main Module =====
+// ===== 主模块 =====
 export default function PalmModule({
   aiConfig,
   setShowSettings,
@@ -47,20 +47,18 @@ export default function PalmModule({
   pendingHistoryLoad,
   clearPendingHistoryLoad,
 }) {
-  // Multi-step flow: 'input' | 'analyzing' | 'questionnaire' | 'result'
+  // Flow: 'input' → 'analyzing' → 'questionnaire' → 'result'
   const [step, setStep] = useState('input');
-
-  // Input state
   const [userNote, setUserNote] = useState('');
   const [showCamera, setShowCamera] = useState(false);
 
   // ML state
   const [mlStatus, setMlStatus] = useState('');
   const [extractedFeatures, setExtractedFeatures] = useState(null);
-  const [capturedBase64, setCapturedBase64] = useState(null); // stored for optional Vision analysis
+  const [palmBase64, setPalmBase64] = useState(null); // kept for optional Vision analysis
 
-  // Questionnaire answers
-  const [lineAnswers, setLineAnswers] = useState({});
+  // Questionnaire
+  const [palmLineAnswers, setPalmLineAnswers] = useState(null);
 
   // AI chat state
   const [chatMessages, setChatMessages] = useState([]);
@@ -85,7 +83,7 @@ export default function PalmModule({
       setChatMessages(item.chatMessages || []);
       if (item.input) {
         setUserNote(item.input.note || '');
-        setLineAnswers(item.input.lineAnswers || {});
+        setPalmLineAnswers(item.input.palmLineAnswers || null);
       }
       if (item.result) {
         setExtractedFeatures(item.result);
@@ -99,7 +97,6 @@ export default function PalmModule({
     }
   }, [pendingHistoryLoad, clearPendingHistoryLoad]);
 
-  // Build AI config
   const makeAiConfig = useCallback(() => ({
     apiKey: getActiveApiKey(aiConfig),
     provider: aiConfig.provider,
@@ -110,8 +107,8 @@ export default function PalmModule({
   const reset = useCallback(() => {
     setStep('input');
     setExtractedFeatures(null);
-    setCapturedBase64(null);
-    setLineAnswers({});
+    setPalmBase64(null);
+    setPalmLineAnswers(null);
     setChatMessages([]);
     setStreamingText('');
     setAiLoading(false);
@@ -125,24 +122,24 @@ export default function PalmModule({
   // Save to history
   const saveToHistory = useCallback((msgs, features, answers) => {
     const id = activeHistoryId || `palm-${Date.now()}`;
-    const handType = HAND_WUXING_TYPES[features?.handType] || HAND_WUXING_TYPES.earth;
-    upsertHistory(id, `手相分析 · ${handType.name}${userNote ? ' · ' + userNote.slice(0, 15) : ''}`, {
+    const wuxing = HAND_WUXING_TYPES[features?.handType] || HAND_WUXING_TYPES.earth;
+    upsertHistory(id, `手相分析 · ${wuxing.name}${userNote ? ' · ' + userNote.slice(0, 15) : ''}`, {
       module: 'palm',
-      input: { note: userNote, lineAnswers: answers },
+      input: { note: userNote, palmLineAnswers: answers },
       result: features,
     }, msgs);
     if (!activeHistoryId) setActiveHistoryId(id);
   }, [activeHistoryId, userNote, upsertHistory, setActiveHistoryId]);
 
-  // Handle photo captured — run MediaPipe → extract features → go to questionnaire
+  // Step 1: Photo captured → run MediaPipe hand detection
   const handlePhotoCapture = useCallback(async (base64) => {
     setShowCamera(false);
     setError('');
     setStep('analyzing');
-    setCapturedBase64(base64);
+    setPalmBase64(base64);
 
     try {
-      // 1. Create image element from base64
+      // Create image element
       setMlStatus('正在加载手部识别模型...');
       const img = new Image();
       img.src = `data:image/jpeg;base64,${base64}`;
@@ -151,32 +148,32 @@ export default function PalmModule({
         img.onerror = reject;
       });
 
-      // 2. Detect hand landmarks
+      // Detect hand landmarks
       setMlStatus('正在检测手部特征...');
       const result = await detectHand(img);
       if (!result) {
-        setError('未检测到手部，请确保：手掌正面朝向摄像头 · 手指自然张开 · 光线充足');
+        setError('未检测到手部，请确保：手掌正面展开 · 光线充足 · 五指张开');
         setStep('input');
         return;
       }
 
-      // 3. Analyze features
+      // Analyze features
       setMlStatus('正在分析手部比例...');
       const features = analyzeHandFeatures(result.landmarks, result.handedness);
       setExtractedFeatures(features);
 
-      // 4. Go to questionnaire step
+      // Move to questionnaire
       setStep('questionnaire');
     } catch (e) {
       setError(`手部分析失败: ${e.message}`);
-      console.error('Palm analysis failed:', e);
+      console.error('Hand analysis failed:', e);
       setStep('input');
     }
   }, []);
 
-  // Handle questionnaire submit — send to LLM
-  const handleQuestionnaireSubmit = useCallback(async (answers) => {
-    setLineAnswers(answers);
+  // Step 2: Questionnaire completed → send to LLM
+  const handleQuestionnaireComplete = useCallback(async (answers) => {
+    setPalmLineAnswers(answers);
     setStep('result');
 
     if (!getActiveApiKey(aiConfig)) {
@@ -190,8 +187,8 @@ export default function PalmModule({
 
     try {
       const textMsg = buildPalmTextMessage(extractedFeatures, answers, userNote);
-      const handType = HAND_WUXING_TYPES[extractedFeatures?.handType] || HAND_WUXING_TYPES.earth;
-      const displayMsg = { role: 'user', content: `[手相照片 · ${handType.name}]${userNote ? '\n' + userNote : ''}` };
+      const wuxing = HAND_WUXING_TYPES[extractedFeatures?.handType] || HAND_WUXING_TYPES.earth;
+      const displayMsg = { role: 'user', content: `[手相照片 · ${wuxing.name}]${userNote ? '\n' + userNote : ''}` };
       setChatMessages([displayMsg]);
 
       const fullText = await aiInterpret(makeAiConfig(), PALM_SYSTEM_PROMPT, [textMsg], (text) => {
@@ -203,16 +200,16 @@ export default function PalmModule({
       setStreamingText('');
       saveToHistory(finalMessages, extractedFeatures, answers);
     } catch (e) {
-      setError(`分析失败: ${e.message}`);
-      console.error('Palm LLM failed:', e);
+      setError(`AI解读失败: ${e.message}`);
+      console.error('Palm AI failed:', e);
     } finally {
       setAiLoading(false);
     }
   }, [aiConfig, extractedFeatures, userNote, makeAiConfig, saveToHistory, setShowSettings]);
 
-  // Vision deep analysis (optional — uses image)
+  // Vision deep analysis (optional, uses API with image)
   const handleVisionAnalysis = useCallback(async () => {
-    if (!capturedBase64 || aiLoading) return;
+    if (!palmBase64 || !extractedFeatures || aiLoading) return;
     if (!getActiveApiKey(aiConfig)) {
       setShowSettings(true);
       return;
@@ -222,28 +219,26 @@ export default function PalmModule({
     setStreamingText('');
     setError('');
 
-    const visionMsg = buildPalmVisionMessage(capturedBase64);
-    const displayMsg = { role: 'user', content: '[AI视觉深度分析 · 照片已发送]' };
-    const updatedMessages = [...chatMessages, displayMsg];
-    setChatMessages(updatedMessages);
-
     try {
-      const fullText = await aiInterpret(makeAiConfig(), PALM_SYSTEM_PROMPT, [...updatedMessages.slice(0, -1), visionMsg], (text) => {
+      const visionMsg = buildPalmVisionMessage(palmBase64, extractedFeatures, palmLineAnswers);
+      const displayMsg = { role: 'user', content: '[AI视觉深度分析 · 照片已发送给AI]' };
+      const updatedMessages = [...chatMessages, displayMsg];
+      setChatMessages(updatedMessages);
+
+      const fullText = await aiInterpret(makeAiConfig(), PALM_SYSTEM_PROMPT, [...chatMessages, visionMsg], (text) => {
         setStreamingText(text);
       });
       const finalMessages = [...updatedMessages, { role: 'assistant', content: fullText }];
       setChatMessages(finalMessages);
       setStreamingText('');
-      if (activeHistoryId) {
-        saveToHistory(finalMessages, extractedFeatures, lineAnswers);
-      }
+      saveToHistory(finalMessages, extractedFeatures, palmLineAnswers);
     } catch (e) {
       setError(`视觉分析失败: ${e.message}`);
-      console.error('Palm vision analysis failed:', e);
+      console.error('Vision analysis failed:', e);
     } finally {
       setAiLoading(false);
     }
-  }, [capturedBase64, aiLoading, aiConfig, chatMessages, activeHistoryId, extractedFeatures, lineAnswers, makeAiConfig, saveToHistory, setShowSettings]);
+  }, [palmBase64, extractedFeatures, palmLineAnswers, aiLoading, aiConfig, chatMessages, makeAiConfig, saveToHistory, setShowSettings]);
 
   // Follow-up question
   const askFollowUp = useCallback(async () => {
@@ -270,7 +265,7 @@ export default function PalmModule({
       setChatMessages(finalMessages);
       setStreamingText('');
       if (activeHistoryId) {
-        saveToHistory(finalMessages, extractedFeatures, lineAnswers);
+        saveToHistory(finalMessages, extractedFeatures, palmLineAnswers);
       }
     } catch (e) {
       setError(`AI回答失败: ${e.message}`);
@@ -278,7 +273,7 @@ export default function PalmModule({
     } finally {
       setAiLoading(false);
     }
-  }, [followUpInput, aiLoading, aiConfig, chatMessages, activeHistoryId, extractedFeatures, lineAnswers, makeAiConfig, saveToHistory, setShowSettings]);
+  }, [followUpInput, aiLoading, aiConfig, chatMessages, activeHistoryId, extractedFeatures, palmLineAnswers, makeAiConfig, saveToHistory, setShowSettings]);
 
   const handleFollowUpKeyDown = useCallback((e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -293,47 +288,46 @@ export default function PalmModule({
     <div className="space-y-6">
       <ModuleIntro
         moduleId="palm"
-        origin="手相学融合中国相术与西方 palmistry，通过观察手掌骨骼结构、手指比例和掌纹来推断性格与运势。本模块使用浏览器端AI提取手部21个关键点，计算五行手型、手指比例、掌丘隆起等结构化数据，结合掌纹自测问卷，由AI进行手相解读。"
-        strengths="五行手型分类 · 手指比例分析 · 2D:4D比 · 掌纹综合判读 · 可选AI视觉深度分析"
+        origin="手相学源于古印度，经丝绸之路传入中国后与本土相术融合。通过观察手掌的形状、掌纹走向、丘位饱满度来推断性格与运势。本模块使用浏览器端AI提取手部21个关键点，计算手型、掌指比例等骨骼数据，结合用户自述掌纹，由AI综合解读。"
+        strengths="五行手型分类 · 掌指比例分析 · 三大主线解读 · 丘位评估 · 食指无名指比"
       />
 
-      {/* Step 1: Input */}
+      {/* 输入阶段 */}
       {step === 'input' && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4">
-          {/* Privacy notice */}
+          {/* 隐私提示 */}
           <div className="bg-[var(--color-surface-dim)] rounded-lg p-3 border border-[var(--color-surface-border)]">
             <div className="text-xs text-[var(--color-gold)] font-medium mb-1 font-body">🔒 隐私保护</div>
             <div className="text-xs text-[var(--color-text-dim)] font-body leading-relaxed">
               您的照片仅在本地浏览器中处理，不会上传至任何服务器。仅提取的手部特征数据（文字）会发送给AI进行解读。
-              如选择"AI视觉深度分析"，照片会发送给AI（需额外确认）。
             </div>
           </div>
 
-          {/* Capture guidance */}
+          {/* 拍摄指导 */}
           <div className="bg-[var(--color-surface-dim)] rounded-lg p-3 border border-[var(--color-surface-border)]">
             <div className="text-xs text-[var(--color-gold)] font-medium mb-1 font-body">📸 拍摄指导</div>
             <div className="text-xs text-[var(--color-text-dim)] font-body leading-relaxed">
-              手掌正面朝向摄像头 · 手指自然张开 · 光线充足 · 尽量占满画面
+              手掌正面展开 · 五指自然张开 · 光线充足 · 尽量平整不弯曲
             </div>
           </div>
 
-          {/* Extracted features (on retry) */}
+          {/* 已提取的特征摘要（重试时显示） */}
           {extractedFeatures && <HandFeatureSummary features={extractedFeatures} />}
 
-          {/* User note */}
+          {/* 补充说明 */}
           <div>
             <label className="block text-[var(--color-text-dim)] text-xs mb-1 font-body">补充说明（可选）</label>
             <input
               type="text"
               value={userNote}
               onChange={e => setUserNote(e.target.value)}
-              placeholder="如：想了解感情运势、事业方向..."
+              placeholder="如：想了解事业方向、财运如何..."
               className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2.5
                 text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body text-sm"
             />
           </div>
 
-          {/* Camera / upload */}
+          {/* 拍照 / 上传 */}
           {showCamera ? (
             <CameraCapture
               facingMode="environment"
@@ -352,21 +346,21 @@ export default function PalmModule({
         </section>
       )}
 
-      {/* Step 2: ML Analyzing */}
+      {/* ML处理中 */}
       {step === 'analyzing' && <MLProcessingStatus status={mlStatus} />}
 
-      {/* Step 3: Questionnaire */}
+      {/* 问卷阶段 */}
       {step === 'questionnaire' && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4">
           {extractedFeatures && <HandFeatureSummary features={extractedFeatures} />}
           <PalmLineQuestionnaire
-            onSubmit={handleQuestionnaireSubmit}
-            onCancel={() => setStep('input')}
+            onComplete={handleQuestionnaireComplete}
+            onBack={() => setStep('input')}
           />
         </section>
       )}
 
-      {/* Step 4: Result / Chat */}
+      {/* AI对话阶段 */}
       {step === 'result' && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
@@ -379,10 +373,10 @@ export default function PalmModule({
             </button>
           </div>
 
-          {/* Feature summary */}
+          {/* 特征摘要 */}
           {extractedFeatures && <HandFeatureSummary features={extractedFeatures} />}
 
-          {/* AI loading (before streaming) */}
+          {/* Loading before any response */}
           {aiLoading && !streamingText && !hasAIResponse && (
             <div className="mt-4">
               <MLProcessingStatus status="AI手相解读中..." />
@@ -421,40 +415,37 @@ export default function PalmModule({
             <div className="mt-3 text-red-400 text-sm font-body">{error}</div>
           )}
 
-          {/* Action buttons after AI response */}
-          {hasAIResponse && !aiLoading && (
-            <div className="mt-4 space-y-3">
-              {/* Vision deep analysis button (only if we have the image) */}
-              {capturedBase64 && !chatMessages.some(m => m.content?.includes('AI视觉深度分析')) && (
-                <button
-                  onClick={handleVisionAnalysis}
-                  className="w-full text-sm text-[var(--color-gold)] py-2.5 rounded-lg border border-[var(--color-gold-border)]
-                    hover:bg-[var(--color-gold-bg)] transition-colors font-body"
-                >
-                  🔍 AI视觉深度分析（发送照片给AI，获取更详细的掌纹解读）
-                </button>
-              )}
+          {/* Vision deep analysis button */}
+          {hasAIResponse && !aiLoading && palmBase64 && (
+            <button
+              onClick={handleVisionAnalysis}
+              className="mt-3 w-full bg-[var(--color-surface-dim)] text-[var(--color-text-dim)] text-xs py-2.5 rounded-lg
+                border border-[var(--color-surface-border)] hover:border-[var(--color-gold-border)] hover:text-[var(--color-gold)] transition-colors font-body"
+            >
+              🔍 AI视觉深度分析（将照片发送给AI，需消耗更多额度）
+            </button>
+          )}
 
-              {/* Follow-up input */}
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  value={followUpInput}
-                  onChange={e => setFollowUpInput(e.target.value)}
-                  onKeyDown={handleFollowUpKeyDown}
-                  placeholder="追问更多细节..."
-                  className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2.5
-                    text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring font-body text-sm"
-                />
-                <button
-                  onClick={askFollowUp}
-                  disabled={!followUpInput.trim()}
-                  className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 rounded-lg
-                    hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 font-body text-sm"
-                >
-                  发送
-                </button>
-              </div>
+          {/* Follow-up */}
+          {hasAIResponse && !aiLoading && (
+            <div className="mt-4 flex gap-2">
+              <input
+                type="text"
+                value={followUpInput}
+                onChange={e => setFollowUpInput(e.target.value)}
+                onKeyDown={handleFollowUpKeyDown}
+                placeholder="追问更多细节..."
+                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2.5
+                  text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring font-body text-sm"
+              />
+              <button
+                onClick={askFollowUp}
+                disabled={!followUpInput.trim()}
+                className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 rounded-lg
+                  hover:bg-[var(--color-gold-bg-hover)] disabled:opacity-50 font-body text-sm"
+              >
+                发送
+              </button>
             </div>
           )}
 
@@ -464,7 +455,7 @@ export default function PalmModule({
         </section>
       )}
 
-      {/* Error outside chat (input/analyzing phases) */}
+      {/* Error outside chat (input phase) */}
       {error && step === 'input' && (
         <div className="bg-[var(--color-bg-card)] card-blur border border-red-300/30 rounded-xl p-4">
           <div className="text-red-400 text-sm font-body">{error}</div>

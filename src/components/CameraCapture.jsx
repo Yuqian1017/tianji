@@ -24,16 +24,26 @@ export default function CameraCapture({ onCapture, onCancel, facingMode = 'user'
     };
   }, []);
 
+  // When state becomes 'streaming', the <video> element mounts — assign stream to it
+  useEffect(() => {
+    if (state === 'streaming' && videoRef.current && streamRef.current) {
+      videoRef.current.srcObject = streamRef.current;
+      videoRef.current.play().catch(err => {
+        console.error('[CameraCapture] video play failed:', err);
+        setError('摄像头预览失败: ' + err.message);
+        setState('error');
+      });
+    }
+  }, [state]);
+
   const startCamera = useCallback(async () => {
     setState('requesting');
     setError('');
     try {
       const stream = await openCamera(facingMode);
       streamRef.current = stream;
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        await videoRef.current.play();
-      }
+      // Don't assign to videoRef here — the <video> element isn't mounted yet.
+      // The useEffect above handles it after setState('streaming') triggers re-render.
       setState('streaming');
     } catch (err) {
       setError(err.message);
