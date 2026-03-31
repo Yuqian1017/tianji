@@ -456,14 +456,14 @@ export default function ZiweiModule({
       try {
         let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHourBranch = birthHour;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(birthCity.lng);
+          const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
           ({ year: adjYear, month: adjMonth, day: adjDay, branch: adjHourBranch } = adjustHourBranch(birthYear, birthMonth, birthDay, birthHour, offset));
         }
         const r = paiZiwei(adjYear, adjMonth, adjDay, adjHourBranch, gender);
         if (trueSolarEnabled && birthCity) {
           r._trueSolar = {
             city: birthCity.name,
-            offset: calcTrueSolarTimeOffset(birthCity.lng),
+            offset: calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120),
             originalBranch: birthHour,
             adjustedBranch: adjHourBranch,
           };

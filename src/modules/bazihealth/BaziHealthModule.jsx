@@ -198,14 +198,14 @@ export default function BaziHealthModule({
   const handleCalculate = useCallback(() => {
     let adjYear = year, adjMonth = month, adjDay = day, adjHour = hour, adjMinute = 0;
     if (trueSolarEnabled && birthCity) {
-      const offset = calcTrueSolarTimeOffset(birthCity.lng);
+      const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
       ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(year, month, day, hour, 0, offset));
     }
     const res = runHealthAnalysis(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
     if (trueSolarEnabled && birthCity) {
       res._trueSolar = {
         city: birthCity.name,
-        offset: calcTrueSolarTimeOffset(birthCity.lng),
+        offset: calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120),
         adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
       };
     }

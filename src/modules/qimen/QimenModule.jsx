@@ -335,7 +335,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
       try {
         let adjYear = inputYear, adjMonth = inputMonth, adjDay = inputDay, adjHour = inputHour;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(birthCity.lng);
+          const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
           ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour } = adjustBirthTime(inputYear, inputMonth, inputDay, inputHour, 0, offset));
         }
         const r = paiQimen(adjYear, adjMonth, adjDay, adjHour);

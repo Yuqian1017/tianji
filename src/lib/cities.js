@@ -347,18 +347,137 @@ export const CHINA_CITIES = [
   { name: '台中', province: '台湾', lng: 120.68 },
   { name: '台南', province: '台湾', lng: 120.21 },
 
-  // 海外华人聚集地
-  { name: '新加坡', province: '海外', lng: 103.82 },
-  { name: '吉隆坡', province: '海外', lng: 101.69 },
-  { name: '曼谷', province: '海外', lng: 100.50 },
-  { name: '东京', province: '海外', lng: 139.69 },
-  { name: '首尔', province: '海外', lng: 126.98 },
-  { name: '悉尼', province: '海外', lng: 151.21 },
-  { name: '温哥华', province: '海外', lng: -123.12 },
-  { name: '旧金山', province: '海外', lng: -122.42 },
-  { name: '洛杉矶', province: '海外', lng: -118.24 },
-  { name: '纽约', province: '海外', lng: -74.01 },
-  { name: '伦敦', province: '海外', lng: -0.13 },
+  // ===== 海外城市 =====
+  // stdMeridian = timezone standard meridian in degrees (e.g. UTC-8 PST → -120)
+  // en = English name for search
+
+  // 日本 (UTC+9, stdMeridian=135)
+  { name: '东京', province: '日本', lng: 139.69, stdMeridian: 135, en: 'Tokyo' },
+  { name: '大阪', province: '日本', lng: 135.50, stdMeridian: 135, en: 'Osaka' },
+  { name: '京都', province: '日本', lng: 135.77, stdMeridian: 135, en: 'Kyoto' },
+  { name: '名古屋', province: '日本', lng: 136.91, stdMeridian: 135, en: 'Nagoya' },
+  { name: '福冈', province: '日本', lng: 130.42, stdMeridian: 135, en: 'Fukuoka' },
+  { name: '札幌', province: '日本', lng: 141.35, stdMeridian: 135, en: 'Sapporo' },
+  { name: '横滨', province: '日本', lng: 139.64, stdMeridian: 135, en: 'Yokohama' },
+
+  // 韩国 (UTC+9, stdMeridian=135)
+  { name: '首尔', province: '韩国', lng: 126.98, stdMeridian: 135, en: 'Seoul' },
+  { name: '釜山', province: '韩国', lng: 129.04, stdMeridian: 135, en: 'Busan' },
+  { name: '仁川', province: '韩国', lng: 126.71, stdMeridian: 135, en: 'Incheon' },
+
+  // 东南亚
+  { name: '新加坡', province: '新加坡', lng: 103.82, stdMeridian: 120, en: 'Singapore' },
+  { name: '吉隆坡', province: '马来西亚', lng: 101.69, stdMeridian: 120, en: 'Kuala Lumpur' },
+  { name: '槟城', province: '马来西亚', lng: 100.33, stdMeridian: 120, en: 'Penang' },
+  { name: '曼谷', province: '泰国', lng: 100.50, stdMeridian: 105, en: 'Bangkok' },
+  { name: '清迈', province: '泰国', lng: 98.98, stdMeridian: 105, en: 'Chiang Mai' },
+  { name: '河内', province: '越南', lng: 105.85, stdMeridian: 105, en: 'Hanoi' },
+  { name: '胡志明市', province: '越南', lng: 106.63, stdMeridian: 105, en: 'Ho Chi Minh City' },
+  { name: '马尼拉', province: '菲律宾', lng: 120.98, stdMeridian: 120, en: 'Manila' },
+  { name: '雅加达', province: '印尼', lng: 106.85, stdMeridian: 105, en: 'Jakarta' },
+
+  // 南亚
+  { name: '新德里', province: '印度', lng: 77.21, stdMeridian: 82.5, en: 'New Delhi' },
+  { name: '孟买', province: '印度', lng: 72.88, stdMeridian: 82.5, en: 'Mumbai' },
+
+  // 澳大利亚
+  { name: '悉尼', province: '澳大利亚', lng: 151.21, stdMeridian: 150, en: 'Sydney' },
+  { name: '墨尔本', province: '澳大利亚', lng: 144.96, stdMeridian: 150, en: 'Melbourne' },
+  { name: '布里斯班', province: '澳大利亚', lng: 153.03, stdMeridian: 150, en: 'Brisbane' },
+  { name: '珀斯', province: '澳大利亚', lng: 115.86, stdMeridian: 120, en: 'Perth' },
+
+  // 新西兰 (UTC+12, stdMeridian=180)
+  { name: '奥克兰', province: '新西兰', lng: 174.76, stdMeridian: 180, en: 'Auckland' },
+  { name: '惠灵顿', province: '新西兰', lng: 174.78, stdMeridian: 180, en: 'Wellington' },
+
+  // 美国东部 (UTC-5 EST, stdMeridian=-75)
+  { name: '纽约', province: '美国东部', lng: -74.01, stdMeridian: -75, en: 'New York' },
+  { name: '华盛顿', province: '美国东部', lng: -77.04, stdMeridian: -75, en: 'Washington DC' },
+  { name: '波士顿', province: '美国东部', lng: -71.06, stdMeridian: -75, en: 'Boston' },
+  { name: '费城', province: '美国东部', lng: -75.17, stdMeridian: -75, en: 'Philadelphia' },
+  { name: '迈阿密', province: '美国东部', lng: -80.19, stdMeridian: -75, en: 'Miami' },
+  { name: '亚特兰大', province: '美国东部', lng: -84.39, stdMeridian: -75, en: 'Atlanta' },
+  { name: '夏洛特', province: '美国东部', lng: -80.84, stdMeridian: -75, en: 'Charlotte' },
+  { name: '底特律', province: '美国东部', lng: -83.05, stdMeridian: -75, en: 'Detroit' },
+  { name: '匹兹堡', province: '美国东部', lng: -79.99, stdMeridian: -75, en: 'Pittsburgh' },
+  { name: '奥兰多', province: '美国东部', lng: -81.38, stdMeridian: -75, en: 'Orlando' },
+
+  // 美国中部 (UTC-6 CST, stdMeridian=-90)
+  { name: '芝加哥', province: '美国中部', lng: -87.63, stdMeridian: -90, en: 'Chicago' },
+  { name: '休斯顿', province: '美国中部', lng: -95.37, stdMeridian: -90, en: 'Houston' },
+  { name: '达拉斯', province: '美国中部', lng: -96.80, stdMeridian: -90, en: 'Dallas' },
+  { name: '奥斯汀', province: '美国中部', lng: -97.74, stdMeridian: -90, en: 'Austin' },
+  { name: '圣安东尼奥', province: '美国中部', lng: -98.49, stdMeridian: -90, en: 'San Antonio' },
+  { name: '明尼阿波利斯', province: '美国中部', lng: -93.27, stdMeridian: -90, en: 'Minneapolis' },
+  { name: '堪萨斯城', province: '美国中部', lng: -94.58, stdMeridian: -90, en: 'Kansas City' },
+  { name: '新奥尔良', province: '美国中部', lng: -90.07, stdMeridian: -90, en: 'New Orleans' },
+  { name: '纳什维尔', province: '美国中部', lng: -86.78, stdMeridian: -90, en: 'Nashville' },
+
+  // 美国山地 (UTC-7 MST, stdMeridian=-105)
+  { name: '丹佛', province: '美国山地', lng: -104.99, stdMeridian: -105, en: 'Denver' },
+  { name: '菲尼克斯', province: '美国山地', lng: -112.07, stdMeridian: -105, en: 'Phoenix' },
+  { name: '盐湖城', province: '美国山地', lng: -111.89, stdMeridian: -105, en: 'Salt Lake City' },
+  { name: '阿尔伯克基', province: '美国山地', lng: -106.65, stdMeridian: -105, en: 'Albuquerque' },
+  { name: '拉斯维加斯', province: '美国山地', lng: -115.14, stdMeridian: -105, en: 'Las Vegas' },
+
+  // 美国西部 (UTC-8 PST, stdMeridian=-120)
+  { name: '洛杉矶', province: '美国西部', lng: -118.24, stdMeridian: -120, en: 'Los Angeles' },
+  { name: '旧金山', province: '美国西部', lng: -122.42, stdMeridian: -120, en: 'San Francisco' },
+  { name: '西雅图', province: '美国西部', lng: -122.33, stdMeridian: -120, en: 'Seattle' },
+  { name: '圣地亚哥', province: '美国西部', lng: -117.16, stdMeridian: -120, en: 'San Diego' },
+  { name: '波特兰', province: '美国西部', lng: -122.68, stdMeridian: -120, en: 'Portland' },
+  { name: '圣何塞', province: '美国西部', lng: -121.89, stdMeridian: -120, en: 'San Jose' },
+  { name: '萨克拉门托', province: '美国西部', lng: -121.49, stdMeridian: -120, en: 'Sacramento' },
+
+  // 美国其他
+  { name: '檀香山', province: '美国夏威夷', lng: -157.86, stdMeridian: -150, en: 'Honolulu' },
+  { name: '安克雷奇', province: '美国阿拉斯加', lng: -149.90, stdMeridian: -135, en: 'Anchorage' },
+
+  // 加拿大
+  { name: '多伦多', province: '加拿大', lng: -79.38, stdMeridian: -75, en: 'Toronto' },
+  { name: '温哥华', province: '加拿大', lng: -123.12, stdMeridian: -120, en: 'Vancouver' },
+  { name: '蒙特利尔', province: '加拿大', lng: -73.57, stdMeridian: -75, en: 'Montreal' },
+  { name: '卡尔加里', province: '加拿大', lng: -114.07, stdMeridian: -105, en: 'Calgary' },
+  { name: '渥太华', province: '加拿大', lng: -75.70, stdMeridian: -75, en: 'Ottawa' },
+  { name: '埃德蒙顿', province: '加拿大', lng: -113.49, stdMeridian: -105, en: 'Edmonton' },
+
+  // 英国 (UTC+0, stdMeridian=0)
+  { name: '伦敦', province: '英国', lng: -0.13, stdMeridian: 0, en: 'London' },
+  { name: '曼彻斯特', province: '英国', lng: -2.24, stdMeridian: 0, en: 'Manchester' },
+  { name: '伯明翰', province: '英国', lng: -1.90, stdMeridian: 0, en: 'Birmingham' },
+  { name: '爱丁堡', province: '英国', lng: -3.19, stdMeridian: 0, en: 'Edinburgh' },
+
+  // 欧洲 (UTC+1 CET, stdMeridian=15)
+  { name: '巴黎', province: '法国', lng: 2.35, stdMeridian: 15, en: 'Paris' },
+  { name: '柏林', province: '德国', lng: 13.41, stdMeridian: 15, en: 'Berlin' },
+  { name: '慕尼黑', province: '德国', lng: 11.58, stdMeridian: 15, en: 'Munich' },
+  { name: '法兰克福', province: '德国', lng: 8.68, stdMeridian: 15, en: 'Frankfurt' },
+  { name: '阿姆斯特丹', province: '荷兰', lng: 4.90, stdMeridian: 15, en: 'Amsterdam' },
+  { name: '罗马', province: '意大利', lng: 12.50, stdMeridian: 15, en: 'Rome' },
+  { name: '米兰', province: '意大利', lng: 9.19, stdMeridian: 15, en: 'Milan' },
+  { name: '马德里', province: '西班牙', lng: -3.70, stdMeridian: 15, en: 'Madrid' },
+  { name: '巴塞罗那', province: '西班牙', lng: 2.17, stdMeridian: 15, en: 'Barcelona' },
+  { name: '维也纳', province: '奥地利', lng: 16.37, stdMeridian: 15, en: 'Vienna' },
+  { name: '布拉格', province: '捷克', lng: 14.42, stdMeridian: 15, en: 'Prague' },
+  { name: '苏黎世', province: '瑞士', lng: 8.54, stdMeridian: 15, en: 'Zurich' },
+
+  // 东欧 (UTC+2 EET, stdMeridian=30)
+  { name: '莫斯科', province: '俄罗斯', lng: 37.62, stdMeridian: 45, en: 'Moscow' },
+  { name: '圣彼得堡', province: '俄罗斯', lng: 30.32, stdMeridian: 45, en: 'Saint Petersburg' },
+  { name: '伊斯坦布尔', province: '土耳其', lng: 28.98, stdMeridian: 45, en: 'Istanbul' },
+  { name: '迪拜', province: '阿联酋', lng: 55.27, stdMeridian: 60, en: 'Dubai' },
+
+  // 中东
+  { name: '耶路撒冷', province: '以色列', lng: 35.21, stdMeridian: 30, en: 'Jerusalem' },
+
+  // 南美
+  { name: '圣保罗', province: '巴西', lng: -46.63, stdMeridian: -45, en: 'São Paulo' },
+  { name: '布宜诺斯艾利斯', province: '阿根廷', lng: -58.38, stdMeridian: -45, en: 'Buenos Aires' },
+  { name: '利马', province: '秘鲁', lng: -77.04, stdMeridian: -75, en: 'Lima' },
+
+  // 非洲
+  { name: '开罗', province: '埃及', lng: 31.24, stdMeridian: 30, en: 'Cairo' },
+  { name: '约翰内斯堡', province: '南非', lng: 28.05, stdMeridian: 30, en: 'Johannesburg' },
 ].sort((a, b) => a.province.localeCompare(b.province, 'zh') || a.name.localeCompare(b.name, 'zh'));
 
 /**
@@ -368,15 +487,15 @@ export function searchCities(query) {
   if (!query || !query.trim()) return [];
   const q = query.trim().toLowerCase();
   const results = CHINA_CITIES.filter(c =>
-    c.name.includes(q) || c.province.includes(q)
+    c.name.includes(q) || c.province.includes(q) || (c.en && c.en.toLowerCase().includes(q))
   );
   // Prioritize exact name match, then name starts-with, then province match
   results.sort((a, b) => {
-    const aExact = a.name === q ? 0 : 1;
-    const bExact = b.name === q ? 0 : 1;
+    const aExact = (a.name === q || (a.en && a.en.toLowerCase() === q)) ? 0 : 1;
+    const bExact = (b.name === q || (b.en && b.en.toLowerCase() === q)) ? 0 : 1;
     if (aExact !== bExact) return aExact - bExact;
-    const aStart = a.name.startsWith(q) ? 0 : 1;
-    const bStart = b.name.startsWith(q) ? 0 : 1;
+    const aStart = (a.name.startsWith(q) || (a.en && a.en.toLowerCase().startsWith(q))) ? 0 : 1;
+    const bStart = (b.name.startsWith(q) || (b.en && b.en.toLowerCase().startsWith(q))) ? 0 : 1;
     return aStart - bStart;
   });
   return results.slice(0, 10);

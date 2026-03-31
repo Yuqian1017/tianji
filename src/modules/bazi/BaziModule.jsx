@@ -360,7 +360,7 @@ export default function BaziModule({
       try {
         let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHour = birthHour, adjMinute = 0;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(birthCity.lng);
+          const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
           ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(birthYear, birthMonth, birthDay, birthHour, 0, offset));
         }
         const r = paiBazi(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
@@ -368,7 +368,7 @@ export default function BaziModule({
         if (trueSolarEnabled && birthCity) {
           r._trueSolar = {
             city: birthCity.name,
-            offset: calcTrueSolarTimeOffset(birthCity.lng),
+            offset: calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120),
             adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
           };
         }

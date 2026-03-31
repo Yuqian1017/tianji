@@ -40,7 +40,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
     setShowDropdown(false);
   };
 
-  const offset = city ? calcTrueSolarTimeOffset(city.lng) : 0;
+  const offset = city ? calcTrueSolarTimeOffset(city.lng, city.stdMeridian ?? 120) : 0;
 
   return (
     <div className="space-y-2">
@@ -49,7 +49,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
         <div>
           <div className="text-sm text-[var(--color-text)] font-body">真太阳时校正</div>
           <div className="text-xs text-[var(--color-text-dim)] font-body">
-            根据出生地经度校正时辰（中国横跨5个时区）
+            根据出生地经度校正时辰
           </div>
         </div>
         <button
@@ -73,7 +73,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
                 <span className="text-sm text-[var(--color-text)] font-body">{city.name}</span>
                 <span className="text-xs text-[var(--color-text-dim)] ml-1 font-body">({city.province})</span>
                 <span className="text-xs text-[var(--color-gold)] ml-2 font-body">
-                  {city.lng.toFixed(1)}°E → 校正 {formatOffset(offset)}
+                  {Math.abs(city.lng).toFixed(1)}°{city.lng >= 0 ? 'E' : 'W'} → 校正 {formatOffset(offset)}
                 </span>
               </div>
               <button
@@ -89,7 +89,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
               type="text"
               value={query}
               onChange={e => setQuery(e.target.value)}
-              placeholder="输入城市名搜索，如：成都、西安、乌鲁木齐..."
+              placeholder="输入城市名搜索，如：成都、Los Angeles、东京..."
               className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2
                 text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body text-sm"
             />
@@ -100,7 +100,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
             <div className="absolute z-20 left-0 right-0 mt-1 bg-[var(--color-bg-card)] border border-[var(--color-gold-border)]
               rounded-lg shadow-lg max-h-48 overflow-y-auto">
               {results.map((c, i) => {
-                const off = calcTrueSolarTimeOffset(c.lng);
+                const off = calcTrueSolarTimeOffset(c.lng, c.stdMeridian ?? 120);
                 return (
                   <button
                     key={`${c.name}-${c.province}-${i}`}
@@ -109,9 +109,10 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
                       border-b border-[var(--color-surface-border)] last:border-b-0 font-body"
                   >
                     <span className="text-sm text-[var(--color-text)]">{c.name}</span>
+                    {c.en && <span className="text-xs text-[var(--color-text-dim)] ml-1">{c.en}</span>}
                     <span className="text-xs text-[var(--color-text-dim)] ml-1">({c.province})</span>
                     <span className="text-xs text-[var(--color-gold)] ml-2 float-right">
-                      {c.lng.toFixed(1)}°E {formatOffset(off)}
+                      {formatOffset(off)}
                     </span>
                   </button>
                 );
