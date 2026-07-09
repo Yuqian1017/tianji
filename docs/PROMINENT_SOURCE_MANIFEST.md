@@ -32,6 +32,7 @@
 | `runtime_truth` | 能证明当前产品实际行为的代码或数据；不自动成为知识权威 |
 | `normalized` | 已转为稳定 schema，但尚未必校勘 |
 | `accepted` | 已按预定规则校勘并允许目标消费场景使用 |
+| `validation_anchor` | 用于验证具体算法/事实的外部依据；只证明其明确覆盖的范围 |
 
 ## 3. Source Package 清单
 
@@ -104,6 +105,39 @@
 | 不能证明 | 传统知识是否权威、算法是否完整校勘、中医建议是否安全 |
 | 许可 | 项目根目录未发现独立 LICENSE，状态为 `project-internal/unknown` |
 | 使用规则 | 作为反向审计来源；静态表和 Prompt 需要映射回候选/accepted 知识条目 |
+
+### SRC-VAL-HKO-CALENDAR
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 香港天文台公农历对照表与二十四节气资料 |
+| 状态 | `validation_anchor` |
+| 机构 | 香港天文台 |
+| 本轮 URL | `https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/1999e.pdf`、`https://www.hko.gov.hk/en/gts/time/24solarterms.htm` |
+| 本轮用途 | 确认 1999 年芒种日期为 6 月 6 日；确认 24 节气由黄经每 15 度定义及节/中气关系 |
+| 边界 | 1999 对照表只给日期，不单独提供该页的秒级时刻；分钟边界仍需更精细官方历表或天文算法 |
+
+### SRC-VAL-NOAA-SOLAR
+
+| 字段 | 值 |
+|---|---|
+| 名称 | NOAA General Solar Position Calculations |
+| 状态 | `validation_anchor` |
+| 机构 | NOAA Global Monitoring Laboratory |
+| URL | `https://gml.noaa.gov/grad/solcalc/solareqns.PDF` |
+| 本轮用途 | 确认 true solar time 的 offset 包含 equation of time、经度与时区 |
+| 审计结果 | 当前 `calcTrueSolarTimeOffset` 只有经度/标准经线项，不能证明为完整真太阳时 |
+
+### SRC-VAL-LUNAR-JS
+
+| 字段 | 值 |
+|---|---|
+| 名称 | `lunar-javascript@1.7.7` |
+| 项目路径 | `node_modules/lunar-javascript/`；依赖声明见 `package.json` |
+| 状态 | `validation_anchor`，独立实现 |
+| 许可 | 包元数据声明 MIT |
+| 本轮用途 | 对 30 例年月日时四柱与大运做独立复算；使用 `sect=1` 对齐当前 23:00 换日口径 |
+| 边界 | 开源实现不是官方历表或跨流派权威；与当前结果一致只算 V3 候选证据，关键边界仍需官方锚点 |
 
 ## 4. 历史产品规格来源
 
@@ -230,8 +264,8 @@ escalation: self_care | clinician | urgent | emergency
 
 ## 12. 下一步
 
-1. 按本清单为 package/source group 建立机器可读 manifest。
-2. 定义 normalized schema 和 review 状态机。
-3. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。
-4. 抽取 XUAN-COSMO 与 XUAN-YIJING 的 P1 必修知识点，建立课程和规范答案。
-5. 抽取 XUAN-LIUYAO 核心规则，并连接 APP-ENGINES 的结构化输出。
+1. 用第二独立实现和官方极值复核八字边界，完成属性测试并决定历法核心替换或修复。
+2. 按本清单为 package/source group 建立机器可读 manifest。
+3. 定义 normalized schema 和 review 状态机。
+4. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。
+5. 八字/共享历法与当前中医安全 gate 关闭后，再抽取首个教学切片的 accepted 知识点。

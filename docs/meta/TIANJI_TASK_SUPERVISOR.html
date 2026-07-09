@@ -39,15 +39,15 @@
     <header>
       <div>
         <h1>天机卷任务监督器</h1>
-        <div id="stage" class="muted">主线恢复与数据库治理</div>
+        <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
       <div id="percent" class="percent">19%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">三份基线文档已完成，等待产品负责人评审。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">文档确认后冻结练气期教学切片，并编写实现计划。</p></article>
-      <article class="panel"><h2>反漂移规则</h2><p id="rule">只增加排盘模块不等于推进教学游戏主线。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">全范围节令复算已完成；补第二实现和属性测试。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">评估成熟历法核心后决定替换核心还是局部修复。</p></article>
+      <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
     </section>
 
     <section class="panel">
@@ -67,12 +67,13 @@
   </main>
   <script>
     const fallback = {
-      currentStage: '主线恢复与数据库治理',
+      currentStage: '数据库与排盘正确性验证',
       overallPercent: 19,
-      currentFocus: '主 PRD、数据库覆盖矩阵与主要来源溯源清单已完成，等待产品负责人评审。',
-      nextDecision: '产品负责人确认或修改三份文档后，冻结首个练气期教学切片，并编写数据库规范化与实现计划。',
-      antiDriftRule: '任何新功能都必须说明它推进了哪个玩家可感知的学习循环；只增加排盘模块不等于推进教学游戏主线。',
+      currentFocus: '八字 1920-2027 节令边界已全量复算；补第二独立实现、属性测试并形成历法核心替换/修复决策。',
+      nextDecision: '比较成熟历法核心的边界准确性、API、许可与维护成本后，决定替换核心还是局部修复。',
+      antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 32, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'in_progress', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -80,15 +81,19 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '主线定义', state: 'review_pending', rule: '三份正式文档一致且经用户确认。' },
+        { name: '排盘与数据库正确性', state: 'failed_initial_audit', rule: '当前八字核心不得进入教学或健康下游。' },
+        { name: 'Product A 复用决策', state: 'held', rule: '八字与共享历法审计前不默认复用。' },
+        { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
         { name: '中医安全', state: 'blocked', rule: '安全元数据补齐前不扩大高风险内容消费。' },
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
-        '已找回 Product A、Product B 与游戏化规格',
-        '已导入玄学 compendium 与中医 Skill raw source',
-        '已盘点当前 13 个实战、问诊与相术模块'
+        '旧日柱 34 天系统偏移已在 d47165b 修复',
+        '八字 30 例：2 个四柱 mismatch、6 个大运 mismatch',
+        '1920-2027 的 1,296 个节令边界已全量复算',
+        'HKO 历表与 NOAA 公式锚定节令和太阳时 finding',
+        'PRD fresh review 完成，结论为 hold'
       ]
     };
 
