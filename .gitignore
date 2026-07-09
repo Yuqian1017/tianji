@@ -25,3 +25,6 @@ dist-ssr
 
 # SQLite database
 tianji.db*
+
+# Local planning-with-files sidecar
+.planning/

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天机卷任务监督器</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6f8; color: #17202a; }
+    main { width: min(1120px, calc(100% - 32px)); margin: 24px auto 48px; }
+    header { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: end; padding: 20px 0; border-bottom: 3px solid #8c2f39; }
+    h1, h2, p { margin-top: 0; }
+    h1 { margin-bottom: 6px; font-size: 28px; }
+    h2 { margin-bottom: 12px; font-size: 18px; }
+    .muted { color: #59636e; }
+    .percent { font-size: 28px; font-weight: 750; color: #8c2f39; }
+    .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0; }
+    .panel { background: #fff; border: 1px solid #d8dde3; border-radius: 6px; padding: 16px; }
+    .summary .panel p { margin-bottom: 0; line-height: 1.55; }
+    .phase { display: grid; grid-template-columns: 140px 1fr 72px; gap: 14px; align-items: start; padding: 14px 0; border-top: 1px solid #e4e8ec; }
+    .phase:first-of-type { border-top: 0; }
+    .phase strong { display: block; margin-bottom: 4px; }
+    .bar { height: 8px; background: #e8ebef; margin-top: 10px; overflow: hidden; }
+    .bar > span { display: block; height: 100%; background: #2f6f62; }
+    .gate { display: grid; grid-template-columns: 180px 110px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid #e4e8ec; }
+    .gate:first-of-type { border-top: 0; }
+    .state { font-weight: 700; color: #8c2f39; }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 8px; }
+    @media (max-width: 760px) {
+      header, .summary { grid-template-columns: 1fr; }
+      .phase, .gate { grid-template-columns: 1fr; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>天机卷任务监督器</h1>
+        <div id="stage" class="muted">主线恢复与数据库治理</div>
+      </div>
+      <div id="percent" class="percent">19%</div>
+    </header>
+
+    <section class="summary">
+      <article class="panel"><h2>当前重点</h2><p id="focus">三份基线文档已完成，等待产品负责人评审。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">文档确认后冻结练气期教学切片，并编写实现计划。</p></article>
+      <article class="panel"><h2>反漂移规则</h2><p id="rule">只增加排盘模块不等于推进教学游戏主线。</p></article>
+    </section>
+
+    <section class="panel">
+      <h2>阶段</h2>
+      <div id="phases"></div>
+    </section>
+
+    <section class="panel" style="margin-top: 12px">
+      <h2>门槛</h2>
+      <div id="gates"></div>
+    </section>
+
+    <section class="panel" style="margin-top: 12px">
+      <h2>近期证据</h2>
+      <ul id="evidence"></ul>
+    </section>
+  </main>
+  <script>
+    const fallback = {
+      currentStage: '主线恢复与数据库治理',
+      overallPercent: 19,
+      currentFocus: '主 PRD、数据库覆盖矩阵与主要来源溯源清单已完成，等待产品负责人评审。',
+      nextDecision: '产品负责人确认或修改三份文档后，冻结首个练气期教学切片，并编写数据库规范化与实现计划。',
+      antiDriftRule: '任何新功能都必须说明它推进了哪个玩家可感知的学习循环；只增加排盘模块不等于推进教学游戏主线。',
+      phases: [
+        { id: 'P0', name: '主线恢复与数据库基线', status: 'in_progress', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
+        { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
+        { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
+        { id: 'P3', name: '多领域课程与数据库扩展', status: 'pending', progress: 0, doneWhen: '核心领域具备可溯源课程与题目。' },
+        { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
+      ],
+      gates: [
+        { name: '主线定义', state: 'review_pending', rule: '三份正式文档一致且经用户确认。' },
+        { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
+        { name: '中医安全', state: 'blocked', rule: '安全元数据补齐前不扩大高风险内容消费。' },
+        { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
+      ],
+      recentEvidence: [
+        '已找回 Product A、Product B 与游戏化规格',
+        '已导入玄学 compendium 与中医 Skill raw source',
+        '已盘点当前 13 个实战、问诊与相术模块'
+      ]
+    };
+
+    function render(state) {
+      document.querySelector('#stage').textContent = state.currentStage;
+      document.querySelector('#percent').textContent = `${state.overallPercent}%`;
+      document.querySelector('#focus').textContent = state.currentFocus;
+      document.querySelector('#next').textContent = state.nextDecision;
+      document.querySelector('#rule').textContent = state.antiDriftRule;
+      document.querySelector('#phases').innerHTML = state.phases.map((phase) => `
+        <div class="phase">
+          <div><strong>${phase.id} · ${phase.name}</strong><span class="muted">${phase.status}</span></div>
+          <div>${phase.doneWhen}<div class="bar"><span style="width:${phase.progress}%"></span></div></div>
+          <strong>${phase.progress}%</strong>
+        </div>`).join('');
+      document.querySelector('#gates').innerHTML = state.gates.map((gate) => `
+        <div class="gate"><strong>${gate.name}</strong><span class="state">${gate.state}</span><span>${gate.rule}</span></div>`).join('');
+      document.querySelector('#evidence').innerHTML = state.recentEvidence.map((item) => `<li>${item}</li>`).join('');
+    }
+
+    render(fallback);
+    fetch('./TIANJI_TASK_SUPERVISOR_STATE.json').then((response) => response.json()).then(render).catch(() => {});
+  </script>
+</body>
+</html>

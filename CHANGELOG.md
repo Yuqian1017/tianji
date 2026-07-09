@@ -1,6 +1,16 @@
 # Changelog
 
-## 2026-03-13c (latest)
+## 2026-07-09
+
+### docs: 恢复天机卷主线与数据库治理基线
+
+- 新增 `docs/PRD.md`，把当前排盘/问诊/相术工具定位为 Product A，并恢复 Product B 教学游戏与 Product C 统一产品主线。
+- 新增 `docs/DATABASE_COVERAGE_MATRIX.md`，记录各知识域的 raw、runtime、normalized、reviewed 与 learning 覆盖。
+- 新增 `docs/PROMINENT_SOURCE_MANIFEST.md`，登记玄学 compendium、中医 Skill 和当前代码的来源、版本关系、许可与校验状态。
+- 新增项目术语表、路线图、任务监督器和校验脚本。
+- 将项目 README 从 Vite 模板改为天机卷入口文档。
+
+## 2026-03-13c
 
 ### feat: 面相 + 手相模块 (Face & Palm Reading Modules)
 

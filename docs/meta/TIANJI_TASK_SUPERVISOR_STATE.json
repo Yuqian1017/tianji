@@ -1,0 +1,128 @@
+{
+  "project": "天机卷",
+  "version": "1.0",
+  "updatedAt": "2026-07-09",
+  "currentPhaseId": "P0",
+  "currentStage": "主线恢复与数据库治理",
+  "overallPercent": 19,
+  "currentFocus": "主 PRD、数据库覆盖矩阵与主要来源溯源清单已完成，等待产品负责人评审。",
+  "nextDecision": "产品负责人确认或修改三份文档后，冻结首个练气期教学切片，并编写数据库规范化与实现计划。",
+  "antiDriftRule": "任何新功能都必须说明它推进了哪个玩家可感知的学习循环；只增加排盘模块不等于推进教学游戏主线。",
+  "activePlan": ".planning/2026-07-09-tianji-mainline-recovery/",
+  "phases": [
+    {
+      "id": "P0",
+      "name": "主线恢复与数据库基线",
+      "status": "in_progress",
+      "progress": 95,
+      "goal": "恢复统一产品定义，盘清来源、覆盖、缺口和安全边界。",
+      "doneWhen": "主 PRD、Coverage Matrix、Source Manifest 通过一致性校验并经用户确认。",
+      "evidence": [
+        "已找回 APP-SPEC-A/B、GAME-DESIGN、DIFFICULTY-MAP 与 CC-FIRST-TASK",
+        "已导入两份玄学 compendium 与中医 Skill raw source",
+        "已盘点当前 13 个实战/问诊/相术模块"
+      ],
+      "metrics": {
+        "time": { "startedAt": "2026-07-09", "completedAt": null, "elapsed": "待回填" },
+        "lineMetrics": { "codeAdded": 38, "docsAdded": 937, "dashboardAdded": 245 },
+        "feedbackSummary": "用户确认先补主 PRD、Database Coverage Matrix、Prominent Source Manifest，并强调来源价值应按可补充内容判断。"
+      }
+    },
+    {
+      "id": "P1",
+      "name": "教学核心可玩切片",
+      "status": "pending",
+      "progress": 0,
+      "goal": "做出学习、练习、反馈、灵力与一次渡劫闭环。",
+      "doneWhen": "新用户可完成一个领域的课程并通过一次可复核答案的渡劫。",
+      "evidence": [],
+      "metrics": {
+        "time": { "startedAt": null, "completedAt": null, "elapsed": "待回填" },
+        "lineMetrics": { "codeAdded": 0, "docsAdded": 0, "dashboardAdded": 0 },
+        "feedbackSummary": "待回填"
+      }
+    },
+    {
+      "id": "P2",
+      "name": "实战工具接入学习循环",
+      "status": "pending",
+      "progress": 0,
+      "goal": "让现有排盘和查询工具成为有教学目标、复盘和奖励的实战环节。",
+      "doneWhen": "至少一个实战工具能生成结构化练习记录并回写领域掌握度。",
+      "evidence": [],
+      "metrics": {
+        "time": { "startedAt": null, "completedAt": null, "elapsed": "待回填" },
+        "lineMetrics": { "codeAdded": 0, "docsAdded": 0, "dashboardAdded": 0 },
+        "feedbackSummary": "待回填"
+      }
+    },
+    {
+      "id": "P3",
+      "name": "多领域课程与数据库扩展",
+      "status": "pending",
+      "progress": 0,
+      "goal": "按来源质量和玩家价值扩展课程、题目与实战内容。",
+      "doneWhen": "核心领域具备可溯源知识点、课程、题目和掌握度映射。",
+      "evidence": [],
+      "metrics": {
+        "time": { "startedAt": null, "completedAt": null, "elapsed": "待回填" },
+        "lineMetrics": { "codeAdded": 0, "docsAdded": 0, "dashboardAdded": 0 },
+        "feedbackSummary": "待回填"
+      }
+    },
+    {
+      "id": "P4",
+      "name": "叙事、NPC 与长期养成",
+      "status": "pending",
+      "progress": 0,
+      "goal": "在核心学习循环成立后加入角色关系、成就、每日与长期内容。",
+      "doneWhen": "NPC 与养成机制能增强学习动机，且不替代知识正确性与练习反馈。",
+      "evidence": [],
+      "metrics": {
+        "time": { "startedAt": null, "completedAt": null, "elapsed": "待回填" },
+        "lineMetrics": { "codeAdded": 0, "docsAdded": 0, "dashboardAdded": 0 },
+        "feedbackSummary": "待回填"
+      }
+    }
+  ],
+  "activeTasks": [
+    {
+      "id": "TJI-P0-01",
+      "name": "重建主 PRD",
+      "status": "completed",
+      "phase": "P0",
+      "doneWhen": "统一定义 Product A、B、C、Database、范围、验收和路线。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-P0-02",
+      "name": "建立数据库覆盖矩阵",
+      "status": "completed",
+      "phase": "P0",
+      "doneWhen": "逐域区分来源存在、规范化、校勘、产品接入和教学覆盖。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-P0-03",
+      "name": "建立主要来源溯源清单",
+      "status": "completed",
+      "phase": "P0",
+      "doneWhen": "主要来源有稳定 ID、路径、角色、版本关系、许可与校验状态。",
+      "owner": "Codex"
+    }
+  ],
+  "gates": [
+    { "name": "主线定义", "state": "review_pending", "rule": "三份正式文档一致且经用户确认。" },
+    { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
+    { "name": "中医安全", "state": "blocked", "rule": "未补齐安全元数据前，不扩大方药、艾灸或症状建议的产品消费范围。" },
+    { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
+    { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
+  ],
+  "recentEvidence": [
+    "database/xuanxue/compendium-new/ 是当前 canonical 上游资料",
+    "database/xuanxue/compendium-vision-api/ 是近似副本，仅相术任务路径不同",
+    "database/tcm/skill-v3/ 含 50 个 references 文件、原文库与 CC BY-NC 4.0 许可证",
+    "当前工作树中 .claude/launch.json 为既有无关修改，不纳入本任务",
+    "docs/PRD.md、docs/DATABASE_COVERAGE_MATRIX.md、docs/PROMINENT_SOURCE_MANIFEST.md 已完成并通过本地链接检查"
+  ]
+}
