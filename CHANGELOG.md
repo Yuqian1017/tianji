@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-10 - TCM formula catalog inventory and safety boundaries
+
+- 完成 `references/24-30` 的 820 条非空行、8 表/171 表格行、81 标题和 186 个格式化方剂定义的完整 blocked inventory。
+- 新增 522 条重叠窄风险视图（含 158 条禁忌/慎用）、20 个重点裁决、官方 comparator、6 项专项测试与 `audit:tcm-formula-catalog`；11,395 项检查 0 fail。
+- 修复括号出处格式漏掉九味羌活汤、黄连解毒汤、九仙散、紫雪的问题；182 个教材正方逐分册计数匹配，4 个经典锚点另计。同名异方、青木香、重金属、急症替代、催吐、妊娠和现代适应证均保持 blocked。
+
 ## 2026-07-10 - TCM herb catalog inventory and safety boundaries
 
 - 完成 `references/15-23` 的 1,331 条非空行、45 表/279 表格行、122 标题和 100 条实际病证反查完整 blocked inventory。

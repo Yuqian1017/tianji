@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "status": "official_formula_safety_regulatory_and_evidence_boundary_comparators",
+  "generatedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "FORMULA-SOURCE-DIRECT-INVENTORY",
+      "type": "local_source_direct_count",
+      "title": "Direct parse of references 24-30",
+      "path": "database/tcm/skill-v3/references",
+      "facts": [
+        "The six monograph files claim 182 textbook primary formulas and contain all 182 after recognizing both guillemets and parenthetical source-attribution formats.",
+        "Four primary formulas use parenthetical source attribution: Jiuwei Qianghuo Tang, Huanglian Jiedu Tang, Jiuxian San and Zixue. Four additional lines are explicitly marked classic anchors and remain separate, producing 186 total definitions."
+      ]
+    },
+    {
+      "id": "FDA-DIETARY-SUPPLEMENTS-101",
+      "type": "official_regulator",
+      "title": "FDA 101: Dietary Supplements",
+      "url": "https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements",
+      "facts": [
+        "Herbal products can have strong effects, interactions and adverse events, and are not approved for safety and effectiveness before sale as dietary supplements.",
+        "Disease diagnosis, treatment, cure or prevention claims require the applicable drug evidence and regulation."
+      ]
+    },
+    {
+      "id": "NCCIH-TCM-OVERVIEW",
+      "type": "official_health_agency",
+      "title": "Traditional Chinese Medicine: What You Need To Know",
+      "url": "https://www.nccih.nih.gov/health/traditional-chinese-medicine-what-you-need-to-know",
+      "facts": [
+        "Evidence for Chinese herbal products varies by intervention and condition and is often mixed or poor quality.",
+        "Traditional formula attribution does not validate a modern hypertension, cancer, stroke or emergency-treatment claim."
+      ]
+    },
+    {
+      "id": "NMPA-PHARMACOPOEIA-2025",
+      "type": "official_standard",
+      "title": "Pharmacopoeia of the People's Republic of China, 2025 edition",
+      "url": "https://english.nmpa.gov.cn/2025-06/11/c_1102172.htm",
+      "facts": [
+        "Current medicine identity, processing, dose and precautions require medicine-level authoritative comparison.",
+        "A blanket conversion from historical formula quantities to modern grams is not a validated dose contract."
+      ]
+    },
+    {
+      "id": "CN-NMPA-ARISTOLOCHIC-2003-2004",
+      "type": "official_regulatory_notices",
+      "title": "NMPA notices on Guanmutong and six aristolochic-acid medicines",
+      "url": "https://amr.hainan.gov.cn/himpa/adr/tzgg/ypblfyxxtb/201708/t20170802_460140.html",
+      "facts": [
+        "The medicinal standard for Qingmuxiang was cancelled in 2004 and replacement with Tumuxiang was specified.",
+        "Historical formula text that still names Qingmuxiang requires explicit identity and regulatory adjudication and remains blocked."
+      ]
+    },
+    {
+      "id": "FDA-ARISTOLOCHIC-IMPORT-54-10",
+      "type": "official_regulator",
+      "title": "Import Alert 54-10: Products Containing Aristolochic Acid",
+      "url": "https://www.accessdata.fda.gov/cms_ia/importalert_141.html",
+      "facts": [
+        "Aristolochic acid is a potent carcinogen and nephrotoxin associated with irreversible renal damage and renal failure.",
+        "Name confusion and substitution are recognized routes of exposure."
+      ]
+    },
+    {
+      "id": "CN-LEGAL-TOXIC-MEDICINES",
+      "type": "official_regulation",
+      "title": "Regulation on Medical Toxic Drugs and current official reproductions",
+      "url": "https://mpa.jl.gov.cn/xxgk_84894/zcfg/xzfg/202303/t20230301_8673915.html",
+      "facts": [
+        "The legal toxic-medicine control list includes high-risk arsenic, mercury, aconite and other Chinese medicines.",
+        "A formula composition or dose containing a controlled toxic medicine is not consumer self-treatment authority."
+      ]
+    },
+    {
+      "id": "FDA-HEAVY-METAL-HERBAL-2025",
+      "type": "official_regulator",
+      "title": "FDA warning on heavy metal poisoning associated with traditional drug products",
+      "url": "https://www.fda.gov/drugs/fraudulent-products/fda-warns-about-heavy-metal-poisoning-associated-certain-unapproved-ayurvedic-drug-products",
+      "facts": [
+        "Lead, mercury and arsenic exposure can cause serious kidney, neurologic, gastrointestinal and other injury.",
+        "Possible exposure or symptoms require professional or poison-center consultation."
+      ]
+    },
+    {
+      "id": "NLM-POISON-FIRST-AID",
+      "type": "official_health_agency",
+      "title": "Poisoning first aid",
+      "url": "https://medlineplus.gov/ency/article/007579.htm",
+      "facts": [
+        "Do not induce vomiting unless directed by poison control or a health professional.",
+        "Do not use a cure-all antidote or attempt neutralization without professional direction."
+      ]
+    },
+    {
+      "id": "CDC-STROKE-SIGNS",
+      "type": "official_health_agency",
+      "title": "Signs and Symptoms of Stroke",
+      "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+      "facts": [
+        "Sudden neurologic deficits require emergency response and immediate medical care.",
+        "A traditional closed-syndrome or formula lookup must not delay stroke evaluation."
+      ]
+    },
+    {
+      "id": "MEDLINEPLUS-GI-BLEEDING",
+      "type": "official_health_agency",
+      "title": "Gastrointestinal bleeding",
+      "url": "https://medlineplus.gov/ency/article/003133.htm",
+      "facts": [
+        "Vomiting blood, black stool and major gastrointestinal bleeding require urgent medical assessment.",
+        "A formula labeled for emergency hemostasis is not a first-aid or self-treatment protocol."
+      ]
+    }
+  ],
+  "boundaries": [
+    "These comparators establish source-integrity, dose, regulatory, poisoning, emergency and efficacy boundaries; they do not validate every formula composition or indication.",
+    "Complete source preservation and 186 formatted definition lines do not validate formula composition, dose, indication or all 182 claimed attached formulas as independent entities.",
+    "No formula, dose, route, scenario lookup, poisoning action, pregnancy use, emergency use or modern efficacy claim becomes runtime eligible in this layer."
+  ]
+}

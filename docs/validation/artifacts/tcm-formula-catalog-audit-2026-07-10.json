@@ -1,0 +1,493 @@
+{
+  "audit": "tcm-formula-catalog-evidence-boundaries",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 11395,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "references": 7,
+    "sourceNonEmptyLines": 820,
+    "sourceMarkdownTables": 8,
+    "sourceMarkdownTableRows": 171,
+    "sections": 81,
+    "formulaDefinitions": 186,
+    "textbookPrimaryFormulaDefinitions": 182,
+    "classicAnchorAdditions": 4,
+    "claimedTextbookPrimaryFormulas": 182,
+    "claimedAttachedFormulas": 182,
+    "priorityLineCandidates": 522,
+    "findings": 20
+  },
+  "categories": {
+    "contract": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "source_inventory": {
+      "checks": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    "line_preservation": {
+      "checks": 2460,
+      "passed": 2460,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 3108,
+      "passed": 3108,
+      "failed": 0
+    },
+    "section_preservation": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "formula_integrity": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "priority_preservation": {
+      "checks": 5742,
+      "passed": 5742,
+      "failed": 0
+    },
+    "finding_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "finding_integrity": {
+      "checks": 40,
+      "passed": 40,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "priorityCategoryCounts": {
+    "dose": 193,
+    "toxicity": 73,
+    "administration": 8,
+    "emergency": 43,
+    "modernUse": 10,
+    "vulnerablePopulation": 62,
+    "contraindication": 158,
+    "poisoningAction": 4,
+    "formulaDefinition": 186,
+    "decisionLookup": 151
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "id": "TCM-FC-001",
+      "kind": "source_format",
+      "status": "four_primary_formulas_use_parenthetical_source_format",
+      "sourceId": "ref25",
+      "sourceLine": 23,
+      "sourceText": "**★九味羌活汤**(张元素,录自《此事难知》) 羌活9 防风9 苍术9 细辛3 川芎6 白芷6 生地6 黄芩6 甘草6",
+      "comparatorSourceIds": [
+        "FORMULA-SOURCE-DIRECT-INVENTORY"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-002",
+      "kind": "source_identity",
+      "status": "classic_anchor_additions_separate_from_claimed_textbook_primary_count",
+      "sourceId": "ref26",
+      "sourceLine": 75,
+      "sourceText": "**※清中汤**《医学心悟》(经典锚点方;组成据原文:姜汁炒黄连一钱 黑山栀 金铃子 延胡索各八分 香附 陈皮各一钱五分 炙甘草五分——古制文献值,现代用量须医师定)清胃泻热、理气止痛——热厥心痛/胃脘灼痛:痛或作或止、舌燥唇焦、溺赤便闭、喜冷畏热、脉洪大有力。**注意:与 [[33-内科-脾胃系病证]] 胃痛湿热中阻所引清中汤(含半夏茯苓草豆蔻,另出他书,未收)同名异方**。九种心痛框架与条文见 [[46-医家-医学心悟要义]] 第七节。",
+      "comparatorSourceIds": [
+        "FORMULA-SOURCE-DIRECT-INVENTORY"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-003",
+      "kind": "dose_conversion",
+      "status": "unsupported_blanket_original_to_modern_gram_conversion",
+      "sourceId": "ref25",
+      "sourceLine": 3,
+      "sourceText": "> 提炼自《方剂学》七版第一~三章。正方 33 首+附方 45 首。剂量为原方折现代用量(g);涉毒方(十枣汤、大陷胸汤等)必查 [[安全-配伍妊娠禁忌与毒性药]]。",
+      "comparatorSourceIds": [
+        "NMPA-PHARMACOPOEIA-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-004",
+      "kind": "dose_conversion",
+      "status": "historical_unit_conversion_not_modern_dose_authority",
+      "sourceId": "ref24",
+      "sourceLine": 97,
+      "sourceText": "- 汉晋衡量远小于今:**汉一两≈0.4455~0.5165 市两≈14~16g;汉一升≈0.20~0.34 市升**(故仲景方数字大)。李时珍\"古之一两,今用一钱\"为临床折算惯例(≈3g)。",
+      "comparatorSourceIds": [
+        "NMPA-PHARMACOPOEIA-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-005",
+      "kind": "toxicity_rule",
+      "status": "unsupported_same_nature_toxicity_resonance_rule",
+      "sourceId": "ref24",
+      "sourceLine": 66,
+      "sourceText": "5. **控制毒副作用**:①相杀相畏(生姜杀半夏毒,砂仁减熟地滋腻);②**功用相近多药同用分担剂量**(\"同性毒力共振、异性毒力相制\"——十枣汤甘遂芫花大戟等分为末,三味合量≈单味常用量)。另有用量控制、炮制、道地、煎服法、剂型等途径。",
+      "comparatorSourceIds": [
+        "CN-LEGAL-TOXIC-MEDICINES",
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-006",
+      "kind": "administration",
+      "status": "generic_route_and_schedule_instructions_not_product_eligible",
+      "sourceId": "ref24",
+      "sourceLine": 92,
+      "sourceText": "- **服药方法**:汤剂日 1 剂,头煎二煎兑合分 2~3 次温服,急重可日 2 剂。发汗解表药**趁热服、温覆避风、遍身漐漐微似有汗**。热证寒药冷服、寒证热药热服;**格拒时反佐服法**:真寒假热→热药冷服,真热假寒→寒药热服(\"治热以寒,温而行之\")。服药呕吐者:先服姜汁/姜擦舌/嚼陈皮,或冷服少量频饮。昏迷吞咽困难鼻饲。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "NMPA-PHARMACOPOEIA-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-007",
+      "kind": "decision_lookup",
+      "status": "scenario_first_choice_tables_not_prescribing_authority",
+      "sourceId": "ref25",
+      "sourceLine": 157,
+      "sourceText": "| 场景 | 首选 | 眼目 |",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-008",
+      "kind": "formula_identity",
+      "status": "same_name_qingzhong_formula_identity_conflict",
+      "sourceId": "ref26",
+      "sourceLine": 75,
+      "sourceText": "**※清中汤**《医学心悟》(经典锚点方;组成据原文:姜汁炒黄连一钱 黑山栀 金铃子 延胡索各八分 香附 陈皮各一钱五分 炙甘草五分——古制文献值,现代用量须医师定)清胃泻热、理气止痛——热厥心痛/胃脘灼痛:痛或作或止、舌燥唇焦、溺赤便闭、喜冷畏热、脉洪大有力。**注意:与 [[33-内科-脾胃系病证]] 胃痛湿热中阻所引清中汤(含半夏茯苓草豆蔻,另出他书,未收)同名异方**。九种心痛框架与条文见 [[46-医家-医学心悟要义]] 第七节。",
+      "comparatorSourceIds": [
+        "FORMULA-SOURCE-DIRECT-INVENTORY"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-009",
+      "kind": "formula_identity",
+      "status": "same_name_huiyangjiuji_formula_version_conflict",
+      "sourceId": "ref26",
+      "sourceLine": 129,
+      "sourceText": "- 附:**回阳救急汤**《重订通俗伤寒论》(附块 紫瑶桂 别直参 辰砂染麦冬 川姜 姜半夏 湖广术 北五味 广皮 炙草 麝香冲——**少阴病阳衰阴竭**:下利脉微、肢厥无脉、干呕心烦;较陶氏方去茯苓加麦冬,兼顾阴液)。",
+      "comparatorSourceIds": [
+        "FORMULA-SOURCE-DIRECT-INVENTORY"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-010",
+      "kind": "regulatory_identity",
+      "status": "cancelled_qingmuxiang_present_in_zixue_formula",
+      "sourceId": "ref28",
+      "sourceLine": 33,
+      "sourceText": "**★紫雪**(苏恭方,录自《外台》) 石膏 寒水石 磁石 滑石(先煮) 玄参 升麻 甘草 羚羊角 水牛角 沉香 丁香 青木香+朴硝 硝石 朱砂 麝香(原方有黄金)",
+      "comparatorSourceIds": [
+        "CN-NMPA-ARISTOLOCHIC-2003-2004",
+        "FDA-ARISTOLOCHIC-IMPORT-54-10"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-011",
+      "kind": "regulatory_identity",
+      "status": "cancelled_qingmuxiang_present_in_suhexiang_formula",
+      "sourceId": "ref28",
+      "sourceLine": 41,
+      "sourceText": "**★苏合香丸**《广济方》 白术 朱砂 麝香 诃子 香附 沉香 青木香 丁香 安息香 白檀香 荜茇 水牛角各30 乳香 苏合香 冰片各15(蜜丸3g,温水下,昏迷鼻饲)",
+      "comparatorSourceIds": [
+        "CN-NMPA-ARISTOLOCHIC-2003-2004",
+        "FDA-ARISTOLOCHIC-IMPORT-54-10"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-012",
+      "kind": "heavy_metal_safety",
+      "status": "heavy_metal_formula_doses_not_consumer_eligible",
+      "sourceId": "ref28",
+      "sourceLine": 12,
+      "sourceText": "镇心安神清热养血——**心火亢盛阴血不足**:失眠多梦、惊悸怔忡、心烦、舌尖红脉细数。**朱砂含硫化汞,不宜多服久服**→安全表。附:**磁朱丸**(磁石朱砂神曲——**心肾不交**之失眠耳鸣耳聋、视物昏花,益阴潜阳明目)。",
+      "comparatorSourceIds": [
+        "CN-LEGAL-TOXIC-MEDICINES",
+        "FDA-HEAVY-METAL-HERBAL-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-013",
+      "kind": "administration_safety",
+      "status": "coma_nasogastric_instruction_not_consumer_eligible",
+      "sourceId": "ref24",
+      "sourceLine": 92,
+      "sourceText": "- **服药方法**:汤剂日 1 剂,头煎二煎兑合分 2~3 次温服,急重可日 2 剂。发汗解表药**趁热服、温覆避风、遍身漐漐微似有汗**。热证寒药冷服、寒证热药热服;**格拒时反佐服法**:真寒假热→热药冷服,真热假寒→寒药热服(\"治热以寒,温而行之\")。服药呕吐者:先服姜汁/姜擦舌/嚼陈皮,或冷服少量频饮。昏迷吞咽困难鼻饲。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-014",
+      "kind": "emergency_care",
+      "status": "stroke_and_closed_syndrome_formulas_must_not_delay_emergency_care",
+      "sourceId": "ref29",
+      "sourceLine": 33,
+      "sourceText": "镇肝熄风滋阴潜阳——**类中风**(肝肾阴虚、肝阳化风、气血逆乱):头目眩晕、**脑部热痛、面色如醉**、心中烦热、肢体渐觉不利、甚或眩晕颠仆昏不知人、**脉弦长有力**。茵陈麦芽川楝子清泄疏肝以遂肝性(防重镇激发反动)。中风前中后皆可用;气虚血瘀之中风不宜。附:**建瓴汤**(+山药生地柏子仁铁锈水——肝阳上亢兼**失眠多梦**者,宁神力优)。",
+      "comparatorSourceIds": [
+        "CDC-STROKE-SIGNS"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-015",
+      "kind": "poisoning_first_aid",
+      "status": "unsafe_home_emesis_and_overdose_rescue_instructions",
+      "sourceId": "ref30",
+      "sourceLine": 81,
+      "sourceText": "**总纲**:治痰涎宿食毒物停蓄咽喉胸膈胃脘、病情急迫者(\"其高者,因而越之\")。**作用迅猛易伤胃气:中病即止;年老体弱孕妇产后慎用**。吐不止解救:瓜蒂散过剂服麝香0.03~0.06g或丁香末;三圣散过剂葱白汤解。不吐者翎毛探喉助吐。吐后避风、糜粥自养。",
+      "comparatorSourceIds": [
+        "NLM-POISON-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-016",
+      "kind": "toxic_formula",
+      "status": "high_toxicity_purgative_formula_not_self_treatment",
+      "sourceId": "ref25",
+      "sourceLine": 107,
+      "sourceText": "**⚠十枣汤**《伤寒论》 芫花 甘遂 大戟各等分为末,**大枣10枚煎汤送服0.5~1g,平旦(清晨)空腹,得快下利后糜粥自养**",
+      "comparatorSourceIds": [
+        "CN-LEGAL-TOXIC-MEDICINES",
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-017",
+      "kind": "pregnancy_safety",
+      "status": "pregnancy_formula_use_requires_formula_specific_clinical_authority",
+      "sourceId": "ref28",
+      "sourceLine": 114,
+      "sourceText": "活血化瘀**缓消癥块**——**瘀阻胞宫**:妇人素有癥块、妊娠漏下不止或胎动不安、血色紫黑、腹痛拒按。**有故无殒:妊娠有癥只可渐消缓散,用量甚小而频**。现用于子宫肌瘤、内异症。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "NMPA-PHARMACOPOEIA-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-018",
+      "kind": "modern_efficacy",
+      "status": "modern_hypertension_formula_claim_unvalidated",
+      "sourceId": "ref29",
+      "sourceLine": 35,
+      "sourceText": "平肝熄风清热活血补益肝肾——**肝阳偏亢肝风上扰**:头痛眩晕、**失眠多梦**、口苦面红、脉弦。现代高血压常用方。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-019",
+      "kind": "modern_efficacy",
+      "status": "modern_cancer_and_tumor_formula_claim_unvalidated",
+      "sourceId": "ref28",
+      "sourceLine": 116,
+      "sourceText": "行气活血祛湿化痰软坚消癥——**疟母、癥瘕**:胁下痞硬成块、推之不移、肌肉消瘦、时有寒热、经闭。寒热并用攻补兼施、气血津液同治。现用于肝硬化、肝脾肿大、肿瘤。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-020",
+      "kind": "emergency_care",
+      "status": "emergency_bleeding_formula_not_first_aid_authority",
+      "sourceId": "ref28",
+      "sourceLine": 121,
+      "sourceText": "凉血止血——**血热妄行上部出血**:呕血吐血咯血衄血、**血色鲜红来势急暴**。凉血+清降(栀子大黄)+祛瘀(丹皮大黄)+收涩;急救止血剂,血止审因图本。**虚寒出血禁**。附:**四生丸**(生荷叶生艾叶生柏叶生地——血热吐衄,四药**生用**标本兼顾)。",
+      "comparatorSourceIds": [
+        "MEDLINEPLUS-GI-BLEEDING"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "All 820 non-empty lines and 171 Markdown table rows are preserved as blocked candidates; preservation is not formula validation.",
+    "All 182 claimed textbook-primary formulas are present after recognizing four parenthetical source-attribution variants; four explicitly added classic anchors remain separate, for 186 total definitions.",
+    "The 522 priority lines and 151 scenario lookup rows are overlapping narrow review views, not complete clinical semantics, prescriptions or attached-formula entities.",
+    "Historical quantities, blanket gram conversions, formula compositions, routes, pregnancy use and modern indications are not current dose or clinical authority.",
+    "No toxic, heavy-metal, aristolochic-acid, coma, stroke, bleeding, poisoning or emesis formula content is runtime eligible.",
+    "Runtime scanning only proves this blocked core and finding IDs are not imported; it does not clear legacy TCM semantics elsewhere."
+  ],
+  "sourceRefs": {
+    "ref24": {
+      "path": "database/tcm/skill-v3/references/24-方剂总论.md",
+      "sha256": "dff5b11148413ccdade9493d7d3793c03586eeb0e4d260d53bfb38feeea263fa"
+    },
+    "ref25": {
+      "path": "database/tcm/skill-v3/references/25-解表泻下和解剂.md",
+      "sha256": "b5aa05ce681df6f46144ad73244c6b64de7885d6b68e5167b252778b13ad5dfe"
+    },
+    "ref26": {
+      "path": "database/tcm/skill-v3/references/26-清热祛暑温里剂.md",
+      "sha256": "5b782983b27d0206ffaa7d8fabca92ffb8af48886ee3e6ac815e555f714fc8e8"
+    },
+    "ref27": {
+      "path": "database/tcm/skill-v3/references/27-补益固涩剂.md",
+      "sha256": "2568ec1ba1a6818f8bca39798b9c7b97c527983b312c00871610c8aaed2ac262"
+    },
+    "ref28": {
+      "path": "database/tcm/skill-v3/references/28-安神开窍理气理血剂.md",
+      "sha256": "f3039c4dad4690e4daf53d618f191194cc73e8a68f2235bd6b0afb613bcde109"
+    },
+    "ref29": {
+      "path": "database/tcm/skill-v3/references/29-治风治燥祛湿剂.md",
+      "sha256": "d66e4076323e6bba0915e5bddbefd8644a348935b5facb78216e8ced36412132"
+    },
+    "ref30": {
+      "path": "database/tcm/skill-v3/references/30-祛痰消食驱虫涌吐剂.md",
+      "sha256": "6c1d74feca825d4693ade14764de9bc5c5949567de4f105a5b9b653161dee7b2"
+    },
+    "evidence": {
+      "path": "database/tcm/sources/formula-catalog-evidence.json",
+      "sha256": "f47e3ab36c1db2addb801231bdd12768b7fed000b022e8b0e986a72989d12097"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "d2314d0f575286c2d046a97822e0102983bf5be1d6e32ad799e905204ffcee2f"
+  },
+  "failures": []
+}

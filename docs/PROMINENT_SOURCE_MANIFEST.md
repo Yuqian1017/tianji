@@ -395,6 +395,17 @@
 | 本轮结果 | `15-23` 的 1,331 条非空行、45 表/279 表格行、122 标题、663 条重叠风险候选和 20 finding；反查表实有 100 条、缺 52-54，并有两处原始逆序 |
 | 边界 | 完整 inventory 与重点风险裁决不等于 470 余味逐味现行药典校准；所有剂量、用法、病证映射和疗效继续 blocked |
 
+### SRC-VAL-TCM-FORMULA-CATALOG
+
+| 字段 | 值 |
+|---|---|
+| 名称 | NMPA/FDA/NCCIH/NLM/CDC 与中国药监方剂资料安全 comparator |
+| 状态 | `validation_anchor`，方剂计数、剂量、毒性、监管、急症和现代疗效边界 |
+| 官方来源 | NMPA 2025 药典公告与马兜铃酸历史通知；FDA 补充剂/马兜铃酸/重金属；NCCIH 中医概览；NLM 中毒急救；CDC 卒中；MedlinePlus 消化道出血 |
+| 项目快照 | `database/tcm/sources/formula-catalog-evidence.json`，SHA256 `f47e3ab36c1db2addb801231bdd12768b7fed000b022e8b0e986a72989d12097` |
+| 本轮结果 | `24-30` 的 820 条非空行、8 表/171 表格行、81 标题、186 个格式化定义、522 条重叠窄风险视图和 20 finding；182 个教材正方逐分册计数匹配，另有 4 个经典锚点 |
+| 边界 | 只授证完整 inventory、计数差异、重点风险与阻断；不授证逐方组成版本、现代剂量、处方权或临床疗效 |
+
 ### SRC-VAL-DAYUN-CLASSICS
 
 | 字段 | 值 |
@@ -565,7 +576,7 @@
 | TCM-THEORY | `references/01-08*` | 基础理论、脏象、气血津液、病因病机、治则、经络体质 | 完整 blocked inventory、理论实体、课程候选 | 传统构造不得外推为现代解剖、生理、病因、预防或剂量事实 |
 | TCM-DIAGNOSIS | `references/09-14*` | 四诊、舌脉、八纲、脏腑、六经等辨证 | 完整 blocked inventory、observation/pattern 候选 | 诊断一致性有限；文字/图像、舌脉和证候表不能作为临床答案键 |
 | TCM-HERBS | `references/15-23*` | 1,331 条非空行、45 表/279 表格行；中药分类、病证反查、剂量与注意 | 完整 blocked inventory、当前茶饮与药味审计 | 663 条风险视图和 20 finding 已裁决；反查实有 100 条而非 103，且有两处逆序；逐味现行药典仍未完成 |
-| TCM-FORMULAS | `references/24-30*` | 约 180 正方、160 余附方、方义、类方、使用注意 | 方剂实体、教学、方名审计 | 学习参考，不直接荐方 |
+| TCM-FORMULAS | `references/24-30*` | 820 条非空行、8 表/171 表格行、186 个格式化定义、方义、类方、使用注意 | 完整 blocked inventory、方剂定义/计数与重点风险审计 | 182 个教材正方加 4 个经典锚点；附方未全部实体化；不直接荐方 |
 | TCM-DISEASES | `references/31-37*` | 52 个主病种、689 条非空行、22 表/133 表格行 | 病种、证型、鉴别、红线、调护候选 | 红线已做首轮现代 comparator；全部治疗字段 blocked，不替代现代医学诊断 |
 | TCM-ACUPOINTS | `references/38-41*` | 763 条非空行、27 表/471 表格行；361 经穴、40 奇穴、定位、27 病证配穴、外治分级 | 全原文 inventory、穴位/外治候选和来源差异审计 | 官方仅授证现行 362/51 范围；逐名为二级转录，定位、疗效及家庭操作全部 blocked |
 | TCM-CLASSICS | `references/42-45*` | 素问、灵枢、难经、伤寒、金匮要义与条文 | 经典出处、课程与解释 | 古方剂量不进入现代用药依据 |
@@ -578,7 +589,8 @@
 | TCM-DISEASE-RED-FLAG-CANDIDATES | `database/tcm/normalized/tcm-disease-red-flag-candidates.json` | `31-37` 的 52 病种、完整原文 inventory、83 条关键词风险、308 条广义处置候选和 20 个重点裁决 | 红线/家庭动作可审计候选层 | 两个筛选视图不代表完整临床语义；9 条支持红线不授证相邻治疗；所有记录 blocked |
 | TCM-THEORY-DIAGNOSIS-CANDIDATES | `database/tcm/normalized/tcm-theory-diagnosis-candidates.json` | `01-14` 的完整原文 inventory、124 标题、127 条优先视图和 14 个重点裁决 | 传统框架/现代外推可审计候选层 | 原文无页码级教材引证；所有记录 blocked，不能作为临床答案键 |
 | TCM-HERB-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-herb-catalog-candidates.json` | `15-23` 完整原文 inventory、663 条风险视图、100 条病证反查和 20 个重点裁决 | 中药剂量/毒性/现代疗效与反查风险可审计候选层 | 风险视图类别重叠且不是完整实体授证；所有记录 blocked |
-| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药资料 comparator 各 1 份，共 11 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
+| TCM-FORMULA-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-formula-catalog-candidates.json` | `24-30` 完整原文 inventory、186 个格式化定义、522 条重叠窄风险视图和 20 个重点裁决 | 方剂身份/计数、剂量、禁忌、毒性、急症与现代疗效风险可审计候选层 | 182 个教材正方加 4 个经典锚点；附方未完整实体化；所有记录 blocked |
+| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药资料、方剂资料 comparator 各 1 份，共 12 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
@@ -659,7 +671,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 六个候选层已完成当前公开证据范围的归一化并全部 blocked；`15-23` 中药资料已完成完整 inventory 与重点风险裁决，继续取得适用现行药典/逐穴定位正文、裁决剩余监管状态，并转入 `24-30` 方剂核验。
+2. TCM 七个候选层已完成当前公开证据范围的归一化并全部 blocked；`15-23` 中药与 `24-30` 方剂资料已完成完整 inventory 与重点风险裁决，继续取得适用现行药典/逐药逐方/逐穴定位正文、裁决剩余监管状态，并转入食疗、药食两用和养生核验。
 3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

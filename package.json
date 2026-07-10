@@ -53,6 +53,8 @@
     "audit:tcm-theory-diagnosis": "npm run build:tcm-theory-diagnosis && node scripts/validation/audit-tcm-theory-diagnosis.mjs",
     "build:tcm-herb-catalog": "node scripts/validation/build-tcm-herb-catalog-core.mjs",
     "audit:tcm-herb-catalog": "npm run build:tcm-herb-catalog && node scripts/validation/audit-tcm-herb-catalog.mjs",
+    "build:tcm-formula-catalog": "node scripts/validation/build-tcm-formula-catalog-core.mjs",
+    "audit:tcm-formula-catalog": "npm run build:tcm-formula-catalog && node scripts/validation/audit-tcm-formula-catalog.mjs",
     "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",
     "audit:ziwu": "node scripts/validation/audit-ziwu.mjs",
     "audit:shared-time": "node scripts/validation/audit-shared-time-cities.mjs",
