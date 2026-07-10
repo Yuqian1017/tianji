@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-10",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 50,
-  "currentFocus": "五运六气确定性结构与时间边界验证；中医医学解释继续 blocked。",
-  "nextDecision": "先全量核验干支化运、太过不及、司天在泉、主客运气和交接边界，再继续药典、方剂与穴位外治安全层。",
+  "overallPercent": 52,
+  "currentFocus": "子午流注传统对应表与来源边界验证；临床解释继续 blocked。",
+  "nextDecision": "全量核验十二时辰、十二经脉、次序和历史来源，再继续共享时间/城市与药典外治安全层。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 94,
+      "progress": 95,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -38,6 +38,7 @@
         "中医 Skill 98 个 manifest 条目、50 reference、42 原文 txt 完整性与上游副本一致；213 项安全审计 0 fail",
         "体质、子午、五运、望诊桌面/390x844 回归通过；旧医疗动作词为 0，无水平溢出，console 0 error/warning",
         "旧 34 题、22 计量项、30 穴位已归档并隔离；法定毒性 28 项规范化，100 行/101 药名剂量表待 2025 药典校准",
+        "五运六气基础年结构 60 年、3,325 项 0 fail；主运太少和交司日标签已修复，复杂派生与现实解释 blocked",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
@@ -129,6 +130,14 @@
       "status": "in_progress",
       "phase": "V0",
       "doneWhen": "每个 runtime engine/data/prompt 和 raw source 都有验证单元、风险、方法与状态。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-016",
+      "name": "五运六气基础年结构验证",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "十干中运与主客运太少、十二支司天在泉、主客六气和产品时间标签有来源固定的全域审计；未实现层显式隔离。",
       "owner": "Codex"
     },
     {
@@ -293,7 +302,7 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "tcm_authoritative_review_in_progress", "rule": "确定性术数核心已划定复用边界；中医当前消费点已隔离，继续现行药典和外治安全审计。" },
+    { "name": "排盘与数据库正确性", "state": "ziwu_source_review_in_progress", "rule": "五运基础年结构已通过；当前核验子午流注传统对应，临床解释继续 blocked。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
@@ -347,6 +356,7 @@
     "风水项目内 216 张盘、6,469 项检查 0 fail；独立实现 6,048 盘面字段 0 mismatch",
     "tyme4ts 对 2020-2026 共 10,228 时刻的太阳年、流年和流月中宫 30,684 字段 0 mismatch",
     "database/fengshui/fengshui-core.json 已生成；替卦、形煞、星性、化解和现实预测 blocked",
-    "TJI-VAL-015 首批安全门槛：213 项审计与四个产品入口回归通过，医学层继续 blocked"
+    "TJI-VAL-015 首批安全门槛：213 项审计与四个产品入口回归通过，医学层继续 blocked",
+    "TJI-VAL-016 完成：五运六气基础年结构 3,325 项 0 fail，桌面/390x844 通过"
   ]
 }

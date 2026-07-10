@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "domain": "five_movements_six_qi_basic_annual_structure",
+  "status": "source_pinned_full_finite_domain",
+  "scope": {
+    "included": [
+      "annual ganzhi label",
+      "central movement and tai-shao",
+      "five main movements and tai-shao",
+      "five guest movements and tai-shao",
+      "sitian and zaiquan",
+      "six main qi",
+      "six guest qi",
+      "traditional day-level movement and solar-term qi boundary labels"
+    ],
+    "excluded": [
+      "date-to-yunqi-year resolution around Great Cold",
+      "ancient water-clock handover times",
+      "pingqi, zhenghua, duihua, tianfu, suihui, and related derived layers",
+      "shengfu, buqianzheng, and butuiwei",
+      "real-world climate prediction",
+      "disease, organ, constitution, diagnosis, or treatment inference"
+    ],
+    "yearSemantics": "A selected Gregorian year labels the annual ganzhi structure whose traditional cycle starts at Great Cold; this core does not resolve an arbitrary instant to a yunqi year.",
+    "timePrecision": "source-pinned traditional day/solar-term labels only"
+  },
+  "sources": [
+    {
+      "id": "WUYUN-SUWEN",
+      "type": "primary_classical_text",
+      "localPath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sections": [
+        "天元纪大论篇第六十六",
+        "五运行大论篇第六十七",
+        "六微旨大论篇第六十八"
+      ],
+      "supports": [
+        "five stem-pair movements",
+        "six branch-pair governing qi",
+        "three-yin three-yang order",
+        "main qi positions"
+      ]
+    },
+    {
+      "id": "WUYUN-YIZONGJINJIAN",
+      "type": "primary_classical_commentary",
+      "localPath": "database/tcm/skill-v3/sources/医宗金鉴.txt",
+      "section": "运气要诀",
+      "webWitness": "https://zh.wikisource.org/zh-hans/医宗金鉴/卷四",
+      "supports": [
+        "central, main, and guest movement rules",
+        "sitian, zaiquan, and guest qi sequence",
+        "five-movement and six-qi boundary labels",
+        "main-movement tai-shao examples"
+      ]
+    },
+    {
+      "id": "WUYUN-TCM-THEORY-TEXTBOOK",
+      "type": "imported_modern_textbook_copy",
+      "localPath": "database/tcm/skill-v3/sources/《中医基础理论》.txt",
+      "supports": [
+        "explicit ten-stem movement derivation",
+        "main and guest movement tai-shao derivation",
+        "six-step main and guest qi derivation",
+        "day-level movement boundary wording"
+      ],
+      "rights": "Imported research source; product reuse rights require separate review."
+    },
+    {
+      "id": "WUYUN-BEIJING-EDU",
+      "type": "government_educational_secondary",
+      "url": "https://zyj.beijing.gov.cn/dwjlxxw/whcb/202312/t20231220_3505521.html",
+      "supports": [
+        "modern explanatory cross-check of central movement, guest movement, and main/guest qi layering"
+      ]
+    }
+  ],
+  "annualPillar": {
+    "anchorYear": 1984,
+    "anchorGanzhi": "甲子",
+    "cycleLength": 60
+  },
+  "centralMovements": {
+    "甲": { "element": "土", "tone": "宫", "taiShao": "太" },
+    "乙": { "element": "金", "tone": "商", "taiShao": "少" },
+    "丙": { "element": "水", "tone": "羽", "taiShao": "太" },
+    "丁": { "element": "木", "tone": "角", "taiShao": "少" },
+    "戊": { "element": "火", "tone": "徵", "taiShao": "太" },
+    "己": { "element": "土", "tone": "宫", "taiShao": "少" },
+    "庚": { "element": "金", "tone": "商", "taiShao": "太" },
+    "辛": { "element": "水", "tone": "羽", "taiShao": "少" },
+    "壬": { "element": "木", "tone": "角", "taiShao": "太" },
+    "癸": { "element": "火", "tone": "徵", "taiShao": "少" }
+  },
+  "mainMovements": {
+    "elements": ["木", "火", "土", "金", "水"],
+    "tones": ["角", "徵", "宫", "商", "羽"],
+    "stages": ["初运", "二运", "三运", "四运", "终运"],
+    "dateLabels": [
+      "大寒日→春分后第12日",
+      "春分后第13日→芒种后第9日",
+      "芒种后第10日→处暑后第6日",
+      "处暑后第7日→立冬后第3日",
+      "立冬后第4日→小寒末"
+    ],
+    "taiShaoByStem": {
+      "甲": "太少太少太",
+      "乙": "太少太少太",
+      "丙": "太少太少太",
+      "丁": "少太少太少",
+      "戊": "少太少太少",
+      "己": "少太少太少",
+      "庚": "少太少太少",
+      "辛": "少太少太少",
+      "壬": "太少太少太",
+      "癸": "太少太少太"
+    }
+  },
+  "guestMovements": {
+    "rule": "The central movement is the first guest movement; continue in generating order with alternating tai and shao.",
+    "generatingOrder": ["木", "火", "土", "金", "水"]
+  },
+  "annualQi": {
+    "子": { "sitian": "少阴君火", "zaiquan": "阳明燥金" },
+    "丑": { "sitian": "太阴湿土", "zaiquan": "太阳寒水" },
+    "寅": { "sitian": "少阳相火", "zaiquan": "厥阴风木" },
+    "卯": { "sitian": "阳明燥金", "zaiquan": "少阴君火" },
+    "辰": { "sitian": "太阳寒水", "zaiquan": "太阴湿土" },
+    "巳": { "sitian": "厥阴风木", "zaiquan": "少阳相火" },
+    "午": { "sitian": "少阴君火", "zaiquan": "阳明燥金" },
+    "未": { "sitian": "太阴湿土", "zaiquan": "太阳寒水" },
+    "申": { "sitian": "少阳相火", "zaiquan": "厥阴风木" },
+    "酉": { "sitian": "阳明燥金", "zaiquan": "少阴君火" },
+    "戌": { "sitian": "太阳寒水", "zaiquan": "太阴湿土" },
+    "亥": { "sitian": "厥阴风木", "zaiquan": "少阳相火" }
+  },
+  "mainQi": {
+    "stages": ["初气", "二气", "三气", "四气", "五气", "终气"],
+    "sequence": ["厥阴风木", "少阴君火", "少阳相火", "太阴湿土", "阳明燥金", "太阳寒水"],
+    "dateLabels": [
+      "大寒→春分",
+      "春分→小满",
+      "小满→大暑",
+      "大暑→秋分",
+      "秋分→小雪",
+      "小雪→大寒"
+    ]
+  },
+  "guestQi": {
+    "order": ["厥阴风木", "少阴君火", "太阴湿土", "少阳相火", "阳明燥金", "太阳寒水"],
+    "rule": "Sitian occupies the third qi and zaiquan the sixth; fill the other positions in three-yin three-yang order."
+  },
+  "productEligibility": {
+    "basicAnnualStructure": "teaching_structure_only",
+    "derivedClassicalLayers": "not_implemented",
+    "climatePrediction": "blocked",
+    "medicalInterpretation": "blocked"
+  }
+}

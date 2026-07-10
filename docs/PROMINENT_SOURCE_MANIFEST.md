@@ -349,6 +349,21 @@
 | 权利边界 | 《周易》受文为公版；维基文库转录与 MediaWiki 标记的复用仍受 Wikimedia/Wikisource 条款约束，页名与 page ID 已保留 |
 | 边界 | 不授证关键词、简释、固定吉凶、预测或现实决策；革卦已/巳/己读法继续显式保留分歧 |
 
+### SRC-VAL-WUYUN-CORE
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 五运六气基础年结构验证组 |
+| 状态 | `source_pinned_full_finite_domain`；仅限当前产品展示的基础年结构 |
+| 原典锚点 | `database/tcm/skill-v3/sources/黄帝内经素问.txt` 的天元纪、五运行、六微旨；`database/tcm/skill-v3/sources/医宗金鉴.txt` 的运气要诀 |
+| 教材交叉 | `database/tcm/skill-v3/sources/《中医基础理论》.txt`；主/客运太少与六步推导 |
+| 外部受文/解释 | `https://zh.wikisource.org/zh-hans/医宗金鉴/卷四`；北京市中医药对外交流信息网 2023-12-20 文章 |
+| 规范化输出 | `database/wuyun/wuyun-basic-annual-core.json` |
+| 规范 SHA256 | `b8263d070a86dacee81ab32b07f35216ca49ce4e9341b4ea3745e969230a2200` |
+| 审计 artifact | `docs/validation/artifacts/wuyun-audit-2026-07-10.json`；3,325 项 0 fail |
+| 修复 | 补主运太少；修正五运交司日标签、非法输入与六气全名显示 |
+| 边界 | 任意时刻的运气年归属、古法交司时刻、平气/天符/岁会/胜复等派生层未实现；气候与医学预测 blocked |
+
 ## 4. 历史产品规格来源
 
 这些文件位于 `SRC-PKG-XUAN-NEW`，是本次主 PRD 重建的主要历史证据。

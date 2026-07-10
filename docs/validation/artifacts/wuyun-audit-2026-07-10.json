@@ -1,0 +1,142 @@
+{
+  "audit": "wuyun-basic-annual-structure",
+  "generatedAt": "2026-07-10",
+  "result": "pass_source_pinned_basic_structure",
+  "scope": {
+    "included": [
+      "annual ganzhi label",
+      "central movement and tai-shao",
+      "five main movements and tai-shao",
+      "five guest movements and tai-shao",
+      "sitian and zaiquan",
+      "six main qi",
+      "six guest qi",
+      "traditional day-level movement and solar-term qi boundary labels"
+    ],
+    "excluded": [
+      "date-to-yunqi-year resolution around Great Cold",
+      "ancient water-clock handover times",
+      "pingqi, zhenghua, duihua, tianfu, suihui, and related derived layers",
+      "shengfu, buqianzheng, and butuiwei",
+      "real-world climate prediction",
+      "disease, organ, constitution, diagnosis, or treatment inference"
+    ],
+    "yearSemantics": "A selected Gregorian year labels the annual ganzhi structure whose traditional cycle starts at Great Cold; this core does not resolve an arbitrary instant to a yunqi year.",
+    "timePrecision": "source-pinned traditional day/solar-term labels only"
+  },
+  "summary": {
+    "checks": 3325,
+    "failures": 0,
+    "stems": 10,
+    "branches": 12,
+    "cycleYears": 60
+  },
+  "categories": {
+    "contract": {
+      "checks": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "source_witness": {
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "central_movement": {
+      "checks": 30,
+      "passed": 30,
+      "failed": 0
+    },
+    "main_movement": {
+      "checks": 150,
+      "passed": 150,
+      "failed": 0
+    },
+    "guest_movement": {
+      "checks": 100,
+      "passed": 100,
+      "failed": 0
+    },
+    "annual_qi": {
+      "checks": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    "guest_qi": {
+      "checks": 72,
+      "passed": 72,
+      "failed": 0
+    },
+    "sixty_year_cycle": {
+      "checks": 2940,
+      "passed": 2940,
+      "failed": 0
+    }
+  },
+  "excludedLayers": [
+    "date-to-yunqi-year resolution around Great Cold",
+    "ancient water-clock handover times",
+    "pingqi, zhenghua, duihua, tianfu, suihui, and related derived layers",
+    "shengfu, buqianzheng, and butuiwei",
+    "real-world climate prediction",
+    "disease, organ, constitution, diagnosis, or treatment inference"
+  ],
+  "sourceRefs": [
+    {
+      "id": "WUYUN-SUWEN",
+      "type": "primary_classical_text",
+      "localPath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sections": [
+        "天元纪大论篇第六十六",
+        "五运行大论篇第六十七",
+        "六微旨大论篇第六十八"
+      ],
+      "supports": [
+        "five stem-pair movements",
+        "six branch-pair governing qi",
+        "three-yin three-yang order",
+        "main qi positions"
+      ]
+    },
+    {
+      "id": "WUYUN-YIZONGJINJIAN",
+      "type": "primary_classical_commentary",
+      "localPath": "database/tcm/skill-v3/sources/医宗金鉴.txt",
+      "section": "运气要诀",
+      "webWitness": "https://zh.wikisource.org/zh-hans/医宗金鉴/卷四",
+      "supports": [
+        "central, main, and guest movement rules",
+        "sitian, zaiquan, and guest qi sequence",
+        "five-movement and six-qi boundary labels",
+        "main-movement tai-shao examples"
+      ]
+    },
+    {
+      "id": "WUYUN-TCM-THEORY-TEXTBOOK",
+      "type": "imported_modern_textbook_copy",
+      "localPath": "database/tcm/skill-v3/sources/《中医基础理论》.txt",
+      "supports": [
+        "explicit ten-stem movement derivation",
+        "main and guest movement tai-shao derivation",
+        "six-step main and guest qi derivation",
+        "day-level movement boundary wording"
+      ],
+      "rights": "Imported research source; product reuse rights require separate review."
+    },
+    {
+      "id": "WUYUN-BEIJING-EDU",
+      "type": "government_educational_secondary",
+      "url": "https://zyj.beijing.gov.cn/dwjlxxw/whcb/202312/t20231220_3505521.html",
+      "supports": [
+        "modern explanatory cross-check of central movement, guest movement, and main/guest qi layering"
+      ]
+    }
+  ],
+  "relevantSha256": {
+    "normalizedCore": "b8263d070a86dacee81ab32b07f35216ca49ce4e9341b4ea3745e969230a2200",
+    "suwenWitness": "ca9f5592564f787898e5f0488ef6b14950c80287af78b8ac88ba6a2d9b4f340f",
+    "yizongJinjianWitness": "ccf987c21848f8ad44d47c02a83d144931341e3776ef4ecf86e40e42b5940a0c",
+    "textbookWitness": "5b6fd66dd21f5c2e4436c0d3a740e429238aa33bb3c04071adbcb4bd7704a2d0"
+  },
+  "failures": []
+}

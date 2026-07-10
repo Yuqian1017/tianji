@@ -18,7 +18,8 @@
     "test:qimen": "node --test test/qimen/*.test.mjs",
     "test:fengshui": "node --test test/fengshui/*.test.mjs",
     "test:tcm": "node --test test/tcm/*.test.mjs",
-    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs test/yijing/*.test.mjs test/ziwei/*.test.mjs test/qimen/*.test.mjs test/fengshui/*.test.mjs test/tcm/*.test.mjs",
+    "test:wuyun": "node --test test/wuyun/*.test.mjs",
+    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs test/yijing/*.test.mjs test/ziwei/*.test.mjs test/qimen/*.test.mjs test/fengshui/*.test.mjs test/tcm/*.test.mjs test/wuyun/*.test.mjs",
     "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
     "audit:liuyao": "node scripts/validation/audit-liuyao.mjs",
@@ -32,6 +33,7 @@
     "audit:fengshui": "node scripts/validation/audit-fengshui.mjs",
     "audit:fengshui-secondary": "node scripts/validation/audit-fengshui-secondary.mjs",
     "audit:tcm-safety": "node scripts/validation/audit-tcm-safety.mjs",
+    "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview"
   },

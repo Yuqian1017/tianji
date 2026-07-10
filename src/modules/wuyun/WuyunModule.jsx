@@ -23,11 +23,11 @@ function Timeline({ items, type }) {
               <div className="flex-1 flex gap-1">
                 {/* Primary */}
                 <div className="flex-1 rounded px-1.5 py-0.5 text-[10px] text-center" style={{ backgroundColor: primaryColor + '20', color: primaryColor, border: `1px solid ${primaryColor}40` }}>
-                  主: {isYun ? item.primary : item.primary.replace(/[厥少太阳明]+/, '').substring(0, 3)}
+                  主: {isYun ? `${item.primary}${item.primaryExcess ? '太' : '少'}` : item.primary}
                 </div>
                 {/* Guest */}
                 <div className="flex-1 rounded px-1.5 py-0.5 text-[10px] text-center" style={{ backgroundColor: guestColor + '20', color: guestColor, border: `1px solid ${guestColor}40` }}>
-                  客: {isYun ? `${item.guest}${item.guestExcess !== undefined ? (item.guestExcess ? '↑' : '↓') : ''}` : (item.guest?.replace(/[厥少太阳明]+/, '').substring(0, 3) || '')}
+                  客: {isYun ? `${item.guest}${item.guestExcess ? '太' : '少'}` : item.guest}
                 </div>
               </div>
               <div className="w-20 text-[9px] text-[var(--color-text-dim)] shrink-0 text-right">{item.time}</div>
@@ -172,8 +172,8 @@ export default function WuyunModule({
     <div className="space-y-4 font-body">
       <ModuleIntro
         moduleId="wuyun"
-        origin="五运六气是《素问》运气篇中的传统理论。当前工具仅保留候选排列结构，算法与时间边界尚在逐项校核。"
-        strengths="天干化运 · 太过不及 · 司天在泉 · 主客运气排列"
+        origin="五运六气是《素问》运气篇中的传统理论。当前工具只实现经固定来源校核的基础年结构，古法交司时刻和现实解释不在本功能范围。"
+        strengths="天干化运 · 主客运太少 · 司天在泉 · 主客六气排列"
       />
 
       {/* 输入区 */}
@@ -221,7 +221,7 @@ export default function WuyunModule({
             <div className="grid grid-cols-3 gap-2 text-center">
               {/* 大运 */}
               <div className="bg-[var(--color-surface-dim)] rounded-lg p-2">
-                <div className="text-[10px] text-[var(--color-text-dim)]">大运</div>
+                <div className="text-[10px] text-[var(--color-text-dim)]">中运/岁运</div>
                 <div className="text-sm font-title" style={{ color: WUXING_COLORS[result.wuYun?.element] || '#888' }}>
                   {result.wuYun?.label || '—'}
                 </div>
@@ -243,7 +243,7 @@ export default function WuyunModule({
             </div>
 
             <div className="mt-3 text-center text-[10px] text-[var(--color-text-dim)]">
-              排列结构与时间边界：尚在校核 · 疾病、脏腑与现实预测：未验证
+              基础年结构：来源固定并全域校核 · 古法交司时刻及现实预测：未实现
             </div>
           </div>
 

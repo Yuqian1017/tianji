@@ -45,7 +45,7 @@ test('keeps the meridian clock structural and non-clinical', async () => {
   assert.doesNotMatch(prompt, /生理特点|养生建议|保健穴位|饮食/);
 });
 
-test('keeps unvalidated Five Movements and Six Qi output away from health claims', async () => {
+test('keeps Five Movements and Six Qi output away from health claims', async () => {
   const result = analyzeYear(2026);
   assert.equal(result.validation.interpretation, 'not_validated');
   assert.equal('affectedOrgans' in result, false);
