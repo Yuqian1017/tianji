@@ -1,0 +1,111 @@
+{
+  "audit": "tcm-safety",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_blocked_medical_layers",
+  "summary": {
+    "checks": 213,
+    "failures": 0,
+    "manifestEntries": 98,
+    "referenceFiles": 50,
+    "sourceTexts": 42,
+    "legalToxicMedicines": 28,
+    "skillDoseRows": 100,
+    "skillNamedDoseSubstances": 101,
+    "retiredRuntimeDoseItems": 22,
+    "retiredUniqueAcupoints": 30
+  },
+  "categories": {
+    "package": {
+      "checks": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "package_integrity": {
+      "checks": 98,
+      "passed": 98,
+      "failed": 0
+    },
+    "installed_parity": {
+      "checks": 98,
+      "passed": 98,
+      "failed": 0
+    },
+    "legal_toxic_list": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "dose_table": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "legacy_runtime": {
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "blockedLayers": [
+    "All Skill doses pending medicine-by-medicine validation against the 2025 Pharmacopoeia",
+    "Pregnancy, compatibility, aristolochic-acid, formula, and acupoint action layers pending authoritative review",
+    "Historical constitution questionnaire and recommendations",
+    "Meridian-clock clinical claims",
+    "Five Movements and Six Qi health predictions",
+    "Image-based medical inference"
+  ],
+  "findings": [
+    {
+      "id": "TCM-META-001",
+      "severity": "low",
+      "status": "recorded",
+      "description": "The raw safety file contains 2 stale progress statements even though its table is populated. Raw package remains immutable; normalized status is authoritative for product eligibility."
+    },
+    {
+      "id": "TCM-SRC-001",
+      "severity": "high",
+      "status": "blocked",
+      "description": "The Skill explicitly says its dose data has not been calibrated to the current Pharmacopoeia. Integrity and textbook consistency cannot substitute for that validation."
+    },
+    {
+      "id": "TCM-LAW-001",
+      "severity": "medium",
+      "status": "recorded",
+      "description": "Government publications disagree between 27 and 28 legal toxic-medicine labels; the normalized list keeps the complete 28-name version and records the omitted red lead preparation on the 27-name page."
+    }
+  ],
+  "sourceRefs": {
+    "SRC-LAW-TOXIC-1988": {
+      "title": "医疗用毒性药品管理办法",
+      "publisher": "State Council of the People's Republic of China",
+      "url": "https://mpa.jl.gov.cn/xxgk_84894/zcfg/xzfg/202303/t20230301_8673915.html"
+    },
+    "SRC-NMPA-CHANGE-GUIDE-2021": {
+      "title": "已上市中药药学变更研究技术指导原则",
+      "publisher": "National Medical Products Administration",
+      "url": "https://www.gov.cn/zhengce/zhengceku/2021-04/08/5598335/files/bfc3496e3daf4857abcd324b55bd39b3.pdf"
+    },
+    "SRC-SZ-TOXIC-APPENDIX-2026": {
+      "title": "Official local standard appendix E: toxic Chinese medicines",
+      "publisher": "Shenzhen Administration for Market Regulation",
+      "url": "https://amr.sz.gov.cn/attachment/0/755/755971/9772236.pdf"
+    },
+    "SRC-NMPA-PHARMACOPOEIA-2025": {
+      "title": "Announcement on issuing the 2025 edition of the Pharmacopoeia of the People's Republic of China",
+      "publisher": "National Medical Products Administration and National Health Commission",
+      "url": "https://english.nmpa.gov.cn/2025-06/11/c_1102151.htm"
+    }
+  },
+  "relevantSha256": {
+    "importedManifest": "4ce12d86950f84dc3a0388332834ddd665597e6bcbdb41e39b69980a2f3f87db",
+    "normalizedCore": "f69777017d1e32cf12b26a1cfcf19396b524938ce14dc9516fa318565ca0126f",
+    "legacyRuntimeBaseline": "fc0e038ea34ba7a75b5a1f07cd3705970232a1b39721f13aad55c969a11be585",
+    "rawSafetyReference": "ec4a66f0f6f812ee1d66accf8cbe095701b32a51936157d6dae87594608e1dcc"
+  },
+  "failures": []
+}

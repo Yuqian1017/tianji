@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-10",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 45,
-  "currentFocus": "中医数据库与当前产品消费点安全审计：药味、剂量、方名、穴位、艾灸与症状建议。",
-  "nextDecision": "全量抽取当前 runtime 的中医事实和动作，再与 Skill v3 安全表、原文及现行高质量来源逐项对照。",
+  "overallPercent": 50,
+  "currentFocus": "五运六气确定性结构与时间边界验证；中医医学解释继续 blocked。",
+  "nextDecision": "先全量核验干支化运、太过不及、司天在泉、主客运气和交接边界，再继续药典、方剂与穴位外治安全层。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 92,
+      "progress": 94,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -35,6 +35,9 @@
         "紫微 2,880 盘、314,200 项项目内检查与 325,440 字段第二实现对拍均无差异；解释层 blocked",
         "奇门 23,751 盘、1,900,230 项内部检查 0 fail；3meta 核心与 kinqimen 共享口径对照通过；解释层 blocked",
         "风水 216 张下卦盘、6,469 项项目内检查 0 fail；第二实现 6,048 盘面字段与 30,684 历法字段 0 mismatch；解释层 blocked",
+        "中医 Skill 98 个 manifest 条目、50 reference、42 原文 txt 完整性与上游副本一致；213 项安全审计 0 fail",
+        "体质、子午、五运、望诊桌面/390x844 回归通过；旧医疗动作词为 0，无水平溢出，console 0 error/warning",
+        "旧 34 题、22 计量项、30 穴位已归档并隔离；法定毒性 28 项规范化，100 行/101 药名剂量表待 2025 药典校准",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
@@ -290,11 +293,11 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "tcm_safety_audit_in_progress", "rule": "八字、六爻、梅花、共享《周易》、紫微、奇门与风水下卦核心已划定复用边界；当前进入中医消费点和安全数据库。" },
+    { "name": "排盘与数据库正确性", "state": "tcm_authoritative_review_in_progress", "rule": "确定性术数核心已划定复用边界；中医当前消费点已隔离，继续现行药典和外治安全审计。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
-    { "name": "中医安全", "state": "blocked", "rule": "八字健康已硬阻断；未补齐安全元数据前，不扩大方药、艾灸或症状建议的产品消费范围。" },
+    { "name": "中医安全", "state": "partial_blocked", "rule": "法定毒性 28 项已规范化；剂量、妊娠、配伍、方剂和穴位外治仍 blocked，不扩大产品消费范围。" },
     { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
@@ -344,6 +347,6 @@
     "风水项目内 216 张盘、6,469 项检查 0 fail；独立实现 6,048 盘面字段 0 mismatch",
     "tyme4ts 对 2020-2026 共 10,228 时刻的太阳年、流年和流月中宫 30,684 字段 0 mismatch",
     "database/fengshui/fengshui-core.json 已生成；替卦、形煞、星性、化解和现实预测 blocked",
-    "TJI-VAL-015 已启动：中医数据库与当前消费点安全验证"
+    "TJI-VAL-015 首批安全门槛：213 项审计与四个产品入口回归通过，医学层继续 blocked"
   ]
 }

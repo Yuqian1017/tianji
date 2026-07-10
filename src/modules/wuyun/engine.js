@@ -99,19 +99,14 @@ export function analyzeYear(year) {
     guestInfo: keQi[i]?.info,
   }));
 
-  // Health focus: organs affected by central transport + sitian + zaiquan
-  const affectedOrgans = new Set();
-  if (wuYun) {
-    const wuxingToOrgan = { '木': '肝胆', '火': '心小肠', '土': '脾胃', '金': '肺大肠', '水': '肾膀胱' };
-    affectedOrgans.add(wuxingToOrgan[wuYun.element]);
-  }
-  if (liuQi?.sitianInfo) affectedOrgans.add(liuQi.sitianInfo.organ);
-  if (liuQi?.zaiquanInfo) affectedOrgans.add(liuQi.zaiquanInfo.organ);
-
   return {
     year, ganZhi, wuYun, keYun, liuQi, keQi,
     yunTimeline, qiTimeline,
-    affectedOrgans: [...affectedOrgans],
+    validation: {
+      deterministicCore: 'not_validated',
+      interpretation: 'not_validated',
+      productScope: 'cultural_structure_only',
+    },
   };
 }
 
@@ -119,14 +114,14 @@ export function analyzeYear(year) {
  * Format for AI.
  */
 export function formatForAI(result) {
-  const { ganZhi, wuYun, liuQi, yunTimeline, qiTimeline, affectedOrgans } = result;
+  const { ganZhi, wuYun, liuQi, yunTimeline, qiTimeline } = result;
 
   const lines = ['【五运六气分析】'];
   lines.push(`年份: ${result.year}年 (${ganZhi.ganzi}年)`);
   lines.push(`大运: ${wuYun.label} (天干${ganZhi.gan}化${wuYun.element})`);
   lines.push(`司天: ${liuQi.sitian} (地支${ganZhi.zhi})`);
   lines.push(`在泉: ${liuQi.zaiquan}`);
-  lines.push(`重点关注脏腑: ${affectedOrgans.join('、')}`);
+  lines.push('验证状态: 排列结构与时间边界尚在校核；现实解释未验证');
 
   lines.push('\n【五运 — 主运 vs 客运】');
   yunTimeline.forEach(y => {

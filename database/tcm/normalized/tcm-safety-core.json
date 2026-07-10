@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "domain": "tcm_safety",
+  "generatedAt": "2026-07-10",
+  "sourcePackage": {
+    "id": "SRC-PKG-TCM-SKILL-V3",
+    "path": "database/tcm/skill-v3",
+    "upstreamRepository": "https://github.com/YuanZHAO321/TCM.Skill",
+    "upstreamCommit": "966a88acf942b6b8684575db3d1d3f261442b8a4",
+    "upstreamParity": "exact_except_local_sha256_manifest",
+    "upstreamFileCount": 98,
+    "localFileCount": 99,
+    "license": "CC BY-NC 4.0",
+    "status": "candidate_reference",
+    "integrity": "sha256_manifest_pass",
+    "referenceFiles": 50,
+    "sourceTexts": 42
+  },
+  "legalToxicMedicines": {
+    "status": "official_list_crosschecked",
+    "productEligibility": "safety_blocklist",
+    "names": [
+      "砒石",
+      "砒霜",
+      "水银",
+      "生马钱子",
+      "生川乌",
+      "生草乌",
+      "生白附子",
+      "生附子",
+      "生半夏",
+      "生南星",
+      "生巴豆",
+      "斑蝥",
+      "青娘虫",
+      "红娘虫",
+      "生甘遂",
+      "生狼毒",
+      "生藤黄",
+      "生千金子",
+      "生天仙子",
+      "闹羊花",
+      "雪上一枝蒿",
+      "红升丹",
+      "白降丹",
+      "蟾酥",
+      "洋金花",
+      "红粉",
+      "轻粉",
+      "雄黄"
+    ],
+    "sourceRefs": [
+      "SRC-LAW-TOXIC-1988",
+      "SRC-NMPA-CHANGE-GUIDE-2021",
+      "SRC-SZ-TOXIC-APPENDIX-2026"
+    ],
+    "knownPublicationDrift": {
+      "status": "recorded_not_silently_resolved",
+      "description": "A Beijing government service page labels the list as 27 and omits 红升丹, while the 2021 NMPA change guide states 28 and a 2026 Shenzhen government standard reproduces all 28 names. The normalized blocklist keeps the complete 28-name list and records the disagreement.",
+      "source": "https://banshi.beijing.gov.cn/pubtask/task/1/110000000000/433b680b-21e5-4f0f-9b89-7942ae4552e5.html?locationCode=110000000000&serverType=1003"
+    }
+  },
+  "skillDoseTable": {
+    "source": "Seventh-edition textbook-derived Skill table",
+    "markdownRowCount": 100,
+    "namedSubstanceCount": 101,
+    "countNote": "The 100th row combines 砒石 and 砒霜, producing 101 named substances.",
+    "currentPharmacopoeia": "Pharmacopoeia of the People's Republic of China, 2025 edition",
+    "currentPharmacopoeiaEffectiveDate": "2025-10-01",
+    "currentPharmacopoeiaValidation": "not_validated",
+    "productEligibility": "blocked",
+    "allowedUse": "candidate extraction and audit only",
+    "sourceRefs": [
+      "SRC-PKG-TCM-SKILL-V3",
+      "SRC-NMPA-PHARMACOPOEIA-2025"
+    ]
+  },
+  "candidateSafetyLayers": {
+    "eighteenIncompatibilities": "textbook_candidate_not_current_pharmacopoeia_validated",
+    "nineteenIncompatibilities": "textbook_candidate_not_current_pharmacopoeia_validated",
+    "pregnancy": "textbook_candidate_requires_current_authoritative_review",
+    "aristolochicAcid": "candidate_blocklist_requires_species_and_current_regulatory_review",
+    "formulaWarnings": "textbook_candidate_requires_formula_level_review"
+  },
+  "sourceRefs": {
+    "SRC-LAW-TOXIC-1988": {
+      "title": "医疗用毒性药品管理办法",
+      "publisher": "State Council of the People's Republic of China",
+      "url": "https://mpa.jl.gov.cn/xxgk_84894/zcfg/xzfg/202303/t20230301_8673915.html"
+    },
+    "SRC-NMPA-CHANGE-GUIDE-2021": {
+      "title": "已上市中药药学变更研究技术指导原则",
+      "publisher": "National Medical Products Administration",
+      "url": "https://www.gov.cn/zhengce/zhengceku/2021-04/08/5598335/files/bfc3496e3daf4857abcd324b55bd39b3.pdf"
+    },
+    "SRC-SZ-TOXIC-APPENDIX-2026": {
+      "title": "Official local standard appendix E: toxic Chinese medicines",
+      "publisher": "Shenzhen Administration for Market Regulation",
+      "url": "https://amr.sz.gov.cn/attachment/0/755/755971/9772236.pdf"
+    },
+    "SRC-NMPA-PHARMACOPOEIA-2025": {
+      "title": "Announcement on issuing the 2025 edition of the Pharmacopoeia of the People's Republic of China",
+      "publisher": "National Medical Products Administration and National Health Commission",
+      "url": "https://english.nmpa.gov.cn/2025-06/11/c_1102151.htm"
+    }
+  },
+  "boundaries": [
+    "Integrity checks prove the imported files did not drift; they do not prove medical correctness.",
+    "The 28-name legal list is a regulatory blocklist, not a complete list of all toxic or clinically risky herbs.",
+    "No dose from the Skill is eligible for runtime use until medicine-by-medicine validation against the 2025 Pharmacopoeia is complete.",
+    "Classical text doses never override current regulatory and clinical safety sources."
+  ]
+}

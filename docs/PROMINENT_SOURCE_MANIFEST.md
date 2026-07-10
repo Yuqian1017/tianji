@@ -77,7 +77,7 @@
 | 名称 | 中医 Skill v3.0 本地导入 |
 | 项目路径 | `database/tcm/skill-v3/` |
 | 导入来源 | `/Users/junshi/.codex/skills/中医/` |
-| 上游标识 | 项目 README 记录为 `YuanZHAO321/TCM.Skill`；本轮未重新联网核对 |
+| 上游标识 | `YuanZHAO321/TCM.Skill` commit `966a88acf942b6b8684575db3d1d3f261442b8a4`；2026-07-10 通过 GitHub API 与隔离 clone 核对 |
 | 导入日期 | 2026-07-09 |
 | 状态 | `canonical_raw` + `candidate_reference`，仅限天机卷当前 TCM 候选层 |
 | 规模 | 99 文件；50 个 references；42 个原文 txt；另有原文状态索引 |
@@ -85,6 +85,7 @@
 | 自述版本 | v3.0 终版 |
 | 完整性 | `SHA256SUMS.txt` 校验通过 |
 | Manifest SHA256 | `4ce12d86950f84dc3a0388332834ddd665597e6bcbdb41e39b69980a2f3f87db` |
+| 上游一致性 | 上游 98 文件；本地除新增 `SHA256SUMS.txt` 外逐文件相同；安装副本的 98 个 manifest 条目也全部同 hash |
 | 包声明许可 | `CC BY-NC 4.0` |
 | 权利提醒 | 包许可不自动消除其中现代教材/第三方原文可能存在的独立权利；公开或商业使用需单独审查 |
 | 元数据漂移 | `SKILL.md`/README 口径为 42 部原书，`sources/_目录与状态.md` 文件头仍写 39 部；实际 txt 数为 42 |
@@ -224,6 +225,29 @@
 | 本地使用 | 隔离安装于 `/tmp/tianji-fengshui-validator`；不进入产品依赖 |
 | 本轮证据 | 9 运 x 24 山共 216 张盘、6,048 个运/山/向盘与结构标签字段 0 mismatch；tyme4ts 后端对 2020-2026 共 10,228 时刻的太阳年、流年中宫与流月中宫 30,684 字段 0 mismatch |
 | 边界 | 第二实现发布较新，只作为独立复算证据；不能验证星性、组合断语、形煞、化解或现实效果 |
+
+### SRC-VAL-TCM-OFFICIAL-SAFETY
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 国务院/NMPA 中药毒性管理与 2025 版《中国药典》公告 |
+| 状态 | `validation_anchor`，法定毒性 blocklist 与现行药典版本边界 |
+| 官方来源 | `https://mpa.jl.gov.cn/xxgk_84894/zcfg/xzfg/202303/t20230301_8673915.html`、`https://www.gov.cn/zhengce/zhengceku/2021-04/08/5598335/files/bfc3496e3daf4857abcd324b55bd39b3.pdf`、`https://english.nmpa.gov.cn/2025-06/11/c_1102151.htm` |
+| 本轮用途 | 确认医疗用毒性药品法规范围、NMPA 所称 28 项毒性中药，以及 2025 药典自 2025-10-01 实施 |
+| 本轮结果 | 28 项名称进入 `tcm-safety-core.json`；Skill 100 行/101 药名剂量表保持 blocked |
+| 发布漂移 | 北京政务页写 27 项并遗漏红升丹；深圳政府 2026 附录列出完整 28 项，冲突已记录，未静默抹平 |
+| 边界 | 法定 28 项不是全部风险药物；公告本身不提供逐药剂量，不能替代药典逐味校准 |
+
+### SRC-VAL-TCM-CONSTITUTION
+
+| 字段 | 值 |
+|---|---|
+| 名称 | ZYYXH/T 157-2009 与 CCMQ 量表研究 |
+| 状态 | `validation_anchor`，体质量表版本与条目数 |
+| 来源 | 中华中医药学会 2026 标准应用示范清单；PubMed `37904166`、`35294132`、`41636294` |
+| 本轮用途 | 核对原 CCMQ 为 60 项，已发表短版为 23/26/27 项，并判断旧 34 题实现是否对应已验证版本 |
+| 本轮结果 | 旧 34 题不匹配上述版本；体质判定与调养功能暂停 |
+| 边界 | 本轮未导入受版权保护的完整量表条目；取得合法文本和对应评分规范前不恢复运行时 |
 
 ### SRC-VAL-DAYUN-CLASSICS
 
@@ -372,6 +396,8 @@
 | TCM-CLASSICS | `references/42-45*` | 素问、灵枢、难经、伤寒、金匮要义与条文 | 经典出处、课程与解释 | 古方剂量不进入现代用药依据 |
 | TCM-WENBING-AUTHORS | `references/46-48*` | 医学心悟、温病三书、衷中参西录 | 医家观点、温病与历史课程 | 医家观点和时代内容不覆盖教材安全层 |
 | TCM-SAFETY | `references/安全-配伍妊娠禁忌与毒性药.md` | 配伍、妊娠、毒性、马兜铃酸、方剂级警示、忌口 | 第一批规范化；所有涉药消费硬门槛 | 仍需现行标准和项目复核 |
+| TCM-SAFETY-CORE | `database/tcm/normalized/tcm-safety-core.json` | 28 项法定毒性中药 blocklist、来源和产品资格 | 当前唯一 accepted 的中医规范安全切片 | 不含药典剂量、妊娠、配伍、方剂或穴位授证 |
+| TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
 ## 7. 当前 Runtime 来源组
@@ -390,7 +416,7 @@
 |---|---|---|---|
 | 当前产品定义 | `docs/PRD.md` | 历史 `APP-SPEC*` 与 `GAME-DESIGN.md` | 旧规格提供证据和设计资产，不覆盖新 PRD 决策 |
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
-| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app 表、`sources/` | Skill 补广度和安全；compendium 补五运六气/子午/既有来源；冲突逐条记录 |
+| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、`sources/` | Skill 补广度和安全候选；法定毒性清单以 normalized core 为准；剂量等未通过现行来源前不得消费 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
 | 未来规范数据库 | 逐域建立；周易核心已有 `database/yijing/zhouyi-core.json` | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 

@@ -1,59 +1,54 @@
-/**
- * 望诊 (Visual Diagnosis) data — diagnostic categories, guidance, and analysis dimensions.
- */
+export const WANGZHEN_VALIDATION = Object.freeze({
+  scope: 'visible_image_features_only',
+  medicalInference: 'blocked',
+  interpretation: 'not_validated',
+});
 
 export const DIAGNOSIS_TYPES = [
   {
     id: 'tongue',
-    name: '舌诊',
+    name: '舌面观察',
     icon: '👅',
-    description: '通过观察舌质颜色、舌形、舌苔等判断脏腑气血状态',
-    guidance: '请伸出舌头，自然放松，在光线充足的环境下拍照。建议在自然光或白色灯光下拍摄，避免彩色灯光影响。',
+    description: '记录照片中可见的颜色、形态、覆盖物与润燥外观',
+    guidance: '请在自然光或中性白光下拍摄，关闭美颜和滤镜，保持画面清晰；颜色会受设备与环境光影响。',
     dimensions: [
-      { name: '舌质颜色', detail: '淡白/淡红/红/绛红/紫暗' },
-      { name: '舌形', detail: '胖大/瘦薄/齿痕/裂纹/芒刺' },
-      { name: '舌苔颜色', detail: '白苔/黄苔/灰黑苔' },
-      { name: '舌苔质地', detail: '薄苔/厚苔/腻苔/剥苔/无苔' },
-      { name: '舌下络脉', detail: '细短/粗长/迂曲/紫暗' },
-      { name: '润燥', detail: '润泽/干燥/滑腻' },
+      { name: '画面光线', detail: '亮度、偏色与阴影' },
+      { name: '可见颜色', detail: '只描述照片呈现的颜色范围' },
+      { name: '外形', detail: '宽窄、边缘、可见纹理' },
+      { name: '表面覆盖', detail: '颜色、厚薄与分布外观' },
+      { name: '润燥外观', detail: '反光、湿润或干燥外观' },
     ],
   },
   {
     id: 'face',
-    name: '面诊',
+    name: '面部观察',
     icon: '😊',
-    description: '通过观察面部气色、色泽分布判断五脏健康状态',
-    guidance: '请面对镜头，保持自然表情，确保面部光线均匀。不要化妆拍摄效果更准确。',
+    description: '记录照片中可见的光线、颜色分布与表面特征',
+    guidance: '请面对镜头，在均匀自然光或中性白光下拍摄，关闭美颜和滤镜；不要用单张照片作健康判断。',
     dimensions: [
-      { name: '面色', detail: '红润/苍白/萎黄/晦暗/青紫' },
-      { name: '额部', detail: '心之外候 — 色泽变化反映心火状态' },
-      { name: '鼻部', detail: '脾之外候 — 色泽反映脾胃运化' },
-      { name: '左颊', detail: '肝之外候 — 反映肝胆疏泄' },
-      { name: '右颊', detail: '肺之外候 — 反映肺气宣降' },
-      { name: '颏部', detail: '肾之外候 — 反映肾气盛衰' },
-      { name: '眼部', detail: '目为肝之窍，观神气/眼白/眼袋' },
-      { name: '唇色', detail: '脾开窍于口 — 淡白/红润/紫暗/干裂' },
+      { name: '画面光线', detail: '曝光、阴影与偏色' },
+      { name: '颜色分布', detail: '只描述照片中可见的区域差异' },
+      { name: '表面特征', detail: '可见纹理、斑点与干燥外观' },
+      { name: '对称与遮挡', detail: '拍摄角度、表情和遮挡影响' },
     ],
   },
   {
     id: 'palm',
-    name: '手诊',
+    name: '手部观察',
     icon: '🖐',
-    description: '通过手掌颜色、纹理、形态判断体质与脏腑状态',
-    guidance: '请将手掌自然展开面对镜头，在光线充足的环境下拍摄。先拍左手，再拍右手效果更佳。',
+    description: '记录手掌照片中可见的颜色、纹理与指甲外观',
+    guidance: '请在均匀自然光或中性白光下拍摄，手掌自然展开，关闭滤镜；触感与温度无法从照片判断。',
     dimensions: [
-      { name: '掌色', detail: '红润/苍白/黄/青紫/斑点' },
-      { name: '大鱼际', detail: '肺区 — 饱满/凹陷/发红' },
-      { name: '小鱼际', detail: '肾区 — 色泽与弹性' },
-      { name: '指甲', detail: '半月痕/色泽/纹路/形状' },
-      { name: '手温', detail: '（需自述）冰凉/温热/潮湿/干燥' },
+      { name: '画面光线', detail: '曝光、阴影与偏色' },
+      { name: '可见颜色', detail: '只描述照片呈现的颜色' },
+      { name: '纹理', detail: '掌纹、干燥与表面纹理外观' },
+      { name: '指甲外观', detail: '可见颜色、纹路与形状' },
     ],
   },
 ];
 
-/**
- * Get diagnosis type by ID.
- */
 export function getDiagnosisType(id) {
-  return DIAGNOSIS_TYPES.find(t => t.id === id) || DIAGNOSIS_TYPES[0];
+  const type = DIAGNOSIS_TYPES.find(item => item.id === id);
+  if (!type) throw new RangeError(`Unsupported observation type: ${id}`);
+  return type;
 }

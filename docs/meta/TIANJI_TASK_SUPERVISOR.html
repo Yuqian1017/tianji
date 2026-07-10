@@ -68,12 +68,12 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 45,
-      currentFocus: '中医数据库与当前产品消费点安全审计。',
-      nextDecision: '全量抽取药味、剂量、方名、穴位、艾灸与症状建议，再逐项对照 Skill v3 安全表。',
+      overallPercent: 50,
+      currentFocus: '五运六气确定性结构与时间边界验证；医学解释继续 blocked。',
+      nextDecision: '先全量核验干支化运、太过不及、司天在泉、主客运气和交接边界，再继续药典与外治安全层。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
-        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 92, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 94, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'review_pending', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -81,11 +81,11 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'tcm_safety_audit_in_progress', rule: '风水下卦核心已完成；当前进入中医消费点与安全数据库。' },
+        { name: '排盘与数据库正确性', state: 'tcm_authoritative_review_in_progress', rule: '中医消费点已隔离；继续现行药典和外治安全审计。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
-        { name: '中医安全', state: 'blocked', rule: '八字健康已硬阻断；安全元数据补齐前不扩大高风险内容消费。' },
+        { name: '中医安全', state: 'partial_blocked', rule: '法定毒性 28 项已规范化；剂量、妊娠、配伍、方剂和穴位外治仍 blocked。' },
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
@@ -113,7 +113,7 @@
         '风水 216 张盘、6,469 项检查 0 fail；第二实现 6,048 盘面字段 0 mismatch',
         'tyme4ts 10,228 时刻的 30,684 个年/月边界字段 0 mismatch',
         'database/fengshui/fengshui-core.json 已生成；解释与替卦 blocked',
-        'TJI-VAL-015 已启动：中医数据库与当前消费点安全验证',
+        'TJI-VAL-015 首批安全门槛通过：213 项审计与四个产品入口回归通过，医学层继续 blocked',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',

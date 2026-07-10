@@ -1,82 +1,40 @@
-/**
- * 子午流注 — Meridian Clock Engine
- */
-import { ZIWU_LIUZHU } from './data.js';
+import { ZIWU_LIUZHU, ZIWU_MODEL } from './data.js';
 
-/**
- * Get the current active shichen (时辰) and meridian.
- * @param {Date} [date] — defaults to now
- * @returns {{ index, entry, progress }}
- */
-export function getCurrentShichen(date) {
-  const d = date || new Date();
+export function getCurrentShichen(date = new Date()) {
+  const d = date instanceof Date ? date : new Date(date);
+  if (Number.isNaN(d.getTime())) throw new RangeError('Invalid date');
+
   const hour = d.getHours();
   const minute = d.getMinutes();
-
-  // Find the matching entry (子时 starts at 23:00)
-  let index = -1;
-  for (let i = 0; i < ZIWU_LIUZHU.length; i++) {
-    const start = ZIWU_LIUZHU[i].hourStart;
-    const end = (start + 2) % 24;
-    if (start > end) {
-      // Wraps midnight (子时: 23-01)
-      if (hour >= start || hour < end) { index = i; break; }
-    } else {
-      if (hour >= start && hour < end) { index = i; break; }
-    }
-  }
-  if (index === -1) index = 0; // fallback
+  let index = ZIWU_LIUZHU.findIndex(entry => entry.hourStart === hour || entry.hourStart + 1 === hour);
+  if (hour === 0) index = 0;
+  if (index < 0) throw new RangeError(`No traditional shichen mapping for hour ${hour}`);
 
   const entry = ZIWU_LIUZHU[index];
-
-  // Progress within this 2-hour block (0-100)
-  let minutesIn;
-  if (entry.hourStart > 22) {
-    // 子时 wraps midnight
-    minutesIn = hour >= entry.hourStart
-      ? (hour - entry.hourStart) * 60 + minute
-      : (hour + 24 - entry.hourStart) * 60 + minute;
-  } else {
-    minutesIn = (hour - entry.hourStart) * 60 + minute;
-  }
-  const progress = Math.min(100, Math.round((minutesIn / 120) * 100));
+  const startMinutes = entry.hourStart === 23 ? 23 * 60 : entry.hourStart * 60;
+  const currentMinutes = hour === 0 ? 24 * 60 + minute : hour * 60 + minute;
+  const progress = Math.min(100, Math.round(((currentMinutes - startMinutes) / 120) * 100));
 
   return { index, entry, progress };
 }
 
-/**
- * Get the next shichen info.
- */
 export function getNextShichen(currentIndex) {
-  const nextIdx = (currentIndex + 1) % 12;
-  return ZIWU_LIUZHU[nextIdx];
+  if (!Number.isInteger(currentIndex) || currentIndex < 0 || currentIndex >= ZIWU_LIUZHU.length) {
+    throw new RangeError('currentIndex must be an integer from 0 to 11');
+  }
+  return ZIWU_LIUZHU[(currentIndex + 1) % ZIWU_LIUZHU.length];
 }
 
-/**
- * Format current meridian info for AI.
- */
-export function formatForAI(date) {
-  const d = date || new Date();
-  const { entry, progress } = getCurrentShichen(d);
-  const timeStr = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日 ${d.getHours()}:${String(d.getMinutes()).padStart(2, '0')}`;
-
-  const lines = ['【子午流注·当前时辰】'];
-  lines.push(`时间: ${timeStr}`);
-  lines.push(`时辰: ${entry.shichen}时 (${entry.hours})`);
-  lines.push(`当令经络: ${entry.meridian}`);
-  lines.push(`对应脏腑: ${entry.organ}`);
-  lines.push(`五行: ${entry.wuxing}`);
-  lines.push(`时辰进度: ${progress}%`);
-  lines.push(`\n养生要点: ${entry.yangsheng}`);
-  lines.push(`常见病症: ${entry.illness}`);
-  lines.push(`建议: ${entry.advice}`);
-
-  // Add all 12 for context
-  lines.push('\n【十二时辰完整表】');
-  for (const e of ZIWU_LIUZHU) {
-    const marker = e.shichen === entry.shichen ? ' ← 当前' : '';
-    lines.push(`${e.shichen}时 ${e.hours} ${e.organ}(${e.meridian})${marker}`);
-  }
-
+export function formatForAI(date = new Date()) {
+  const { entry, progress } = getCurrentShichen(date);
+  const lines = [
+    '【传统十二时辰经脉对应结构】',
+    `时辰: ${entry.shichen}时 (${entry.hours})`,
+    `常见对应: ${entry.organ} / ${entry.meridian}`,
+    `五行标签: ${entry.wuxing}`,
+    `时段进度: ${progress}%`,
+    `验证状态: ${ZIWU_MODEL.structureStatus}`,
+    '边界: 此对应只作传统文化结构展示，不代表器官功能高峰或医学判断。',
+  ];
   return lines.join('\n');
 }

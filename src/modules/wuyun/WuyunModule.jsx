@@ -41,12 +41,12 @@ function Timeline({ items, type }) {
 
 // ===== 专题按钮 =====
 const DETAIL_SECTIONS = [
-  { key: 'spring', label: '春季养生' },
-  { key: 'summer', label: '夏季养生' },
-  { key: 'autumn', label: '秋季养生' },
-  { key: 'winter', label: '冬季养生' },
-  { key: 'diet', label: '全年食疗' },
-  { key: 'disease', label: '易发疾病' },
+  { key: 'central', label: '中运排列' },
+  { key: 'guest-yun', label: '客运排列' },
+  { key: 'sitian', label: '司天在泉' },
+  { key: 'guest-qi', label: '客气排列' },
+  { key: 'boundary', label: '时间边界' },
+  { key: 'scope', label: '验证边界' },
 ];
 
 // ===== 主组件 =====
@@ -87,7 +87,7 @@ export default function WuyunModule({
       historyIdRef.current = activeHistoryId || crypto.randomUUID();
       clearPendingHistoryLoad();
     }
-  }, [pendingHistoryLoad]);
+  }, [activeHistoryId, clearPendingHistoryLoad, currentYear, pendingHistoryLoad]);
 
   // Calculate
   const handleCalculate = useCallback(() => {
@@ -162,7 +162,7 @@ export default function WuyunModule({
 
   const handleDetail = useCallback((section) => {
     setDetailSeen(prev => ({ ...prev, [section.key]: true }));
-    handleFollowUp(`请详细分析${result?.ganZhi?.ganzi || ''}年的${section.label}建议。`);
+    handleFollowUp(`请只说明${result?.ganZhi?.ganzi || ''}年的${section.label}结构，不作健康或气候预测。`);
   }, [result, handleFollowUp]);
 
   // Year options
@@ -172,8 +172,8 @@ export default function WuyunModule({
     <div className="space-y-4 font-body">
       <ModuleIntro
         moduleId="wuyun"
-        origin="源于《黄帝内经·素问》运气七篇大论，是中医天人合一思想的核心理论。以天干地支纪年推算每年的气候变化和疾病流行趋势。"
-        strengths="年度气候趋势预测 · 易发疾病提前预防 · 四季饮食调养指导 · 个人健康风险评估"
+        origin="五运六气是《素问》运气篇中的传统理论。当前工具仅保留候选排列结构，算法与时间边界尚在逐项校核。"
+        strengths="天干化运 · 太过不及 · 司天在泉 · 主客运气排列"
       />
 
       {/* 输入区 */}
@@ -200,7 +200,10 @@ export default function WuyunModule({
         {/* 速查提示 */}
         {RECENT_YUNQI.find(r => r.year === year) && (
           <div className="text-xs text-[var(--color-text-dim)] bg-[var(--color-surface-dim)] rounded-lg p-2">
-            {RECENT_YUNQI.find(r => r.year === year).feature}
+            {(() => {
+              const row = RECENT_YUNQI.find(r => r.year === year);
+              return `${row.wuyun} · 司天${row.sitian} · 在泉${row.zaiquan}`;
+            })()}
           </div>
         )}
       </div>
@@ -239,12 +242,8 @@ export default function WuyunModule({
               </div>
             </div>
 
-            {/* 重点脏腑 */}
-            <div className="mt-3 text-center">
-              <span className="text-xs text-[var(--color-text-dim)]">重点关注: </span>
-              {result.affectedOrgans.map((o, i) => (
-                <span key={i} className="text-xs text-[var(--color-cinnabar)] bg-[var(--color-cinnabar)]/10 px-1.5 py-0.5 rounded-full mx-0.5">{o}</span>
-              ))}
+            <div className="mt-3 text-center text-[10px] text-[var(--color-text-dim)]">
+              排列结构与时间边界：尚在校核 · 疾病、脏腑与现实预测：未验证
             </div>
           </div>
 
@@ -265,13 +264,13 @@ export default function WuyunModule({
                 onClick={handleAI}
                 className="w-full py-2.5 bg-[var(--color-gold)] text-white rounded-lg text-sm font-title hover:opacity-90 transition-opacity"
               >
-                AI 运气解读
+                AI 结构说明
               </button>
             )}
 
             {(chatMessages.length > 0 || isStreaming) && (
               <>
-                <div className="text-xs text-[var(--color-gold-muted)] mb-2 font-title">AI 运气分析</div>
+                <div className="text-xs text-[var(--color-gold-muted)] mb-2 font-title">AI 文化结构说明</div>
                 <div className="space-y-3 max-h-[500px] overflow-y-auto">
                   {chatMessages.filter(m => m.role === 'assistant').map((msg, i) => (
                     <div key={i} className="text-sm text-[var(--color-text)] whitespace-pre-wrap leading-relaxed">{msg.content}</div>

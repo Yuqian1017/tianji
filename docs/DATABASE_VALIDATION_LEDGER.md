@@ -23,7 +23,8 @@
 | VAL-BZ-006 | P1 | 八字 | 天干/地支合化成立条件与关系吉凶 | 流派解释 | V3 | blocked | 当前不检查月令、透干、旺气、伤克等成化条件；候选五行仅作元数据，所有现实事件与吉凶解释保持未验证 |
 | VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
 | VAL-BZH-001 | P0 | 八字健康 | 五行计数到脏腑风险、疾病、食疗与大运健康的推导 | 医学安全/跨域推断 | V4+安全审查 | blocked | 未验证结构计数不能成为医学证据；runtime、旧历史和 AI 通道已硬阻断 |
-| VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/艾灸建议 | 医疗/安全 | V4+V5 | planned | 全量抽取消费点并反查安全表/现行来源 |
+| VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/穴位/艾灸与图像推断 | 医疗/安全 | V4+V5 | in_progress | 旧 34 题、9 调养方案、28 药物标签、22 计量项、30 去重穴位已归档；运行时剂量/裸艾灸/疾病推断已隔离，待逐项权威复核 |
+| VAL-TCM-002 | P0 | 中医 | Skill v3 安全表、毒性、妊娠、配伍与剂量 | 医疗/来源 | V4 | in_progress | 98 manifest 文件和安装/上游副本一致；法定毒性清单 28/28；100 行/101 药名剂量表结构通过但未按 2025 药典校准，继续 blocked |
 | VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、旬空、伏神、变卦 | 精确/流派确定性 | V3+V5 | pass | 京房八宫纳甲口径；17,026 项项目内全量检查 0 fail，`iching-shifa@1.8.0` 64 静卦与 4,032 动卦对拍 0 mismatch；Playwright 桌面/390px 全六老阳样例通过 |
 | VAL-LY-002 | P1 | 六爻 | 用神、旺衰、冲合空亡与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 排盘结构通过不授证现实预测；AI prompt 与 UI 已标 `not_validated`，禁止无条件成败、应期和高风险建议 |
 | VAL-MH-001 | P1 | 梅花 | 报数/农历时间起卦、互卦、变卦、动爻、体用与笔画数据 | 精确/声明口径 | V3+V5 | pass | 63,061 项全量检查 0 fail；Playwright 报数、时间、文字三路径与桌面/390px 通过；结构可复用，现代文字法单列适配状态 |
@@ -58,6 +59,12 @@
 | F-BZ-006 | P1 | VAL-SHARED-001 | partially_remediated | NOAA 均时差已加入并按固定 365 日分母校正闰年；UI 标准时口径已明确；历史时区/夏令时仍未解决 | IANA 时区数据与历史 DST fixture |
 | F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 传统时辰精度年月日、`solarDate` 与口径元数据，整数年龄继续兼容 | 历史记录 schema/version 验证 |
 | F-BZH-001 | P0 | VAL-BZH-001 | mitigated_blocked | 旧 runtime 以天干 1/藏干 0.5 和固定阈值推导脏腑风险、疾病、食疗和大运健康 | 当前消费路径、旧历史和 AI prompt 均 blocked；独立传统与医学证据通过前不得恢复 |
+| F-TCM-001 | P0 | VAL-TCM-001 | mitigated_blocked | 体质模块用 34 题历史简化稿冒充 ZYYXH/T 157-2009 正式量表，并输出药茶、克数、穴位与艾灸方案 | 功能暂停；旧内容完整归档为 `removed_pending_review`；取得合法完整量表和独立验证前不得恢复 |
+| F-TCM-002 | P0 | VAL-TCM-001 | mitigated | 子午流注把传统时辰对应扩写为排毒、疾病提示和最佳吸收时段 | 运行时只保留时辰/经脉/脏腑名称/五行标签；临床解释与穴位动作移除 |
+| F-TCM-003 | P0 | VAL-TCM-001 | mitigated_blocked | 五运六气未验证算法直接生成重点脏腑、疾病风险和食疗建议 | 只保留候选结构并标算法尚在校核；所有健康与气候现实预测 blocked |
+| F-TCM-004 | P0 | VAL-TCM-001 | mitigated | 望诊视觉模型从单张照片推断脏腑、体质并给调养建议 | prompt/UI 限制为可见颜色、形态、纹理与拍摄质量描述，不作医学推断 |
+| F-TCM-005 | P0 | VAL-TCM-002 | blocked | Skill 的 100 行/101 药名剂量表来自七版教材且自述未按现行药典校准 | 所有剂量 product eligibility=`blocked`；逐药对照 2025 药典后再评审 |
+| F-TCM-006 | P1 | VAL-TCM-002 | recorded_source_drift | 政府发布页对法定毒性中药出现 27/28 数量漂移；27 项页遗漏红升丹 | 规范库保留 NMPA 指导原则所称 28 项及深圳政府 2026 完整附录，并显式记录冲突 |
 | F-BZ-008 | P1 | VAL-BZ-001 | verified_remediated | 手写“精确节”已退出八字 runtime，修复前数据保留在 before artifact；第二实现全范围复核通过 | 保持无 runtime import 回归 |
 | F-BZ-009 | P1 | VAL-BZ-004 | resolved | 天干两干同现原本直接显示“合化某五行”，未检查成化条件 | 五合标签只显示关系，候选化神留作元数据 |
 | F-BZ-REL-001 | P1 | VAL-BZ-004 | verified_remediated | 寅巳申、丑戌未原本要求三支全齐，漏掉两支相刑 | 两支相刑方向 7/7 全量测试；三支齐全只汇总一个三刑 |
@@ -119,3 +126,4 @@
 | 2026-07-10 | VAL-ZW-001/002 | Playwright 2000-08-16 寅时女命；桌面与 390×844 | 命宫午、木三局、紫微午、天府戌和首限壬午可见；验证边界可见；移动端无水平溢出，控制台 0 error |
 | 2026-07-10 | VAL-QM-001/002 | `audit-qimen.mjs`；《奇门遁甲统宗》《奇门法窍》；隔离 `3meta@2.6.0` 与 `kinqimen@0.3.1` | 23,751 盘、1,900,230 项内部检查 0 fail；`3meta` 奇门核心 0 mismatch；`kinqimen` 189,789 共享字段 0 mismatch；三元、地盘、值使等根因已修复，解释层 blocked |
 | 2026-07-10 | VAL-FS-001/002 | `audit-fengshui.mjs`；隔离 `@soul-atelier/xuankong@0.2.1`、`@soul-atelier/calendar@0.3.0`/tyme4ts | 216 张下卦盘项目内 6,469 项 0 fail；第二实现盘面 6,048 字段及 10,228 时刻年/月边界 30,684 字段 0 mismatch；解释、替卦与现实建议 blocked |
+| 2026-07-10 | VAL-TCM-001/002 | `audit-tcm-safety.mjs`；Skill SHA manifest；上游 `966a88a`；国务院/NMPA/深圳政府毒性清单；2025 药典公告；CCMQ 研究；桌面/390×844 产品路径 | 213 项 0 fail；TCM 9/9、全库 79/79；28 项法定毒性清单规范化；100 行/101 药名剂量表保持 blocked；旧 22 计量项和 30 穴位归档并移出运行时；四个中医入口无旧医疗动作词、无水平溢出、console 0 error/warning |

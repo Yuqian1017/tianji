@@ -13,13 +13,13 @@ function AnalyzingAnimation() {
     <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-8">
       <div className="flex flex-col items-center justify-center gap-3">
         <div className="text-5xl animate-taiji-spin" style={{ transformOrigin: 'center' }}>☯</div>
-        <div className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">望诊分析中...</div>
+        <div className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">图像观察中...</div>
       </div>
     </div>
   );
 }
 
-// ===== 诊断类型选择器 =====
+// ===== 观察类型选择器 =====
 function DiagnosisTypePicker({ selected, onChange }) {
   return (
     <div className="grid grid-cols-3 gap-2">
@@ -169,8 +169,8 @@ export default function WangzhenModule({
       setStreamingText('');
       saveToHistory(finalMessages);
     } catch (e) {
-      setError(`AI分析失败: ${e.message}`);
-      console.error('望诊 AI analysis failed:', e);
+      setError(`AI观察失败: ${e.message}`);
+      console.error('Image observation failed:', e);
     } finally {
       setAiLoading(false);
     }
@@ -225,30 +225,30 @@ export default function WangzhenModule({
     <div className="space-y-6">
       <ModuleIntro
         moduleId="wangzhen"
-        origin="望诊为中医四诊（望闻问切）之首，《黄帝内经》云:「望而知之谓之神」。通过观察舌象、面色、手掌等外在表现推断内在脏腑气血状态。"
-        strengths="舌象分析（舌质/舌苔/润燥） · 面色五脏对应 · 手掌体质判断 · AI辅助望诊分析"
+        origin="当前功能只记录照片中可见的颜色与形态，医疗推断、证型判断和调养建议均未通过验证。"
+        strengths="拍摄质量检查 · 可见颜色记录 · 形态与纹理描述 · 观察限制说明"
       />
 
       {/* 输入阶段 */}
       {showInputPhase && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4">
-          {/* 诊断类型选择 */}
+          {/* 观察类型选择 */}
           <div>
-            <label className="block text-[var(--color-gold)] text-sm font-medium mb-3 font-title">选择诊断类型</label>
+            <label className="block text-[var(--color-gold)] text-sm font-medium mb-3 font-title">选择观察类型</label>
             <DiagnosisTypePicker selected={diagnosisType} onChange={setDiagnosisType} />
           </div>
 
           {/* 拍摄指导 */}
           <CaptureGuidance typeId={diagnosisType} />
 
-          {/* 症状描述 (optional) */}
+          {/* Optional capture note */}
           <div>
-            <label className="block text-[var(--color-text-dim)] text-xs mb-1 font-body">症状描述（可选）</label>
+            <label className="block text-[var(--color-text-dim)] text-xs mb-1 font-body">拍摄备注（可选）</label>
             <input
               type="text"
               value={userNote}
               onChange={e => setUserNote(e.target.value)}
-              placeholder="如：最近容易疲倦、胃口不好、睡眠差..."
+              placeholder="如：室内白灯、手机前置镜头、未使用滤镜"
               className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2.5
                 text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body text-sm"
             />
@@ -275,7 +275,7 @@ export default function WangzhenModule({
                   className="flex-1 bg-[var(--color-gold-bg)] text-[var(--color-gold)] font-medium py-3 rounded-lg
                     hover:bg-[var(--color-gold-bg-hover)] btn-glow font-body"
                 >
-                  开始分析
+                  开始观察
                 </button>
                 <button
                   onClick={() => { setCapturedImage(null); setShowCamera(true); }}
@@ -309,12 +309,12 @@ export default function WangzhenModule({
       {(hasAIResponse || streamingText) && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">望诊分析</h3>
+            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">图像客观观察</h3>
             <button
               onClick={reset}
               className="text-xs text-[var(--color-text-dim)] hover:text-[var(--color-text)] transition-colors font-body"
             >
-              重新诊断
+              重新观察
             </button>
           </div>
 
