@@ -317,16 +317,6 @@ export function analyzeHandFeatures(lm, handedness = 'Unknown') {
     ringPinky: angleBetween(lm[0], lm[16], lm[20]),
   };
 
-  // === Mound estimates (掌丘) ===
-  // Based on relative positions and z-depth of key areas
-  const moundEstimates = {
-    jupiter: estimateMoundProminence(lm[5], lm[6], lm[0]), // below index
-    saturn: estimateMoundProminence(lm[9], lm[10], lm[0]), // below middle
-    apollo: estimateMoundProminence(lm[13], lm[14], lm[0]), // below ring
-    mercury: estimateMoundProminence(lm[17], lm[18], lm[0]), // below pinky
-    venus: estimateMoundProminence(lm[1], lm[2], lm[0]), // thumb base
-  };
-
   // Pinky length relative: does it reach ring finger first joint?
   const pinkyReachesRingJoint = lm[20].y < lm[14].y; // tip above ring DIP
 
@@ -336,7 +326,6 @@ export function analyzeHandFeatures(lm, handedness = 'Unknown') {
     fingerLengths,
     indexRingRatio,
     fingerGaps,
-    moundEstimates,
     pinkyReachesRingJoint,
     handedness,
   };
@@ -352,18 +341,4 @@ function angleBetween(origin, p1, p2) {
   const cross = v1.x * v2.y - v1.y * v2.x;
   const angle = Math.atan2(Math.abs(cross), dot) * (180 / Math.PI);
   return parseFloat(angle.toFixed(1));
-}
-
-/**
- * Estimate mound prominence from z-depth of nearby landmarks.
- * Returns 'prominent' | 'normal' | 'flat'
- */
-function estimateMoundProminence(mcp, pip, wrist) {
-  // More negative z = closer to camera = more prominent
-  const avgDepth = (mcp.z + pip.z) / 2;
-  const wristDepth = wrist.z;
-  const diff = wristDepth - avgDepth;
-  if (diff > 0.02) return 'prominent';
-  if (diff > 0.005) return 'normal';
-  return 'flat';
 }

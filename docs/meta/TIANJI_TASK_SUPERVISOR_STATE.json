@@ -5,8 +5,8 @@
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
   "overallPercent": 58,
-  "currentFocus": "全库解释层与剩余 runtime inventory：中医具体用法 blocked，面相/手相几何到人格职业运势的推断已隔离。",
-  "nextDecision": "验证相术几何阈值与分类稳定性，并继续现行逐药逐方、逐穴正文和附方 2 项来源缺口。",
+  "currentFocus": "全库解释层与剩余 runtime inventory：相术解释已隔离，手指角度单位与掌丘伪测量已修复。",
+  "nextDecision": "用真实图片样本验证相术姿态/尺度鲁棒性与分类阈值，并继续现行逐药逐方、逐穴正文。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -430,6 +430,7 @@
     "奇门 QIMEN_YONGSHEN 与风水 STAR_COMBO/STAR_REMEDY 的医疗化旧文字当前无消费引用，归类 dead_unconsumed，未来接入需重新校勘",
     "TJI-VAL-019 食药目录子批次：国家卫健委 106 项按 87+6+9+4 固定；Skill A 清单 15 项为 13 匹配、2 不在目录",
     "8 条明确食疗/药食配方共 38 个原料引用：18 匹配、5 身份/炮制缺口、15 不在目录；48 项审计 0 fail，全部产品用法 blocked",
-    "面相/手相解释隔离：几何、位置与掌纹外观继续可见；人格、职业、能力、财富、关系、现实运势和医疗推断统一 blocked"
+    "面相/手相解释隔离：几何、位置与掌纹外观继续可见；人格、职业、能力、财富、关系、现实运势和医疗推断统一 blocked",
+    "手部几何合同：指缝由错误宽窄阈值改为逐指角度；21 点不支持的掌丘饱满度伪测量已从特征、UI 和 AI 输入删除"
   ]
 }

@@ -10,6 +10,7 @@ import { analyzeYear, formatForAI as formatWuyunForAI } from '../../src/modules/
 import { buildVisionMessage } from '../../src/modules/wangzhen/engine.js';
 import { buildFaceTextMessage } from '../../src/modules/face/engine.js';
 import { buildPalmTextMessage } from '../../src/modules/palm/engine.js';
+import { analyzeHandFeatures } from '../../src/lib/mediapipe.js';
 import {
   FACE_INTERPRETATION_VALIDATION,
   THREE_STOP_LABELS,
@@ -21,6 +22,7 @@ import {
   HAND_WUXING_TYPES,
   MOUND_NAMES,
   PALM_INTERPRETATION_VALIDATION,
+  describeFingerGaps,
 } from '../../src/modules/palm/data.js';
 
 const ROOT = new URL('../../', import.meta.url);
@@ -178,6 +180,27 @@ test('keeps face and palm geometry separate from personality, career, and fortun
   assert.match(palmPrompt, /不得把手部比例或掌纹.*人格、职业、能力或现实运势/);
   assert.doesNotMatch(facePrompt, /三停均匀最佳|高挺=有主见事业心|圆润有肉=聚财/);
   assert.doesNotMatch(palmPrompt, /食指>无名指|运动\/艺术天赋|有且清晰=目标明确/);
+});
+
+test('does not present hand-landmark proxies as palm-mound measurements', () => {
+  const landmarks = Array.from({ length: 21 }, (_, index) => ({
+    x: (index % 5) * 0.04 + Math.floor(index / 5) * 0.01,
+    y: Math.floor(index / 5) * 0.08 + (index % 3) * 0.01,
+    z: -index * 0.001,
+  }));
+  const features = analyzeHandFeatures(landmarks, 'Right');
+  assert.equal('moundEstimates' in features, false);
+
+  const gapText = describeFingerGaps({ thumbIndex: 28.4, indexMiddle: 12.1 });
+  assert.match(gapText, /28\.4°/);
+  assert.match(gapText, /12\.1°/);
+  assert.doesNotMatch(gapText, /较宽|较窄|性格/);
+
+  const promptMessage = buildPalmTextMessage({
+    ...features,
+    moundEstimates: { jupiter: 'prominent' },
+  }, {});
+  assert.doesNotMatch(promptMessage.content, /丘位估计|木星丘|饱满|平坦/);
 });
 
 test('keeps unvalidated legacy medical lookup tables out of runtime consumers', async () => {

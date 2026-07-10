@@ -7,7 +7,6 @@ import {
   describeFingerRatio,
   describeFingerGaps,
   describePalmLineAnswer,
-  MOUND_NAMES,
 } from './data.js';
 
 // ===== Palm Line Identification (Vision API pre-fill) =====
@@ -101,18 +100,6 @@ export function buildPalmTextMessage(features, answers, userNote) {
       `  拇指 ${fl.thumb || '?'} · 食指 ${fl.index || '?'} · 中指 ${fl.middle || '?'} · 无名指 ${fl.ring || '?'} · 小指 ${fl.pinky || '?'}`,
       ''
     );
-  }
-
-  // Mound estimates
-  if (features?.moundEstimates) {
-    lines.push('丘位估计（基于骨骼凸起程度）：');
-    for (const [key, val] of Object.entries(features.moundEstimates)) {
-      const mound = MOUND_NAMES[key];
-      if (mound) {
-        lines.push(`  ${mound.name}（${mound.location}）：${val > 0.6 ? '饱满' : val > 0.4 ? '适中' : '平坦'}`);
-      }
-    }
-    lines.push('');
   }
 
   // Questionnaire answers (palm lines that ML can't detect)

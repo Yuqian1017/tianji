@@ -317,7 +317,7 @@ export default function PalmModule({
       <ModuleIntro
         moduleId="palm"
         origin="手相术以手型、掌纹和丘位建立传统分类。本模块使用浏览器端模型提取手部关键点，并把用户或视觉模型观察到的掌纹外观与传统术语分开记录。"
-        strengths="手型分类 · 掌纹外观 · 丘位位置 · 手指比例 · 来源区分"
+        strengths="手型分类 · 掌纹外观 · 手指比例 · 张开角度 · 来源区分"
       />
 
       {/* 输入阶段 */}

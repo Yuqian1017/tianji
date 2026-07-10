@@ -121,10 +121,16 @@ export function describeFingerRatio(indexRingRatio) {
 }
 
 export function describeFingerGaps(gaps) {
-  const wide = Object.values(gaps).filter(g => g > 0.06).length;
-  if (wide >= 3) return '多数指缝较宽';
-  if (wide >= 1) return '部分指缝较宽';
-  return '指缝整体较窄';
+  const labels = {
+    thumbIndex: '拇食指',
+    indexMiddle: '食中指',
+    middleRing: '中无名指',
+    ringPinky: '无名小指',
+  };
+  const values = Object.entries(gaps)
+    .filter(([, value]) => Number.isFinite(value))
+    .map(([key, value]) => `${labels[key] ?? key} ${value}°`);
+  return values.length > 0 ? values.join(' · ') : '未提取';
 }
 
 export function describePalmLineAnswer(questionId, answer) {
