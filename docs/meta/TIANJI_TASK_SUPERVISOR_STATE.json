@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-10",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 54,
-  "currentFocus": "共享真太阳时、城市经度、时区与日期边界验证；中医临床解释继续 blocked。",
-  "nextDecision": "核验共享城市数据和四个排盘入口的时间消费一致性，再继续药典、妊娠、配伍、方剂与外治安全层。",
+  "overallPercent": 56,
+  "currentFocus": "中医逐药药典、妊娠、配伍、方剂与穴位外治安全验证；临床解释继续 blocked。",
+  "nextDecision": "先固定 Skill 剂量/妊娠/配伍表与当前 legacy 消费清单，再按现行权威来源分批裁决 product eligibility。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 96,
+      "progress": 97,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -40,6 +40,7 @@
         "旧 34 题、22 计量项、30 穴位已归档并隔离；法定毒性 28 项规范化，100 行/101 药名剂量表待 2025 药典校准",
         "五运六气基础年结构 60 年、3,325 项 0 fail；主运太少和交司日标签已修复，复杂派生与现实解释 blocked",
         "子午基础对应全天 1,440 分钟、4,457 项 0 fail；当令/排毒/最佳时段旁路已清除，完整针法与临床解释 blocked",
+        "共享城市/民用时区当前 374 城市域 132,836 项 0 fail；276 个中国城市省级合同、历史 DST、闰年分母和五条消费路径通过",
         "第二轮 PRD fresh review 为 HOLD：需补 P1 工具闭环、最小可消费 Database、流派口径和掌握度算法合同",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
@@ -132,6 +133,22 @@
       "status": "in_progress",
       "phase": "V0",
       "doneWhen": "每个 runtime engine/data/prompt 和 raw source 都有验证单元、风险、方法与状态。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-019",
+      "name": "中医药典、妊娠、配伍、方剂与外治安全验证",
+      "status": "in_progress",
+      "phase": "V0",
+      "doneWhen": "当前产品和 Skill 中的具体药名、剂量、妊娠/配伍禁忌、方剂警示与穴位外治逐项进入来源、安全和消费裁决；未通过项继续 blocked。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-018",
+      "name": "共享城市、民用时区与真太阳时验证",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "当前城市域有固定来源、IANA zone、历史 DST/重复/跳时 fixture 和全部运行时消费路径回归；扩域边界显式记录。",
       "owner": "Codex"
     },
     {
@@ -312,7 +329,7 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "shared_time_city_validation_in_progress", "rule": "五运与子午基础结构已通过；当前核验共享时间、城市与跨入口消费，解释层继续 blocked。" },
+    { "name": "排盘与数据库正确性", "state": "tcm_pharmacopoeia_validation_in_progress", "rule": "共享城市/民用时区当前域已通过；当前核验中医药典、妊娠、配伍、方剂与外治安全，临床解释继续 blocked。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
@@ -369,6 +386,8 @@
     "TJI-VAL-015 首批安全门槛：213 项审计与四个产品入口回归通过，医学层继续 blocked",
     "TJI-VAL-016 完成：五运六气基础年结构 3,325 项 0 fail，桌面/390x844 通过",
     "TJI-VAL-017 完成：子午基础对应全天 1,440 分钟、4,457 项 0 fail；旁路旧医学化文案已移除",
+    "TJI-VAL-018 完成：374 条 GeoNames 来源行、276 个中国城市省级合同、73,414 日、17,952 城市时点与 10 个 DST fixture 共 132,836 项 0 fail",
+    "共享时间浏览器回归：拉斯维加斯为 America/Los_Angeles；纽约 2025-07-15 午时校正 -62 分；390x844 无水平溢出",
     "第二轮 PRD fresh reviewer：5 个 P1、2 个 P2，无 P0；结论 HOLD"
   ]
 }

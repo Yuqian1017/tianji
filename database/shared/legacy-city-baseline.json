@@ -1,0 +1,2062 @@
+{
+  "schemaVersion": 1,
+  "status": "legacy_unproven_runtime_baseline",
+  "capturedAt": "2026-07-10",
+  "note": "Preserves the pre-validation display labels, approximate longitudes and fixed standard meridians for audit only.",
+  "cities": [
+    {
+      "name": "布宜诺斯艾利斯",
+      "province": "阿根廷",
+      "lng": -58.38,
+      "stdMeridian": -45,
+      "en": "Buenos Aires"
+    },
+    {
+      "name": "迪拜",
+      "province": "阿联酋",
+      "lng": 55.27,
+      "stdMeridian": 60,
+      "en": "Dubai"
+    },
+    {
+      "name": "开罗",
+      "province": "埃及",
+      "lng": 31.24,
+      "stdMeridian": 30,
+      "en": "Cairo"
+    },
+    {
+      "name": "安庆",
+      "province": "安徽",
+      "lng": 117.05
+    },
+    {
+      "name": "蚌埠",
+      "province": "安徽",
+      "lng": 117.39
+    },
+    {
+      "name": "阜阳",
+      "province": "安徽",
+      "lng": 115.81
+    },
+    {
+      "name": "合肥",
+      "province": "安徽",
+      "lng": 117.28
+    },
+    {
+      "name": "黄山",
+      "province": "安徽",
+      "lng": 118.34
+    },
+    {
+      "name": "六安",
+      "province": "安徽",
+      "lng": 116.51
+    },
+    {
+      "name": "马鞍山",
+      "province": "安徽",
+      "lng": 118.51
+    },
+    {
+      "name": "芜湖",
+      "province": "安徽",
+      "lng": 118.38
+    },
+    {
+      "name": "维也纳",
+      "province": "奥地利",
+      "lng": 16.37,
+      "stdMeridian": 15,
+      "en": "Vienna"
+    },
+    {
+      "name": "布里斯班",
+      "province": "澳大利亚",
+      "lng": 153.03,
+      "stdMeridian": 150,
+      "en": "Brisbane"
+    },
+    {
+      "name": "墨尔本",
+      "province": "澳大利亚",
+      "lng": 144.96,
+      "stdMeridian": 150,
+      "en": "Melbourne"
+    },
+    {
+      "name": "珀斯",
+      "province": "澳大利亚",
+      "lng": 115.86,
+      "stdMeridian": 120,
+      "en": "Perth"
+    },
+    {
+      "name": "悉尼",
+      "province": "澳大利亚",
+      "lng": 151.21,
+      "stdMeridian": 150,
+      "en": "Sydney"
+    },
+    {
+      "name": "澳门",
+      "province": "澳门",
+      "lng": 113.54
+    },
+    {
+      "name": "圣保罗",
+      "province": "巴西",
+      "lng": -46.63,
+      "stdMeridian": -45,
+      "en": "São Paulo"
+    },
+    {
+      "name": "北京",
+      "province": "北京",
+      "lng": 116.4
+    },
+    {
+      "name": "重庆",
+      "province": "重庆",
+      "lng": 106.55
+    },
+    {
+      "name": "柏林",
+      "province": "德国",
+      "lng": 13.41,
+      "stdMeridian": 15,
+      "en": "Berlin"
+    },
+    {
+      "name": "法兰克福",
+      "province": "德国",
+      "lng": 8.68,
+      "stdMeridian": 15,
+      "en": "Frankfurt"
+    },
+    {
+      "name": "慕尼黑",
+      "province": "德国",
+      "lng": 11.58,
+      "stdMeridian": 15,
+      "en": "Munich"
+    },
+    {
+      "name": "莫斯科",
+      "province": "俄罗斯",
+      "lng": 37.62,
+      "stdMeridian": 45,
+      "en": "Moscow"
+    },
+    {
+      "name": "圣彼得堡",
+      "province": "俄罗斯",
+      "lng": 30.32,
+      "stdMeridian": 45,
+      "en": "Saint Petersburg"
+    },
+    {
+      "name": "巴黎",
+      "province": "法国",
+      "lng": 2.35,
+      "stdMeridian": 15,
+      "en": "Paris"
+    },
+    {
+      "name": "马尼拉",
+      "province": "菲律宾",
+      "lng": 120.98,
+      "stdMeridian": 120,
+      "en": "Manila"
+    },
+    {
+      "name": "福州",
+      "province": "福建",
+      "lng": 119.3
+    },
+    {
+      "name": "龙岩",
+      "province": "福建",
+      "lng": 117.02
+    },
+    {
+      "name": "南平",
+      "province": "福建",
+      "lng": 118.18
+    },
+    {
+      "name": "宁德",
+      "province": "福建",
+      "lng": 119.53
+    },
+    {
+      "name": "莆田",
+      "province": "福建",
+      "lng": 119.01
+    },
+    {
+      "name": "泉州",
+      "province": "福建",
+      "lng": 118.59
+    },
+    {
+      "name": "三明",
+      "province": "福建",
+      "lng": 117.64
+    },
+    {
+      "name": "厦门",
+      "province": "福建",
+      "lng": 118.09
+    },
+    {
+      "name": "漳州",
+      "province": "福建",
+      "lng": 117.65
+    },
+    {
+      "name": "白银",
+      "province": "甘肃",
+      "lng": 104.17
+    },
+    {
+      "name": "嘉峪关",
+      "province": "甘肃",
+      "lng": 98.29
+    },
+    {
+      "name": "酒泉",
+      "province": "甘肃",
+      "lng": 98.51
+    },
+    {
+      "name": "兰州",
+      "province": "甘肃",
+      "lng": 103.83
+    },
+    {
+      "name": "平凉",
+      "province": "甘肃",
+      "lng": 106.67
+    },
+    {
+      "name": "庆阳",
+      "province": "甘肃",
+      "lng": 107.64
+    },
+    {
+      "name": "天水",
+      "province": "甘肃",
+      "lng": 105.72
+    },
+    {
+      "name": "武威",
+      "province": "甘肃",
+      "lng": 102.64
+    },
+    {
+      "name": "张掖",
+      "province": "甘肃",
+      "lng": 100.45
+    },
+    {
+      "name": "潮州",
+      "province": "广东",
+      "lng": 116.62
+    },
+    {
+      "name": "东莞",
+      "province": "广东",
+      "lng": 113.75
+    },
+    {
+      "name": "佛山",
+      "province": "广东",
+      "lng": 113.12
+    },
+    {
+      "name": "广州",
+      "province": "广东",
+      "lng": 113.26
+    },
+    {
+      "name": "河源",
+      "province": "广东",
+      "lng": 114.7
+    },
+    {
+      "name": "惠州",
+      "province": "广东",
+      "lng": 114.42
+    },
+    {
+      "name": "江门",
+      "province": "广东",
+      "lng": 113.08
+    },
+    {
+      "name": "揭阳",
+      "province": "广东",
+      "lng": 116.37
+    },
+    {
+      "name": "茂名",
+      "province": "广东",
+      "lng": 110.92
+    },
+    {
+      "name": "梅州",
+      "province": "广东",
+      "lng": 116.12
+    },
+    {
+      "name": "清远",
+      "province": "广东",
+      "lng": 113.06
+    },
+    {
+      "name": "汕头",
+      "province": "广东",
+      "lng": 116.68
+    },
+    {
+      "name": "汕尾",
+      "province": "广东",
+      "lng": 115.37
+    },
+    {
+      "name": "韶关",
+      "province": "广东",
+      "lng": 113.6
+    },
+    {
+      "name": "深圳",
+      "province": "广东",
+      "lng": 114.06
+    },
+    {
+      "name": "阳江",
+      "province": "广东",
+      "lng": 111.98
+    },
+    {
+      "name": "湛江",
+      "province": "广东",
+      "lng": 110.36
+    },
+    {
+      "name": "肇庆",
+      "province": "广东",
+      "lng": 112.47
+    },
+    {
+      "name": "中山",
+      "province": "广东",
+      "lng": 113.38
+    },
+    {
+      "name": "珠海",
+      "province": "广东",
+      "lng": 113.58
+    },
+    {
+      "name": "百色",
+      "province": "广西",
+      "lng": 106.62
+    },
+    {
+      "name": "北海",
+      "province": "广西",
+      "lng": 109.12
+    },
+    {
+      "name": "贵港",
+      "province": "广西",
+      "lng": 109.6
+    },
+    {
+      "name": "桂林",
+      "province": "广西",
+      "lng": 110.29
+    },
+    {
+      "name": "河池",
+      "province": "广西",
+      "lng": 108.06
+    },
+    {
+      "name": "柳州",
+      "province": "广西",
+      "lng": 109.43
+    },
+    {
+      "name": "南宁",
+      "province": "广西",
+      "lng": 108.37
+    },
+    {
+      "name": "钦州",
+      "province": "广西",
+      "lng": 108.62
+    },
+    {
+      "name": "梧州",
+      "province": "广西",
+      "lng": 111.28
+    },
+    {
+      "name": "玉林",
+      "province": "广西",
+      "lng": 110.15
+    },
+    {
+      "name": "安顺",
+      "province": "贵州",
+      "lng": 105.95
+    },
+    {
+      "name": "毕节",
+      "province": "贵州",
+      "lng": 105.29
+    },
+    {
+      "name": "都匀",
+      "province": "贵州",
+      "lng": 107.52
+    },
+    {
+      "name": "贵阳",
+      "province": "贵州",
+      "lng": 106.71
+    },
+    {
+      "name": "凯里",
+      "province": "贵州",
+      "lng": 107.98
+    },
+    {
+      "name": "六盘水",
+      "province": "贵州",
+      "lng": 104.83
+    },
+    {
+      "name": "铜仁",
+      "province": "贵州",
+      "lng": 109.19
+    },
+    {
+      "name": "兴义",
+      "province": "贵州",
+      "lng": 104.9
+    },
+    {
+      "name": "遵义",
+      "province": "贵州",
+      "lng": 106.93
+    },
+    {
+      "name": "海口",
+      "province": "海南",
+      "lng": 110.35
+    },
+    {
+      "name": "三亚",
+      "province": "海南",
+      "lng": 109.51
+    },
+    {
+      "name": "釜山",
+      "province": "韩国",
+      "lng": 129.04,
+      "stdMeridian": 135,
+      "en": "Busan"
+    },
+    {
+      "name": "仁川",
+      "province": "韩国",
+      "lng": 126.71,
+      "stdMeridian": 135,
+      "en": "Incheon"
+    },
+    {
+      "name": "首尔",
+      "province": "韩国",
+      "lng": 126.98,
+      "stdMeridian": 135,
+      "en": "Seoul"
+    },
+    {
+      "name": "保定",
+      "province": "河北",
+      "lng": 115.46
+    },
+    {
+      "name": "沧州",
+      "province": "河北",
+      "lng": 116.86
+    },
+    {
+      "name": "承德",
+      "province": "河北",
+      "lng": 117.93
+    },
+    {
+      "name": "邯郸",
+      "province": "河北",
+      "lng": 114.49
+    },
+    {
+      "name": "衡水",
+      "province": "河北",
+      "lng": 115.67
+    },
+    {
+      "name": "廊坊",
+      "province": "河北",
+      "lng": 116.68
+    },
+    {
+      "name": "秦皇岛",
+      "province": "河北",
+      "lng": 119.6
+    },
+    {
+      "name": "石家庄",
+      "province": "河北",
+      "lng": 114.51
+    },
+    {
+      "name": "唐山",
+      "province": "河北",
+      "lng": 118.18
+    },
+    {
+      "name": "邢台",
+      "province": "河北",
+      "lng": 114.5
+    },
+    {
+      "name": "张家口",
+      "province": "河北",
+      "lng": 114.88
+    },
+    {
+      "name": "安阳",
+      "province": "河南",
+      "lng": 114.39
+    },
+    {
+      "name": "鹤壁",
+      "province": "河南",
+      "lng": 114.3
+    },
+    {
+      "name": "焦作",
+      "province": "河南",
+      "lng": 113.24
+    },
+    {
+      "name": "开封",
+      "province": "河南",
+      "lng": 114.31
+    },
+    {
+      "name": "洛阳",
+      "province": "河南",
+      "lng": 112.45
+    },
+    {
+      "name": "漯河",
+      "province": "河南",
+      "lng": 114.02
+    },
+    {
+      "name": "南阳",
+      "province": "河南",
+      "lng": 112.53
+    },
+    {
+      "name": "平顶山",
+      "province": "河南",
+      "lng": 113.19
+    },
+    {
+      "name": "濮阳",
+      "province": "河南",
+      "lng": 115.03
+    },
+    {
+      "name": "三门峡",
+      "province": "河南",
+      "lng": 111.2
+    },
+    {
+      "name": "商丘",
+      "province": "河南",
+      "lng": 115.66
+    },
+    {
+      "name": "新乡",
+      "province": "河南",
+      "lng": 113.88
+    },
+    {
+      "name": "信阳",
+      "province": "河南",
+      "lng": 114.07
+    },
+    {
+      "name": "许昌",
+      "province": "河南",
+      "lng": 113.85
+    },
+    {
+      "name": "郑州",
+      "province": "河南",
+      "lng": 113.65
+    },
+    {
+      "name": "周口",
+      "province": "河南",
+      "lng": 114.65
+    },
+    {
+      "name": "驻马店",
+      "province": "河南",
+      "lng": 114.02
+    },
+    {
+      "name": "阿姆斯特丹",
+      "province": "荷兰",
+      "lng": 4.9,
+      "stdMeridian": 15,
+      "en": "Amsterdam"
+    },
+    {
+      "name": "大庆",
+      "province": "黑龙江",
+      "lng": 125.1
+    },
+    {
+      "name": "哈尔滨",
+      "province": "黑龙江",
+      "lng": 126.65
+    },
+    {
+      "name": "佳木斯",
+      "province": "黑龙江",
+      "lng": 130.36
+    },
+    {
+      "name": "牡丹江",
+      "province": "黑龙江",
+      "lng": 129.63
+    },
+    {
+      "name": "齐齐哈尔",
+      "province": "黑龙江",
+      "lng": 123.97
+    },
+    {
+      "name": "绥化",
+      "province": "黑龙江",
+      "lng": 126.97
+    },
+    {
+      "name": "恩施",
+      "province": "湖北",
+      "lng": 109.49
+    },
+    {
+      "name": "黄冈",
+      "province": "湖北",
+      "lng": 114.87
+    },
+    {
+      "name": "黄石",
+      "province": "湖北",
+      "lng": 115.04
+    },
+    {
+      "name": "荆门",
+      "province": "湖北",
+      "lng": 112.2
+    },
+    {
+      "name": "荆州",
+      "province": "湖北",
+      "lng": 112.24
+    },
+    {
+      "name": "十堰",
+      "province": "湖北",
+      "lng": 110.8
+    },
+    {
+      "name": "武汉",
+      "province": "湖北",
+      "lng": 114.3
+    },
+    {
+      "name": "咸宁",
+      "province": "湖北",
+      "lng": 114.32
+    },
+    {
+      "name": "襄阳",
+      "province": "湖北",
+      "lng": 112.14
+    },
+    {
+      "name": "孝感",
+      "province": "湖北",
+      "lng": 113.92
+    },
+    {
+      "name": "宜昌",
+      "province": "湖北",
+      "lng": 111.29
+    },
+    {
+      "name": "常德",
+      "province": "湖南",
+      "lng": 111.69
+    },
+    {
+      "name": "郴州",
+      "province": "湖南",
+      "lng": 113.01
+    },
+    {
+      "name": "衡阳",
+      "province": "湖南",
+      "lng": 112.57
+    },
+    {
+      "name": "怀化",
+      "province": "湖南",
+      "lng": 109.97
+    },
+    {
+      "name": "娄底",
+      "province": "湖南",
+      "lng": 111.99
+    },
+    {
+      "name": "邵阳",
+      "province": "湖南",
+      "lng": 111.47
+    },
+    {
+      "name": "湘潭",
+      "province": "湖南",
+      "lng": 112.94
+    },
+    {
+      "name": "湘西",
+      "province": "湖南",
+      "lng": 109.74
+    },
+    {
+      "name": "益阳",
+      "province": "湖南",
+      "lng": 112.36
+    },
+    {
+      "name": "永州",
+      "province": "湖南",
+      "lng": 111.61
+    },
+    {
+      "name": "岳阳",
+      "province": "湖南",
+      "lng": 113.13
+    },
+    {
+      "name": "张家界",
+      "province": "湖南",
+      "lng": 110.48
+    },
+    {
+      "name": "长沙",
+      "province": "湖南",
+      "lng": 112.97
+    },
+    {
+      "name": "株洲",
+      "province": "湖南",
+      "lng": 113.13
+    },
+    {
+      "name": "吉林",
+      "province": "吉林",
+      "lng": 126.55
+    },
+    {
+      "name": "四平",
+      "province": "吉林",
+      "lng": 124.35
+    },
+    {
+      "name": "通化",
+      "province": "吉林",
+      "lng": 125.94
+    },
+    {
+      "name": "延吉",
+      "province": "吉林",
+      "lng": 129.51
+    },
+    {
+      "name": "长春",
+      "province": "吉林",
+      "lng": 125.32
+    },
+    {
+      "name": "埃德蒙顿",
+      "province": "加拿大",
+      "lng": -113.49,
+      "stdMeridian": -105,
+      "en": "Edmonton"
+    },
+    {
+      "name": "多伦多",
+      "province": "加拿大",
+      "lng": -79.38,
+      "stdMeridian": -75,
+      "en": "Toronto"
+    },
+    {
+      "name": "卡尔加里",
+      "province": "加拿大",
+      "lng": -114.07,
+      "stdMeridian": -105,
+      "en": "Calgary"
+    },
+    {
+      "name": "蒙特利尔",
+      "province": "加拿大",
+      "lng": -73.57,
+      "stdMeridian": -75,
+      "en": "Montreal"
+    },
+    {
+      "name": "温哥华",
+      "province": "加拿大",
+      "lng": -123.12,
+      "stdMeridian": -120,
+      "en": "Vancouver"
+    },
+    {
+      "name": "渥太华",
+      "province": "加拿大",
+      "lng": -75.7,
+      "stdMeridian": -75,
+      "en": "Ottawa"
+    },
+    {
+      "name": "常州",
+      "province": "江苏",
+      "lng": 119.97
+    },
+    {
+      "name": "淮安",
+      "province": "江苏",
+      "lng": 119.02
+    },
+    {
+      "name": "连云港",
+      "province": "江苏",
+      "lng": 119.22
+    },
+    {
+      "name": "南京",
+      "province": "江苏",
+      "lng": 118.8
+    },
+    {
+      "name": "南通",
+      "province": "江苏",
+      "lng": 120.86
+    },
+    {
+      "name": "苏州",
+      "province": "江苏",
+      "lng": 120.62
+    },
+    {
+      "name": "宿迁",
+      "province": "江苏",
+      "lng": 118.28
+    },
+    {
+      "name": "泰州",
+      "province": "江苏",
+      "lng": 119.92
+    },
+    {
+      "name": "无锡",
+      "province": "江苏",
+      "lng": 120.31
+    },
+    {
+      "name": "徐州",
+      "province": "江苏",
+      "lng": 117.28
+    },
+    {
+      "name": "盐城",
+      "province": "江苏",
+      "lng": 120.16
+    },
+    {
+      "name": "扬州",
+      "province": "江苏",
+      "lng": 119.42
+    },
+    {
+      "name": "镇江",
+      "province": "江苏",
+      "lng": 119.45
+    },
+    {
+      "name": "抚州",
+      "province": "江西",
+      "lng": 116.36
+    },
+    {
+      "name": "赣州",
+      "province": "江西",
+      "lng": 114.93
+    },
+    {
+      "name": "吉安",
+      "province": "江西",
+      "lng": 114.99
+    },
+    {
+      "name": "景德镇",
+      "province": "江西",
+      "lng": 117.18
+    },
+    {
+      "name": "九江",
+      "province": "江西",
+      "lng": 116
+    },
+    {
+      "name": "南昌",
+      "province": "江西",
+      "lng": 115.86
+    },
+    {
+      "name": "上饶",
+      "province": "江西",
+      "lng": 117.94
+    },
+    {
+      "name": "宜春",
+      "province": "江西",
+      "lng": 114.39
+    },
+    {
+      "name": "布拉格",
+      "province": "捷克",
+      "lng": 14.42,
+      "stdMeridian": 15,
+      "en": "Prague"
+    },
+    {
+      "name": "鞍山",
+      "province": "辽宁",
+      "lng": 122.99
+    },
+    {
+      "name": "本溪",
+      "province": "辽宁",
+      "lng": 123.77
+    },
+    {
+      "name": "朝阳",
+      "province": "辽宁",
+      "lng": 120.45
+    },
+    {
+      "name": "大连",
+      "province": "辽宁",
+      "lng": 121.61
+    },
+    {
+      "name": "丹东",
+      "province": "辽宁",
+      "lng": 124.38
+    },
+    {
+      "name": "抚顺",
+      "province": "辽宁",
+      "lng": 123.96
+    },
+    {
+      "name": "阜新",
+      "province": "辽宁",
+      "lng": 121.67
+    },
+    {
+      "name": "葫芦岛",
+      "province": "辽宁",
+      "lng": 120.84
+    },
+    {
+      "name": "锦州",
+      "province": "辽宁",
+      "lng": 121.13
+    },
+    {
+      "name": "辽阳",
+      "province": "辽宁",
+      "lng": 123.17
+    },
+    {
+      "name": "盘锦",
+      "province": "辽宁",
+      "lng": 122.07
+    },
+    {
+      "name": "沈阳",
+      "province": "辽宁",
+      "lng": 123.43
+    },
+    {
+      "name": "铁岭",
+      "province": "辽宁",
+      "lng": 123.84
+    },
+    {
+      "name": "营口",
+      "province": "辽宁",
+      "lng": 122.24
+    },
+    {
+      "name": "槟城",
+      "province": "马来西亚",
+      "lng": 100.33,
+      "stdMeridian": 120,
+      "en": "Penang"
+    },
+    {
+      "name": "吉隆坡",
+      "province": "马来西亚",
+      "lng": 101.69,
+      "stdMeridian": 120,
+      "en": "Kuala Lumpur"
+    },
+    {
+      "name": "安克雷奇",
+      "province": "美国阿拉斯加",
+      "lng": -149.9,
+      "stdMeridian": -135,
+      "en": "Anchorage"
+    },
+    {
+      "name": "奥兰多",
+      "province": "美国东部",
+      "lng": -81.38,
+      "stdMeridian": -75,
+      "en": "Orlando"
+    },
+    {
+      "name": "波士顿",
+      "province": "美国东部",
+      "lng": -71.06,
+      "stdMeridian": -75,
+      "en": "Boston"
+    },
+    {
+      "name": "底特律",
+      "province": "美国东部",
+      "lng": -83.05,
+      "stdMeridian": -75,
+      "en": "Detroit"
+    },
+    {
+      "name": "费城",
+      "province": "美国东部",
+      "lng": -75.17,
+      "stdMeridian": -75,
+      "en": "Philadelphia"
+    },
+    {
+      "name": "华盛顿",
+      "province": "美国东部",
+      "lng": -77.04,
+      "stdMeridian": -75,
+      "en": "Washington DC"
+    },
+    {
+      "name": "迈阿密",
+      "province": "美国东部",
+      "lng": -80.19,
+      "stdMeridian": -75,
+      "en": "Miami"
+    },
+    {
+      "name": "纽约",
+      "province": "美国东部",
+      "lng": -74.01,
+      "stdMeridian": -75,
+      "en": "New York"
+    },
+    {
+      "name": "匹兹堡",
+      "province": "美国东部",
+      "lng": -79.99,
+      "stdMeridian": -75,
+      "en": "Pittsburgh"
+    },
+    {
+      "name": "夏洛特",
+      "province": "美国东部",
+      "lng": -80.84,
+      "stdMeridian": -75,
+      "en": "Charlotte"
+    },
+    {
+      "name": "亚特兰大",
+      "province": "美国东部",
+      "lng": -84.39,
+      "stdMeridian": -75,
+      "en": "Atlanta"
+    },
+    {
+      "name": "阿尔伯克基",
+      "province": "美国山地",
+      "lng": -106.65,
+      "stdMeridian": -105,
+      "en": "Albuquerque"
+    },
+    {
+      "name": "丹佛",
+      "province": "美国山地",
+      "lng": -104.99,
+      "stdMeridian": -105,
+      "en": "Denver"
+    },
+    {
+      "name": "菲尼克斯",
+      "province": "美国山地",
+      "lng": -112.07,
+      "stdMeridian": -105,
+      "en": "Phoenix"
+    },
+    {
+      "name": "拉斯维加斯",
+      "province": "美国山地",
+      "lng": -115.14,
+      "stdMeridian": -105,
+      "en": "Las Vegas"
+    },
+    {
+      "name": "盐湖城",
+      "province": "美国山地",
+      "lng": -111.89,
+      "stdMeridian": -105,
+      "en": "Salt Lake City"
+    },
+    {
+      "name": "波特兰",
+      "province": "美国西部",
+      "lng": -122.68,
+      "stdMeridian": -120,
+      "en": "Portland"
+    },
+    {
+      "name": "旧金山",
+      "province": "美国西部",
+      "lng": -122.42,
+      "stdMeridian": -120,
+      "en": "San Francisco"
+    },
+    {
+      "name": "洛杉矶",
+      "province": "美国西部",
+      "lng": -118.24,
+      "stdMeridian": -120,
+      "en": "Los Angeles"
+    },
+    {
+      "name": "萨克拉门托",
+      "province": "美国西部",
+      "lng": -121.49,
+      "stdMeridian": -120,
+      "en": "Sacramento"
+    },
+    {
+      "name": "圣地亚哥",
+      "province": "美国西部",
+      "lng": -117.16,
+      "stdMeridian": -120,
+      "en": "San Diego"
+    },
+    {
+      "name": "圣何塞",
+      "province": "美国西部",
+      "lng": -121.89,
+      "stdMeridian": -120,
+      "en": "San Jose"
+    },
+    {
+      "name": "西雅图",
+      "province": "美国西部",
+      "lng": -122.33,
+      "stdMeridian": -120,
+      "en": "Seattle"
+    },
+    {
+      "name": "檀香山",
+      "province": "美国夏威夷",
+      "lng": -157.86,
+      "stdMeridian": -150,
+      "en": "Honolulu"
+    },
+    {
+      "name": "奥斯汀",
+      "province": "美国中部",
+      "lng": -97.74,
+      "stdMeridian": -90,
+      "en": "Austin"
+    },
+    {
+      "name": "达拉斯",
+      "province": "美国中部",
+      "lng": -96.8,
+      "stdMeridian": -90,
+      "en": "Dallas"
+    },
+    {
+      "name": "堪萨斯城",
+      "province": "美国中部",
+      "lng": -94.58,
+      "stdMeridian": -90,
+      "en": "Kansas City"
+    },
+    {
+      "name": "明尼阿波利斯",
+      "province": "美国中部",
+      "lng": -93.27,
+      "stdMeridian": -90,
+      "en": "Minneapolis"
+    },
+    {
+      "name": "纳什维尔",
+      "province": "美国中部",
+      "lng": -86.78,
+      "stdMeridian": -90,
+      "en": "Nashville"
+    },
+    {
+      "name": "圣安东尼奥",
+      "province": "美国中部",
+      "lng": -98.49,
+      "stdMeridian": -90,
+      "en": "San Antonio"
+    },
+    {
+      "name": "新奥尔良",
+      "province": "美国中部",
+      "lng": -90.07,
+      "stdMeridian": -90,
+      "en": "New Orleans"
+    },
+    {
+      "name": "休斯顿",
+      "province": "美国中部",
+      "lng": -95.37,
+      "stdMeridian": -90,
+      "en": "Houston"
+    },
+    {
+      "name": "芝加哥",
+      "province": "美国中部",
+      "lng": -87.63,
+      "stdMeridian": -90,
+      "en": "Chicago"
+    },
+    {
+      "name": "利马",
+      "province": "秘鲁",
+      "lng": -77.04,
+      "stdMeridian": -75,
+      "en": "Lima"
+    },
+    {
+      "name": "约翰内斯堡",
+      "province": "南非",
+      "lng": 28.05,
+      "stdMeridian": 30,
+      "en": "Johannesburg"
+    },
+    {
+      "name": "包头",
+      "province": "内蒙古",
+      "lng": 109.84
+    },
+    {
+      "name": "赤峰",
+      "province": "内蒙古",
+      "lng": 118.89
+    },
+    {
+      "name": "鄂尔多斯",
+      "province": "内蒙古",
+      "lng": 109.99
+    },
+    {
+      "name": "呼和浩特",
+      "province": "内蒙古",
+      "lng": 111.75
+    },
+    {
+      "name": "呼伦贝尔",
+      "province": "内蒙古",
+      "lng": 119.77
+    },
+    {
+      "name": "通辽",
+      "province": "内蒙古",
+      "lng": 122.24
+    },
+    {
+      "name": "固原",
+      "province": "宁夏",
+      "lng": 106.24
+    },
+    {
+      "name": "石嘴山",
+      "province": "宁夏",
+      "lng": 106.38
+    },
+    {
+      "name": "吴忠",
+      "province": "宁夏",
+      "lng": 106.2
+    },
+    {
+      "name": "银川",
+      "province": "宁夏",
+      "lng": 106.23
+    },
+    {
+      "name": "中卫",
+      "province": "宁夏",
+      "lng": 105.19
+    },
+    {
+      "name": "格尔木",
+      "province": "青海",
+      "lng": 94.9
+    },
+    {
+      "name": "海东",
+      "province": "青海",
+      "lng": 102.1
+    },
+    {
+      "name": "西宁",
+      "province": "青海",
+      "lng": 101.77
+    },
+    {
+      "name": "大阪",
+      "province": "日本",
+      "lng": 135.5,
+      "stdMeridian": 135,
+      "en": "Osaka"
+    },
+    {
+      "name": "东京",
+      "province": "日本",
+      "lng": 139.69,
+      "stdMeridian": 135,
+      "en": "Tokyo"
+    },
+    {
+      "name": "福冈",
+      "province": "日本",
+      "lng": 130.42,
+      "stdMeridian": 135,
+      "en": "Fukuoka"
+    },
+    {
+      "name": "横滨",
+      "province": "日本",
+      "lng": 139.64,
+      "stdMeridian": 135,
+      "en": "Yokohama"
+    },
+    {
+      "name": "京都",
+      "province": "日本",
+      "lng": 135.77,
+      "stdMeridian": 135,
+      "en": "Kyoto"
+    },
+    {
+      "name": "名古屋",
+      "province": "日本",
+      "lng": 136.91,
+      "stdMeridian": 135,
+      "en": "Nagoya"
+    },
+    {
+      "name": "札幌",
+      "province": "日本",
+      "lng": 141.35,
+      "stdMeridian": 135,
+      "en": "Sapporo"
+    },
+    {
+      "name": "苏黎世",
+      "province": "瑞士",
+      "lng": 8.54,
+      "stdMeridian": 15,
+      "en": "Zurich"
+    },
+    {
+      "name": "滨州",
+      "province": "山东",
+      "lng": 117.97
+    },
+    {
+      "name": "德州",
+      "province": "山东",
+      "lng": 116.36
+    },
+    {
+      "name": "东营",
+      "province": "山东",
+      "lng": 118.67
+    },
+    {
+      "name": "菏泽",
+      "province": "山东",
+      "lng": 115.48
+    },
+    {
+      "name": "济南",
+      "province": "山东",
+      "lng": 117
+    },
+    {
+      "name": "济宁",
+      "province": "山东",
+      "lng": 116.59
+    },
+    {
+      "name": "聊城",
+      "province": "山东",
+      "lng": 115.99
+    },
+    {
+      "name": "临沂",
+      "province": "山东",
+      "lng": 118.36
+    },
+    {
+      "name": "青岛",
+      "province": "山东",
+      "lng": 120.38
+    },
+    {
+      "name": "日照",
+      "province": "山东",
+      "lng": 119.53
+    },
+    {
+      "name": "泰安",
+      "province": "山东",
+      "lng": 117.09
+    },
+    {
+      "name": "威海",
+      "province": "山东",
+      "lng": 122.12
+    },
+    {
+      "name": "潍坊",
+      "province": "山东",
+      "lng": 119.16
+    },
+    {
+      "name": "烟台",
+      "province": "山东",
+      "lng": 121.45
+    },
+    {
+      "name": "枣庄",
+      "province": "山东",
+      "lng": 117.32
+    },
+    {
+      "name": "淄博",
+      "province": "山东",
+      "lng": 118.05
+    },
+    {
+      "name": "大同",
+      "province": "山西",
+      "lng": 113.3
+    },
+    {
+      "name": "晋城",
+      "province": "山西",
+      "lng": 112.85
+    },
+    {
+      "name": "晋中",
+      "province": "山西",
+      "lng": 112.75
+    },
+    {
+      "name": "临汾",
+      "province": "山西",
+      "lng": 111.52
+    },
+    {
+      "name": "吕梁",
+      "province": "山西",
+      "lng": 111.14
+    },
+    {
+      "name": "朔州",
+      "province": "山西",
+      "lng": 112.43
+    },
+    {
+      "name": "太原",
+      "province": "山西",
+      "lng": 112.55
+    },
+    {
+      "name": "忻州",
+      "province": "山西",
+      "lng": 112.73
+    },
+    {
+      "name": "阳泉",
+      "province": "山西",
+      "lng": 113.58
+    },
+    {
+      "name": "运城",
+      "province": "山西",
+      "lng": 111.01
+    },
+    {
+      "name": "长治",
+      "province": "山西",
+      "lng": 113.12
+    },
+    {
+      "name": "安康",
+      "province": "陕西",
+      "lng": 109.03
+    },
+    {
+      "name": "宝鸡",
+      "province": "陕西",
+      "lng": 107.14
+    },
+    {
+      "name": "汉中",
+      "province": "陕西",
+      "lng": 107.02
+    },
+    {
+      "name": "商洛",
+      "province": "陕西",
+      "lng": 109.94
+    },
+    {
+      "name": "铜川",
+      "province": "陕西",
+      "lng": 108.95
+    },
+    {
+      "name": "渭南",
+      "province": "陕西",
+      "lng": 109.5
+    },
+    {
+      "name": "西安",
+      "province": "陕西",
+      "lng": 108.94
+    },
+    {
+      "name": "咸阳",
+      "province": "陕西",
+      "lng": 108.71
+    },
+    {
+      "name": "延安",
+      "province": "陕西",
+      "lng": 109.49
+    },
+    {
+      "name": "榆林",
+      "province": "陕西",
+      "lng": 109.73
+    },
+    {
+      "name": "上海",
+      "province": "上海",
+      "lng": 121.47
+    },
+    {
+      "name": "巴中",
+      "province": "四川",
+      "lng": 106.76
+    },
+    {
+      "name": "成都",
+      "province": "四川",
+      "lng": 104.07
+    },
+    {
+      "name": "达州",
+      "province": "四川",
+      "lng": 107.47
+    },
+    {
+      "name": "德阳",
+      "province": "四川",
+      "lng": 104.4
+    },
+    {
+      "name": "广安",
+      "province": "四川",
+      "lng": 106.63
+    },
+    {
+      "name": "广元",
+      "province": "四川",
+      "lng": 105.84
+    },
+    {
+      "name": "乐山",
+      "province": "四川",
+      "lng": 103.77
+    },
+    {
+      "name": "泸州",
+      "province": "四川",
+      "lng": 105.44
+    },
+    {
+      "name": "眉山",
+      "province": "四川",
+      "lng": 103.85
+    },
+    {
+      "name": "绵阳",
+      "province": "四川",
+      "lng": 104.73
+    },
+    {
+      "name": "南充",
+      "province": "四川",
+      "lng": 106.11
+    },
+    {
+      "name": "内江",
+      "province": "四川",
+      "lng": 105.06
+    },
+    {
+      "name": "攀枝花",
+      "province": "四川",
+      "lng": 101.72
+    },
+    {
+      "name": "遂宁",
+      "province": "四川",
+      "lng": 105.59
+    },
+    {
+      "name": "雅安",
+      "province": "四川",
+      "lng": 103
+    },
+    {
+      "name": "宜宾",
+      "province": "四川",
+      "lng": 104.64
+    },
+    {
+      "name": "资阳",
+      "province": "四川",
+      "lng": 104.63
+    },
+    {
+      "name": "自贡",
+      "province": "四川",
+      "lng": 104.77
+    },
+    {
+      "name": "高雄",
+      "province": "台湾",
+      "lng": 120.31
+    },
+    {
+      "name": "台北",
+      "province": "台湾",
+      "lng": 121.56
+    },
+    {
+      "name": "台南",
+      "province": "台湾",
+      "lng": 120.21
+    },
+    {
+      "name": "台中",
+      "province": "台湾",
+      "lng": 120.68
+    },
+    {
+      "name": "曼谷",
+      "province": "泰国",
+      "lng": 100.5,
+      "stdMeridian": 105,
+      "en": "Bangkok"
+    },
+    {
+      "name": "清迈",
+      "province": "泰国",
+      "lng": 98.98,
+      "stdMeridian": 105,
+      "en": "Chiang Mai"
+    },
+    {
+      "name": "天津",
+      "province": "天津",
+      "lng": 117.2
+    },
+    {
+      "name": "伊斯坦布尔",
+      "province": "土耳其",
+      "lng": 28.98,
+      "stdMeridian": 45,
+      "en": "Istanbul"
+    },
+    {
+      "name": "巴塞罗那",
+      "province": "西班牙",
+      "lng": 2.17,
+      "stdMeridian": 15,
+      "en": "Barcelona"
+    },
+    {
+      "name": "马德里",
+      "province": "西班牙",
+      "lng": -3.7,
+      "stdMeridian": 15,
+      "en": "Madrid"
+    },
+    {
+      "name": "拉萨",
+      "province": "西藏",
+      "lng": 91.11
+    },
+    {
+      "name": "林芝",
+      "province": "西藏",
+      "lng": 94.36
+    },
+    {
+      "name": "日喀则",
+      "province": "西藏",
+      "lng": 88.88
+    },
+    {
+      "name": "香港",
+      "province": "香港",
+      "lng": 114.17
+    },
+    {
+      "name": "新加坡",
+      "province": "新加坡",
+      "lng": 103.82,
+      "stdMeridian": 120,
+      "en": "Singapore"
+    },
+    {
+      "name": "阿克苏",
+      "province": "新疆",
+      "lng": 80.26
+    },
+    {
+      "name": "阿勒泰",
+      "province": "新疆",
+      "lng": 88.14
+    },
+    {
+      "name": "哈密",
+      "province": "新疆",
+      "lng": 93.51
+    },
+    {
+      "name": "和田",
+      "province": "新疆",
+      "lng": 79.91
+    },
+    {
+      "name": "喀什",
+      "province": "新疆",
+      "lng": 75.99
+    },
+    {
+      "name": "克拉玛依",
+      "province": "新疆",
+      "lng": 84.87
+    },
+    {
+      "name": "库尔勒",
+      "province": "新疆",
+      "lng": 86.15
+    },
+    {
+      "name": "塔城",
+      "province": "新疆",
+      "lng": 82.99
+    },
+    {
+      "name": "吐鲁番",
+      "province": "新疆",
+      "lng": 89.19
+    },
+    {
+      "name": "乌鲁木齐",
+      "province": "新疆",
+      "lng": 87.62
+    },
+    {
+      "name": "伊宁",
+      "province": "新疆",
+      "lng": 81.33
+    },
+    {
+      "name": "奥克兰",
+      "province": "新西兰",
+      "lng": 174.76,
+      "stdMeridian": 180,
+      "en": "Auckland"
+    },
+    {
+      "name": "惠灵顿",
+      "province": "新西兰",
+      "lng": 174.78,
+      "stdMeridian": 180,
+      "en": "Wellington"
+    },
+    {
+      "name": "耶路撒冷",
+      "province": "以色列",
+      "lng": 35.21,
+      "stdMeridian": 30,
+      "en": "Jerusalem"
+    },
+    {
+      "name": "罗马",
+      "province": "意大利",
+      "lng": 12.5,
+      "stdMeridian": 15,
+      "en": "Rome"
+    },
+    {
+      "name": "米兰",
+      "province": "意大利",
+      "lng": 9.19,
+      "stdMeridian": 15,
+      "en": "Milan"
+    },
+    {
+      "name": "孟买",
+      "province": "印度",
+      "lng": 72.88,
+      "stdMeridian": 82.5,
+      "en": "Mumbai"
+    },
+    {
+      "name": "新德里",
+      "province": "印度",
+      "lng": 77.21,
+      "stdMeridian": 82.5,
+      "en": "New Delhi"
+    },
+    {
+      "name": "雅加达",
+      "province": "印尼",
+      "lng": 106.85,
+      "stdMeridian": 105,
+      "en": "Jakarta"
+    },
+    {
+      "name": "爱丁堡",
+      "province": "英国",
+      "lng": -3.19,
+      "stdMeridian": 0,
+      "en": "Edinburgh"
+    },
+    {
+      "name": "伯明翰",
+      "province": "英国",
+      "lng": -1.9,
+      "stdMeridian": 0,
+      "en": "Birmingham"
+    },
+    {
+      "name": "伦敦",
+      "province": "英国",
+      "lng": -0.13,
+      "stdMeridian": 0,
+      "en": "London"
+    },
+    {
+      "name": "曼彻斯特",
+      "province": "英国",
+      "lng": -2.24,
+      "stdMeridian": 0,
+      "en": "Manchester"
+    },
+    {
+      "name": "河内",
+      "province": "越南",
+      "lng": 105.85,
+      "stdMeridian": 105,
+      "en": "Hanoi"
+    },
+    {
+      "name": "胡志明市",
+      "province": "越南",
+      "lng": 106.63,
+      "stdMeridian": 105,
+      "en": "Ho Chi Minh City"
+    },
+    {
+      "name": "保山",
+      "province": "云南",
+      "lng": 99.17
+    },
+    {
+      "name": "楚雄",
+      "province": "云南",
+      "lng": 101.55
+    },
+    {
+      "name": "大理",
+      "province": "云南",
+      "lng": 100.23
+    },
+    {
+      "name": "红河",
+      "province": "云南",
+      "lng": 103.38
+    },
+    {
+      "name": "景洪",
+      "province": "云南",
+      "lng": 100.8
+    },
+    {
+      "name": "昆明",
+      "province": "云南",
+      "lng": 102.83
+    },
+    {
+      "name": "丽江",
+      "province": "云南",
+      "lng": 100.23
+    },
+    {
+      "name": "临沧",
+      "province": "云南",
+      "lng": 100.09
+    },
+    {
+      "name": "普洱",
+      "province": "云南",
+      "lng": 100.97
+    },
+    {
+      "name": "曲靖",
+      "province": "云南",
+      "lng": 103.8
+    },
+    {
+      "name": "玉溪",
+      "province": "云南",
+      "lng": 102.55
+    },
+    {
+      "name": "昭通",
+      "province": "云南",
+      "lng": 103.72
+    },
+    {
+      "name": "杭州",
+      "province": "浙江",
+      "lng": 120.15
+    },
+    {
+      "name": "湖州",
+      "province": "浙江",
+      "lng": 120.09
+    },
+    {
+      "name": "嘉兴",
+      "province": "浙江",
+      "lng": 120.76
+    },
+    {
+      "name": "金华",
+      "province": "浙江",
+      "lng": 119.65
+    },
+    {
+      "name": "丽水",
+      "province": "浙江",
+      "lng": 119.92
+    },
+    {
+      "name": "宁波",
+      "province": "浙江",
+      "lng": 121.55
+    },
+    {
+      "name": "衢州",
+      "province": "浙江",
+      "lng": 118.87
+    },
+    {
+      "name": "绍兴",
+      "province": "浙江",
+      "lng": 120.58
+    },
+    {
+      "name": "台州",
+      "province": "浙江",
+      "lng": 121.42
+    },
+    {
+      "name": "温州",
+      "province": "浙江",
+      "lng": 120.7
+    },
+    {
+      "name": "舟山",
+      "province": "浙江",
+      "lng": 122.11
+    }
+  ]
+}

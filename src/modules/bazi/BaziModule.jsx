@@ -6,7 +6,7 @@ import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZI_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import BirthCityPicker from '../../components/BirthCityPicker.jsx';
-import { calcTrueSolarTimeOffset, adjustBirthTime, formatTrueSolarTime } from '../../lib/cities.js';
+import { calcCitySolarTimeOffset, adjustBirthTime, formatTrueSolarTime } from '../../lib/cities.js';
 
 // Five-element color mapping (theme CSS variables)
 const wuxingColor = {
@@ -361,12 +361,13 @@ export default function BaziModule({
       try {
         let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHour = birthHour, adjMinute = 0;
         let solarOffset = null;
+        let solarCorrection = null;
         if (trueSolarEnabled && birthCity) {
-          solarOffset = calcTrueSolarTimeOffset(
-            birthCity.lng,
-            birthCity.stdMeridian ?? 120,
+          solarCorrection = calcCitySolarTimeOffset(
+            birthCity,
             { year: birthYear, month: birthMonth, day: birthDay, hour: birthHour, minute: 0 },
           );
+          solarOffset = solarCorrection.offsetMinutes;
           ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(birthYear, birthMonth, birthDay, birthHour, 0, solarOffset));
         }
         const r = paiBazi(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
@@ -375,6 +376,8 @@ export default function BaziModule({
           r._trueSolar = {
             city: birthCity.name,
             offset: solarOffset,
+            timeZone: solarCorrection.timeZone,
+            utcOffsetMinutes: solarCorrection.utcOffsetMinutes,
             adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
           };
         }

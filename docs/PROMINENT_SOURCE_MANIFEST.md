@@ -126,8 +126,59 @@
 | 状态 | `validation_anchor` |
 | 机构 | NOAA Global Monitoring Laboratory |
 | URL | `https://gml.noaa.gov/grad/solcalc/solareqns.PDF` |
-| 本轮用途 | 确认 true solar time 的 offset 包含 equation of time、经度与时区 |
-| 审计结果 | 已加入 NOAA 均时差公式，并保留“标准时口径”标签；历史民用时区与 DST 仍未解决 |
+| 本轮用途 | 确认 true solar time 的 offset 包含 equation of time、经度与时区，并确认闰年 fractional-year 分母使用 366 |
+| 审计结果 | 已加入 NOAA 均时差公式并改为“民用时区口径”；1900-2100 共 73,414 日机械复算 0 fail |
+| 边界 | 采用 NOAA 近似公式，不宣称天文台级历书精度 |
+
+### SRC-VAL-GEONAMES-CITIES
+
+| 字段 | 值 |
+|---|---|
+| 名称 | GeoNames Gazetteer `cities15000` / `cities500` |
+| 状态 | `validation_anchor` + 当前城市规范核心的上游数据 |
+| 上游 | `https://download.geonames.org/export/dump/` |
+| 许可 | CC BY 4.0；项目规范核心保留来源、许可、GeoNames ID 与原始行 hash |
+| 固定输入 | `cities15000.zip` SHA256 `5c952503722374275f73bbdd62fb31dc92c2e1776abb9d3281699d1fa5636991`；`cities500.zip` SHA256 `cdbe961f3e34d6378dc40eb5dceb0dd3649774b08fb810abaa42adade5fb5096`；`admin1CodesASCII.txt` SHA256 `34784457b76b988a669dff7c3e4b104e4902c0875643cff019281ac79dfa2992` |
+| 精选快照 | `database/shared/geonames-selected-2026-07-10.tsv`，374 行，SHA256 `a197a1fa0ad749c3ae343fbfe23c91e5ad9b602f2b5d9d999bb825fa6499dcb6` |
+| 规范核心 | `database/shared/cities-core.json`，SHA256 `04691f8bc18ff0cb384717e8dff0e3a847f24829cc261a8d5eac934069389d81` |
+| 本轮证据 | 374/374 现有产品城市标签绑定稳定 GeoNames ID、WGS84 坐标、国家码、IANA zone 和原始记录 SHA256；276 个中国城市同时通过 31 个省级 `admin1` 合同 |
+| 裁决 | 湘西、鄂尔多斯、格尔木、林芝、红河五项以固定 GeoNames ID 消歧；中国大陆统一采用法定民用 `Asia/Shanghai`，保留源 `Asia/Urumqi` 元数据 |
+| 边界 | 不提供地址级地理编码、时区边界多边形或历史时区规则本身 |
+
+### SRC-VAL-IANA-TZDB
+
+| 字段 | 值 |
+|---|---|
+| 名称 | IANA Time Zone Database |
+| 状态 | `validation_anchor`，民用时区标识与转换规则体系 |
+| 上游 | `https://www.iana.org/time-zones`、`https://data.iana.org/time-zones/data/tz-link.html` |
+| 审计时上游版本 | IANA 页面在 2026-07-10 显示最新发布为 `2026b`；此信息不代表当前 Node/浏览器宿主已使用该版本 |
+| 产品实现 | GeoNames 提供 IANA zone ID；Node/浏览器 `Intl` 提供对应历史 UTC offset 与 DST 转换 |
+| 本轮证据 | 纽约、伦敦、悉尼重复/跳时，上海 1990 历史 DST、上海当前时区和印度半小时 offset 共 10 个 fixture；17,952 个城市时点通过 |
+| 安全策略 | 重复时刻返回 `ambiguous`，跳过时刻返回 `nonexistent`；默认拒绝，不静默归一化 |
+| 边界 | `runtimeTzdbVersion=host_runtime_unreported`；未固定宿主 tzdb，未授证 IANA 体系前的地方平太阳时重建 |
+
+### SRC-VAL-CHINA-CIVIL-TIME
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 中国法定民用时间口径 |
+| 状态 | `validation_anchor`，中国大陆产品默认时区裁决 |
+| 机构 | 中国科学院国家授时中心、紫金山天文台 |
+| URL | `https://ntsc.cas.cn/xwzx_/yw/202109/t20210911_6200315.html`、`https://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html` |
+| 本轮用途 | 固定中国全国法定时间为东八区、120°E 北京时间；避免按 GeoNames `Asia/Urumqi` 自动推断非正式地方作息 |
+| 产品策略 | 中国大陆城市默认 `Asia/Shanghai`；新疆地方时间若未来支持，必须由用户明确选择口径 |
+
+### SRC-TOOL-PINYIN-PRO
+
+| 字段 | 值 |
+|---|---|
+| 名称 | `pinyin-pro@3.27.0` |
+| 状态 | 生成期匹配工具，不进入产品运行时 |
+| 上游 | `https://github.com/zh-lx/pinyin-pro` |
+| 许可 | 包元数据声明 MIT |
+| 本轮用途 | 把旧中文城市标签与 GeoNames 拼音/别名候选对齐；最终选择仍受国家、经度、名称和五项固定裁决约束 |
+| 边界 | 拼音匹配不是来源权威；运行时只消费已生成并审计的 JSON 快照 |
 
 ### SRC-VAL-LUNAR-JS
 
@@ -447,7 +498,7 @@
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
 | 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、`sources/` | Skill 补广度和安全候选；法定毒性清单以 normalized core 为准；剂量等未通过现行来源前不得消费 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
-| 未来规范数据库 | 逐域建立；周易核心已有 `database/yijing/zhouyi-core.json` | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
+| 未来规范数据库 | 逐域建立；周易、紫微、奇门、风水、五运、子午、TCM 安全与共享城市已有规范核心 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 
 ## 9. 条目级溯源合同
 
@@ -505,8 +556,8 @@ escalation: self_care | clinician | urgent | emergency
 
 ## 12. 下一步
 
-1. 八字、六爻和梅花确定性结构已划定复用边界；继续核验共享六十四卦卦序、卦爻辞、错综卦和关键词。
-2. 按本清单为 package/source group 建立机器可读 manifest。
-3. 定义 normalized schema 和 review 状态机。
-4. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。
-5. 八字/共享历法与当前中医安全 gate 关闭后，再抽取首个教学切片的 accepted 知识点。
+1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
+2. 继续 TCM-SAFETY：逐药对照现行药典，复核妊娠、配伍、马兜铃酸、方剂和穴位外治。
+3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
+4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
+5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

@@ -12,7 +12,7 @@ import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZIHEALTH_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import BirthCityPicker from '../../components/BirthCityPicker.jsx';
-import { calcTrueSolarTimeOffset, adjustBirthTime } from '../../lib/cities.js';
+import { calcCitySolarTimeOffset, adjustBirthTime } from '../../lib/cities.js';
 
 const WUXING_COLORS = {
   wood: '#4CAF50', fire: '#E53935', earth: '#C6893F', metal: '#FFD54F', water: '#1E88E5',
@@ -208,12 +208,13 @@ export default function BaziHealthModule({
   const handleCalculate = useCallback(() => {
     let adjYear = year, adjMonth = month, adjDay = day, adjHour = hour, adjMinute = 0;
     let solarOffset = null;
+    let solarCorrection = null;
     if (trueSolarEnabled && birthCity) {
-      solarOffset = calcTrueSolarTimeOffset(
-        birthCity.lng,
-        birthCity.stdMeridian ?? 120,
+      solarCorrection = calcCitySolarTimeOffset(
+        birthCity,
         { year, month, day, hour, minute: 0 },
       );
+      solarOffset = solarCorrection.offsetMinutes;
       ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(year, month, day, hour, 0, solarOffset));
     }
     const res = runHealthAnalysis(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
@@ -221,6 +222,8 @@ export default function BaziHealthModule({
       res._trueSolar = {
         city: birthCity.name,
         offset: solarOffset,
+        timeZone: solarCorrection.timeZone,
+        utcOffsetMinutes: solarCorrection.utcOffsetMinutes,
         adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
       };
     }

@@ -6,7 +6,7 @@ import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { ZIWEI_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import BirthCityPicker from '../../components/BirthCityPicker.jsx';
-import { calcTrueSolarTimeOffset, adjustHourBranch } from '../../lib/cities.js';
+import { calcCitySolarTimeOffset, adjustHourBranch, getBranchMidpointHour } from '../../lib/cities.js';
 
 // Star wuxing → CSS color mapping using theme variables
 const starWuxingColor = (wuxing) => {
@@ -455,12 +455,13 @@ export default function ZiweiModule({
       try {
         let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHourBranch = birthHour;
         let solarOffset = null;
+        let solarCorrection = null;
         if (trueSolarEnabled && birthCity) {
-          solarOffset = calcTrueSolarTimeOffset(
-            birthCity.lng,
-            birthCity.stdMeridian ?? 120,
-            { year: birthYear, month: birthMonth, day: birthDay },
+          solarCorrection = calcCitySolarTimeOffset(
+            birthCity,
+            { year: birthYear, month: birthMonth, day: birthDay, hour: getBranchMidpointHour(birthHour), minute: 0 },
           );
+          solarOffset = solarCorrection.offsetMinutes;
           ({ year: adjYear, month: adjMonth, day: adjDay, branch: adjHourBranch } = adjustHourBranch(birthYear, birthMonth, birthDay, birthHour, solarOffset));
         }
         const r = paiZiwei(adjYear, adjMonth, adjDay, adjHourBranch, gender);
@@ -468,6 +469,8 @@ export default function ZiweiModule({
           r._trueSolar = {
             city: birthCity.name,
             offset: solarOffset,
+            timeZone: solarCorrection.timeZone,
+            utcOffsetMinutes: solarCorrection.utcOffsetMinutes,
             originalBranch: birthHour,
             adjustedBranch: adjHourBranch,
           };
@@ -743,7 +746,7 @@ export default function ZiweiModule({
                 onToggle={setTrueSolarEnabled}
                 city={birthCity}
                 onCityChange={setBirthCity}
-                dateParts={{ year: birthYear, month: birthMonth, day: birthDay, hour: 12, minute: 0 }}
+                dateParts={{ year: birthYear, month: birthMonth, day: birthDay, hour: getBranchMidpointHour(birthHour), minute: 0 }}
               />
 
               <div className="flex items-center justify-between">

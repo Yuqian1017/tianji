@@ -21,7 +21,7 @@
 | VAL-BZ-004 | P1 | 八字 | 天干五合与地支合冲刑害会有限表 | 来源忠实性 | V3 | pass | 五合、六合、六冲、三合、三会、六害、两支相刑和自刑全量枚举通过；关系只作 `lookup_only`，相破因版本差异保持 inactive |
 | VAL-BZ-005 | P1 | 八字 | 桃花、驿马、华盖三张查表 | 流派查表 | V2+回归 | pass | 36/36 映射匹配传统分组；年支/日支并用明确为项目口径，只输出 `lookup_only` 标签，不作吉凶 |
 | VAL-BZ-006 | P1 | 八字 | 天干/地支合化成立条件与关系吉凶 | 流派解释 | V3 | blocked | 当前不检查月令、透干、旺气、伤克等成化条件；候选五行仅作元数据，所有现实事件与吉凶解释保持未验证 |
-| VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
+| VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3+V5 | pass | 当前 374 城市域已绑定 GeoNames 坐标、行政区与 IANA zone；132,836 项审计 0 fail，含 276 个中国城市省级合同、73,414 日均时差、17,952 城市时点与 10 个 DST fixture；宿主 tzdb 版本、任意坐标与重复时刻选择不在授证范围 |
 | VAL-BZH-001 | P0 | 八字健康 | 五行计数到脏腑风险、疾病、食疗与大运健康的推导 | 医学安全/跨域推断 | V4+安全审查 | blocked | 未验证结构计数不能成为医学证据；runtime、旧历史和 AI 通道已硬阻断 |
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/穴位/艾灸与图像推断 | 医疗/安全 | V4+V5 | in_progress | 旧 34 题、9 调养方案、28 药物标签、22 计量项、30 去重穴位已归档；运行时剂量/裸艾灸/疾病推断已隔离，待逐项权威复核 |
 | VAL-TCM-002 | P0 | 中医 | Skill v3 安全表、毒性、妊娠、配伍与剂量 | 医疗/来源 | V4 | in_progress | 98 manifest 文件和安装/上游副本一致；法定毒性清单 28/28；100 行/101 药名剂量表结构通过但未按 2025 药典校准，继续 blocked |
@@ -58,7 +58,10 @@
 | F-FS-004 | P1 | VAL-FS-001 | verified_remediated | 年份接口未声明立春边界，2000 年后八宅命卦常数错一位 | 增加精确日期辅助函数、太阳年标签；1900-2099 两性 400 值枚举通过 |
 | F-FS-005 | P1 | VAL-FS-001 | verified_remediated | 任意 15 度山向都静默套用下卦，没有区分兼向/替卦 | 只接受山中线左右 4.5 度；超出范围显式拒绝 |
 | F-FS-006 | P0 | VAL-FS-002 | mitigated | Runtime 把未验证星性、疾病财务断语和摆件化解显示为确定建议 | 用户界面与 AI 上下文只保留盘面结构；传统解释统一 blocked |
-| F-BZ-006 | P1 | VAL-SHARED-001 | partially_remediated | NOAA 均时差已加入并按固定 365 日分母校正闰年；UI 标准时口径已明确；历史时区/夏令时仍未解决 | IANA 时区数据与历史 DST fixture |
+| F-BZ-006 | P1 | VAL-SHARED-001 | verified_remediated_bounded | NOAA 均时差已按平年 365/闰年 366 实现；374 城市使用 IANA 民用时区和历史 DST；UI 明确为民用时区口径 | 宿主 tzdb 版本未固定；重复时刻的前/后实例仍需产品控件 |
+| F-SHARED-001 | P0 | VAL-SHARED-001 | verified_remediated | 92 个海外城市使用固定标准经线，无法反映历史夏令时；拉斯维加斯还被误列为美国山地时区 | 全部城市绑定 IANA zone；拉斯维加斯改为 `America/Los_Angeles`；纽约/伦敦/悉尼/上海历史转换 fixture 通过 |
+| F-SHARED-002 | P1 | VAL-SHARED-001 | verified_remediated | 旧均时差在闰年仍固定使用 365 日分母 | 按 NOAA 说明改为闰年 366；1900-2100 共 73,414 个公历日机械复算 0 fail |
+| F-SHARED-003 | P1 | VAL-SHARED-001 | bounded | 夏令时重复时刻和跳过时刻不能被唯一映射为 UTC 瞬间 | 引擎分别返回 `ambiguous`/`nonexistent` 并默认拒绝；当前 UI 不静默归一化，后续补前/后实例选择控件 |
 | F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 传统时辰精度年月日、`solarDate` 与口径元数据，整数年龄继续兼容 | 历史记录 schema/version 验证 |
 | F-BZH-001 | P0 | VAL-BZH-001 | mitigated_blocked | 旧 runtime 以天干 1/藏干 0.5 和固定阈值推导脏腑风险、疾病、食疗和大运健康 | 当前消费路径、旧历史和 AI prompt 均 blocked；独立传统与医学证据通过前不得恢复 |
 | F-TCM-001 | P0 | VAL-TCM-001 | mitigated_blocked | 体质模块用 34 题历史简化稿冒充 ZYYXH/T 157-2009 正式量表，并输出药茶、克数、穴位与艾灸方案 | 功能暂停；旧内容完整归档为 `removed_pending_review`；取得合法完整量表和独立验证前不得恢复 |
@@ -119,7 +122,7 @@
 | 2026-07-09 | VAL-BZ-001/VAL-SHARED-001 | 独立 `sxtwl@2.0.7`：30 例四柱 + 1920-2027 全部 1,296 个节令时刻 | 四柱 30/30 一致；节令 1,296/1,296 在 30 秒内，最大差 20 秒；四柱/节令达到 V3 |
 | 2026-07-09 | VAL-BZ-001 | 第二实现审计反查验证脚本 | 发现大写 `XIAO_HAN` 指向下一年；已改为同年 `小寒` 并加入年份断言，证据重新生成 |
 | 2026-07-09 | VAL-BZ-004 | 《三命通会·论支元六合》、compendium `00-cosmology/03-tiangan-dizhi.md` 与 runtime 对照 | 午未六合可确认；合化火/土存在口径与条件差异。五合/六合均移除自动合化断言，15 项八字测试通过 |
-| 2026-07-09 | VAL-SHARED-001 | NOAA fractional-year 公式与闰年年末回归 | 分母改为官方公式固定的 365；修复 2024-12-31 约 27 秒额外偏差 |
+| 2026-07-09 | VAL-SHARED-001 | NOAA fractional-year 公式与闰年年末回归 | 旧结论经 2026-07-10 复核纠正：NOAA 明确闰年使用 366；当前实现与报告已修复 |
 | 2026-07-09 | VAL-BZ-001 | Fresh code reviewer `019f49f1-4e13-7481-a276-ea33d57de668` | 无 Critical；陈旧 primary artifact 的 Important 已修复并加 source/artifact SHA256；当时保留的大运证据缺口已由下一条独立推导关闭 |
 | 2026-07-09 | VAL-BZ-002 | `sxtwl@2.0.7` 相邻节令 + 《渊海子平·论起大运法》《三命通会·论大运》规则的独立手工推导；30 例 | 未调用 runtime `getYun()`；方向、传统时辰精度交运日期和首运干支 30/30 一致，声明口径内达到 V3 |
 | 2026-07-09 | VAL-BZ-003/VAL-BZH-001 | `audit-bazi-strength.mjs`；compendium 算法对照；《滴天髓》《滴天髓阐微》《子平真诠评注》 | 两条原典反例复现；权威模型判定 fail；UI/AI 虚假精度已移除，八字健康输出归零并硬阻断 |
@@ -136,3 +139,4 @@
 | 2026-07-10 | VAL-TCM-001/002 | `audit-tcm-safety.mjs`；Skill SHA manifest；上游 `966a88a`；国务院/NMPA/深圳政府毒性清单；2025 药典公告；CCMQ 研究；桌面/390×844 产品路径 | 213 项 0 fail；TCM 9/9、全库 79/79；28 项法定毒性清单规范化；100 行/101 药名剂量表保持 blocked；旧 22 计量项和 30 穴位归档并移出运行时；四个中医入口无旧医疗动作词、无水平溢出、console 0 error/warning |
 | 2026-07-10 | VAL-WY-001 | `audit-wuyun.mjs`；《素问》《医宗金鉴》《中医基础理论》；规范 JSON；桌面/390×844 | 60 年基础年结构 3,325 项 0 fail；修复主运太少、五运交司日标签、非法输入和六气名称截断；复杂派生层与现实/医学解释 excluded |
 | 2026-07-10 | VAL-ZWL-001 | `audit-ziwu.mjs`；《针灸大成》；规范 JSON；Ziwu 与八字健康旁路回归；桌面/390×844 | 12 行有限表、全天 1,440 分钟共 4,457 项 0 fail；移除当令/排毒/最佳时段旧句；午时心经冲突已裁定；无横向溢出或行内裁切；完整针法与临床解释 excluded |
+| 2026-07-10 | VAL-SHARED-001 | `audit-shared-time-cities.mjs`；GeoNames 374 条固定原始行和 `admin1`；IANA 民用时区；NOAA 均时差；中科院国家授时口径；桌面/390×844 | 132,836 项 0 fail；276 个中国城市省级合同、73,414 日、17,952 城市时点和 10 个转换 fixture 通过；拉斯维加斯时区、历史 DST、闰年分母和五条消费路径已修复；宿主 tzdb 版本与重复时刻选择保持 bounded |

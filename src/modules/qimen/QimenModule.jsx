@@ -6,7 +6,7 @@ import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { QIMEN_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import BirthCityPicker from '../../components/BirthCityPicker.jsx';
-import { calcTrueSolarTimeOffset, adjustBirthTime } from '../../lib/cities.js';
+import { calcCitySolarTimeOffset, adjustBirthTime } from '../../lib/cities.js';
 
 // ===== 排盘动画 =====
 function CalculatingAnimation() {
@@ -330,12 +330,13 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
         let adjHour = inputHour;
         let adjMinute = inputMinute;
         let solarOffset = null;
+        let solarCorrection = null;
         if (trueSolarEnabled && birthCity) {
-          solarOffset = calcTrueSolarTimeOffset(
-            birthCity.lng,
-            birthCity.stdMeridian ?? 120,
+          solarCorrection = calcCitySolarTimeOffset(
+            birthCity,
             { year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: inputMinute },
           );
+          solarOffset = solarCorrection.offsetMinutes;
           ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(
             inputYear,
             inputMonth,
@@ -357,6 +358,8 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
           r._trueSolar = {
             city: birthCity.name,
             offset: solarOffset,
+            timeZone: solarCorrection.timeZone,
+            utcOffsetMinutes: solarCorrection.utcOffsetMinutes,
             original: r.sourceInput,
             adjusted: r.input,
           };

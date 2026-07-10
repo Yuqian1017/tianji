@@ -1,0 +1,109 @@
+{
+  "audit": "shared-time-cities",
+  "generatedAt": "2026-07-10",
+  "result": "pass_source_pinned_city_and_civil_time_core",
+  "summary": {
+    "checks": 132836,
+    "failures": 0,
+    "cities": 374,
+    "sourceRows": 374,
+    "equationOfTimeDays": 73414,
+    "cityTimeSamples": 17952,
+    "transitionFixtures": 10
+  },
+  "categories": {
+    "contract": {
+      "checks": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "identity": {
+      "checks": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "source_rows": {
+      "checks": 4764,
+      "passed": 4764,
+      "failed": 0
+    },
+    "runtime_parity": {
+      "checks": 748,
+      "passed": 748,
+      "failed": 0
+    },
+    "equation_of_time": {
+      "checks": 73414,
+      "passed": 73414,
+      "failed": 0
+    },
+    "city_time_samples": {
+      "checks": 53856,
+      "passed": 53856,
+      "failed": 0
+    },
+    "transition_fixtures": {
+      "checks": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "adjudications": {
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "consumer_paths": {
+      "checks": 15,
+      "passed": 15,
+      "failed": 0
+    }
+  },
+  "scope": {
+    "included": [
+      "374 existing product city labels",
+      "GeoNames WGS84 coordinates",
+      "country and first-order administrative identity",
+      "IANA time-zone identifiers",
+      "historical civil offset resolution"
+    ],
+    "excluded": [
+      "address-level geocoding",
+      "timezone boundary polygons",
+      "automatic Xinjiang local-time inference",
+      "pre-IANA local-mean-time reconstruction"
+    ]
+  },
+  "civilTimePolicy": {
+    "source": "IANA time zone identifiers from GeoNames; host runtime supplies transition rules",
+    "mainlandChina": "Use Asia/Shanghai as the national civil-time default. Preserve GeoNames Asia/Urumqi only as source metadata and require an explicit future convention choice before using local Xinjiang time.",
+    "ambiguousWallTime": "reject unless the caller explicitly chooses earlier or later occurrence",
+    "nonexistentWallTime": "reject",
+    "runtimeTzdbVersion": "host_runtime_unreported"
+  },
+  "sourceRefs": [
+    {
+      "collection": "cities15000",
+      "url": "https://download.geonames.org/export/dump/cities15000.zip",
+      "archiveSha256": "5c952503722374275f73bbdd62fb31dc92c2e1776abb9d3281699d1fa5636991",
+      "extractedSha256": "46b95be8c3e8d88ee387545507eadfb0a101ba3b05d90a73106dc7bba4dbd7aa"
+    },
+    {
+      "collection": "cities500",
+      "url": "https://download.geonames.org/export/dump/cities500.zip",
+      "archiveSha256": "cdbe961f3e34d6378dc40eb5dceb0dd3649774b08fb810abaa42adade5fb5096",
+      "extractedSha256": "05d2e293f938e7740ce43c06dc9c056503a7b4d2dc331619c6878f170dea3108"
+    },
+    {
+      "collection": "admin1CodesASCII",
+      "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "fileSha256": "34784457b76b988a669dff7c3e4b104e4902c0875643cff019281ac79dfa2992"
+    }
+  ],
+  "relevantSha256": {
+    "normalizedCore": "04691f8bc18ff0cb384717e8dff0e3a847f24829cc261a8d5eac934069389d81",
+    "selectedGeoNamesSource": "a197a1fa0ad749c3ae343fbfe23c91e5ad9b602f2b5d9d999bb825fa6499dcb6",
+    "runtimeSnapshot": "f20697f9c7cf37e661051928b17d971ecb08f51f7411714ebaf48309ac8a50ef",
+    "legacyBaseline": "f716e4d7f01b90c6f41b1f54d95d58f8c80b877cb6f3414aedeced64fba6e0c8"
+  },
+  "failures": []
+}

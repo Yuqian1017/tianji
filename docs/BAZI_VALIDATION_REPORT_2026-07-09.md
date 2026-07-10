@@ -1,5 +1,7 @@
 # 天机卷八字排盘首轮 Validation Report
 
+> 2026-07-10 更新：本文保留 2026-07-09 首轮审计的历史证据。城市、历史民用时区、DST、闰年均时差和当前五条消费路径的最新结论，以 `SHARED_TIME_CITY_VALIDATION_REPORT_2026-07-10.md` 为准；本文中“固定标准时口径/历史 DST 未解决”的描述已被后续报告取代。
+
 - 日期：2026-07-09
 - 状态：修复与 fresh code review 已收口；四柱、节令及声明口径下的大运达到 V3，解释层继续验证
 - 当前实现：`src/modules/bazi/calendar.js`、`src/modules/bazi/engine.js`、`src/lib/cities.js`
@@ -9,7 +11,7 @@
 - 第二实现结果：`docs/validation/artifacts/bazi-audit-2026-07-09-sxtwl.json`
 - 解释层后续报告：`docs/BAZI_STRENGTH_VALIDATION_REPORT_2026-07-09.md`
 - 关系/神煞后续报告：`docs/BAZI_RELATIONS_SHENSHA_VALIDATION_REPORT_2026-07-09.md`
-- 修复状态：历法、日柱、大运与标准时口径均时差已修复；解释层与历史 DST 继续验证
+- 修复状态：历法、日柱和大运已修复；太阳时的共享城市/时区后续状态见 2026-07-10 专项报告
 
 ## 1. 修复后状态
 

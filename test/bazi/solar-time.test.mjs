@@ -27,7 +27,7 @@ test('calculates NOAA equation of time from a civil date', () => {
       month: 12,
       day: 31,
       hour: 12,
-    }) - (-2.9042)) < 0.01,
+    }) - (-2.4547)) < 0.01,
   );
 });
 
@@ -58,12 +58,12 @@ test('applies the complete offset across the previous date', () => {
   );
 });
 
-test('labels the result as a standard-time true solar calculation', () => {
+test('labels the result as a civil-time-zone true solar calculation', () => {
   assert.equal(
     cities.formatTrueSolarTime(
       { year: 2025, month: 2, day: 10, hour: 23, minute: 12 },
       78,
     ),
-    '真太阳时（标准时口径） 23:12 (校正 -78分)',
+    '真太阳时（民用时区口径） 23:12 (校正 -78分)',
   );
 });
