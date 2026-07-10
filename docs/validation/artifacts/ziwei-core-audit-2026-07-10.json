@@ -1,0 +1,77 @@
+{
+  "audit": "ziwei_core",
+  "generatedAt": "2026-07-10",
+  "result": "pass",
+  "summary": {
+    "charts": 2880,
+    "checks": 314200,
+    "passed": 314200,
+    "failed": 0,
+    "categories": {
+      "inventory": {
+        "checks": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "finite_tables": {
+        "checks": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "ziwei_table": {
+        "checks": 150,
+        "passed": 150,
+        "failed": 0
+      },
+      "aux_tables": {
+        "checks": 116,
+        "passed": 116,
+        "failed": 0
+      },
+      "chart_core": {
+        "checks": 17280,
+        "passed": 17280,
+        "failed": 0
+      },
+      "palaces": {
+        "checks": 69120,
+        "passed": 69120,
+        "failed": 0
+      },
+      "main_stars": {
+        "checks": 40320,
+        "passed": 40320,
+        "failed": 0
+      },
+      "aux_stars": {
+        "checks": 46080,
+        "passed": 46080,
+        "failed": 0
+      },
+      "four_transformations": {
+        "checks": 2880,
+        "passed": 2880,
+        "failed": 0
+      },
+      "dayun": {
+        "checks": 138240,
+        "passed": 138240,
+        "failed": 0
+      }
+    },
+    "correctionsApplied": {
+      "ziweiPlacementCells": 100,
+      "mainStarOffsets": 1,
+      "auxiliaryStarPairs": 1,
+      "dayunRules": 2,
+      "invalidInputFallbackFamilies": 3
+    }
+  },
+  "boundaries": [
+    "The accepted result covers the declared common star-table school and the project leap-month policy only.",
+    "The Gregorian-to-lunar conversion remains supplied by lunar-javascript; this audit checks downstream Ziwei rules against the converted fields.",
+    "Star personality, palace verdicts, health, marriage, wealth, timing, and fate predictions are not validated and are excluded from the normalized core.",
+    "A separate optional secondary audit compares the same 2,880-chart matrix with iztro 2.5.8."
+  ],
+  "failures": []
+}

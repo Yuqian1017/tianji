@@ -6,7 +6,7 @@ import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { ZIWEI_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import BirthCityPicker from '../../components/BirthCityPicker.jsx';
-import { calcTrueSolarTimeOffset, adjustHourBranch, formatOffset } from '../../lib/cities.js';
+import { calcTrueSolarTimeOffset, adjustHourBranch } from '../../lib/cities.js';
 
 // Star wuxing → CSS color mapping using theme variables
 const starWuxingColor = (wuxing) => {
@@ -33,12 +33,11 @@ const sihuaBadgeClass = (transform) => {
 
 // Detailed analysis sections
 const DETAIL_SECTIONS = [
-  { id: 'shiye', label: '事业', prompt: '请详细分析此命盘的事业运：官禄宫星曜特点、适合的行业方向、职业发展路径、事业高峰期。' },
-  { id: 'caiyun', label: '财运', prompt: '请详细分析此命盘的财运：财帛宫星曜特点、求财方式、正财偏财、财运高低时期。' },
-  { id: 'ganqing', label: '感情', prompt: '请详细分析此命盘的感情婚姻：夫妻宫星曜特点、配偶特征、婚姻走势、注意事项。' },
-  { id: 'jiankang', label: '健康', prompt: '请详细分析此命盘的健康运：疾厄宫特点、需注意的身体问题、养生方向。' },
-  { id: 'fude', label: '福德', prompt: '请详细分析此命盘的福德宫：精神生活、内心世界、人生享受、修行方向。' },
-  { id: 'qianyi', label: '迁移', prompt: '请详细分析此命盘的迁移宫：出外运、异地发展、人际关系、贵人方位。' },
+  { id: 'shiye', label: '事业', prompt: '请按传统文化框架说明官禄宫星曜的常见象义、组合条件与解释限制，不预测职业结果或时间点。' },
+  { id: 'caiyun', label: '财帛', prompt: '请按传统文化框架说明财帛宫星曜的常见象义、组合条件与解释限制，不预测金额、盈亏或时间点。' },
+  { id: 'ganqing', label: '夫妻', prompt: '请按传统文化框架说明夫妻宫星曜的常见象义、组合条件与解释限制，不推断配偶特征或婚姻结果。' },
+  { id: 'fude', label: '福德', prompt: '请按传统文化框架说明福德宫星曜的常见象义、组合条件与解释限制，不断言心理状态或人生结果。' },
+  { id: 'qianyi', label: '迁移', prompt: '请按传统文化框架说明迁移宫星曜的常见象义、组合条件与解释限制，不预测异地发展结果或贵人方位。' },
 ];
 
 // Palace grid position mapping: branch → { row, col }
@@ -268,7 +267,7 @@ function PalaceGrid({ result, onPalaceClick }) {
 }
 
 // ===== Palace detail modal =====
-function PalaceDetailModal({ palace, result, onClose }) {
+function PalaceDetailModal({ palace, onClose }) {
   if (!palace) return null;
 
   return (
@@ -618,8 +617,8 @@ export default function ZiweiModule({
     <div className="space-y-6">
       <ModuleIntro
         moduleId="ziwei"
-        origin="相传为五代陈抟（陈希夷）所创，明清广泛流传。以紫微星为主，十四主星落十二宫，号称「天下第一神数」。"
-        strengths={['命运格局全景分析（比八字更细致）', '十二宫逐项解读（事业/财运/感情/健康等）', '大运十年周期分析', '四化飞星看人生主题']}
+        origin="传统上托名陈抟，现存体系主要见于明清以来相关文献。系统采用一套已声明的常见安星表。"
+        strengths={['命身宫与十二宫排布', '十四主星与辅煞星定位', '十年大限宫位序列', '年干四化结构查询']}
       />
 
       {/* Input panel */}
@@ -798,18 +797,29 @@ export default function ZiweiModule({
         <PalaceGrid result={result} onPalaceClick={setSelectedPalace} />
       )}
 
+      {result && !calculating && (
+        <div className="border border-[var(--color-surface-border)] rounded-lg px-3 py-2 text-xs text-[var(--color-text-dim)] font-body leading-relaxed">
+          排盘结构已按声明流派校核；星性、宫位断语与现实预测尚未校勘，不构成事实判断或决策依据。
+        </div>
+      )}
+
       {/* AI interpretation */}
       {result && !calculating && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 解读</h3>
+            <div>
+              <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 文化解读</h3>
+              <div className="text-[10px] text-[var(--color-text-dim)] font-body mt-0.5">
+                解释层未校勘，不提供疾病推断或高风险决策建议
+              </div>
+            </div>
             {isInitialAskVisible && (
               <button
                 onClick={askAI}
                 className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
                   hover:bg-[var(--color-gold-bg-hover)] btn-glow font-body"
               >
-                请求 AI 解读
+                请求 AI 文化解读
               </button>
             )}
           </div>
@@ -912,7 +922,7 @@ export default function ZiweiModule({
       {/* Leap month warning */}
       {result?.isLeapMonth && (
         <div className="bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)] rounded-xl p-3 text-[var(--color-gold-muted)] text-xs font-body">
-          ⚠️ 该日期对应农历闰月，不同门派对闰月的处理方式有所不同。本系统按上月计算。
+          该日期对应农历闰月。不同门派处理不同；本系统沿用该闰月所重复的月份序数。
         </div>
       )}
 
@@ -927,7 +937,6 @@ export default function ZiweiModule({
       {selectedPalace && (
         <PalaceDetailModal
           palace={selectedPalace}
-          result={result}
           onClose={() => setSelectedPalace(null)}
         />
       )}

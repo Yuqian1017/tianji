@@ -1,0 +1,60 @@
+{
+  "audit": "ziwei_secondary_iztro",
+  "generatedAt": "2026-07-10",
+  "result": "pass",
+  "secondaryImplementation": {
+    "package": "iztro@2.5.8",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/SylarLong/iztro.git"
+    },
+    "starLocationSourceSha256": "57928b614ec01fa9ac8e69488a5338bb9c764e9800f557d6030aa25b9df07e36"
+  },
+  "conventions": {
+    "leapMonth": "fixLeap=false; reuse base lunar month number",
+    "palaceAlias": "project 交友 equals reference 仆役",
+    "language": "zh-CN"
+  },
+  "summary": {
+    "charts": 2880,
+    "fields": 325440,
+    "mismatches": 0,
+    "categories": {
+      "lunar": {
+        "fields": 11520,
+        "mismatches": 0
+      },
+      "core": {
+        "fields": 8640,
+        "mismatches": 0
+      },
+      "palace": {
+        "fields": 69120,
+        "mismatches": 0
+      },
+      "main_stars": {
+        "fields": 40320,
+        "mismatches": 0
+      },
+      "aux_stars": {
+        "fields": 46080,
+        "mismatches": 0
+      },
+      "four_transformations": {
+        "fields": 11520,
+        "mismatches": 0
+      },
+      "dayun": {
+        "fields": 138240,
+        "mismatches": 0
+      }
+    }
+  },
+  "boundaries": [
+    "iztro is an independent implementation, not proof that traditional predictive claims are factual.",
+    "The comparison covers the declared shared star-table and leap-month conventions only.",
+    "No personality, health, marriage, wealth, timing, or fate interpretation is compared."
+  ],
+  "examples": []
+}

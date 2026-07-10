@@ -20,6 +20,40 @@ import {
 function branchIdx(b) { return BRANCHES.indexOf(b); }
 function stemIdx(s) { return STEMS.indexOf(s); }
 
+export const ZIWEI_VALIDATION_MODEL = Object.freeze({
+  school: 'ziwei_doushu_quanshu_common_star_tables',
+  chartStatus: 'validated_declared_school',
+  leapMonthPolicy: 'reuse_base_lunar_month_number',
+  interpretationStatus: 'not_validated',
+});
+
+function assertValidGregorianDate(solarYear, solarMonth, solarDay) {
+  const integerDate = [solarYear, solarMonth, solarDay].every(Number.isInteger);
+  const leapYear = solarYear % 4 === 0 && (solarYear % 100 !== 0 || solarYear % 400 === 0);
+  const monthLengths = [31, leapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const validDate = integerDate
+    && solarYear >= 1
+    && solarYear <= 9999
+    && solarMonth >= 1
+    && solarMonth <= 12
+    && solarDay >= 1
+    && solarDay <= monthLengths[solarMonth - 1];
+
+  if (!validDate) {
+    throw new RangeError('solarYear, solarMonth, and solarDay must form a valid Gregorian date');
+  }
+}
+
+function assertValidChartInput(solarYear, solarMonth, solarDay, hourBranch, gender) {
+  assertValidGregorianDate(solarYear, solarMonth, solarDay);
+  if (!BRANCHES.includes(hourBranch)) {
+    throw new RangeError(`hourBranch must be one of: ${BRANCHES.join('、')}`);
+  }
+  if (!['male', 'female'].includes(gender)) {
+    throw new RangeError('gender must be either "male" or "female"');
+  }
+}
+
 /**
  * Find year-branch group for fire/bell star lookup
  */
@@ -40,6 +74,7 @@ function findYearBranchGroup(yearBranch, table) {
  * @returns { lunarYear, lunarMonth, lunarDay, yearStem, yearBranch, isLeapMonth, lunarMonthDisplay, lunarDayDisplay }
  */
 export function solarToLunar(solarYear, solarMonth, solarDay) {
+  assertValidGregorianDate(solarYear, solarMonth, solarDay);
   const solar = Solar.fromYmd(solarYear, solarMonth, solarDay);
   const lunar = solar.getLunar();
 
@@ -128,14 +163,12 @@ function getWuxingJu(yearStem, mingGongBranch) {
   const ganZhi = mingGongStem + mingGongBranch;
   const nayinName = NAYIN[ganZhi];
   if (!nayinName) {
-    console.warn(`getWuxingJu: no nayin for "${ganZhi}"`);
-    return 5; // fallback to 土五局
+    throw new Error(`getWuxingJu: no nayin for "${ganZhi}"`);
   }
   const wuxingChar = NAYIN_WUXING[ganZhi];
   const ju = WUXING_JU_MAP[wuxingChar];
   if (!ju) {
-    console.warn(`getWuxingJu: unknown wuxing "${wuxingChar}" from nayin "${nayinName}"`);
-    return 5;
+    throw new Error(`getWuxingJu: unknown wuxing "${wuxingChar}" from nayin "${nayinName}"`);
   }
   return ju;
 }
@@ -145,13 +178,11 @@ function getWuxingJu(yearStem, mingGongBranch) {
 function placeZiwei(lunarDay, ju) {
   const table = ZIWEI_TABLE[ju];
   if (!table) {
-    console.warn(`placeZiwei: no table for ju=${ju}`);
-    return '子';
+    throw new RangeError(`placeZiwei: no table for ju=${ju}`);
   }
   const pos = table[lunarDay];
   if (!pos) {
-    console.warn(`placeZiwei: no entry for ju=${ju}, day=${lunarDay}`);
-    return '子';
+    throw new RangeError(`placeZiwei: no entry for ju=${ju}, day=${lunarDay}`);
   }
   return pos;
 }
@@ -256,15 +287,11 @@ function computeDayun(mingGongBranch, ju, yearStem, gender) {
   const step = forward ? 1 : -1;
   const baseIdx = branchIdx(mingGongBranch);
 
-  // Get ming gong stem for dayun stem calculation
-  const baseStemIdx = stemIdx(getPalaceStem(yearStem, mingGongBranch));
-
   const dayun = [];
   for (let i = 0; i < 12; i++) {
-    const bIdx = (baseIdx + (i + 1) * step + 120) % 12;
-    const sIdx = (baseStemIdx + (i + 1) * step + 100) % 10;
-    const stem = STEMS[sIdx];
+    const bIdx = (baseIdx + i * step + 120) % 12;
     const branch = BRANCHES[bIdx];
+    const stem = getPalaceStem(yearStem, branch);
     dayun.push({
       stem,
       branch,
@@ -326,6 +353,8 @@ function buildPalaceGrid(palaceMap, branchToPalace, shenGongBranch, allStarPosit
  * @param gender     'male' or 'female'
  */
 export function paiZiwei(solarYear, solarMonth, solarDay, hourBranch, gender) {
+  assertValidChartInput(solarYear, solarMonth, solarDay, hourBranch, gender);
+
   // Step 0: Solar → Lunar conversion
   const lunar = solarToLunar(solarYear, solarMonth, solarDay);
   const { lunarMonth, lunarDay, yearStem, yearBranch, isLeapMonth } = lunar;
@@ -427,6 +456,7 @@ export function paiZiwei(solarYear, solarMonth, solarDay, hourBranch, gender) {
     // Summary
     mingGongStars,
     isLeapMonth,
+    validationModel: ZIWEI_VALIDATION_MODEL,
   };
 }
 
@@ -440,6 +470,10 @@ export function formatForAI(result, question) {
   lines.push(`阳历：${result.solar.year}年${result.solar.month}月${result.solar.day}日`);
   lines.push(`农历：${result.lunar.lunarYearDisplay}${result.lunar.lunarMonthDisplay}${result.lunar.lunarDayDisplay}${result.isLeapMonth ? '（闰月）' : ''}`);
   lines.push(`时辰：${result.hourBranch}时`);
+  lines.push(`排盘口径：${result.validationModel?.school || ZIWEI_VALIDATION_MODEL.school}`);
+  lines.push(`排盘结构：${result.validationModel?.chartStatus || ZIWEI_VALIDATION_MODEL.chartStatus}`);
+  lines.push(`闰月口径：${result.validationModel?.leapMonthPolicy || ZIWEI_VALIDATION_MODEL.leapMonthPolicy}`);
+  lines.push(`解释状态：${result.validationModel?.interpretationStatus || ZIWEI_VALIDATION_MODEL.interpretationStatus}`);
   lines.push('');
 
   // Core structure
@@ -497,7 +531,7 @@ export function formatForAI(result, question) {
   // Question
   lines.push(question ? `命主想了解：${question}` : '请做全面分析。');
   lines.push('');
-  lines.push('请按照紫微斗数理论全面分析此命盘。');
+  lines.push('请按已声明边界提供传统文化解释，不要把星曜断语写成事实预测。');
 
   return lines.join('\n');
 }

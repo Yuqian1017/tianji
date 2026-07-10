@@ -1,6 +1,6 @@
 # 紫微斗数安星完整规则
 
-> ⚠️ **CC注意**：紫微安星规则极其复杂（627行）。建议最后再做此模块。实现时逐步验证：先验命宫位置→再验五行局→再验紫微星位置→最后验辅星。参考 reference/test-cases.md。
+> **校核状态（2026-07-10）**：命身宫、十二宫、五行局、十四主星、当前辅煞星表、四化与大限已按本文声明口径通过项目内 314,200 项检查，并与 `iztro@2.5.8` 对照 325,440 字段无差异。闰月沿用所重复的月份序数。星性、格局、宫位断语与现实预测不在此结论内。
 
 > 纯技术参考。按排盘顺序逐步安星，供开发紫微排盘工具使用。
 
@@ -162,57 +162,21 @@ function getWuxingJu(mingGongStem, mingGongBranch) {
  * @returns 紫微所在地支
  */
 function placeZiwei(lunarDay, ju) {
-  // 紫微安星专用查表
-  // 规则：以局数为步长，在地支上跳跃
-  // 具体为：日数除以局数的商决定跳几步，余数决定调整
-  
   const branches = ['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
-  
-  // 完整查表（按五行局×日数）
-  // 以下为水二局的紫微落宫
-  const ZIWEI_TABLE = {
-    2: { // 水二局
-      1:'丑', 2:'寅', 3:'寅', 4:'卯', 5:'卯', 6:'辰',
-      7:'辰', 8:'巳', 9:'巳', 10:'午', 11:'午', 12:'未',
-      13:'未', 14:'申', 15:'申', 16:'酉', 17:'酉', 18:'戌',
-      19:'戌', 20:'亥', 21:'亥', 22:'子', 23:'子', 24:'丑',
-      25:'丑', 26:'寅', 27:'寅', 28:'卯', 29:'卯', 30:'辰'
-    },
-    3: { // 木三局
-      1:'辰', 2:'辰', 3:'巳', 4:'巳', 5:'巳', 6:'午',
-      7:'午', 8:'午', 9:'未', 10:'未', 11:'未', 12:'申',
-      13:'申', 14:'申', 15:'酉', 16:'酉', 17:'酉', 18:'戌',
-      19:'戌', 20:'戌', 21:'亥', 22:'亥', 23:'亥', 24:'子',
-      25:'子', 26:'子', 27:'丑', 28:'丑', 29:'丑', 30:'寅'
-    },
-    4: { // 金四局
-      1:'未', 2:'未', 3:'未', 4:'申', 5:'申', 6:'申',
-      7:'申', 8:'酉', 9:'酉', 10:'酉', 11:'酉', 12:'戌',
-      13:'戌', 14:'戌', 15:'戌', 16:'亥', 17:'亥', 18:'亥',
-      19:'亥', 20:'子', 21:'子', 22:'子', 23:'子', 24:'丑',
-      25:'丑', 26:'丑', 27:'丑', 28:'寅', 29:'寅', 30:'寅'
-    },
-    5: { // 土五局
-      1:'戌', 2:'戌', 3:'戌', 4:'戌', 5:'亥', 6:'亥',
-      7:'亥', 8:'亥', 9:'亥', 10:'子', 11:'子', 12:'子',
-      13:'子', 14:'子', 15:'丑', 16:'丑', 17:'丑', 18:'丑',
-      19:'丑', 20:'寅', 21:'寅', 22:'寅', 23:'寅', 24:'寅',
-      25:'卯', 26:'卯', 27:'卯', 28:'卯', 29:'卯', 30:'辰'
-    },
-    6: { // 火六局
-      1:'丑', 2:'丑', 3:'丑', 4:'丑', 5:'丑', 6:'寅',
-      7:'寅', 8:'寅', 9:'寅', 10:'寅', 11:'寅', 12:'卯',
-      13:'卯', 14:'卯', 15:'卯', 16:'卯', 17:'卯', 18:'辰',
-      19:'辰', 20:'辰', 21:'辰', 22:'辰', 23:'辰', 24:'巳',
-      25:'巳', 26:'巳', 27:'巳', 28:'巳', 29:'巳', 30:'午'
-    }
-  };
-  
-  return ZIWEI_TABLE[ju][lunarDay];
+  if (!Number.isInteger(lunarDay) || lunarDay < 1 || lunarDay > 30) throw new RangeError('invalid lunar day');
+  if (![2, 3, 4, 5, 6].includes(ju)) throw new RangeError('invalid five-element bureau');
+
+  // 日数加到能被局数整除。商从寅起顺数；所加数为偶则顺加，为奇则逆减。
+  let adjustment = 0;
+  while ((lunarDay + adjustment) % ju !== 0) adjustment += 1;
+  const quotient = (lunarDay + adjustment) / ju;
+  const directionAdjustment = adjustment % 2 === 0 ? adjustment : -adjustment;
+  const indexFromYin = quotient - 1 + directionAdjustment;
+  return branches[(2 + indexFromYin % 12 + 12) % 12];
 }
 ```
 
-> ⚠️ **上表为标准安星表，不同门派可能有微调。此处采用最通行版本。生产环境务必验证。**
+> 运行时的 5×30 表由上式机械生成；旧手抄表有 100/150 格与该规则不符，已移除。其他安星口径应另建版本，不覆盖本表。
 
 ---
 
@@ -254,7 +218,7 @@ function placeTianfu(ziweiPos) {
 ```javascript
 const ZIWEI_SERIES = {
   // 紫微系：从紫微逆数（注意方向）
-  // 顺序：紫微→天机(-1)→空(-2)→太阳(-3)→武曲(-4)→天同(-5)→空(-6)→廉贞(-7)
+  // 顺序：紫微→天机(-1)→空(-2)→太阳(-3)→武曲(-4)→天同(-5)→空(-6,-7)→廉贞(-8)
   stars: [
     { name: '紫微', offset: 0 },
     { name: '天机', offset: -1 },
@@ -262,8 +226,8 @@ const ZIWEI_SERIES = {
     { name: '太阳', offset: -3 },
     { name: '武曲', offset: -4 },
     { name: '天同', offset: -5 },
-    // 空一宫
-    { name: '廉贞', offset: -7 }
+    // 空二宫
+    { name: '廉贞', offset: -8 }
   ]
 };
 
@@ -358,13 +322,13 @@ const YOUBI_TABLE = {
 
 ```javascript
 const TIANKUI_TABLE = {
-  '甲':'丑', '乙':'子', '丙':'亥', '丁':'酉',
+  '甲':'丑', '乙':'子', '丙':'亥', '丁':'亥',
   '戊':'丑', '己':'子', '庚':'丑', '辛':'午',
   '壬':'卯', '癸':'卯'
 };
 
 const TIANYUE_TABLE = {
-  '甲':'未', '乙':'申', '丙':'酉', '丁':'亥',
+  '甲':'未', '乙':'申', '丙':'酉', '丁':'酉',
   '戊':'未', '己':'申', '庚':'未', '辛':'寅',
   '壬':'巳', '癸':'巳'
 };
@@ -512,16 +476,14 @@ function getDayun(mingGongBranch, ju, yearStem, gender) {
   const step = forward ? 1 : -1;
   const baseIdx = branches.indexOf(mingGongBranch);
   
-  // 宫干也需要同步排
-  const baseStemIdx = stems.indexOf(getPalaceStem(yearStem, mingGongBranch));
-  
   const dayun = [];
   for (let i = 0; i < 12; i++) {
-    const branchIdx = (baseIdx + (i + 1) * step + 12) % 12;
-    const stemIdx = (baseStemIdx + (i + 1) * step + 10) % 10;
+    // 第一大限就在命宫；宫干必须按五虎遁从实际宫支重算。
+    const branchIdx = (baseIdx + i * step + 120) % 12;
+    const branch = branches[branchIdx];
     dayun.push({
-      stem: stems[stemIdx],
-      branch: branches[branchIdx],
+      stem: getPalaceStem(yearStem, branch),
+      branch,
       startAge: startAge + i * 10,
       endAge: startAge + (i + 1) * 10 - 1
     });
