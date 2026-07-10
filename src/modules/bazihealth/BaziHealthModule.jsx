@@ -197,15 +197,20 @@ export default function BaziHealthModule({
   // Calculate
   const handleCalculate = useCallback(() => {
     let adjYear = year, adjMonth = month, adjDay = day, adjHour = hour, adjMinute = 0;
+    let solarOffset = null;
     if (trueSolarEnabled && birthCity) {
-      const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
-      ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(year, month, day, hour, 0, offset));
+      solarOffset = calcTrueSolarTimeOffset(
+        birthCity.lng,
+        birthCity.stdMeridian ?? 120,
+        { year, month, day, hour, minute: 0 },
+      );
+      ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(year, month, day, hour, 0, solarOffset));
     }
     const res = runHealthAnalysis(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
     if (trueSolarEnabled && birthCity) {
       res._trueSolar = {
         city: birthCity.name,
-        offset: calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120),
+        offset: solarOffset,
         adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
       };
     }
@@ -216,7 +221,7 @@ export default function BaziHealthModule({
     setDetailSeen({});
     historyIdRef.current = crypto.randomUUID();
     setActiveHistoryId(null);
-  }, [year, month, day, hour, gender, setActiveHistoryId]);
+  }, [year, month, day, hour, gender, trueSolarEnabled, birthCity, setActiveHistoryId]);
 
   // AI interpretation
   const handleAI = useCallback(async () => {
@@ -360,6 +365,7 @@ export default function BaziHealthModule({
             onToggle={setTrueSolarEnabled}
             city={birthCity}
             onCityChange={setBirthCity}
+            dateParts={{ year, month, day, hour, minute: 0 }}
           />
         </div>
 

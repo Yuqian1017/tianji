@@ -359,16 +359,21 @@ export default function BaziModule({
     setTimeout(() => {
       try {
         let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHour = birthHour, adjMinute = 0;
+        let solarOffset = null;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
-          ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(birthYear, birthMonth, birthDay, birthHour, 0, offset));
+          solarOffset = calcTrueSolarTimeOffset(
+            birthCity.lng,
+            birthCity.stdMeridian ?? 120,
+            { year: birthYear, month: birthMonth, day: birthDay, hour: birthHour, minute: 0 },
+          );
+          ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(birthYear, birthMonth, birthDay, birthHour, 0, solarOffset));
         }
         const r = paiBazi(adjYear, adjMonth, adjDay, adjHour, adjMinute, gender);
         // Attach true solar time info to result for display
         if (trueSolarEnabled && birthCity) {
           r._trueSolar = {
             city: birthCity.name,
-            offset: calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120),
+            offset: solarOffset,
             adjusted: { year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute },
           };
         }
@@ -636,6 +641,7 @@ export default function BaziModule({
                 onToggle={setTrueSolarEnabled}
                 city={birthCity}
                 onCityChange={setBirthCity}
+                dateParts={{ year: birthYear, month: birthMonth, day: birthDay, hour: birthHour, minute: 0 }}
               />
 
               {/* Detailed mode toggle */}

@@ -455,15 +455,20 @@ export default function ZiweiModule({
     setTimeout(() => {
       try {
         let adjYear = birthYear, adjMonth = birthMonth, adjDay = birthDay, adjHourBranch = birthHour;
+        let solarOffset = null;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
-          ({ year: adjYear, month: adjMonth, day: adjDay, branch: adjHourBranch } = adjustHourBranch(birthYear, birthMonth, birthDay, birthHour, offset));
+          solarOffset = calcTrueSolarTimeOffset(
+            birthCity.lng,
+            birthCity.stdMeridian ?? 120,
+            { year: birthYear, month: birthMonth, day: birthDay },
+          );
+          ({ year: adjYear, month: adjMonth, day: adjDay, branch: adjHourBranch } = adjustHourBranch(birthYear, birthMonth, birthDay, birthHour, solarOffset));
         }
         const r = paiZiwei(adjYear, adjMonth, adjDay, adjHourBranch, gender);
         if (trueSolarEnabled && birthCity) {
           r._trueSolar = {
             city: birthCity.name,
-            offset: calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120),
+            offset: solarOffset,
             originalBranch: birthHour,
             adjustedBranch: adjHourBranch,
           };
@@ -739,6 +744,7 @@ export default function ZiweiModule({
                 onToggle={setTrueSolarEnabled}
                 city={birthCity}
                 onCityChange={setBirthCity}
+                dateParts={{ year: birthYear, month: birthMonth, day: birthDay, hour: 12, minute: 0 }}
               />
 
               <div className="flex items-center justify-between">

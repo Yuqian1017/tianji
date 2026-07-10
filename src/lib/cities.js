@@ -1,7 +1,7 @@
 /**
- * Chinese cities longitude database for 真太阳时 (True Solar Time) correction.
- * Standard meridian for China (UTC+8) is 120°E.
- * Offset formula: (120 - longitude) * 4 minutes
+ * City longitude database for standard-time apparent solar correction.
+ * China uses the UTC+8 standard meridian at 120°E; date-aware corrections
+ * also include the equation of time.
  */
 
 // Major Chinese cities grouped by province/region
@@ -502,20 +502,51 @@ export function searchCities(query) {
 }
 
 /**
- * Calculate true solar time offset in minutes.
- * Positive = local solar time is AHEAD of standard time (east of 120E)
- * Negative = local solar time is BEHIND standard time (west of 120E)
+ * Calculate the equation of time in minutes using NOAA's fractional-year
+ * approximation. Positive values mean apparent solar time is ahead of mean
+ * solar time.
+ *
+ * @param {{ year: number, month: number, day: number, hour?: number, minute?: number }} dateParts
+ * @returns {number}
+ */
+export function calcEquationOfTime({ year, month, day, hour = 12, minute = 0 }) {
+  const dayOfYear = (
+    Date.UTC(year, month - 1, day) - Date.UTC(year, 0, 0)
+  ) / 86400000;
+  const daysInYear = new Date(Date.UTC(year, 1, 29)).getUTCMonth() === 1
+    ? 366
+    : 365;
+  const fractionalHour = hour + minute / 60;
+  const gamma = (2 * Math.PI / daysInYear)
+    * (dayOfYear - 1 + (fractionalHour - 12) / 24);
+
+  return 229.18 * (
+    0.000075
+    + 0.001868 * Math.cos(gamma)
+    - 0.032077 * Math.sin(gamma)
+    - 0.014615 * Math.cos(2 * gamma)
+    - 0.040849 * Math.sin(2 * gamma)
+  );
+}
+
+/**
+ * Calculate the minutes to subtract from standard clock time to obtain local
+ * apparent solar time. With dateParts this includes the equation of time;
+ * without it the function preserves the former longitude-only behavior.
  *
  * For China (UTC+8, standard meridian 120°E):
- *   Chengdu (104°E): (120 - 104) * 4 = 64 minutes → subtract 64 min
- *   Harbin (126.65°E): (120 - 126.65) * 4 = -26.6 min → add ~27 min
+ *   offset = 4 * (120 - longitude) - equationOfTime
  *
  * @param {number} longitude - City longitude in degrees
  * @param {number} [standardMeridian=120] - Standard meridian for timezone
+ * @param {{ year: number, month: number, day: number, hour?: number, minute?: number }} [dateParts]
  * @returns {number} Offset in minutes to SUBTRACT from clock time
  */
-export function calcTrueSolarTimeOffset(longitude, standardMeridian = 120) {
-  return Math.round((standardMeridian - longitude) * 4);
+export function calcTrueSolarTimeOffset(longitude, standardMeridian = 120, dateParts) {
+  const equationOfTime = dateParts ? calcEquationOfTime(dateParts) : 0;
+  return Math.round(
+    (standardMeridian - longitude) * 4 - equationOfTime,
+  );
 }
 
 /**
@@ -554,12 +585,12 @@ export function formatOffset(offsetMinutes) {
 }
 
 /**
- * Format adjusted time for display. E.g. "真太阳时 10:56 (校正 -64分)"
+ * Format adjusted time for display.
  */
 export function formatTrueSolarTime(adjusted, offsetMinutes) {
   const hh = String(adjusted.hour).padStart(2, '0');
   const mm = String(adjusted.minute).padStart(2, '0');
-  return `真太阳时 ${hh}:${mm} (校正 ${formatOffset(offsetMinutes)})`;
+  return `真太阳时（标准时口径） ${hh}:${mm} (校正 ${formatOffset(offsetMinutes)})`;
 }
 
 // Branch to midpoint hour mapping (for Ziwei which uses branch strings)

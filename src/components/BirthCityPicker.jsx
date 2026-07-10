@@ -5,23 +5,12 @@ import { searchCities, calcTrueSolarTimeOffset, formatOffset } from '../lib/citi
  * Shared city picker for 真太阳时 correction.
  * Embeds into any module's form as a compact toggle + search dropdown.
  */
-export default function BirthCityPicker({ enabled, onToggle, city, onCityChange }) {
+export default function BirthCityPicker({ enabled, onToggle, city, onCityChange, dateParts }) {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
-
-  // Search on query change
-  useEffect(() => {
-    if (query.length > 0) {
-      setResults(searchCities(query));
-      setShowDropdown(true);
-    } else {
-      setResults([]);
-      setShowDropdown(false);
-    }
-  }, [query]);
+  const results = query.length > 0 ? searchCities(query) : [];
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -40,7 +29,15 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
     setShowDropdown(false);
   };
 
-  const offset = city ? calcTrueSolarTimeOffset(city.lng, city.stdMeridian ?? 120) : 0;
+  const handleQueryChange = (event) => {
+    const value = event.target.value;
+    setQuery(value);
+    setShowDropdown(value.length > 0);
+  };
+
+  const offset = city
+    ? calcTrueSolarTimeOffset(city.lng, city.stdMeridian ?? 120, dateParts)
+    : 0;
 
   return (
     <div className="space-y-2">
@@ -49,7 +46,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
         <div>
           <div className="text-sm text-[var(--color-text)] font-body">真太阳时校正</div>
           <div className="text-xs text-[var(--color-text-dim)] font-body">
-            根据出生地经度校正时辰
+            根据出生日期与经度校正时辰
           </div>
         </div>
         <button
@@ -88,7 +85,7 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
               ref={inputRef}
               type="text"
               value={query}
-              onChange={e => setQuery(e.target.value)}
+              onChange={handleQueryChange}
               placeholder="输入城市名搜索，如：成都、Los Angeles、东京..."
               className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2
                 text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body text-sm"
@@ -100,7 +97,11 @@ export default function BirthCityPicker({ enabled, onToggle, city, onCityChange 
             <div className="absolute z-20 left-0 right-0 mt-1 bg-[var(--color-bg-card)] border border-[var(--color-gold-border)]
               rounded-lg shadow-lg max-h-48 overflow-y-auto">
               {results.map((c, i) => {
-                const off = calcTrueSolarTimeOffset(c.lng, c.stdMeridian ?? 120);
+                const off = calcTrueSolarTimeOffset(
+                  c.lng,
+                  c.stdMeridian ?? 120,
+                  dateParts,
+                );
                 return (
                   <button
                     key={`${c.name}-${c.province}-${i}`}

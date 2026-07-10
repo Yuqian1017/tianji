@@ -335,7 +335,11 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
       try {
         let adjYear = inputYear, adjMonth = inputMonth, adjDay = inputDay, adjHour = inputHour;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(birthCity.lng, birthCity.stdMeridian ?? 120);
+          const offset = calcTrueSolarTimeOffset(
+            birthCity.lng,
+            birthCity.stdMeridian ?? 120,
+            { year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: 0 },
+          );
           ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour } = adjustBirthTime(inputYear, inputMonth, inputDay, inputHour, 0, offset));
         }
         const r = paiQimen(adjYear, adjMonth, adjDay, adjHour);
@@ -367,7 +371,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
         setCalculating(false);
       }
     }, 600);
-  }, [inputYear, inputMonth, inputDay, inputHour, question, upsertHistory, setActiveHistoryId]);
+  }, [inputYear, inputMonth, inputDay, inputHour, question, trueSolarEnabled, birthCity, upsertHistory, setActiveHistoryId]);
 
   // Ask AI
   const askAI = useCallback(async () => {
@@ -570,6 +574,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
                 onToggle={setTrueSolarEnabled}
                 city={birthCity}
                 onCityChange={setBirthCity}
+                dateParts={{ year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: 0 }}
               />
               <div className="text-[10px] text-[var(--color-text-dim)] font-body">
                 部分派别使用真太阳时起课，可根据需要开启
