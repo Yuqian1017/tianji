@@ -1,4 +1,14 @@
+import { Solar } from 'lunar-javascript';
+
 import { XIANTIAN, wuxingRelation, getHexagramName, getTotalStrokes, getStrokeCount, WUXING_CN } from './data.js';
+
+const DIZHI_NAMES = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+
+export const MEIHUA_VALIDATION_MODEL = Object.freeze({
+  school: 'meihua_yishu_declared_methods',
+  chartStatus: 'validated_deterministic',
+  interpretationStatus: 'not_validated',
+});
 
 /**
  * Cast hexagram by two numbers (报数起卦).
@@ -7,11 +17,14 @@ import { XIANTIAN, wuxingRelation, getHexagramName, getTotalStrokes, getStrokeCo
  * @returns {object} Full meihua result
  */
 export function castByNumber(num1, num2) {
+  if (!Number.isInteger(num1) || num1 < 1 || !Number.isInteger(num2) || num2 < 1) {
+    throw new Error('报数起卦需要两个正整数');
+  }
   const upperNum = num1 % 8 || 8;
   const lowerNum = num2 % 8 || 8;
   const dong = (num1 + num2) % 6 || 6;
 
-  return buildResult({
+  return buildMeihuaChart({
     method: 'number',
     input: { num1, num2 },
     upperNum,
@@ -22,47 +35,67 @@ export function castByNumber(num1, num2) {
 
 /**
  * Cast hexagram by current time (时间起卦).
- * Uses solar calendar as simplified approach for MVP.
- * Traditional method uses 农历 (lunar calendar).
+ * Uses lunar month/day and the lunar year's earthly branch.
  * @param {Date} [date] - Date to use (default: now)
  * @returns {object} Full meihua result
  */
 export function castByTime(date) {
-  const d = date || new Date();
+  const d = date ?? new Date();
+  if (!(d instanceof Date) || Number.isNaN(d.getTime())) {
+    throw new Error('时间起卦需要有效日期');
+  }
   const year = d.getFullYear();
-  const month = d.getMonth() + 1; // 1-12
+  const month = d.getMonth() + 1;
   const day = d.getDate();
   const hour = d.getHours();
+  const minute = d.getMinutes();
 
-  // 年支数: map year to earthly branch index (1-12)
-  // The earthly branch cycle: 子=1, 丑=2, ... 亥=12
-  // Year's earthly branch: (year - 4) % 12 → 0=子, 1=丑, ..., 11=亥
-  // For meihua calculation we need 1-based: 子=1, 丑=2, ..., 亥=12
-  const yearBranchIdx = ((year - 4) % 12) + 1;
+  const lunar = Solar.fromYmdHms(
+    year,
+    month,
+    day,
+    hour,
+    minute,
+    d.getSeconds(),
+  ).getLunar();
+  const lunarYear = lunar.getYear();
+  const lunarMonth = Math.abs(lunar.getMonth());
+  const lunarDay = lunar.getDay();
+  const isLeapMonth = lunar.getMonth() < 0;
+  const yearBranch = lunar.getYearZhi();
+  const hourBranch = lunar.getTimeZhi();
+  const yearBranchIdx = DIZHI_NAMES.indexOf(yearBranch) + 1;
+  const hourBranchIdx = DIZHI_NAMES.indexOf(hourBranch) + 1;
 
-  // 时辰支数: convert 24-hour to 12 earthly branches
-  // 子时(23-1)=1, 丑时(1-3)=2, ..., 亥时(21-23)=12
-  const hourBranchIdx = Math.floor(((hour + 1) % 24) / 2) + 1;
-
-  const sum1 = yearBranchIdx + month + day;
+  const sum1 = yearBranchIdx + lunarMonth + lunarDay;
   const sum2 = sum1 + hourBranchIdx;
 
   const upperNum = sum1 % 8 || 8;
   const lowerNum = sum2 % 8 || 8;
   const dong = sum2 % 6 || 6;
 
-  const DIZHI_NAMES = ['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
-  const yearBranch = DIZHI_NAMES[(year - 4) % 12];
-  const hourBranch = DIZHI_NAMES[Math.floor(((hour + 1) % 24) / 2)];
-
-  return buildResult({
+  return buildMeihuaChart({
     method: 'time',
     input: {
-      year, month, day, hour,
-      yearBranch, hourBranch,
-      yearBranchIdx, hourBranchIdx,
-      timeStr: `${year}年${month}月${day}日 ${hour}时（${hourBranch}时）`,
-      note: '使用公历日期（传统用农历，结果可能略有差异）',
+      calendar: 'lunar',
+      year,
+      month,
+      day,
+      hour,
+      minute,
+      lunarYear,
+      lunarMonth,
+      lunarDay,
+      isLeapMonth,
+      leapMonthPolicy: 'reuse_base_month_number',
+      lunarYearGanzhi: lunar.getYearInGanZhi(),
+      lunarMonthName: lunar.getMonthInChinese(),
+      lunarDayName: lunar.getDayInChinese(),
+      yearBranch,
+      hourBranch,
+      yearBranchIdx,
+      hourBranchIdx,
+      timeStr: `${year}年${month}月${day}日 ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}（农历${lunar.getYearInGanZhi()}年${lunar.getMonthInChinese()}月${lunar.getDayInChinese()}·${hourBranch}时）`,
     },
     upperNum,
     lowerNum,
@@ -108,7 +141,7 @@ export function castByText(text) {
   const lowerNum = lowerStrokes % 8 || 8;
   const dong = totalStrokes % 6 || 6;
 
-  return buildResult({
+  return buildMeihuaChart({
     method: 'text',
     input: {
       text: text.trim(),
@@ -126,13 +159,16 @@ export function castByText(text) {
 /**
  * Build the complete meihua result from casting parameters.
  */
-function buildResult({ method, input, upperNum, lowerNum, dong }) {
-  const upper = XIANTIAN[upperNum];
-  const lower = XIANTIAN[lowerNum];
-
-  if (!upper || !lower) {
+export function buildMeihuaChart({ method, input, upperNum, lowerNum, dong }) {
+  if (!Number.isInteger(upperNum) || upperNum < 1 || upperNum > 8
+    || !Number.isInteger(lowerNum) || lowerNum < 1 || lowerNum > 8) {
     throw new Error(`Invalid trigram number: upper=${upperNum}, lower=${lowerNum}`);
   }
+  if (!Number.isInteger(dong) || dong < 1 || dong > 6) {
+    throw new Error(`Invalid moving line: ${dong}`);
+  }
+  const upper = XIANTIAN[upperNum];
+  const lower = XIANTIAN[lowerNum];
 
   // 体用判断: moving line in lower trigram (1-3) → lower=用, upper=体
   //            moving line in upper trigram (4-6) → upper=用, lower=体
@@ -153,13 +189,13 @@ function buildResult({ method, input, upperNum, lowerNum, dong }) {
   // 六爻 lines for 互卦/变卦 calculation
   // Build 6 lines from upper (lines 4,5,6) and lower (lines 1,2,3)
   // Binary: '1' = yang, '0' = yin; binary is bottom-to-top within each trigram
-  const lowerLines = lower.binary.split('').reverse().map(Number); // [line1, line2, line3]
-  const upperLines = upper.binary.split('').reverse().map(Number); // [line4, line5, line6]
+  const lowerLines = lower.binary.split('').map(Number); // [line1, line2, line3]
+  const upperLines = upper.binary.split('').map(Number); // [line4, line5, line6]
   const allLines = [...lowerLines, ...upperLines]; // [line1, line2, line3, line4, line5, line6]
 
   // 互卦 (Mutual Hexagram): lower mutual = lines 2,3,4; upper mutual = lines 3,4,5
-  const huLowerBinary = [allLines[1], allLines[2], allLines[3]].reverse().join('');
-  const huUpperBinary = [allLines[2], allLines[3], allLines[4]].reverse().join('');
+  const huLowerBinary = [allLines[1], allLines[2], allLines[3]].join('');
+  const huUpperBinary = [allLines[2], allLines[3], allLines[4]].join('');
   const huUpperName = binaryToGuaName(huUpperBinary);
   const huLowerName = binaryToGuaName(huLowerBinary);
   const huGuaName = getHexagramName(huUpperName, huLowerName);
@@ -167,8 +203,8 @@ function buildResult({ method, input, upperNum, lowerNum, dong }) {
   // 变卦 (Changing Hexagram): flip the moving line
   const bianLines = [...allLines];
   bianLines[dong - 1] = bianLines[dong - 1] === 1 ? 0 : 1;
-  const bianLowerBinary = [bianLines[0], bianLines[1], bianLines[2]].reverse().join('');
-  const bianUpperBinary = [bianLines[3], bianLines[4], bianLines[5]].reverse().join('');
+  const bianLowerBinary = [bianLines[0], bianLines[1], bianLines[2]].join('');
+  const bianUpperBinary = [bianLines[3], bianLines[4], bianLines[5]].join('');
   const bianUpperName = binaryToGuaName(bianUpperBinary);
   const bianLowerName = binaryToGuaName(bianLowerBinary);
   const bianGuaName = getHexagramName(bianUpperName, bianLowerName);
@@ -193,12 +229,21 @@ function buildResult({ method, input, upperNum, lowerNum, dong }) {
       lower: { name: bianLowerName, wuxing: getGuaWuxing(bianLowerName) },
     },
     tiYong: tiYong,
+    validationModel: {
+      ...MEIHUA_VALIDATION_MODEL,
+      castingMethodStatus: method === 'text'
+        ? 'source_pinned_modern_adaptation'
+        : 'validated_declared_method',
+      ...(method === 'text'
+        ? { strokeDataStatus: 'unicode_unihan_17_informative' }
+        : {}),
+    },
   };
 }
 
 /**
  * Convert 3-digit binary string to trigram name.
- * Binary format: MSB first (top line first), e.g. '111'=乾, '000'=坤
+ * Binary format: bottom line first, e.g. '100'=震, '001'=艮.
  */
 function binaryToGuaName(binary) {
   for (const [, info] of Object.entries(XIANTIAN)) {
@@ -250,12 +295,16 @@ ${inputDesc}
 下卦：${result.lower.name}（${result.lower.nature}·${WUXING_CN[result.lower.wuxing]}）${result.tiGua.position === 'lower' ? '← 体卦' : '← 用卦'}
 动爻：第${result.dong}爻（${result.dong <= 3 ? '下卦动' : '上卦动'}）
 
+结构状态：${result.validationModel.chartStatus}
+起卦口径：${result.validationModel.castingMethodStatus}
+解释状态：${result.validationModel.interpretationStatus}
+
 体卦：${result.tiGua.name}（${WUXING_CN[result.tiGua.wuxing]}）
 用卦：${result.yongGua.name}（${WUXING_CN[result.yongGua.wuxing]}）
-体用关系：${result.tiYong.desc} → ${result.tiYong.verdict}
+传统解释标签：${result.tiYong.desc}（标签本身不证明现实吉凶）
 
 互卦：${result.huGua.name}（上${result.huGua.upper.name}${WUXING_CN[result.huGua.upper.wuxing]}，下${result.huGua.lower.name}${WUXING_CN[result.huGua.lower.wuxing]}）
 变卦：${result.bianGua.name}（上${result.bianGua.upper.name}${WUXING_CN[result.bianGua.upper.wuxing]}，下${result.bianGua.lower.name}${WUXING_CN[result.bianGua.lower.wuxing]}）
 
-请按照梅花断法分析此卦，重点分析体用关系、互卦过程、变卦结果，并结合卦象取象给出判断和建议。`;
+请将以上内容分为“结构观察”“传统文化解释”“现实边界”三部分说明。互卦和变卦只能称为传统解释对象，不得写成已经发生的过程或必然结果。`;
 }

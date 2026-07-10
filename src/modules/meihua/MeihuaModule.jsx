@@ -39,7 +39,7 @@ function CastingAnimation() {
 function MeihuaDisplay({ result }) {
   if (!result) return null;
 
-  const { upper, lower, dong, tiGua, yongGua, benGua, huGua, bianGua, tiYong } = result;
+  const { upper, lower, dong, tiGua, yongGua, benGua, huGua, bianGua, tiYong, validationModel } = result;
 
   return (
     <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5 space-y-4 animate-meihua-reveal">
@@ -114,16 +114,15 @@ function MeihuaDisplay({ result }) {
           </div>
         </div>
         <div className="text-lg font-title">
-          <span className="mr-2">{tiYong.icon}</span>
           <span className="text-[var(--color-text)]">{tiYong.desc}</span>
-          <span className="text-[var(--color-text-dim)] ml-2">— {tiYong.verdict}</span>
         </div>
+        <div className="text-[var(--color-text-dim)] text-xs mt-1 font-body">传统五行关系标签，不等同于现实吉凶</div>
       </div>
 
       {/* 互卦 + 变卦 */}
       <div className="grid grid-cols-2 gap-3 text-center animate-meihua-reveal" style={{ animationDelay: '350ms' }}>
         <div className="bg-[var(--color-surface-subtle)] rounded-lg p-3 border border-[var(--color-surface-border)]">
-          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">互卦（过程）</div>
+          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">互卦（结构）</div>
           <div className="text-[var(--color-text)] font-title">{huGua.name}</div>
           <div className="text-xs text-[var(--color-text-dim)] mt-0.5 font-body">
             <span className={wuxingColor[huGua.upper.wuxing]}>{huGua.upper.name}</span>
@@ -132,7 +131,7 @@ function MeihuaDisplay({ result }) {
           </div>
         </div>
         <div className="bg-[var(--color-surface-subtle)] rounded-lg p-3 border border-[var(--color-surface-border)]">
-          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">变卦（结果）</div>
+          <div className="text-[var(--color-text-dim)] text-xs mb-1 font-body">变卦（结构）</div>
           <div className="text-[var(--color-jade)] font-title">{bianGua.name}</div>
           <div className="text-xs text-[var(--color-text-dim)] mt-0.5 font-body">
             <span className={wuxingColor[bianGua.upper.wuxing]}>{bianGua.upper.name}</span>
@@ -140,6 +139,10 @@ function MeihuaDisplay({ result }) {
             <span className={wuxingColor[bianGua.lower.wuxing]}>{bianGua.lower.name}</span>
           </div>
         </div>
+      </div>
+
+      <div className="border-t border-[var(--color-surface-border)] pt-3 text-xs text-[var(--color-text-dim)] font-body leading-relaxed">
+        排盘结构：{validationModel.chartStatus}；现实预测与吉凶解释：{validationModel.interpretationStatus}。
       </div>
     </div>
   );
@@ -356,8 +359,8 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
     <div className="space-y-6">
       <ModuleIntro
         moduleId="meihua"
-        origin="北宋邵雍（邵康节）所创，取「万物皆可起卦」之意。以数字、时间、汉字等随机信息起卦，快速直观，重「象」不重「爻」。"
-        strengths={['快速决断（报两个数即可）', '日常小事占问', '即兴取象（看到什么、想到什么皆可起卦）']}
+        origin="传统梅花易数文化演算。当前模块提供报数、农历时间与现代笔画法起卦，并将结构计算和文化解释分层呈现。"
+        strengths={['报数生成单动爻卦结构', '农历年月日时起卦', '本卦、互卦与变卦结构复算']}
       />
 
       {/* 占问事项 */}
@@ -399,14 +402,14 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
             <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">
               心中默想所问之事，随意报出两个正整数
             </div>
-            <div className="flex gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <input
                 type="number"
                 min="1"
                 value={inputNum1}
                 onChange={e => setInputNum1(e.target.value)}
                 placeholder="第一个数"
-                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
+                className="w-full min-w-0 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
                   placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none font-body"
               />
               <input
@@ -415,7 +418,7 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
                 value={inputNum2}
                 onChange={e => setInputNum2(e.target.value)}
                 placeholder="第二个数"
-                className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
+                className="w-full min-w-0 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-3 text-[var(--color-text)] text-center text-lg
                   placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-gold-border-med)] focus:outline-none font-body"
               />
             </div>
@@ -434,7 +437,7 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
         {castMethod === 'time' && (
           <div className="space-y-3">
             <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">
-              以当前时间自动计算卦象（传统用农历，此处使用公历近似）
+              以当前本地时间换算农历月日与年、时地支
             </div>
             <div className="text-center py-4 bg-[var(--color-surface-subtle)] rounded-lg">
               <div className="text-[var(--color-text)] text-lg font-title">{timeDisplay}</div>
@@ -454,7 +457,7 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
         {castMethod === 'text' && (
           <div className="space-y-3">
             <div className="text-xs text-[var(--color-text-dim)] mb-2 font-body">
-              输入汉字，按笔画数起卦（一字取同卦，二字分上下，三字以上前半后半分）
+              现代笔画法适配，笔画采用 Unicode 17.0 Unihan 基本汉字区数据
             </div>
             <input
               type="text"
@@ -497,14 +500,14 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
       {result && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 解读</h3>
+            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 文化解读</h3>
             {isInitialAskVisible && (
               <button
                 onClick={askAI}
                 className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
                   hover:bg-[var(--color-gold-bg-hover)] btn-glow font-body"
               >
-                请求 AI 断卦
+                请求文化解读
               </button>
             )}
           </div>
@@ -536,7 +539,7 @@ export default function MeihuaModule({ aiConfig, setShowSettings, upsertHistory,
             )}
 
             {aiLoading && !streamingText && (
-              <span className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">解读中...</span>
+              <span className="text-[var(--color-gold-muted)] text-sm animate-pulse font-body">整理中...</span>
             )}
 
             <div ref={chatEndRef} />

@@ -12,10 +12,12 @@
     "lint": "eslint .",
     "test:bazi": "node --test test/bazi/*.test.mjs",
     "test:liuyao": "node --test test/liuyao/*.test.mjs",
-    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs",
+    "test:meihua": "node --test test/meihua/*.test.mjs",
+    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs",
     "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
     "audit:liuyao": "node scripts/validation/audit-liuyao.mjs",
+    "audit:meihua": "node scripts/validation/audit-meihua.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview"
   },

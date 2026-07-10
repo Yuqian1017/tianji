@@ -1,3 +1,5 @@
+import { getUnihanStrokeCount } from './strokes-unihan-17.js';
+
 // ===== 先天八卦数 (Xiantian / Earlier Heaven Trigram Numbers) =====
 export const XIANTIAN = {
   1: { name: '乾', wuxing: 'metal', symbol: '☰', nature: '天', binary: '111' },
@@ -30,36 +32,36 @@ const KE_CYCLE = ['wood', 'earth', 'water', 'fire', 'metal'];
 /**
  * Determine the five-element relationship between two elements.
  * Perspective: how does `b` relate to `a` (what does b do to a).
- * @returns {{ relation: string, desc: string, verdict: string }}
+ * @returns {{ relation: string, desc: string }}
  */
 export function wuxingRelation(tiWuxing, yongWuxing) {
   if (tiWuxing === yongWuxing) {
-    return { relation: 'bihe', desc: '体用比和', verdict: '平', icon: '➡️' };
+    return { relation: 'bihe', desc: '体用比和' };
   }
 
   const tiIdx = SHENG_CYCLE.indexOf(tiWuxing);
   const yongIdx = SHENG_CYCLE.indexOf(yongWuxing);
 
-  // Check if yong generates ti (用生体 → 吉)
+  // Check whether yong generates ti.
   if (SHENG_CYCLE[(yongIdx + 1) % 5] === tiWuxing) {
-    return { relation: 'yongShengTi', desc: '用生体', verdict: '吉', icon: '✅' };
+    return { relation: 'yongShengTi', desc: '用生体' };
   }
-  // Check if ti generates yong (体生用 → 泄)
+  // Check whether ti generates yong.
   if (SHENG_CYCLE[(tiIdx + 1) % 5] === yongWuxing) {
-    return { relation: 'tiShengYong', desc: '体生用', verdict: '泄', icon: '⚠️' };
+    return { relation: 'tiShengYong', desc: '体生用' };
   }
-  // Check if yong controls ti (用克体 → 凶)
+  // Check whether yong controls ti.
   if (KE_CYCLE[(KE_CYCLE.indexOf(yongWuxing) + 1) % 5] === tiWuxing) {
-    return { relation: 'yongKeTi', desc: '用克体', verdict: '凶', icon: '❌' };
+    return { relation: 'yongKeTi', desc: '用克体' };
   }
-  // Check if ti controls yong (体克用 → 利但费力)
+  // Check whether ti controls yong.
   if (KE_CYCLE[(KE_CYCLE.indexOf(tiWuxing) + 1) % 5] === yongWuxing) {
-    return { relation: 'tiKeYong', desc: '体克用', verdict: '利', icon: '🔶' };
+    return { relation: 'tiKeYong', desc: '体克用' };
   }
 
   // Fallback (should not reach here with valid inputs)
   console.warn(`Unexpected wuxing relation: ti=${tiWuxing}, yong=${yongWuxing}`);
-  return { relation: 'unknown', desc: '关系不明', verdict: '?', icon: '❓' };
+  return { relation: 'unknown', desc: '关系不明' };
 }
 
 // ===== 万物类象 (Trigram Correspondences) =====
@@ -141,7 +143,7 @@ export const WANWU_LEIXIANG = {
 // ===== 64卦名查找 =====
 // Build from upper+lower trigram binary → hexagram name
 // We import JINGFANG from liuyao/data.js for the 64 hexagram lookup
-import { JINGFANG, BAGUA } from '../liuyao/data.js';
+import { JINGFANG } from '../liuyao/data.js';
 
 // Build lookup: "upperName_lowerName" → hexagram name
 const _hexagramNameMap = {};
@@ -166,46 +168,19 @@ export function getHexagramName(upperName, lowerName) {
   return name;
 }
 
-// ===== 常用汉字笔画数 =====
-// Compact encoding: "char:strokes" pairs, covers ~1500 common characters
-// For characters not in this table, we use a heuristic based on Unicode ranges
-const STROKE_DATA = '一1二2三3四5五4六4七2八2九2十2百6千3万3亿1上3下3左5右5大3小3中4人2入2口3天4地6日4月4年6时7分4秒9水4火4木4金8土3山3石5田5风4雨8云4雪11花7草9树16果8春9夏10秋9冬5东5西6南9北5前9后6里7外5内4心4手4头5足7目5耳6牙4舌6身7发5面9力2刀2王4玉5文4字6书4学8生5死6长4短12高10低7明8暗13光6色6红6白5黑12黄11蓝13绿11紫12青8老6少4男7女3子3父4母5兄5弟7姐8妹8夫4妻8友4马3牛4羊6鸡8狗8猫11鱼8鸟5龙5虎8蛇11猪11兔8鼠13猴12象11乾11坤8震15巽12坎7离11艮6兑7卦8爻4阴6阳6占5问6事8吉6凶4占5卜2用5体7动6静16世5应7空8亡3有6无4不4是9多6少4好6坏7对5错13来7去5行6走7起10看7听7说7读10写5想13做11吃6喝12给9拿10把7打5开4关6买6卖8要9得11到8过6进7出5回6问6答12话7语9叫5让5请10才3也3都10还7就12只5能10会6可5要9已3了2又2还7正5在6的8我7你7他5她6它5们5个3两8几2这7那6哪9什4么3谁10啊11吧7呢8吗6嗯13啊11吗6嘛14把7被10对5和8与3或8及3以4用5而6但7如6因6所8就12很9更7最12非8想13意13感13知8见4觉9思9问11答12说14话13语14声7音9笑10哭10喜12怒9哀9乐5爱10恨9怕8怪8急9忙6忘7记5忍7快7慢14满13空8穷7富12贵9贱10真10假11难19易8简13单8双4安6危6平5合6分4开4关6门3户4家10房8屋9楼13塔12桥10路13街12市5城9村7国8民5政9法8军6队4兵7战9和8平5安6全6公4私7王4官8令5法8律9理11道12德15数13算14术5方4法8式6变9化4成6败11胜9负6加5减11乘10除10等12第11次6回6过12通10运7命8世5代5古5今4新13旧5同6别7名6号5句5段9章11篇15题15答12纸10笔12画8图8片4张7本5业5工3场12度9位7单8复9向6系7然12自6己3件6发5步7进7前9后6左5右5边5角7面9点9线8条7段9块7根10头5条7件6种9类9组8份6期12间12段9直8曲6圆13方4长4短12宽15窄10深11浅9重9轻14远7近7早6晚11先6后6始8终11常11永5久3立5坐7走7跑12飞3跳13唱11歌14舞14画8弹12拉8推11拉8拾9找7得11算14数13计9量12成6功5利7益10害10助7困7救11教11育8习3练8试13比4较10相9同6异6似7像14形7状7色6味8声7光6热10冷7暖13凉10清11浊16干3湿12净8脏10整16齐14破10完7好6坏7新13旧5整16半5双4单8空8满13实8虚11假11真10错13对5反4正5顺9逆10通10达6远7近7快7慢14忽8突9急9缓13松8紧10严7宽15密11集12群13独9众6每7各6定8更7再6又2比4最12极7超12越12指9点9数13将9接11连10断11续13依8据11系7持9守6保9护7防6备8装13运7搬13移11转11传13递9送9接11收6取8选10择17拿10换12借10还7付5账8价6费9税12花7用5造10建8修9改7补7换12调15整16需14求7供8给9足7够11缺10余7够11食9饭12饮12衣6穿9住7行6买6卖8';
-
-const _strokeMap = new Map();
-{
-  const pairs = STROKE_DATA.match(/[^\d]+\d+/g) || [];
-  for (const pair of pairs) {
-    const char = pair.replace(/\d+$/, '');
-    const strokes = parseInt(pair.match(/\d+$/)[0], 10);
-    for (const c of char) {
-      _strokeMap.set(c, strokes);
-    }
-  }
-}
-
+// ===== Unicode Unihan 笔画数 =====
 /**
  * Get stroke count for a Chinese character.
- * Returns exact count for known characters, heuristic for unknown.
+ * Returns the Unicode 17.0 Unihan kTotalStrokes value for U+4E00-U+9FFF.
  * @param {string} char - Single character
  * @returns {number} Stroke count
  */
 export function getStrokeCount(char) {
-  if (_strokeMap.has(char)) {
-    return _strokeMap.get(char);
+  const count = getUnihanStrokeCount(char);
+  if (count !== null) {
+    return count;
   }
-  // Heuristic for unknown CJK characters: use code point offset
-  // CJK Unified Ideographs range: U+4E00 - U+9FFF
-  const code = char.charCodeAt(0);
-  if (code >= 0x4E00 && code <= 0x9FFF) {
-    // Rough heuristic: map to 1-25 strokes based on code point position
-    const range = 0x9FFF - 0x4E00;
-    const offset = code - 0x4E00;
-    const estimated = Math.floor((offset / range) * 24) + 1;
-    console.warn(`Using estimated stroke count for '${char}': ${estimated} (not in lookup table)`);
-    return estimated;
-  }
-  // Non-CJK: treat as 1
-  return 1;
+  throw new Error(`笔画数据库未收录字符“${char}”（当前范围 U+4E00-U+9FFF）`);
 }
 
 /**
