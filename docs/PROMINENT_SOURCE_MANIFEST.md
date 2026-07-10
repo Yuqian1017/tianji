@@ -298,8 +298,8 @@
 | 公告 | `https://english.nmpa.gov.cn/2025-06/11/c_1102172.htm`；实施日期 2025-10-01 |
 | 目录承载页 | `https://pharm.ncmi.cn/xwzx/202504/t20250407_426308.html` |
 | 固定来源 | PDF SHA256 `ed7c610a248e654eaa9db7a7335593816f0ff6afa7783528fd4016df9037d721`；提取文本 SHA256 `800c8fd48f4996db593401d0911c4e1669568002ff88f1d61fac0033c4f2b895` |
-| 项目快照 | `database/tcm/sources/chp2025-part1-candidate-index.json`，SHA256 `4fab3ff363983550206c7d63669f91506b02041ed5e754d60c4ad776f41c9f53` |
-| 本轮结果 | 101 味中 79 味命中目录，22 味缺失或名称未裁决；“贯众”保留绵马贯众/紫萁贯众歧义 |
+| 项目快照 | 药典剂量候选：`database/tcm/sources/chp2025-part1-candidate-index.json`，SHA256 `4fab3ff363983550206c7d63669f91506b02041ed5e754d60c4ad776f41c9f53`；妊娠/配伍候选：`database/tcm/sources/chp2025-tcm-pregnancy-compatibility-index.json`，SHA256 `20653aea27d1483c1877d6a8e2640b9553696d9102ccca1147303eec5c0e781f` |
+| 本轮结果 | 剂量候选 101 味中 79 味命中目录、22 味缺失或名称未裁决；妊娠/配伍比较集 109 味中 86 味命中、23 味缺失；“贯众”保留绵马贯众/紫萁贯众歧义 |
 | 边界 | 公开附件是品名目录，不是药材正文；不能验证剂量、炮制、注意、禁忌、基原或临床用途 |
 
 ### SRC-VAL-CHP-2020-DIGITAL
@@ -309,10 +309,22 @@
 | 名称 | 国家药典委员会 2020 版数字药典一部 |
 | 状态 | `validation_anchor`，官方历史剂量与注意字段 comparator |
 | 官方入口 | `http://ydz.chp.org.cn/`；项目查询 API `https://ydz.chp.org.cn/front-api/` |
-| 项目快照 | `database/tcm/sources/chp2020-tcm-safety-selected.json`，SHA256 `decb0316a81ae7d864bc86f84db5b87bf6a1eb51cf29f8990ec36529511ad757` |
+| 项目快照 | 药典剂量候选：`database/tcm/sources/chp2020-tcm-safety-selected.json`，SHA256 `decb0316a81ae7d864bc86f84db5b87bf6a1eb51cf29f8990ec36529511ad757`；妊娠/配伍候选：`database/tcm/sources/chp2020-tcm-pregnancy-compatibility.json`，SHA256 `78f7e661d8d28707582b1efddc7c845c88166cb6b192a37d33c386cd2bb81490` |
 | 保存边界 | 只保存候选药的短字段、entry ID、入口 URL 与正文 SHA256，不镜像整部药典正文 |
-| 本轮结果 | 79 味命中历史正文；41 味的全部官方克数表达已见于 Skill，38 味至少有一项数量差异 |
+| 本轮结果 | 剂量比较集 79 味命中历史正文，41 味的全部官方克数表达已见于 Skill、38 味至少有一项数量差异；妊娠/配伍比较集 86 味命中历史正文，73 味有注意字段，Skill 妊娠等级出现 13 条冲突，十八反 52/52、十九畏 7/10 有历史字段支持 |
 | 边界 | 2020 正文只作历史官方对照，不能代表 2025 现行正文；数量一致也不授予产品剂量资格 |
+
+### SRC-VAL-TCM-ARISTOLOCHIC-REGULATORY
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 2003 关木通与 2004 广防己/青木香等含马兜铃酸药材监管通知 |
+| 状态 | `validation_anchor`，历史监管动作与药名边界 |
+| 官方来源 | 国药监注〔2003〕121 号：取消关木通药用标准并以木通替代；国食药监注〔2004〕379 号：取消广防己、青木香标准，以防己（粉防己）、土木香（菊科土木香）替代，并列马兜铃、寻骨风、天仙藤、朱砂莲限制事项 |
+| 在线见证 | `https://amr.hainan.gov.cn/himpa/adr/tzgg/ypblfyxxtb/201708/t20170802_460140.html`；`https://hubyjs.org.cn/view/1281.html?tid=6` |
+| 项目快照 | `database/tcm/sources/aristolochic-regulatory-2003-2004.json`，SHA256 `c35d5f449a5d3f41ffe67e87747cdf7c0b2c3350ef4bc71d3c61c42fc8277b55` |
+| 本轮结果 | Skill 的“六味”说明混合两批通知、遗漏朱砂莲，并把广防己与木防己/汉防己混同；规范层改为 7 个监管药名并保留替代关系 |
+| 边界 | 通知证明发布时点的监管动作；2025 目录缺失不能单独证明不存在其他现行标准或当前违法，处方与标准现状未完全裁决前全部候选保持 blocked |
 
 ### SRC-VAL-TCM-CONSTITUTION
 
@@ -503,7 +515,8 @@
 | TCM-SAFETY | `references/安全-配伍妊娠禁忌与毒性药.md` | 配伍、妊娠、毒性、马兜铃酸、方剂级警示、忌口 | 第一批规范化；所有涉药消费硬门槛 | 仍需现行标准和项目复核 |
 | TCM-SAFETY-CORE | `database/tcm/normalized/tcm-safety-core.json` | 28 项法定毒性中药 blocklist、来源和产品资格 | 当前唯一 accepted 的中医规范安全切片 | 不含药典剂量、妊娠、配伍、方剂或穴位授证 |
 | TCM-PHARM-CANDIDATES | `database/tcm/normalized/tcm-pharmacopoeia-candidates.json` | 100 行/101 味原始剂量、2025 目录身份、2020 历史正文对照、名称裁决和急救标记 | 全量可审计候选层 | 101 味全部 blocked；不是 accepted 剂量库 |
-| TCM-PHARM-SOURCES | `database/tcm/sources/` | 2025 目录索引与 2020 数字药典候选字段快照 | 重建候选层和复核来源漂移 | 2025 只有目录身份；2020 仅为历史 comparator |
+| TCM-PREG-COMPAT-FORMULA-CANDIDATES | `database/tcm/normalized/tcm-pregnancy-compatibility-formula-candidates.json` | 妊娠表与剂量表、十八反十九畏、马兜铃酸监管药名、31 行/37 方名警示及逐条冲突 | 全量可审计候选层 | 所有记录 blocked；2020 历史支持不等于现行 product eligibility |
+| TCM-PHARM-SOURCES | `database/tcm/sources/` | 两组 2025 目录索引、两组 2020 数字药典候选字段快照与马兜铃酸监管裁决，共 5 个文件 | 重建候选层和复核来源漂移 | 2025 只有目录身份；2020 仅为历史 comparator；2003/2004 通知不自动代表当前完整法律状态 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
@@ -523,7 +536,7 @@
 |---|---|---|---|
 | 当前产品定义 | `docs/PRD.md` | 历史 `APP-SPEC*` 与 `GAME-DESIGN.md` | 旧规格提供证据和设计资产，不覆盖新 PRD 决策 |
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
-| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、药典来源快照 | Skill 补广度和安全候选；法定毒性清单以 safety core 为准；100/101 药典候选可审计但剂量不得消费 |
+| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、药典与监管来源快照 | Skill 补广度和安全候选；法定毒性清单以 safety core 为准；药典及妊娠/配伍/方剂候选可审计但不得直接消费 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
 | 未来规范数据库 | 逐域建立；周易、紫微、奇门、风水、五运、子午、TCM 安全与共享城市已有规范核心 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 
@@ -584,7 +597,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 100 行/101 味药典候选层已完成当前公开证据范围的全量归一化；继续取得适用现行正文，并复核妊娠、配伍、马兜铃酸、方剂和穴位外治。
+2. TCM 药典剂量与妊娠/配伍/马兜铃酸/方剂候选层已完成当前公开证据范围的全量归一化；继续取得适用现行正文、裁决剩余现行监管状态，并转入穴位、按压、艾灸与有创外治安全。
 3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

@@ -68,9 +68,9 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 56,
-      currentFocus: '中医妊娠禁忌、十八反十九畏、马兜铃酸与 31 条方剂警示全量规范化和现行来源复核；临床解释继续 blocked。',
-      nextDecision: '先把妊娠、配伍、马兜铃酸和方剂警示逐条拆成稳定 ID、药名实体、来源定位与 product eligibility；优先裁决现行药典注意字段和监管状态，未通过项继续 blocked。',
+      overallPercent: 57,
+      currentFocus: '中医穴位、按压、艾灸与有创外治安全全量验证；药典剂量及妊娠/配伍/方剂候选继续 blocked。',
+      nextDecision: '盘点 361 经穴、40 奇穴和 30 个旧运行时穴位，逐条建立定位、危险区、妊娠警示和 A/A-/B 操作范围；按压、艾灸与针刺等有创操作分别裁决，未通过项继续 blocked。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 97, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -81,11 +81,11 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'tcm_pregnancy_compatibility_validation_in_progress', rule: '100 行/101 味药典候选层已通过来源/阻断审计并全部 blocked；当前核验妊娠、配伍、马兜铃酸和方剂警示。' },
+        { name: '排盘与数据库正确性', state: 'tcm_acupoint_external_safety_in_progress', rule: '药典剂量与妊娠/配伍/方剂候选层已通过来源/阻断审计并全部 blocked；当前核验穴位与外治安全。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
-        { name: '中医安全', state: 'pregnancy_compatibility_in_progress', rule: '法定毒性 28 项已规范化；药典候选 100 行/101 味已全量审计但剂量全部 blocked；妊娠、配伍、方剂和穴位外治未通过前不扩大产品消费范围。' },
+        { name: '中医安全', state: 'acupoint_external_safety_in_progress', rule: '法定毒性 28 项已规范化；药典剂量与妊娠/配伍/方剂候选已全量审计但全部 blocked；穴位、按压、艾灸和有创外治未通过前不扩大产品消费范围。' },
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
@@ -124,6 +124,10 @@
         '原始安全表检出 11 行疑似居家急救/解毒指令并全部禁止产品展示；主配伍表“沙参(苦参)”混名已确认为来源错误',
         'TJI-VAL-019 药典候选子批次完成：2,468 项 0 fail；全库 validation 109/109，专项 lint 和 production build 通过',
         '药典候选 fresh review 无 P0；中文克数正则漏检 P1、运行时扫描范围与 Coverage 陈旧结论两个 P2 均已修复并复测',
+        '妊娠/配伍/方剂候选 109 个比较药名、1,969 项审计 0 fail；全部保持 product blocked',
+        'Skill 妊娠主表与剂量表有 13 条等级冲突；十八反 52/52、十九畏 7/10 有 2020 历史注意字段支持',
+        '马兜铃酸说明混合 2003/2004 监管批次、遗漏朱砂莲并混同广防己；31 行/37 方名中两行家庭处置内容已阻断',
+        '妊娠/配伍候选 fresh review 无 P0/P1；runtime 扫描 P2 已修复，84 个前端、服务端、JSON、入口和配置文本文件进入旁路审计',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',

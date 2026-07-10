@@ -1,0 +1,280 @@
+{
+  "audit": "tcm-pregnancy-compatibility-aristolochic-formula-candidates",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 1969,
+    "failures": 0,
+    "comparatorNames": 109,
+    "runtimeConsumerFilesScanned": 84,
+    "pregnancyTableRows": 3,
+    "pregnancyTableItems": 35,
+    "dosePregnancyClaimRows": 54,
+    "pregnancyOfficial2020Conflicts": 13,
+    "pregnancyCurrentIdentityGaps": 15,
+    "pregnancyOfficial2020Silences": 16,
+    "eighteenSourceRows": 3,
+    "eighteenExpandedPairs": 50,
+    "eighteenSupplementPairs": 2,
+    "unsupportedNameClassExtensions": 2,
+    "eighteenPairsSupportedByOfficial2020": 52,
+    "nineteenSourceRows": 9,
+    "nineteenExpandedPairs": 10,
+    "nineteenPairsSupportedByOfficial2020": 7,
+    "formulaWarningRows": 31,
+    "formulaNames": 37,
+    "formulaHomeTreatmentRows": 2,
+    "skillAristolochicNames": 6,
+    "regulatoryAristolochicNames": 7
+  },
+  "categories": {
+    "contract": {
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "snapshot": {
+      "checks": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    "snapshot_item": {
+      "checks": 327,
+      "passed": 327,
+      "failed": 0
+    },
+    "raw_inventory": {
+      "checks": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    "pregnancy_preservation": {
+      "checks": 480,
+      "passed": 480,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 382,
+      "passed": 382,
+      "failed": 0
+    },
+    "pregnancy_comparator": {
+      "checks": 407,
+      "passed": 407,
+      "failed": 0
+    },
+    "pregnancy_summary": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "compatibility_preservation": {
+      "checks": 128,
+      "passed": 128,
+      "failed": 0
+    },
+    "compatibility_comparator": {
+      "checks": 64,
+      "passed": 64,
+      "failed": 0
+    },
+    "compatibility_summary": {
+      "checks": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "formula_preservation": {
+      "checks": 124,
+      "passed": 124,
+      "failed": 0
+    },
+    "formula_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "regulatory": {
+      "checks": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "id": "TCM-PREG-001",
+      "severity": "critical",
+      "status": "blocked",
+      "description": "Thirteen Skill source records across ten medicines conflict with the official 2020 monograph pregnancy classification."
+    },
+    {
+      "id": "TCM-COMPAT-001",
+      "severity": "high",
+      "status": "bounded_historical_support",
+      "description": "All 52 expanded eighteen-incompatibility main/supplement pairs have 2020 official attention support, while two name-class extensions do not."
+    },
+    {
+      "id": "TCM-COMPAT-002",
+      "severity": "high",
+      "status": "partially_supported",
+      "description": "Seven of ten expanded nineteen-fear pairs have 2020 official attention support; 水银/砒霜 and both 犀角 pairs do not."
+    },
+    {
+      "id": "TCM-AA-001",
+      "severity": "critical",
+      "status": "source_scope_error_confirmed",
+      "description": "The Skill six-name list combines the 2003 关木通 cancellation with the 2004 six-medicine notice and omits 朱砂莲 from the latter notice."
+    },
+    {
+      "id": "TCM-AA-002",
+      "severity": "critical",
+      "status": "source_identity_and_substitution_error_confirmed",
+      "description": "The Skill conflates 广防己 with 木防己/汉防己. The 2004 notice identifies 广防己 separately and specifies replacement with 防己 from 粉防己."
+    },
+    {
+      "id": "TCM-AA-003",
+      "severity": "high",
+      "status": "blocked",
+      "description": "All seven regulatory-universe names are absent from the 2025 Pharmacopoeia part-one catalog under exact title; absence alone does not fully adjudicate later legal status for the four prescription-group names."
+    },
+    {
+      "id": "TCM-FORMULA-001",
+      "severity": "critical",
+      "status": "blocked",
+      "description": "瓜蒂散 and 三圣散 source warnings contain home-treatment instructions for persistent vomiting; retained for audit only."
+    }
+  ],
+  "evidenceBoundary": [
+    "The 2025 evidence available here is a title catalog, not monograph pregnancy or compatibility text.",
+    "The 2020 digital monographs are official historical comparators and cannot establish current 2025 wording.",
+    "Traditional eighteen-incompatibility or nineteen-fear labels are not product rules unless current applicable evidence and exact medicine identity are established.",
+    "Formula warnings are source candidates, not prescriptions, antidotes, or self-treatment instructions.",
+    "Every normalized record remains blocked and exposes no runtime-eligible field."
+  ],
+  "sourceRefs": {
+    "skillSafetyReference": {
+      "path": "database/tcm/skill-v3/references/安全-配伍妊娠禁忌与毒性药.md",
+      "sha256": "ec4a66f0f6f812ee1d66accf8cbe095701b32a51936157d6dae87594608e1dcc",
+      "role": "raw_candidate_reference"
+    },
+    "chp2020Digital": {
+      "path": "database/tcm/sources/chp2020-tcm-pregnancy-compatibility.json",
+      "sha256": "78f7e661d8d28707582b1efddc7c845c88166cb6b192a37d33c386cd2bb81490",
+      "role": "official_historical_attention_comparator"
+    },
+    "chp2025Catalog": {
+      "path": "database/tcm/sources/chp2025-tcm-pregnancy-compatibility-index.json",
+      "sha256": "20653aea27d1483c1877d6a8e2640b9553696d9102ccca1147303eec5c0e781f",
+      "sourcePdfSha256": "ed7c610a248e654eaa9db7a7335593816f0ff6afa7783528fd4016df9037d721",
+      "role": "current_identity_catalog_only"
+    },
+    "aristolochicRegulation": {
+      "path": "database/tcm/sources/aristolochic-regulatory-2003-2004.json",
+      "sha256": "c35d5f449a5d3f41ffe67e87747cdf7c0b2c3350ef4bc71d3c61c42fc8277b55",
+      "role": "historical_official_regulatory_actions"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "080bebe5c8f05b12b58cf4849777cdb5a5c48766e0b9ee5120b6e2c222e324db",
+    "rawSafetyReference": "ec4a66f0f6f812ee1d66accf8cbe095701b32a51936157d6dae87594608e1dcc",
+    "chp2020Snapshot": "78f7e661d8d28707582b1efddc7c845c88166cb6b192a37d33c386cd2bb81490",
+    "chp2025Snapshot": "20653aea27d1483c1877d6a8e2640b9553696d9102ccca1147303eec5c0e781f",
+    "aristolochicRegulatorySnapshot": "c35d5f449a5d3f41ffe67e87747cdf7c0b2c3350ef4bc71d3c61c42fc8277b55"
+  },
+  "failures": []
+}

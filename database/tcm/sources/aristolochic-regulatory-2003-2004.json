@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "sourceRole": "historical_official_regulatory_actions_for_current_candidate_adjudication",
+  "retrievedAt": "2026-07-10",
+  "sourceDocuments": [
+    {
+      "id": "CN-NMPA-2003-121",
+      "title": "关于取消关木通药用标准的通知",
+      "issuer": "国家药品监督管理局",
+      "noticeNumber": "国药监注[2003]121号",
+      "issuedDate": "2003-04-01",
+      "originalArchiveUrl": "https://www.nmpa.gov.cn/xxgk/fgwj/gzwj/gzwjyp/20030401010101717.html",
+      "accessibleOfficialMirrorUrl": "https://amr.hainan.gov.cn/himpa/adr/tzgg/ypblfyxxtb/201708/t20170802_460140.html",
+      "officialMirrorInstitution": "海南省药物警戒中心",
+      "locator": "关于取消关木通药用标准的通知 / clauses 1-3",
+      "facts": {
+        "cancelledMedicinalStandards": ["关木通"],
+        "requiredFormulaReplacements": [
+          { "from": "关木通", "to": "木通" }
+        ],
+        "useRestrictionsAtNotice": {
+          "prescriptionOnly": ["关木通"],
+          "pregnancy": "prohibited",
+          "renalDisease": "prohibited",
+          "newborn": "prohibited",
+          "childAndOlderAdult": "generally_not_recommended",
+          "longTermUse": "not_recommended"
+        }
+      }
+    },
+    {
+      "id": "CN-SFDA-2004-379",
+      "title": "关于加强广防己等6种药材及其制剂监督管理的通知",
+      "issuer": "国家食品药品监督管理局",
+      "noticeNumber": "国食药监注[2004]379号",
+      "issuedDate": "2004-08-05",
+      "originalLegacyUrl": "http://www.sda.gov.cn/WS01/CL0844/10242.html",
+      "accessibleOfficialMirrorUrl": "https://amr.hainan.gov.cn/himpa/adr/tzgg/ypblfyxxtb/201708/t20170802_460140.html",
+      "secondaryOfficialMirrorUrl": "https://hubyjs.org.cn/view/1281.html?tid=6",
+      "officialMirrorInstitutions": ["海南省药物警戒中心", "湖北省药品监督检验研究院"],
+      "locator": "关于加强广防己等6种药材及其制剂监督管理的通知 / clauses 1-9",
+      "facts": {
+        "cancelledMedicinalStandards": ["广防己", "青木香"],
+        "requiredFormulaReplacements": [
+          { "from": "广防己", "to": "防己", "specifiedBotanicalSource": "粉防己" },
+          { "from": "青木香", "to": "土木香", "specifiedBotanicalSource": "菊科土木香" }
+        ],
+        "fourMedicineFormulaGroup": ["马兜铃", "寻骨风", "天仙藤", "朱砂莲"],
+        "useRestrictionsAtNotice": {
+          "prescriptionOnly": ["马兜铃", "寻骨风", "天仙藤", "朱砂莲"],
+          "requiredRenalWarning": true,
+          "requiredRenalMonitoring": true,
+          "pregnancy": "prohibited",
+          "infant": "prohibited",
+          "renalImpairment": "prohibited",
+          "childAndOlderAdult": "caution",
+          "newRegistrationApplications": "suspended_with_narrow_exceptions"
+        }
+      }
+    }
+  ],
+  "medicineAdjudications": [
+    {
+      "name": "关木通",
+      "noticeId": "CN-NMPA-2003-121",
+      "statusAtNotice": "medicinal_standard_cancelled",
+      "replacementSpecifiedByNotice": "木通",
+      "currentStatusBoundary": "historical cancellation plus absence from the 2025 Pharmacopoeia catalog; no product use"
+    },
+    {
+      "name": "广防己",
+      "noticeId": "CN-SFDA-2004-379",
+      "statusAtNotice": "medicinal_standard_cancelled",
+      "replacementSpecifiedByNotice": "防己（粉防己）",
+      "currentStatusBoundary": "historical cancellation plus absence from the 2025 Pharmacopoeia catalog; no product use"
+    },
+    {
+      "name": "青木香",
+      "noticeId": "CN-SFDA-2004-379",
+      "statusAtNotice": "medicinal_standard_cancelled",
+      "replacementSpecifiedByNotice": "土木香（菊科土木香）",
+      "currentStatusBoundary": "historical cancellation plus absence from the 2025 Pharmacopoeia catalog; no product use"
+    },
+    {
+      "name": "马兜铃",
+      "noticeId": "CN-SFDA-2004-379",
+      "statusAtNotice": "formula_prescription_only_and_registration_restricted",
+      "replacementSpecifiedByNotice": null,
+      "currentStatusBoundary": "absent from the 2025 Pharmacopoeia catalog; later current legal status not fully adjudicated"
+    },
+    {
+      "name": "寻骨风",
+      "noticeId": "CN-SFDA-2004-379",
+      "statusAtNotice": "formula_prescription_only_and_registration_restricted",
+      "replacementSpecifiedByNotice": null,
+      "currentStatusBoundary": "absent from the 2025 Pharmacopoeia catalog; later current legal status not fully adjudicated"
+    },
+    {
+      "name": "天仙藤",
+      "noticeId": "CN-SFDA-2004-379",
+      "statusAtNotice": "formula_prescription_only_and_registration_restricted",
+      "replacementSpecifiedByNotice": null,
+      "currentStatusBoundary": "absent from the 2025 Pharmacopoeia catalog; later current legal status not fully adjudicated"
+    },
+    {
+      "name": "朱砂莲",
+      "noticeId": "CN-SFDA-2004-379",
+      "statusAtNotice": "formula_prescription_only_and_registration_restricted",
+      "replacementSpecifiedByNotice": null,
+      "currentStatusBoundary": "absent from the 2025 Pharmacopoeia catalog; later current legal status not fully adjudicated"
+    }
+  ],
+  "productEligibility": "blocked"
+}

@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "source": "2025年版《中华人民共和国药典》一部品名目录",
+  "sourceRole": "current_edition_catalog_identity_only_not_monograph_content",
+  "scope": "tcm_pregnancy_compatibility_and_aristolochic_candidates",
+  "effectiveDate": "2025-10-01",
+  "announcementUrl": "https://english.nmpa.gov.cn/2025-06/11/c_1102172.htm",
+  "catalogUrl": "https://pharm.ncmi.cn/xwzx/202504/P020250407374829982808.pdf",
+  "catalogPdfSha256": "ed7c610a248e654eaa9db7a7335593816f0ff6afa7783528fd4016df9037d721",
+  "extractedTextSha256": "800c8fd48f4996db593401d0911c4e1669568002ff88f1d61fac0033c4f2b895",
+  "generatedAt": "2026-07-10",
+  "counts": {
+    "requestedNames": 109,
+    "currentMonographTitles": 86,
+    "currentTitlesMissing": 23
+  },
+  "items": [
+    {
+      "requestedName": "巴豆",
+      "normalizedCatalogTitle": "巴豆",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "白附子",
+      "normalizedCatalogTitle": "白附子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "白及",
+      "normalizedCatalogTitle": "白及",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "白蔹",
+      "normalizedCatalogTitle": "白蔹",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "白芍",
+      "normalizedCatalogTitle": "白芍",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "斑蝥",
+      "normalizedCatalogTitle": "斑蝥",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "半夏",
+      "normalizedCatalogTitle": "半夏",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "北沙参",
+      "normalizedCatalogTitle": "北沙参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "草乌",
+      "normalizedCatalogTitle": "草乌",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "蟾酥",
+      "normalizedCatalogTitle": "蟾酥",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "常山",
+      "normalizedCatalogTitle": "常山",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "赤芍",
+      "normalizedCatalogTitle": "赤芍",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "赤石脂",
+      "normalizedCatalogTitle": "赤石脂",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "川贝母",
+      "normalizedCatalogTitle": "川贝母",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "川乌",
+      "normalizedCatalogTitle": "川乌",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "大黄",
+      "normalizedCatalogTitle": "大黄",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "大蒜",
+      "normalizedCatalogTitle": "大蒜",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "大皂角",
+      "normalizedCatalogTitle": "大皂角",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "丹参",
+      "normalizedCatalogTitle": "丹参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "党参",
+      "normalizedCatalogTitle": "党参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "丁公藤",
+      "normalizedCatalogTitle": "丁公藤",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "丁香",
+      "normalizedCatalogTitle": "丁香",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "冬葵子",
+      "normalizedCatalogTitle": "冬葵子",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "莪术",
+      "normalizedCatalogTitle": "莪术",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "附子",
+      "normalizedCatalogTitle": "附子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "甘草",
+      "normalizedCatalogTitle": "甘草",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "甘遂",
+      "normalizedCatalogTitle": "甘遂",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "干姜",
+      "normalizedCatalogTitle": "干姜",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "瓜蒂",
+      "normalizedCatalogTitle": "瓜蒂",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "瓜蒌",
+      "normalizedCatalogTitle": "瓜蒌",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "瓜蒌皮",
+      "normalizedCatalogTitle": "瓜蒌皮",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "瓜蒌子",
+      "normalizedCatalogTitle": "瓜蒌子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "关木通",
+      "normalizedCatalogTitle": "关木通",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "贯众",
+      "normalizedCatalogTitle": "贯众",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "广防己",
+      "normalizedCatalogTitle": "广防己",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "海马",
+      "normalizedCatalogTitle": "海马",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "海藻",
+      "normalizedCatalogTitle": "海藻",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "鹤虱",
+      "normalizedCatalogTitle": "鹤虱",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "红大戟",
+      "normalizedCatalogTitle": "红大戟",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "红花",
+      "normalizedCatalogTitle": "红花",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "湖北贝母",
+      "normalizedCatalogTitle": "湖北贝母",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "华山参",
+      "normalizedCatalogTitle": "华山参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "黄芪",
+      "normalizedCatalogTitle": "黄芪",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "蒺藜",
+      "normalizedCatalogTitle": "蒺藜",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "京大戟",
+      "normalizedCatalogTitle": "京大戟",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "苦参",
+      "normalizedCatalogTitle": "苦参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "昆明山海棠",
+      "normalizedCatalogTitle": "昆明山海棠",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "狼毒",
+      "normalizedCatalogTitle": "狼毒",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "雷公藤",
+      "normalizedCatalogTitle": "雷公藤",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "藜芦",
+      "normalizedCatalogTitle": "藜芦",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "硫黄",
+      "normalizedCatalogTitle": "硫黄",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "马兜铃",
+      "normalizedCatalogTitle": "马兜铃",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "马钱子",
+      "normalizedCatalogTitle": "马钱子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "芒硝",
+      "normalizedCatalogTitle": "芒硝",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "虻虫",
+      "normalizedCatalogTitle": "虻虫",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "密陀僧",
+      "normalizedCatalogTitle": "密陀僧",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "明党参",
+      "normalizedCatalogTitle": "明党参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "木鳖子",
+      "normalizedCatalogTitle": "木鳖子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "木通",
+      "normalizedCatalogTitle": "木通",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "南沙参",
+      "normalizedCatalogTitle": "南沙参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "牛膝",
+      "normalizedCatalogTitle": "牛膝",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "砒石",
+      "normalizedCatalogTitle": "砒石",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "砒霜",
+      "normalizedCatalogTitle": "砒霜",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "平贝母",
+      "normalizedCatalogTitle": "平贝母",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "千金子",
+      "normalizedCatalogTitle": "千金子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "牵牛子",
+      "normalizedCatalogTitle": "牵牛子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "青木香",
+      "normalizedCatalogTitle": "青木香",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "轻粉",
+      "normalizedCatalogTitle": "轻粉",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "瞿麦",
+      "normalizedCatalogTitle": "瞿麦",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "全蝎",
+      "normalizedCatalogTitle": "全蝎",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "人参",
+      "normalizedCatalogTitle": "人参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "肉桂",
+      "normalizedCatalogTitle": "肉桂",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "三棱",
+      "normalizedCatalogTitle": "三棱",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "商陆",
+      "normalizedCatalogTitle": "商陆",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "麝香",
+      "normalizedCatalogTitle": "麝香",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "水银",
+      "normalizedCatalogTitle": "水银",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "水蛭",
+      "normalizedCatalogTitle": "水蛭",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "太子参",
+      "normalizedCatalogTitle": "太子参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "桃仁",
+      "normalizedCatalogTitle": "桃仁",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "天花粉",
+      "normalizedCatalogTitle": "天花粉",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "天南星",
+      "normalizedCatalogTitle": "天南星",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "天山雪莲",
+      "normalizedCatalogTitle": "天山雪莲",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "天仙藤",
+      "normalizedCatalogTitle": "天仙藤",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "土鳖虫（䗪虫）",
+      "normalizedCatalogTitle": "土鳖虫",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "蜈蚣",
+      "normalizedCatalogTitle": "蜈蚣",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "五灵脂",
+      "normalizedCatalogTitle": "五灵脂",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "西洋参",
+      "normalizedCatalogTitle": "西洋参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "犀角",
+      "normalizedCatalogTitle": "犀角",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "细辛",
+      "normalizedCatalogTitle": "细辛",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "雄黄",
+      "normalizedCatalogTitle": "雄黄",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "玄参",
+      "normalizedCatalogTitle": "玄参",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "雪上一枝蒿",
+      "normalizedCatalogTitle": "雪上一枝蒿",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "寻骨风",
+      "normalizedCatalogTitle": "寻骨风",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "鸦胆子",
+      "normalizedCatalogTitle": "鸦胆子",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "芫花",
+      "normalizedCatalogTitle": "芫花",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "洋金花",
+      "normalizedCatalogTitle": "洋金花",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "伊贝母",
+      "normalizedCatalogTitle": "伊贝母",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "益母草",
+      "normalizedCatalogTitle": "益母草",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "罂粟壳",
+      "normalizedCatalogTitle": "罂粟壳",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "禹余粮",
+      "normalizedCatalogTitle": "禹余粮",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "郁金",
+      "normalizedCatalogTitle": "郁金",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "泽漆",
+      "normalizedCatalogTitle": "泽漆",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "樟脑",
+      "normalizedCatalogTitle": "樟脑",
+      "titleIn2025Catalog": false
+    },
+    {
+      "requestedName": "赭石",
+      "normalizedCatalogTitle": "赭石",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "浙贝母",
+      "normalizedCatalogTitle": "浙贝母",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "枳实",
+      "normalizedCatalogTitle": "枳实",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "重楼",
+      "normalizedCatalogTitle": "重楼",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "朱砂",
+      "normalizedCatalogTitle": "朱砂",
+      "titleIn2025Catalog": true
+    },
+    {
+      "requestedName": "朱砂莲",
+      "normalizedCatalogTitle": "朱砂莲",
+      "titleIn2025Catalog": false
+    }
+  ]
+}
