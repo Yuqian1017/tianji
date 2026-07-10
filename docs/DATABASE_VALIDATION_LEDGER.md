@@ -26,6 +26,8 @@
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/艾灸建议 | 医疗/安全 | V4+V5 | planned | 全量抽取消费点并反查安全表/现行来源 |
 | VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、旬空、伏神、变卦 | 精确/流派确定性 | V3+V5 | pass | 京房八宫纳甲口径；17,026 项项目内全量检查 0 fail，`iching-shifa@1.8.0` 64 静卦与 4,032 动卦对拍 0 mismatch；Playwright 桌面/390px 全六老阳样例通过 |
 | VAL-LY-002 | P1 | 六爻 | 用神、旺衰、冲合空亡与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 排盘结构通过不授证现实预测；AI prompt 与 UI 已标 `not_validated`，禁止无条件成败、应期和高风险建议 |
+| VAL-MH-001 | P1 | 梅花 | 报数/农历时间起卦、互卦、变卦、动爻、体用与笔画数据 | 精确/声明口径 | V3+V5 | pass | 63,061 项全量检查 0 fail；Playwright 报数、时间、文字三路径与桌面/390px 通过；结构可复用，现代文字法单列适配状态 |
+| VAL-MH-002 | P1 | 梅花 | 体用、取象、外应与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 结构通过不授证现实预测；体用移除吉凶 verdict，互卦/变卦不再称实际过程/结果，AI 标 `not_validated` |
 | VAL-ZW-001 | P1 | 紫微 | 十二宫、主星、四化、辅煞星 | 流派确定性 | V3 | planned | 先声明流派与版本 |
 | VAL-QM-001 | P1 | 奇门 | 节气、阴阳遁、局数、四盘 | 流派确定性 | V3 | planned | 来源已标简化，默认高风险 |
 | VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | Fresh reviewer 给出 hold；主线程已逐项回看 PRD、当前中医消费点与旧规格，见 `PRD_FRESH_REVIEW_2026-07-09.md` |
@@ -53,6 +55,11 @@
 | F-LY-002 | P1 | VAL-LY-001 | verified_remediated | 年建固定 2 月 4 日切换，月建用每月固定日期近似 | 复用已验证历法适配层；2026 立春前后回归通过 |
 | F-LY-003 | P1 | VAL-LY-002 | mitigated_blocked | AI prompt 把六冲、六合和空亡写成无条件现实结论 | 解释层标记 `not_validated`，移除绝对规则并禁止高风险决策建议 |
 | F-LY-004 | P2 | VAL-LY-001 | verified_remediated | 非 6/7/8/9 爻值也会被静默转换成卦 | 引擎入口增加值域验证和回归测试 |
+| F-MH-001 | P0 | VAL-MH-001 | verified_remediated | 八卦 binary 已按自下而上编码，runtime 又反转一次，导致非对称卦的互卦和变卦错误 | 统一为自下而上；384 种上下卦/动爻全量复算 0 fail |
+| F-MH-002 | P1 | VAL-MH-001 | verified_remediated | 时间起卦使用公历月日近似，和声明的农历法不一致 | 改用农历月日、农历年支和时支；新年前后与闰月 fixture 通过 |
+| F-MH-003 | P0 | VAL-MH-001 | verified_remediated | 手抄笔画表含“亿=1”等错误，未知字按 Unicode 码位伪估算 | 改为 Unicode 17.0 Unihan URO 20,992 字机械生成表；未知字符显式拒绝 |
+| F-MH-004 | P1 | VAL-MH-001 | verified_remediated | Compendium 把风泽中孚初爻变错写为巽为风 | 兑 `110` 初爻变为坎 `010`，正确变卦为风水涣；课程已修正 |
+| F-MH-005 | P1 | VAL-MH-002 | mitigated_blocked | runtime/UI 把体用直接写成吉凶，并把互卦/变卦称为过程/结果 | 只保留五行关系标签；预测解释标 `not_validated` 并禁止高风险建议 |
 
 ## Evidence Log
 
@@ -76,3 +83,5 @@
 | 2026-07-09 | VAL-BZ-004/005/006 | `audit-bazi-relations.mjs`；《三命通会》关系与神煞篇；《五行精纪》 | 关系与神煞有限表全量匹配；两支相刑漏检修复；合化/吉凶 blocked；相破保持流派差异 inactive |
 | 2026-07-10 | VAL-LY-001/002 | `audit-liuyao.mjs`；《卜筮正宗》纳甲/伏神规则；隔离 `iching-shifa@1.8.0` | 17,026 项独立检查 0 fail；64 静卦、4,032 动卦第二实现对拍 0 mismatch；确定性排盘 pass，解释层 blocked |
 | 2026-07-10 | VAL-LY-001 | Playwright 全六老阳固定样例；桌面与 390x844 | 乾外壬、坤外癸、六亲世应与解释边界可见；无截断或溢出 |
+| 2026-07-10 | VAL-MH-001/002 | `audit-meihua.mjs`；《梅花易数》卷一；Unicode 17.0 Unihan | 64 卦名、384 动爻结构、4,096 报数、经典观梅例、4 个农历边界和 20,992 字共 63,061 项 0 fail；解释层 blocked |
+| 2026-07-10 | VAL-MH-001 | Playwright 报数 5/2、当前时间、“天机卷”；桌面与 390x844 | 风泽中孚/山雷颐/风水涣和雷水解正确；验证状态可见；移动端水平溢出已修复并复测为 0 |

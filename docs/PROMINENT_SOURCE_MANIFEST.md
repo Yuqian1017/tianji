@@ -3,7 +3,7 @@
 - 中文名：主要来源与溯源清单
 - 文档状态：来源基线
 - 版本：0.1
-- 更新日期：2026-07-09
+- 更新日期：2026-07-10
 - 配套文档：`PRD.md`、`DATABASE_COVERAGE_MATRIX.md`
 
 ## 1. 用途
@@ -209,6 +209,32 @@
 | 项目对照 | `database/xuanxue/compendium-new/00-cosmology/03-tiangan-dizhi.md` 明示午未化火或土有争议 |
 | 边界 | 原典不能单独决定所有现代流派的合化条件；runtime 因此只输出关系，不自动宣称成化 |
 
+### SRC-VAL-MEIHUA-VOL1
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《梅花易数》卷一“年月日時起例”“互卦起例”“字占”与观梅例 |
+| 状态 | `validation_anchor`，声明口径与经典例题 |
+| 在线校本 | `https://ctext.org/wiki.pl?chapter=867487&if=gb`；`https://zh.wikisource.org/wiki/梅花易數/卷一` |
+| 本轮用途 | 锚定年支、农历月日、时支取数，互卦取二三四/三四五爻，以及辰年十二月十七日申时的泽火革例 |
+| 本轮结果 | 经典例题本卦、初爻动、互见乾巽和变泽山咸 5 项通过；确认旧 runtime 的公历近似不符合声明口径 |
+| 字占边界 | 原典一字看楷书左右画，四至十字主要用平仄四声，十一字以上按字数；当前统一累加笔画法只能标为现代适配 |
+| 解释边界 | 原典中的应验叙事和吉凶断语不作为现代事实预测证据 |
+
+### SRC-DATA-UNIHAN-17
+
+| 字段 | 值 |
+|---|---|
+| 名称 | Unicode 17.0.0 Unihan `kTotalStrokes` |
+| 状态 | `candidate_reference` + source-pinned runtime data |
+| 官方来源 | `https://www.unicode.org/Public/17.0.0/ucd/Unihan.zip`；属性说明 `https://www.unicode.org/reports/tr38/` |
+| 项目范围 | U+4E00-U+9FFF，共 20,992 个基本区汉字 |
+| 生成方式 | `scripts/validation/generate-unihan-strokes.mjs` 从 `Unihan_IRGSources.txt` 机械生成 `src/modules/meihua/strokes-unihan-17.js` |
+| 源文件 SHA256 | `d1c817dd7db84295dab0643c277d97c2fa742c245f8824e6736c2a0935095325` |
+| 许可 | Unicode License v3；项目副本见 `database/licenses/UNICODE_LICENSE_V3.txt` |
+| 本轮结果 | 20,992/20,992 条目存在且为正整数；已替换错误手抄表和码位估算 |
+| 边界 | Unicode 将 `kTotalStrokes` 标为 informative；可作稳定现代数据口径，不代表唯一字形、书写或术数笔画标准 |
+
 ## 4. 历史产品规格来源
 
 这些文件位于 `SRC-PKG-XUAN-NEW`，是本次主 PRD 重建的主要历史证据。
@@ -232,7 +258,7 @@
 | XUAN-COSMO | `00-cosmology/` | 阴阳、五行、干支、八卦、64 卦 | P1 基础课程、实体与关系 | 需拆成原子知识点并补逐条来源 |
 | XUAN-YIJING | `01-yijing/` | 卦名卦序、卦爻辞、解卦、卦变 | 64 卦查询、易经课程、题目 | 原文/解释/整理内容需分类型 |
 | XUAN-LIUYAO | `02-liuyao/` | 起卦、装卦、用神、技法、断卦、案例、口诀 | 六爻课程、实战复盘、Prompt 审计 | 规则、口诀、案例需标适用条件和来源 |
-| XUAN-MEIHUA | `03-meihua/` | 起卦、体用、取象、案例 | 梅花课程与案例练习 | 外应和取象主观性需显式标注 |
+| XUAN-MEIHUA | `03-meihua/` | 起卦、体用、取象、案例 | 梅花课程与案例练习 | 已修复一处变卦例题；现代笔画法与原典字占须分开；外应和取象保持主观解释标签 |
 | XUAN-BAZI | `04-bazi/` | 排盘、十神、格局、案例 | 八字课程、引擎数据审计 | 日柱/节气算法含近似风险 |
 | XUAN-ZIWEI | `05-ziwei/` | 十二宫、星曜、格局、飞化、断语 | 紫微课程、星曜实体、Prompt 审计 | 算法和断语需分开校核 |
 | XUAN-QIMEN | `06-qimen/` | 四盘、值符值使、九星八门、案例 | 奇门课程、盘面解释 | 部分规则明确简化 |
@@ -334,7 +360,7 @@ escalation: self_care | clinician | urgent | emergency
 
 ## 12. 下一步
 
-1. 八字确定性核心与有限结构表已划定复用边界；转入六爻装卦、世应、六亲、六神与变卦的独立验证。
+1. 八字、六爻和梅花确定性结构已划定复用边界；继续核验共享六十四卦卦序、卦爻辞、错综卦和关键词。
 2. 按本清单为 package/source group 建立机器可读 manifest。
 3. 定义 normalized schema 和 review 状态机。
 4. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。

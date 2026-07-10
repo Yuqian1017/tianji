@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-10",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 25,
-  "currentFocus": "梅花易数确定性验证：起卦、互卦、变卦、动爻与体用结构；随后核对共享六十四卦表。",
-  "nextDecision": "全量枚举梅花输入与卦变有限域，区分可计算结构、流派口径和主观取象。",
+  "overallPercent": 26,
+  "currentFocus": "共享六十四卦经文库验证：卦序、卦辞、爻辞、错卦、综卦、关键词和运行时消费对齐。",
+  "nextDecision": "先全量解析项目易经资料并与公开原典逐卦对照，系统性错误立即升级为全表修复。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 78,
+      "progress": 80,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -30,6 +30,7 @@
         "八字健康脏腑、疾病、食疗、大运健康与 AI 消费路径已全部 blocked",
         "八字关系与神煞有限表全量匹配；两支相刑漏检已修复，合化/吉凶 blocked",
         "六爻 17,026 项独立检查与第二实现 33,408 字段比较均无差异；解释层 blocked",
+        "梅花 63,061 项全量检查与报数/时间/文字三条浏览器路径通过；解释层 blocked",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
@@ -124,6 +125,14 @@
       "owner": "Codex"
     },
     {
+      "id": "TJI-VAL-011",
+      "name": "共享六十四卦经文与卦变数据库验证",
+      "status": "in_progress",
+      "phase": "V0",
+      "doneWhen": "卦序、卦名、上下卦、卦辞爻辞、错综关系和关键词逐项核验，错误有修复与可重复 artifact。",
+      "owner": "Codex"
+    },
+    {
       "id": "TJI-VAL-002",
       "name": "八字排盘首轮深审",
       "status": "completed",
@@ -214,7 +223,7 @@
     {
       "id": "TJI-VAL-010",
       "name": "梅花易数与共享卦变验证",
-      "status": "in_progress",
+      "status": "completed",
       "phase": "V0",
       "doneWhen": "起卦、互卦、动爻、变卦和体用结构完成有限域枚举，并与共享六十四卦表对齐。",
       "owner": "Codex"
@@ -245,8 +254,8 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "meihua_audit_in_progress", "rule": "八字与六爻确定性结构已划定复用边界；梅花取得独立证据前不作为教学规范答案源。" },
-    { "name": "Product A 复用决策", "state": "partial", "rule": "八字与六爻的壳层和已验证确定性结构可继续；解释层逐字段 gate。" },
+    { "name": "排盘与数据库正确性", "state": "shared_yijing_audit_in_progress", "rule": "八字、六爻与梅花确定性结构已划定复用边界；共享经文与解释资料逐项核验。" },
+    { "name": "Product A 复用决策", "state": "partial", "rule": "八字、六爻与梅花的壳层和已验证确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
     { "name": "中医安全", "state": "blocked", "rule": "八字健康已硬阻断；未补齐安全元数据前，不扩大方药、艾灸或症状建议的产品消费范围。" },
@@ -286,6 +295,8 @@
     "iching-shifa@1.8.0 第二实现比较 768 个静态字段、32,640 个动变字段，0 mismatch",
     "修复乾外壬/坤外癸、近似节令和非法爻值；预测解释保持 not_validated",
     "Playwright 全六老阳样例在桌面/390px 显示乾外壬、坤外癸且无截断溢出",
-    "VAL-MH-001 已启动：梅花起卦、互卦、变卦与体用结构进入有限域全量验证"
+    "梅花 63,061 项全量检查 0 fail；报数、时间、文字三路径在桌面/390px 通过",
+    "修复卦线反转、公历近似、错误笔画表和移动端报数输入溢出；解释层保持 not_validated",
+    "TJI-VAL-011 已启动：共享六十四卦卦序、卦爻辞、错综关系与关键词进入逐项验证"
   ]
 }

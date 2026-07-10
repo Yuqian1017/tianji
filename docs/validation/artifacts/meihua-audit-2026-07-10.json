@@ -1,0 +1,66 @@
+{
+  "auditId": "VAL-MH-001",
+  "generatedAt": "2026-07-10T06:00:07.292Z",
+  "scope": "Meihua deterministic charting, declared casting methods, stroke data, and interpretation boundary",
+  "sources": [
+    "https://ctext.org/wiki.pl?chapter=867487&if=gb",
+    "https://www.unicode.org/reports/tr38/",
+    "https://www.unicode.org/Public/17.0.0/ucd/Unihan.zip"
+  ],
+  "declaredPolicies": {
+    "trigramBinaryOrder": "bottom_to_top",
+    "timeCalendar": "lunar_month_and_day",
+    "leapMonth": "reuse_base_month_number",
+    "textCasting": "source_pinned_modern_adaptation",
+    "interpretation": "not_validated"
+  },
+  "unihan": {
+    "unicodeVersion": "17.0.0",
+    "property": "kTotalStrokes",
+    "propertyStatus": "informative",
+    "range": "U+4E00-U+9FFF",
+    "entryCount": 20992,
+    "sourceUrl": "https://www.unicode.org/Public/17.0.0/ucd/Unihan.zip",
+    "sourceSha256": "d1c817dd7db84295dab0643c277d97c2fa742c245f8824e6736c2a0935095325"
+  },
+  "summary": {
+    "totalChecks": 63061,
+    "totalFailures": 0,
+    "status": "pass"
+  },
+  "sections": {
+    "hexagram_names": {
+      "checks": 64,
+      "failures": 0
+    },
+    "chart_transforms": {
+      "checks": 4608,
+      "failures": 0
+    },
+    "number_casting": {
+      "checks": 16384,
+      "failures": 0
+    },
+    "classical_example": {
+      "checks": 5,
+      "failures": 0
+    },
+    "time_casting": {
+      "checks": 4,
+      "failures": 0
+    },
+    "stroke_data": {
+      "checks": 41990,
+      "failures": 0
+    },
+    "text_casting": {
+      "checks": 1,
+      "failures": 0
+    },
+    "interpretation_boundary": {
+      "checks": 5,
+      "failures": 0
+    }
+  },
+  "failures": []
+}
