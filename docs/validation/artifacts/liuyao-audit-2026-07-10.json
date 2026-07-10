@@ -1,0 +1,67 @@
+{
+  "auditDate": "2026-07-10",
+  "conclusion": "deterministic_chart_pass_interpretation_not_validated",
+  "sourceProvenance": {
+    "gitCommit": "f17d101a246edac1ecd11bc4dff5170df9af6837",
+    "workingTreeDirty": false,
+    "dirtyFiles": [],
+    "sourceSha256": {
+      "src/modules/liuyao/data.js": "e73d472e05c031714066a342d6832ceeda7dde4477407716bd68ab779dbaf836",
+      "src/modules/liuyao/engine.js": "0afaec01989085d574bde5b14c0455b217d0a3a6e39438e1d1d9d6cb4aa485a4",
+      "src/modules/liuyao/prompt.js": "885975da60ded5239d18a8fb7aff9b4a0c48fac8b364dab6fcac09e2f2d2479b",
+      "scripts/validation/audit-liuyao.mjs": "3f592510a8527a111bb8c02e25bb4c8017c2288e1b73bbdf0a8b4a7ed10ed89f"
+    }
+  },
+  "sources": {
+    "primary": "https://ctext.org/wiki.pl?chapter=889452&if=gb&remap=gb",
+    "fushen": "https://ctext.org/wiki.pl?chapter=801184&if=gb&remap=gb",
+    "localCompendium": "database/xuanxue/compendium-new/02-liuyao/"
+  },
+  "model": {
+    "school": "jingfang_eight_palaces_najia",
+    "chartStatus": "validated_deterministic",
+    "interpretationStatus": "not_validated"
+  },
+  "summary": {
+    "staticCharts": 64,
+    "movingCharts": 4032,
+    "changedLineChecks": 12288,
+    "totalChecks": 17026,
+    "failedChecks": 0,
+    "checksByCategory": {
+      "finite_table": 13,
+      "palace": 81,
+      "runtime_static": 320,
+      "fushen": 120,
+      "runtime_changed": 4032,
+      "runtime_changed_line": 12288,
+      "six_spirits": 10,
+      "kong_wang": 60,
+      "liuqin": 96,
+      "calendar_boundary": 2,
+      "validation_boundary": 4
+    }
+  },
+  "referenceComparison": {
+    "status": "pass",
+    "package": "iching-shifa@1.8.0",
+    "license": "GPL-3.0-or-later",
+    "usage": "isolated_validation_only",
+    "referencePath": "/tmp/tianji-liuyao-validator/node_modules/iching-shifa/dist/index.js",
+    "counts": {
+      "staticCharts": 64,
+      "movingCharts": 4032,
+      "staticFields": 768,
+      "changedFields": 32640
+    },
+    "failureCount": 0,
+    "failures": []
+  },
+  "failures": [],
+  "limitations": [
+    "The pass covers deterministic Jingfang eight-palace chart construction under the declared Najia school.",
+    "Divination time defaults to runtime-local civil time; historical timezone and location reconstruction are not implemented.",
+    "Predictive, auspicious, personality, health, legal, and financial interpretations are not validated by chart parity.",
+    "The GPL comparator is used only in /tmp for validation and is not a Tianji dependency."
+  ]
+}
