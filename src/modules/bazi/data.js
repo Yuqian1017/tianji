@@ -195,12 +195,12 @@ export const STEM_COMBINE = [
 // === 地支关系 ===
 export const BRANCH_RELATIONS = {
   liuhe: [
-    { pair: ['子','丑'], hua: 'earth', label: '子丑合土' },
-    { pair: ['寅','亥'], hua: 'wood', label: '寅亥合木' },
-    { pair: ['卯','戌'], hua: 'fire', label: '卯戌合火' },
-    { pair: ['辰','酉'], hua: 'metal', label: '辰酉合金' },
-    { pair: ['巳','申'], hua: 'water', label: '巳申合水' },
-    { pair: ['午','未'], hua: 'fire', label: '午未合火' },
+    { pair: ['子','丑'], huaCandidates: ['earth'], label: '子丑合' },
+    { pair: ['寅','亥'], huaCandidates: ['wood'], label: '寅亥合' },
+    { pair: ['卯','戌'], huaCandidates: ['fire'], label: '卯戌合' },
+    { pair: ['辰','酉'], huaCandidates: ['metal'], label: '辰酉合' },
+    { pair: ['巳','申'], huaCandidates: ['water'], label: '巳申合' },
+    { pair: ['午','未'], huaCandidates: ['fire', 'earth'], label: '午未合' },
   ],
   liuchong: [
     { pair: ['子','午'], label: '子午冲' },
