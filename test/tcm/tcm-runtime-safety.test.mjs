@@ -144,8 +144,8 @@ test('blocks health inference in the active face-reading AI path', async () => {
 });
 
 test('keeps face and palm geometry separate from personality, career, and fortune claims', async () => {
-  assert.equal(FACE_INTERPRETATION_VALIDATION.status, 'blocked_unvalidated_interpretation');
-  assert.equal(PALM_INTERPRETATION_VALIDATION.status, 'blocked_unvalidated_interpretation');
+  assert.equal(FACE_INTERPRETATION_VALIDATION.status, 'source_pinned_cultural_interpretation');
+  assert.equal(PALM_INTERPRETATION_VALIDATION.status, 'source_pinned_cultural_interpretation');
   assert.ok(Object.values(WUXING_FACE_TYPES).every(item => !('personality' in item) && !('career' in item)));
   assert.ok(Object.values(HAND_WUXING_TYPES).every(item => !('personality' in item) && !('career' in item)));
   assert.ok(Object.values(THREE_STOP_LABELS).every(item => !('period' in item) && !('governs' in item)));
@@ -176,8 +176,8 @@ test('keeps face and palm geometry separate from personality, career, and fortun
 
   const facePrompt = await source('src/modules/face/prompt.js');
   const palmPrompt = await source('src/modules/palm/prompt.js');
-  assert.match(facePrompt, /不得把几何比例.*人格、职业或现实运势/);
-  assert.match(palmPrompt, /不得把手部比例或掌纹.*人格、职业、能力或现实运势/);
+  assert.match(facePrompt, /未附带规范数据库来源时.*不得自行把几何比例.*人格、职业或现实运势/);
+  assert.match(palmPrompt, /未附带规范数据库来源时.*不得自行把手部比例或掌纹.*人格、职业、能力或现实运势/);
   assert.doesNotMatch(facePrompt, /三停均匀最佳|高挺=有主见事业心|圆润有肉=聚财/);
   assert.doesNotMatch(palmPrompt, /食指>无名指|运动\/艺术天赋|有且清晰=目标明确/);
 });

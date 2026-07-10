@@ -45,9 +45,9 @@
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">中医基础理论、四诊辨证与现代医疗解释边界全量验证。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">抽取 01-14 理论、舌脉和证候条目，分开传统定义、现代事实和行动建议。</p></article>
-      <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">全库改按典籍见证优先验证，相术先逐条校勘原文与旧扩写。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">全量裁决面相/手相 raw 并绑定影印页，再重审中医经典与方剂来源。</p></article>
+      <article class="panel"><h2>反漂移规则</h2><p id="rule">现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容。</p></article>
     </section>
 
     <section class="panel">
@@ -69,9 +69,9 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 58,
-      currentFocus: '全库解释层与剩余 runtime inventory：相术解释、单位、掌丘伪测量和图片旋转依赖已处理。',
-      nextDecision: '用真实图片样本验证相术透视/遮挡/尺度鲁棒性与分类阈值，并继续现行逐药逐方、逐穴正文。',
-      antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
+      currentFocus: '全库改按典籍见证优先验证：相术先逐条校勘原文与旧扩写，中医把古籍核心与现代安全边界分层。',
+      nextDecision: '全量裁决面相/手相 raw 并绑定影印页；随后按同一合同重审中医经典、方剂和其余术数解释层。',
+      antiDriftRule: '现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'review_pending', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
@@ -81,11 +81,11 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'tcm_current_source_adjudication_in_progress', rule: 'TCM 50 reference 与 106 项食药目录已覆盖，八个候选层全部 blocked；继续现行逐药逐方、逐穴和解释层授权。' },
+        { name: '排盘与数据库正确性', state: 'classical_source_adjudication_in_progress', rule: '确定性排盘维持既有证据；解释层改按典籍见证逐条裁决。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
-        { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
-        { name: '中医安全', state: 'current_source_adjudication_in_progress', rule: '法定毒性 28 项与 106 项食药目录已规范化；八个候选层及所有具体用法 blocked；逐药逐方、逐穴和解释层校勘前不扩大产品消费范围。' },
+        { name: '数据库来源可追踪', state: 'source_doctrine_corrected', rule: '传统条目必须回指典籍、版本见证、定位和原文。' },
+        { name: '中医安全', state: 'modern_boundary_in_progress', rule: '医经、本草、方书负责传统内容；药典和监管只决定现代安全与使用边界。' },
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
@@ -147,9 +147,10 @@
         '奇门疾病用神和风水病符/化解旧表当前无消费引用，归类 dead_unconsumed，未来接入需重新校勘',
         '食药目录子批次：国家卫健委 106 项按 87+6+9+4 固定；Skill A 清单 15 项为 13 匹配、2 不在目录',
         '8 条明确食疗/药食配方共 38 个原料引用：18 匹配、5 身份/炮制缺口、15 不在目录；全部用法 blocked',
-        '面相/手相解释隔离：几何、位置与掌纹外观继续可见；人格、职业、能力、财富、关系、现实运势和医疗推断统一 blocked',
+        '相术来源方向纠正：有典籍见证的传统判断恢复为带引用文化知识，无出处扩写与现实决策用途继续 blocked',
         '手部几何合同：指缝由错误宽窄阈值改为逐指角度；21 点不支持的掌丘饱满度伪测量已从特征、UI 和 AI 输入删除',
         '相术旋转不变性：面部对称性与小指关节改为轴向投影；同一合成关键点旋转 30°/90° 后结果一致',
+        '相术典籍首批审计：386 条 raw 非空行完整入库，31 条已裁决、255 条待找出处；4 个见证、11 段短摘录、18 条条目、13 条旧文裁决共 199 项 0 fail',
         'fresh review 无 P0/P1；运行时清零过宽声明已降级，旧 tcm-data/望诊语义保持 open',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',

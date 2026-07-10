@@ -48,7 +48,7 @@
 | VAL-QM-002 | P1 | 奇门解释 | 九星八门八神吉凶、格局、用神、克应、方位与现实预测 | 流派解释 | V3+来源声明 | blocked | 排盘通过不授证断事；AI/UI 明确 `not_validated`，移除健康、诉讼、投资与吉方吉时建议入口 |
 | VAL-FS-001 | P1 | 风水 | 三元九运、二十四山、下卦宅盘、年/月飞星与九宫布局 | 流派确定性 | V3 | pass | 声明沈氏玄空常用下卦正向盘口径；216 盘、6,469 项项目内检查 0 fail，独立实现 6,048 字段 0 mismatch；10,228 个时刻的历法边界 30,684 字段 0 mismatch |
 | VAL-FS-002 | P1 | 风水解释 | 九星/组合吉凶、形煞、格局断语、化解、布局与现实预测 | 流派解释/安全 | V3+来源声明 | blocked | 排盘结构通过不授证住宅或个人结果；AI/UI 移除吉凶色、疾病财务映射、摆件施工建议；替卦/兼向/出卦也不在实现范围 |
-| VAL-XIANG-001 | P1 | 面相/手相 | MediaPipe 几何、问卷外观与人格/职业/运势解释 | 观测可靠性+来源忠实性 | V3+V5 | in_progress | 运行时只保留几何、位置和用户/视觉外观描述；角度单位、掌丘伪测量、面部对称性和小指关节的旋转依赖已修复；五行面型/手型、三停、掌纹与丘位解释全部 `not_validated`，继续用真实图像验证阈值与稳定性 |
+| VAL-XIANG-001 | P1 | 面相/手相 | MediaPipe 几何、典籍见证与传统解释 | 观测可靠性+来源忠实性 | V1+V3+V5 | in_progress | 几何单位/旋转合同已修复；两份 raw 的 386 条非空行已全量 inventory，31 条已进入首批裁决、255 条待找出处；4 个见证、11 段短摘录、18 条传统条目和 13 条旧文裁决共 199 项 0 fail |
 | VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | 两轮 fresh reviewer 均给出 hold；第二轮聚焦无界 V0、P1 工具闭环、可消费 DB、流派口径和掌握度合同，见 `PRD_FRESH_REVIEW_2026-07-10.md` |
 
 ## Findings
@@ -143,9 +143,12 @@
 | F-TCM-065 | P1 | VAL-TCM-009 | vulnerable_population_scope_blocked | 62 条涉及妊娠、儿童、老人或虚弱人群的文字未形成可验证剂量/禁忌合同 | 特殊人群字段全部 blocked，后续需方剂级权威来源和临床审查 |
 | F-TCM-066 | P1 | VAL-TCM-009 | attached_formula_entities_partially_remediated | 分册自称 182 个附方；现已从显式“附”条目恢复 180 个独立实体并固定来源行 | 180 个实体继续 blocked；不得把来源声明自动补成 182 |
 | F-TCM-075 | P1 | VAL-TCM-009 | attached_formula_source_count_gap_blocked | 第 25 分册声明 45 个附方，但正文只明确列出 43 个；其余五册声明与显式实体数吻合 | 保留 2 个来源缺口，不把别名、加减描述或其他方名猜作缺失附方 |
-| F-XIANG-001 | P1 | VAL-XIANG-001 | interpretation_inference_remediated | 面相把三停、眉距、下巴比例直接推成阶段运势和人格；手相把指长、指缝、掌纹与丘位直接推成人格、事业、能力和命运 | 数据层移除人格/职业字段并标 `not_validated`；AI 输入、视觉追问和模块说明只保留可观察结构与传统术语，解释层继续 blocked |
+| F-XIANG-001 | P1 | VAL-XIANG-001 | boundary_overreach_corrected | 旧运行时把无出处扩写直接当结论，首轮修复又把“无现代验证”误当成传统内容应整体排除 | 保留几何隔离，但改为典籍见证优先：有出处条目进入带引用文化层，无出处/冲突扩写保持候选或 blocked；不删除 raw |
 | F-XIANG-002 | P1 | VAL-XIANG-001 | geometry_contract_remediated | 手指间距实际为度数却按 `0.06` 阈值判宽窄；掌丘估计返回字符串却按数值比较，且 21 点骨架本身不覆盖掌丘表面 | 指缝只显示逐指角度；删除 `moundEstimates` 计算、展示与 prompt 消费，合成关键点回归固定能力边界 |
 | F-XIANG-003 | P1 | VAL-XIANG-001 | rotation_dependency_remediated | 面部对称性直接比较图片 x 坐标，小指关节判断直接比较 y 坐标；同一关键点旋转后结果改变 | 分别沿面部中轴法向和无名指轴投影；30°/90° 合成旋转属性测试固定结果不变 |
+| F-XIANG-004 | P1 | VAL-XIANG-001 | source_conflict_confirmed | compendium 写“上停长：少年得志、学业佳”，当前定位《神相全编》见证为“上停长少年忙” | 旧扩写不得冒充原典；保留 raw，规范层采用原文并记录冲突，继续查其他版本/流派是否存在不同说法 |
+| F-XIANG-005 | P1 | VAL-XIANG-001 | source_pinned_cultural_claims | 《神相全编》《神相铁关刀》《许负相法》确有由外观/掌纹联系衣禄、贵劳、财帛等传统判断 | 这些内容恢复为带作品、见证、定位和原文的文化知识；现代预测效力不在本次来源验证通过范围 |
+| F-XIANG-006 | P1 | VAL-XIANG-001 | attribution_and_authorial_caution | 《许负相法》序言承认“多后世增色”；《公笃相法》手掌图说自陈经验甚少 | 同时保存文本见证、传统题署、归属争议和作者保留意见，不把书名题署或单段规则升级为无争议事实 |
 | F-TCM-067 | P1 | VAL-TCM-001/010 | runtime_prompt_mismatch_remediated | 望诊 system prompt 每轮禁止医疗推断和调养建议，但 follow-up 输入框仍提示“追问具体调养方法”，主动诱导越界 | placeholder 改为复用 `WANGZHEN_FOLLOWUP_HINT`，只提示颜色、形态与拍摄质量；专项回归禁止旧文案恢复 |
 | F-TCM-068 | P0 | VAL-TCM-001/VAL-BZ-003 | cross_domain_health_inference_remediated | 普通八字模块仍提供“健康”快捷分析，手相把生命线映射为体质、养生和健康变化；两条路径都进入 AI | 删除八字健康入口和诱导示例，system prompt 对自由追问硬拒绝；手相只描述掌纹外观并禁止健康、寿命和医疗推断 |
 | F-TCM-069 | P0 | VAL-TCM-001 | face_health_inference_remediated | 面相 prompt 把疾厄宫直接映射健康并要求健康提示，面型数据还把几何分类写成面白/青/黑/红/黄 | 疾厄宫只保留传统名称；移除健康输出和伪肤色字段，首轮与追问统一禁止健康、疾病、寿命和医疗推断 |
@@ -235,3 +238,4 @@
 | 2026-07-10 | VAL-WY-001 | `audit-wuyun.mjs`；《素问》《医宗金鉴》《中医基础理论》；规范 JSON；桌面/390×844 | 60 年基础年结构 3,325 项 0 fail；修复主运太少、五运交司日标签、非法输入和六气名称截断；复杂派生层与现实/医学解释 excluded |
 | 2026-07-10 | VAL-ZWL-001 | `audit-ziwu.mjs`；《针灸大成》；规范 JSON；Ziwu 与八字健康旁路回归；桌面/390×844 | 12 行有限表、全天 1,440 分钟共 4,457 项 0 fail；移除当令/排毒/最佳时段旧句；午时心经冲突已裁定；无横向溢出或行内裁切；完整针法与临床解释 excluded |
 | 2026-07-10 | VAL-SHARED-001 | `audit-shared-time-cities.mjs`；GeoNames 374 条固定原始行和 `admin1`；IANA 民用时区；NOAA 均时差；中科院国家授时口径；桌面/390×844 | 132,836 项 0 fail；276 个中国城市省级合同、73,414 日、17,952 城市时点和 10 个转换 fixture 通过；拉斯维加斯时区、历史 DST、闰年分母和五条消费路径已修复；宿主 tzdb 版本与重复时刻选择保持 bounded |
+| 2026-07-10 | VAL-XIANG-001 | `build-xiangshu-raw-inventory.mjs`、`audit-xiangshu-classical-sources.mjs`；《神相全编》明刊本书格著录/CText 转录；《神相铁关刀》；《许负相法》夷门广牍本；《公笃相法》 | 386 条 raw 非空行完整入库，31 条已裁决、255 条待找出处；4 个见证、11 段短摘录、18 条传统条目、13 条旧文裁决共 199 项 0 fail；两份 raw SHA256 不变；影印逐页校勘仍 open |

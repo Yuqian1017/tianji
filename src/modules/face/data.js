@@ -1,48 +1,66 @@
 // Face reading data — wuxing types, three stops, feature descriptors, twelve palaces
 
 export const FACE_INTERPRETATION_VALIDATION = Object.freeze({
-  status: 'blocked_unvalidated_interpretation',
-  acceptedScope: 'observable_geometry_only',
-  runtimeEligibleFields: Object.freeze(['shape', 'ratio', 'symmetry', 'location_label']),
+  status: 'source_pinned_cultural_interpretation',
+  acceptedScope: 'observable_geometry_plus_cited_traditional_claims',
+  runtimeEligibleFields: Object.freeze(['shape', 'ratio', 'symmetry', 'location_label', 'source_pinned_traditional_claim']),
 });
+
+export const FACE_TRADITIONAL_CLAIM_IDS = Object.freeze([
+  'face.three_stops.definition',
+  'face.three_stops.equal',
+  'face.three_stops.upper_long',
+  'face.three_stops.middle_long',
+  'face.three_stops.lower_long',
+  'face.three_stops.no_single_factor',
+  'face.five_mountains.locations',
+  'face.five_mountains.traditional_association',
+  'face.five_elements.forms',
+  'face.five_elements.traditional_associations',
+]);
 
 export const WUXING_FACE_TYPES = {
   metal: {
     name: '金形面',
     element: '金',
-    shape: '方脸',
-    features: '骨骼分明·线条硬朗',
+    shape: '方正型',
+    features: '轮廓方正',
+    sourceClaimId: 'face.five_elements.forms',
   },
   wood: {
     name: '木形面',
     element: '木',
-    shape: '长脸',
-    features: '瘦长·额窄颧高',
+    shape: '瘦直型',
+    features: '轮廓瘦直',
+    sourceClaimId: 'face.five_elements.forms',
   },
   water: {
     name: '水形面',
     element: '水',
-    shape: '圆脸',
-    features: '轮廓圆润·下巴圆',
+    shape: '圆厚型',
+    features: '轮廓圆厚',
+    sourceClaimId: 'face.five_elements.forms',
   },
   fire: {
     name: '火形面',
     element: '火',
-    shape: '尖脸',
-    features: '额宽下巴窄·轮廓尖',
+    shape: '丰锐型',
+    features: '轮廓丰锐',
+    sourceClaimId: 'face.five_elements.forms',
   },
   earth: {
     name: '土形面',
     element: '土',
-    shape: '方圆脸',
-    features: '方圆·鼻部较宽·下颌圆厚',
+    shape: '敦厚型',
+    features: '轮廓敦厚',
+    sourceClaimId: 'face.five_elements.forms',
   },
 };
 
 export const THREE_STOP_LABELS = {
-  upper: { name: '上停', segment: '发际至眉部' },
-  middle: { name: '中停', segment: '眉部至鼻尖' },
-  lower: { name: '下停', segment: '鼻尖至下巴' },
+  upper: { name: '上停', segment: '发际至眉部', sourceClaimId: 'face.three_stops.definition' },
+  middle: { name: '中停', segment: '眉部至鼻尖', sourceClaimId: 'face.three_stops.definition' },
+  lower: { name: '下停', segment: '鼻尖至下巴', sourceClaimId: 'face.three_stops.definition' },
 };
 
 export function describeThreeStops(upper, middle, lower) {

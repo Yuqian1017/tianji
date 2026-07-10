@@ -1,41 +1,57 @@
 // Palm reading data — hand types, palm line questions, mound names, finger meanings
 
 export const PALM_INTERPRETATION_VALIDATION = Object.freeze({
-  status: 'blocked_unvalidated_interpretation',
-  acceptedScope: 'observable_geometry_and_user_reported_line_shape_only',
-  runtimeEligibleFields: Object.freeze(['shape', 'ratio', 'line_appearance', 'location_label']),
+  status: 'source_pinned_cultural_interpretation',
+  acceptedScope: 'observable_geometry_plus_cited_traditional_claims',
+  runtimeEligibleFields: Object.freeze(['shape', 'ratio', 'line_appearance', 'location_label', 'source_pinned_traditional_claim']),
 });
+
+export const PALM_TRADITIONAL_CLAIM_IDS = Object.freeze([
+  'palm.bagua.locations',
+  'palm.bagua.traditional_associations',
+  'palm.size.traditional_association',
+  'palm.lines.direction_associations',
+  'palm.form.five_elements',
+  'palm.form.authorial_caution',
+  'palm.square.thick_center',
+  'palm.xufu.textual_layer_caution',
+]);
 
 export const HAND_WUXING_TYPES = {
   metal: {
     name: '金形手',
     element: '金',
-    shape: '方掌短指',
-    features: '掌方正·指节分明·骨感',
+    shape: '方正型',
+    features: '掌形方正',
+    sourceClaimId: 'palm.form.five_elements',
   },
   wood: {
     name: '木形手',
     element: '木',
-    shape: '长掌长指',
-    features: '修长·关节突出·指尖略尖',
+    shape: '长直型',
+    features: '掌形长直',
+    sourceClaimId: 'palm.form.five_elements',
   },
   water: {
     name: '水形手',
     element: '水',
-    shape: '圆掌短指',
-    features: '肉厚柔软·指根粗·手背圆',
+    shape: '圆短型',
+    features: '掌形圆短',
+    sourceClaimId: 'palm.form.five_elements',
   },
   fire: {
     name: '火形手',
     element: '火',
-    shape: '尖掌尖指',
-    features: '指尖尖细·掌薄·红润',
+    shape: '尖露型',
+    features: '掌形尖露',
+    sourceClaimId: 'palm.form.five_elements',
   },
   earth: {
     name: '土形手',
     element: '土',
-    shape: '厚掌粗指',
-    features: '厚实·粗壮·手掌宽大',
+    shape: '敦厚型',
+    features: '掌形敦厚',
+    sourceClaimId: 'palm.form.five_elements',
   },
 };
 

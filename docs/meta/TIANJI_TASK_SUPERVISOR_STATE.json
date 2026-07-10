@@ -5,9 +5,9 @@
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
   "overallPercent": 58,
-  "currentFocus": "全库解释层与剩余 runtime inventory：相术解释、单位、掌丘伪测量和图片旋转依赖已处理。",
-  "nextDecision": "用真实图片样本验证相术透视/遮挡/尺度鲁棒性与分类阈值，并继续现行逐药逐方、逐穴正文。",
-  "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
+  "currentFocus": "全库改按典籍见证优先验证：相术先逐条校勘原文与旧扩写，中医把古籍核心与现代安全/监管边界分层。",
+  "nextDecision": "全量裁决面相/手相 raw 并绑定影印页；随后按同一合同重审中医经典、方剂和其余术数解释层。",
+  "antiDriftRule": "传统文化数据库不得用现代监管资料替代典籍来源，也不得因现代不可验证删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
     {
@@ -55,12 +55,13 @@
         "14 个现代外推/可靠性 finding 已裁决；舌脉、体质、预防、剂量和临床答案字段全部 blocked",
         "中药 15-23 共 1,331 条非空行、45 表/279 表格行、663 条风险候选和 20 finding 共 14,281 项 0 fail；反查表实有 100 条、缺 52-54 且有两处逆序",
         "方剂 24-30 共 820 条非空行、8 表/171 表格行、186 个格式化定义、180 个显式附方实体、522 条重叠窄风险视图和 21 finding 共 11,762 项 0 fail；第 25 分册附方声明 45、显式实体 43",
-        "经典/医家/食疗 42-48 共 1,142 条非空行、8 表/79 表格行、145 标题、603 条窄风险视图和 20 finding 共 14,281 项 0 fail；TCM 50 reference 完整 inventory 已覆盖"
+        "经典/医家/食疗 42-48 共 1,142 条非空行、8 表/79 表格行、145 标题、603 条窄风险视图和 20 finding 共 14,281 项 0 fail；TCM 50 reference 完整 inventory 已覆盖",
+        "相术两份 raw 的 386 条非空行已全部入 inventory，31 条已裁决、255 条待找出处；首批 4 个见证、11 段短摘录、18 条传统条目和 13 条旧文裁决共 199 项 0 fail"
       ],
       "metrics": {
         "time": { "startedAt": "2026-07-09", "completedAt": null, "elapsed": "进行中" },
         "lineMetrics": { "codeAdded": 0, "docsAdded": "待回填", "dashboardAdded": "待回填" },
-        "feedbackSummary": "用户要求尽量逐项验证全部数据库，并明确把当前排盘正确性作为继续开发前提。"
+        "feedbackSummary": "用户要求尽量逐项验证全部数据库，并纠正验证方向：文化库以权威典籍和逐条引用为核心，现代监管仅作安全与现实使用边界。"
       }
     },
     {
@@ -153,6 +154,14 @@
       "status": "in_progress",
       "phase": "V0",
       "doneWhen": "Skill 中理论、诊断、具体药名、剂量、妊娠/配伍禁忌、方剂警示与穴位外治逐项进入来源、安全和消费裁决；未通过项继续 blocked。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-020",
+      "name": "相术典籍见证与逐条来源裁决",
+      "status": "in_progress",
+      "phase": "V0",
+      "doneWhen": "面相/手相拟入系统条目逐条绑定作品、版本见证、定位和原文；现代扩写、异文、归属争议与视觉测量分别出结论。",
       "owner": "Codex"
     },
     {
@@ -341,11 +350,11 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "tcm_current_source_adjudication_in_progress", "rule": "TCM 50 reference 与 106 项食药目录已覆盖，八个候选层全部 blocked；继续现行逐药逐方、逐穴和解释层授权。" },
+    { "name": "排盘与数据库正确性", "state": "classical_source_adjudication_in_progress", "rule": "确定性排盘维持既有证据；解释层改按典籍见证逐条裁决，现代安全/监管证据单独分层。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
-    { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
-    { "name": "中医安全", "state": "current_source_adjudication_in_progress", "rule": "法定毒性 28 项与 106 项食药目录已规范化；八个候选层及所有配方/剂量/疾病用法 blocked；逐药逐方、逐穴和解释层校勘前不扩大产品消费范围。" },
+    { "name": "数据库来源可追踪", "state": "source_doctrine_corrected", "rule": "规范化传统条目必须回指典籍作品、版本见证、定位和原文；raw、传统解释、现代边界和产品呈现四层分离。" },
+    { "name": "中医安全", "state": "modern_boundary_in_progress", "rule": "医经、本草、方书和医家负责传统内容来源；药典、卫健委、药监和临床资料只决定现代身份、安全与现实使用边界。" },
     { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
@@ -430,8 +439,9 @@
     "奇门 QIMEN_YONGSHEN 与风水 STAR_COMBO/STAR_REMEDY 的医疗化旧文字当前无消费引用，归类 dead_unconsumed，未来接入需重新校勘",
     "TJI-VAL-019 食药目录子批次：国家卫健委 106 项按 87+6+9+4 固定；Skill A 清单 15 项为 13 匹配、2 不在目录",
     "8 条明确食疗/药食配方共 38 个原料引用：18 匹配、5 身份/炮制缺口、15 不在目录；48 项审计 0 fail，全部产品用法 blocked",
-    "面相/手相解释隔离：几何、位置与掌纹外观继续可见；人格、职业、能力、财富、关系、现实运势和医疗推断统一 blocked",
+    "相术来源方向纠正：raw 原文继续完整保留；有典籍见证的传统人格、财富、关系或运势判断可作为带引用文化知识，无出处扩写与现实决策用途继续 blocked",
     "手部几何合同：指缝由错误宽窄阈值改为逐指角度；21 点不支持的掌丘饱满度伪测量已从特征、UI 和 AI 输入删除",
-    "相术旋转不变性：面部对称性与小指关节改为轴向投影；同一合成关键点旋转 30°/90° 后结果一致"
+    "相术旋转不变性：面部对称性与小指关节改为轴向投影；同一合成关键点旋转 30°/90° 后结果一致",
+    "相术典籍首批审计：386 条 raw 非空行完整入库，31 条已裁决、255 条待找出处；4 个见证、11 段短摘录、18 条条目、13 条旧文裁决共 199 项 0 fail"
   ]
 }

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "doctrine": "classical_source_first",
+  "retrievedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "xiangshu-shenxiang-quanbian-ming-print",
+      "title": "神相全編",
+      "sourceType": "classical_text_with_scan_witness",
+      "traditionalAttribution": "題宋陳摶秘傳，明袁忠徹訂正",
+      "attributionStatus": "traditional_attribution_not_independently_established",
+      "witness": "致和堂藏板明刊本（書格所述），以中國哲學書電子化計劃轉錄作檢索見證",
+      "witnessStatus": "transcription_located_scan_crosscheck_pending",
+      "url": "https://ctext.org/wiki.pl?chapter=905153&if=en",
+      "scanUrl": "https://old.shuge.org/ebook/shen-xiang-quan-bian/",
+      "repository": "中國哲學書電子化計劃；書格明刊本影像說明",
+      "excerpts": [
+        {
+          "id": "sxqb-905153-p14-three-stops",
+          "locator": "CTP URN ctp:ws905153, HTML row p14 (displayed text row 13)",
+          "originalText": "三停者，額門，准頭，地角，此面部三停也，又為三財，又為三主，又名三表，俱要平等。上停長少年忙，中停長福祿昌，下停長老吉祥，三停平等，一生衣祿無虧；若三停尖削，歪斜，粗露，俱不利也，可照流年部位氣色而推，不可一體而斷。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p23-hands",
+          "locator": "CTP URN ctp:ws905153, HTML row p23 (displayed text row 22)",
+          "originalText": "宜細嫩隆厚，掌有八卦，紋路鮮明。書云，掌紅撰血，富貴綿綿，手軟如綿，閒且有錢，掌平如鏡，白手興家。紋露粗率，晚年衣祿平常，但相掌訣法有載於後，宜與前後兼觀。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p14-five-mountains",
+          "locator": "CTP URN ctp:ws905153, HTML row p14 (displayed text row 13)",
+          "originalText": "左顴為東嶽，額為南嶽，右顴為西嶽，地閣為北嶽，土星為中嶽。書云：五嶽俱朝，貴壓朝班，亦且錢財自旺。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p29-five-elements",
+          "locator": "CTP URN ctp:ws905153, HTML row p29 (displayed text row 28)",
+          "originalText": "五行者：金、木、水、火、土也，書云，金得金剛毅深，木得木資財足，水得水文章貴，火得火見機果，土得土厚豐庫，金形白色喜白，木形瘦喜青，水喜肥黑，火不嫌尖宜赤色，土喜厚今色宜黃，此五形正局也。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p50-five-element-forms",
+          "locator": "CTP URN ctp:ws905153, HTML row p50 (displayed text row 49)",
+          "originalText": "金形方正色潔白，木形瘦直骨節堅，水形圓厚重而黑，火形豐銳赤焦燥，土形敦厚色黃光。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        }
+      ]
+    },
+    {
+      "id": "xiangshu-shenxiang-tieguandao",
+      "title": "神相鐵關刀",
+      "sourceType": "classical_text_transcription_candidate",
+      "traditionalAttribution": "題相術古籍，具體作者與成書年代待版本學核定",
+      "attributionStatus": "unresolved",
+      "witness": "中國哲學書電子化計劃轉錄，卷三相掌秘訣",
+      "witnessStatus": "transcription_located_scan_witness_not_yet_pinned",
+      "url": "https://ctext.org/wiki.pl?chapter=351787&if=en",
+      "repository": "中國哲學書電子化計劃",
+      "excerpts": [
+        {
+          "id": "sxtgd-351787-p22-bagua",
+          "locator": "HTML row p22 (displayed text row 22), 相掌秘訣",
+          "originalText": "掌有八卦，而最緊要在巽、離、坤三宮。巽主財帛，離主功名，坤主子嗣。巽為福，離為德，坤為祿，掌心為明堂；宜平宜坳，忌卸忌突，忌暗忌筋。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxtgd-351787-p23-palm-form",
+          "locator": "HTML row p23 (displayed text row 23), 相掌秘訣",
+          "originalText": "指為龍，掌為虎，指長固仕，仍求相配；木形之指乃長，其餘不能盡長也。掌背豐而筋不露，身逸多金；掌心紅而坳不瀉，富足有餘；露筋者勞碌，露節者耗財；掌小者貴，掌大者勞。節過大，主性懶；紋縱橫，主心雜，此掌中之大概也。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxtgd-351787-p24-lines",
+          "locator": "HTML row p24 (displayed text row 24), 相掌秘訣",
+          "originalText": "惟掌紋宜深秀，深者現秀不粗；直紋多，人必聰明；橫紋多，人必心紛；指節多橫紋主清貴，直紋主清靈。掌宜配面，掌又宜配身。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        }
+      ]
+    },
+    {
+      "id": "xiangshu-xufu-xiangfa-yimenguangdu",
+      "title": "許負相法",
+      "sourceType": "classical_text_with_scan_witness",
+      "traditionalAttribution": "題漢許負撰",
+      "attributionStatus": "preface_itself_notes_later_embellishment",
+      "witness": "《夷門廣牘》本；維基文庫轉錄與中國哲學書電子化計劃轉錄",
+      "witnessStatus": "transcription_and_pdf_witness_located_scan_page_crosscheck_pending",
+      "url": "https://zh.wikisource.org/wiki/%E8%A8%B1%E8%B2%A0%E7%9B%B8%E6%B3%95/%E7%9B%B8%E6%89%8B%E7%AF%87%E7%AC%AC%E5%8D%81%E4%B8%80",
+      "scanUrl": "https://zh.wikisource.org/wiki/File:%E8%A8%B1%E8%B2%A0%E7%9B%B8%E6%B3%95.pdf",
+      "repository": "維基文庫；中國哲學書電子化計劃",
+      "excerpts": [
+        {
+          "id": "xfxf-hand-ch11-square-palm",
+          "locator": "相手篇第十一, Wikisource revision 2300283",
+          "originalText": "掌四方，厚中央。薄兼有深，法益仕宦，財食安樂。",
+          "transcriptionStatus": "bounded_wikisource_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "xfxf-preface-textual-caution",
+          "locator": "序, CText chapter 897562 displayed text row 5",
+          "originalText": "余誦其文，雖多後世增色，而古樸簡要，非漢代莫有也。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        }
+      ]
+    },
+    {
+      "id": "xiangshu-gongdu-xiangfa",
+      "title": "公篤相法",
+      "sourceType": "later_traditional_commentary",
+      "traditionalAttribution": "公篤撰",
+      "attributionStatus": "authorial_text_but_bibliographic_edition_pending",
+      "witness": "中國哲學書電子化計劃轉錄，上篇卷一手掌圖說",
+      "witnessStatus": "transcription_located_scan_witness_not_yet_pinned",
+      "url": "https://ctext.org/wiki.pl?chapter=419831&if=en",
+      "repository": "中國哲學書電子化計劃",
+      "excerpts": [
+        {
+          "id": "gdxfx-419831-p19-five-forms",
+          "locator": "HTML row p19 (displayed text row 18), 手掌圖說",
+          "originalText": "餘於手掌相法，經驗甚少。乃枝葉小法。茲姑志之。大抵木形宜長直。金形宜方正。水形宜圓短。土形宜敦厚。火形宜尖露。其它末敢必其為貴賤也。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        }
+      ]
+    }
+  ]
+}

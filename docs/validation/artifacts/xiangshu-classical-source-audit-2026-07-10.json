@@ -1,0 +1,1059 @@
+{
+  "audit": "xiangshu-classical-source-contract",
+  "generatedAt": "2026-07-10T21:49:47.528Z",
+  "doctrine": "classical_source_first",
+  "counts": {
+    "sources": 4,
+    "excerpts": 11,
+    "claims": 18,
+    "adjudications": 13,
+    "rawInventoryRecords": 386,
+    "pendingRawSourceAdjudications": 255,
+    "checks": 199,
+    "failures": 0
+  },
+  "scope": {
+    "passed": "Initial source-contract sample for high-impact face and palm claims.",
+    "excluded": "Full line-by-line adjudication, scan-page collation, image-model robustness, and scientific truth of traditional claims."
+  },
+  "failures": [],
+  "checks": [
+    {
+      "id": "manifest-doctrine",
+      "pass": true,
+      "detail": "classical_source_first"
+    },
+    {
+      "id": "core-doctrine",
+      "pass": true,
+      "detail": "classical_source_first"
+    },
+    {
+      "id": "adjudication-doctrine",
+      "pass": true,
+      "detail": "classical_source_first"
+    },
+    {
+      "id": "raw-inventory-doctrine",
+      "pass": true,
+      "detail": "classical_source_first"
+    },
+    {
+      "id": "raw-inventory-count",
+      "pass": true,
+      "detail": 386
+    },
+    {
+      "id": "source-url:xiangshu-shenxiang-quanbian-ming-print",
+      "pass": true,
+      "detail": "https://ctext.org/wiki.pl?chapter=905153&if=en"
+    },
+    {
+      "id": "source-attribution:xiangshu-shenxiang-quanbian-ming-print",
+      "pass": true,
+      "detail": "traditional_attribution_not_independently_established"
+    },
+    {
+      "id": "source-witness:xiangshu-shenxiang-quanbian-ming-print",
+      "pass": true,
+      "detail": "transcription_located_scan_crosscheck_pending"
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p14 (displayed text row 13)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": 108
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p23-hands",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p23-hands",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p23 (displayed text row 22)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p23-hands",
+      "pass": true,
+      "detail": 78
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p14-five-mountains",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p14-five-mountains",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p14 (displayed text row 13)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p14-five-mountains",
+      "pass": true,
+      "detail": 49
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p29-five-elements",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p29-five-elements",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p29 (displayed text row 28)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p29-five-elements",
+      "pass": true,
+      "detail": 94
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p50-five-element-forms",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p50-five-element-forms",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p50 (displayed text row 49)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p50-five-element-forms",
+      "pass": true,
+      "detail": 40
+    },
+    {
+      "id": "source-url:xiangshu-shenxiang-tieguandao",
+      "pass": true,
+      "detail": "https://ctext.org/wiki.pl?chapter=351787&if=en"
+    },
+    {
+      "id": "source-attribution:xiangshu-shenxiang-tieguandao",
+      "pass": true,
+      "detail": "unresolved"
+    },
+    {
+      "id": "source-witness:xiangshu-shenxiang-tieguandao",
+      "pass": true,
+      "detail": "transcription_located_scan_witness_not_yet_pinned"
+    },
+    {
+      "id": "excerpt-unique:sxtgd-351787-p22-bagua",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-tieguandao"
+    },
+    {
+      "id": "excerpt-locator:sxtgd-351787-p22-bagua",
+      "pass": true,
+      "detail": "HTML row p22 (displayed text row 22), 相掌秘訣"
+    },
+    {
+      "id": "excerpt-text:sxtgd-351787-p22-bagua",
+      "pass": true,
+      "detail": 66
+    },
+    {
+      "id": "excerpt-unique:sxtgd-351787-p23-palm-form",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-tieguandao"
+    },
+    {
+      "id": "excerpt-locator:sxtgd-351787-p23-palm-form",
+      "pass": true,
+      "detail": "HTML row p23 (displayed text row 23), 相掌秘訣"
+    },
+    {
+      "id": "excerpt-text:sxtgd-351787-p23-palm-form",
+      "pass": true,
+      "detail": 105
+    },
+    {
+      "id": "excerpt-unique:sxtgd-351787-p24-lines",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-tieguandao"
+    },
+    {
+      "id": "excerpt-locator:sxtgd-351787-p24-lines",
+      "pass": true,
+      "detail": "HTML row p24 (displayed text row 24), 相掌秘訣"
+    },
+    {
+      "id": "excerpt-text:sxtgd-351787-p24-lines",
+      "pass": true,
+      "detail": 58
+    },
+    {
+      "id": "source-url:xiangshu-xufu-xiangfa-yimenguangdu",
+      "pass": true,
+      "detail": "https://zh.wikisource.org/wiki/%E8%A8%B1%E8%B2%A0%E7%9B%B8%E6%B3%95/%E7%9B%B8%E6%89%8B%E7%AF%87%E7%AC%AC%E5%8D%81%E4%B8%80"
+    },
+    {
+      "id": "source-attribution:xiangshu-xufu-xiangfa-yimenguangdu",
+      "pass": true,
+      "detail": "preface_itself_notes_later_embellishment"
+    },
+    {
+      "id": "source-witness:xiangshu-xufu-xiangfa-yimenguangdu",
+      "pass": true,
+      "detail": "transcription_and_pdf_witness_located_scan_page_crosscheck_pending"
+    },
+    {
+      "id": "excerpt-unique:xfxf-hand-ch11-square-palm",
+      "pass": true,
+      "detail": "xiangshu-xufu-xiangfa-yimenguangdu"
+    },
+    {
+      "id": "excerpt-locator:xfxf-hand-ch11-square-palm",
+      "pass": true,
+      "detail": "相手篇第十一, Wikisource revision 2300283"
+    },
+    {
+      "id": "excerpt-text:xfxf-hand-ch11-square-palm",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "excerpt-unique:xfxf-preface-textual-caution",
+      "pass": true,
+      "detail": "xiangshu-xufu-xiangfa-yimenguangdu"
+    },
+    {
+      "id": "excerpt-locator:xfxf-preface-textual-caution",
+      "pass": true,
+      "detail": "序, CText chapter 897562 displayed text row 5"
+    },
+    {
+      "id": "excerpt-text:xfxf-preface-textual-caution",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "source-url:xiangshu-gongdu-xiangfa",
+      "pass": true,
+      "detail": "https://ctext.org/wiki.pl?chapter=419831&if=en"
+    },
+    {
+      "id": "source-attribution:xiangshu-gongdu-xiangfa",
+      "pass": true,
+      "detail": "authorial_text_but_bibliographic_edition_pending"
+    },
+    {
+      "id": "source-witness:xiangshu-gongdu-xiangfa",
+      "pass": true,
+      "detail": "transcription_located_scan_witness_not_yet_pinned"
+    },
+    {
+      "id": "excerpt-unique:gdxfx-419831-p19-five-forms",
+      "pass": true,
+      "detail": "xiangshu-gongdu-xiangfa"
+    },
+    {
+      "id": "excerpt-locator:gdxfx-419831-p19-five-forms",
+      "pass": true,
+      "detail": "HTML row p19 (displayed text row 18), 手掌圖說"
+    },
+    {
+      "id": "excerpt-text:gdxfx-419831-p19-five-forms",
+      "pass": true,
+      "detail": 66
+    },
+    {
+      "id": "claim-unique:face.three_stops.definition",
+      "pass": true,
+      "detail": "face.three_stops.definition"
+    },
+    {
+      "id": "claim-original:face.three_stops.definition",
+      "pass": true,
+      "detail": "三停者，額門，准頭，地角，此面部三停也。"
+    },
+    {
+      "id": "claim-normalized:face.three_stops.definition",
+      "pass": true,
+      "detail": "该见证以额门、准头、地角划分面部三停。"
+    },
+    {
+      "id": "claim-sources:face.three_stops.definition",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-three-stops"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.three_stops.definition:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "sxqb-905153-p14-three-stops"
+    },
+    {
+      "id": "claim-runtime-policy:face.three_stops.definition",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.three_stops.equal",
+      "pass": true,
+      "detail": "face.three_stops.equal"
+    },
+    {
+      "id": "claim-original:face.three_stops.equal",
+      "pass": true,
+      "detail": "三停平等，一生衣祿無虧。"
+    },
+    {
+      "id": "claim-normalized:face.three_stops.equal",
+      "pass": true,
+      "detail": "《神相全编》此处把三停平等与一生衣禄无亏相联系。"
+    },
+    {
+      "id": "claim-sources:face.three_stops.equal",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-three-stops"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.three_stops.equal:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "sxqb-905153-p14-three-stops"
+    },
+    {
+      "id": "claim-runtime-policy:face.three_stops.equal",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.three_stops.upper_long",
+      "pass": true,
+      "detail": "face.three_stops.upper_long"
+    },
+    {
+      "id": "claim-original:face.three_stops.upper_long",
+      "pass": true,
+      "detail": "上停長少年忙。"
+    },
+    {
+      "id": "claim-normalized:face.three_stops.upper_long",
+      "pass": true,
+      "detail": "《神相全编》此处记上停长为“少年忙”。"
+    },
+    {
+      "id": "claim-sources:face.three_stops.upper_long",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-three-stops"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.three_stops.upper_long:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "sxqb-905153-p14-three-stops"
+    },
+    {
+      "id": "claim-runtime-policy:face.three_stops.upper_long",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.three_stops.middle_long",
+      "pass": true,
+      "detail": "face.three_stops.middle_long"
+    },
+    {
+      "id": "claim-original:face.three_stops.middle_long",
+      "pass": true,
+      "detail": "中停長福祿昌。"
+    },
+    {
+      "id": "claim-normalized:face.three_stops.middle_long",
+      "pass": true,
+      "detail": "《神相全编》此处把中停长与福禄昌相联系。"
+    },
+    {
+      "id": "claim-sources:face.three_stops.middle_long",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-three-stops"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.three_stops.middle_long:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "sxqb-905153-p14-three-stops"
+    },
+    {
+      "id": "claim-runtime-policy:face.three_stops.middle_long",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.three_stops.lower_long",
+      "pass": true,
+      "detail": "face.three_stops.lower_long"
+    },
+    {
+      "id": "claim-original:face.three_stops.lower_long",
+      "pass": true,
+      "detail": "下停長老吉祥。"
+    },
+    {
+      "id": "claim-normalized:face.three_stops.lower_long",
+      "pass": true,
+      "detail": "《神相全编》此处把下停长与年老吉祥相联系。"
+    },
+    {
+      "id": "claim-sources:face.three_stops.lower_long",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-three-stops"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.three_stops.lower_long:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "sxqb-905153-p14-three-stops"
+    },
+    {
+      "id": "claim-runtime-policy:face.three_stops.lower_long",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.three_stops.no_single_factor",
+      "pass": true,
+      "detail": "face.three_stops.no_single_factor"
+    },
+    {
+      "id": "claim-original:face.three_stops.no_single_factor",
+      "pass": true,
+      "detail": "可照流年部位氣色而推，不可一體而斷。"
+    },
+    {
+      "id": "claim-normalized:face.three_stops.no_single_factor",
+      "pass": true,
+      "detail": "该见证自身提醒不能只凭单一形态一概而断。"
+    },
+    {
+      "id": "claim-sources:face.three_stops.no_single_factor",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-three-stops"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.three_stops.no_single_factor:sxqb-905153-p14-three-stops",
+      "pass": true,
+      "detail": "sxqb-905153-p14-three-stops"
+    },
+    {
+      "id": "claim-runtime-policy:face.three_stops.no_single_factor",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.five_mountains.locations",
+      "pass": true,
+      "detail": "face.five_mountains.locations"
+    },
+    {
+      "id": "claim-original:face.five_mountains.locations",
+      "pass": true,
+      "detail": "左顴為東嶽，額為南嶽，右顴為西嶽，地閣為北嶽，土星為中嶽。"
+    },
+    {
+      "id": "claim-normalized:face.five_mountains.locations",
+      "pass": true,
+      "detail": "《神相全编》此处把左颧、额、右颧、地阁和鼻分别称为东、南、西、北、中岳。"
+    },
+    {
+      "id": "claim-sources:face.five_mountains.locations",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-five-mountains"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.five_mountains.locations:sxqb-905153-p14-five-mountains",
+      "pass": true,
+      "detail": "sxqb-905153-p14-five-mountains"
+    },
+    {
+      "id": "claim-runtime-policy:face.five_mountains.locations",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.five_mountains.traditional_association",
+      "pass": true,
+      "detail": "face.five_mountains.traditional_association"
+    },
+    {
+      "id": "claim-original:face.five_mountains.traditional_association",
+      "pass": true,
+      "detail": "五嶽俱朝，貴壓朝班，亦且錢財自旺。"
+    },
+    {
+      "id": "claim-normalized:face.five_mountains.traditional_association",
+      "pass": true,
+      "detail": "《神相全编》把“五岳俱朝”与贵、财旺相联系。"
+    },
+    {
+      "id": "claim-sources:face.five_mountains.traditional_association",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p14-five-mountains"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.five_mountains.traditional_association:sxqb-905153-p14-five-mountains",
+      "pass": true,
+      "detail": "sxqb-905153-p14-five-mountains"
+    },
+    {
+      "id": "claim-runtime-policy:face.five_mountains.traditional_association",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.five_elements.forms",
+      "pass": true,
+      "detail": "face.five_elements.forms"
+    },
+    {
+      "id": "claim-original:face.five_elements.forms",
+      "pass": true,
+      "detail": "金形方正色潔白，木形瘦直骨節堅，水形圓厚重而黑，火形豐銳赤焦燥，土形敦厚色黃光。"
+    },
+    {
+      "id": "claim-normalized:face.five_elements.forms",
+      "pass": true,
+      "detail": "《神相全编》以方正、瘦直、圆厚、丰锐、敦厚等形态描述金木水火土五形。"
+    },
+    {
+      "id": "claim-sources:face.five_elements.forms",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p50-five-element-forms"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.five_elements.forms:sxqb-905153-p50-five-element-forms",
+      "pass": true,
+      "detail": "sxqb-905153-p50-five-element-forms"
+    },
+    {
+      "id": "claim-runtime-policy:face.five_elements.forms",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.five_elements.traditional_associations",
+      "pass": true,
+      "detail": "face.five_elements.traditional_associations"
+    },
+    {
+      "id": "claim-original:face.five_elements.traditional_associations",
+      "pass": true,
+      "detail": "金得金剛毅深，木得木資財足，水得水文章貴，火得火見機果，土得土厚豐庫。"
+    },
+    {
+      "id": "claim-normalized:face.five_elements.traditional_associations",
+      "pass": true,
+      "detail": "《神相全编》此段分别把五形与刚毅、资财、文章、见机、丰库等传统判断相联系。"
+    },
+    {
+      "id": "claim-sources:face.five_elements.traditional_associations",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p29-five-elements"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.five_elements.traditional_associations:sxqb-905153-p29-five-elements",
+      "pass": true,
+      "detail": "sxqb-905153-p29-five-elements"
+    },
+    {
+      "id": "claim-runtime-policy:face.five_elements.traditional_associations",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.bagua.locations",
+      "pass": true,
+      "detail": "palm.bagua.locations"
+    },
+    {
+      "id": "claim-original:palm.bagua.locations",
+      "pass": true,
+      "detail": "掌有八卦，而最緊要在巽、離、坤三宮。"
+    },
+    {
+      "id": "claim-normalized:palm.bagua.locations",
+      "pass": true,
+      "detail": "《神相铁关刀》相掌秘诀以八卦分掌，并特别提出巽、离、坤三宫。"
+    },
+    {
+      "id": "claim-sources:palm.bagua.locations",
+      "pass": true,
+      "detail": [
+        "sxtgd-351787-p22-bagua"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.bagua.locations:sxtgd-351787-p22-bagua",
+      "pass": true,
+      "detail": "sxtgd-351787-p22-bagua"
+    },
+    {
+      "id": "claim-runtime-policy:palm.bagua.locations",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.bagua.traditional_associations",
+      "pass": true,
+      "detail": "palm.bagua.traditional_associations"
+    },
+    {
+      "id": "claim-original:palm.bagua.traditional_associations",
+      "pass": true,
+      "detail": "巽主財帛，離主功名，坤主子嗣。"
+    },
+    {
+      "id": "claim-normalized:palm.bagua.traditional_associations",
+      "pass": true,
+      "detail": "该见证分别把巽、离、坤三宫与财帛、功名、子嗣相联系。"
+    },
+    {
+      "id": "claim-sources:palm.bagua.traditional_associations",
+      "pass": true,
+      "detail": [
+        "sxtgd-351787-p22-bagua"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.bagua.traditional_associations:sxtgd-351787-p22-bagua",
+      "pass": true,
+      "detail": "sxtgd-351787-p22-bagua"
+    },
+    {
+      "id": "claim-runtime-policy:palm.bagua.traditional_associations",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.size.traditional_association",
+      "pass": true,
+      "detail": "palm.size.traditional_association"
+    },
+    {
+      "id": "claim-original:palm.size.traditional_association",
+      "pass": true,
+      "detail": "掌小者貴，掌大者勞。"
+    },
+    {
+      "id": "claim-normalized:palm.size.traditional_association",
+      "pass": true,
+      "detail": "《神相铁关刀》此处把掌小与贵、掌大与劳相联系。"
+    },
+    {
+      "id": "claim-sources:palm.size.traditional_association",
+      "pass": true,
+      "detail": [
+        "sxtgd-351787-p23-palm-form"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.size.traditional_association:sxtgd-351787-p23-palm-form",
+      "pass": true,
+      "detail": "sxtgd-351787-p23-palm-form"
+    },
+    {
+      "id": "claim-runtime-policy:palm.size.traditional_association",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.lines.direction_associations",
+      "pass": true,
+      "detail": "palm.lines.direction_associations"
+    },
+    {
+      "id": "claim-original:palm.lines.direction_associations",
+      "pass": true,
+      "detail": "直紋多，人必聰明；橫紋多，人必心紛。"
+    },
+    {
+      "id": "claim-normalized:palm.lines.direction_associations",
+      "pass": true,
+      "detail": "《神相铁关刀》此处把直纹多与聪明、横纹多与心纷相联系。"
+    },
+    {
+      "id": "claim-sources:palm.lines.direction_associations",
+      "pass": true,
+      "detail": [
+        "sxtgd-351787-p24-lines"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.lines.direction_associations:sxtgd-351787-p24-lines",
+      "pass": true,
+      "detail": "sxtgd-351787-p24-lines"
+    },
+    {
+      "id": "claim-runtime-policy:palm.lines.direction_associations",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.form.five_elements",
+      "pass": true,
+      "detail": "palm.form.five_elements"
+    },
+    {
+      "id": "claim-original:palm.form.five_elements",
+      "pass": true,
+      "detail": "木形宜長直。金形宜方正。水形宜圓短。土形宜敦厚。火形宜尖露。"
+    },
+    {
+      "id": "claim-normalized:palm.form.five_elements",
+      "pass": true,
+      "detail": "《公笃相法》手掌图说给出木长直、金方正、水圆短、土敦厚、火尖露的五形分类。"
+    },
+    {
+      "id": "claim-sources:palm.form.five_elements",
+      "pass": true,
+      "detail": [
+        "gdxfx-419831-p19-five-forms"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.form.five_elements:gdxfx-419831-p19-five-forms",
+      "pass": true,
+      "detail": "gdxfx-419831-p19-five-forms"
+    },
+    {
+      "id": "claim-runtime-policy:palm.form.five_elements",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.form.authorial_caution",
+      "pass": true,
+      "detail": "palm.form.authorial_caution"
+    },
+    {
+      "id": "claim-original:palm.form.authorial_caution",
+      "pass": true,
+      "detail": "餘於手掌相法，經驗甚少。乃枝葉小法。茲姑志之。其它末敢必其為貴賤也。"
+    },
+    {
+      "id": "claim-normalized:palm.form.authorial_caution",
+      "pass": true,
+      "detail": "《公笃相法》作者在同段明确说明手掌相法经验甚少，其他内容不敢据以断定贵贱。"
+    },
+    {
+      "id": "claim-sources:palm.form.authorial_caution",
+      "pass": true,
+      "detail": [
+        "gdxfx-419831-p19-five-forms"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.form.authorial_caution:gdxfx-419831-p19-five-forms",
+      "pass": true,
+      "detail": "gdxfx-419831-p19-five-forms"
+    },
+    {
+      "id": "claim-runtime-policy:palm.form.authorial_caution",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.square.thick_center",
+      "pass": true,
+      "detail": "palm.square.thick_center"
+    },
+    {
+      "id": "claim-original:palm.square.thick_center",
+      "pass": true,
+      "detail": "掌四方，厚中央。薄兼有深，法益仕宦，財食安樂。"
+    },
+    {
+      "id": "claim-normalized:palm.square.thick_center",
+      "pass": true,
+      "detail": "《许负相法》相手篇此处把掌四方、中央厚等形态与仕宦、财食安乐相联系。"
+    },
+    {
+      "id": "claim-sources:palm.square.thick_center",
+      "pass": true,
+      "detail": [
+        "xfxf-hand-ch11-square-palm"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.square.thick_center:xfxf-hand-ch11-square-palm",
+      "pass": true,
+      "detail": "xfxf-hand-ch11-square-palm"
+    },
+    {
+      "id": "claim-runtime-policy:palm.square.thick_center",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.xufu.textual_layer_caution",
+      "pass": true,
+      "detail": "palm.xufu.textual_layer_caution"
+    },
+    {
+      "id": "claim-original:palm.xufu.textual_layer_caution",
+      "pass": true,
+      "detail": "余誦其文，雖多後世增色。"
+    },
+    {
+      "id": "claim-normalized:palm.xufu.textual_layer_caution",
+      "pass": true,
+      "detail": "该本序言承认文本含有后世增饰，不能把全部内容无条件认定为汉代原作。"
+    },
+    {
+      "id": "claim-sources:palm.xufu.textual_layer_caution",
+      "pass": true,
+      "detail": [
+        "xfxf-preface-textual-caution"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.xufu.textual_layer_caution:xfxf-preface-textual-caution",
+      "pass": true,
+      "detail": "xfxf-preface-textual-caution"
+    },
+    {
+      "id": "claim-runtime-policy:palm.xufu.textual_layer_caution",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.three_stops.equal",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:18"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.three_stops.equal",
+      "pass": true,
+      "detail": "见证原文为“三停平等，一生衣禄无亏”；旧文扩大成笼统的运势平稳，产品应显示原文或明确标注转述。"
+    },
+    {
+      "id": "adjudication-runtime-source:compendium.face.three_stops.equal",
+      "pass": true,
+      "detail": [
+        "face.three_stops.equal"
+      ]
+    },
+    {
+      "id": "adjudication-locator:compendium.face.three_stops.upper",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:19"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.three_stops.upper",
+      "pass": true,
+      "detail": "本轮定位的《神相全编》写作“上停长少年忙”，未支持少年得志、学业佳及中晚年平淡。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.three_stops.upper",
+      "pass": true,
+      "detail": "conflicts_with_located_witness"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.three_stops.middle",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:20"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.three_stops.middle",
+      "pass": true,
+      "detail": "已定位见证仅作“中停长福禄昌”，不支持具体人格、事业阶段和自主能力扩写。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.three_stops.middle",
+      "pass": true,
+      "detail": "modern_extrapolation_not_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.three_stops.lower",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:21"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.three_stops.lower",
+      "pass": true,
+      "detail": "“下停长老吉祥”只近似支持晚年吉祥；子女孝顺和物质丰足尚未在本轮见证中定位。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.three_stops.lower",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.five_mountains.locations",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:27-31"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.five_mountains.locations",
+      "pass": true,
+      "detail": "《神相全编》支持五岳的身体位置，但本轮见证未支持旧表为每一岳配置的现代主管事项。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.five_mountains.locations",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.five_mountains.fortune",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:33-34"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.five_mountains.fortune",
+      "pass": true,
+      "detail": "“五岳俱朝，贵压朝班，亦且钱财自旺”支持总体富贵关联，但不支持旧文的“一生”绝对化及逐岳事务损失模型。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.five_mountains.fortune",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.five_element_shapes",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:39-45"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.five_element_shapes",
+      "pass": true,
+      "detail": "《神相全编》有金方正、木瘦直、水圆厚、火丰锐、土敦厚的五形描述；旧表中的每个细节仍需逐项校勘。"
+    },
+    {
+      "id": "adjudication-runtime-source:compendium.face.five_element_shapes",
+      "pass": true,
+      "detail": [
+        "face.five_elements.forms"
+      ]
+    },
+    {
+      "id": "adjudication-locator:compendium.face.five_element_personality",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:40-44"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.five_element_personality",
+      "pass": true,
+      "detail": "《神相全编》确有刚毅、文章、见机等五形关联，但与旧表整组现代性格词并不逐项相同，不能直接视为原典转述。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.five_element_personality",
+      "pass": true,
+      "detail": "partly_supported_with_different_wording"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.five_element_careers",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:40-44"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.five_element_careers",
+      "pass": true,
+      "detail": "本轮典籍见证未支持这组现代职业映射。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.five_element_careers",
+      "pass": true,
+      "detail": "modern_extrapolation_not_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.five_element_shapes",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:11-17"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.five_element_shapes",
+      "pass": true,
+      "detail": "《公笃相法》手掌图说有对应五形描述，但属于较晚传统解释，且作者在同段自陈经验甚少。"
+    },
+    {
+      "id": "adjudication-runtime-source:compendium.palm.five_element_shapes",
+      "pass": true,
+      "detail": [
+        "palm.form.five_elements"
+      ]
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.five_element_personality",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:11-17"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.five_element_personality",
+      "pass": true,
+      "detail": "已定位的五形见证支持形态分类，不支持旧表中的整组现代性格词。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.five_element_personality",
+      "pass": true,
+      "detail": "source_not_yet_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.finger_gaps_wealth",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:219-220"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.finger_gaps_wealth",
+      "pass": true,
+      "detail": "本轮见证提到指罅疏，但没有定位到这组二分式理财结论。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.finger_gaps_wealth",
+      "pass": true,
+      "detail": "source_not_yet_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.left_right_hands",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:229-236"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.left_right_hands",
+      "pass": true,
+      "detail": "旧文混合“传统说法”和“现代手相学”，但没有给出两者各自版本与出处。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.left_right_hands",
+      "pass": true,
+      "detail": "source_not_yet_located"
+    },
+    {
+      "id": "raw-preserved:database/xuanxue/compendium-new/10-xiangshu/01-mianxiang.md",
+      "pass": true,
+      "detail": "03a42815427be252bf091f0dfbaa3f3295a08e7f36add725671927a631fb3569"
+    },
+    {
+      "id": "raw-preserved:database/xuanxue/compendium-new/10-xiangshu/02-shouxiang.md",
+      "pass": true,
+      "detail": "48158daf73299a27fd8efb7fb7c08acf4b2428705e6bb281420d4601b0deadf9"
+    }
+  ]
+}

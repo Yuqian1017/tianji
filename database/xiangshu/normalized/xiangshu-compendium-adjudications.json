@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "doctrine": "classical_source_first",
+  "scope": "Initial high-impact adjudication sample; not a full adjudication of both compendium files.",
+  "items": [
+    {
+      "id": "compendium.face.three_stops.equal",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:18",
+      "rawText": "三停均匀：一生运势平稳",
+      "status": "close_paraphrase",
+      "canonicalClaimIds": ["face.three_stops.equal"],
+      "reason": "见证原文为“三停平等，一生衣禄无亏”；旧文扩大成笼统的运势平稳，产品应显示原文或明确标注转述。",
+      "runtimeEligible": true
+    },
+    {
+      "id": "compendium.face.three_stops.upper",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:19",
+      "rawText": "上停长：少年得志·学业佳·但中晚年可能平淡",
+      "status": "conflicts_with_located_witness",
+      "canonicalClaimIds": [],
+      "reason": "本轮定位的《神相全编》写作“上停长少年忙”，未支持少年得志、学业佳及中晚年平淡。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.three_stops.middle",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:20",
+      "rawText": "中停长：事业心强·中年发力·自主能力强",
+      "status": "modern_extrapolation_not_located",
+      "canonicalClaimIds": [],
+      "reason": "已定位见证仅作“中停长福禄昌”，不支持具体人格、事业阶段和自主能力扩写。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.three_stops.lower",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:21",
+      "rawText": "下停长：晚年有福·子女孝顺·物质丰足",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": [],
+      "reason": "“下停长老吉祥”只近似支持晚年吉祥；子女孝顺和物质丰足尚未在本轮见证中定位。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.five_mountains.locations",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:27-31",
+      "rawText": "五岳位置及社交、权力、名声、根基、财运等逐岳主管",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": [],
+      "reason": "《神相全编》支持五岳的身体位置，但本轮见证未支持旧表为每一岳配置的现代主管事项。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.five_mountains.fortune",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:33-34",
+      "rawText": "五岳丰隆：一生富贵；某岳凹陷/偏斜：对应方面运势受损",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": [],
+      "reason": "“五岳俱朝，贵压朝班，亦且钱财自旺”支持总体富贵关联，但不支持旧文的“一生”绝对化及逐岳事务损失模型。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.five_element_shapes",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:39-45",
+      "rawText": "金方、木长瘦、水圆厚、火尖锐、土敦厚的五行面型",
+      "status": "supported_traditional_summary",
+      "canonicalClaimIds": ["face.five_elements.forms"],
+      "reason": "《神相全编》有金方正、木瘦直、水圆厚、火丰锐、土敦厚的五形描述；旧表中的每个细节仍需逐项校勘。",
+      "runtimeEligible": true
+    },
+    {
+      "id": "compendium.face.five_element_personality",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:40-44",
+      "rawText": "五行面型对应果断、仁慈、智慧、热情、稳重等性格",
+      "status": "partly_supported_with_different_wording",
+      "canonicalClaimIds": [],
+      "reason": "《神相全编》确有刚毅、文章、见机等五形关联，但与旧表整组现代性格词并不逐项相同，不能直接视为原典转述。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.five_element_careers",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:40-44",
+      "rawText": "五行面型对应金融、军警、文教、科技、地产等现代行业",
+      "status": "modern_extrapolation_not_located",
+      "canonicalClaimIds": [],
+      "reason": "本轮典籍见证未支持这组现代职业映射。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.five_element_shapes",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:11-17",
+      "rawText": "金方、木长、水圆、火尖、土厚的五行手型",
+      "status": "supported_traditional_summary",
+      "canonicalClaimIds": ["palm.form.five_elements"],
+      "reason": "《公笃相法》手掌图说有对应五形描述，但属于较晚传统解释，且作者在同段自陈经验甚少。",
+      "runtimeEligible": true
+    },
+    {
+      "id": "compendium.palm.five_element_personality",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:11-17",
+      "rawText": "五行手型对应实际、理想、聪明、热情、务实等性格",
+      "status": "source_not_yet_located",
+      "canonicalClaimIds": [],
+      "reason": "已定位的五形见证支持形态分类，不支持旧表中的整组现代性格词。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.finger_gaps_wealth",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:219-220",
+      "rawText": "无缝隙善于理财；有缝隙花钱大方、存不住钱",
+      "status": "source_not_yet_located",
+      "canonicalClaimIds": [],
+      "reason": "本轮见证提到指罅疏，但没有定位到这组二分式理财结论。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.left_right_hands",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:229-236",
+      "rawText": "男左女右、常用手看后天、非常用手看先天",
+      "status": "source_not_yet_located",
+      "canonicalClaimIds": [],
+      "reason": "旧文混合“传统说法”和“现代手相学”，但没有给出两者各自版本与出处。",
+      "runtimeEligible": false
+    }
+  ]
+}

@@ -21,7 +21,8 @@
     "test:wuyun": "node --test test/wuyun/*.test.mjs",
     "test:ziwu": "node --test test/ziwu/*.test.mjs",
     "test:shared": "node --test test/shared/*.test.mjs",
-    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs test/yijing/*.test.mjs test/ziwei/*.test.mjs test/qimen/*.test.mjs test/fengshui/*.test.mjs test/tcm/*.test.mjs test/wuyun/*.test.mjs test/ziwu/*.test.mjs test/shared/*.test.mjs",
+    "test:xiangshu": "node --test test/xiangshu/*.test.mjs",
+    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs test/yijing/*.test.mjs test/ziwei/*.test.mjs test/qimen/*.test.mjs test/fengshui/*.test.mjs test/tcm/*.test.mjs test/wuyun/*.test.mjs test/ziwu/*.test.mjs test/shared/*.test.mjs test/xiangshu/*.test.mjs",
     "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
     "audit:liuyao": "node scripts/validation/audit-liuyao.mjs",
@@ -62,6 +63,8 @@
     "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",
     "audit:ziwu": "node scripts/validation/audit-ziwu.mjs",
     "audit:shared-time": "node scripts/validation/audit-shared-time-cities.mjs",
+    "build:xiangshu-inventory": "node scripts/validation/build-xiangshu-raw-inventory.mjs",
+    "audit:xiangshu-sources": "npm run build:xiangshu-inventory && node scripts/validation/audit-xiangshu-classical-sources.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview"
   },

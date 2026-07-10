@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "doctrine": "classical_source_first",
+  "claims": [
+    {
+      "id": "face.three_stops.definition",
+      "domain": "face",
+      "topic": "three_stops",
+      "originalText": "三停者，額門，准頭，地角，此面部三停也。",
+      "normalizedClaim": "该见证以额门、准头、地角划分面部三停。",
+      "sourceRefIds": ["sxqb-905153-p14-three-stops"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.three_stops.equal",
+      "domain": "face",
+      "topic": "three_stops",
+      "originalText": "三停平等，一生衣祿無虧。",
+      "normalizedClaim": "《神相全编》此处把三停平等与一生衣禄无亏相联系。",
+      "sourceRefIds": ["sxqb-905153-p14-three-stops"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.three_stops.upper_long",
+      "domain": "face",
+      "topic": "three_stops",
+      "originalText": "上停長少年忙。",
+      "normalizedClaim": "《神相全编》此处记上停长为“少年忙”。",
+      "sourceRefIds": ["sxqb-905153-p14-three-stops"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.three_stops.middle_long",
+      "domain": "face",
+      "topic": "three_stops",
+      "originalText": "中停長福祿昌。",
+      "normalizedClaim": "《神相全编》此处把中停长与福禄昌相联系。",
+      "sourceRefIds": ["sxqb-905153-p14-three-stops"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.three_stops.lower_long",
+      "domain": "face",
+      "topic": "three_stops",
+      "originalText": "下停長老吉祥。",
+      "normalizedClaim": "《神相全编》此处把下停长与年老吉祥相联系。",
+      "sourceRefIds": ["sxqb-905153-p14-three-stops"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.three_stops.no_single_factor",
+      "domain": "face",
+      "topic": "three_stops",
+      "originalText": "可照流年部位氣色而推，不可一體而斷。",
+      "normalizedClaim": "该见证自身提醒不能只凭单一形态一概而断。",
+      "sourceRefIds": ["sxqb-905153-p14-three-stops"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.five_mountains.locations",
+      "domain": "face",
+      "topic": "five_mountains",
+      "originalText": "左顴為東嶽，額為南嶽，右顴為西嶽，地閣為北嶽，土星為中嶽。",
+      "normalizedClaim": "《神相全编》此处把左颧、额、右颧、地阁和鼻分别称为东、南、西、北、中岳。",
+      "sourceRefIds": ["sxqb-905153-p14-five-mountains"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.five_mountains.traditional_association",
+      "domain": "face",
+      "topic": "five_mountains",
+      "originalText": "五嶽俱朝，貴壓朝班，亦且錢財自旺。",
+      "normalizedClaim": "《神相全编》把“五岳俱朝”与贵、财旺相联系。",
+      "sourceRefIds": ["sxqb-905153-p14-five-mountains"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.five_elements.forms",
+      "domain": "face",
+      "topic": "five_element_face_forms",
+      "originalText": "金形方正色潔白，木形瘦直骨節堅，水形圓厚重而黑，火形豐銳赤焦燥，土形敦厚色黃光。",
+      "normalizedClaim": "《神相全编》以方正、瘦直、圆厚、丰锐、敦厚等形态描述金木水火土五形。",
+      "sourceRefIds": ["sxqb-905153-p50-five-element-forms"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.five_elements.traditional_associations",
+      "domain": "face",
+      "topic": "five_element_face_forms",
+      "originalText": "金得金剛毅深，木得木資財足，水得水文章貴，火得火見機果，土得土厚豐庫。",
+      "normalizedClaim": "《神相全编》此段分别把五形与刚毅、资财、文章、见机、丰库等传统判断相联系。",
+      "sourceRefIds": ["sxqb-905153-p29-five-elements"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.bagua.locations",
+      "domain": "palm",
+      "topic": "palm_bagua",
+      "originalText": "掌有八卦，而最緊要在巽、離、坤三宮。",
+      "normalizedClaim": "《神相铁关刀》相掌秘诀以八卦分掌，并特别提出巽、离、坤三宫。",
+      "sourceRefIds": ["sxtgd-351787-p22-bagua"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.bagua.traditional_associations",
+      "domain": "palm",
+      "topic": "palm_bagua",
+      "originalText": "巽主財帛，離主功名，坤主子嗣。",
+      "normalizedClaim": "该见证分别把巽、离、坤三宫与财帛、功名、子嗣相联系。",
+      "sourceRefIds": ["sxtgd-351787-p22-bagua"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.size.traditional_association",
+      "domain": "palm",
+      "topic": "palm_form",
+      "originalText": "掌小者貴，掌大者勞。",
+      "normalizedClaim": "《神相铁关刀》此处把掌小与贵、掌大与劳相联系。",
+      "sourceRefIds": ["sxtgd-351787-p23-palm-form"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.lines.direction_associations",
+      "domain": "palm",
+      "topic": "palm_lines",
+      "originalText": "直紋多，人必聰明；橫紋多，人必心紛。",
+      "normalizedClaim": "《神相铁关刀》此处把直纹多与聪明、横纹多与心纷相联系。",
+      "sourceRefIds": ["sxtgd-351787-p24-lines"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.form.five_elements",
+      "domain": "palm",
+      "topic": "five_element_hand_forms",
+      "originalText": "木形宜長直。金形宜方正。水形宜圓短。土形宜敦厚。火形宜尖露。",
+      "normalizedClaim": "《公笃相法》手掌图说给出木长直、金方正、水圆短、土敦厚、火尖露的五形分类。",
+      "sourceRefIds": ["gdxfx-419831-p19-five-forms"],
+      "interpretationStatus": "exact_later_commentary_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.form.authorial_caution",
+      "domain": "palm",
+      "topic": "source_criticism",
+      "originalText": "餘於手掌相法，經驗甚少。乃枝葉小法。茲姑志之。其它末敢必其為貴賤也。",
+      "normalizedClaim": "《公笃相法》作者在同段明确说明手掌相法经验甚少，其他内容不敢据以断定贵贱。",
+      "sourceRefIds": ["gdxfx-419831-p19-five-forms"],
+      "interpretationStatus": "exact_authorial_caution",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.square.thick_center",
+      "domain": "palm",
+      "topic": "palm_form",
+      "originalText": "掌四方，厚中央。薄兼有深，法益仕宦，財食安樂。",
+      "normalizedClaim": "《许负相法》相手篇此处把掌四方、中央厚等形态与仕宦、财食安乐相联系。",
+      "sourceRefIds": ["xfxf-hand-ch11-square-palm"],
+      "interpretationStatus": "exact_witness_attribution_disputed",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.xufu.textual_layer_caution",
+      "domain": "palm",
+      "topic": "source_criticism",
+      "originalText": "余誦其文，雖多後世增色。",
+      "normalizedClaim": "该本序言承认文本含有后世增饰，不能把全部内容无条件认定为汉代原作。",
+      "sourceRefIds": ["xfxf-preface-textual-caution"],
+      "interpretationStatus": "exact_preface_caution",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    }
+  ]
+}

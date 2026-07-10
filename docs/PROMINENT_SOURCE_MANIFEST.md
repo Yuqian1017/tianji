@@ -277,6 +277,48 @@
 | 本轮证据 | 9 运 x 24 山共 216 张盘、6,048 个运/山/向盘与结构标签字段 0 mismatch；tyme4ts 后端对 2020-2026 共 10,228 时刻的太阳年、流年中宫与流月中宫 30,684 字段 0 mismatch |
 | 边界 | 第二实现发布较新，只作为独立复算证据；不能验证星性、组合断语、形煞、化解或现实效果 |
 
+### SRC-VAL-XIANGSHU-SHENXIANG-QUANBIAN
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《神相全编》致和堂藏板明刊本见证 |
+| 状态 | `classical_text_with_scan_witness`；首批相术典籍核心 |
+| 版本线索 | 题宋陈抟秘传、明袁忠彻订正；书格著录为十二卷首一卷、致和堂藏板明刊本 |
+| 影印见证 | `https://old.shuge.org/ebook/shen-xiang-quan-bian/` |
+| 可搜索转录 | `https://ctext.org/wiki.pl?chapter=905153&if=en`，CTP URN `ctp:ws905153` |
+| 已固定内容 | 三停原文与“不可一体而断”；掌有八卦及部分掌形/掌纹传统判断 |
+| 归属边界 | 书名页传统题署不等于宋代作者身份已被现代版本学确认；关键条目仍需与影印页逐页复核 |
+
+### SRC-VAL-XIANGSHU-TIEGUANDAO
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《神相铁关刀》卷三相掌秘诀 |
+| 状态 | `classical_text_transcription_candidate`；作者、年代与底本待进一步版本学核定 |
+| 可搜索转录 | `https://ctext.org/wiki.pl?chapter=351787&if=en` |
+| 已固定内容 | 巽离坤三宫传统关联、掌形与掌纹断语、身面掌相配原则 |
+| 边界 | 当前只固定短摘录和行定位，影印本尚未绑定；不把转录无误或传统预测效力视为已证明 |
+
+### SRC-VAL-XIANGSHU-XUFU
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《许负相法》相手篇第十一 |
+| 状态 | `classical_text_with_scan_witness`；传统题汉许负，文本层次有明确争议 |
+| 影印/转录 | `https://zh.wikisource.org/wiki/File:許負相法.pdf`；`https://zh.wikisource.org/wiki/許負相法/相手篇第十一`；CText chapter `897562` |
+| 已固定内容 | “掌四方，厚中央”等相手条目 |
+| 内部校勘提示 | 该本序言自己写“虽多后世增色”，所以“现存文本有此句”和“该句确为汉许负原作”必须分开记录 |
+
+### SRC-VAL-XIANGSHU-GONGDU
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《公笃相法》上篇卷一手掌图说 |
+| 状态 | `later_traditional_commentary`；不是古代早期原典替代品 |
+| 可搜索转录 | `https://ctext.org/wiki.pl?chapter=419831&if=en` |
+| 已固定内容 | 木长直、金方正、水圆短、土敦厚、火尖露的五形手分类 |
+| 作者自限 | 同段明确写手掌相法“经验甚少”且“其它末敢必其为贵贱”；该保留意见与规则本身同时入库 |
+
 ### SRC-VAL-TCM-OFFICIAL-SAFETY
 
 | 字段 | 值 |
@@ -635,7 +677,8 @@
 |---|---|---|---|
 | 当前产品定义 | `docs/PRD.md` | 历史 `APP-SPEC*` 与 `GAME-DESIGN.md` | 旧规格提供证据和设计资产，不覆盖新 PRD 决策 |
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
-| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、药典/监管与 106 项食药目录快照 | Skill 补广度和安全候选；法定毒性与食药目录分别以对应 core 为准；药典、妊娠/配伍、方剂和食疗用法可审计但不得直接消费 |
+| 相术规范知识 | `database/xiangshu/` 中逐条 source-pinned core | `compendium-new/10-xiangshu/` 与当前 runtime | compendium 保留 raw；有典籍见证的传统判断可进入文化层，无出处或冲突扩写保持候选/blocked |
+| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、医经/本草/方书、药典/监管与 106 项食药目录快照 | Skill 补广度；传统内容由典籍与版本见证授证，现代药典/监管只授证现行身份、安全和使用边界 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
 | 未来规范数据库 | 逐域建立；周易、紫微、奇门、风水、五运、子午、TCM 安全与共享城市已有规范核心 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 
@@ -653,6 +696,11 @@ source_refs:
     file: 02-liuyao/03-yongshen.md
     locator: heading-or-line-anchor
     relation: supports | supplements | conflicts | derived_from
+source_type: classical_text_witness | later_commentary | modern_textbook | regulatory | runtime_legacy
+original_text: 见证原文
+normalized_claim: 与原文分开的现代整理
+attribution_status: established | traditional | disputed | unresolved
+witness_status: scan_verified | transcription_located | scan_crosscheck_pending
 review_status: raw | normalized | reviewed | accepted | deprecated
 review_basis: 校勘依据与决定
 license_status: known | restricted | unknown
@@ -679,7 +727,7 @@ escalation: self_care | clinician | urgent | emergency
 1. 不修改 raw source 来消灭冲突。
 2. 同一事实出现不同说法时，保留多条 source_ref 和 `conflicts` 关系。
 3. 计算算法以回归用例、清晰派别和版本记录决定采用项。
-4. 中医现代用量、毒性和禁忌不从古籍原文直接进入产品通道。
+4. 中医古籍原文完整保存在文化知识层；现代用量、毒性、禁忌和现实使用资格不从古籍直接继承，另接药典、监管和现代安全证据。
 5. 当前代码与来源不一致时，分别记录“运行时现状”和“候选修正”，不静默覆盖。
 6. `vision-api` 副本与 canonical 相同的内容只计一次来源，避免制造虚假的交叉印证。
 
@@ -696,7 +744,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 50 个 reference 已全部进入完整 inventory，106 项食药目录身份与 180 个显式附方实体已裁决，八个候选层及全部具体用法继续 blocked；保留 2 个附方来源计数缺口，并取得适用现行药典、逐药逐方和逐穴定位正文。
-3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
+2. 以医经、本草、方书和医家版本为核心，逐方、逐药、逐理论条目建立原文见证；现行药典、逐穴正文和监管资料作为现代边界层并行核验。
+3. 相术两份 Markdown 的 386 条非空行已全部入 inventory，31 条已进入首批裁决、255 条待找出处；首批 4 个见证、11 段短摘录、18 条条目和 13 条旧文裁决已完成，继续把 CText 定位与影印页复核。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。
