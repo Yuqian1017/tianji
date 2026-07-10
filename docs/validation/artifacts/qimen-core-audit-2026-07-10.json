@@ -1,0 +1,122 @@
+{
+  "audit": "qimen_core",
+  "generatedAt": "2026-07-10",
+  "result": "pass",
+  "scope": {
+    "years": [
+      2020,
+      2024
+    ],
+    "hoursPerDay": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      23
+    ],
+    "minute": 30,
+    "charts": 23751,
+    "checks": 1900230
+  },
+  "normalizedCore": {
+    "path": "database/qimen/qimen-core.json",
+    "sha256": "9a90a84dcd93b0d15d1a522f700992afe0e1464c211e6b00b26b541c9e108a0e"
+  },
+  "sourceRefs": {
+    "data": {
+      "path": "src/modules/qimen/data.js",
+      "sha256": "2c07dcff55cd04543e36c660c23a91e01eac5976726dc36ed654495f6990c604"
+    },
+    "engine": {
+      "path": "src/modules/qimen/engine.js",
+      "sha256": "12493b09654e0cb506cd608415a1cfa32d3724b26abe695b39743bb59b2856ba"
+    },
+    "algorithm": {
+      "path": "database/xuanxue/compendium-new/reference/qimen-algorithm.md",
+      "sha256": "b8041b714d50a0be067729998c79294a4784adb7b0c0e03468a2b2aeaecf831d"
+    },
+    "overview": {
+      "path": "database/xuanxue/compendium-new/06-qimen/01-qimen.md",
+      "sha256": "55213f330333ae6551787710364ede549785981402121aa5c21dff55eea345e5"
+    },
+    "cases": {
+      "path": "database/xuanxue/compendium-new/06-qimen/02-zhifu-zhishi-cases.md",
+      "sha256": "53c78be096d6839c03695ee11509a1ef5f9bf0f1e2f1db8e2f186a9fe1694c6e"
+    }
+  },
+  "summary": {
+    "checks": 1900230,
+    "failures": 0,
+    "categories": {
+      "inventory": {
+        "checks": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "finite_tables": {
+        "checks": 7,
+        "passed": 7,
+        "failed": 0
+      },
+      "xun": {
+        "checks": 60,
+        "passed": 60,
+        "failed": 0
+      },
+      "yuan": {
+        "checks": 60,
+        "passed": 60,
+        "failed": 0
+      },
+      "earth_plate": {
+        "checks": 213777,
+        "passed": 213777,
+        "failed": 0
+      },
+      "chart_core": {
+        "checks": 285012,
+        "passed": 285012,
+        "failed": 0
+      },
+      "duty": {
+        "checks": 118755,
+        "passed": 118755,
+        "failed": 0
+      },
+      "heaven_plate": {
+        "checks": 427518,
+        "passed": 427518,
+        "failed": 0
+      },
+      "human_plate": {
+        "checks": 213759,
+        "passed": 213759,
+        "failed": 0
+      },
+      "deity_plate": {
+        "checks": 213759,
+        "passed": 213759,
+        "failed": 0
+      },
+      "tianqin_lodging": {
+        "checks": 427518,
+        "passed": 427518,
+        "failed": 0
+      }
+    }
+  },
+  "boundaries": [
+    "This audit validates the declared ChaiBu turntable calculation model, not all Qimen schools.",
+    "Calendar expectations independently call lunar-javascript with sect=1; external calendar diversity is covered by secondary audits.",
+    "Traditional interpretation and predictive claims are excluded."
+  ],
+  "examples": []
+}

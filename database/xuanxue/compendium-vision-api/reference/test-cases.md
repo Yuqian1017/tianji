@@ -1,5 +1,7 @@
 # 排盘算法验证用例
 
+> **LEGACY / NON-CANONICAL（2026-07-10）**：本副本的奇门用例仍含旧错误地盘。奇门规范 fixture 见 `database/xuanxue/compendium-new/reference/test-cases.md` 和 `test/qimen/qimen-core.test.mjs`。
+
 > 用于验证各术数排盘算法的正确性。每个用例包含输入和预期输出。
 
 ---

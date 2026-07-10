@@ -1,0 +1,58 @@
+{
+  "audit": "qimen_tertiary_kinqimen_shared_conventions",
+  "generatedAt": "2026-07-10",
+  "result": "pass_shared_conventions",
+  "tertiaryImplementation": {
+    "package": "kinqimen@0.3.1",
+    "license": "GPL-3.0-only",
+    "relevantSourceSha256": "eeb5dc735ef997e971dede2cdd5b66e63c5726df11efa19a48982fa1ecad457c"
+  },
+  "summary": {
+    "charts": 4758,
+    "fields": 189789,
+    "mismatches": 0,
+    "exclusions": {
+      "dutyStarCenterPosition": 531,
+      "dutyDoorAlgorithmCharts": 4758,
+      "dutyDoorAlgorithmFields": 42822
+    },
+    "categories": {
+      "calendar": {
+        "fields": 4758,
+        "mismatches": 0
+      },
+      "core": {
+        "fields": 9516,
+        "mismatches": 0
+      },
+      "duty": {
+        "fields": 13743,
+        "mismatches": 0
+      },
+      "earth_plate": {
+        "fields": 42822,
+        "mismatches": 0
+      },
+      "heaven_plate": {
+        "fields": 42822,
+        "mismatches": 0
+      },
+      "star_plate": {
+        "fields": 38064,
+        "mismatches": 0
+      },
+      "deity_plate": {
+        "fields": 38064,
+        "mismatches": 0
+      }
+    }
+  },
+  "boundaries": [
+    "kinqimen indexes its duty-door table by hour-stem index; this differs from the declared xun-step duty-door algorithm used by the project and 3meta.",
+    "All duty-door destinations and gate-plate fields are therefore excluded, counted, and not treated as agreement.",
+    "kinqimen also reports center duty-star destinations as center; those positions are excluded and counted.",
+    "All shared-convention fields must match with zero mismatches for this artifact to pass.",
+    "The GPL package remains isolated and is not a product dependency."
+  ],
+  "examples": []
+}

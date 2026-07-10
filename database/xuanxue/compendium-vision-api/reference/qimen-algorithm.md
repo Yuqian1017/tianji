@@ -1,5 +1,7 @@
 # 奇门遁甲排盘算法规格
 
+> **LEGACY / NON-CANONICAL（2026-07-10）**：此近似副本保留旧实现证据，其中三元、地盘和值使代码已知错误。不要用于实现或教学答案；规范入口为 `database/xuanxue/compendium-new/reference/qimen-algorithm.md` 和 `database/qimen/qimen-core.json`。
+
 > ⚠️ **CC注意**：奇门排盘涉及阴阳遁判断、三元确定、局数查表、四盘排布，每一步都可能出错。建议在产品A的Phase A3最后再做。值符值使算法的补完在 06-qimen/02-zhifu-zhishi-cases.md。
 
 > 纯技术参考。以拆补法·转盘为基准。

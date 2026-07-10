@@ -1,0 +1,289 @@
+{
+  "audit": "qimen_secondary_3meta",
+  "generatedAt": "2026-07-10",
+  "result": "pass_core_with_known_lichun_year_boundary_variance",
+  "secondaryImplementation": {
+    "package": "3meta@2.6.0",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/3metaJun/3meta.git"
+    },
+    "relevantSourceSha256": "744fb9db78a2629da9d886f11c5e7912b2dfcb0f70fd56d5a76ff2678fbfce1f"
+  },
+  "environment": {
+    "TZ": "Asia/Shanghai"
+  },
+  "summary": {
+    "charts": 23751,
+    "fields": 1377558,
+    "mismatches": 38,
+    "unexpectedMismatches": 0,
+    "categories": {
+      "calendar": {
+        "fields": 118755,
+        "mismatches": 38
+      },
+      "core": {
+        "fields": 95004,
+        "mismatches": 0
+      },
+      "duty": {
+        "fields": 95004,
+        "mismatches": 0
+      },
+      "earth_plate": {
+        "fields": 213759,
+        "mismatches": 0
+      },
+      "heaven_plate": {
+        "fields": 427518,
+        "mismatches": 0
+      },
+      "human_plate": {
+        "fields": 213759,
+        "mismatches": 0
+      },
+      "deity_plate": {
+        "fields": 213759,
+        "mismatches": 0
+      }
+    }
+  },
+  "boundaries": [
+    "3meta is an independent implementation, not evidence for predictive interpretation.",
+    "Comparison fixes Asia/Shanghai because 3meta/dayjs normalizes nonexistent host-DST wall times.",
+    "3meta switches the year pillar for the whole Lichun civil day; the project uses the exact Lichun moment. These year-only differences are counted but are not Qimen-core failures.",
+    "Array-valued center-lodging fields compare their primary stem/star; the declared Tianqin lodging is separately tested internally."
+  ],
+  "examples": [
+    {
+      "category": "calendar",
+      "id": "2020-2-4 0:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 2:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 4:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 6:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 8:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 10:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 12:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 14:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2020-2-4 16:30/year",
+      "actual": "己亥",
+      "expected": "庚子"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 0:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 2:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 4:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 6:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 8:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 10:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 12:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 14:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 16:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 18:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 20:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2021-2-3 22:30/year",
+      "actual": "庚子",
+      "expected": "辛丑"
+    },
+    {
+      "category": "calendar",
+      "id": "2022-2-4 0:30/year",
+      "actual": "辛丑",
+      "expected": "壬寅"
+    },
+    {
+      "category": "calendar",
+      "id": "2022-2-4 2:30/year",
+      "actual": "辛丑",
+      "expected": "壬寅"
+    },
+    {
+      "category": "calendar",
+      "id": "2022-2-4 4:30/year",
+      "actual": "辛丑",
+      "expected": "壬寅"
+    },
+    {
+      "category": "calendar",
+      "id": "2023-2-4 0:30/year",
+      "actual": "壬寅",
+      "expected": "癸卯"
+    },
+    {
+      "category": "calendar",
+      "id": "2023-2-4 2:30/year",
+      "actual": "壬寅",
+      "expected": "癸卯"
+    },
+    {
+      "category": "calendar",
+      "id": "2023-2-4 4:30/year",
+      "actual": "壬寅",
+      "expected": "癸卯"
+    },
+    {
+      "category": "calendar",
+      "id": "2023-2-4 6:30/year",
+      "actual": "壬寅",
+      "expected": "癸卯"
+    },
+    {
+      "category": "calendar",
+      "id": "2023-2-4 8:30/year",
+      "actual": "壬寅",
+      "expected": "癸卯"
+    },
+    {
+      "category": "calendar",
+      "id": "2023-2-4 10:30/year",
+      "actual": "壬寅",
+      "expected": "癸卯"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 0:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 2:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 4:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 6:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 8:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 10:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 12:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    },
+    {
+      "category": "calendar",
+      "id": "2024-2-4 14:30/year",
+      "actual": "癸卯",
+      "expected": "甲辰"
+    }
+  ]
+}

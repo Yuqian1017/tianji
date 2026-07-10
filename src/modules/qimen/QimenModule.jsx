@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { paiQimen, formatForAI } from './engine.js';
 import { JIUGONG, JIUXING, BAMEN, WUXING_COLORS, WUXING_CN, SANQI, SHICHEN } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
@@ -24,19 +24,9 @@ function CalculatingAnimation() {
 function GongCell({ gong, isCenter, isDayGan, onClickGong }) {
   if (!gong) return null;
 
-  const starInfo = JIUXING.find(s => s.name === gong.star);
-  const gateInfo = BAMEN.find(g => g.name === gong.gate);
   const gongInfo = JIUGONG.find(g => g.num === gong.num);
 
   const isSanqi = SANQI[gong.tianGan];
-
-  // 吉凶色标
-  const starJx = starInfo?.jixiong;
-  const gateJx = gateInfo?.jixiong;
-  const starColor = starJx === '吉' ? 'text-[var(--color-wx-wood)]' :
-    starJx === '凶' ? 'text-[var(--color-cinnabar)]' : 'text-[var(--color-text-dim)]';
-  const gateColor = gateJx === '吉' ? 'text-[var(--color-wx-wood)]' :
-    gateJx === '凶' ? 'text-[var(--color-cinnabar)]' : 'text-[var(--color-text-dim)]';
 
   if (isCenter) {
     return (
@@ -81,14 +71,14 @@ function GongCell({ gong, isCenter, isDayGan, onClickGong }) {
 
       {/* 九星 */}
       {gong.star && (
-        <div className={`text-xs font-body ${starColor}`}>
-          {gong.star}
+        <div className="text-xs font-body text-[var(--color-text-dim)]">
+          {gong.star}{gong.lodgedStar ? `·${gong.lodgedStar}` : ''}
         </div>
       )}
 
       {/* 八门 */}
       {gong.gate && (
-        <div className={`text-xs font-body ${gateColor}`}>
+        <div className="text-xs font-body text-[var(--color-text-dim)]">
           {gong.gate}
         </div>
       )}
@@ -165,9 +155,11 @@ function GongDetailModal({ gong, onClose }) {
               <div className="flex justify-between">
                 <span className="text-[var(--color-text-dim)]">九星</span>
                 <span>
-                  <span className="text-[var(--color-text)]">{starInfo.name}</span>
+                  <span className="text-[var(--color-text)]">
+                    {starInfo.name}{gong.lodgedStar ? `·${gong.lodgedStar}` : ''}
+                  </span>
                   <span className="text-[var(--color-text-dim)] text-xs ml-1">
-                    ({WUXING_CN[starInfo.wuxing]} · {starInfo.jixiong})
+                    ({WUXING_CN[starInfo.wuxing]})
                   </span>
                 </span>
               </div>
@@ -178,7 +170,7 @@ function GongDetailModal({ gong, onClose }) {
                 <span>
                   <span className="text-[var(--color-text)]">{gateInfo.name}</span>
                   <span className="text-[var(--color-text-dim)] text-xs ml-1">
-                    ({WUXING_CN[gateInfo.wuxing]} · {gateInfo.jixiong})
+                    ({WUXING_CN[gateInfo.wuxing]})
                   </span>
                 </span>
               </div>
@@ -214,6 +206,9 @@ function PanSummary({ result }) {
         <span className="text-[var(--color-text-dim)]">{meta.jieqi} · {meta.yuan}</span>
         <span className="text-[var(--color-text-dim)]">{meta.dayGZ}日 {meta.hourGZ}时</span>
       </div>
+      <div className="text-[10px] text-[var(--color-text-dim)] font-body">
+        排盘核心：已按声明流派验证 · 传统格局与 AI 解释：尚未验证
+      </div>
       <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-body">
         <span className="text-[var(--color-text)]">值符: <span className="text-[var(--color-gold)]">{zhifu}</span></span>
         <span className="text-[var(--color-text)]">值使: <span className="text-[var(--color-gold)]">{zhishi}</span></span>
@@ -226,11 +221,7 @@ function PanSummary({ result }) {
       {geju.length > 0 && (
         <div className="flex flex-wrap gap-1.5 pt-1">
           {geju.map((ge, i) => (
-            <span key={i} className={`text-[10px] px-1.5 py-0.5 rounded font-body ${
-              ge.type === 'ji'
-                ? 'bg-[var(--color-wx-wood-bg)] text-[var(--color-wx-wood)]'
-                : 'bg-[var(--color-error-bg)] text-[var(--color-cinnabar)]'
-            }`}>
+            <span key={i} className="text-[10px] px-1.5 py-0.5 rounded font-body bg-[var(--color-surface)] text-[var(--color-text-dim)] border border-[var(--color-surface-border)]">
               {ge.name}
             </span>
           ))}
@@ -242,22 +233,21 @@ function PanSummary({ result }) {
 
 // ===== 分析方向 =====
 const DETAIL_SECTIONS = [
-  { id: 'qiucai', label: '求财', prompt: '请从奇门盘面详细分析求财运：找戊(财)所在宫位分析财运好坏，生门状态，适合的求财方向和时机。' },
-  { id: 'shiye', label: '事业', prompt: '请详细分析此奇门盘的事业运：开门(官星)+丁(贵人)的状态，天心星位置，适合的职业方向。' },
-  { id: 'chuxing', label: '出行', prompt: '请分析此奇门盘的出行方位：哪个方位最吉(三吉门+三奇)，哪个方位应避开(凶门凶星)。' },
-  { id: 'ganqing', label: '感情', prompt: '请分析此奇门盘的感情婚姻：六合所在宫位，乙庚合的状态，有无桃花或阻碍。' },
-  { id: 'jiankang', label: '健康', prompt: '请分析此奇门盘的健康：天芮(病星)和天心(医星)的状态，需要注意的健康问题。' },
-  { id: 'susong', label: '诉讼', prompt: '请分析此奇门盘的官司诉讼：值符(法官)位置，日干和时干的对比，胜算如何。' },
+  { id: 'structure', label: '盘面结构', prompt: '请按已声明的拆补转盘口径，逐项说明本盘阴阳遁、局数、值符值使与四盘位置。只说明可由盘面直接读取的结构。' },
+  { id: 'symbols', label: '传统取象', prompt: '请说明本盘九星、八门、八神在传统文献中的象征含义，明确标注这是文化性解释，不作现实预测。' },
+  { id: 'patterns', label: '格局标签', prompt: '请列出程序标记的传统格局及其组合条件，并说明解释层尚未验证，不给出吉凶决策。' },
+  { id: 'method', label: '流派口径', prompt: '请解释拆补转盘、中五寄坤二、天禽随天芮这些口径如何影响本盘结果，并指出其他流派可能不同。' },
 ];
 
 // ===== 主组件 =====
-export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, activeHistoryId, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
+export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, setActiveHistoryId, pendingHistoryLoad, clearPendingHistoryLoad }) {
   // Input state
   const now = new Date();
   const [inputYear, setInputYear] = useState(now.getFullYear());
   const [inputMonth, setInputMonth] = useState(now.getMonth() + 1);
   const [inputDay, setInputDay] = useState(now.getDate());
   const [inputHour, setInputHour] = useState(now.getHours());
+  const [inputMinute, setInputMinute] = useState(now.getMinutes());
   const [question, setQuestion] = useState('');
   const [trueSolarEnabled, setTrueSolarEnabled] = useState(false);
   const [birthCity, setBirthCity] = useState(null);
@@ -289,10 +279,11 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
     clearPendingHistoryLoad();
 
     if (item.input) {
-      setInputYear(item.input.year || now.getFullYear());
+      setInputYear(item.input.year || new Date().getFullYear());
       setInputMonth(item.input.month || 1);
       setInputDay(item.input.day || 1);
       setInputHour(item.input.hour ?? 0);
+      setInputMinute(item.input.minute ?? 0);
     }
     setQuestion(item.question || '');
     setResult(item.result || null);
@@ -317,7 +308,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
     upsertHistory(id, question, {
       module: 'qimen',
       result,
-      input: result.input,
+      input: result.sourceInput || result.input,
     }, msgs);
   }, [result, question, upsertHistory, setActiveHistoryId]);
 
@@ -333,36 +324,58 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
 
     setTimeout(() => {
       try {
-        let adjYear = inputYear, adjMonth = inputMonth, adjDay = inputDay, adjHour = inputHour;
+        let adjYear = inputYear;
+        let adjMonth = inputMonth;
+        let adjDay = inputDay;
+        let adjHour = inputHour;
+        let adjMinute = inputMinute;
+        let solarOffset = null;
         if (trueSolarEnabled && birthCity) {
-          const offset = calcTrueSolarTimeOffset(
+          solarOffset = calcTrueSolarTimeOffset(
             birthCity.lng,
             birthCity.stdMeridian ?? 120,
-            { year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: 0 },
+            { year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: inputMinute },
           );
-          ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour } = adjustBirthTime(inputYear, inputMonth, inputDay, inputHour, 0, offset));
+          ({ year: adjYear, month: adjMonth, day: adjDay, hour: adjHour, minute: adjMinute } = adjustBirthTime(
+            inputYear,
+            inputMonth,
+            inputDay,
+            inputHour,
+            inputMinute,
+            solarOffset,
+          ));
         }
-        const r = paiQimen(adjYear, adjMonth, adjDay, adjHour);
-        if (!r) {
-          setError('排盘失败，请检查输入参数');
-          setCalculating(false);
-          return;
+        const r = paiQimen(adjYear, adjMonth, adjDay, adjHour, adjMinute);
+        r.sourceInput = {
+          year: inputYear,
+          month: inputMonth,
+          day: inputDay,
+          hour: inputHour,
+          minute: inputMinute,
+        };
+        if (solarOffset !== null) {
+          r._trueSolar = {
+            city: birthCity.name,
+            offset: solarOffset,
+            original: r.sourceInput,
+            adjusted: r.input,
+          };
         }
         setResult(r);
 
         // Prepare initial message for AI
         const text = formatForAI(r, question);
-        const initialMsg = { role: 'user', content: `${question ? `问题: ${question}\n\n` : ''}以下是奇门遁甲排盘结果，请帮我解读：\n\n${text}` };
+        const initialMsg = { role: 'user', content: `${question ? `希望了解: ${question}\n\n` : ''}以下是奇门遁甲排盘结果，请按文化学习材料说明其结构与传统取象：\n\n${text}` };
         setChatMessages([initialMsg]);
 
         // Save to history
         const id = `qimen-${Date.now()}`;
         historyIdRef.current = id;
         setActiveHistoryId(id);
-        upsertHistory(id, question || '综合运势', {
+        upsertHistory(id, question || '盘面学习', {
           module: 'qimen',
           result: r,
-          input: { year: inputYear, month: inputMonth, day: inputDay, hour: inputHour },
+          input: r.sourceInput,
         }, [initialMsg]);
       } catch (e) {
         setError(`排盘出错: ${e.message}`);
@@ -371,7 +384,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
         setCalculating(false);
       }
     }, 600);
-  }, [inputYear, inputMonth, inputDay, inputHour, question, trueSolarEnabled, birthCity, upsertHistory, setActiveHistoryId]);
+  }, [inputYear, inputMonth, inputDay, inputHour, inputMinute, question, trueSolarEnabled, birthCity, upsertHistory, setActiveHistoryId]);
 
   // Ask AI
   const askAI = useCallback(async () => {
@@ -479,6 +492,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
     setInputMonth(n.getMonth() + 1);
     setInputDay(n.getDate());
     setInputHour(n.getHours());
+    setInputMinute(n.getMinutes());
   }, []);
 
   const hasAIResponse = chatMessages.some(m => m.role === 'assistant');
@@ -497,7 +511,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
       <ModuleIntro
         moduleId="qimen"
         origin="相传黄帝战蚩尤时九天玄女所授，经姜太公、张良、诸葛亮传承，明代刘伯温集大成。以天地人神四盘叠加九宫，号称「帝王之术」。"
-        strengths={['具体事件预测（做不做、成不成）', '最佳行动时机与方位', '人事博弈分析（敌我态势）', '出行择方·求财问官·诉讼医病']}
+        strengths={['拆补法起局', '天地人神四盘', '值符值使定位', '九星八门八神学习']}
       />
 
       {/* 输入面板 */}
@@ -513,7 +527,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
         </div>
 
         {/* 日期行 */}
-        <div className="grid grid-cols-4 gap-2 mb-3">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-3">
           <div>
             <label className="block text-[var(--color-text-dim)] text-xs mb-1 font-body">年</label>
             <select value={inputYear} onChange={e => setInputYear(Number(e.target.value))}
@@ -539,7 +553,14 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
             <label className="block text-[var(--color-text-dim)] text-xs mb-1 font-body">时 ({shichenLabel}时)</label>
             <select value={inputHour} onChange={e => setInputHour(Number(e.target.value))}
               className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-2 py-2.5 text-[var(--color-text)] input-focus-ring transition-colors font-body text-sm">
-              {Array.from({ length: 24 }, (_, i) => <option key={i} value={i}>{String(i).padStart(2, '0')}:00</option>)}
+              {Array.from({ length: 24 }, (_, i) => <option key={i} value={i}>{String(i).padStart(2, '0')}时</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="block text-[var(--color-text-dim)] text-xs mb-1 font-body">分</label>
+            <select value={inputMinute} onChange={e => setInputMinute(Number(e.target.value))}
+              className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-2 py-2.5 text-[var(--color-text)] input-focus-ring transition-colors font-body text-sm">
+              {Array.from({ length: 60 }, (_, i) => <option key={i} value={i}>{String(i).padStart(2, '0')}分</option>)}
             </select>
           </div>
         </div>
@@ -551,7 +572,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
             type="text"
             value={question}
             onChange={e => setQuestion(e.target.value)}
-            placeholder="如：这个项目能成功吗？近期适合出行吗？"
+            placeholder="如：这个盘的值符值使怎样定位？"
             className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-4 py-3 text-[var(--color-text)]
               placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body"
           />
@@ -574,7 +595,7 @@ export default function QimenModule({ aiConfig, setShowSettings, upsertHistory, 
                 onToggle={setTrueSolarEnabled}
                 city={birthCity}
                 onCityChange={setBirthCity}
-                dateParts={{ year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: 0 }}
+                dateParts={{ year: inputYear, month: inputMonth, day: inputDay, hour: inputHour, minute: inputMinute }}
               />
               <div className="text-[10px] text-[var(--color-text-dim)] font-body">
                 部分派别使用真太阳时起课，可根据需要开启

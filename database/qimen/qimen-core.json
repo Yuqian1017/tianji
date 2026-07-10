@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-10",
+  "status": {
+    "deterministicChart": "accepted_declared_school",
+    "interpretationAndPredictions": "not_validated_not_included"
+  },
+  "conventions": {
+    "method": "拆补法·转盘法",
+    "school": "时家奇门·拆补转盘·中五寄坤二·天禽随天芮",
+    "calendar": "lunar-javascript@1.7.7; sect=1",
+    "solarTermBoundary": "exact_to_minute",
+    "validation": "validated_declared_school",
+    "interpretationValidation": "not_validated",
+    "dayBoundary": "23:00; lunar-javascript EightChar sect=1",
+    "yuan": "preceding_jia_or_ji_futou_branch",
+    "earthPlate": "numeric_palaces_1_to_9; yang_forward_yin_reverse",
+    "centerPalace": "lodged_in_kun_2_for_duty_star_and_duty_gate_origin",
+    "dutyDoorCenterLanding": "yang_to_gen_8; yin_to_kun_2",
+    "tianqin": "travels_with_tianrui; center_identity_retained"
+  },
+  "sourceRefs": {
+    "data": {
+      "path": "src/modules/qimen/data.js",
+      "sha256": "2c07dcff55cd04543e36c660c23a91e01eac5976726dc36ed654495f6990c604"
+    },
+    "engine": {
+      "path": "src/modules/qimen/engine.js",
+      "sha256": "12493b09654e0cb506cd608415a1cfa32d3724b26abe695b39743bb59b2856ba"
+    },
+    "algorithm": {
+      "path": "database/xuanxue/compendium-new/reference/qimen-algorithm.md",
+      "sha256": "b8041b714d50a0be067729998c79294a4784adb7b0c0e03468a2b2aeaecf831d"
+    },
+    "overview": {
+      "path": "database/xuanxue/compendium-new/06-qimen/01-qimen.md",
+      "sha256": "55213f330333ae6551787710364ede549785981402121aa5c21dff55eea345e5"
+    },
+    "cases": {
+      "path": "database/xuanxue/compendium-new/06-qimen/02-zhifu-zhishi-cases.md",
+      "sha256": "53c78be096d6839c03695ee11509a1ef5f9bf0f1e2f1db8e2f186a9fe1694c6e"
+    }
+  },
+  "tables": {
+    "stems": [
+      "甲",
+      "乙",
+      "丙",
+      "丁",
+      "戊",
+      "己",
+      "庚",
+      "辛",
+      "壬",
+      "癸"
+    ],
+    "branches": [
+      "子",
+      "丑",
+      "寅",
+      "卯",
+      "辰",
+      "巳",
+      "午",
+      "未",
+      "申",
+      "酉",
+      "戌",
+      "亥"
+    ],
+    "palaces": [
+      {
+        "num": 1,
+        "name": "坎",
+        "dir": "北",
+        "dirEn": "N",
+        "wuxing": "water"
+      },
+      {
+        "num": 2,
+        "name": "坤",
+        "dir": "西南",
+        "dirEn": "SW",
+        "wuxing": "earth"
+      },
+      {
+        "num": 3,
+        "name": "震",
+        "dir": "东",
+        "dirEn": "E",
+        "wuxing": "wood"
+      },
+      {
+        "num": 4,
+        "name": "巽",
+        "dir": "东南",
+        "dirEn": "SE",
+        "wuxing": "wood"
+      },
+      {
+        "num": 5,
+        "name": "中",
+        "dir": "中",
+        "dirEn": "C",
+        "wuxing": "earth"
+      },
+      {
+        "num": 6,
+        "name": "乾",
+        "dir": "西北",
+        "dirEn": "NW",
+        "wuxing": "metal"
+      },
+      {
+        "num": 7,
+        "name": "兑",
+        "dir": "西",
+        "dirEn": "W",
+        "wuxing": "metal"
+      },
+      {
+        "num": 8,
+        "name": "艮",
+        "dir": "东北",
+        "dirEn": "NE",
+        "wuxing": "earth"
+      },
+      {
+        "num": 9,
+        "name": "离",
+        "dir": "南",
+        "dirEn": "S",
+        "wuxing": "fire"
+      }
+    ],
+    "stars": [
+      {
+        "name": "天蓬",
+        "wuxing": "water",
+        "base": 1,
+        "jixiong": "凶"
+      },
+      {
+        "name": "天芮",
+        "wuxing": "earth",
+        "base": 2,
+        "jixiong": "凶"
+      },
+      {
+        "name": "天冲",
+        "wuxing": "wood",
+        "base": 3,
+        "jixiong": "吉"
+      },
+      {
+        "name": "天辅",
+        "wuxing": "wood",
+        "base": 4,
+        "jixiong": "吉"
+      },
+      {
+        "name": "天禽",
+        "wuxing": "earth",
+        "base": 5,
+        "jixiong": "中"
+      },
+      {
+        "name": "天心",
+        "wuxing": "metal",
+        "base": 6,
+        "jixiong": "吉"
+      },
+      {
+        "name": "天柱",
+        "wuxing": "metal",
+        "base": 7,
+        "jixiong": "凶"
+      },
+      {
+        "name": "天任",
+        "wuxing": "earth",
+        "base": 8,
+        "jixiong": "吉"
+      },
+      {
+        "name": "天英",
+        "wuxing": "fire",
+        "base": 9,
+        "jixiong": "凶"
+      }
+    ],
+    "gates": [
+      {
+        "name": "休门",
+        "wuxing": "water",
+        "base": 1,
+        "jixiong": "吉"
+      },
+      {
+        "name": "死门",
+        "wuxing": "earth",
+        "base": 2,
+        "jixiong": "凶"
+      },
+      {
+        "name": "伤门",
+        "wuxing": "wood",
+        "base": 3,
+        "jixiong": "凶"
+      },
+      {
+        "name": "杜门",
+        "wuxing": "wood",
+        "base": 4,
+        "jixiong": "中"
+      },
+      {
+        "name": "开门",
+        "wuxing": "metal",
+        "base": 6,
+        "jixiong": "吉"
+      },
+      {
+        "name": "惊门",
+        "wuxing": "metal",
+        "base": 7,
+        "jixiong": "凶"
+      },
+      {
+        "name": "生门",
+        "wuxing": "earth",
+        "base": 8,
+        "jixiong": "吉"
+      },
+      {
+        "name": "景门",
+        "wuxing": "fire",
+        "base": 9,
+        "jixiong": "中"
+      }
+    ],
+    "starOriginalPalaces": {
+      "1": "天蓬",
+      "2": "天芮",
+      "3": "天冲",
+      "4": "天辅",
+      "5": "天禽",
+      "6": "天心",
+      "7": "天柱",
+      "8": "天任",
+      "9": "天英"
+    },
+    "gateOriginalPalaces": {
+      "1": "休门",
+      "2": "死门",
+      "3": "伤门",
+      "4": "杜门",
+      "6": "开门",
+      "7": "惊门",
+      "8": "生门",
+      "9": "景门"
+    },
+    "sanqiLiuyiOrder": [
+      "戊",
+      "己",
+      "庚",
+      "辛",
+      "壬",
+      "癸",
+      "丁",
+      "丙",
+      "乙"
+    ],
+    "xunHiddenStems": {
+      "甲子": "戊",
+      "甲戌": "己",
+      "甲申": "庚",
+      "甲午": "辛",
+      "甲辰": "壬",
+      "甲寅": "癸"
+    },
+    "yuanByFutouBranch": {
+      "子": "上元",
+      "午": "上元",
+      "卯": "上元",
+      "酉": "上元",
+      "寅": "中元",
+      "申": "中元",
+      "巳": "中元",
+      "亥": "中元",
+      "辰": "下元",
+      "戌": "下元",
+      "丑": "下元",
+      "未": "下元"
+    },
+    "jieqiJu": {
+      "yang": {
+        "冬至": [
+          1,
+          7,
+          4
+        ],
+        "小寒": [
+          2,
+          8,
+          5
+        ],
+        "大寒": [
+          3,
+          9,
+          6
+        ],
+        "立春": [
+          8,
+          5,
+          2
+        ],
+        "雨水": [
+          9,
+          6,
+          3
+        ],
+        "惊蛰": [
+          1,
+          7,
+          4
+        ],
+        "春分": [
+          3,
+          9,
+          6
+        ],
+        "清明": [
+          4,
+          1,
+          7
+        ],
+        "谷雨": [
+          5,
+          2,
+          8
+        ],
+        "立夏": [
+          4,
+          1,
+          7
+        ],
+        "小满": [
+          5,
+          2,
+          8
+        ],
+        "芒种": [
+          6,
+          3,
+          9
+        ]
+      },
+      "yin": {
+        "夏至": [
+          9,
+          3,
+          6
+        ],
+        "小暑": [
+          8,
+          2,
+          5
+        ],
+        "大暑": [
+          7,
+          1,
+          4
+        ],
+        "立秋": [
+          2,
+          5,
+          8
+        ],
+        "处暑": [
+          1,
+          4,
+          7
+        ],
+        "白露": [
+          9,
+          3,
+          6
+        ],
+        "秋分": [
+          7,
+          1,
+          4
+        ],
+        "寒露": [
+          6,
+          9,
+          3
+        ],
+        "霜降": [
+          5,
+          8,
+          2
+        ],
+        "立冬": [
+          6,
+          9,
+          3
+        ],
+        "小雪": [
+          5,
+          8,
+          2
+        ],
+        "大雪": [
+          4,
+          7,
+          1
+        ]
+      }
+    },
+    "jieqiOrder": [
+      "小寒",
+      "大寒",
+      "立春",
+      "雨水",
+      "惊蛰",
+      "春分",
+      "清明",
+      "谷雨",
+      "立夏",
+      "小满",
+      "芒种",
+      "夏至",
+      "小暑",
+      "大暑",
+      "立秋",
+      "处暑",
+      "白露",
+      "秋分",
+      "寒露",
+      "霜降",
+      "立冬",
+      "小雪",
+      "大雪",
+      "冬至"
+    ],
+    "palaceClockwise": [
+      2,
+      7,
+      6,
+      1,
+      8,
+      3,
+      4,
+      9
+    ],
+    "palaceCounterClockwise": [
+      2,
+      9,
+      4,
+      3,
+      8,
+      1,
+      6,
+      7
+    ],
+    "gateSequence": [
+      "休门",
+      "生门",
+      "伤门",
+      "杜门",
+      "景门",
+      "死门",
+      "惊门",
+      "开门"
+    ],
+    "deitySequence": [
+      "值符",
+      "螣蛇",
+      "太阴",
+      "六合",
+      "白虎",
+      "玄武",
+      "九地",
+      "九天"
+    ]
+  },
+  "excludedAsUnvalidated": [
+    "auspicious_or_inauspicious_interpretation",
+    "event_prediction",
+    "medical_legal_financial_or_directional_advice",
+    "pattern_meanings_and_yongshen_claims"
+  ]
+}

@@ -221,30 +221,30 @@ const expected_liuyao = {
 
 ## 四、奇门遁甲验证用例
 
-### 用例：2024年3月20日（春分后）甲子时 阳遁
+### 用例：2024年6月15日14:30 阳遁六局
 
 ```javascript
 const input_qimen = {
-  datetime: '2024-03-20T23:00', // 甲子时
-  jieqi: '春分',
-  yuan: '上元' // 需按拆补法确定
+  datetime: '2024-06-15T14:30'
 };
 
 const expected_qimen = {
-  dunType: 'yang', // 春分=阳遁
-  juNum: 3, // 春分上元=三局
-  
-  // 地盘：三局 → 戊在震三宫起，顺排
+  ganzhi: '甲辰年 庚午月 庚戌日 癸未时',
+  jieqi: '芒种',
+  futou: '己酉',
+  yuan: '上元',
+  dunType: 'yang',
+  juNum: 6,
   diPan: {
-    3: '戊', 4: '己', 9: '庚', 2: '辛',
-    7: '壬', 6: '癸', 1: '丁', 8: '丙', 5: '乙'
-    // ⚠️ 需要按洛书飞星顺序精确排列
+    1: '壬', 2: '癸', 3: '丁', 4: '丙', 5: '乙',
+    6: '戊', 7: '己', 8: '庚', 9: '辛'
   },
-  
-  // 时干甲子 → 甲隐于戊 → 找戊在地盘位置=三宫
-  zhifuGong: 3,
-  zhifu: '天冲', // 三宫原有九星
-  zhishi: '伤门', // 三宫原有八门
+  xunshou: '甲戌',
+  zhifu: '天柱',
+  zhifuOrigGong: 7,
+  zhifuGong: 2,
+  zhishi: '惊门',
+  zhishiGong: 7
 };
 ```
 

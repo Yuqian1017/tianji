@@ -22,8 +22,9 @@ export const JIUGONG = [
   { num: 9, name: '离', dir: '南',  dirEn: 'S',  wuxing: 'fire'  },
 ];
 
-// 洛书飞星顺序（8宫，去掉中5）
-export const LUOSHU_ORDER = [1, 8, 3, 4, 9, 2, 7, 6];
+// 转盘八宫的几何顺逆时针顺序（中五不参与几何转动）
+export const QIMEN_PALACE_CLOCKWISE = [2, 7, 6, 1, 8, 3, 4, 9];
+export const QIMEN_PALACE_COUNTER_CLOCKWISE = [2, 9, 4, 3, 8, 1, 6, 7];
 
 // ===== 九星 =====
 
@@ -64,12 +65,11 @@ export const GATE_BASE = {
   6: '开门', 7: '惊门', 8: '生门', 9: '景门',
 };
 
+export const QIMEN_GATE_SEQUENCE = ['休门','生门','伤门','杜门','景门','死门','惊门','开门'];
+
 // ===== 八神 =====
 
-export const BASHEN = {
-  yang: ['值符','螣蛇','太阴','六合','白虎','玄武','九地','九天'], // 阳遁顺排
-  yin:  ['值符','九天','九地','玄武','白虎','六合','太阴','螣蛇'], // 阴遁逆排
-};
+export const QIMEN_DEITY_SEQUENCE = ['值符','螣蛇','太阴','六合','白虎','玄武','九地','九天'];
 
 // ===== 三奇六仪 =====
 
@@ -86,6 +86,12 @@ export const JIA_DUN = {
 export const LIUYI_TO_XUNSHOU = {
   '戊': '甲子', '己': '甲戌', '庚': '甲申',
   '辛': '甲午', '壬': '甲辰', '癸': '甲寅',
+};
+
+export const YUAN_BY_FUTOU_BRANCH = {
+  '子': '上元', '午': '上元', '卯': '上元', '酉': '上元',
+  '寅': '中元', '申': '中元', '巳': '中元', '亥': '中元',
+  '辰': '下元', '戌': '下元', '丑': '下元', '未': '下元',
 };
 
 // 三奇标记
@@ -117,19 +123,11 @@ export const JIEQI_ORDER = [
   '寒露','霜降','立冬','小雪','大雪','冬至',
 ];
 
-// 节气近似日期（月份, 近似日期）— 用于快速定位
-export const JIEQI_APPROX = {
-  '小寒': [1, 6],  '大寒': [1, 20], '立春': [2, 4],  '雨水': [2, 19],
-  '惊蛰': [3, 6],  '春分': [3, 21], '清明': [4, 5],  '谷雨': [4, 20],
-  '立夏': [5, 6],  '小满': [5, 21], '芒种': [6, 6],  '夏至': [6, 21],
-  '小暑': [7, 7],  '大暑': [7, 23], '立秋': [8, 7],  '处暑': [8, 23],
-  '白露': [9, 8],  '秋分': [9, 23], '寒露': [10, 8], '霜降': [10, 23],
-  '立冬': [11, 7], '小雪': [11, 22],'大雪': [12, 7], '冬至': [12, 22],
-};
-
 // 判断某节气属于阳遁还是阴遁
 export function getDunType(jieqiName) {
-  return JIEQI_JU.yang[jieqiName] ? 'yang' : 'yin';
+  if (JIEQI_JU.yang[jieqiName]) return 'yang';
+  if (JIEQI_JU.yin[jieqiName]) return 'yin';
+  throw new RangeError(`未知节气: ${jieqiName}`);
 }
 
 // ===== 奇门格局 =====
