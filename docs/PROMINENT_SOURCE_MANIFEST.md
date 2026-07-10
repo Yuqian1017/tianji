@@ -203,6 +203,28 @@
 | 覆盖 | 节气、局数、旬首、值符/值使名称、地盘、天盘干、九星与八神 |
 | 排除 | 其值使门按时干索引表计算，并保留中宫落点；与项目/`3meta` 的旬内步数和寄宫规则不同，全部值使落宫与八门字段明确不计入一致性 |
 
+### SRC-VAL-XUANKONG-RULES
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 沈氏玄空下卦公开规则资料与二十四山三元龙表 |
+| 状态 | `validation_anchor`，流派口径和有限表文本 |
+| 参考 | 《沈氏玄空学》的下卦/紫白/九运体系；公开规则对照 `http://www.52cz.cn/bazisuanming/29043.html`、`https://www.d02.cn/html/suanming/zhouyisuanming/zhouyizatan/95226.html` |
+| 本轮用途 | 锚定地/天/人元龙顺序、四正/四隅阴阳、同元龙决定山向盘顺逆、五黄借山、每山中间九度为下卦正向范围 |
+| 边界 | 公开网页只作为可核对的规则转述，不授证风水预测；替卦、兼向、出卦及不同版本《沈氏玄空学》的解释差异均未纳入本轮通过范围 |
+
+### SRC-VAL-SOUL-XUANKONG
+
+| 字段 | 值 |
+|---|---|
+| 名称 | `@soul-atelier/xuankong@0.2.1` 与 `@soul-atelier/calendar@0.3.0` |
+| 状态 | `validation_anchor`，下卦盘与节气历法第二实现 |
+| 上游 | npm：`https://www.npmjs.com/package/@soul-atelier/xuankong`、`https://www.npmjs.com/package/@soul-atelier/calendar`；包元数据指向 `https://github.com/soul-atelier/sdks` |
+| 许可 | MIT |
+| 本地使用 | 隔离安装于 `/tmp/tianji-fengshui-validator`；不进入产品依赖 |
+| 本轮证据 | 9 运 x 24 山共 216 张盘、6,048 个运/山/向盘与结构标签字段 0 mismatch；tyme4ts 后端对 2020-2026 共 10,228 时刻的太阳年、流年中宫与流月中宫 30,684 字段 0 mismatch |
+| 边界 | 第二实现发布较新，只作为独立复算证据；不能验证星性、组合断语、形煞、化解或现实效果 |
+
 ### SRC-VAL-DAYUN-CLASSICS
 
 | 字段 | 值 |
@@ -330,7 +352,7 @@
 | XUAN-BAZI | `04-bazi/` | 排盘、十神、格局、案例 | 八字课程、引擎数据审计 | 日柱/节气算法含近似风险 |
 | XUAN-ZIWEI | `05-ziwei/` | 十二宫、星曜、格局、飞化、断语 | 紫微课程、星曜实体、Prompt 审计 | 确定性结构已规范化；格局、星性、疾病、婚财与应期断语仍 blocked；两个主星详解文件不能互证 |
 | XUAN-QIMEN | `06-qimen/` | 四盘、值符值使、九星八门、案例 | 奇门课程、盘面解释 | 确定性算法已按声明口径修正并规范化；格局、用神、克应和预测解释仍 blocked |
-| XUAN-FENGSHUI | `07-fengshui/` | 飞星、形煞、罗盘、二十四山 | 风水课程、当前工具审计 | 流派差异和化解建议需标来源/边界 |
+| XUAN-FENGSHUI | `07-fengshui/` | 飞星、形煞、罗盘、二十四山 | 风水课程、当前工具审计 | 下卦正向盘确定性核心已修正并规范化；替卦/兼向、星性、形煞、化解和现实预测 blocked |
 | XUAN-TCM | `08-zhongyi/` | 藏象、经络子午、五运六气、食疗体质、经方 | 当前 TCM 模块来源追踪；与 TCM Skill 互补 | 覆盖浅；不能替代 Skill 的诊断/安全层 |
 | XUAN-NAMING | `09-xingming/` | 五格、81 数理、三才 | 姓名工具候选 | 笔画数据、争议性和许可需核 |
 | XUAN-XIANGSHU | `10-xiangshu/` | 面相、手相 | 当前 Face/Palm 数据映射 | 不与望诊或医学证据混同 |

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { paiFengshui, formatForAI, getBenMingGua, findMountain } from './engine.js';
-import { JIUGONG, STAR_INFO, STAR_REMEDY, ERSHISI_SHAN, BAZHAI, GUA_TO_GONG, WUXING_CN } from './data.js';
+import { JIUGONG, STAR_INFO, ERSHISI_SHAN, WUXING_CN } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { FENGSHUI_SYSTEM_PROMPT } from './prompt.js';
@@ -18,26 +18,13 @@ function CalculatingAnimation() {
   );
 }
 
-// ===== 宫位颜色 =====
-function starColor(star) {
-  const info = STAR_INFO[star];
-  if (!info) return 'text-[var(--color-text-dim)]';
-  if (info.nature === '吉') return 'text-[var(--color-wx-wood)]';
-  if (info.nature === '凶' || info.nature === '大凶') return 'text-[var(--color-cinnabar)]';
-  return 'text-[var(--color-text-dim)]';
-}
-
 // ===== 单个宫位 =====
 function PalaceCell({ palace, isCenter, onClick }) {
   if (!palace) return null;
 
-  const assessColor = palace.assessment === '吉' ? 'bg-[var(--color-wx-wood)]/20 border-[var(--color-wx-wood)]/40'
-    : palace.assessment === '凶' ? 'bg-[var(--color-cinnabar)]/10 border-[var(--color-cinnabar)]/30'
-    : 'bg-[var(--color-bg-card)] border-[var(--color-gold-border)]';
-
   return (
     <div
-      className={`border rounded-lg p-2 cursor-pointer card-blur transition-all hover:shadow-md ${assessColor}`}
+      className="border rounded-lg p-2 cursor-pointer card-blur transition-all hover:shadow-md bg-[var(--color-bg-card)] border-[var(--color-gold-border)]"
       onClick={() => onClick(palace)}
     >
       {/* Header: 宫名 + 方位 */}
@@ -58,25 +45,14 @@ function PalaceCell({ palace, isCenter, onClick }) {
         <>
           {/* Stars: 运·山·向 */}
           <div className="flex justify-between items-baseline gap-1 text-xs font-body">
-            <span className="text-[var(--color-text-dim)]">运<span className={starColor(palace.yunStar)}>{palace.yunStar}</span></span>
-            <span className="text-[var(--color-text-dim)]">山<span className={`font-bold ${starColor(palace.shanStar)}`}>{palace.shanStar}</span></span>
-            <span className="text-[var(--color-text-dim)]">向<span className={`font-bold ${starColor(palace.xiangStar)}`}>{palace.xiangStar}</span></span>
+            <span className="text-[var(--color-text-dim)]">运<span className="text-[var(--color-text)]">{palace.yunStar}</span></span>
+            <span className="text-[var(--color-text-dim)]">山<span className="font-bold text-[var(--color-text)]">{palace.shanStar}</span></span>
+            <span className="text-[var(--color-text-dim)]">向<span className="font-bold text-[var(--color-text)]">{palace.xiangStar}</span></span>
           </div>
           {/* Year star */}
           <div className="text-[10px] text-[var(--color-text-dim)] mt-0.5">
-            年<span className={starColor(palace.yearStar)}>{STAR_INFO[palace.yearStar]?.short}</span>
+            年<span className="text-[var(--color-text)]">{STAR_INFO[palace.yearStar]?.short}</span>
           </div>
-          {/* Combo badges */}
-          {palace.combos.length > 0 && (
-            <div className="flex flex-wrap gap-0.5 mt-1">
-              {palace.combos.slice(0, 2).map((c, i) => (
-                <span key={i} className={`text-[9px] px-1 rounded ${
-                  c.nature === '吉' ? 'bg-[var(--color-wx-wood)]/20 text-[var(--color-wx-wood)]'
-                  : 'bg-[var(--color-cinnabar)]/15 text-[var(--color-cinnabar)]'
-                }`}>{c.name}</span>
-              ))}
-            </div>
-          )}
         </>
       )}
     </div>
@@ -116,30 +92,14 @@ function PalaceDetailModal({ palace, onClose }) {
         <div className="text-[var(--color-text)] text-sm font-body space-y-2">
           <div>五行: {WUXING_CN[gInfo?.wuxing] || ''}</div>
           <div className="grid grid-cols-2 gap-2">
-            <div>运星: <span className={starColor(palace.yunStar)}>{STAR_INFO[palace.yunStar]?.name}</span></div>
-            <div>山星: <span className={starColor(palace.shanStar)}>{STAR_INFO[palace.shanStar]?.name}</span></div>
-            <div>向星: <span className={starColor(palace.xiangStar)}>{STAR_INFO[palace.xiangStar]?.name}</span></div>
-            <div>年星: <span className={starColor(palace.yearStar)}>{STAR_INFO[palace.yearStar]?.name}</span></div>
+            <div>运星: <span className="text-[var(--color-text)]">{STAR_INFO[palace.yunStar]?.name}</span></div>
+            <div>山星: <span className="text-[var(--color-text)]">{STAR_INFO[palace.shanStar]?.name}</span></div>
+            <div>向星: <span className="text-[var(--color-text)]">{STAR_INFO[palace.xiangStar]?.name}</span></div>
+            <div>年星: <span className="text-[var(--color-text)]">{STAR_INFO[palace.yearStar]?.name}</span></div>
           </div>
-          {palace.combos.length > 0 && (
-            <div className="border-t border-[var(--color-surface-border)] pt-2">
-              <div className="text-[var(--color-gold-muted)] text-xs mb-1">飞星组合</div>
-              {palace.combos.map((c, i) => (
-                <div key={i} className={`text-xs ${c.nature === '吉' ? 'text-[var(--color-wx-wood)]' : 'text-[var(--color-cinnabar)]'}`}>
-                  {c.name}({c.pairType}): {c.desc}
-                </div>
-              ))}
-            </div>
-          )}
-          {palace.remedy && (
-            <div className="border-t border-[var(--color-surface-border)] pt-2">
-              <div className="text-[var(--color-gold-muted)] text-xs mb-1">年星 {STAR_INFO[palace.yearStar]?.short} 建议</div>
-              {palace.remedy.remedy && <div className="text-xs text-[var(--color-cinnabar)]">{palace.remedy.remedy}</div>}
-              {palace.remedy.avoid && <div className="text-xs text-[var(--color-cinnabar)]">{palace.remedy.avoid}</div>}
-              {palace.remedy.enhance && <div className="text-xs text-[var(--color-wx-wood)]">催旺: {palace.remedy.enhance}</div>}
-              {palace.remedy.note && <div className="text-xs text-[var(--color-text-dim)]">{palace.remedy.note}</div>}
-            </div>
-          )}
+          <div className="border-t border-[var(--color-surface-border)] pt-2 text-xs text-[var(--color-text-dim)]">
+            只显示已验证的盘面位置；传统星性与组合解释尚未验证。
+          </div>
         </div>
       </div>
     </div>
@@ -187,12 +147,12 @@ function MountainSelector({ selectedMountain, onSelect }) {
 
 // ===== 专题分析 =====
 const DETAIL_SECTIONS = [
-  { id: 'damen', label: '大门', prompt: '请详细分析向方（大门方位）的飞星组合，以及对出入、财运的影响。' },
-  { id: 'woshi', label: '主卧', prompt: '请详细分析坐方（主卧方位）的飞星组合，以及对健康、人丁的影响。' },
-  { id: 'caiyun', label: '财运', prompt: '请分析哪些宫位最利财运（向星旺星所在），如何催旺财位。' },
-  { id: 'jiankang', label: '健康', prompt: '请分析哪些宫位需注意健康问题（二黑五黄所在），如何化解。' },
-  { id: 'nianxing', label: '年星', prompt: '请分析今年年飞星叠加后哪些方位需要特别注意和化解。' },
-  { id: 'huajie', label: '化解总结', prompt: '请总结各凶位的化解方法和吉位的催旺方法，给出完整布局建议。' },
+  { id: 'period', label: '运盘', prompt: '请说明定运太阳年、运星入中和运盘顺飞结果。' },
+  { id: 'mountain', label: '山盘', prompt: '请说明坐山所属三元龙、山星入中数及其同元龙顺逆判定。' },
+  { id: 'water', label: '向盘', prompt: '请说明向首所属三元龙、向星入中数及其同元龙顺逆判定。' },
+  { id: 'annual', label: '年盘', prompt: '请说明分析太阳年的年星入中数和九宫位置，只描述结构。' },
+  { id: 'formation', label: '结构标签', prompt: '请解释结构格局标签由当运星落在坐宫或向宫的哪些位置关系得出，不作吉凶判断。' },
+  { id: 'method', label: '流派口径', prompt: '请说明下卦正向盘的实现范围，以及替卦、兼向和出卦为何不在本结果中。' },
 ];
 
 // ===== 主组件 =====
@@ -309,7 +269,7 @@ export default function FengshuiModule({
         if (question.trim()) userText += `\n\n用户提问: ${question.trim()}`;
         if (birthYear) {
           const bmg = getBenMingGua(parseInt(birthYear), gender);
-          userText += `\n\n主人本命卦: ${bmg.name}卦(${bmg.group})`;
+          userText += `\n\n传统八宅命卦标签（解释层尚未验证）: ${bmg.name}卦(${bmg.group})`;
         }
         const initialMsg = { role: 'user', content: userText };
         setChatMessages([initialMsg]);
@@ -325,7 +285,7 @@ export default function FengshuiModule({
         }, [initialMsg]);
       } catch (e) {
         setError(`排盘出错: ${e.message}`);
-        console.error('Fengshui paipan error:', e);
+        if (!(e instanceof RangeError)) console.error('Fengshui paipan error:', e);
       } finally {
         setCalculating(false);
       }
@@ -419,7 +379,7 @@ export default function FengshuiModule({
   // Current mountain label
   const currentMountainLabel = useMemo(() => {
     const m = findMountain(sittingDegree);
-    return m ? `${m.name}山 (${m.gua}卦 · ${m.dir || ''})` : '';
+    return m ? `${m.name}山 (${m.gua}卦 · ${m.sanyuan}元龙 · ${m.yinyang})` : '';
   }, [sittingDegree]);
 
   // Facing label
@@ -435,8 +395,8 @@ export default function FengshuiModule({
     <div className="space-y-4">
       <ModuleIntro
         moduleId="fengshui"
-        origin="源于汉代，经唐代杨筠松、宋代赖文俊发展，至明清蒋大鸿集大成为玄空飞星派。以三元九运为时间轴，洛书九宫飞星为空间框架，是理气派风水最精密的体系。"
-        strengths={['住宅选址与布局评估', '各方位吉凶分析与化解', '流年方位吉凶预测', '催旺财运·健康·学业的方位建议']}
+        origin="玄空飞星以三元九运为时间轴、洛书九宫为飞布框架。当前工具声明采用沈氏玄空常用下卦正向盘口径。"
+        strengths={['三元九运定盘', '二十四山与三元龙', '运盘山盘向盘', '年飞星结构学习']}
       />
 
       {/* 输入区 */}
@@ -446,7 +406,7 @@ export default function FengshuiModule({
         {/* 建造年份 + 分析年份 */}
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="text-[var(--color-text-dim)] text-xs">建造/入住年份</label>
+            <label className="text-[var(--color-text-dim)] text-xs">定运太阳年（立春后）</label>
             <select
               value={constructionYear}
               onChange={e => setConstructionYear(parseInt(e.target.value))}
@@ -458,7 +418,7 @@ export default function FengshuiModule({
             </select>
           </div>
           <div>
-            <label className="text-[var(--color-text-dim)] text-xs">分析年份</label>
+            <label className="text-[var(--color-text-dim)] text-xs">分析太阳年（立春后）</label>
             <select
               value={analysisYear}
               onChange={e => setAnalysisYear(parseInt(e.target.value))}
@@ -512,15 +472,20 @@ export default function FengshuiModule({
               坐{currentMountainLabel} · {facingLabel} · {sittingDegree}°
             </div>
           )}
+          {dirMode === 'degree' && (
+            <div className="mt-1 text-[10px] text-[var(--color-text-dim)]">
+              当前仅支持每山中线左右各 4.5° 的下卦正向盘。
+            </div>
+          )}
         </div>
 
         {/* 求测问题 */}
         <div>
-          <label className="text-[var(--color-text-dim)] text-xs">求测事项（可选）</label>
+          <label className="text-[var(--color-text-dim)] text-xs">学习问题（可选）</label>
           <textarea
             value={question}
             onChange={e => setQuestion(e.target.value)}
-            placeholder="如：这个房子适合做生意吗？主卧在哪个方位好？"
+            placeholder="如：这个盘的山星和向星怎样确定顺逆？"
             className="w-full mt-1 px-3 py-2 rounded-lg bg-[var(--color-bg)] border border-[var(--color-surface-border)] text-[var(--color-text)] text-sm resize-none"
             rows={2}
           />
@@ -530,7 +495,7 @@ export default function FengshuiModule({
         <button
           onClick={() => setShowAdvanced(!showAdvanced)}
           className="text-xs text-[var(--color-text-dim)] hover:text-[var(--color-gold-muted)]"
-        >{showAdvanced ? '▾' : '▸'} 高级设置 (八宅法)</button>
+        >{showAdvanced ? '▾' : '▸'} 传统八宅命卦标签</button>
 
         {showAdvanced && (
           <div className="grid grid-cols-2 gap-3 pl-3 border-l-2 border-[var(--color-surface-border)]">
@@ -559,7 +524,7 @@ export default function FengshuiModule({
             </div>
             {birthYear && (
               <div className="col-span-2 text-xs text-[var(--color-gold-muted)]">
-                本命卦: {(() => {
+                传统命卦标签: {(() => {
                   const bmg = getBenMingGua(parseInt(birthYear), gender);
                   return `${bmg.name}卦 (${bmg.group})`;
                 })()}
@@ -581,6 +546,7 @@ export default function FengshuiModule({
             className="w-full py-2 rounded-xl border border-[var(--color-surface-border)] text-[var(--color-text-dim)] text-sm hover:border-[var(--color-gold-muted)]"
           >重新起局</button>
         )}
+        {error && <div className="text-[var(--color-cinnabar)] text-xs">{error}</div>}
       </div>
 
       {/* 排盘动画 */}
@@ -597,12 +563,12 @@ export default function FengshuiModule({
               · {result.meta.yuanName}{result.meta.yunName}
               · 年星中宫: {STAR_INFO[result.meta.yearCenter]?.short}
             </div>
-            <span className={`inline-block text-xs px-2 py-0.5 rounded font-title ${
-              result.geju.nature === '最吉' ? 'bg-[var(--color-wx-wood)]/20 text-[var(--color-wx-wood)] border border-[var(--color-wx-wood)]/40'
-              : result.geju.nature === '最凶' ? 'bg-[var(--color-cinnabar)]/15 text-[var(--color-cinnabar)] border border-[var(--color-cinnabar)]/30'
-              : 'bg-[var(--color-gold)]/10 text-[var(--color-gold)] border border-[var(--color-gold)]/30'
-            }`}>{result.geju.label}</span>
-            <span className="text-[var(--color-text-dim)] text-xs ml-2">{result.geju.desc}</span>
+            <div className="text-[10px] text-[var(--color-text-dim)] mb-2">
+              下卦排盘核心：已按声明流派验证 · 结构标签解释与现实判断：尚未验证
+            </div>
+            <span className="inline-block text-xs px-2 py-0.5 rounded font-title bg-[var(--color-surface)] text-[var(--color-text-dim)] border border-[var(--color-surface-border)]">
+              {result.geju.label}
+            </span>
           </div>
 
           {/* 九宫格 */}
@@ -611,9 +577,7 @@ export default function FengshuiModule({
           {/* 图例 */}
           <div className="flex flex-wrap gap-3 justify-center text-[10px] text-[var(--color-text-dim)]">
             <span>运=运盘 山=山星 向=向星</span>
-            <span className="text-[var(--color-wx-wood)]">■ 吉星</span>
-            <span className="text-[var(--color-cinnabar)]">■ 凶星</span>
-            <span>点击宫位查看详情</span>
+            <span>点击宫位查看已验证的落宫结构</span>
           </div>
         </div>
       )}
@@ -625,13 +589,13 @@ export default function FengshuiModule({
       {result && !calculating && (
         <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4 space-y-3">
           <div className="flex justify-between items-center">
-            <h3 className="text-[var(--color-gold)] font-title text-base">AI 解读</h3>
+            <h3 className="text-[var(--color-gold)] font-title text-base">AI 结构说明</h3>
             {chatMessages.length > 0 && !chatMessages.some(m => m.role === 'assistant') && (
               <button
                 onClick={askAI}
                 disabled={aiLoading || !hasApiKey}
                 className="px-4 py-1.5 rounded-lg bg-[var(--color-gold)]/20 hover:bg-[var(--color-gold)]/30 border border-[var(--color-gold)] text-[var(--color-gold)] text-sm font-title disabled:opacity-40"
-              >请求 AI 解读</button>
+              >请求结构说明</button>
             )}
           </div>
 

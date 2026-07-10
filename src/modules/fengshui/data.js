@@ -44,37 +44,37 @@ export const SANYUAN_JIUYUN = [
 
 export const ERSHISI_SHAN = [
   // 北方·坎
-  { name: '壬', start: 337.5, end: 352.5, gua: '坎', sanyuan: '天', wuxing: 'water', yinyang: '阳' },
-  { name: '子', start: 352.5, end:   7.5, gua: '坎', sanyuan: '地', wuxing: 'water', yinyang: '阳' },
+  { name: '壬', start: 337.5, end: 352.5, gua: '坎', sanyuan: '地', wuxing: 'water', yinyang: '阳' },
+  { name: '子', start: 352.5, end:   7.5, gua: '坎', sanyuan: '天', wuxing: 'water', yinyang: '阴' },
   { name: '癸', start:   7.5, end:  22.5, gua: '坎', sanyuan: '人', wuxing: 'water', yinyang: '阴' },
   // 东北·艮
-  { name: '丑', start:  22.5, end:  37.5, gua: '艮', sanyuan: '天', wuxing: 'earth', yinyang: '阴' },
-  { name: '艮', start:  37.5, end:  52.5, gua: '艮', sanyuan: '地', wuxing: 'earth', yinyang: '阳' },
+  { name: '丑', start:  22.5, end:  37.5, gua: '艮', sanyuan: '地', wuxing: 'earth', yinyang: '阴' },
+  { name: '艮', start:  37.5, end:  52.5, gua: '艮', sanyuan: '天', wuxing: 'earth', yinyang: '阳' },
   { name: '寅', start:  52.5, end:  67.5, gua: '艮', sanyuan: '人', wuxing: 'wood',  yinyang: '阳' },
   // 东方·震
-  { name: '甲', start:  67.5, end:  82.5, gua: '震', sanyuan: '天', wuxing: 'wood',  yinyang: '阳' },
-  { name: '卯', start:  82.5, end:  97.5, gua: '震', sanyuan: '地', wuxing: 'wood',  yinyang: '阴' },
+  { name: '甲', start:  67.5, end:  82.5, gua: '震', sanyuan: '地', wuxing: 'wood',  yinyang: '阳' },
+  { name: '卯', start:  82.5, end:  97.5, gua: '震', sanyuan: '天', wuxing: 'wood',  yinyang: '阴' },
   { name: '乙', start:  97.5, end: 112.5, gua: '震', sanyuan: '人', wuxing: 'wood',  yinyang: '阴' },
   // 东南·巽
-  { name: '辰', start: 112.5, end: 127.5, gua: '巽', sanyuan: '天', wuxing: 'earth', yinyang: '阳' },
-  { name: '巽', start: 127.5, end: 142.5, gua: '巽', sanyuan: '地', wuxing: 'wood',  yinyang: '阴' },
-  { name: '巳', start: 142.5, end: 157.5, gua: '巽', sanyuan: '人', wuxing: 'fire',  yinyang: '阴' },
+  { name: '辰', start: 112.5, end: 127.5, gua: '巽', sanyuan: '地', wuxing: 'earth', yinyang: '阴' },
+  { name: '巽', start: 127.5, end: 142.5, gua: '巽', sanyuan: '天', wuxing: 'wood',  yinyang: '阳' },
+  { name: '巳', start: 142.5, end: 157.5, gua: '巽', sanyuan: '人', wuxing: 'fire',  yinyang: '阳' },
   // 南方·离
-  { name: '丙', start: 157.5, end: 172.5, gua: '离', sanyuan: '天', wuxing: 'fire',  yinyang: '阳' },
-  { name: '午', start: 172.5, end: 187.5, gua: '离', sanyuan: '地', wuxing: 'fire',  yinyang: '阴' },
+  { name: '丙', start: 157.5, end: 172.5, gua: '离', sanyuan: '地', wuxing: 'fire',  yinyang: '阳' },
+  { name: '午', start: 172.5, end: 187.5, gua: '离', sanyuan: '天', wuxing: 'fire',  yinyang: '阴' },
   { name: '丁', start: 187.5, end: 202.5, gua: '离', sanyuan: '人', wuxing: 'fire',  yinyang: '阴' },
   // 西南·坤
-  { name: '未', start: 202.5, end: 217.5, gua: '坤', sanyuan: '天', wuxing: 'earth', yinyang: '阴' },
-  { name: '坤', start: 217.5, end: 232.5, gua: '坤', sanyuan: '地', wuxing: 'earth', yinyang: '阴' },
+  { name: '未', start: 202.5, end: 217.5, gua: '坤', sanyuan: '地', wuxing: 'earth', yinyang: '阴' },
+  { name: '坤', start: 217.5, end: 232.5, gua: '坤', sanyuan: '天', wuxing: 'earth', yinyang: '阳' },
   { name: '申', start: 232.5, end: 247.5, gua: '坤', sanyuan: '人', wuxing: 'metal', yinyang: '阳' },
   // 西方·兑
-  { name: '庚', start: 247.5, end: 262.5, gua: '兑', sanyuan: '天', wuxing: 'metal', yinyang: '阳' },
-  { name: '酉', start: 262.5, end: 277.5, gua: '兑', sanyuan: '地', wuxing: 'metal', yinyang: '阴' },
+  { name: '庚', start: 247.5, end: 262.5, gua: '兑', sanyuan: '地', wuxing: 'metal', yinyang: '阳' },
+  { name: '酉', start: 262.5, end: 277.5, gua: '兑', sanyuan: '天', wuxing: 'metal', yinyang: '阴' },
   { name: '辛', start: 277.5, end: 292.5, gua: '兑', sanyuan: '人', wuxing: 'metal', yinyang: '阴' },
   // 西北·乾
-  { name: '戌', start: 292.5, end: 307.5, gua: '乾', sanyuan: '天', wuxing: 'earth', yinyang: '阳' },
-  { name: '乾', start: 307.5, end: 322.5, gua: '乾', sanyuan: '地', wuxing: 'metal', yinyang: '阳' },
-  { name: '亥', start: 322.5, end: 337.5, gua: '乾', sanyuan: '人', wuxing: 'water', yinyang: '阴' },
+  { name: '戌', start: 292.5, end: 307.5, gua: '乾', sanyuan: '地', wuxing: 'earth', yinyang: '阴' },
+  { name: '乾', start: 307.5, end: 322.5, gua: '乾', sanyuan: '天', wuxing: 'metal', yinyang: '阳' },
+  { name: '亥', start: 322.5, end: 337.5, gua: '乾', sanyuan: '人', wuxing: 'water', yinyang: '阳' },
 ];
 
 // ===== 九星属性（以九运 2024-2043 为基准）=====

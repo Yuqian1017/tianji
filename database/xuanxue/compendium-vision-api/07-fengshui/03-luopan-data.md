@@ -1,5 +1,7 @@
 # 风水篇 · 罗盘与二十四山数据
 
+> **LEGACY / NON-CANONICAL**：此副本把地元龙与天元龙整列对调，并含多处玄空阴阳错误。规范表见 `../../compendium-new/07-fengshui/03-luopan-data.md` 与 `../../../fengshui/fengshui-core.json`。
+
 > **难度标签**：🟡进阶：二十四山·八宅 | 🔴专研：三元龙
 
 > 纯技术参考。罗盘是风水理气派的核心工具。

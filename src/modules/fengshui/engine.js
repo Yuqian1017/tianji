@@ -1,307 +1,338 @@
 /**
- * 风水飞星 · 排盘引擎（玄空飞星法）
- * 参考: 07-fengshui/01-xuankong-feixing.md + 03-luopan-data.md
+ * 玄空飞星下卦排盘引擎。
+ *
+ * 声明口径：沈氏玄空常用下卦法、正向盘、运盘顺飞；山向盘按入中星
+ * 原宫的同元龙阴阳定顺逆，五黄借实际坐/向山阴阳。
  */
 
+import { createBaziCalendar } from '../bazi/calendar.js';
 import {
-  SANYUAN_JIUYUN, ERSHISI_SHAN, FLY_ORDER, GUA_TO_GONG,
-  JIUGONG, STAR_INFO, STAR_COMBO, STAR_REMEDY, WUXING_CN,
+  ERSHISI_SHAN,
+  FLY_ORDER,
+  GUA_TO_GONG,
+  JIUGONG,
+  STAR_INFO,
 } from './data.js';
 
-// ===== 1. 三元九运 =====
+const BRANCHES = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+const GUA_BY_GONG = Object.fromEntries(Object.entries(GUA_TO_GONG).map(([gua, gong]) => [gong, gua]));
 
-/** 根据年份查找所属运数 (支持180年循环) */
-export function getCurrentYun(year) {
-  const found = SANYUAN_JIUYUN.find(y => year >= y.start && year <= y.end);
-  if (found) return found;
+export const FENGSHUI_CALCULATION_MODEL = Object.freeze({
+  school: '玄空飞星·沈氏下卦·正向盘',
+  chartType: '下卦',
+  calendar: 'lunar-javascript@1.7.7; exact solar-term boundary',
+  validation: 'validated_declared_school',
+  interpretationValidation: 'not_validated',
+  unsupported: ['替卦', '兼向', '出卦', '形煞', '现实吉凶与化解'],
+});
 
-  // 180年循环: 1864前或2043后
-  const cycle = 180;
-  const base = 1864;
-  const offset = ((year - base) % cycle + cycle) % cycle;
-  const normalized = base + offset;
-  const fallback = SANYUAN_JIUYUN.find(y => normalized >= y.start && normalized <= y.end);
-  if (fallback) return { ...fallback, start: year - offset + (fallback.start - base), end: year - offset + (fallback.end - base) };
-
-  console.warn('[风水] 无法确定运数，默认九运');
-  return SANYUAN_JIUYUN[8];
+function wrap1to9(value) {
+  return ((((value - 1) % 9) + 9) % 9) + 1;
 }
 
-// ===== 2. 九宫飞星核心 =====
-
-/**
- * 飞星布局
- * @param {number} centerStar 中宫星数 (1-9)
- * @param {boolean} forward 是否顺飞
- * @returns {{ [gong: number]: number }} 各宫星数
- */
-export function flyStars(centerStar, forward = true) {
-  const result = {};
-  for (let i = 0; i < 9; i++) {
-    let star;
-    if (forward) {
-      star = ((centerStar - 1 + i) % 9) + 1;
-    } else {
-      star = ((centerStar - 1 - i + 18) % 9) + 1;
-    }
-    result[FLY_ORDER[i]] = star;
+function assertIntegerInRange(name, value, min, max, label) {
+  if (!Number.isInteger(value) || value < min || value > max) {
+    throw new RangeError(`${label} ${name} 必须是 ${min}-${max} 的整数，收到 ${value}`);
   }
-  return result;
 }
 
-// ===== 3. 二十四山 =====
+function assertYear(year, label = '年份') {
+  assertIntegerInRange('year', year, 1, 9999, label);
+}
 
-/** 根据度数找到对应的二十四山 */
+function validateCivilDateTime(year, month, day, hour, minute) {
+  assertYear(year, '公历');
+  assertIntegerInRange('month', month, 1, 12, '公历');
+  assertIntegerInRange('day', day, 1, 31, '公历');
+  assertIntegerInRange('hour', hour, 0, 23, '时间');
+  assertIntegerInRange('minute', minute, 0, 59, '时间');
+
+  const probe = new Date(0);
+  probe.setUTCHours(hour, minute, 0, 0);
+  probe.setUTCFullYear(year, month - 1, day);
+  if (
+    probe.getUTCFullYear() !== year
+    || probe.getUTCMonth() !== month - 1
+    || probe.getUTCDate() !== day
+  ) {
+    throw new RangeError(`公历中不存在该日期 ${year}-${month}-${day}`);
+  }
+}
+
+/** 根据已完成立春切换的太阳年查三元九运。 */
+export function getCurrentYun(year) {
+  assertYear(year);
+  const cycleOffset = ((year - 1864) % 180 + 180) % 180;
+  const yun = Math.floor(cycleOffset / 20) + 1;
+  const cycleStart = year - cycleOffset;
+  const start = cycleStart + (yun - 1) * 20;
+  const yuan = yun <= 3 ? '上元' : yun <= 6 ? '中元' : '下元';
+  return { yuan, yun, start, end: start + 19 };
+}
+
+/** 按真实立春时刻确定建造日期所属运。 */
+export function getCurrentYunForDate(year, month, day, hour = 0, minute = 0) {
+  validateCivilDateTime(year, month, day, hour, minute);
+  const calendar = createBaziCalendar(year, month, day, hour, minute);
+  return {
+    ...getCurrentYun(calendar.adjustedYear),
+    effectiveYear: calendar.adjustedYear,
+    boundary: 'exact_lichun',
+  };
+}
+
+/** 九星沿固定洛书路径飞布；顺飞数字递增，逆飞数字递减。 */
+export function flyStars(centerStar, forward = true) {
+  assertIntegerInRange('centerStar', centerStar, 1, 9, '飞星');
+  if (typeof forward !== 'boolean') {
+    throw new TypeError(`forward 必须是 boolean，收到 ${forward}`);
+  }
+
+  return Object.fromEntries(FLY_ORDER.map((palace, index) => [
+    palace,
+    wrap1to9(centerStar + (forward ? index : -index)),
+  ]));
+}
+
+/** 根据罗盘度数定位二十四山；0 度为正北，顺时针增加。 */
 export function findMountain(degree) {
-  degree = ((degree % 360) + 360) % 360;
-  return ERSHISI_SHAN.find(m => {
-    if (m.start < m.end) {
-      return degree >= m.start && degree < m.end;
-    }
-    // 跨0度: 子山 352.5-7.5
-    return degree >= m.start || degree < m.end;
-  });
+  if (!Number.isFinite(degree)) {
+    throw new RangeError(`坐向度数必须是 finite 有效数字，收到 ${degree}`);
+  }
+  const normalized = ((degree % 360) + 360) % 360;
+  const mountain = ERSHISI_SHAN.find(item => (
+    item.start < item.end
+      ? normalized >= item.start && normalized < item.end
+      : normalized >= item.start || normalized < item.end
+  ));
+  if (!mountain) throw new Error(`无法定位坐向度数 ${degree}`);
+  return mountain;
 }
 
-/** 根据朝向度数计算坐向 */
+/** 输入朝向度数，返回相对的坐山与朝向。 */
 export function getSittingFacing(facingDegree) {
-  const facing = findMountain(facingDegree);
-  const sittingDegree = (facingDegree + 180) % 360;
-  const sitting = findMountain(sittingDegree);
-  return { sitting, facing, sittingDegree, facingDegree };
+  if (!Number.isFinite(facingDegree)) {
+    throw new RangeError(`朝向度数必须是 finite 有效数字，收到 ${facingDegree}`);
+  }
+  const normalizedFacing = ((facingDegree % 360) + 360) % 360;
+  const sittingDegree = (normalizedFacing + 180) % 360;
+  return {
+    sitting: findMountain(sittingDegree),
+    facing: findMountain(normalizedFacing),
+    sittingDegree,
+    facingDegree: normalizedFacing,
+  };
 }
 
-// ===== 4. 运盘 =====
+function mountainCenter(mountain) {
+  if (mountain.start < mountain.end) return (mountain.start + mountain.end) / 2;
+  return ((mountain.start + mountain.end + 360) / 2) % 360;
+}
 
-/** 运盘: 运数入中宫顺飞 */
+function angularDistance(left, right) {
+  const difference = Math.abs((((left - right) % 360) + 360) % 360);
+  return Math.min(difference, 360 - difference);
+}
+
+function assertLowerChartDegree(degree, mountain) {
+  if (angularDistance(((degree % 360) + 360) % 360, mountainCenter(mountain)) > 4.5 + 1e-9) {
+    throw new RangeError(
+      `${degree}° 超出${mountain.name}山下卦正向中间九度范围；替卦/兼向尚未实现，不能给出下卦盘`,
+    );
+  }
+}
+
+function findMountainByGuaAndYuan(gua, sanyuan) {
+  const mountain = ERSHISI_SHAN.find(item => item.gua === gua && item.sanyuan === sanyuan);
+  if (!mountain) throw new Error(`找不到 ${gua} 宫 ${sanyuan}元龙`);
+  return mountain;
+}
+
+function determineFlyDirection(centerStar, sourceMountain) {
+  if (centerStar === 5) return sourceMountain.yinyang === '阳';
+  const homeGua = GUA_BY_GONG[centerStar];
+  const substitute = findMountainByGuaAndYuan(homeGua, sourceMountain.sanyuan);
+  return substitute.yinyang === '阳';
+}
+
 function getYunPan(yunNum) {
   return flyStars(yunNum, true);
 }
 
-// ===== 5. 山盘 & 向盘 =====
-
-/**
- * 判断山/向星的飞行方向（顺飞或逆飞）
- * 规则: 看该二十四山的阴阳属性
- * 阳山 → 顺飞, 阴山 → 逆飞
- */
-function determineFlyDirection(mountain) {
-  return mountain.yinyang === '阳';
-}
-
-/** 山盘: 坐山所在宫位的运星入中宫 */
 function getShanPan(yunPan, sitting) {
-  const sittingGong = GUA_TO_GONG[sitting.gua];
-  const shanCenter = yunPan[sittingGong];
-  const forward = determineFlyDirection(sitting);
-  return flyStars(shanCenter, forward);
+  const center = yunPan[GUA_TO_GONG[sitting.gua]];
+  return flyStars(center, determineFlyDirection(center, sitting));
 }
 
-/** 向盘: 朝向所在宫位的运星入中宫 */
 function getXiangPan(yunPan, facing) {
-  const facingGong = GUA_TO_GONG[facing.gua];
-  const xiangCenter = yunPan[facingGong];
-  const forward = determineFlyDirection(facing);
-  return flyStars(xiangCenter, forward);
+  const center = yunPan[GUA_TO_GONG[facing.gua]];
+  return flyStars(center, determineFlyDirection(center, facing));
 }
 
-// ===== 6. 年飞星 & 月飞星 =====
+function getYearCenter(year) {
+  assertYear(year);
+  return wrap1to9(9 - (year - 2000));
+}
 
-/** 年飞星: 以2000年九紫入中为基准逆推 */
+/** 输入的是已经按立春切换后的太阳年。 */
 export function getYearFlyStar(year) {
-  const center = ((9 - ((year - 2000) % 9) + 9) % 9) || 9;
-  return flyStars(center, true);
+  return flyStars(getYearCenter(year), true);
 }
 
-/** 月飞星 */
-export function getMonthFlyStar(year, month) {
-  const DIZHI = ['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
-  const yearBranch = DIZHI[((year - 4) % 12 + 12) % 12];
-
-  let janCenter;
-  if ('子午卯酉'.includes(yearBranch)) janCenter = 8;
-  else if ('辰戌丑未'.includes(yearBranch)) janCenter = 5;
-  else janCenter = 2;
-
-  const center = ((janCenter - ((month - 1) % 9) + 9) % 9) || 9;
-  return flyStars(center, true);
+export function getYearFlyStarForDate(year, month, day, hour = 0, minute = 0) {
+  validateCivilDateTime(year, month, day, hour, minute);
+  const calendar = createBaziCalendar(year, month, day, hour, minute);
+  return getYearFlyStar(calendar.adjustedYear);
 }
 
-// ===== 7. 本命卦（八宅法）=====
+export function getMonthFlyStarByBranches(yearBranch, monthBranch) {
+  const monthBranchIndex = BRANCHES.indexOf(monthBranch);
+  if (!BRANCHES.includes(yearBranch) || monthBranchIndex === -1) {
+    throw new RangeError(`年支和月支必须是有效地支，收到 ${yearBranch}/${monthBranch}`);
+  }
+  const firstMonthCenter = '子午卯酉'.includes(yearBranch)
+    ? 8
+    : '辰戌丑未'.includes(yearBranch)
+      ? 5
+      : 2;
+  const monthOffset = (monthBranchIndex - BRANCHES.indexOf('寅') + 12) % 12;
+  return flyStars(wrap1to9(firstMonthCenter - monthOffset), true);
+}
 
-/** 计算本命卦 */
+/** 兼容年+节令月序号接口：1 为寅月，12 为丑月，不是公历月。 */
+export function getMonthFlyStar(year, solarMonthOrdinal) {
+  assertYear(year);
+  assertIntegerInRange('solarMonthOrdinal', solarMonthOrdinal, 1, 12, '节令月');
+  const yearBranch = BRANCHES[((year - 4) % 12 + 12) % 12];
+  const monthBranch = BRANCHES[(solarMonthOrdinal + 1) % 12];
+  return getMonthFlyStarByBranches(yearBranch, monthBranch);
+}
+
+export function getMonthFlyStarForDate(year, month, day, hour = 0, minute = 0) {
+  validateCivilDateTime(year, month, day, hour, minute);
+  const calendar = createBaziCalendar(year, month, day, hour, minute);
+  return getMonthFlyStarByBranches(calendar.pillars.year.branch, calendar.pillars.month.branch);
+}
+
+/** 八宅命卦年表的世纪常数；仅表达该传统算法，不代表现实属性。 */
 export function getBenMingGua(year, gender) {
-  let sum = 0, y = year;
-  while (y > 0) { sum += y % 10; y = Math.floor(y / 10); }
-  while (sum >= 10) {
-    let s = 0, n = sum;
-    while (n > 0) { s += n % 10; n = Math.floor(n / 10); }
-    sum = s;
+  assertYear(year, '出生年份');
+  if (!['male', 'female'].includes(gender)) {
+    throw new RangeError(`性别 gender 必须是 male 或 female，收到 ${gender}`);
   }
 
-  let gua;
-  if (gender === 'male') {
-    gua = year < 2000 ? ((11 - sum) % 9 || 9) : ((10 - sum) % 9 || 9);
+  const lastTwoDigits = year % 100;
+  let raw;
+  if (year < 2000) {
+    raw = gender === 'male' ? 100 - lastTwoDigits : lastTwoDigits - 4;
   } else {
-    gua = year < 2000 ? ((sum + 4) % 9 || 9) : ((sum + 5) % 9 || 9);
+    raw = gender === 'male' ? 99 - lastTwoDigits : lastTwoDigits + 6;
   }
-  if (gua === 5) gua = gender === 'male' ? 2 : 8;
+  let number = ((raw % 9) + 9) % 9;
+  if (number === 0) number = 9;
+  if (number === 5) number = gender === 'male' ? 2 : 8;
 
-  const names = { 1:'坎', 2:'坤', 3:'震', 4:'巽', 6:'乾', 7:'兑', 8:'艮', 9:'离' };
-  const group = [1,3,4,9].includes(gua) ? '东四命' : '西四命';
-  return { number: gua, name: names[gua], group };
+  const names = { 1: '坎', 2: '坤', 3: '震', 4: '巽', 6: '乾', 7: '兑', 8: '艮', 9: '离' };
+  return {
+    number,
+    name: names[number],
+    group: [1, 3, 4, 9].includes(number) ? '东四命' : '西四命',
+  };
 }
 
-// ===== 8. 格局分析 =====
-
-/**
- * 判断格局类型
- * 旺山旺向: 当运星(yunNum)在山盘的坐方 + 在向盘的向方
- * 上山下水: 当运星在山盘的向方 + 在向盘的坐方
- * 双星到向: 山盘+向盘的当运星都到了向方
- * 双星到山: 都到了坐方
- */
-function analyzeGeju(shanPan, xiangPan, yunNum, sittingGua, facingGua) {
+function analyzeFormation(shanPan, xiangPan, yunNum, sittingGua, facingGua) {
   const sittingGong = GUA_TO_GONG[sittingGua];
   const facingGong = GUA_TO_GONG[facingGua];
-
   const shanAtSitting = shanPan[sittingGong] === yunNum;
   const shanAtFacing = shanPan[facingGong] === yunNum;
   const xiangAtSitting = xiangPan[sittingGong] === yunNum;
   const xiangAtFacing = xiangPan[facingGong] === yunNum;
 
+  let type;
+  let label;
   if (shanAtSitting && xiangAtFacing) {
-    return { type: 'wang-shan-wang-xiang', label: '旺山旺向', nature: '最吉', desc: '丁财两旺，大吉格局' };
-  }
-  if (shanAtFacing && xiangAtSitting) {
-    return { type: 'shang-shan-xia-shui', label: '上山下水', nature: '最凶', desc: '损丁破财，大凶格局' };
-  }
-  if (shanAtFacing && xiangAtFacing) {
-    return { type: 'shuang-xing-dao-xiang', label: '双星到向', nature: '中', desc: '向方宜开阔有水，旺财但丁稍弱' };
-  }
-  if (shanAtSitting && xiangAtSitting) {
-    return { type: 'shuang-xing-dao-shan', label: '双星到山', nature: '中', desc: '坐方宜有山有靠，旺丁但财稍弱' };
-  }
-
-  return { type: 'other', label: '普通格局', nature: '平', desc: '需逐宫分析吉凶' };
-}
-
-// ===== 9. 宫位组合分析 =====
-
-function findCombos(yunStar, shanStar, xiangStar, yearStar) {
-  const stars = [
-    { type: '山向', s1: shanStar, s2: xiangStar },
-    { type: '运山', s1: yunStar, s2: shanStar },
-    { type: '运向', s1: yunStar, s2: xiangStar },
-  ];
-  if (yearStar) {
-    stars.push({ type: '年山', s1: yearStar, s2: shanStar });
-    stars.push({ type: '年向', s1: yearStar, s2: xiangStar });
-  }
-
-  const found = [];
-  for (const pair of stars) {
-    const combo = STAR_COMBO.find(c => c.s1 === pair.s1 && c.s2 === pair.s2);
-    if (combo) {
-      found.push({ ...combo, pairType: pair.type });
-    }
-  }
-  return found;
-}
-
-// ===== 10. 主函数 =====
-
-/**
- * 风水飞星排盘主入口
- * @param {number} constructionYear 建造年份
- * @param {number} sittingDegree 坐山度数 (0-360)
- * @param {number} analysisYear 分析年份 (默认当年)
- * @param {number|null} analysisMonth 分析月份 (null=不算月飞星)
- */
-export function paiFengshui(constructionYear, sittingDegree, analysisYear = new Date().getFullYear(), analysisMonth = null) {
-  // 1. 确定运数
-  const yunInfo = getCurrentYun(constructionYear);
-  const yunNum = yunInfo.yun;
-
-  // 2. 确定坐向
-  const sitting = findMountain(sittingDegree);
-  const facingDegree = (sittingDegree + 180) % 360;
-  const facing = findMountain(facingDegree);
-
-  if (!sitting || !facing) {
-    console.error('[风水] 无法确定坐向', sittingDegree);
-    return null;
-  }
-
-  // 3. 排运盘
-  const yunPan = getYunPan(yunNum);
-
-  // 4. 排山盘 & 向盘
-  const shanPan = getShanPan(yunPan, sitting);
-  const xiangPan = getXiangPan(yunPan, facing);
-
-  // 5. 年飞星
-  const yearPan = getYearFlyStar(analysisYear);
-  const yearCenter = ((9 - ((analysisYear - 2000) % 9) + 9) % 9) || 9;
-
-  // 6. 月飞星 (optional)
-  const monthPan = analysisMonth ? getMonthFlyStar(analysisYear, analysisMonth) : null;
-
-  // 7. 格局判断
-  const geju = analyzeGeju(shanPan, xiangPan, yunNum, sitting.gua, facing.gua);
-
-  // 8. 组装九宫数据
-  const palaces = {};
-  for (let num = 1; num <= 9; num++) {
-    const gInfo = JIUGONG.find(g => g.num === num);
-    const yunStar = yunPan[num];
-    const shanStar = shanPan[num];
-    const xiangStar = xiangPan[num];
-    const yearStar = yearPan[num];
-    const monthStar = monthPan ? monthPan[num] : null;
-
-    const combos = findCombos(yunStar, shanStar, xiangStar, yearStar);
-
-    // 判断该宫总体吉凶
-    const hasXiong = combos.some(c => c.nature === '大凶' || c.nature === '凶');
-    const hasJi = combos.some(c => c.nature === '吉');
-    const has5or2 = [yunStar, shanStar, xiangStar, yearStar].some(s => s === 5 || s === 2);
-
-    let assessment = '平';
-    if (hasXiong || has5or2) assessment = '凶';
-    if (hasJi && !hasXiong) assessment = '吉';
-
-    const remedy = STAR_REMEDY[yearStar];
-
-    palaces[num] = {
-      num,
-      name: gInfo.name,
-      dir: gInfo.dir,
-      wuxing: gInfo.wuxing,
-      yunStar,
-      shanStar,
-      xiangStar,
-      yearStar,
-      monthStar,
-      combos,
-      assessment,
-      remedy,
-    };
+    type = 'wang-shan-wang-xiang';
+    label = '旺山旺向';
+  } else if (shanAtFacing && xiangAtSitting) {
+    type = 'shang-shan-xia-shui';
+    label = '上山下水';
+  } else if (shanAtFacing && xiangAtFacing) {
+    type = 'shuang-xing-dao-xiang';
+    label = '双星到向';
+  } else if (shanAtSitting && xiangAtSitting) {
+    type = 'shuang-xing-dao-shan';
+    label = '双星到坐';
+  } else {
+    throw new Error(`无法从 ${yunNum} 运 ${sittingGua}山${facingGua}向盘识别结构格局`);
   }
 
   return {
+    type,
+    label,
+    validation: 'validated_structural_label',
+    interpretationValidation: 'not_validated',
+  };
+}
+
+/**
+ * 年份参数均表示“该年立春后”的太阳年标签；精确边界请调用日期版辅助函数。
+ */
+export function paiFengshui(
+  constructionYear,
+  sittingDegree,
+  analysisYear = new Date().getFullYear(),
+  analysisMonth = null,
+) {
+  assertYear(constructionYear, '建造年份');
+  assertYear(analysisYear, '分析年份');
+  if (analysisMonth !== null) {
+    assertIntegerInRange('analysisMonth', analysisMonth, 1, 12, '节令月');
+  }
+
+  const sitting = findMountain(sittingDegree);
+  assertLowerChartDegree(sittingDegree, sitting);
+  const normalizedSittingDegree = ((sittingDegree % 360) + 360) % 360;
+  const facingDegree = (normalizedSittingDegree + 180) % 360;
+  const facing = findMountain(facingDegree);
+  const yunInfo = getCurrentYun(constructionYear);
+  const yunPan = getYunPan(yunInfo.yun);
+  const shanPan = getShanPan(yunPan, sitting);
+  const xiangPan = getXiangPan(yunPan, facing);
+  const yearPan = getYearFlyStar(analysisYear);
+  const monthPan = analysisMonth === null ? null : getMonthFlyStar(analysisYear, analysisMonth);
+  const yearCenter = yearPan[5];
+  const geju = analyzeFormation(shanPan, xiangPan, yunInfo.yun, sitting.gua, facing.gua);
+
+  const palaces = Object.fromEntries(JIUGONG.map(gong => [gong.num, {
+    num: gong.num,
+    name: gong.name,
+    dir: gong.dir,
+    wuxing: gong.wuxing,
+    yunStar: yunPan[gong.num],
+    shanStar: shanPan[gong.num],
+    xiangStar: xiangPan[gong.num],
+    yearStar: yearPan[gong.num],
+    monthStar: monthPan?.[gong.num] ?? null,
+    interpretationValidation: 'not_validated',
+  }]));
+
+  return {
     meta: {
-      yunNum,
-      yunName: `${yunNum}运`,
+      ...FENGSHUI_CALCULATION_MODEL,
+      yunNum: yunInfo.yun,
+      yunName: `${yunInfo.yun}运`,
       yuanName: yunInfo.yuan,
       constructionYear,
-      sittingDegree,
+      constructionBoundary: 'solar_year_after_lichun',
+      sittingDegree: normalizedSittingDegree,
       sittingName: sitting.name,
       sittingGua: sitting.gua,
       facingDegree,
       facingName: facing.name,
       facingGua: facing.gua,
+      sanyuan: sitting.sanyuan,
       analysisYear,
+      analysisBoundary: 'solar_year_after_lichun',
       analysisMonth,
       yearCenter,
     },
@@ -312,40 +343,32 @@ export function paiFengshui(constructionYear, sittingDegree, analysisYear = new 
     monthPan,
     palaces,
     geju,
-    input: { constructionYear, sittingDegree, analysisYear, analysisMonth },
+    input: { constructionYear, sittingDegree: normalizedSittingDegree, analysisYear, analysisMonth },
   };
 }
 
-// ===== 11. AI 格式化 =====
-
+/** 只把已验证的盘面结构提供给 AI，不注入吉凶、疾病、财务或化解断语。 */
 export function formatForAI(result) {
   if (!result) return '';
   const { meta, palaces, geju } = result;
+  const lines = [
+    '# 玄空飞星下卦盘',
+    `建造太阳年: ${meta.constructionYear}（立春后） -> ${meta.yuanName}${meta.yunName}`,
+    `坐向: 坐${meta.sittingName}(${meta.sittingGua})朝${meta.facingName}(${meta.facingGua})`,
+    `坐山度数: ${meta.sittingDegree}°；三元龙: ${meta.sanyuan}元龙`,
+    `结构格局标签: ${geju.label}（只验证位置关系，传统解释尚未验证）`,
+    `分析太阳年: ${meta.analysisYear}（立春后）；年星中宫: ${STAR_INFO[meta.yearCenter]?.short}`,
+    '',
+    '## 九宫确定性结构',
+  ];
 
-  let text = `# 玄空飞星风水分析\n\n`;
-  text += `建造年份: ${meta.constructionYear}年 → ${meta.yuanName}${meta.yunName}\n`;
-  text += `坐向: 坐${meta.sittingName}(${meta.sittingGua})朝${meta.facingName}(${meta.facingGua})\n`;
-  text += `坐山度数: ${meta.sittingDegree}°\n`;
-  text += `格局: ${geju.label} (${geju.desc})\n`;
-  text += `分析年份: ${meta.analysisYear}年 (年飞星中宫: ${STAR_INFO[meta.yearCenter]?.short})\n\n`;
-
-  text += `## 九宫飞星\n\n`;
-  for (let num = 1; num <= 9; num++) {
-    const p = palaces[num];
-    const starNames = [
-      `运${STAR_INFO[p.yunStar]?.short}`,
-      `山${STAR_INFO[p.shanStar]?.short}`,
-      `向${STAR_INFO[p.xiangStar]?.short}`,
-      `年${STAR_INFO[p.yearStar]?.short}`,
-    ];
-    text += `${p.name}${num}宫(${p.dir}): ${starNames.join(' ')} | 评估: ${p.assessment}\n`;
-    if (p.combos.length > 0) {
-      text += `  组合: ${p.combos.map(c => `${c.name}(${c.nature})`).join(', ')}\n`;
-    }
+  for (let num = 1; num <= 9; num += 1) {
+    const palace = palaces[num];
+    lines.push(
+      `${palace.name}${num}宫(${palace.dir}): 运${palace.yunStar} 山${palace.shanStar} 向${palace.xiangStar} 年${palace.yearStar}`,
+    );
   }
 
-  text += `\n## 当运星信息\n`;
-  text += `当旺星: 九紫(9) | 生气星: 一白(1) | 衰死星: 二黑(2)·三碧(3)·五黄(5)·七赤(7)\n`;
-
-  return text;
+  lines.push('', '排盘核心已按声明流派验证；星性、格局解释及现实建议尚未验证。');
+  return lines.join('\n');
 }

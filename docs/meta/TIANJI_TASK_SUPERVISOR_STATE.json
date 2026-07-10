@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-10",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 40,
-  "currentFocus": "风水确定性核心验证：三元九运、玄空飞星起盘、顺逆飞与九宫布局。",
-  "nextDecision": "盘点风水 runtime、compendium 与流派口径，先建立飞星固定样本和独立复算，再处理形煞与化解解释。",
+  "overallPercent": 45,
+  "currentFocus": "中医数据库与当前产品消费点安全审计：药味、剂量、方名、穴位、艾灸与症状建议。",
+  "nextDecision": "全量抽取当前 runtime 的中医事实和动作，再与 Skill v3 安全表、原文及现行高质量来源逐项对照。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 90,
+      "progress": 92,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -34,6 +34,7 @@
         "《周易》64 卦核心 1,446 项检查通过；450 条经文、19 处裁决、错综互卦与京房八宫已规范化",
         "紫微 2,880 盘、314,200 项项目内检查与 325,440 字段第二实现对拍均无差异；解释层 blocked",
         "奇门 23,751 盘、1,900,230 项内部检查 0 fail；3meta 核心与 kinqimen 共享口径对照通过；解释层 blocked",
+        "风水 216 张下卦盘、6,469 项项目内检查 0 fail；第二实现 6,048 盘面字段与 30,684 历法字段 0 mismatch；解释层 blocked",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
@@ -128,9 +129,17 @@
       "owner": "Codex"
     },
     {
+      "id": "TJI-VAL-015",
+      "name": "中医数据库与当前消费点安全验证",
+      "status": "in_progress",
+      "phase": "V0",
+      "doneWhen": "当前产品内全部药味、剂量、方名、穴位、艾灸和症状建议有 inventory、来源、安全等级与消费结论；Skill v3 的补充和冲突有记录。",
+      "owner": "Codex"
+    },
+    {
       "id": "TJI-VAL-014",
       "name": "风水三元九运与玄空飞星验证",
-      "status": "in_progress",
+      "status": "completed",
       "phase": "V0",
       "doneWhen": "声明风水流派和时间口径，三元九运、宅盘/年盘飞星、顺逆飞及九宫布局有独立对照；形煞和化解解释单独分层。",
       "owner": "Codex"
@@ -281,7 +290,7 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "fengshui_audit_in_progress", "rule": "八字、六爻、梅花、共享《周易》、紫微与奇门核心已划定复用边界；当前进入风水飞星。" },
+    { "name": "排盘与数据库正确性", "state": "tcm_safety_audit_in_progress", "rule": "八字、六爻、梅花、共享《周易》、紫微、奇门与风水下卦核心已划定复用边界；当前进入中医消费点和安全数据库。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
@@ -332,6 +341,9 @@
     "奇门项目内 23,751 盘、1,900,230 项检查 0 fail；3meta 奇门核心 0 mismatch",
     "kinqimen 2024 年 189,789 个共享字段 0 mismatch；值使算法差异已明确排除",
     "database/qimen/qimen-core.json 已生成；格局、用神、健康、诉讼、财务与方位解释 blocked",
-    "TJI-VAL-014 已启动：风水三元九运与玄空飞星进入验证"
+    "风水项目内 216 张盘、6,469 项检查 0 fail；独立实现 6,048 盘面字段 0 mismatch",
+    "tyme4ts 对 2020-2026 共 10,228 时刻的太阳年、流年和流月中宫 30,684 字段 0 mismatch",
+    "database/fengshui/fengshui-core.json 已生成；替卦、形煞、星性、化解和现实预测 blocked",
+    "TJI-VAL-015 已启动：中医数据库与当前消费点安全验证"
   ]
 }

@@ -1,5 +1,7 @@
 # 风水篇 · 形煞图鉴
 
+> **LEGACY / NON-CANONICAL / `not_validated`**：形煞、事件映射与化解建议尚未核验。规范边界见 `../../compendium-new/07-fengshui/02-xingsha-catalog.md`。
+
 > **难度标签**：🟢必修：常见形煞 | 🟡进阶：化解方法
 
 > *"形煞是眼睛能看到的不利因素。不需要罗盘，不需要排盘，走一圈就能判断。"——师父*

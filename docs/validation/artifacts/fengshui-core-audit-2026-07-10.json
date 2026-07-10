@@ -1,0 +1,78 @@
+{
+  "audit": "fengshui_core",
+  "generatedAt": "2026-07-10",
+  "result": "pass",
+  "scope": {
+    "school": "玄空飞星·沈氏下卦·正向盘",
+    "chartType": "下卦",
+    "calendar": "lunar-javascript@1.7.7; exact solar-term boundary",
+    "validation": "validated_declared_school",
+    "interpretationValidation": "not_validated",
+    "unsupported": [
+      "替卦",
+      "兼向",
+      "出卦",
+      "形煞",
+      "现实吉凶与化解"
+    ]
+  },
+  "summary": {
+    "charts": 216,
+    "checks": 6469,
+    "failures": 0,
+    "categories": {
+      "inventory": {
+        "checks": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "finite_tables": {
+        "checks": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "flying": {
+        "checks": 18,
+        "passed": 18,
+        "failed": 0
+      },
+      "period_plate": {
+        "checks": 1944,
+        "passed": 1944,
+        "failed": 0
+      },
+      "mountain_plate": {
+        "checks": 1944,
+        "passed": 1944,
+        "failed": 0
+      },
+      "water_plate": {
+        "checks": 1944,
+        "passed": 1944,
+        "failed": 0
+      },
+      "formation": {
+        "checks": 216,
+        "passed": 216,
+        "failed": 0
+      },
+      "eight_mansions_kua": {
+        "checks": 400,
+        "passed": 400,
+        "failed": 0
+      }
+    }
+  },
+  "sourceRefs": {
+    "src/modules/fengshui/data.js": "43742208e5331fb300debe86cb88ea2e0f301e9a865972b5987ca7ce21c66693",
+    "src/modules/fengshui/engine.js": "2947aa1b35c316f29c21730918d98f55c1d26abb034798517586ce17cccd61c9",
+    "database/xuanxue/compendium-new/07-fengshui/01-xuankong-feixing.md": "72ef659e65985edb6c3c8de0ad6d0909e84148507aacb81ee2aef6249609de21",
+    "database/xuanxue/compendium-new/07-fengshui/03-luopan-data.md": "3988e79e3de3390ea068b732ad5baa313c6848960137a3167b8667d86de0e4df"
+  },
+  "boundaries": [
+    "replacement charts, mixed bearings, and void lines",
+    "star nature, combination interpretation, and formation auspiciousness",
+    "shape-form catalogs, remedies, placement advice, and real-world prediction"
+  ],
+  "examples": []
+}

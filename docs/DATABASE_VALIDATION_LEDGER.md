@@ -34,7 +34,8 @@
 | VAL-ZW-002 | P1 | 紫微解释 | 星性、庙旺陷、格局、宫位断语、飞星/小限/流年应期 | 流派解释 | V3+来源声明 | blocked | 两份主星详解互有差异且未逐条溯源；疾病、婚财、职业和现实吉凶不进规范核心，AI/UI 已加边界 |
 | VAL-QM-001 | P1 | 奇门 | 节气、阴阳遁、局数、旬首、值符值使与四盘 | 流派确定性 | V3 | pass | 声明时家拆补转盘、中五寄坤二、天禽随天芮；23,751 盘、1,900,230 项内部检查 0 fail，`3meta@2.6.0` 奇门核心 0 mismatch，`kinqimen@0.3.1` 共享字段 0 mismatch |
 | VAL-QM-002 | P1 | 奇门解释 | 九星八门八神吉凶、格局、用神、克应、方位与现实预测 | 流派解释 | V3+来源声明 | blocked | 排盘通过不授证断事；AI/UI 明确 `not_validated`，移除健康、诉讼、投资与吉方吉时建议入口 |
-| VAL-FS-001 | P1 | 风水 | 三元九运、玄空飞星起盘、顺逆飞与九宫布局 | 流派确定性 | V3 | in_progress | 奇门完成后直接进入；先盘点 runtime、compendium 与边界口径 |
+| VAL-FS-001 | P1 | 风水 | 三元九运、二十四山、下卦宅盘、年/月飞星与九宫布局 | 流派确定性 | V3 | pass | 声明沈氏玄空常用下卦正向盘口径；216 盘、6,469 项项目内检查 0 fail，独立实现 6,048 字段 0 mismatch；10,228 个时刻的历法边界 30,684 字段 0 mismatch |
+| VAL-FS-002 | P1 | 风水解释 | 九星/组合吉凶、形煞、格局断语、化解、布局与现实预测 | 流派解释/安全 | V3+来源声明 | blocked | 排盘结构通过不授证住宅或个人结果；AI/UI 移除吉凶色、疾病财务映射、摆件施工建议；替卦/兼向/出卦也不在实现范围 |
 | VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | Fresh reviewer 给出 hold；主线程已逐项回看 PRD、当前中医消费点与旧规格，见 `PRD_FRESH_REVIEW_2026-07-09.md` |
 
 ## Findings
@@ -48,6 +49,12 @@
 | F-BZ-003 | P1 | VAL-BZ-003 | mitigated | 身强 `/100` 和统一用神方向无可靠来源且被原典反例否定 | 底层仅留作兼容；UI/AI 标为未校勘启发式，移除分数与用神结论；正式算法需重新选派别并建 fixture |
 | F-BZ-004 | P1 | VAL-BZ-004 | resolved_school_difference | 旧表把两支同现直接显示为“午未合火”，混淆六合关系与有条件的合化，且未披露火/土分歧 | runtime 改为“午未合”；`huaCandidates` 保留火/土，不判断条件时不宣称合化 |
 | F-BZ-005 | P2 | VAL-SHARED-001 | remediated | 日柱改由历法适配层计算；UTC 与 Pacific/Apia 同一输入回归一致，39,447 日连续性通过 | 保持跨 TZ 回归 |
+| F-FS-001 | P1 | VAL-FS-001 | verified_remediated | 二十四山把每卦前两山的地元龙/天元龙整列对调，并误标 7 山玄空阴阳 | 24 山有限表与独立实现全量一致 |
+| F-FS-002 | P1 | VAL-FS-001 | verified_remediated | 山盘/向盘错误地直接按实际坐山/向首阴阳定顺逆 | 改为入中星原宫的同元龙阴阳；216 盘从 1,648 字段差异降为 0 |
+| F-FS-003 | P1 | VAL-FS-001 | verified_remediated | 月飞星把公历月当节令月，未按十二节切换 | 复用精确节令历法；2020-2026 与 tyme4ts 10,228 时刻 0 mismatch |
+| F-FS-004 | P1 | VAL-FS-001 | verified_remediated | 年份接口未声明立春边界，2000 年后八宅命卦常数错一位 | 增加精确日期辅助函数、太阳年标签；1900-2099 两性 400 值枚举通过 |
+| F-FS-005 | P1 | VAL-FS-001 | verified_remediated | 任意 15 度山向都静默套用下卦，没有区分兼向/替卦 | 只接受山中线左右 4.5 度；超出范围显式拒绝 |
+| F-FS-006 | P0 | VAL-FS-002 | mitigated | Runtime 把未验证星性、疾病财务断语和摆件化解显示为确定建议 | 用户界面与 AI 上下文只保留盘面结构；传统解释统一 blocked |
 | F-BZ-006 | P1 | VAL-SHARED-001 | partially_remediated | NOAA 均时差已加入并按固定 365 日分母校正闰年；UI 标准时口径已明确；历史时区/夏令时仍未解决 | IANA 时区数据与历史 DST fixture |
 | F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 传统时辰精度年月日、`solarDate` 与口径元数据，整数年龄继续兼容 | 历史记录 schema/version 验证 |
 | F-BZH-001 | P0 | VAL-BZH-001 | mitigated_blocked | 旧 runtime 以天干 1/藏干 0.5 和固定阈值推导脏腑风险、疾病、食疗和大运健康 | 当前消费路径、旧历史和 AI prompt 均 blocked；独立传统与医学证据通过前不得恢复 |
@@ -111,3 +118,4 @@
 | 2026-07-10 | VAL-ZW-001/002 | `audit-ziwei.mjs`；《紫微斗数全书》安星口诀；隔离 `iztro@2.5.8` | 2,880 盘、314,200 项项目内检查 0 fail；325,440 字段第二实现对拍 0 mismatch；修复 100 格紫微表、廉贞、魁钺、大限和回退；解释层 blocked |
 | 2026-07-10 | VAL-ZW-001/002 | Playwright 2000-08-16 寅时女命；桌面与 390×844 | 命宫午、木三局、紫微午、天府戌和首限壬午可见；验证边界可见；移动端无水平溢出，控制台 0 error |
 | 2026-07-10 | VAL-QM-001/002 | `audit-qimen.mjs`；《奇门遁甲统宗》《奇门法窍》；隔离 `3meta@2.6.0` 与 `kinqimen@0.3.1` | 23,751 盘、1,900,230 项内部检查 0 fail；`3meta` 奇门核心 0 mismatch；`kinqimen` 189,789 共享字段 0 mismatch；三元、地盘、值使等根因已修复，解释层 blocked |
+| 2026-07-10 | VAL-FS-001/002 | `audit-fengshui.mjs`；隔离 `@soul-atelier/xuankong@0.2.1`、`@soul-atelier/calendar@0.3.0`/tyme4ts | 216 张下卦盘项目内 6,469 项 0 fail；第二实现盘面 6,048 字段及 10,228 时刻年/月边界 30,684 字段 0 mismatch；解释、替卦与现实建议 blocked |

@@ -41,12 +41,12 @@
         <h1>天机卷任务监督器</h1>
         <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
-      <div id="percent" class="percent">40%</div>
+      <div id="percent" class="percent">45%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">风水确定性核心验证：三元九运、玄空飞星起盘、顺逆飞与九宫布局。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">盘点风水 runtime、compendium 与流派口径，先建立飞星固定样本和独立复算。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">中医数据库与当前产品消费点安全审计。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">全量抽取药味、剂量、方名、穴位、艾灸与症状建议，再逐项对照 Skill v3 安全表。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
     </section>
 
@@ -68,12 +68,12 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 40,
-      currentFocus: '风水确定性核心验证：三元九运、玄空飞星起盘、顺逆飞与九宫布局。',
-      nextDecision: '盘点风水 runtime、compendium 与流派口径，先建立飞星固定样本和独立复算。',
+      overallPercent: 45,
+      currentFocus: '中医数据库与当前产品消费点安全审计。',
+      nextDecision: '全量抽取药味、剂量、方名、穴位、艾灸与症状建议，再逐项对照 Skill v3 安全表。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
-        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 90, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 92, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'review_pending', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -81,7 +81,7 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'fengshui_audit_in_progress', rule: '八字、六爻、梅花、共享《周易》、紫微与奇门核心已划定边界；当前进入风水飞星。' },
+        { name: '排盘与数据库正确性', state: 'tcm_safety_audit_in_progress', rule: '风水下卦核心已完成；当前进入中医消费点与安全数据库。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
@@ -110,7 +110,10 @@
         'database/ziwei/ziwei-core.json 已生成',
         '奇门 23,751 盘、1,900,230 项内部检查 0 fail；3meta 核心与 kinqimen 共享口径对照通过',
         'database/qimen/qimen-core.json 已生成；奇门解释层 blocked',
-        'TJI-VAL-014 已启动：风水三元九运与玄空飞星进入验证',
+        '风水 216 张盘、6,469 项检查 0 fail；第二实现 6,048 盘面字段 0 mismatch',
+        'tyme4ts 10,228 时刻的 30,684 个年/月边界字段 0 mismatch',
+        'database/fengshui/fengshui-core.json 已生成；解释与替卦 blocked',
+        'TJI-VAL-015 已启动：中医数据库与当前消费点安全验证',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',

@@ -1,0 +1,68 @@
+{
+  "audit": "fengshui_secondary_soul_atelier",
+  "generatedAt": "2026-07-10",
+  "result": "pass",
+  "secondaryImplementations": [
+    {
+      "package": "@soul-atelier/xuankong@0.2.1",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/soul-atelier/sdks.git",
+        "directory": "packages/xuankong"
+      }
+    },
+    {
+      "package": "@soul-atelier/calendar@0.3.0",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/soul-atelier/sdks.git",
+        "directory": "packages/calendar"
+      }
+    }
+  ],
+  "relevantSourceSha256": "c84e0973d0e2676ff6f9d53bb7c84b9005d7827240a9f607d79a68d74bbd3663",
+  "summary": {
+    "charts": 216,
+    "calendarInstants": 10228,
+    "fields": 36732,
+    "mismatches": 0,
+    "categories": {
+      "chart": {
+        "fields": 216,
+        "mismatches": 0
+      },
+      "period_plate": {
+        "fields": 1944,
+        "mismatches": 0
+      },
+      "mountain_plate": {
+        "fields": 1944,
+        "mismatches": 0
+      },
+      "water_plate": {
+        "fields": 1944,
+        "mismatches": 0
+      },
+      "calendar_period": {
+        "fields": 10228,
+        "mismatches": 0
+      },
+      "annual_center": {
+        "fields": 10228,
+        "mismatches": 0
+      },
+      "monthly_center": {
+        "fields": 10228,
+        "mismatches": 0
+      }
+    }
+  },
+  "boundaries": [
+    "The packages are isolated validation evidence and are not product dependencies.",
+    "Chart comparison covers lower-trigram deterministic structure, not interpretive combinations.",
+    "Calendar comparison uses tyme4ts-backed four pillars to independently resolve Lichun and Jie boundaries."
+  ],
+  "examples": []
+}
