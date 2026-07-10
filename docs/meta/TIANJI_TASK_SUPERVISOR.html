@@ -69,8 +69,8 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 58,
-      currentFocus: '中医运行时同义语义与现行逐项授权收尾；50 个 reference 已完整 inventory，八个候选层继续 blocked。',
-      nextDecision: '逐项裁决旧 tcm-data、望诊追问和可见食疗/诊断文字，并建立 106 项食药物质、现行药典、逐药逐方和逐穴正文的授权缺口。',
+      currentFocus: '中医及跨模块健康语义运行时收尾；50 个 reference 已完整 inventory，八个候选层继续 blocked。',
+      nextDecision: '完成 fresh runtime 复核，处理残余可见或 AI 消费语义，再建立 106 项食药物质、现行药典、逐药逐方和逐穴正文的授权缺口。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -143,6 +143,8 @@
         '经典/医家/食疗 42-48 共 1,142 条非空行、8 表/79 表格行、145 标题、603 条窄风险视图和 20 finding，14,281 项 0 fail',
         'TCM 50 reference 已完整 inventory；A级/食疗级/药食两用均不授予产品资格',
         '运行时语义收尾：望诊 follow-up 已移除“调养方法”诱导，统一为可见特征与拍摄质量范围',
+        '跨模块健康语义：普通八字、手相生命线、面相疾厄宫与伪肤色字段已隔离，专项回归覆盖首轮与追问',
+        '奇门疾病用神和风水病符/化解旧表当前无消费引用，归类 dead_unconsumed，未来接入需重新校勘',
         'fresh review 无 P0/P1；运行时清零过宽声明已降级，旧 tcm-data/望诊语义保持 open',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',

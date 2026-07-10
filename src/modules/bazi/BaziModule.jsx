@@ -32,7 +32,6 @@ const DETAIL_SECTIONS = [
   { id: 'ganqing', label: '感情', prompt: '请详细分析此命盘的感情婚姻：婚姻宫特点、配偶特征、感情稳定性、注意事项。' },
   { id: 'zinv', label: '子女', prompt: '请详细分析此命盘的子女缘：子女星特点、子女数量倾向、与子女关系、教育方向。' },
   { id: 'fumu', label: '父母', prompt: '请详细分析此命盘与父母的关系：印星特点、父母缘分、是否得到父母助力。' },
-  { id: 'jiankang', label: '健康', prompt: '请详细分析此命盘的健康：五行偏枯可能影响的身体部位、需要注意的健康问题、养生方向。' },
 ];
 
 // ===== 排盘中动画 =====
@@ -622,7 +621,7 @@ export default function BaziModule({
             type="text"
             value={question}
             onChange={e => setQuestion(e.target.value)}
-            placeholder="如：事业方向、感情运势、财运、健康..."
+            placeholder="如：事业方向、感情运势、财运..."
             className="w-full bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2.5
               text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring transition-colors font-body text-sm"
           />

@@ -47,7 +47,7 @@ export function buildFaceTextMessage(features, userNote) {
     lines.push('', `用户补充说明：${userNote}`);
   }
 
-  lines.push('', '请根据以上面部特征数据，按照面相学进行综合分析。');
+  lines.push('', '请按文化学习口径说明几何结构与传统术语，不作健康、体质、寿命或医疗推断。');
 
   return { role: 'user', content: lines.join('\n') };
 }

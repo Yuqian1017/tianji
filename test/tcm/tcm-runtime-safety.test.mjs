@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import test from 'node:test';
 
 import { TIZHI_VALIDATION } from '../../src/modules/tizhi/data.js';
@@ -13,6 +13,19 @@ const ROOT = new URL('../../', import.meta.url);
 
 async function source(path) {
   return readFile(new URL(path, ROOT), 'utf8');
+}
+
+async function sourceTree(path) {
+  const entries = await readdir(new URL(`${path}/`, ROOT), { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const child = `${path}/${entry.name}`;
+    if (entry.isDirectory()) files.push(...await sourceTree(child));
+    if (entry.isFile() && /\.(?:js|jsx)$/.test(entry.name)) {
+      files.push({ path: child, content: await source(child) });
+    }
+  }
+  return files;
 }
 
 test('blocks the incomplete historical constitution questionnaire', async () => {
@@ -89,4 +102,39 @@ test('does not expose concrete herbal doses through active TCM runtime paths', a
   ];
   const content = (await Promise.all(paths.map(source))).join('\n');
   assert.doesNotMatch(content, /\d+(?:\.\d+)?\s*(?:g|克)\b/i);
+});
+
+test('blocks health inference in active bazi and palm AI paths', async () => {
+  const baziPrompt = await source('src/modules/bazi/prompt.js');
+  const baziUi = await source('src/modules/bazi/BaziModule.jsx');
+  assert.match(baziPrompt, /不得根据八字.*健康/);
+  assert.doesNotMatch(baziUi, /id: 'jiankang'|五行偏枯可能影响的身体部位|财运、健康/);
+
+  const palmPrompt = await source('src/modules/palm/prompt.js');
+  const palmData = await source('src/modules/palm/data.js');
+  assert.match(palmPrompt, /不得根据手掌或掌纹.*健康/);
+  assert.doesNotMatch(palmPrompt, /健康提示|生命线反映的是生命力强弱和健康状况变化/);
+  assert.doesNotMatch(palmData, /体质一般·宜注意养生|曾经历变故·需注意健康|沟通·商才·健康/);
+});
+
+test('blocks health inference in the active face-reading AI path', async () => {
+  const facePrompt = await source('src/modules/face/prompt.js');
+  const faceData = await source('src/modules/face/data.js');
+  const faceEngine = await source('src/modules/face/engine.js');
+  assert.match(facePrompt, /不得根据面部特征.*健康/);
+  assert.doesNotMatch(facePrompt, /疾厄宫\(山根\)→健康|健康提示/);
+  assert.doesNotMatch(faceData, /健康·抗病力|面白|面青|面黑润|面红|面黄/);
+  assert.match(faceEngine, /不作健康、体质、寿命或医疗推断/);
+});
+
+test('keeps unvalidated legacy medical lookup tables out of runtime consumers', async () => {
+  const files = await sourceTree('src');
+  const withoutDeclarations = files.filter(({ path }) => ![
+    'src/lib/tcm-data.js',
+    'src/modules/qimen/data.js',
+    'src/modules/fengshui/data.js',
+  ].includes(path));
+  const consumers = withoutDeclarations.map(({ content }) => content).join('\n');
+
+  assert.doesNotMatch(consumers, /tcm-data\.js|QIMEN_YONGSHEN|STAR_COMBO|STAR_REMEDY/);
 });

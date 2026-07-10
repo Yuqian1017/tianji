@@ -96,8 +96,8 @@ export const MOUND_NAMES = {
   jupiter: { name: '木星丘', location: '食指根部', governs: '领导力·野心·自信' },
   saturn: { name: '土星丘', location: '中指根部', governs: '责任·思考·命运' },
   apollo: { name: '太阳丘', location: '无名指根部', governs: '才华·名誉·创造力' },
-  mercury: { name: '水星丘', location: '小指根部', governs: '沟通·商才·健康' },
-  venus: { name: '金星丘', location: '拇指根部（大鱼际）', governs: '爱情·精力·生命力' },
+  mercury: { name: '水星丘', location: '小指根部', governs: '沟通·商才·灵活' },
+  venus: { name: '金星丘', location: '拇指根部（大鱼际）', governs: '亲和·热情·情感' },
   luna: { name: '月丘', location: '小鱼际', governs: '想象力·直觉·旅行' },
   mars_positive: { name: '火星正丘', location: '拇指与木星丘之间', governs: '勇气·攻击性' },
   mars_negative: { name: '火星负丘', location: '水星丘与月丘之间', governs: '忍耐·防御力' },
@@ -136,10 +136,10 @@ export function describePalmLineAnswer(questionId, answer) {
 
   const descriptions = {
     lifeLine: {
-      '长且深·弧度大': '生命力旺盛·精力充沛',
-      '长但浅·贴近拇指': '体质一般·宜注意养生',
-      '短但清晰': '行动力强·注重当下',
-      '有断裂或圈': '曾经历变故·需注意健康',
+      '长且深·弧度大': '弧度较大·纹路清晰',
+      '长但浅·贴近拇指': '贴近拇指·纹路较浅',
+      '短但清晰': '线段较短·纹路清晰',
+      '有断裂或圈': '线条不连续或带圈状纹',
     },
     headLine: {
       '直线·很长': '思维理性·逻辑强',
@@ -151,7 +151,7 @@ export function describePalmLineAnswer(questionId, answer) {
     heartLine: {
       '很长到食指下': '理想主义·对感情要求高',
       '到中指下结束': '以自我为中心·务实',
-      '食指中指之间': '平衡型·感情观健康',
+      '食指中指之间': '情感表达较平衡',
       '比较直平': '理性对待感情',
       '很多分叉': '感情经历丰富·情感细腻',
     },

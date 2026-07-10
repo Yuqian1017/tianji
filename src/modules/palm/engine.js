@@ -139,7 +139,7 @@ export function buildPalmTextMessage(features, answers, userNote) {
     lines.push('', `用户补充说明：${userNote}`);
   }
 
-  lines.push('', '请根据以上手相特征数据，按照手相学进行综合分析。');
+  lines.push('', '请按文化学习口径说明可见结构与传统术语，不作健康、体质、寿命或医疗推断。');
 
   return { role: 'user', content: lines.join('\n') };
 }
@@ -150,7 +150,7 @@ export function buildPalmTextMessage(features, answers, userNote) {
  */
 export function buildPalmVisionMessage(base64, features, answers) {
   const textPart = [
-    '这是一张手掌照片，请结合以下ML提取数据和用户自述掌纹进行深度手相分析：',
+    '这是一张手掌照片，请结合以下ML提取数据和用户自述掌纹说明可见结构与传统术语：',
     '',
     `手型：${(HAND_WUXING_TYPES[features?.handType] || HAND_WUXING_TYPES.earth).name}`,
     `掌指比：${features?.palmRatio || '未知'}`,
@@ -162,7 +162,7 @@ export function buildPalmVisionMessage(base64, features, answers) {
     `  感情线：${answers?.heartLine || '未填'}`,
     `  命运线：${answers?.fateLine || '未填'}`,
     '',
-    '请重点分析照片中可见的：掌纹走向、纹路深浅、特殊标记（岛纹、星纹、十字纹等）、手指关节比例、大小鱼际丰满度。这些是ML无法提取的皮肤层面特征。',
+    '请只描述照片中可见的掌纹走向、纹路深浅、特殊标记（岛纹、星纹、十字纹等）、手指关节比例和大小鱼际外观；不得据此推断健康、体质、寿命或医疗需求。',
   ].join('\n');
 
   return {
