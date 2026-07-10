@@ -1,7 +1,7 @@
 # 天机卷 Database Validation Ledger
 
 - 状态：执行中
-- 更新日期：2026-07-09
+- 更新日期：2026-07-10
 - 计划：`DATABASE_VALIDATION_PLAN.md`
 
 ## 状态说明
@@ -24,7 +24,8 @@
 | VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
 | VAL-BZH-001 | P0 | 八字健康 | 五行计数到脏腑风险、疾病、食疗与大运健康的推导 | 医学安全/跨域推断 | V4+安全审查 | blocked | 未验证结构计数不能成为医学证据；runtime、旧历史和 AI 通道已硬阻断 |
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/艾灸建议 | 医疗/安全 | V4+V5 | planned | 全量抽取消费点并反查安全表/现行来源 |
-| VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、变卦 | 精确/流派确定性 | V3+V5 | planned | 复用现有测试入口，补独立 fixtures |
+| VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、旬空、伏神、变卦 | 精确/流派确定性 | V3+V5 | pass | 京房八宫纳甲口径；17,026 项项目内全量检查 0 fail，`iching-shifa@1.8.0` 64 静卦与 4,032 动卦对拍 0 mismatch；Playwright 桌面/390px 全六老阳样例通过 |
+| VAL-LY-002 | P1 | 六爻 | 用神、旺衰、冲合空亡与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 排盘结构通过不授证现实预测；AI prompt 与 UI 已标 `not_validated`，禁止无条件成败、应期和高风险建议 |
 | VAL-ZW-001 | P1 | 紫微 | 十二宫、主星、四化、辅煞星 | 流派确定性 | V3 | planned | 先声明流派与版本 |
 | VAL-QM-001 | P1 | 奇门 | 节气、阴阳遁、局数、四盘 | 流派确定性 | V3 | planned | 来源已标简化，默认高风险 |
 | VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | Fresh reviewer 给出 hold；主线程已逐项回看 PRD、当前中医消费点与旧规格，见 `PRD_FRESH_REVIEW_2026-07-09.md` |
@@ -48,6 +49,10 @@
 | F-BZ-REL-001 | P1 | VAL-BZ-004 | verified_remediated | 寅巳申、丑戌未原本要求三支全齐，漏掉两支相刑 | 两支相刑方向 7/7 全量测试；三支齐全只汇总一个三刑 |
 | F-BZ-REL-002 | P1 | VAL-BZ-006 | mitigated_blocked | 三合/三会标签原本直接写成合水、会木等已成化结果 | 标签改为关系，`huaCandidates` 与 `not_evaluated` 分离；UI/AI 不判合化或吉凶 |
 | F-BZ-REL-003 | P2 | VAL-BZ-004 | school_difference | `po` 有六破候选表但来源版本不同且 runtime 未消费 | 明确 `school_difference_inactive`；选定版本前不启用 |
+| F-LY-001 | P0 | VAL-LY-001 | verified_remediated | `NAJIA` 把内外纳干压成单一字段，乾外错用甲、坤外错用乙 | 拆为 `innerStem`/`outerStem`；乾外壬、坤外癸；64 静卦与 4,032 动卦第二实现对拍归零 |
+| F-LY-002 | P1 | VAL-LY-001 | verified_remediated | 年建固定 2 月 4 日切换，月建用每月固定日期近似 | 复用已验证历法适配层；2026 立春前后回归通过 |
+| F-LY-003 | P1 | VAL-LY-002 | mitigated_blocked | AI prompt 把六冲、六合和空亡写成无条件现实结论 | 解释层标记 `not_validated`，移除绝对规则并禁止高风险决策建议 |
+| F-LY-004 | P2 | VAL-LY-001 | verified_remediated | 非 6/7/8/9 爻值也会被静默转换成卦 | 引擎入口增加值域验证和回归测试 |
 
 ## Evidence Log
 
@@ -69,3 +74,5 @@
 | 2026-07-09 | VAL-BZ-002 | `sxtwl@2.0.7` 相邻节令 + 《渊海子平·论起大运法》《三命通会·论大运》规则的独立手工推导；30 例 | 未调用 runtime `getYun()`；方向、传统时辰精度交运日期和首运干支 30/30 一致，声明口径内达到 V3 |
 | 2026-07-09 | VAL-BZ-003/VAL-BZH-001 | `audit-bazi-strength.mjs`；compendium 算法对照；《滴天髓》《滴天髓阐微》《子平真诠评注》 | 两条原典反例复现；权威模型判定 fail；UI/AI 虚假精度已移除，八字健康输出归零并硬阻断 |
 | 2026-07-09 | VAL-BZ-004/005/006 | `audit-bazi-relations.mjs`；《三命通会》关系与神煞篇；《五行精纪》 | 关系与神煞有限表全量匹配；两支相刑漏检修复；合化/吉凶 blocked；相破保持流派差异 inactive |
+| 2026-07-10 | VAL-LY-001/002 | `audit-liuyao.mjs`；《卜筮正宗》纳甲/伏神规则；隔离 `iching-shifa@1.8.0` | 17,026 项独立检查 0 fail；64 静卦、4,032 动卦第二实现对拍 0 mismatch；确定性排盘 pass，解释层 blocked |
+| 2026-07-10 | VAL-LY-001 | Playwright 全六老阳固定样例；桌面与 390x844 | 乾外壬、坤外癸、六亲世应与解释边界可见；无截断或溢出 |

@@ -11,8 +11,11 @@
     "start": "node server/index.js",
     "lint": "eslint .",
     "test:bazi": "node --test test/bazi/*.test.mjs",
+    "test:liuyao": "node --test test/liuyao/*.test.mjs",
+    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs",
     "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
+    "audit:liuyao": "node scripts/validation/audit-liuyao.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview"
   },

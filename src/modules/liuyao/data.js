@@ -18,14 +18,14 @@ for (const [name, info] of Object.entries(BAGUA)) {
 
 // ===== 纳甲表 =====
 export const NAJIA = {
-  '乾': { stem: '甲', inner: ['子','寅','辰'], outer: ['午','申','戌'] },
-  '坤': { stem: '乙', inner: ['未','巳','卯'], outer: ['丑','亥','酉'] },
-  '震': { stem: '庚', inner: ['子','寅','辰'], outer: ['午','申','戌'] },
-  '巽': { stem: '辛', inner: ['丑','亥','酉'], outer: ['未','巳','卯'] },
-  '坎': { stem: '戊', inner: ['寅','辰','午'], outer: ['申','戌','子'] },
-  '离': { stem: '己', inner: ['卯','丑','亥'], outer: ['酉','未','巳'] },
-  '艮': { stem: '丙', inner: ['辰','午','申'], outer: ['戌','子','寅'] },
-  '兑': { stem: '丁', inner: ['巳','卯','丑'], outer: ['亥','酉','未'] },
+  '乾': { innerStem: '甲', outerStem: '壬', inner: ['子','寅','辰'], outer: ['午','申','戌'] },
+  '坤': { innerStem: '乙', outerStem: '癸', inner: ['未','巳','卯'], outer: ['丑','亥','酉'] },
+  '震': { innerStem: '庚', outerStem: '庚', inner: ['子','寅','辰'], outer: ['午','申','戌'] },
+  '巽': { innerStem: '辛', outerStem: '辛', inner: ['丑','亥','酉'], outer: ['未','巳','卯'] },
+  '坎': { innerStem: '戊', outerStem: '戊', inner: ['寅','辰','午'], outer: ['申','戌','子'] },
+  '离': { innerStem: '己', outerStem: '己', inner: ['卯','丑','亥'], outer: ['酉','未','巳'] },
+  '艮': { innerStem: '丙', outerStem: '丙', inner: ['辰','午','申'], outer: ['戌','子','寅'] },
+  '兑': { innerStem: '丁', outerStem: '丁', inner: ['巳','卯','丑'], outer: ['亥','酉','未'] },
 };
 
 // ===== 地支五行 =====

@@ -3,9 +3,16 @@ import {
   SIX_SPIRITS_ORDER, SPIRIT_START, JINGFANG, PURE_GUA_LIUQIN,
   WUXING_CN, YAO_NAMES,
 } from './data.js';
+import { createBaziCalendar } from '../bazi/calendar.js';
 
 // ===== 五行关系 =====
 const WUXING_ORDER = ['wood', 'fire', 'earth', 'metal', 'water'];
+
+export const LIUYAO_VALIDATION_MODEL = Object.freeze({
+  school: 'jingfang_eight_palaces_najia',
+  chartStatus: 'validated_deterministic',
+  interpretationStatus: 'not_validated',
+});
 
 export function wuxingRelation(from, to) {
   if (from === to) return 'same';
@@ -95,13 +102,13 @@ function applyNajia(lowerGua, upperGua) {
   const lines = [];
   for (let i = 0; i < 3; i++) {
     lines.push({
-      stem: lowerNajia.stem,
+      stem: lowerNajia.innerStem,
       branch: lowerNajia.inner[i],
     });
   }
   for (let i = 0; i < 3; i++) {
     lines.push({
-      stem: upperNajia.stem,
+      stem: upperNajia.outerStem,
       branch: upperNajia.outer[i],
     });
   }
@@ -129,93 +136,53 @@ function findFushen(palaceGua, targetLiuqin, currentLines) {
   return null;
 }
 
-// ===== 获取当前日干支 =====
-export function getTodayGanzhi() {
-  // 基准日: 2024-01-01 = 甲子日 (干支序号 0)
-  // 验证: 1900-01-01 = 甲戌 (序号10), 到 2024-01-01 = 45289天, 45289%60=49,
-  //        (10+49)%60=59... 不对。用另一个验证路径:
-  //        2000-01-01 = 戊午 (序号54), 到 2024-01-01 = 8766天, 8766%60=6,
-  //        (54+6)%60=0 → 甲子 ✓
+function getCurrentLocalDateParts() {
   const now = new Date();
+  return {
+    year: now.getFullYear(),
+    month: now.getMonth() + 1,
+    day: now.getDate(),
+    hour: now.getHours(),
+    minute: now.getMinutes(),
+  };
+}
 
-  const baseDate = new Date(2024, 0, 1); // 2024-01-01 = 甲子
-  const baseIdx = 0; // 甲子
+function getDivinationCalendar(dateParts = getCurrentLocalDateParts()) {
+  const { year, month, day, hour = 0, minute = 0 } = dateParts;
+  return createBaziCalendar(year, month, day, hour, minute);
+}
 
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const diffDays = Math.round((today - baseDate) / 86400000);
-  const idx = ((baseIdx + diffDays) % 60 + 60) % 60;
+// ===== 获取当前日干支 =====
+export function getTodayGanzhi(dateParts) {
+  const day = getDivinationCalendar(dateParts).pillars.day;
+  const idx = Array.from({ length: 60 }, (_, i) => i).find((i) => (
+    TIANGAN[i % 10] === day.stem && DIZHI[i % 12] === day.branch
+  ));
 
   return {
-    stem: TIANGAN[idx % 10],
-    branch: DIZHI[idx % 12],
+    ...day,
     idx,
   };
 }
 
 // ===== 获取当前月建（地支）=====
-export function getCurrentMonthBranch() {
-  const now = new Date();
-  // 简化处理：按节气大致对应月支
-  // 寅月(2月4日前后~3月5日), 卯月(3月6日~4月4日), ...
-  // 月支 = (month + 1 - 2 + 12) % 12 → 大致映射
-  // 精确需要节气表，这里用简化版
-  const month = now.getMonth(); // 0-11
-  const day = now.getDate();
-
-  // 节气近似日期（每月4-6日为节气交界）
-  const jieqi = [
-    { start: [1, 4], branch: '寅' },  // 立春 ~2月4日
-    { start: [2, 6], branch: '卯' },  // 惊蛰 ~3月6日
-    { start: [3, 5], branch: '辰' },  // 清明 ~4月5日
-    { start: [4, 6], branch: '巳' },  // 立夏 ~5月6日
-    { start: [5, 6], branch: '午' },  // 芒种 ~6月6日
-    { start: [6, 7], branch: '未' },  // 小暑 ~7月7日
-    { start: [7, 7], branch: '申' },  // 立秋 ~8月7日
-    { start: [8, 8], branch: '酉' },  // 白露 ~9月8日
-    { start: [9, 8], branch: '戌' },  // 寒露 ~10月8日
-    { start: [10, 7], branch: '亥' }, // 立冬 ~11月7日
-    { start: [11, 7], branch: '子' }, // 大雪 ~12月7日
-    { start: [0, 6], branch: '丑' },  // 小寒 ~1月6日
-  ];
-
-  // 从后往前找
-  let result = '丑'; // default
-  for (let i = jieqi.length - 1; i >= 0; i--) {
-    const [m, d] = jieqi[i].start;
-    if (month > m || (month === m && day >= d)) {
-      result = jieqi[i].branch;
-      break;
-    }
-  }
-  // 如果当前是1月且在小寒之前, 用上一年的子月... 简化处理
-  if (month === 0 && day < 6) {
-    result = '子'; // 大雪到小寒之间仍是子月
-  }
-
-  return result;
+export function getCurrentMonthBranch(dateParts) {
+  return getDivinationCalendar(dateParts).pillars.month.branch;
 }
 
 // ===== 获取当前年干支 =====
-export function getCurrentYearGanzhi() {
-  const now = new Date();
-  let year = now.getFullYear();
-  // 简化：如果在立春(~2月4日)之前，属于上一年
-  if (now.getMonth() < 1 || (now.getMonth() === 1 && now.getDate() < 4)) {
-    year -= 1;
-  }
-  const stemIdx = (year - 4) % 10;
-  const branchIdx = (year - 4) % 12;
-  return {
-    stem: TIANGAN[(stemIdx + 10) % 10],
-    branch: DIZHI[(branchIdx + 12) % 12],
-  };
+export function getCurrentYearGanzhi(dateParts) {
+  return getDivinationCalendar(dateParts).pillars.year;
 }
 
 // ===== 主排盘函数 =====
-export function paipan(rawValues) {
+export function paipan(rawValues, dateParts) {
   // rawValues: [7,8,8,9,7,6] 从初爻到上爻
   if (!rawValues || rawValues.length !== 6) {
     throw new Error('需要6个爻值');
+  }
+  if (rawValues.some((value) => ![6, 7, 8, 9].includes(value))) {
+    throw new Error('爻值必须为 6、7、8 或 9');
   }
 
   // 1. 确定本卦上下卦
@@ -271,9 +238,10 @@ export function paipan(rawValues) {
   });
 
   // 7. 获取日干支和月建
-  const dayGanzhi = getTodayGanzhi();
-  const monthBranch = getCurrentMonthBranch();
-  const yearGanzhi = getCurrentYearGanzhi();
+  const calendar = getDivinationCalendar(dateParts);
+  const dayGanzhi = calendar.pillars.day;
+  const monthBranch = calendar.pillars.month.branch;
+  const yearGanzhi = calendar.pillars.year;
 
   // 8. 安六神
   const spirits = getSixSpirits(dayGanzhi.stem);
@@ -364,28 +332,21 @@ export function paipan(rawValues) {
     kongWang,
     // 原始数据
     rawValues,
+    validationModel: LIUYAO_VALIDATION_MODEL,
   };
 }
 
 // ===== 格式化排盘结果为文本 (给AI用) =====
 export function formatForAI(result, question) {
   const lines = result.lines.slice().reverse(); // 从上爻到初爻显示
-  const yaoDetails = lines.map(l => {
-    let str = `${l.positionName} ${l.yinyang === 'yang' ? '⚊' : '⚋'} ${l.liuqin}${l.stem}${l.branch}${l.wuxingCn}`;
-    if (l.isWorld) str += ' 世';
-    if (l.isResponse) str += ' 应';
-    if (l.isMoving) {
-      str += ` ○动→${l.bianYao.liuqin}${l.bianYao.stem}${l.bianYao.branch}${l.bianYao.wuxingCn}`;
-    }
-    if (l.isEmpty) str += ' (空亡)';
-    return str;
-  }).join('\n');
-
   const fushenStr = result.fushen.length > 0
     ? result.fushen.map(f => `伏${f.liuqin}${f.najia}(${WUXING_CN[f.wuxing]}) 伏于第${f.position}爻下`).join('；')
     : '无伏神';
 
   return `占问事项：${question}
+排盘口径：${result.validationModel?.school || LIUYAO_VALIDATION_MODEL.school}
+排盘结构：${result.validationModel?.chartStatus || LIUYAO_VALIDATION_MODEL.chartStatus}
+解释状态：${result.validationModel?.interpretationStatus || LIUYAO_VALIDATION_MODEL.interpretationStatus}
 
 ${result.date.yearStem}${result.date.yearBranch}年 ${result.date.monthBranch}月 ${result.date.dayStem}${result.date.dayBranch}日
 

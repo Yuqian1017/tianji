@@ -121,6 +121,9 @@ function GuaDisplay({ result }) {
           )}
         </div>
         <div className="text-[var(--color-text-dim)] text-xs mt-2 font-body">空亡：{result.kongWang.join('、')}</div>
+        <div className="text-[var(--color-text-dim)] text-[10px] mt-1 font-body">
+          京房八宫纳甲结构已校验；现实预测与吉凶解释未校勘
+        </div>
       </div>
 
       {/* 六爻盘面 */}
@@ -361,8 +364,8 @@ export default function LiuyaoModule({ aiConfig, setShowSettings, upsertHistory,
     <div className="space-y-6">
       <ModuleIntro
         moduleId="liuyao"
-        origin="源自《周易》，西汉京房创立纳甲体系，宋代定型。三枚铜钱摇卦，配五行六亲六神，是中国传统占卜中发展最完善的预测术。"
-        strengths={['具体事件决策（做不做、成不成）', '时机判断（何时有利）', '人事吉凶（合作、诉讼、出行、求财）']}
+        origin="当前工具采用京房八宫纳甲口径，将六爻值转换为卦宫、世应、六亲、六神与动变结构。"
+        strengths={['京房八宫结构', '纳甲、世应与六亲六神', '动爻与变卦展示']}
       />
 
       {/* 输入区 */}
@@ -444,14 +447,19 @@ export default function LiuyaoModule({ aiConfig, setShowSettings, upsertHistory,
       {result && (
         <section className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 解读</h3>
+            <div>
+              <h3 className="text-[var(--color-gold)] text-sm font-medium font-title">AI 文化解读</h3>
+              <div className="text-[10px] text-[var(--color-text-dim)] font-body mt-0.5">
+                解释层未校勘，不构成事实预测或现实决策依据
+              </div>
+            </div>
             {isInitialAskVisible && (
               <button
                 onClick={askAI}
                 className="bg-[var(--color-gold-bg)] text-[var(--color-gold)] px-4 py-2 rounded-lg text-sm
                   hover:bg-[var(--color-gold-bg-hover)] transition-colors font-body"
               >
-                请求 AI 断卦
+                请求 AI 文化解读
               </button>
             )}
           </div>
