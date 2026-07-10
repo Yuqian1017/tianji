@@ -28,3 +28,6 @@ tianji.db*
 
 # Local planning-with-files sidecar
 .planning/
+
+# Local isolated implementation worktrees
+.worktrees/
