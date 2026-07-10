@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-09",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 21,
-  "currentFocus": "八字四柱、节令和声明口径下的大运达到 V3；继续强弱/用神解释层验证。",
-  "nextDecision": "决定当前强弱/用神算法是补足来源、明确标为启发式还是降级展示。",
+  "overallPercent": 22,
+  "currentFocus": "八字确定性核心达到 V3；身强/用神已判 fail 并降级，八字健康已阻断。",
+  "nextDecision": "完成八字合化条件与神煞审计后，转入六爻确定性规则验证。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 62,
+      "progress": 68,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -26,6 +26,8 @@
         "修复后 30 例 0 mismatch、2,592 边界侧检查通过、39,447 日连续性通过",
         "sxtwl 第二实现 30/30 四柱一致，1,296 节令时刻最大差 20 秒，四柱/节令达到 V3",
         "sxtwl 相邻节令加经典规则独立推导 30/30 大运一致，声明口径达到 V3",
+        "两条《滴天髓阐微》命例否证统一用神方向；身强模型降级为 heuristic_only",
+        "八字健康脏腑、疾病、食疗、大运健康与 AI 消费路径已全部 blocked",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
@@ -184,6 +186,14 @@
       "owner": "Codex"
     },
     {
+      "id": "TJI-VAL-007",
+      "name": "八字身强用神与健康下游审计",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "身强与用神有来源/反例结论，虚假精度停止展示，未验证结果不能进入健康下游。",
+      "owner": "Codex"
+    },
+    {
       "id": "TJI-P0-01",
       "name": "重建主 PRD",
       "status": "completed",
@@ -209,11 +219,11 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "bazi_deterministic_v3_interpretation_pending", "rule": "四柱、节令和声明口径下的大运已达 V3；解释层和八字健康仍不得自动进入 accepted。" },
+    { "name": "排盘与数据库正确性", "state": "bazi_deterministic_v3_interpretation_failed_safe", "rule": "四柱、节令和声明口径大运已达 V3；身强/用神 fail 且只作启发式，其他解释层仍待验证。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "八字 UI/账户/历史与确定性核心可继续；解释层仍按字段验证。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
-    { "name": "中医安全", "state": "blocked", "rule": "未补齐安全元数据前，不扩大方药、艾灸或症状建议的产品消费范围。" },
+    { "name": "中医安全", "state": "blocked", "rule": "八字健康已硬阻断；未补齐安全元数据前，不扩大方药、艾灸或症状建议的产品消费范围。" },
     { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
@@ -239,6 +249,9 @@
     "第二实现发现审计脚本 XIAO_HAN 指向下一年；已改为同年小寒并加入年份断言",
     "《三命通会》与 compendium 对照后，六合 runtime 只显示关系；午未火/土保留为候选元数据",
     "fresh reviewer 无 Critical；第二审计现强制重建 primary artifact 并记录关键源码 SHA256",
-    "sxtwl 相邻节令加《渊海子平》《三命通会》规则独立推导：30/30 大运方向、交运日期和首运干支一致"
+    "sxtwl 相邻节令加《渊海子平》《三命通会》规则独立推导：30/30 大运方向、交运日期和首运干支一致",
+    "两条《滴天髓阐微》命例复现并否证旧统一用神方向；/100 与确定用神已停止展示",
+    "八字健康 validation gate 生效：脏腑风险、食疗、大运健康与 AI 输出均为 0",
+    "Playwright 实测八字卡无 /100 与固定用神；八字健康按钮 disabled 且只显示阻断原因"
   ]
 }

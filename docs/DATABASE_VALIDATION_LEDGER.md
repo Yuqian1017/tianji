@@ -17,9 +17,10 @@
 | VAL-INV-001 | P0 | 全库 | Runtime engine/data/prompt 与 raw source inventory | 结构 | V1 | in_progress | 枚举文件、导出、表与规则单元 |
 | VAL-BZ-001 | P0 | 八字 | 年月日时四柱与节气/日界口径 | 精确/流派确定性 | V3+V5 | in_progress | V3 已达：`sxtwl@2.0.7` 30/30 四柱一致，1,296 节令时刻最大差 20 秒；V5 UI/保存同路径证据待补 |
 | VAL-BZ-002 | P0 | 八字 | 大运顺逆、起运岁数、交运时间 | 流派确定性 | V3 | pass | 明确采用 `Yun Sect 1 / traditional_shichen`；`sxtwl` 相邻节令加经典规则独立推导 30/30 方向、交运日期与首运干支一致；不覆盖其他流派或吉凶解释 |
-| VAL-BZ-003 | P1 | 八字 | 身强评分、五行计数与用神方向 | 流派/启发式 | V2+来源声明 | in_progress | 当前为自定义 40/40/20 与藏干 0.5 权重，需确认来源及产品标签 |
+| VAL-BZ-003 | P1 | 八字 | 身强评分、五行计数与用神方向 | 流派/启发式 | V2+来源声明 | fail | `/100` 无经典量表依据，runtime 也不忠实于 compendium 简化版；两条《滴天髓阐微》命例反驳统一用神方向。产品已降级为 `heuristic_only`，不再输出确定用神 |
 | VAL-BZ-004 | P1 | 八字 | 天干五合、地支六合与“午未合火/土” | 来源忠实性 | V3 | school_difference | 合与合化已拆开；《三命通会》确认午未六合，compendium 明示火/土有争议。runtime 只显示“甲己合”“午未合”，候选化神留作元数据 |
 | VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
+| VAL-BZH-001 | P0 | 八字健康 | 五行计数到脏腑风险、疾病、食疗与大运健康的推导 | 医学安全/跨域推断 | V4+安全审查 | blocked | 未验证结构计数不能成为医学证据；runtime、旧历史和 AI 通道已硬阻断 |
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/艾灸建议 | 医疗/安全 | V4+V5 | planned | 全量抽取消费点并反查安全表/现行来源 |
 | VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、变卦 | 精确/流派确定性 | V3+V5 | planned | 复用现有测试入口，补独立 fixtures |
 | VAL-ZW-001 | P1 | 紫微 | 十二宫、主星、四化、辅煞星 | 流派确定性 | V3 | planned | 先声明流派与版本 |
@@ -34,11 +35,12 @@
 |---|---|---|---|---|---|
 | F-BZ-001 | P1 | VAL-BZ-001 | verified_remediated | 近似节气已移出 runtime；`sxtwl` 第二实现 30/30 四柱一致，1,296 节令时刻最大差 20 秒 | 保持 V5 用户路径回归 |
 | F-BZ-002 | P1 | VAL-BZ-002 | verified_remediated | 一月非连续节令搜索已删除；传统时辰精度的起运间隔、交运公历日期与口径元数据已保存 | 30 例独立推导 0 mismatch；其他流派另建 validation 单元 |
-| F-BZ-003 | P1 | VAL-BZ-003 | evidence_gap | 身强 /100、五行 0.5 权重和用神方向未见来源/流派声明 | 搜索来源并与当前 UI/Prompt 表达对照 |
+| F-BZ-003 | P1 | VAL-BZ-003 | mitigated | 身强 `/100` 和统一用神方向无可靠来源且被原典反例否定 | 底层仅留作兼容；UI/AI 标为未校勘启发式，移除分数与用神结论；正式算法需重新选派别并建 fixture |
 | F-BZ-004 | P1 | VAL-BZ-004 | resolved_school_difference | 旧表把两支同现直接显示为“午未合火”，混淆六合关系与有条件的合化，且未披露火/土分歧 | runtime 改为“午未合”；`huaCandidates` 保留火/土，不判断条件时不宣称合化 |
 | F-BZ-005 | P2 | VAL-SHARED-001 | remediated | 日柱改由历法适配层计算；UTC 与 Pacific/Apia 同一输入回归一致，39,447 日连续性通过 | 保持跨 TZ 回归 |
 | F-BZ-006 | P1 | VAL-SHARED-001 | partially_remediated | NOAA 均时差已加入并按固定 365 日分母校正闰年；UI 标准时口径已明确；历史时区/夏令时仍未解决 | IANA 时区数据与历史 DST fixture |
-| F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 精确年月日与 `solarDate`，整数年龄继续兼容 | 历史记录 schema/version 验证 |
+| F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 传统时辰精度年月日、`solarDate` 与口径元数据，整数年龄继续兼容 | 历史记录 schema/version 验证 |
+| F-BZH-001 | P0 | VAL-BZH-001 | mitigated_blocked | 旧 runtime 以天干 1/藏干 0.5 和固定阈值推导脏腑风险、疾病、食疗和大运健康 | 当前消费路径、旧历史和 AI prompt 均 blocked；独立传统与医学证据通过前不得恢复 |
 | F-BZ-008 | P1 | VAL-BZ-001 | verified_remediated | 手写“精确节”已退出八字 runtime，修复前数据保留在 before artifact；第二实现全范围复核通过 | 保持无 runtime import 回归 |
 | F-BZ-009 | P1 | VAL-BZ-004 | resolved | 天干两干同现原本直接显示“合化某五行”，未检查成化条件 | 五合标签只显示关系，候选化神留作元数据 |
 
@@ -60,3 +62,4 @@
 | 2026-07-09 | VAL-SHARED-001 | NOAA fractional-year 公式与闰年年末回归 | 分母改为官方公式固定的 365；修复 2024-12-31 约 27 秒额外偏差 |
 | 2026-07-09 | VAL-BZ-001 | Fresh code reviewer `019f49f1-4e13-7481-a276-ea33d57de668` | 无 Critical；陈旧 primary artifact 的 Important 已修复并加 source/artifact SHA256；当时保留的大运证据缺口已由下一条独立推导关闭 |
 | 2026-07-09 | VAL-BZ-002 | `sxtwl@2.0.7` 相邻节令 + 《渊海子平·论起大运法》《三命通会·论大运》规则的独立手工推导；30 例 | 未调用 runtime `getYun()`；方向、传统时辰精度交运日期和首运干支 30/30 一致，声明口径内达到 V3 |
+| 2026-07-09 | VAL-BZ-003/VAL-BZH-001 | `audit-bazi-strength.mjs`；compendium 算法对照；《滴天髓》《滴天髓阐微》《子平真诠评注》 | 两条原典反例复现；权威模型判定 fail；UI/AI 虚假精度已移除，八字健康输出归零并硬阻断 |

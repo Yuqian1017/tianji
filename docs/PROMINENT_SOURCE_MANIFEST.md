@@ -164,6 +164,17 @@
 | 本轮结果 | 30/30 大运方向、传统时辰精度交运日期和首运干支一致 |
 | 边界 | 只验证已声明的传统时辰口径；不证明其他流派、连续分钟折算或任何吉凶解释 |
 
+### SRC-VAL-BAZI-STRENGTH-CLASSICS
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《滴天髓·衰旺论》《滴天髓阐微》命例与《子平真诠评注》用神论 |
+| 状态 | `validation_anchor`，用于否证通用简化规则与界定术语分歧 |
+| 在线校本 | `https://zh.wikisource.org/wiki/%E6%BB%B4%E5%A4%A9%E9%AB%93/12`、`https://ctext.org/wiki.pl?chapter=126492&if=gb`、`https://ctext.org/wiki.pl?chapter=974137&if=gb` |
+| 本轮用途 | 确认旺极/衰极等情形不能套用二分扶抑；以两条命例检验旧 runtime 的统一用神方向；确认“用神”在格局法与平衡法中含义不同 |
+| 本轮结果 | 两条相同四柱 fixture 均复现 runtime 分数，但原典用神结论与旧通用输出冲突；`VAL-BZ-003 = fail` |
+| 边界 | 原典反例足以否证旧通用规则，但不能单独产生可编程的替代算法；后续必须声明流派并另建完整 fixtures |
+
 ### SRC-VAL-SANMING-LIUHE
 
 | 字段 | 值 |
@@ -300,7 +311,7 @@ escalation: self_care | clinician | urgent | emergency
 
 ## 12. 下一步
 
-1. 继续八字强弱、用神、合化条件和神煞的解释层来源矩阵。
+1. 为八字格局、调候、完整合化条件和神煞建立解释层来源矩阵；身强/用神保持 `heuristic_only`。
 2. 按本清单为 package/source group 建立机器可读 manifest。
 3. 定义 normalized schema 和 review 状态机。
 4. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。

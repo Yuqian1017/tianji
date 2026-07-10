@@ -138,8 +138,23 @@ export function getKongWang(dayStem, dayBranch) {
 
 // ========== 日主强弱 ==========
 
+export const BAZI_STRENGTH_MODEL = Object.freeze({
+  method: 'simplified_support_balance_v1',
+  validationStatus: 'heuristic_only',
+  limitations: [
+    '未处理从格、专旺、调候、格局、合化与藏干司令',
+    '分数没有经典量表依据，不能确定用神、忌神或吉凶',
+  ],
+});
+
+export const BAZI_WUXING_COUNT_MODEL = Object.freeze({
+  method: 'visible_stem_1_hidden_stem_0_5',
+  validationStatus: 'structural_count_only',
+  limitation: '未计月令、藏干层级、透干通根与合化，不代表五行旺衰',
+});
+
 /**
- * 评估日主强弱
+ * 保留旧版分数用于历史兼容。该模型只允许作为未校勘初筛。
  */
 function assessStrength(dayStem, pillars) {
   const dayWuxing = STEM_WUXING[dayStem];
@@ -207,17 +222,19 @@ function assessStrength(dayStem, pillars) {
   else if (score >= 38) label = '中和';
   else label = '身弱';
 
-  // 用神方向
-  let yongShenDirection;
-  if (label === '身旺') {
-    yongShenDirection = '喜克泄耗：官杀·食伤·财星';
-  } else if (label === '身弱') {
-    yongShenDirection = '喜生扶：印星·比劫';
-  } else {
-    yongShenDirection = '中和偏稳，取平衡为宜';
-  }
+  const displayLabel = {
+    身旺: '简化模型偏强',
+    中和: '简化模型居中',
+    身弱: '简化模型偏弱',
+  }[label];
 
-  return { score, label, factors, yongShenDirection };
+  return {
+    score,
+    label,
+    displayLabel,
+    factors,
+    ...BAZI_STRENGTH_MODEL,
+  };
 }
 
 // ========== 神煞检测 ==========
@@ -425,6 +442,7 @@ export function paiBazi(year, month, day, hour, minute = 0, gender = 'male') {
     dayun,
     dayunStart,
     wuxingCount,
+    wuxingCountModel: BAZI_WUXING_COUNT_MODEL,
     interactions,
     stemCombines,
     kongWang,
@@ -463,11 +481,10 @@ export function formatForAI(result, question) {
   lines.push('');
   lines.push(`日主：${result.dayStem}（${wx}·${yy}）`);
   lines.push(`长生状态：日坐${result.changsheng.day}`);
-  lines.push(`身强/身弱：${result.strength.label}（评分 ${result.strength.score}/100）`);
-  lines.push(`用神方向：${result.strength.yongShenDirection}`);
+  lines.push(`身强弱初筛：${result.strength.displayLabel}（未校勘启发式，不提供用神结论）`);
 
   const wc = result.wuxingCount;
-  lines.push(`五行统计：木${wc.wood} 火${wc.fire} 土${wc.earth} 金${wc.metal} 水${wc.water}`);
+  lines.push(`五行结构计数（非旺衰）：木${wc.wood} 火${wc.fire} 土${wc.earth} 金${wc.metal} 水${wc.water}`);
   lines.push(`空亡：${result.kongWang.join('、')}`);
 
   if (result.interactions.length > 0) {

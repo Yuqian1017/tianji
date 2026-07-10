@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { paiBazi, formatForAI, getShiShen } from './engine.js';
+import { paiBazi, formatForAI } from './engine.js';
 import { STEM_WUXING, BRANCH_WUXING, WUXING_CN, WUXING_ORDER, SHICHEN, SHISHEN_ABBR } from './data.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
@@ -123,7 +123,7 @@ function BaziDisplay({ result }) {
         </div>
       </div>
 
-      {/* 日主强弱 + 用神 */}
+      {/* 日主强弱初筛 */}
       <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4">
         <div className="flex items-center gap-3 mb-2">
           <span className="text-[var(--color-gold)] font-title">
@@ -136,14 +136,11 @@ function BaziDisplay({ result }) {
                 ? 'bg-[var(--color-wx-water-bg)] text-[var(--color-wx-water)]'
                 : 'bg-[var(--color-gold-bg)] text-[var(--color-gold)]'
             }`}>
-            {strength.label}
-          </span>
-          <span className="text-xs text-[var(--color-text-dim)] font-body">
-            ({strength.score}/100)
+            {strength.displayLabel || strength.label}
           </span>
         </div>
-        <div className="text-sm text-[var(--color-text)] font-body mb-2">
-          {strength.yongShenDirection}
+        <div className="text-xs text-[var(--color-cinnabar)] font-body mb-2">
+          未校勘启发式，不据此确定用神、忌神或吉凶
         </div>
         <div className="text-xs text-[var(--color-text-dim)] space-y-0.5 font-body">
           {strength.factors.map((f, i) => (
@@ -154,7 +151,10 @@ function BaziDisplay({ result }) {
 
       {/* 五行统计 */}
       <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4">
-        <h4 className="text-[var(--color-gold)] text-sm font-title mb-3">五行分布</h4>
+        <h4 className="text-[var(--color-gold)] text-sm font-title mb-1">五行结构计数</h4>
+        <div className="text-[10px] text-[var(--color-text-dim)] font-body mb-3">
+          天干记 1、藏干记 0.5；不代表五行旺衰
+        </div>
         <div className="space-y-2">
           {WUXING_ORDER.map(wx => {
             const val = wuxingCount[wx];
@@ -522,8 +522,8 @@ export default function BaziModule({
     <div className="space-y-6">
       <ModuleIntro
         moduleId="bazi"
-        origin="唐代李虚中首创，宋代徐子平完善，又称「子平术」。以出生年月日时的天干地支（八个字）推算一生命运格局。"
-        strengths={['一生运势全局（性格、事业、财运、婚姻）', '大运流年走向', '五行喜忌与职业方向', '人生关键节点预判']}
+        origin="唐代李虚中首创，宋代徐子平完善，又称「子平术」。当前工具以出生年月日时排出四柱结构。"
+        strengths={['四柱与节令', '十神、藏干与纳音结构', '声明口径下的大运排布']}
       />
 
       {/* 出生信息输入 */}

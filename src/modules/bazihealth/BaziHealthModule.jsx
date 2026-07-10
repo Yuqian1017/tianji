@@ -1,5 +1,10 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { runHealthAnalysis, formatForAI } from './engine.js';
+import {
+  analyzeBaziHealth,
+  BAZI_HEALTH_VALIDATION_GATE,
+  runHealthAnalysis,
+  formatForAI,
+} from './engine.js';
 import { WUXING_HEALTH } from './data.js';
 import { WUXING_CN, WUXING_ORDER, SHICHEN } from '../bazi/data.js';
 import { aiInterpret } from '../../lib/ai.js';
@@ -7,7 +12,7 @@ import { getActiveApiKey } from '../../lib/aiProviders.js';
 import { BAZIHEALTH_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import BirthCityPicker from '../../components/BirthCityPicker.jsx';
-import { calcTrueSolarTimeOffset, adjustBirthTime, formatTrueSolarTime } from '../../lib/cities.js';
+import { calcTrueSolarTimeOffset, adjustBirthTime } from '../../lib/cities.js';
 
 const WUXING_COLORS = {
   wood: '#4CAF50', fire: '#E53935', earth: '#C6893F', metal: '#FFD54F', water: '#1E88E5',
@@ -177,8 +182,13 @@ export default function BaziHealthModule({
   useEffect(() => {
     if (pendingHistoryLoad?.module === 'bazihealth') {
       const d = pendingHistoryLoad;
-      if (d.result) {
-        setResult(d.result);
+      if (d.result?.baziResult) {
+        setResult({
+          baziResult: d.result.baziResult,
+          healthResult: analyzeBaziHealth(d.result.baziResult),
+          lifeStages: [],
+          dietPlan: [],
+        });
         if (d.input) {
           setYear(d.input.year || 1990);
           setMonth(d.input.month || 6);
@@ -188,11 +198,11 @@ export default function BaziHealthModule({
         }
         setHasCalculated(true);
       }
-      if (d.chatMessages) setChatMessages(d.chatMessages);
+      setChatMessages([]);
       historyIdRef.current = activeHistoryId || crypto.randomUUID();
       clearPendingHistoryLoad();
     }
-  }, [pendingHistoryLoad]);
+  }, [activeHistoryId, clearPendingHistoryLoad, pendingHistoryLoad]);
 
   // Calculate
   const handleCalculate = useCallback(() => {
@@ -225,7 +235,7 @@ export default function BaziHealthModule({
 
   // AI interpretation
   const handleAI = useCallback(async () => {
-    if (!result) return;
+    if (!result || result.healthResult?.validationStatus === 'blocked') return;
     const key = getActiveApiKey(aiConfig);
     if (!key) { setShowSettings(true); return; }
 
@@ -306,9 +316,14 @@ export default function BaziHealthModule({
     <div className="space-y-4 font-body">
       <ModuleIntro
         moduleId="bazihealth"
-        origin="源于中医五行学说与八字命理的交叉应用。通过分析出生八字的五行偏枯，推断先天体质弱点和易患疾病，制定针对性的养生方案。"
-        strengths="先天体质分析 · 脏腑风险预警 · 大运健康走势 · 个性化食疗方案"
+        origin="八字命理与中医健康的交叉推断尚未通过本项目的知识与医学安全验证。"
+        strengths="当前仅保留历史入口，不生成健康结论"
       />
+
+      <div className="border border-[var(--color-cinnabar)]/40 bg-[var(--color-cinnabar)]/10 p-3 text-sm text-[var(--color-text)]">
+        <div className="font-title text-[var(--color-cinnabar)] mb-1">验证未通过，功能暂停</div>
+        <div className="text-xs text-[var(--color-text-dim)]">{BAZI_HEALTH_VALIDATION_GATE.reason}</div>
+      </div>
 
       {/* Input */}
       <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4 space-y-3">
@@ -369,14 +384,20 @@ export default function BaziHealthModule({
           />
         </div>
 
-        <button onClick={handleCalculate}
-          className="mt-3 w-full py-2 bg-[var(--color-gold)] text-white rounded-lg text-sm font-title hover:opacity-90 transition-opacity">
-          健康分析
+        <button onClick={handleCalculate} disabled
+          className="mt-3 w-full py-2 bg-[var(--color-surface-dim)] text-[var(--color-text-dim)] rounded-lg text-sm font-title cursor-not-allowed">
+          验证中，暂不可用
         </button>
       </div>
 
       {/* Results */}
-      {hasCalculated && r && bazi && (
+      {hasCalculated && r?.validationStatus === 'blocked' && bazi && (
+        <div className="border border-[var(--color-cinnabar)]/40 bg-[var(--color-cinnabar)]/10 p-4">
+          <div className="font-title text-[var(--color-cinnabar)] mb-1">历史健康结论已停用</div>
+          <div className="text-xs text-[var(--color-text-dim)]">{r.blockReason}</div>
+        </div>
+      )}
+      {hasCalculated && r && bazi && r.validationStatus !== 'blocked' && (
         <>
           {/* Overview */}
           <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4">
