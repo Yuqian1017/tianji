@@ -28,6 +28,8 @@
 | VAL-LY-002 | P1 | 六爻 | 用神、旺衰、冲合空亡与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 排盘结构通过不授证现实预测；AI prompt 与 UI 已标 `not_validated`，禁止无条件成败、应期和高风险建议 |
 | VAL-MH-001 | P1 | 梅花 | 报数/农历时间起卦、互卦、变卦、动爻、体用与笔画数据 | 精确/声明口径 | V3+V5 | pass | 63,061 项全量检查 0 fail；Playwright 报数、时间、文字三路径与桌面/390px 通过；结构可复用，现代文字法单列适配状态 |
 | VAL-MH-002 | P1 | 梅花 | 体用、取象、外应与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 结构通过不授证现实预测；体用移除吉凶 verdict，互卦/变卦不再称实际过程/结果，AI 标 `not_validated` |
+| VAL-YJ-001 | P1 | 易经/64 卦 | 卦序、卦名、上下卦、卦爻辞、互错综、八宫世应 | 精确结构+来源忠实性 | V2+V3 | pass | 1,446 项检查 0 fail；450 条受文与固定维基文库见证对照，19 处差异逐条裁决，12 卦用 CText 抽核；结构核心已规范化 |
+| VAL-YJ-002 | P1 | 易经解释 | 64 卦关键词、简释、吉凶卦级、动爻取法和现实预测 | 解释/流派 | 来源声明+教学审校 | blocked | 数据与课程已显式标 `not_validated`；固定吉凶、事业/感情/健康结论不进规范核心库 |
 | VAL-ZW-001 | P1 | 紫微 | 十二宫、主星、四化、辅煞星 | 流派确定性 | V3 | planned | 先声明流派与版本 |
 | VAL-QM-001 | P1 | 奇门 | 节气、阴阳遁、局数、四盘 | 流派确定性 | V3 | planned | 来源已标简化，默认高风险 |
 | VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | Fresh reviewer 给出 hold；主线程已逐项回看 PRD、当前中医消费点与旧规格，见 `PRD_FRESH_REVIEW_2026-07-09.md` |
@@ -60,6 +62,10 @@
 | F-MH-003 | P0 | VAL-MH-001 | verified_remediated | 手抄笔画表含“亿=1”等错误，未知字按 Unicode 码位伪估算 | 改为 Unicode 17.0 Unihan URO 20,992 字机械生成表；未知字符显式拒绝 |
 | F-MH-004 | P1 | VAL-MH-001 | verified_remediated | Compendium 把风泽中孚初爻变错写为巽为风 | 兑 `110` 初爻变为坎 `010`，正确变卦为风水涣；课程已修正 |
 | F-MH-005 | P1 | VAL-MH-002 | mitigated_blocked | runtime/UI 把体用直接写成吉凶，并把互卦/变卦称为过程/结果 | 只保留五行关系标签；预测解释标 `not_validated` 并禁止高风险建议 |
+| F-YJ-001 | P0 | VAL-YJ-001 | verified_remediated | `04-guabian-data.md` 有 16 处综卦、5 处八宫和 48 处世爻错误；错卦 64/64 正确 | 六爻二进制与已验证京房八宫全量重建；385 项结构检查通过 |
+| F-YJ-002 | P1 | VAL-YJ-001 | verified_remediated | 450 条受文与外部见证有 19 处规范化差异，其中 7 处为本地可修正问题 | 修正号啕/佑/輹/曰/祗/入于/鸣鹤；余下 12 处变体或版本差异写入 adjudication registry |
+| F-YJ-003 | P1 | VAL-YJ-001 | verified_remediated | 教学草案的铜钱例把火泽睽写成风泽中孚，`getYaoName` 丢失「上」，《说卦传》「旉」误为「专」 | 三处已修正并加入可重跑教学代码检查 |
+| F-YJ-004 | P1 | VAL-YJ-002 | mitigated_blocked | 传统作者归属、整卦吉凶和多动爻取法被写成无条件事实 | 改为传统归属/教学启发式；解释不进 accepted core |
 
 ## Evidence Log
 
@@ -85,3 +91,4 @@
 | 2026-07-10 | VAL-LY-001 | Playwright 全六老阳固定样例；桌面与 390x844 | 乾外壬、坤外癸、六亲世应与解释边界可见；无截断或溢出 |
 | 2026-07-10 | VAL-MH-001/002 | `audit-meihua.mjs`；《梅花易数》卷一；Unicode 17.0 Unihan | 64 卦名、384 动爻结构、4,096 报数、经典观梅例、4 个农历边界和 20,992 字共 63,061 项 0 fail；解释层 blocked |
 | 2026-07-10 | VAL-MH-001 | Playwright 报数 5/2、当前时间、“天机卷”；桌面与 390x844 | 风泽中孚/山雷颐/风水涣和雷水解正确；验证状态可见；移动端水平溢出已修复并复测为 0 |
+| 2026-07-10 | VAL-YJ-001/002 | `audit-yijing-core.mjs`；维基文库 64 页固定快照；CText 12 卦差异抽核；《说卦传》 | 1,446 项 0 fail；修正 7 处经文、69 处卦变/八宫字段和 3 处教学错误；解释层 blocked |

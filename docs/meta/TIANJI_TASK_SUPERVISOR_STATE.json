@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-10",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 26,
-  "currentFocus": "共享六十四卦经文库验证：卦序、卦辞、爻辞、错卦、综卦、关键词和运行时消费对齐。",
-  "nextDecision": "先全量解析项目易经资料并与公开原典逐卦对照，系统性错误立即升级为全表修复。",
+  "overallPercent": 30,
+  "currentFocus": "紫微斗数确定性核心验证：先声明流派，再全量核对十二宫、五行局、紫微星系与四化表。",
+  "nextDecision": "从 runtime 和 compendium 反向列出紫微全部表与算法消费点，固定声明口径后先做有限表和全生日范围属性测试。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 80,
+      "progress": 85,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -31,6 +31,7 @@
         "八字关系与神煞有限表全量匹配；两支相刑漏检已修复，合化/吉凶 blocked",
         "六爻 17,026 项独立检查与第二实现 33,408 字段比较均无差异；解释层 blocked",
         "梅花 63,061 项全量检查与报数/时间/文字三条浏览器路径通过；解释层 blocked",
+        "《周易》64 卦核心 1,446 项检查通过；450 条经文、19 处裁决、错综互卦与京房八宫已规范化",
         "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
         "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
@@ -127,9 +128,17 @@
     {
       "id": "TJI-VAL-011",
       "name": "共享六十四卦经文与卦变数据库验证",
-      "status": "in_progress",
+      "status": "completed",
       "phase": "V0",
       "doneWhen": "卦序、卦名、上下卦、卦辞爻辞、错综关系和关键词逐项核验，错误有修复与可重复 artifact。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-012",
+      "name": "紫微斗数星表与安星算法验证",
+      "status": "in_progress",
+      "phase": "V0",
+      "doneWhen": "声明流派与版本，十二宫、五行局、主辅星、四化和 runtime 安星输出有独立对照与边界结论。",
       "owner": "Codex"
     },
     {
@@ -254,7 +263,7 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "shared_yijing_audit_in_progress", "rule": "八字、六爻与梅花确定性结构已划定复用边界；共享经文与解释资料逐项核验。" },
+    { "name": "排盘与数据库正确性", "state": "ziwei_audit_in_progress", "rule": "八字、六爻、梅花与共享《周易》核心已划定复用边界；当前进入紫微星表与安星算法。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "八字、六爻与梅花的壳层和已验证确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
@@ -297,6 +306,8 @@
     "Playwright 全六老阳样例在桌面/390px 显示乾外壬、坤外癸且无截断溢出",
     "梅花 63,061 项全量检查 0 fail；报数、时间、文字三路径在桌面/390px 通过",
     "修复卦线反转、公历近似、错误笔画表和移动端报数输入溢出；解释层保持 not_validated",
-    "TJI-VAL-011 已启动：共享六十四卦卦序、卦爻辞、错综关系与关键词进入逐项验证"
+    "共享《周易》核心 1,446 项审计检查 0 fail；修正 7 处经文、69 处卦变/八宫字段和 3 处教学错误",
+    "database/yijing/zhouyi-core.json 已生成 64 条规范数据；关键词、简释和现实预测继续 not_validated",
+    "TJI-VAL-012 已启动：紫微十二宫、五行局、星表、四化与安星算法进入逐项验证"
   ]
 }

@@ -1,0 +1,69 @@
+{
+  "audit": "yijing_core",
+  "generatedAt": "2026-07-10",
+  "result": "pass",
+  "summary": {
+    "checks": 1446,
+    "passed": 1446,
+    "failed": 0,
+    "categories": {
+      "inventory": {
+        "checks": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "scripture": {
+        "checks": 450,
+        "passed": 450,
+        "failed": 0
+      },
+      "adjudication": {
+        "checks": 19,
+        "passed": 19,
+        "failed": 0
+      },
+      "identity": {
+        "checks": 384,
+        "passed": 384,
+        "failed": 0
+      },
+      "structure": {
+        "checks": 385,
+        "passed": 385,
+        "failed": 0
+      },
+      "redundant_matrix": {
+        "checks": 192,
+        "passed": 192,
+        "failed": 0
+      },
+      "teaching_code": {
+        "checks": 6,
+        "passed": 6,
+        "failed": 0
+      }
+    },
+    "correctionsApplied": {
+      "scripture": 7,
+      "reverseHexagram": 16,
+      "jingfangPalace": 5,
+      "worldLine": 48,
+      "teachingCodeAndQuote": 3,
+      "total": 79
+    },
+    "textWitnesses": {
+      "localEntries": 450,
+      "wikisourceEntries": 450,
+      "adjudicatedDifferences": 19,
+      "ctextSpotCheckedHexagrams": 12
+    }
+  },
+  "boundaries": [
+    "Sequence, upper/lower trigrams, binary transforms, and Jingfang palace/world fields are deterministic and accepted.",
+    "Received text was compared against a pinned Wikisource snapshot; all 19 normalized differences were adjudicated, with 12 CText chapter spot checks.",
+    "The unresolved yi/si/ji reading in hexagram 49 is retained as an explicit received-text variant, not a unique canonical claim.",
+    "Keywords, modern meanings, divination verdicts, and predictive interpretations are not validated by this pass.",
+    "The alternate compendium-vision-api copy remains historical and is not treated as an independent witness."
+  ],
+  "failures": []
+}

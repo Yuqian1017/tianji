@@ -41,12 +41,12 @@
         <h1>天机卷任务监督器</h1>
         <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
-      <div id="percent" class="percent">25%</div>
+      <div id="percent" class="percent">30%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">梅花易数确定性验证：起卦、互卦、变卦、动爻与体用结构。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">全量枚举梅花输入与卦变有限域，再核对共享六十四卦表。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">紫微斗数确定性核心验证：十二宫、五行局、星表与四化。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">枚举紫微 runtime 和 compendium 的表与算法消费点，固定流派后开始独立对照。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
     </section>
 
@@ -68,12 +68,12 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 25,
-      currentFocus: '梅花易数确定性验证：起卦、互卦、变卦、动爻与体用结构；随后核对共享六十四卦表。',
-      nextDecision: '全量枚举梅花输入与卦变有限域，区分可计算结构、流派口径和主观取象。',
+      overallPercent: 30,
+      currentFocus: '紫微斗数确定性核心验证：先声明流派，再全量核对十二宫、五行局、紫微星系与四化表。',
+      nextDecision: '从 runtime 和 compendium 反向列出紫微全部表与算法消费点，固定声明口径后做有限表和属性测试。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
-        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 78, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 85, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'review_pending', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -81,7 +81,7 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'meihua_audit_in_progress', rule: '八字与六爻确定性结构已划定边界；梅花取得独立证据前不得作为教学规范答案源。' },
+        { name: '排盘与数据库正确性', state: 'ziwei_audit_in_progress', rule: '八字、六爻、梅花与共享《周易》核心已划定边界；当前进入紫微星表与安星算法。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
@@ -102,7 +102,10 @@
         '六爻 17,026 项项目内检查与第二实现 33,408 字段比较均无差异',
         '修复乾外壬/坤外癸、近似节令和非法爻值；预测解释 not_validated',
         'Playwright 全六老阳样例桌面/390px 显示正确且无截断溢出',
-        'VAL-MH-001 已启动：梅花起卦、互卦、变卦与体用结构进入全量验证',
+        '梅花 63,061 项全量检查通过；预测解释 blocked',
+        '共享《周易》核心 1,446 项检查通过；79 处数据/教学错误已修正',
+        'database/yijing/zhouyi-core.json 已生成 64 条规范数据',
+        'TJI-VAL-012 已启动：紫微星表与安星算法进入验证',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',

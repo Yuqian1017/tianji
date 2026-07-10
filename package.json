@@ -13,11 +13,13 @@
     "test:bazi": "node --test test/bazi/*.test.mjs",
     "test:liuyao": "node --test test/liuyao/*.test.mjs",
     "test:meihua": "node --test test/meihua/*.test.mjs",
-    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs",
+    "test:yijing": "node --test test/yijing/*.test.mjs",
+    "test:validation": "node --test test/bazi/*.test.mjs test/liuyao/*.test.mjs test/meihua/*.test.mjs test/yijing/*.test.mjs",
     "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
     "audit:liuyao": "node scripts/validation/audit-liuyao.mjs",
     "audit:meihua": "node scripts/validation/audit-meihua.mjs",
+    "audit:yijing": "node scripts/validation/audit-yijing-core.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview"
   },
@@ -43,6 +45,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "opencc-js": "^1.4.0",
     "tailwindcss": "^4.2.1",
     "vite": "^7.3.1"
   }

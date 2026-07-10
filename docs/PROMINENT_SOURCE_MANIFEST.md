@@ -235,6 +235,23 @@
 | 本轮结果 | 20,992/20,992 条目存在且为正整数；已替换错误手抄表和码位估算 |
 | 边界 | Unicode 将 `kTotalStrokes` 标为 informative；可作稳定现代数据口径，不代表唯一字形、书写或术数笔画标准 |
 
+### SRC-VAL-YIJING-CORE
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《周易》64 卦受文与结构验证组 |
+| 状态 | `validation_anchor` + `normalized`；仅限经文与确定性结构 |
+| 本地主文本 | `database/xuanxue/compendium-new/reference/64gua-yaoci-part1.md` 与 `part2.md`，64 卦、450 条 |
+| 第二文本见证 | 中文维基文库《周易》64 子页 MediaWiki API 快照，路径 `database/sources/wikisource/zhouyi-64-mediawiki-2026-07-10.json` |
+| 快照 SHA256 | `597f936ea2c0849b086b39c33077a1c09cbeb0ae68bb11042d25d2a5bd1743a6` |
+| 差异裁决 | 中国哲学书电子化计划 `https://ctext.org/book-of-changes/zhs` 相应章节；12 卦定点抽核，不批量复制其语料 |
+| 《说卦传》核对 | `https://ctext.org/book-of-changes/shuo-gua/zhs`，用于修正「震为雷…为旉」摘录 |
+| 版本分歧研究 | `https://www.airitilibrary.com/Article/Detail?DocID=18133738-202108-202109100010-202109100010-24-44`，用于界定革卦已/巳/己之辨 |
+| 规范化输出 | `database/yijing/zhouyi-core.json`；64 条，含卦序、经文、二进制、互错综、京房八宫与世应 |
+| 审计结果 | 1,446 项检查 0 失败；19 处文本差异全部裁决；7 处经文、69 处卦变/八宫字段、3 处教学代码/摘录已修正 |
+| 权利边界 | 《周易》受文为公版；维基文库转录与 MediaWiki 标记的复用仍受 Wikimedia/Wikisource 条款约束，页名与 page ID 已保留 |
+| 边界 | 不授证关键词、简释、固定吉凶、预测或现实决策；革卦已/巳/己读法继续显式保留分歧 |
+
 ## 4. 历史产品规格来源
 
 这些文件位于 `SRC-PKG-XUAN-NEW`，是本次主 PRD 重建的主要历史证据。
@@ -256,7 +273,7 @@
 | Source Group ID | 路径 | 内容 | 候选用途 | 已知限制 |
 |---|---|---|---|---|
 | XUAN-COSMO | `00-cosmology/` | 阴阳、五行、干支、八卦、64 卦 | P1 基础课程、实体与关系 | 需拆成原子知识点并补逐条来源 |
-| XUAN-YIJING | `01-yijing/` | 卦名卦序、卦爻辞、解卦、卦变 | 64 卦查询、易经课程、题目 | 原文/解释/整理内容需分类型 |
+| XUAN-YIJING | `01-yijing/` | 卦名卦序、卦爻辞、解卦、卦变 | 64 卦查询、易经课程、题目 | 经文/结构已抽入规范核心库；关键词、简释和预测解释继续 blocked |
 | XUAN-LIUYAO | `02-liuyao/` | 起卦、装卦、用神、技法、断卦、案例、口诀 | 六爻课程、实战复盘、Prompt 审计 | 规则、口诀、案例需标适用条件和来源 |
 | XUAN-MEIHUA | `03-meihua/` | 起卦、体用、取象、案例 | 梅花课程与案例练习 | 已修复一处变卦例题；现代笔画法与原典字占须分开；外应和取象保持主观解释标签 |
 | XUAN-BAZI | `04-bazi/` | 排盘、十神、格局、案例 | 八字课程、引擎数据审计 | 日柱/节气算法含近似风险 |
@@ -302,7 +319,7 @@
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
 | 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app 表、`sources/` | Skill 补广度和安全；compendium 补五运六气/子午/既有来源；冲突逐条记录 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
-| 未来规范数据库 | 尚未建立 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database |
+| 未来规范数据库 | 逐域建立；周易核心已有 `database/yijing/zhouyi-core.json` | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 
 ## 9. 条目级溯源合同
 

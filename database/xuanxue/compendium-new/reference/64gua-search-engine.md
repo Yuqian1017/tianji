@@ -1,6 +1,8 @@
 # 六十四卦搜索引擎
 
-> 独立工具。输入卦名/卦象/爻位/关键词，返回匹配结果。
+> 历史设计草案。输入卦名/卦象/爻位/关键词，返回匹配结果。
+>
+> **校验边界（2026-07-10）**：本文的 `GUA_DB` 只填了乾卦，不是可运行的完整数据库。完整结构数据以 `database/yijing/zhouyi-core.json` 为准。「事业、感情、财运、健康」主题映射只是字面检索标签，不是预测、诊断或决策结论。
 
 ---
 
@@ -144,7 +146,7 @@ function coinToGua(throws) {
 
 // 1. 铜钱起卦
 // coinToGua([7,7,8,9,8,7])
-// → { benGua: 风泽中孚, bianGua: 山泽损, dongYao:[4], dongYaoCi:[{pos:'九四',...}] }
+// → { benGua: 火泽睽, bianGua: 山泽损, dongYao:[4], dongYaoCi:[{pos:'九四',...}] }
 
 // 2. 按卦名查
 // searchByName('乾') → [{num:1, name:'乾', ...}]

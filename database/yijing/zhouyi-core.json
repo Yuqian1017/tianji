@@ -1,0 +1,3081 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-10",
+  "status": {
+    "sequenceAndStructure": "accepted",
+    "receivedText": "reviewed_with_adjudicated_variants",
+    "interpretationAndKeywords": "not_validated_not_included"
+  },
+  "conventions": {
+    "lineOrder": "bottom_to_top",
+    "inverse": "invert_all_six_lines",
+    "reverse": "reverse_all_six_lines",
+    "nuclear": "lines_2_3_4_lower_and_3_4_5_upper",
+    "palaceSchool": "jingfang_eight_palaces"
+  },
+  "sourceRefs": {
+    "scripture1": {
+      "path": "database/xuanxue/compendium-new/reference/64gua-yaoci-part1.md",
+      "sha256": "75c4f20af221d912b64faebeba2402e9abc57093dd91844e82ad728a7f9e193d"
+    },
+    "scripture2": {
+      "path": "database/xuanxue/compendium-new/reference/64gua-yaoci-part2.md",
+      "sha256": "03696bd121b75c18f33cd2d641f0c2dbf5feda1188bb0af72478be8e3547b5bd"
+    },
+    "guabian": {
+      "path": "database/xuanxue/compendium-new/01-yijing/04-guabian-data.md",
+      "sha256": "63a4d18bef04617905b95ac64b7ab9facf6b3bb50d66b2e0e810530fb66511c2"
+    },
+    "overview": {
+      "path": "database/xuanxue/compendium-new/01-yijing/01-64gua-reference.md",
+      "sha256": "7383029372b288fe75e965aa909c6be6aedde0cb9f882ecc03351df9fa06a997"
+    },
+    "lookup": {
+      "path": "database/xuanxue/compendium-new/reference/64gua-lookup.md",
+      "sha256": "755aeb8414800705bd53642919a8c66ccc74fb760c79a2b2fe4a4441303b0c06"
+    },
+    "cosmology": {
+      "path": "database/xuanxue/compendium-new/00-cosmology/04-bagua-64gua.md",
+      "sha256": "e1fb5edffa4c88b693e226bd5c2d7d91c17529436776317b526c0fbc8aaa2449"
+    },
+    "lesson2": {
+      "path": "database/xuanxue/compendium-new/01-yijing/02-guaci-yaoci.md",
+      "sha256": "99467a55191c9eebe217d36ad01ecb625f2a5127e15811dcff4c874976fd0a87"
+    },
+    "searchEngine": {
+      "path": "database/xuanxue/compendium-new/reference/64gua-search-engine.md",
+      "sha256": "560607e7f371ef81349889313049a8ff21a278bb36a99011e63f103a43034e2a"
+    },
+    "witness": {
+      "path": "database/sources/wikisource/zhouyi-64-mediawiki-2026-07-10.json",
+      "sha256": "597f936ea2c0849b086b39c33077a1c09cbeb0ae68bb11042d25d2a5bd1743a6"
+    },
+    "adjudications": {
+      "path": "database/yijing/zhouyi-text-adjudications.json",
+      "sha256": "b8dad3c298c5376d30c76cd78a8616852b84b4d0089972d87492fd844f81436a"
+    }
+  },
+  "adjudicationSummary": {
+    "records": 19,
+    "correctedDualWitness": 7,
+    "preservedDeclaredDifferences": 12
+  },
+  "hexagrams": [
+    {
+      "sequence": 1,
+      "shortName": "乾",
+      "fullName": "乾为天",
+      "trigramSymbols": "☰☰",
+      "upper": "乾",
+      "lower": "乾",
+      "binaryBottomToTop": "111111",
+      "guaci": "元亨利贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "潜龙勿用"
+        },
+        {
+          "position": "九二",
+          "text": "见龙在田，利见大人"
+        },
+        {
+          "position": "九三",
+          "text": "君子终日乾乾，夕惕若厉，无咎"
+        },
+        {
+          "position": "九四",
+          "text": "或跃在渊，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "飞龙在天，利见大人"
+        },
+        {
+          "position": "上九",
+          "text": "亢龙有悔"
+        },
+        {
+          "position": "用九",
+          "text": "见群龙无首，吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "坤为地",
+        "reverse": "乾为天",
+        "nuclear": "乾为天"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 2,
+      "shortName": "坤",
+      "fullName": "坤为地",
+      "trigramSymbols": "☷☷",
+      "upper": "坤",
+      "lower": "坤",
+      "binaryBottomToTop": "000000",
+      "guaci": "元亨，利牝马之贞。君子有攸往，先迷后得主，利。西南得朋，东北丧朋。安贞吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "履霜，坚冰至"
+        },
+        {
+          "position": "六二",
+          "text": "直方大，不习无不利"
+        },
+        {
+          "position": "六三",
+          "text": "含章可贞，或从王事，无成有终"
+        },
+        {
+          "position": "六四",
+          "text": "括囊，无咎无誉"
+        },
+        {
+          "position": "六五",
+          "text": "黄裳元吉"
+        },
+        {
+          "position": "上六",
+          "text": "龙战于野，其血玄黄"
+        },
+        {
+          "position": "用六",
+          "text": "利永贞"
+        }
+      ],
+      "transforms": {
+        "inverse": "乾为天",
+        "reverse": "坤为地",
+        "nuclear": "坤为地"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 3,
+      "shortName": "屯",
+      "fullName": "水雷屯",
+      "trigramSymbols": "☵☳",
+      "upper": "坎",
+      "lower": "震",
+      "binaryBottomToTop": "100010",
+      "guaci": "元亨利贞。勿用有攸往，利建侯。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "磐桓，利居贞，利建侯"
+        },
+        {
+          "position": "六二",
+          "text": "屯如邅如，乘马班如，匪寇婚媾，女子贞不字，十年乃字"
+        },
+        {
+          "position": "六三",
+          "text": "即鹿无虞，惟入于林中，君子几不如舍，往吝"
+        },
+        {
+          "position": "六四",
+          "text": "乘马班如，求婚媾，往吉无不利"
+        },
+        {
+          "position": "九五",
+          "text": "屯其膏，小贞吉，大贞凶"
+        },
+        {
+          "position": "上六",
+          "text": "乘马班如，泣血涟如"
+        }
+      ],
+      "transforms": {
+        "inverse": "火风鼎",
+        "reverse": "山水蒙",
+        "nuclear": "山地剥"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 4,
+      "shortName": "蒙",
+      "fullName": "山水蒙",
+      "trigramSymbols": "☶☵",
+      "upper": "艮",
+      "lower": "坎",
+      "binaryBottomToTop": "010001",
+      "guaci": "亨。匪我求童蒙，童蒙求我。初筮告，再三渎，渎则不告。利贞。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "发蒙，利用刑人，用说桎梏，以往吝"
+        },
+        {
+          "position": "九二",
+          "text": "包蒙吉，纳妇吉，子克家"
+        },
+        {
+          "position": "六三",
+          "text": "勿用取女，见金夫，不有躬，无攸利"
+        },
+        {
+          "position": "六四",
+          "text": "困蒙，吝"
+        },
+        {
+          "position": "六五",
+          "text": "童蒙，吉"
+        },
+        {
+          "position": "上九",
+          "text": "击蒙，不利为寇，利御寇"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽火革",
+        "reverse": "水雷屯",
+        "nuclear": "地雷复"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 5,
+      "shortName": "需",
+      "fullName": "水天需",
+      "trigramSymbols": "☵☰",
+      "upper": "坎",
+      "lower": "乾",
+      "binaryBottomToTop": "111010",
+      "guaci": "有孚，光亨贞吉，利涉大川。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "需于郊，利用恒，无咎"
+        },
+        {
+          "position": "九二",
+          "text": "需于沙，小有言，终吉"
+        },
+        {
+          "position": "九三",
+          "text": "需于泥，致寇至"
+        },
+        {
+          "position": "六四",
+          "text": "需于血，出自穴"
+        },
+        {
+          "position": "九五",
+          "text": "需于酒食，贞吉"
+        },
+        {
+          "position": "上六",
+          "text": "入于穴，有不速之客三人来，敬之终吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "火地晋",
+        "reverse": "天水讼",
+        "nuclear": "火泽睽"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 6,
+      "shortName": "讼",
+      "fullName": "天水讼",
+      "trigramSymbols": "☰☵",
+      "upper": "乾",
+      "lower": "坎",
+      "binaryBottomToTop": "010111",
+      "guaci": "有孚窒惕，中吉，终凶。利见大人，不利涉大川。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "不永所事，小有言，终吉"
+        },
+        {
+          "position": "九二",
+          "text": "不克讼，归而逋，其邑人三百户无眚"
+        },
+        {
+          "position": "六三",
+          "text": "食旧德，贞厉，终吉，或从王事，无成"
+        },
+        {
+          "position": "九四",
+          "text": "不克讼，复即命渝，安贞吉"
+        },
+        {
+          "position": "九五",
+          "text": "讼，元吉"
+        },
+        {
+          "position": "上九",
+          "text": "或锡之鞶带，终朝三褫之"
+        }
+      ],
+      "transforms": {
+        "inverse": "地火明夷",
+        "reverse": "水天需",
+        "nuclear": "风火家人"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 7,
+      "shortName": "师",
+      "fullName": "地水师",
+      "trigramSymbols": "☷☵",
+      "upper": "坤",
+      "lower": "坎",
+      "binaryBottomToTop": "010000",
+      "guaci": "贞，丈人吉，无咎。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "师出以律，否臧凶"
+        },
+        {
+          "position": "九二",
+          "text": "在师中吉，无咎，王三锡命"
+        },
+        {
+          "position": "六三",
+          "text": "师或舆尸，凶"
+        },
+        {
+          "position": "六四",
+          "text": "师左次，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "田有禽，利执言，无咎，长子帅师，弟子舆尸，贞凶"
+        },
+        {
+          "position": "上六",
+          "text": "大君有命，开国承家，小人勿用"
+        }
+      ],
+      "transforms": {
+        "inverse": "天火同人",
+        "reverse": "水地比",
+        "nuclear": "地雷复"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 8,
+      "shortName": "比",
+      "fullName": "水地比",
+      "trigramSymbols": "☵☷",
+      "upper": "坎",
+      "lower": "坤",
+      "binaryBottomToTop": "000010",
+      "guaci": "吉。原筮元永贞，无咎。不宁方来，后夫凶。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "有孚比之，无咎。有孚盈缶，终来有它吉"
+        },
+        {
+          "position": "六二",
+          "text": "比之自内，贞吉"
+        },
+        {
+          "position": "六三",
+          "text": "比之匪人"
+        },
+        {
+          "position": "六四",
+          "text": "外比之，贞吉"
+        },
+        {
+          "position": "九五",
+          "text": "显比，王用三驱，失前禽，邑人不诫，吉"
+        },
+        {
+          "position": "上六",
+          "text": "比之无首，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "火天大有",
+        "reverse": "地水师",
+        "nuclear": "山地剥"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 9,
+      "shortName": "小畜",
+      "fullName": "风天小畜",
+      "trigramSymbols": "☴☰",
+      "upper": "巽",
+      "lower": "乾",
+      "binaryBottomToTop": "111011",
+      "guaci": "亨。密云不雨，自我西郊。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "复自道，何其咎，吉"
+        },
+        {
+          "position": "九二",
+          "text": "牵复，吉"
+        },
+        {
+          "position": "九三",
+          "text": "舆说辐，夫妻反目"
+        },
+        {
+          "position": "六四",
+          "text": "有孚，血去惕出，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "有孚挛如，富以其邻"
+        },
+        {
+          "position": "上九",
+          "text": "既雨既处，尚德载，妇贞厉，月几望，君子征凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷地豫",
+        "reverse": "天泽履",
+        "nuclear": "火泽睽"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 10,
+      "shortName": "履",
+      "fullName": "天泽履",
+      "trigramSymbols": "☰☱",
+      "upper": "乾",
+      "lower": "兑",
+      "binaryBottomToTop": "110111",
+      "guaci": "履虎尾，不咥人，亨。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "素履往，无咎"
+        },
+        {
+          "position": "九二",
+          "text": "履道坦坦，幽人贞吉"
+        },
+        {
+          "position": "六三",
+          "text": "眇能视，跛能履，履虎尾咥人，凶。武人为于大君"
+        },
+        {
+          "position": "九四",
+          "text": "履虎尾，愬愬终吉"
+        },
+        {
+          "position": "九五",
+          "text": "夬履，贞厉"
+        },
+        {
+          "position": "上九",
+          "text": "视履考祥，其旋元吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "地山谦",
+        "reverse": "风天小畜",
+        "nuclear": "风火家人"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 11,
+      "shortName": "泰",
+      "fullName": "地天泰",
+      "trigramSymbols": "☷☰",
+      "upper": "坤",
+      "lower": "乾",
+      "binaryBottomToTop": "111000",
+      "guaci": "小往大来，吉亨。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "拔茅茹以其汇，征吉"
+        },
+        {
+          "position": "九二",
+          "text": "包荒，用冯河，不遐遗，朋亡，得尚于中行"
+        },
+        {
+          "position": "九三",
+          "text": "无平不陂，无往不复，艰贞无咎，勿恤其孚，于食有福"
+        },
+        {
+          "position": "六四",
+          "text": "翩翩不富以其邻，不戒以孚"
+        },
+        {
+          "position": "六五",
+          "text": "帝乙归妹，以祉元吉"
+        },
+        {
+          "position": "上六",
+          "text": "城复于隍，勿用师，自邑告命，贞吝"
+        }
+      ],
+      "transforms": {
+        "inverse": "天地否",
+        "reverse": "天地否",
+        "nuclear": "雷泽归妹"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 12,
+      "shortName": "否",
+      "fullName": "天地否",
+      "trigramSymbols": "☰☷",
+      "upper": "乾",
+      "lower": "坤",
+      "binaryBottomToTop": "000111",
+      "guaci": "否之匪人，不利君子贞，大往小来。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "拔茅茹以其汇，贞吉亨"
+        },
+        {
+          "position": "六二",
+          "text": "包承，小人吉，大人否亨"
+        },
+        {
+          "position": "六三",
+          "text": "包羞"
+        },
+        {
+          "position": "九四",
+          "text": "有命无咎，畴离祉"
+        },
+        {
+          "position": "九五",
+          "text": "休否，大人吉，其亡其亡，系于苞桑"
+        },
+        {
+          "position": "上九",
+          "text": "倾否，先否后喜"
+        }
+      ],
+      "transforms": {
+        "inverse": "地天泰",
+        "reverse": "地天泰",
+        "nuclear": "风山渐"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 13,
+      "shortName": "同人",
+      "fullName": "天火同人",
+      "trigramSymbols": "☰☲",
+      "upper": "乾",
+      "lower": "离",
+      "binaryBottomToTop": "101111",
+      "guaci": "同人于野，亨。利涉大川，利君子贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "同人于门，无咎"
+        },
+        {
+          "position": "六二",
+          "text": "同人于宗，吝"
+        },
+        {
+          "position": "九三",
+          "text": "伏戎于莽，升其高陵，三岁不兴"
+        },
+        {
+          "position": "九四",
+          "text": "乘其墉，弗克攻，吉"
+        },
+        {
+          "position": "九五",
+          "text": "同人先号啕而后笑，大师克相遇"
+        },
+        {
+          "position": "上九",
+          "text": "同人于郊，无悔"
+        }
+      ],
+      "transforms": {
+        "inverse": "地水师",
+        "reverse": "火天大有",
+        "nuclear": "天风姤"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 14,
+      "shortName": "大有",
+      "fullName": "火天大有",
+      "trigramSymbols": "☲☰",
+      "upper": "离",
+      "lower": "乾",
+      "binaryBottomToTop": "111101",
+      "guaci": "元亨。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "无交害，匪咎，艰则无咎"
+        },
+        {
+          "position": "九二",
+          "text": "大车以载，有攸往，无咎"
+        },
+        {
+          "position": "九三",
+          "text": "公用亨于天子，小人弗克"
+        },
+        {
+          "position": "九四",
+          "text": "匪其彭，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "厥孚交如，威如，吉"
+        },
+        {
+          "position": "上九",
+          "text": "自天佑之，吉无不利"
+        }
+      ],
+      "transforms": {
+        "inverse": "水地比",
+        "reverse": "天火同人",
+        "nuclear": "泽天夬"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 15,
+      "shortName": "谦",
+      "fullName": "地山谦",
+      "trigramSymbols": "☷☶",
+      "upper": "坤",
+      "lower": "艮",
+      "binaryBottomToTop": "001000",
+      "guaci": "亨，君子有终。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "谦谦君子，用涉大川，吉"
+        },
+        {
+          "position": "六二",
+          "text": "鸣谦，贞吉"
+        },
+        {
+          "position": "九三",
+          "text": "劳谦，君子有终，吉"
+        },
+        {
+          "position": "六四",
+          "text": "无不利，撝谦"
+        },
+        {
+          "position": "六五",
+          "text": "不富以其邻，利用侵伐，无不利"
+        },
+        {
+          "position": "上六",
+          "text": "鸣谦，利用行师，征邑国"
+        }
+      ],
+      "transforms": {
+        "inverse": "天泽履",
+        "reverse": "雷地豫",
+        "nuclear": "雷水解"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 16,
+      "shortName": "豫",
+      "fullName": "雷地豫",
+      "trigramSymbols": "☳☷",
+      "upper": "震",
+      "lower": "坤",
+      "binaryBottomToTop": "000100",
+      "guaci": "利建侯行师。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "鸣豫，凶"
+        },
+        {
+          "position": "六二",
+          "text": "介于石，不终日，贞吉"
+        },
+        {
+          "position": "六三",
+          "text": "盱豫，悔，迟有悔"
+        },
+        {
+          "position": "九四",
+          "text": "由豫，大有得，勿疑，朋盍簪"
+        },
+        {
+          "position": "六五",
+          "text": "贞疾，恒不死"
+        },
+        {
+          "position": "上六",
+          "text": "冥豫成，有渝无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "风天小畜",
+        "reverse": "地山谦",
+        "nuclear": "水山蹇"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 17,
+      "shortName": "随",
+      "fullName": "泽雷随",
+      "trigramSymbols": "☱☳",
+      "upper": "兑",
+      "lower": "震",
+      "binaryBottomToTop": "100110",
+      "guaci": "元亨利贞，无咎。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "官有渝，贞吉，出门交有功"
+        },
+        {
+          "position": "六二",
+          "text": "系小子，失丈夫"
+        },
+        {
+          "position": "六三",
+          "text": "系丈夫，失小子，随有求得，利居贞"
+        },
+        {
+          "position": "九四",
+          "text": "随有获，贞凶，有孚在道以明，何咎"
+        },
+        {
+          "position": "九五",
+          "text": "孚于嘉，吉"
+        },
+        {
+          "position": "上六",
+          "text": "拘系之，乃从维之，王用亨于西山"
+        }
+      ],
+      "transforms": {
+        "inverse": "山风蛊",
+        "reverse": "山风蛊",
+        "nuclear": "风山渐"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 18,
+      "shortName": "蛊",
+      "fullName": "山风蛊",
+      "trigramSymbols": "☶☴",
+      "upper": "艮",
+      "lower": "巽",
+      "binaryBottomToTop": "011001",
+      "guaci": "元亨，利涉大川。先甲三日，后甲三日。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "干父之蛊，有子考无咎，厉终吉"
+        },
+        {
+          "position": "九二",
+          "text": "干母之蛊，不可贞"
+        },
+        {
+          "position": "九三",
+          "text": "干父之蛊，小有悔，无大咎"
+        },
+        {
+          "position": "六四",
+          "text": "裕父之蛊，往见吝"
+        },
+        {
+          "position": "六五",
+          "text": "干父之蛊，用誉"
+        },
+        {
+          "position": "上九",
+          "text": "不事王侯，高尚其事"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽雷随",
+        "reverse": "泽雷随",
+        "nuclear": "雷泽归妹"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 19,
+      "shortName": "临",
+      "fullName": "地泽临",
+      "trigramSymbols": "☷☱",
+      "upper": "坤",
+      "lower": "兑",
+      "binaryBottomToTop": "110000",
+      "guaci": "元亨利贞。至于八月有凶。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "咸临，贞吉"
+        },
+        {
+          "position": "九二",
+          "text": "咸临，吉，无不利"
+        },
+        {
+          "position": "六三",
+          "text": "甘临，无攸利，既忧之，无咎"
+        },
+        {
+          "position": "六四",
+          "text": "至临，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "知临，大君之宜，吉"
+        },
+        {
+          "position": "上六",
+          "text": "敦临，吉，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "天山遁",
+        "reverse": "风地观",
+        "nuclear": "地雷复"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 20,
+      "shortName": "观",
+      "fullName": "风地观",
+      "trigramSymbols": "☴☷",
+      "upper": "巽",
+      "lower": "坤",
+      "binaryBottomToTop": "000011",
+      "guaci": "盥而不荐，有孚顒若。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "童观，小人无咎，君子吝"
+        },
+        {
+          "position": "六二",
+          "text": "窥观，利女贞"
+        },
+        {
+          "position": "六三",
+          "text": "观我生，进退"
+        },
+        {
+          "position": "六四",
+          "text": "观国之光，利用宾于王"
+        },
+        {
+          "position": "九五",
+          "text": "观我生，君子无咎"
+        },
+        {
+          "position": "上九",
+          "text": "观其生，君子无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷天大壮",
+        "reverse": "地泽临",
+        "nuclear": "山地剥"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 21,
+      "shortName": "噬嗑",
+      "fullName": "火雷噬嗑",
+      "trigramSymbols": "☲☳",
+      "upper": "离",
+      "lower": "震",
+      "binaryBottomToTop": "100101",
+      "guaci": "亨，利用狱。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "屦校灭趾，无咎"
+        },
+        {
+          "position": "六二",
+          "text": "噬肤灭鼻，无咎"
+        },
+        {
+          "position": "六三",
+          "text": "噬腊肉，遇毒，小吝无咎"
+        },
+        {
+          "position": "九四",
+          "text": "噬干胏，得金矢，利艰贞，吉"
+        },
+        {
+          "position": "六五",
+          "text": "噬干肉，得黄金，贞厉无咎"
+        },
+        {
+          "position": "上九",
+          "text": "何校灭耳，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "水风井",
+        "reverse": "山火贲",
+        "nuclear": "水山蹇"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 22,
+      "shortName": "贲",
+      "fullName": "山火贲",
+      "trigramSymbols": "☶☲",
+      "upper": "艮",
+      "lower": "离",
+      "binaryBottomToTop": "101001",
+      "guaci": "亨，小利有攸往。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "贲其趾，舍车而徒"
+        },
+        {
+          "position": "六二",
+          "text": "贲其须"
+        },
+        {
+          "position": "九三",
+          "text": "贲如濡如，永贞吉"
+        },
+        {
+          "position": "六四",
+          "text": "贲如皤如，白马翰如，匪寇婚媾"
+        },
+        {
+          "position": "六五",
+          "text": "贲于丘园，束帛戋戋，吝终吉"
+        },
+        {
+          "position": "上九",
+          "text": "白贲，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽水困",
+        "reverse": "火雷噬嗑",
+        "nuclear": "雷水解"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 23,
+      "shortName": "剥",
+      "fullName": "山地剥",
+      "trigramSymbols": "☶☷",
+      "upper": "艮",
+      "lower": "坤",
+      "binaryBottomToTop": "000001",
+      "guaci": "不利有攸往。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "剥床以足，蔑贞凶"
+        },
+        {
+          "position": "六二",
+          "text": "剥床以辨，蔑贞凶"
+        },
+        {
+          "position": "六三",
+          "text": "剥之，无咎"
+        },
+        {
+          "position": "六四",
+          "text": "剥床以肤，凶"
+        },
+        {
+          "position": "六五",
+          "text": "贯鱼，以宫人宠，无不利"
+        },
+        {
+          "position": "上九",
+          "text": "硕果不食，君子得舆，小人剥庐"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽天夬",
+        "reverse": "地雷复",
+        "nuclear": "坤为地"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 24,
+      "shortName": "复",
+      "fullName": "地雷复",
+      "trigramSymbols": "☷☳",
+      "upper": "坤",
+      "lower": "震",
+      "binaryBottomToTop": "100000",
+      "guaci": "亨。出入无疾，朋来无咎。反复其道，七日来复，利有攸往。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "不远复，无祇悔，元吉"
+        },
+        {
+          "position": "六二",
+          "text": "休复，吉"
+        },
+        {
+          "position": "六三",
+          "text": "频复，厉无咎"
+        },
+        {
+          "position": "六四",
+          "text": "中行独复"
+        },
+        {
+          "position": "六五",
+          "text": "敦复，无悔"
+        },
+        {
+          "position": "上六",
+          "text": "迷复，凶，有灾眚。用行师，终有大败，以其国君凶，至于十年不克征"
+        }
+      ],
+      "transforms": {
+        "inverse": "天风姤",
+        "reverse": "山地剥",
+        "nuclear": "坤为地"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 25,
+      "shortName": "无妄",
+      "fullName": "天雷无妄",
+      "trigramSymbols": "☰☳",
+      "upper": "乾",
+      "lower": "震",
+      "binaryBottomToTop": "100111",
+      "guaci": "元亨利贞。其匪正有眚，不利有攸往。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "无妄往，吉"
+        },
+        {
+          "position": "六二",
+          "text": "不耕获，不菑畬，则利有攸往"
+        },
+        {
+          "position": "六三",
+          "text": "无妄之灾，或系之牛，行人之得，邑人之灾"
+        },
+        {
+          "position": "九四",
+          "text": "可贞，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "无妄之疾，勿药有喜"
+        },
+        {
+          "position": "上九",
+          "text": "无妄行，有眚，无攸利"
+        }
+      ],
+      "transforms": {
+        "inverse": "地风升",
+        "reverse": "山天大畜",
+        "nuclear": "风山渐"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 26,
+      "shortName": "大畜",
+      "fullName": "山天大畜",
+      "trigramSymbols": "☶☰",
+      "upper": "艮",
+      "lower": "乾",
+      "binaryBottomToTop": "111001",
+      "guaci": "利贞。不家食吉，利涉大川。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "有厉，利已"
+        },
+        {
+          "position": "九二",
+          "text": "舆说輹"
+        },
+        {
+          "position": "九三",
+          "text": "良马逐，利艰贞，曰闲舆卫，利有攸往"
+        },
+        {
+          "position": "六四",
+          "text": "童牛之牿，元吉"
+        },
+        {
+          "position": "六五",
+          "text": "豮豕之牙，吉"
+        },
+        {
+          "position": "上九",
+          "text": "何天之衢，亨"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽地萃",
+        "reverse": "天雷无妄",
+        "nuclear": "雷泽归妹"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 27,
+      "shortName": "颐",
+      "fullName": "山雷颐",
+      "trigramSymbols": "☶☳",
+      "upper": "艮",
+      "lower": "震",
+      "binaryBottomToTop": "100001",
+      "guaci": "贞吉。观颐，自求口实。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "舍尔灵龟，观我朵颐，凶"
+        },
+        {
+          "position": "六二",
+          "text": "颠颐，拂经于丘颐，征凶"
+        },
+        {
+          "position": "六三",
+          "text": "拂颐，贞凶，十年勿用，无攸利"
+        },
+        {
+          "position": "六四",
+          "text": "颠颐吉，虎视眈眈，其欲逐逐，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "拂经，居贞吉，不可涉大川"
+        },
+        {
+          "position": "上九",
+          "text": "由颐，厉吉，利涉大川"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽风大过",
+        "reverse": "山雷颐",
+        "nuclear": "坤为地"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 28,
+      "shortName": "大过",
+      "fullName": "泽风大过",
+      "trigramSymbols": "☱☴",
+      "upper": "兑",
+      "lower": "巽",
+      "binaryBottomToTop": "011110",
+      "guaci": "栋桡，利有攸往，亨。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "藉用白茅，无咎"
+        },
+        {
+          "position": "九二",
+          "text": "枯杨生稊，老夫得其女妻，无不利"
+        },
+        {
+          "position": "九三",
+          "text": "栋桡，凶"
+        },
+        {
+          "position": "九四",
+          "text": "栋隆，吉，有它吝"
+        },
+        {
+          "position": "九五",
+          "text": "枯杨生华，老妇得其士夫，无咎无誉"
+        },
+        {
+          "position": "上六",
+          "text": "过涉灭顶，凶，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "山雷颐",
+        "reverse": "泽风大过",
+        "nuclear": "乾为天"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 29,
+      "shortName": "坎",
+      "fullName": "坎为水",
+      "trigramSymbols": "☵☵",
+      "upper": "坎",
+      "lower": "坎",
+      "binaryBottomToTop": "010010",
+      "guaci": "习坎，有孚，维心亨，行有尚。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "习坎，入于坎窞，凶"
+        },
+        {
+          "position": "九二",
+          "text": "坎有险，求小得"
+        },
+        {
+          "position": "六三",
+          "text": "来之坎坎，险且枕，入于坎窞，勿用"
+        },
+        {
+          "position": "六四",
+          "text": "樽酒簋贰，用缶，纳约自牖，终无咎"
+        },
+        {
+          "position": "九五",
+          "text": "坎不盈，祗既平，无咎"
+        },
+        {
+          "position": "上六",
+          "text": "系用徽纆，寘于丛棘，三岁不得，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "离为火",
+        "reverse": "坎为水",
+        "nuclear": "山雷颐"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 30,
+      "shortName": "离",
+      "fullName": "离为火",
+      "trigramSymbols": "☲☲",
+      "upper": "离",
+      "lower": "离",
+      "binaryBottomToTop": "101101",
+      "guaci": "利贞，亨。畜牝牛吉。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "履错然，敬之无咎"
+        },
+        {
+          "position": "六二",
+          "text": "黄离，元吉"
+        },
+        {
+          "position": "九三",
+          "text": "日昃之离，不鼓缶而歌，则大耋之嗟，凶"
+        },
+        {
+          "position": "九四",
+          "text": "突如其来如，焚如，死如，弃如"
+        },
+        {
+          "position": "六五",
+          "text": "出涕沱若，戚嗟若，吉"
+        },
+        {
+          "position": "上九",
+          "text": "王用出征，有嘉折首，获匪其丑，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "坎为水",
+        "reverse": "离为火",
+        "nuclear": "泽风大过"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 31,
+      "shortName": "咸",
+      "fullName": "泽山咸",
+      "trigramSymbols": "☱☶",
+      "upper": "兑",
+      "lower": "艮",
+      "binaryBottomToTop": "001110",
+      "guaci": "亨，利贞，取女吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "咸其拇"
+        },
+        {
+          "position": "六二",
+          "text": "咸其腓，凶，居吉"
+        },
+        {
+          "position": "九三",
+          "text": "咸其股，执其随，往吝"
+        },
+        {
+          "position": "九四",
+          "text": "贞吉悔亡，憧憧往来，朋从尔思"
+        },
+        {
+          "position": "九五",
+          "text": "咸其脢，无悔"
+        },
+        {
+          "position": "上六",
+          "text": "咸其辅颊舌"
+        }
+      ],
+      "transforms": {
+        "inverse": "山泽损",
+        "reverse": "雷风恒",
+        "nuclear": "天风姤"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 32,
+      "shortName": "恒",
+      "fullName": "雷风恒",
+      "trigramSymbols": "☳☴",
+      "upper": "震",
+      "lower": "巽",
+      "binaryBottomToTop": "011100",
+      "guaci": "亨，无咎，利贞，利有攸往。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "浚恒，贞凶，无攸利"
+        },
+        {
+          "position": "九二",
+          "text": "悔亡"
+        },
+        {
+          "position": "九三",
+          "text": "不恒其德，或承之羞，贞吝"
+        },
+        {
+          "position": "九四",
+          "text": "田无禽"
+        },
+        {
+          "position": "六五",
+          "text": "恒其德，贞，妇人吉，夫子凶"
+        },
+        {
+          "position": "上六",
+          "text": "振恒，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "风雷益",
+        "reverse": "泽山咸",
+        "nuclear": "泽天夬"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 33,
+      "shortName": "遁",
+      "fullName": "天山遁",
+      "trigramSymbols": "☰☶",
+      "upper": "乾",
+      "lower": "艮",
+      "binaryBottomToTop": "001111",
+      "guaci": "亨，小利贞。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "遁尾，厉，勿用有攸往"
+        },
+        {
+          "position": "六二",
+          "text": "执之用黄牛之革，莫之胜说"
+        },
+        {
+          "position": "九三",
+          "text": "系遁，有疾厉，畜臣妾吉"
+        },
+        {
+          "position": "九四",
+          "text": "好遁，君子吉，小人否"
+        },
+        {
+          "position": "九五",
+          "text": "嘉遁，贞吉"
+        },
+        {
+          "position": "上九",
+          "text": "肥遁，无不利"
+        }
+      ],
+      "transforms": {
+        "inverse": "地泽临",
+        "reverse": "雷天大壮",
+        "nuclear": "天风姤"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 34,
+      "shortName": "大壮",
+      "fullName": "雷天大壮",
+      "trigramSymbols": "☳☰",
+      "upper": "震",
+      "lower": "乾",
+      "binaryBottomToTop": "111100",
+      "guaci": "利贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "壮于趾，征凶，有孚"
+        },
+        {
+          "position": "九二",
+          "text": "贞吉"
+        },
+        {
+          "position": "九三",
+          "text": "小人用壮，君子用罔，贞厉，羝羊触藩，羸其角"
+        },
+        {
+          "position": "九四",
+          "text": "贞吉悔亡，藩决不羸，壮于大舆之輹"
+        },
+        {
+          "position": "六五",
+          "text": "丧羊于易，无悔"
+        },
+        {
+          "position": "上六",
+          "text": "羝羊触藩，不能退不能遂，无攸利，艰则吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "风地观",
+        "reverse": "天山遁",
+        "nuclear": "泽天夬"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 35,
+      "shortName": "晋",
+      "fullName": "火地晋",
+      "trigramSymbols": "☲☷",
+      "upper": "离",
+      "lower": "坤",
+      "binaryBottomToTop": "000101",
+      "guaci": "康侯用锡马蕃庶，昼日三接。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "晋如摧如，贞吉，罔孚裕无咎"
+        },
+        {
+          "position": "六二",
+          "text": "晋如愁如，贞吉，受兹介福于其王母"
+        },
+        {
+          "position": "六三",
+          "text": "众允，悔亡"
+        },
+        {
+          "position": "九四",
+          "text": "晋如鼫鼠，贞厉"
+        },
+        {
+          "position": "六五",
+          "text": "悔亡，失得勿恤，往吉无不利"
+        },
+        {
+          "position": "上九",
+          "text": "晋其角，维用伐邑，厉吉无咎，贞吝"
+        }
+      ],
+      "transforms": {
+        "inverse": "水天需",
+        "reverse": "地火明夷",
+        "nuclear": "水山蹇"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 36,
+      "shortName": "明夷",
+      "fullName": "地火明夷",
+      "trigramSymbols": "☷☲",
+      "upper": "坤",
+      "lower": "离",
+      "binaryBottomToTop": "101000",
+      "guaci": "利艰贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "明夷于飞，垂其翼，君子于行，三日不食，有攸往，主人有言"
+        },
+        {
+          "position": "六二",
+          "text": "明夷，夷于左股，用拯马壮，吉"
+        },
+        {
+          "position": "九三",
+          "text": "明夷于南狩，得其大首，不可疾贞"
+        },
+        {
+          "position": "六四",
+          "text": "入于左腹，获明夷之心，于出门庭"
+        },
+        {
+          "position": "六五",
+          "text": "箕子之明夷，利贞"
+        },
+        {
+          "position": "上六",
+          "text": "不明晦，初登于天，后入于地"
+        }
+      ],
+      "transforms": {
+        "inverse": "天水讼",
+        "reverse": "火地晋",
+        "nuclear": "雷水解"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 37,
+      "shortName": "家人",
+      "fullName": "风火家人",
+      "trigramSymbols": "☴☲",
+      "upper": "巽",
+      "lower": "离",
+      "binaryBottomToTop": "101011",
+      "guaci": "利女贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "闲有家，悔亡"
+        },
+        {
+          "position": "六二",
+          "text": "无攸遂，在中馈，贞吉"
+        },
+        {
+          "position": "九三",
+          "text": "家人嗃嗃，悔厉吉，妇子嘻嘻，终吝"
+        },
+        {
+          "position": "六四",
+          "text": "富家，大吉"
+        },
+        {
+          "position": "九五",
+          "text": "王假有家，勿恤吉"
+        },
+        {
+          "position": "上九",
+          "text": "有孚威如，终吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷水解",
+        "reverse": "火泽睽",
+        "nuclear": "火水未济"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 38,
+      "shortName": "睽",
+      "fullName": "火泽睽",
+      "trigramSymbols": "☲☱",
+      "upper": "离",
+      "lower": "兑",
+      "binaryBottomToTop": "110101",
+      "guaci": "小事吉。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "悔亡，丧马勿逐自复，见恶人无咎"
+        },
+        {
+          "position": "九二",
+          "text": "遇主于巷，无咎"
+        },
+        {
+          "position": "六三",
+          "text": "见舆曳，其牛掣，其人天且劓，无初有终"
+        },
+        {
+          "position": "九四",
+          "text": "睽孤，遇元夫，交孚，厉无咎"
+        },
+        {
+          "position": "六五",
+          "text": "悔亡，厥宗噬肤，往何咎"
+        },
+        {
+          "position": "上九",
+          "text": "睽孤，见豕负涂，载鬼一车，先张之弧后说之弧，匪寇婚媾，往遇雨则吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "水山蹇",
+        "reverse": "风火家人",
+        "nuclear": "水火既济"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 39,
+      "shortName": "蹇",
+      "fullName": "水山蹇",
+      "trigramSymbols": "☵☶",
+      "upper": "坎",
+      "lower": "艮",
+      "binaryBottomToTop": "001010",
+      "guaci": "利西南，不利东北。利见大人，贞吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "往蹇来誉"
+        },
+        {
+          "position": "六二",
+          "text": "王臣蹇蹇，匪躬之故"
+        },
+        {
+          "position": "九三",
+          "text": "往蹇来反"
+        },
+        {
+          "position": "六四",
+          "text": "往蹇来连"
+        },
+        {
+          "position": "九五",
+          "text": "大蹇朋来"
+        },
+        {
+          "position": "上六",
+          "text": "往蹇来硕，吉，利见大人"
+        }
+      ],
+      "transforms": {
+        "inverse": "火泽睽",
+        "reverse": "雷水解",
+        "nuclear": "火水未济"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 40,
+      "shortName": "解",
+      "fullName": "雷水解",
+      "trigramSymbols": "☳☵",
+      "upper": "震",
+      "lower": "坎",
+      "binaryBottomToTop": "010100",
+      "guaci": "利西南。无所往，其来复吉。有攸往，夙吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "无咎"
+        },
+        {
+          "position": "九二",
+          "text": "田获三狐，得黄矢，贞吉"
+        },
+        {
+          "position": "六三",
+          "text": "负且乘，致寇至，贞吝"
+        },
+        {
+          "position": "九四",
+          "text": "解而拇，朋至斯孚"
+        },
+        {
+          "position": "六五",
+          "text": "君子维有解，吉，有孚于小人"
+        },
+        {
+          "position": "上六",
+          "text": "公用射隼于高墉之上，获之无不利"
+        }
+      ],
+      "transforms": {
+        "inverse": "风火家人",
+        "reverse": "水山蹇",
+        "nuclear": "水火既济"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 41,
+      "shortName": "损",
+      "fullName": "山泽损",
+      "trigramSymbols": "☶☱",
+      "upper": "艮",
+      "lower": "兑",
+      "binaryBottomToTop": "110001",
+      "guaci": "有孚，元吉，无咎可贞，利有攸往。曷之用？二簋可用享。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "已事遄往，无咎，酌损之"
+        },
+        {
+          "position": "九二",
+          "text": "利贞，征凶，弗损益之"
+        },
+        {
+          "position": "六三",
+          "text": "三人行则损一人，一人行则得其友"
+        },
+        {
+          "position": "六四",
+          "text": "损其疾，使遄有喜，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "或益之十朋之龟，弗克违，元吉"
+        },
+        {
+          "position": "上九",
+          "text": "弗损益之，无咎，贞吉，利有攸往，得臣无家"
+        }
+      ],
+      "transforms": {
+        "inverse": "泽山咸",
+        "reverse": "风雷益",
+        "nuclear": "地雷复"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 42,
+      "shortName": "益",
+      "fullName": "风雷益",
+      "trigramSymbols": "☴☳",
+      "upper": "巽",
+      "lower": "震",
+      "binaryBottomToTop": "100011",
+      "guaci": "利有攸往，利涉大川。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "利用为大作，元吉，无咎"
+        },
+        {
+          "position": "六二",
+          "text": "或益之十朋之龟，弗克违，永贞吉，王用享于帝，吉"
+        },
+        {
+          "position": "六三",
+          "text": "益之用凶事，无咎，有孚中行，告公用圭"
+        },
+        {
+          "position": "六四",
+          "text": "中行告公从，利用为依迁国"
+        },
+        {
+          "position": "九五",
+          "text": "有孚惠心，勿问元吉，有孚惠我德"
+        },
+        {
+          "position": "上九",
+          "text": "莫益之，或击之，立心勿恒，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷风恒",
+        "reverse": "山泽损",
+        "nuclear": "山地剥"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 43,
+      "shortName": "夬",
+      "fullName": "泽天夬",
+      "trigramSymbols": "☱☰",
+      "upper": "兑",
+      "lower": "乾",
+      "binaryBottomToTop": "111110",
+      "guaci": "扬于王庭，孚号有厉，告自邑，不利即戎，利有攸往。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "壮于前趾，往不胜为咎"
+        },
+        {
+          "position": "九二",
+          "text": "惕号，莫夜有戎，勿恤"
+        },
+        {
+          "position": "九三",
+          "text": "壮于頄，有凶，君子夬夬独行，遇雨若濡，有愠无咎"
+        },
+        {
+          "position": "九四",
+          "text": "臀无肤，其行次且，牵羊悔亡，闻言不信"
+        },
+        {
+          "position": "九五",
+          "text": "苋陆夬夬，中行无咎"
+        },
+        {
+          "position": "上六",
+          "text": "无号，终有凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "山地剥",
+        "reverse": "天风姤",
+        "nuclear": "乾为天"
+      },
+      "jingfang": {
+        "palace": "坤",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 44,
+      "shortName": "姤",
+      "fullName": "天风姤",
+      "trigramSymbols": "☰☴",
+      "upper": "乾",
+      "lower": "巽",
+      "binaryBottomToTop": "011111",
+      "guaci": "女壮，勿用取女。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "系于金柅，贞吉，有攸往见凶，羸豕孚蹢躅"
+        },
+        {
+          "position": "九二",
+          "text": "包有鱼，无咎，不利宾"
+        },
+        {
+          "position": "九三",
+          "text": "臀无肤，其行次且，厉无大咎"
+        },
+        {
+          "position": "九四",
+          "text": "包无鱼，起凶"
+        },
+        {
+          "position": "九五",
+          "text": "以杞包瓜，含章，有陨自天"
+        },
+        {
+          "position": "上九",
+          "text": "姤其角，吝，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "地雷复",
+        "reverse": "泽天夬",
+        "nuclear": "乾为天"
+      },
+      "jingfang": {
+        "palace": "乾",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 45,
+      "shortName": "萃",
+      "fullName": "泽地萃",
+      "trigramSymbols": "☱☷",
+      "upper": "兑",
+      "lower": "坤",
+      "binaryBottomToTop": "000110",
+      "guaci": "亨，王假有庙，利见大人，亨，利贞。用大牲吉，利有攸往。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "有孚不终，乃乱乃萃，若号一握为笑，勿恤往无咎"
+        },
+        {
+          "position": "六二",
+          "text": "引吉，无咎，孚乃利用禴"
+        },
+        {
+          "position": "六三",
+          "text": "萃如嗟如，无攸利，往无咎，小吝"
+        },
+        {
+          "position": "九四",
+          "text": "大吉，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "萃有位，无咎，匪孚，元永贞，悔亡"
+        },
+        {
+          "position": "上六",
+          "text": "赍咨涕洟，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "山天大畜",
+        "reverse": "地风升",
+        "nuclear": "风山渐"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 46,
+      "shortName": "升",
+      "fullName": "地风升",
+      "trigramSymbols": "☷☴",
+      "upper": "坤",
+      "lower": "巽",
+      "binaryBottomToTop": "011000",
+      "guaci": "元亨，用见大人，勿恤，南征吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "允升，大吉"
+        },
+        {
+          "position": "九二",
+          "text": "孚乃利用禴，无咎"
+        },
+        {
+          "position": "九三",
+          "text": "升虚邑"
+        },
+        {
+          "position": "六四",
+          "text": "王用亨于岐山，吉，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "贞吉，升阶"
+        },
+        {
+          "position": "上六",
+          "text": "冥升，利于不息之贞"
+        }
+      ],
+      "transforms": {
+        "inverse": "天雷无妄",
+        "reverse": "泽地萃",
+        "nuclear": "雷泽归妹"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 47,
+      "shortName": "困",
+      "fullName": "泽水困",
+      "trigramSymbols": "☱☵",
+      "upper": "兑",
+      "lower": "坎",
+      "binaryBottomToTop": "010110",
+      "guaci": "亨，贞，大人吉，无咎，有言不信。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "臀困于株木，入于幽谷，三岁不觌"
+        },
+        {
+          "position": "九二",
+          "text": "困于酒食，朱绂方来，利用享祀，征凶，无咎"
+        },
+        {
+          "position": "六三",
+          "text": "困于石，据于蒺藜，入于其宫不见其妻，凶"
+        },
+        {
+          "position": "九四",
+          "text": "来徐徐，困于金车，吝，有终"
+        },
+        {
+          "position": "九五",
+          "text": "劓刖，困于赤绂，乃徐有说，利用祭祀"
+        },
+        {
+          "position": "上六",
+          "text": "困于葛藟，于臲卼，曰动悔有悔，征吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "山火贲",
+        "reverse": "水风井",
+        "nuclear": "风火家人"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 48,
+      "shortName": "井",
+      "fullName": "水风井",
+      "trigramSymbols": "☵☴",
+      "upper": "坎",
+      "lower": "巽",
+      "binaryBottomToTop": "011010",
+      "guaci": "改邑不改井，无丧无得，往来井井。汔至亦未繘井，羸其瓶，凶。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "井泥不食，旧井无禽"
+        },
+        {
+          "position": "九二",
+          "text": "井谷射鲋，瓮敝漏"
+        },
+        {
+          "position": "九三",
+          "text": "井渫不食，为我心恻，可用汲，王明并受其福"
+        },
+        {
+          "position": "六四",
+          "text": "井甃，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "井冽寒泉，食"
+        },
+        {
+          "position": "上六",
+          "text": "井收勿幕，有孚元吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "火雷噬嗑",
+        "reverse": "泽水困",
+        "nuclear": "火泽睽"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 49,
+      "shortName": "革",
+      "fullName": "泽火革",
+      "trigramSymbols": "☱☲",
+      "upper": "兑",
+      "lower": "离",
+      "binaryBottomToTop": "101110",
+      "guaci": "已日乃孚，元亨利贞，悔亡。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "巩用黄牛之革"
+        },
+        {
+          "position": "六二",
+          "text": "已日乃革之，征吉，无咎"
+        },
+        {
+          "position": "九三",
+          "text": "征凶贞厉，革言三就，有孚"
+        },
+        {
+          "position": "九四",
+          "text": "悔亡，有孚改命，吉"
+        },
+        {
+          "position": "九五",
+          "text": "大人虎变，未占有孚"
+        },
+        {
+          "position": "上六",
+          "text": "君子豹变，小人革面，征凶，居贞吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "山水蒙",
+        "reverse": "火风鼎",
+        "nuclear": "天风姤"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "四世",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 50,
+      "shortName": "鼎",
+      "fullName": "火风鼎",
+      "trigramSymbols": "☲☴",
+      "upper": "离",
+      "lower": "巽",
+      "binaryBottomToTop": "011101",
+      "guaci": "元吉，亨。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "鼎颠趾，利出否，得妾以其子，无咎"
+        },
+        {
+          "position": "九二",
+          "text": "鼎有实，我仇有疾，不我能即，吉"
+        },
+        {
+          "position": "九三",
+          "text": "鼎耳革，其行塞，雉膏不食，方雨亏悔，终吉"
+        },
+        {
+          "position": "九四",
+          "text": "鼎折足，覆公餗，其形渥，凶"
+        },
+        {
+          "position": "六五",
+          "text": "鼎黄耳金铉，利贞"
+        },
+        {
+          "position": "上九",
+          "text": "鼎玉铉，大吉，无不利"
+        }
+      ],
+      "transforms": {
+        "inverse": "水雷屯",
+        "reverse": "泽火革",
+        "nuclear": "泽天夬"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "二世",
+        "world": 2,
+        "response": 5
+      }
+    },
+    {
+      "sequence": 51,
+      "shortName": "震",
+      "fullName": "震为雷",
+      "trigramSymbols": "☳☳",
+      "upper": "震",
+      "lower": "震",
+      "binaryBottomToTop": "100100",
+      "guaci": "亨。震来虩虩，笑言哑哑，震惊百里，不丧匕鬯。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "震来虩虩，后笑言哑哑，吉"
+        },
+        {
+          "position": "六二",
+          "text": "震来厉，亿丧贝，跻于九陵，勿逐，七日得"
+        },
+        {
+          "position": "六三",
+          "text": "震苏苏，震行无眚"
+        },
+        {
+          "position": "九四",
+          "text": "震遂泥"
+        },
+        {
+          "position": "六五",
+          "text": "震往来厉，亿无丧有事"
+        },
+        {
+          "position": "上六",
+          "text": "震索索，视矍矍，征凶，震不于其躬于其邻，无咎，婚媾有言"
+        }
+      ],
+      "transforms": {
+        "inverse": "巽为风",
+        "reverse": "艮为山",
+        "nuclear": "水山蹇"
+      },
+      "jingfang": {
+        "palace": "震",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 52,
+      "shortName": "艮",
+      "fullName": "艮为山",
+      "trigramSymbols": "☶☶",
+      "upper": "艮",
+      "lower": "艮",
+      "binaryBottomToTop": "001001",
+      "guaci": "艮其背，不获其身，行其庭不见其人，无咎。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "艮其趾，无咎，利永贞"
+        },
+        {
+          "position": "六二",
+          "text": "艮其腓，不拯其随，其心不快"
+        },
+        {
+          "position": "九三",
+          "text": "艮其限，列其夤，厉薰心"
+        },
+        {
+          "position": "六四",
+          "text": "艮其身，无咎"
+        },
+        {
+          "position": "六五",
+          "text": "艮其辅，言有序，悔亡"
+        },
+        {
+          "position": "上九",
+          "text": "敦艮，吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "兑为泽",
+        "reverse": "震为雷",
+        "nuclear": "雷水解"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 53,
+      "shortName": "渐",
+      "fullName": "风山渐",
+      "trigramSymbols": "☴☶",
+      "upper": "巽",
+      "lower": "艮",
+      "binaryBottomToTop": "001011",
+      "guaci": "女归吉，利贞。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "鸿渐于干，小子厉，有言无咎"
+        },
+        {
+          "position": "六二",
+          "text": "鸿渐于磐，饮食衎衎，吉"
+        },
+        {
+          "position": "九三",
+          "text": "鸿渐于陆，夫征不复，妇孕不育，凶，利御寇"
+        },
+        {
+          "position": "六四",
+          "text": "鸿渐于木，或得其桷，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "鸿渐于陵，妇三岁不孕，终莫之胜，吉"
+        },
+        {
+          "position": "上九",
+          "text": "鸿渐于陆，其羽可用为仪，吉"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷泽归妹",
+        "reverse": "雷泽归妹",
+        "nuclear": "火水未济"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 54,
+      "shortName": "归妹",
+      "fullName": "雷泽归妹",
+      "trigramSymbols": "☳☱",
+      "upper": "震",
+      "lower": "兑",
+      "binaryBottomToTop": "110100",
+      "guaci": "征凶，无攸利。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "归妹以娣，跛能履，征吉"
+        },
+        {
+          "position": "九二",
+          "text": "眇能视，利幽人之贞"
+        },
+        {
+          "position": "六三",
+          "text": "归妹以须，反归以娣"
+        },
+        {
+          "position": "九四",
+          "text": "归妹愆期，迟归有时"
+        },
+        {
+          "position": "六五",
+          "text": "帝乙归妹，其君之袂不如其娣之袂良，月几望，吉"
+        },
+        {
+          "position": "上六",
+          "text": "女承筐无实，士刲羊无血，无攸利"
+        }
+      ],
+      "transforms": {
+        "inverse": "风山渐",
+        "reverse": "风山渐",
+        "nuclear": "水火既济"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "归魂",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 55,
+      "shortName": "丰",
+      "fullName": "雷火丰",
+      "trigramSymbols": "☳☲",
+      "upper": "震",
+      "lower": "离",
+      "binaryBottomToTop": "101100",
+      "guaci": "亨，王假之，勿忧宜日中。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "遇其配主，虽旬无咎，往有尚"
+        },
+        {
+          "position": "六二",
+          "text": "丰其蔀，日中见斗，往得疑疾，有孚发若，吉"
+        },
+        {
+          "position": "九三",
+          "text": "丰其沛，日中见沬，折其右肱，无咎"
+        },
+        {
+          "position": "九四",
+          "text": "丰其蔀，日中见斗，遇其夷主，吉"
+        },
+        {
+          "position": "六五",
+          "text": "来章，有庆誉，吉"
+        },
+        {
+          "position": "上六",
+          "text": "丰其屋，蔀其家，窥其户阒其无人，三岁不觌，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "风水涣",
+        "reverse": "火山旅",
+        "nuclear": "泽风大过"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 56,
+      "shortName": "旅",
+      "fullName": "火山旅",
+      "trigramSymbols": "☲☶",
+      "upper": "离",
+      "lower": "艮",
+      "binaryBottomToTop": "001101",
+      "guaci": "小亨，旅贞吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "旅琐琐，斯其所取灾"
+        },
+        {
+          "position": "六二",
+          "text": "旅即次，怀其资，得童仆贞"
+        },
+        {
+          "position": "九三",
+          "text": "旅焚其次，丧其童仆，贞厉"
+        },
+        {
+          "position": "九四",
+          "text": "旅于处，得其资斧，我心不快"
+        },
+        {
+          "position": "六五",
+          "text": "射雉一矢亡，终以誉命"
+        },
+        {
+          "position": "上九",
+          "text": "鸟焚其巢，旅人先笑后号咷，丧牛于易，凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "水泽节",
+        "reverse": "雷火丰",
+        "nuclear": "泽风大过"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 57,
+      "shortName": "巽",
+      "fullName": "巽为风",
+      "trigramSymbols": "☴☴",
+      "upper": "巽",
+      "lower": "巽",
+      "binaryBottomToTop": "011011",
+      "guaci": "小亨，利有攸往，利见大人。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "进退，利武人之贞"
+        },
+        {
+          "position": "九二",
+          "text": "巽在床下，用史巫纷若，吉，无咎"
+        },
+        {
+          "position": "九三",
+          "text": "频巽，吝"
+        },
+        {
+          "position": "六四",
+          "text": "悔亡，田获三品"
+        },
+        {
+          "position": "九五",
+          "text": "贞吉悔亡，无不利，无初有终，先庚三日后庚三日，吉"
+        },
+        {
+          "position": "上九",
+          "text": "巽在床下，丧其资斧，贞凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "震为雷",
+        "reverse": "兑为泽",
+        "nuclear": "火泽睽"
+      },
+      "jingfang": {
+        "palace": "巽",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 58,
+      "shortName": "兑",
+      "fullName": "兑为泽",
+      "trigramSymbols": "☱☱",
+      "upper": "兑",
+      "lower": "兑",
+      "binaryBottomToTop": "110110",
+      "guaci": "亨，利贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "和兑，吉"
+        },
+        {
+          "position": "九二",
+          "text": "孚兑，吉，悔亡"
+        },
+        {
+          "position": "六三",
+          "text": "来兑，凶"
+        },
+        {
+          "position": "九四",
+          "text": "商兑未宁，介疾有喜"
+        },
+        {
+          "position": "九五",
+          "text": "孚于剥，有厉"
+        },
+        {
+          "position": "上六",
+          "text": "引兑"
+        }
+      ],
+      "transforms": {
+        "inverse": "艮为山",
+        "reverse": "巽为风",
+        "nuclear": "风火家人"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "本宫",
+        "world": 6,
+        "response": 3
+      }
+    },
+    {
+      "sequence": 59,
+      "shortName": "涣",
+      "fullName": "风水涣",
+      "trigramSymbols": "☴☵",
+      "upper": "巽",
+      "lower": "坎",
+      "binaryBottomToTop": "010011",
+      "guaci": "亨，王假有庙，利涉大川，利贞。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "用拯马壮，吉"
+        },
+        {
+          "position": "九二",
+          "text": "涣奔其机，悔亡"
+        },
+        {
+          "position": "六三",
+          "text": "涣其躬，无悔"
+        },
+        {
+          "position": "六四",
+          "text": "涣其群，元吉，涣有丘，匪夷所思"
+        },
+        {
+          "position": "九五",
+          "text": "涣汗其大号，涣王居，无咎"
+        },
+        {
+          "position": "上九",
+          "text": "涣其血去逖出，无咎"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷火丰",
+        "reverse": "水泽节",
+        "nuclear": "山雷颐"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "五世",
+        "world": 5,
+        "response": 2
+      }
+    },
+    {
+      "sequence": 60,
+      "shortName": "节",
+      "fullName": "水泽节",
+      "trigramSymbols": "☵☱",
+      "upper": "坎",
+      "lower": "兑",
+      "binaryBottomToTop": "110010",
+      "guaci": "亨，苦节不可贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "不出户庭，无咎"
+        },
+        {
+          "position": "九二",
+          "text": "不出门庭，凶"
+        },
+        {
+          "position": "六三",
+          "text": "不节若，则嗟若，无咎"
+        },
+        {
+          "position": "六四",
+          "text": "安节，亨"
+        },
+        {
+          "position": "九五",
+          "text": "甘节，吉，往有尚"
+        },
+        {
+          "position": "上六",
+          "text": "苦节，贞凶，悔亡"
+        }
+      ],
+      "transforms": {
+        "inverse": "火山旅",
+        "reverse": "风水涣",
+        "nuclear": "山雷颐"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "一世",
+        "world": 1,
+        "response": 4
+      }
+    },
+    {
+      "sequence": 61,
+      "shortName": "中孚",
+      "fullName": "风泽中孚",
+      "trigramSymbols": "☴☱",
+      "upper": "巽",
+      "lower": "兑",
+      "binaryBottomToTop": "110011",
+      "guaci": "豚鱼吉，利涉大川，利贞。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "虞吉，有它不燕"
+        },
+        {
+          "position": "九二",
+          "text": "鸣鹤在阴，其子和之，我有好爵，吾与尔靡之"
+        },
+        {
+          "position": "六三",
+          "text": "得敌，或鼓或罢，或泣或歌"
+        },
+        {
+          "position": "六四",
+          "text": "月几望，马匹亡，无咎"
+        },
+        {
+          "position": "九五",
+          "text": "有孚挛如，无咎"
+        },
+        {
+          "position": "上九",
+          "text": "翰音登于天，贞凶"
+        }
+      ],
+      "transforms": {
+        "inverse": "雷山小过",
+        "reverse": "风泽中孚",
+        "nuclear": "山雷颐"
+      },
+      "jingfang": {
+        "palace": "艮",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 62,
+      "shortName": "小过",
+      "fullName": "雷山小过",
+      "trigramSymbols": "☳☶",
+      "upper": "震",
+      "lower": "艮",
+      "binaryBottomToTop": "001100",
+      "guaci": "亨，利贞，可小事，不可大事。飞鸟遗之音，不宜上宜下，大吉。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "飞鸟以凶"
+        },
+        {
+          "position": "六二",
+          "text": "过其祖，遇其妣，不及其君，遇其臣，无咎"
+        },
+        {
+          "position": "九三",
+          "text": "弗过防之，从或戕之，凶"
+        },
+        {
+          "position": "九四",
+          "text": "无咎，弗过遇之，往厉必戒，勿用永贞"
+        },
+        {
+          "position": "六五",
+          "text": "密云不雨，自我西郊，公弋取彼在穴"
+        },
+        {
+          "position": "上六",
+          "text": "弗遇过之，飞鸟离之，凶，是谓灾眚"
+        }
+      ],
+      "transforms": {
+        "inverse": "风泽中孚",
+        "reverse": "雷山小过",
+        "nuclear": "泽风大过"
+      },
+      "jingfang": {
+        "palace": "兑",
+        "type": "游魂",
+        "world": 4,
+        "response": 1
+      }
+    },
+    {
+      "sequence": 63,
+      "shortName": "既济",
+      "fullName": "水火既济",
+      "trigramSymbols": "☵☲",
+      "upper": "坎",
+      "lower": "离",
+      "binaryBottomToTop": "101010",
+      "guaci": "亨小，利贞，初吉终乱。",
+      "lines": [
+        {
+          "position": "初九",
+          "text": "曳其轮，濡其尾，无咎"
+        },
+        {
+          "position": "六二",
+          "text": "妇丧其茀，勿逐，七日得"
+        },
+        {
+          "position": "九三",
+          "text": "高宗伐鬼方，三年克之，小人勿用"
+        },
+        {
+          "position": "六四",
+          "text": "繻有衣袽，终日戒"
+        },
+        {
+          "position": "九五",
+          "text": "东邻杀牛，不如西邻之禴祭，实受其福"
+        },
+        {
+          "position": "上六",
+          "text": "濡其首，厉"
+        }
+      ],
+      "transforms": {
+        "inverse": "火水未济",
+        "reverse": "火水未济",
+        "nuclear": "火水未济"
+      },
+      "jingfang": {
+        "palace": "坎",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    },
+    {
+      "sequence": 64,
+      "shortName": "未济",
+      "fullName": "火水未济",
+      "trigramSymbols": "☲☵",
+      "upper": "离",
+      "lower": "坎",
+      "binaryBottomToTop": "010101",
+      "guaci": "亨，小狐汔济，濡其尾，无攸利。",
+      "lines": [
+        {
+          "position": "初六",
+          "text": "濡其尾，吝"
+        },
+        {
+          "position": "九二",
+          "text": "曳其轮，贞吉"
+        },
+        {
+          "position": "六三",
+          "text": "未济，征凶，利涉大川"
+        },
+        {
+          "position": "九四",
+          "text": "贞吉悔亡，震用伐鬼方，三年有赏于大国"
+        },
+        {
+          "position": "六五",
+          "text": "贞吉无悔，君子之光，有孚吉"
+        },
+        {
+          "position": "上九",
+          "text": "有孚于饮酒，无咎，濡其首，有孚失是"
+        }
+      ],
+      "transforms": {
+        "inverse": "水火既济",
+        "reverse": "水火既济",
+        "nuclear": "水火既济"
+      },
+      "jingfang": {
+        "palace": "离",
+        "type": "三世",
+        "world": 3,
+        "response": 6
+      }
+    }
+  ]
+}
