@@ -22,8 +22,9 @@ test('pins the complete 24-30 source inventory and formula-definition boundaries
     classicAnchorAdditions: 4,
     claimedTextbookPrimaryFormulas: 182,
     claimedAttachedFormulas: 182,
+    explicitAttachedFormulaEntities: 180,
     priorityLineCandidates: 522,
-    findings: 20,
+    findings: 21,
   });
   assert.deepEqual(data.priorityCategoryCounts, {
     dose: 193,
@@ -42,14 +43,19 @@ test('pins the complete 24-30 source inventory and formula-definition boundaries
     ['九味羌活汤', '黄连解毒汤', '九仙散', '紫雪']);
   assert.deepEqual(data.definitionCountFindings.classicAnchorNames,
     ['清中汤', '黄连阿胶汤', '半夏秫米汤', '启膈散']);
+  assert.deepEqual(data.attachedFormulaCountFindings, {
+    actualBySource: { ref25: 43, ref26: 39, ref27: 27, ref28: 28, ref29: 30, ref30: 13 },
+    gapsBySource: { ref25: 2 },
+  });
   for (const source of Object.values(data.sourceRefs)) {
     assert.equal(source.sha256, sha256(await readFile(source.path, 'utf8')));
   }
   assert.ok(data.formulaDefinitions.every(item => item.productEligibility === 'blocked'));
+  assert.ok(data.attachedFormulaEntities.every(item => item.productEligibility === 'blocked'));
   assert.ok(data.priorityLines.every(item => item.productEligibility === 'blocked'));
 });
 
-test('records twenty formula count, conversion, toxic, emergency and efficacy findings', async () => {
+test('records formula count, conversion, toxic, emergency and efficacy findings', async () => {
   const data = await core();
   assert.ok(data, 'formula catalog core must be built');
   assert.deepEqual(data.findings.map(item => [item.id, item.status]), [
@@ -73,6 +79,7 @@ test('records twenty formula count, conversion, toxic, emergency and efficacy fi
     ['TCM-FC-018', 'modern_hypertension_formula_claim_unvalidated'],
     ['TCM-FC-019', 'modern_cancer_and_tumor_formula_claim_unvalidated'],
     ['TCM-FC-020', 'emergency_bleeding_formula_not_first_aid_authority'],
+    ['TCM-FC-021', 'attached_formula_count_claim_exceeds_explicit_entities'],
   ]);
   assert.ok(data.findings.every(item => item.comparatorSourceIds.length > 0));
   assert.ok(data.findings.every(item => item.productEligibility === 'blocked'));
@@ -82,5 +89,5 @@ test('active runtime does not import the blocked formula catalog core or finding
   const files = await tcmRuntimeConsumerPaths();
   const text = (await Promise.all(files.map(filePath => readFile(filePath, 'utf8')))).join('\n');
   assert.doesNotMatch(text, /tcm-formula-catalog-candidates/);
-  assert.doesNotMatch(text, /TCM-FC-0(?:0[1-9]|1[0-9]|20)/);
+  assert.doesNotMatch(text, /TCM-FC-0(?:0[1-9]|1[0-9]|2[01])/);
 });

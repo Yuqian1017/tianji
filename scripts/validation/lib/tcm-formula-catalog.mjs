@@ -115,6 +115,73 @@ export function parseFormulaDefinitions(sourceId, text) {
   });
 }
 
+function splitTopLevel(text, separators) {
+  const parts = [];
+  let start = 0;
+  let depth = 0;
+  for (let index = 0; index < text.length; index += 1) {
+    const character = text[index];
+    if (character === '(' || character === '（') depth += 1;
+    if (character === ')' || character === '）') depth = Math.max(0, depth - 1);
+    if (depth === 0 && separators.has(character)) {
+      parts.push(text.slice(start, index));
+      start = index + 1;
+    }
+  }
+  parts.push(text.slice(start));
+  return parts;
+}
+
+function attachedFormulaNames(fragment) {
+  return splitTopLevel(fragment, new Set([';', '；', '、'])).flatMap(rawPart => {
+    const part = rawPart.replaceAll('**', '').replace(/^[-—:：\s]+/, '').trim();
+    if (!part) return [];
+    const headingWithoutLeadingBook = part.replace(/^《[^》]+》\s*/, '');
+    const nameText = headingWithoutLeadingBook.split(/[（(《]/, 1)[0]
+      .replace(/^[★※⚠]/, '')
+      .replace(/[★※⚠]+$/, '')
+      .replace(/[。.,，\s]+$/, '')
+      .trim();
+    if (!nameText) return [];
+    return nameText.split('/').map(name => name.trim()).filter(Boolean);
+  });
+}
+
+export function parseAttachedFormulaEntities(sourceId, text) {
+  return text.split('\n').flatMap((line, index) => {
+    const nestedMarker = /(?:^|[;；。:：])(?:寒证用)?([\u3400-\u9fff]{2,20}(?:汤|散|丸|饮|丹|煎|膏|锭))\(附方[:：]/.exec(line);
+    if (nestedMarker) {
+      return [{
+        id: `tcm-${sourceId}-attached-formula-${String(index + 1).padStart(4, '0')}-01`,
+        sourceId,
+        sourceLine: index + 1,
+        formulaName: nestedMarker[1],
+        sourceText: line.trim(),
+        sourceFragment: nestedMarker[0],
+        definitionType: 'textbook_attached_candidate',
+        evidenceState: 'secondary_skill_attached_formula_summary_unverified',
+        productEligibility: 'blocked',
+        runtimeEligibleFields: [],
+      }];
+    }
+    const marker = /(?:-\s*)?附(?:\([^)]*\)|四加味)?[:：]/.exec(line);
+    if (!marker) return [];
+    const fragment = line.slice(marker.index + marker[0].length);
+    return attachedFormulaNames(fragment).map((formulaName, formulaIndex) => ({
+      id: `tcm-${sourceId}-attached-formula-${String(index + 1).padStart(4, '0')}-${String(formulaIndex + 1).padStart(2, '0')}`,
+      sourceId,
+      sourceLine: index + 1,
+      formulaName,
+      sourceText: line.trim(),
+      sourceFragment: fragment.trim(),
+      definitionType: 'textbook_attached_candidate',
+      evidenceState: 'secondary_skill_attached_formula_summary_unverified',
+      productEligibility: 'blocked',
+      runtimeEligibleFields: [],
+    }));
+  });
+}
+
 export function collectFormulaCatalogPriorityLines(sourceId, text) {
   return text.split('\n').flatMap((line, index) => {
     const sourceText = line.trim();

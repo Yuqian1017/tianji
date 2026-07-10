@@ -6,6 +6,7 @@ import {
   parseFormulaCatalogSections,
   parseFormulaCountClaim,
   parseFormulaDefinitions,
+  parseAttachedFormulaEntities,
 } from './lib/tcm-formula-catalog.mjs';
 import {
   parseMarkdownTableInventory,
@@ -43,6 +44,9 @@ const sourceInventory = Object.fromEntries(referenceIds.map(sourceId => [sourceI
 }]));
 const sections = referenceIds.flatMap(sourceId => parseFormulaCatalogSections(sourceId, sources[sourceId].text));
 const formulaDefinitions = referenceIds.flatMap(sourceId => parseFormulaDefinitions(sourceId, sources[sourceId].text));
+const attachedFormulaEntities = referenceIds.flatMap(sourceId => (
+  parseAttachedFormulaEntities(sourceId, sources[sourceId].text)
+));
 const countClaims = referenceIds.flatMap(sourceId => parseFormulaCountClaim(sourceId, sources[sourceId].text) ?? []);
 const priorityLines = referenceIds.flatMap(sourceId => (
   collectFormulaCatalogPriorityLines(sourceId, sources[sourceId].text)
@@ -61,6 +65,14 @@ const classicAnchorNames = formulaDefinitions
 const parentheticalAttributionNames = formulaDefinitions
   .filter(item => item.sourceFormat === 'parenthetical_attribution')
   .map(item => item.formulaName);
+const actualAttachedBySource = attachedFormulaEntities.reduce((counts, item) => ({
+  ...counts,
+  [item.sourceId]: (counts[item.sourceId] ?? 0) + 1,
+}), {});
+const attachedGapsBySource = Object.fromEntries(countClaims.flatMap(claim => {
+  const gap = claim.claimedAttached - (actualAttachedBySource[claim.sourceId] ?? 0);
+  return gap > 0 ? [[claim.sourceId, gap]] : [];
+}));
 
 function sourceLine(sourceId, needle) {
   const matches = sourceInventory[sourceId].lines.filter(line => line.sourceText.includes(needle));
@@ -89,6 +101,7 @@ const findingSpecs = [
   ['TCM-FC-018', 'modern_efficacy', 'modern_hypertension_formula_claim_unvalidated', 'ref29', '现代高血压常用方', ['NCCIH-TCM-OVERVIEW']],
   ['TCM-FC-019', 'modern_efficacy', 'modern_cancer_and_tumor_formula_claim_unvalidated', 'ref28', '现用于肝硬化、肝脾肿大、肿瘤', ['NCCIH-TCM-OVERVIEW']],
   ['TCM-FC-020', 'emergency_care', 'emergency_bleeding_formula_not_first_aid_authority', 'ref28', '急救止血剂', ['MEDLINEPLUS-GI-BLEEDING']],
+  ['TCM-FC-021', 'source_count', 'attached_formula_count_claim_exceeds_explicit_entities', 'ref25', '正方 33 首+附方 45 首', ['FORMULA-SOURCE-DIRECT-INVENTORY']],
 ];
 const findings = findingSpecs.map(([id, kind, status, sourceId, needle, comparatorSourceIds]) => {
   for (const comparatorSourceId of comparatorSourceIds) {
@@ -128,6 +141,7 @@ const counts = {
   classicAnchorAdditions: classicAnchorNames.length,
   claimedTextbookPrimaryFormulas: countClaims.reduce((sum, item) => sum + item.claimedPrimary, 0),
   claimedAttachedFormulas: countClaims.reduce((sum, item) => sum + item.claimedAttached, 0),
+  explicitAttachedFormulaEntities: attachedFormulaEntities.length,
   priorityLineCandidates: priorityLines.length,
   findings: findings.length,
 };
@@ -147,6 +161,7 @@ const output = {
   sourceInventory,
   sections,
   formulaDefinitions,
+  attachedFormulaEntities,
   countClaims,
   definitionCountFindings: {
     actualTextbookCounts,
@@ -154,13 +169,18 @@ const output = {
     classicAnchorNames,
     parentheticalAttributionNames,
   },
+  attachedFormulaCountFindings: {
+    actualBySource: actualAttachedBySource,
+    gapsBySource: attachedGapsBySource,
+  },
   priorityLines,
   comparatorSourceIds: evidence.sources.map(item => item.id),
   findings,
   boundaries: [
     'All 820 non-empty lines and 171 Markdown table rows are preserved as blocked candidates; preservation is not formula validation.',
     'All 182 claimed textbook-primary formulas are present after recognizing four parenthetical source-attribution variants; four explicitly added classic anchors remain separate, for 186 total definitions.',
-    'The 522 priority lines and 151 scenario lookup rows are overlapping narrow review views, not complete clinical semantics, prescriptions or attached-formula entities.',
+    'The six source headers claim 182 attached formulas, but only 180 explicit entities are recoverable; ref25 claims 45 and explicitly identifies 43, so the two-entity gap remains blocked rather than inferred.',
+    'The 522 priority lines and 151 scenario lookup rows are overlapping narrow review views, not complete clinical semantics or prescriptions.',
     'Historical quantities, blanket gram conversions, formula compositions, routes, pregnancy use and modern indications are not current dose or clinical authority.',
     'No toxic, heavy-metal, aristolochic-acid, coma, stroke, bleeding, poisoning or emesis formula content is runtime eligible.',
     'Runtime scanning only proves this blocked core and finding IDs are not imported; it does not clear legacy TCM semantics elsewhere.',

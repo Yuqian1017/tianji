@@ -3,7 +3,7 @@
   "generatedAt": "2026-07-10",
   "result": "pass_with_all_candidates_blocked",
   "summary": {
-    "checks": 11395,
+    "checks": 11762,
     "failures": 0,
     "runtimeConsumerFilesScanned": 84,
     "references": 7,
@@ -16,8 +16,9 @@
     "classicAnchorAdditions": 4,
     "claimedTextbookPrimaryFormulas": 182,
     "claimedAttachedFormulas": 182,
+    "explicitAttachedFormulaEntities": 180,
     "priorityLineCandidates": 522,
-    "findings": 20
+    "findings": 21
   },
   "categories": {
     "contract": {
@@ -41,8 +42,8 @@
       "failed": 0
     },
     "safety_gate": {
-      "checks": 3108,
-      "passed": 3108,
+      "checks": 3470,
+      "passed": 3470,
       "failed": 0
     },
     "section_preservation": {
@@ -51,8 +52,8 @@
       "failed": 0
     },
     "formula_integrity": {
-      "checks": 6,
-      "passed": 6,
+      "checks": 9,
+      "passed": 9,
       "failed": 0
     },
     "priority_preservation": {
@@ -66,8 +67,8 @@
       "failed": 0
     },
     "finding_integrity": {
-      "checks": 40,
-      "passed": 40,
+      "checks": 42,
+      "passed": 42,
       "failed": 0
     },
     "runtime_gate": {
@@ -442,12 +443,26 @@
       ],
       "productEligibility": "blocked",
       "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FC-021",
+      "kind": "source_count",
+      "status": "attached_formula_count_claim_exceeds_explicit_entities",
+      "sourceId": "ref25",
+      "sourceLine": 3,
+      "sourceText": "> 提炼自《方剂学》七版第一~三章。正方 33 首+附方 45 首。剂量为原方折现代用量(g);涉毒方(十枣汤、大陷胸汤等)必查 [[安全-配伍妊娠禁忌与毒性药]]。",
+      "comparatorSourceIds": [
+        "FORMULA-SOURCE-DIRECT-INVENTORY"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
     }
   ],
   "boundaries": [
     "All 820 non-empty lines and 171 Markdown table rows are preserved as blocked candidates; preservation is not formula validation.",
     "All 182 claimed textbook-primary formulas are present after recognizing four parenthetical source-attribution variants; four explicitly added classic anchors remain separate, for 186 total definitions.",
-    "The 522 priority lines and 151 scenario lookup rows are overlapping narrow review views, not complete clinical semantics, prescriptions or attached-formula entities.",
+    "The six source headers claim 182 attached formulas, but only 180 explicit entities are recoverable; ref25 claims 45 and explicitly identifies 43, so the two-entity gap remains blocked rather than inferred.",
+    "The 522 priority lines and 151 scenario lookup rows are overlapping narrow review views, not complete clinical semantics or prescriptions.",
     "Historical quantities, blanket gram conversions, formula compositions, routes, pregnancy use and modern indications are not current dose or clinical authority.",
     "No toxic, heavy-metal, aristolochic-acid, coma, stroke, bleeding, poisoning or emesis formula content is runtime eligible.",
     "Runtime scanning only proves this blocked core and finding IDs are not imported; it does not clear legacy TCM semantics elsewhere."
@@ -487,7 +502,7 @@
     }
   },
   "relevantSha256": {
-    "normalizedCore": "d2314d0f575286c2d046a97822e0102983bf5be1d6e32ad799e905204ffcee2f"
+    "normalizedCore": "8865c30e383701fc360754191a8f71d2da70a4d26e87b54d7146bbf7d4784c28"
   },
   "failures": []
 }

@@ -50,6 +50,29 @@ test('captures all 182 textbook formulas across both source-attribution formats 
   assert.ok(definitions.every(item => item.productEligibility === 'blocked'));
 });
 
+test('materializes every explicit attached formula and exposes the two-entity source-count gap', () => {
+  assert.equal(typeof formulaCatalog.parseAttachedFormulaEntities, 'function');
+  const entities = Object.entries(sources)
+    .flatMap(([sourceId, text]) => formulaCatalog.parseAttachedFormulaEntities(sourceId, text));
+
+  assert.equal(entities.length, 180);
+  assert.deepEqual(entities.reduce((counts, item) => ({
+    ...counts,
+    [item.sourceId]: (counts[item.sourceId] ?? 0) + 1,
+  }), {}), {
+    ref25: 43, ref26: 39, ref27: 27, ref28: 28, ref29: 30, ref30: 13,
+  });
+  assert.ok(entities.every(item => Number.isInteger(item.sourceLine)));
+  assert.ok(entities.every(item => item.formulaName.length > 0));
+  assert.equal(new Set(entities.map(item => item.id)).size, entities.length);
+  assert.ok(entities.every(item => item.sourceText.includes(item.formulaName)));
+  assert.ok(entities.every(item => item.definitionType === 'textbook_attached_candidate'));
+  assert.ok(entities.every(item => item.productEligibility === 'blocked'));
+  assert.ok(entities.every(item => item.runtimeEligibleFields.length === 0));
+  assert.ok(entities.some(item => item.formulaName === '延胡索汤'));
+  assert.ok(entities.every(item => !item.formulaName.startsWith('寒证用')));
+});
+
 test('priority sweep captures dose, toxic ingredient, emergency, modern use and decision-table risks', () => {
   assert.equal(typeof formulaCatalog.collectFormulaCatalogPriorityLines, 'function');
   const candidates = Object.entries(sources)

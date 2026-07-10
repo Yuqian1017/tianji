@@ -7,6 +7,7 @@ import {
   parseFormulaCatalogSections,
   parseFormulaCountClaim,
   parseFormulaDefinitions,
+  parseAttachedFormulaEntities,
 } from './lib/tcm-formula-catalog.mjs';
 import {
   parseMarkdownTableInventory,
@@ -29,8 +30,9 @@ const EXPECTED_COUNTS = {
   classicAnchorAdditions: 4,
   claimedTextbookPrimaryFormulas: 182,
   claimedAttachedFormulas: 182,
+  explicitAttachedFormulaEntities: 180,
   priorityLineCandidates: 522,
-  findings: 20,
+  findings: 21,
 };
 const EXPECTED_PRIORITY_COUNTS = {
   dose: 193,
@@ -65,6 +67,7 @@ const EXPECTED_FINDINGS = [
   ['TCM-FC-018', 'modern_hypertension_formula_claim_unvalidated'],
   ['TCM-FC-019', 'modern_cancer_and_tumor_formula_claim_unvalidated'],
   ['TCM-FC-020', 'emergency_bleeding_formula_not_first_aid_authority'],
+  ['TCM-FC-021', 'attached_formula_count_claim_exceeds_explicit_entities'],
 ];
 
 const checks = [];
@@ -129,6 +132,19 @@ for (const definition of core.formulaDefinitions) {
   record('safety_gate', `${definition.id}:runtime_fields`, definition.runtimeEligibleFields, []);
 }
 
+const sourceAttachedFormulaEntities = referenceIds.flatMap(sourceId => (
+  parseAttachedFormulaEntities(sourceId, sourceTexts[sourceId])
+));
+record('formula_integrity', 'attached_formula_entities', core.attachedFormulaEntities, sourceAttachedFormulaEntities);
+record('formula_integrity', 'attached_actual_by_source', core.attachedFormulaCountFindings.actualBySource, {
+  ref25: 43, ref26: 39, ref27: 27, ref28: 28, ref29: 30, ref30: 13,
+});
+record('formula_integrity', 'attached_gaps_by_source', core.attachedFormulaCountFindings.gapsBySource, { ref25: 2 });
+for (const entity of core.attachedFormulaEntities) {
+  record('safety_gate', `${entity.id}:blocked`, entity.productEligibility, 'blocked');
+  record('safety_gate', `${entity.id}:runtime_fields`, entity.runtimeEligibleFields, []);
+}
+
 const sourceCountClaims = referenceIds.flatMap(sourceId => parseFormulaCountClaim(sourceId, sourceTexts[sourceId]) ?? []);
 record('formula_integrity', 'count_claims', core.countClaims, sourceCountClaims);
 for (const claim of core.countClaims) {
@@ -172,7 +188,7 @@ for (const finding of core.findings) {
 }
 
 record('runtime_gate', 'blocked_core_imports', [...runtimeText.matchAll(/tcm-formula-catalog-candidates/g)].length, 0);
-record('runtime_gate', 'finding_id_imports', [...runtimeText.matchAll(/TCM-FC-0(?:0[1-9]|1[0-9]|20)/g)].length, 0);
+record('runtime_gate', 'finding_id_imports', [...runtimeText.matchAll(/TCM-FC-0(?:0[1-9]|1[0-9]|2[01])/g)].length, 0);
 
 const categories = {};
 for (const check of checks) {
