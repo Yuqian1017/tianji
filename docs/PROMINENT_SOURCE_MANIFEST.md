@@ -314,6 +314,18 @@
 | 本轮结果 | 剂量比较集 79 味命中历史正文，41 味的全部官方克数表达已见于 Skill、38 味至少有一项数量差异；妊娠/配伍比较集 86 味命中历史正文，73 味有注意字段，Skill 妊娠等级出现 13 条冲突，十八反 52/52、十九畏 7/10 有历史字段支持 |
 | 边界 | 2020 正文只作历史官方对照，不能代表 2025 现行正文；数量一致也不授予产品剂量资格 |
 
+### SRC-VAL-TCM-FOOD-MEDICINE-DIRECTORY
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 国家卫健委现行食药物质目录与增补公告 |
+| 状态 | `validation_anchor`，当前目录成员、公告批次、明示部位和限制 |
+| 官方来源 | 2002 年卫法监发〔2002〕51号基础名单；2019年第8号、2023年第9号、2024年第4号增补公告；2021 目录管理规定；2025 答复确认当前 106 项 |
+| 项目快照 | `database/tcm/sources/nhc-food-medicine-directory.json`，SHA256 `e8e3d8c7cff2bde7058948fb5148f4c68edb08c2f983e33e132d671e99acf34b` |
+| 规范裁决 | `database/tcm/normalized/tcm-food-medicine-adjudications.json`，SHA256 `a0efa2ed5bdb43e9c74b977149a98840575b48ee24eaa794fe9f6bb59958d613` |
+| 本轮结果 | 106 项按 87+6+9+4 固定；Skill A 清单 15 项为 13 匹配、2 不在目录；8 条配方主张 38 个原料为 18 匹配、5 身份/炮制缺口、15 不在目录 |
+| 边界 | 2002 名单只有分组名称；不在目录不等于不是普通食品；目录成员不授予配方、剂量、病种疗效、儿科或外用资格；所有产品用法 blocked |
+
 ### SRC-VAL-TCM-ARISTOLOCHIC-REGULATORY
 
 | 字段 | 值 |
@@ -414,7 +426,7 @@
 | 状态 | `validation_anchor`，食药物质身份、健康饮食、补充剂、急症和疾病替代边界 |
 | 项目快照 | `database/tcm/sources/classics-food-evidence.json`，SHA256 `66d8f3034d7b1f5b7ed2ac5203e1e7f8228a5a9cb09c3fca241a7a93235fd94e` |
 | 本轮结果 | `42-48` 的 1,142 条非空行、8 表/79 表格行、145 标题、603 条重叠窄风险视图和 20 finding；旧食疗 runtime 状态单列 |
-| 边界 | 只授证完整 inventory、重点风险与阻断；不授证经典校勘、106 项目录逐物质身份、剂量或临床疗效 |
+| 边界 | 只授证完整 inventory、重点风险与阻断；106 项目录身份已在 `SRC-VAL-TCM-FOOD-MEDICINE-DIRECTORY` 后续单元完成，但本层仍不授证经典校勘、配方剂量或临床疗效 |
 
 ### SRC-VAL-DAYUN-CLASSICS
 
@@ -601,7 +613,8 @@
 | TCM-HERB-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-herb-catalog-candidates.json` | `15-23` 完整原文 inventory、663 条风险视图、100 条病证反查和 20 个重点裁决 | 中药剂量/毒性/现代疗效与反查风险可审计候选层 | 风险视图类别重叠且不是完整实体授证；所有记录 blocked |
 | TCM-FORMULA-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-formula-catalog-candidates.json` | `24-30` 完整原文 inventory、186 个格式化定义、522 条重叠窄风险视图和 20 个重点裁决 | 方剂身份/计数、剂量、禁忌、毒性、急症与现代疗效风险可审计候选层 | 182 个教材正方加 4 个经典锚点；附方未完整实体化；所有记录 blocked |
 | TCM-CLASSICS-FOOD-CANDIDATES | `database/tcm/normalized/tcm-classics-food-candidates.json` | `42-48` 完整原文 inventory、603 条重叠窄风险视图、20 个重点裁决和旧食疗 runtime 状态 | 经典/医家、食药身份、剂量、禁忌、急症与疾病替代风险候选层 | A/B/食疗/药食标签不授予资格；所有记录 blocked |
-| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator 各 1 份，共 13 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
+| TCM-FOOD-MEDICINE-ADJUDICATIONS | `database/tcm/normalized/tcm-food-medicine-adjudications.json` | 106 项目录、Skill A 清单 15 项、8 条食疗/药食配方和 38 个原料引用 | 食品身份、部位/炮制缺口和配方继承裁决 | 目录身份已固定；全部具体产品用法 blocked |
+| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
@@ -621,7 +634,7 @@
 |---|---|---|---|
 | 当前产品定义 | `docs/PRD.md` | 历史 `APP-SPEC*` 与 `GAME-DESIGN.md` | 旧规格提供证据和设计资产，不覆盖新 PRD 决策 |
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
-| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、药典与监管来源快照 | Skill 补广度和安全候选；法定毒性清单以 safety core 为准；药典及妊娠/配伍/方剂候选可审计但不得直接消费 |
+| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、药典/监管与 106 项食药目录快照 | Skill 补广度和安全候选；法定毒性与食药目录分别以对应 core 为准；药典、妊娠/配伍、方剂和食疗用法可审计但不得直接消费 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
 | 未来规范数据库 | 逐域建立；周易、紫微、奇门、风水、五运、子午、TCM 安全与共享城市已有规范核心 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 
@@ -682,7 +695,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 50 个 reference 已全部进入完整 inventory，八个候选层全部 blocked；继续收尾旧 runtime 同义语义，并取得适用现行药典、106 项食药物质、逐药逐方和逐穴定位正文。
+2. TCM 50 个 reference 已全部进入完整 inventory，106 项食药目录身份已裁决，八个候选层及全部具体食疗用法继续 blocked；取得适用现行药典、逐药逐方、附方实体和逐穴定位正文。
 3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

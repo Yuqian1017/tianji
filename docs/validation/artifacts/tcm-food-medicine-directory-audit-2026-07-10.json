@@ -1,0 +1,210 @@
+{
+  "audit": "tcm-food-medicine-directory-and-skill-claims",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_product_uses_blocked",
+  "summary": {
+    "checks": 48,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "directoryEntries": 106,
+    "skillAFoodSubstances": 15,
+    "skillAMatchedCurrentDirectory": 13,
+    "skillANotInCurrentDirectory": 2,
+    "explicitFoodClaims": 8,
+    "explicitClaimIngredients": 38,
+    "claimIngredientsMatchedCurrentDirectory": 18,
+    "claimIngredientIdentityOrProcessGaps": 5,
+    "claimIngredientsNotInCurrentDirectory": 15
+  },
+  "categories": {
+    "directory": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "skill_a": {
+      "checks": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "claims": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "runtime": {
+      "checks": 3,
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "sourceSha256": "e8e3d8c7cff2bde7058948fb5148f4c68edb08c2f983e33e132d671e99acf34b",
+  "coreSha256": "a0efa2ed5bdb43e9c74b977149a98840575b48ee24eaa794fe9f6bb59958d613",
+  "findings": [
+    {
+      "id": "TCM-FM-001",
+      "status": "source_scope_overstated_blocked",
+      "observation": "Skill A-level wording treats 15 listed foods as “药食兼用”; 13 map to current directory and two do not.",
+      "affected": [
+        {
+          "sourceName": "绿豆",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "核桃仁",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FM-002",
+      "status": "spice_only_scope_blocked",
+      "observation": "The 2019 directory addition for 当归 is spice-and-condiment-only and cannot authorize 当归生姜羊肉汤 as a therapeutic food formula.",
+      "affectedClaimIds": [
+        "TCM-FOOD-CLAIM-003"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FM-003",
+      "status": "formula_inheritance_blocked",
+      "observation": "Ingredient membership does not transfer to formula, processing form, medicinal dose, disease indication, pediatric use, or external route.",
+      "affectedClaimIds": [
+        "TCM-FOOD-CLAIM-001",
+        "TCM-FOOD-CLAIM-002",
+        "TCM-FOOD-CLAIM-003",
+        "TCM-FOOD-CLAIM-004",
+        "TCM-FOOD-CLAIM-005",
+        "TCM-FOOD-CLAIM-006",
+        "TCM-FOOD-CLAIM-007",
+        "TCM-FOOD-CLAIM-008"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FM-004",
+      "status": "overbroad_recipe_group_blocked",
+      "observation": "The claim that the diarrhea recipe group is almost entirely medicine-food contains non-directory substances and unadjudicated processed parts.",
+      "affectedClaimIds": [
+        "TCM-FOOD-CLAIM-006"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "Current directory membership is preserved separately from ordinary-food status; not-in-directory is not a finding of non-food or unsafe status.",
+    "All aliases and processing forms are fail-closed unless the official item identity or announcement explicitly supports them.",
+    "No recipe, medicinal dose, treatment claim, pediatric use, eye application, or disease self-treatment becomes eligible through one or more directory ingredients.",
+    "This slice adjudicates the Skill A-level list and every explicit 药食同源/药食两用/食疗级 recipe claim; it does not validate general nutrition advice or every implicit food mention."
+  ],
+  "runtimePaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "failures": []
+}

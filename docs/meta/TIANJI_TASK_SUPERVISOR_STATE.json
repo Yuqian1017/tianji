@@ -5,8 +5,8 @@
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
   "overallPercent": 58,
-  "currentFocus": "中医及跨模块健康语义运行时收尾；50 个 reference 已完整 inventory，八个候选层继续 blocked。",
-  "nextDecision": "完成 fresh runtime 复核，处理残余可见或 AI 消费语义，再建立 106 项食药物质、现行药典、逐药逐方和逐穴正文的授权缺口。",
+  "currentFocus": "中医现行来源逐项授权：50 个 reference 与 106 项食药目录已覆盖，八个候选层和具体用法继续 blocked。",
+  "nextDecision": "继续取得现行药典、逐药逐方与逐穴正文，拆解 182 个附方实体，并完成解释层与剩余全库 inventory。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -341,11 +341,11 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "tcm_runtime_closeout_in_progress", "rule": "TCM 50 reference 已完整 inventory，八个候选层全部 blocked；当前收尾运行时同义语义与现行逐项授权。" },
+    { "name": "排盘与数据库正确性", "state": "tcm_current_source_adjudication_in_progress", "rule": "TCM 50 reference 与 106 项食药目录已覆盖，八个候选层全部 blocked；继续现行逐药逐方、逐穴和解释层授权。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
-    { "name": "中医安全", "state": "runtime_closeout_in_progress", "rule": "法定毒性 28 项已规范化；八个候选层已审计但全部 blocked；运行时语义、106 项食药和逐药逐方临床校勘未通过前不扩大产品消费范围。" },
+    { "name": "中医安全", "state": "current_source_adjudication_in_progress", "rule": "法定毒性 28 项与 106 项食药目录已规范化；八个候选层及所有配方/剂量/疾病用法 blocked；逐药逐方、逐穴和解释层校勘前不扩大产品消费范围。" },
     { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
@@ -427,6 +427,8 @@
     "TCM 50 个 reference 已全部进入完整 inventory；A级/食疗级/药食两用均不授予产品资格，旧 tcm-data 无 importer，八字健康食疗 runtime blocked",
     "运行时语义收尾：望诊 follow-up 已移除“调养方法”诱导，统一复用仅限颜色、形态与拍摄质量的安全提示",
     "跨模块健康语义：普通八字健康入口、手相生命线健康映射、面相疾厄宫健康提示和伪肤色字段已移除；专项回归覆盖首轮与追问",
-    "奇门 QIMEN_YONGSHEN 与风水 STAR_COMBO/STAR_REMEDY 的医疗化旧文字当前无消费引用，归类 dead_unconsumed，未来接入需重新校勘"
+    "奇门 QIMEN_YONGSHEN 与风水 STAR_COMBO/STAR_REMEDY 的医疗化旧文字当前无消费引用，归类 dead_unconsumed，未来接入需重新校勘",
+    "TJI-VAL-019 食药目录子批次：国家卫健委 106 项按 87+6+9+4 固定；Skill A 清单 15 项为 13 匹配、2 不在目录",
+    "8 条明确食疗/药食配方共 38 个原料引用：18 匹配、5 身份/炮制缺口、15 不在目录；48 项审计 0 fail，全部产品用法 blocked"
   ]
 }

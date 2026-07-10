@@ -1,0 +1,2908 @@
+{
+  "schemaVersion": 1,
+  "domain": "nhc_food_medicine_directory",
+  "generatedAt": "2026-07-10",
+  "status": "official_directory_transcription_with_bounded_fields",
+  "currentCount": 106,
+  "sources": [
+    {
+      "id": "CN-NHC-FOOD-MEDICINE-RULE-2021",
+      "url": "https://www.nhc.gov.cn/wjw/c100175/202111/aac61b41730f4062bee4eefcf51933f4.shtml",
+      "role": "current_directory_management_rule",
+      "facts": [
+        "Directory membership requires traditional food use, Pharmacopoeia listing, safety review, and official publication.",
+        "Food labels and marketing may not claim disease prevention or treatment."
+      ]
+    },
+    {
+      "id": "nhc-2002-51",
+      "year": 2002,
+      "notice": "卫法监发〔2002〕51号",
+      "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "role": "official_directory_batch"
+    },
+    {
+      "id": "nhc-2019-8",
+      "year": 2019,
+      "notice": "2019年第8号",
+      "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "role": "official_directory_batch"
+    },
+    {
+      "id": "nhc-2023-9",
+      "year": 2023,
+      "notice": "2023年第9号",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "role": "official_directory_batch"
+    },
+    {
+      "id": "nhc-2024-4",
+      "year": 2024,
+      "notice": "2024年第4号",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202408/53150d0918ec40899b5293147ec0dd01.shtml",
+      "fieldSourceIds": [
+        "nhc-2024-4",
+        "nhc-2024-4-interpretation"
+      ],
+      "role": "official_directory_batch"
+    },
+    {
+      "id": "nhc-2023-9-interpretation",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202311/a7e49f9f0285437b82b842576fa8ede9.shtml",
+      "role": "official_item_identity_part_and_restriction_interpretation"
+    },
+    {
+      "id": "nhc-2024-4-interpretation",
+      "url": "http://www.nhc.gov.cn/sps/c100087/202408/aa9a6f7bce8e4b4cbcc4b38591676ed6.shtml",
+      "role": "official_item_identity_part_and_restriction_interpretation"
+    },
+    {
+      "id": "CN-NHC-FOOD-MEDICINE-106-2025",
+      "url": "https://www.nhc.gov.cn/wjw/jiany/202508/6141c788fa794723afb4e71af48b3d93.shtml",
+      "role": "current_count_confirmation",
+      "facts": [
+        "NHC states that the current directory contains 106 substances and is dynamically managed."
+      ]
+    }
+  ],
+  "counts": {
+    "total": 106,
+    "byBatch": {
+      "nhc-2002-51": 87,
+      "nhc-2019-8": 6,
+      "nhc-2023-9": 9,
+      "nhc-2024-4": 4
+    }
+  },
+  "items": [
+    {
+      "id": "nhc-food-medicine-001",
+      "name": "丁香",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-002",
+      "name": "八角茴香",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-003",
+      "name": "刀豆",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-004",
+      "name": "小茴香",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-005",
+      "name": "小蓟",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-006",
+      "name": "山药",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-007",
+      "name": "山楂",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-008",
+      "name": "马齿苋",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-009",
+      "name": "乌梢蛇",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-010",
+      "name": "乌梅",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-011",
+      "name": "木瓜",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-012",
+      "name": "火麻仁",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-013",
+      "name": "代代花",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-014",
+      "name": "玉竹",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-015",
+      "name": "甘草",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-016",
+      "name": "白芷",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-017",
+      "name": "白果",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-018",
+      "name": "白扁豆",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-019",
+      "name": "白扁豆花",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-020",
+      "name": "龙眼肉",
+      "aliases": [
+        "桂圆"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-021",
+      "name": "决明子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-022",
+      "name": "百合",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-023",
+      "name": "肉豆蔻",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-024",
+      "name": "肉桂",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-025",
+      "name": "余甘子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-026",
+      "name": "佛手",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-027",
+      "name": "杏仁",
+      "aliases": [
+        "甜杏仁",
+        "苦杏仁"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-028",
+      "name": "沙棘",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-029",
+      "name": "牡蛎",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-030",
+      "name": "芡实",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-031",
+      "name": "花椒",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-032",
+      "name": "赤小豆",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-033",
+      "name": "阿胶",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-034",
+      "name": "鸡内金",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-035",
+      "name": "麦芽",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-036",
+      "name": "昆布",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-037",
+      "name": "枣",
+      "aliases": [
+        "大枣",
+        "酸枣",
+        "黑枣"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-038",
+      "name": "罗汉果",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-039",
+      "name": "郁李仁",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-040",
+      "name": "金银花",
+      "aliases": [
+        "银花",
+        "鲜银花"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-041",
+      "name": "青果",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-042",
+      "name": "鱼腥草",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-043",
+      "name": "姜",
+      "aliases": [
+        "生姜",
+        "干姜"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-044",
+      "name": "枳椇子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-045",
+      "name": "枸杞子",
+      "aliases": [
+        "枸杞"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-046",
+      "name": "栀子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-047",
+      "name": "砂仁",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-048",
+      "name": "胖大海",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-049",
+      "name": "茯苓",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-050",
+      "name": "香橼",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-051",
+      "name": "香薷",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-052",
+      "name": "桃仁",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-053",
+      "name": "桑叶",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-054",
+      "name": "桑椹",
+      "aliases": [
+        "桑葚"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-055",
+      "name": "桔红",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-056",
+      "name": "桔梗",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-057",
+      "name": "益智仁",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-058",
+      "name": "荷叶",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-059",
+      "name": "莱菔子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-060",
+      "name": "莲子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-061",
+      "name": "高良姜",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-062",
+      "name": "淡竹叶",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-063",
+      "name": "淡豆豉",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-064",
+      "name": "菊花",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-065",
+      "name": "菊苣",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-066",
+      "name": "黄芥子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-067",
+      "name": "黄精",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-068",
+      "name": "紫苏",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-069",
+      "name": "紫苏籽",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-070",
+      "name": "葛根",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-071",
+      "name": "黑芝麻",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-072",
+      "name": "黑胡椒",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-073",
+      "name": "槐米",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-074",
+      "name": "槐花",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-075",
+      "name": "蒲公英",
+      "aliases": [
+        "鲜蒲公英"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-076",
+      "name": "蜂蜜",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-077",
+      "name": "榧子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-078",
+      "name": "酸枣仁",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-079",
+      "name": "鲜白茅根",
+      "aliases": [
+        "鲜茅根"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-080",
+      "name": "鲜芦根",
+      "aliases": [
+        "鲜苇根"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-081",
+      "name": "蝮蛇",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-082",
+      "name": "橘皮",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-083",
+      "name": "薄荷",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-084",
+      "name": "薏苡仁",
+      "aliases": [
+        "薏仁"
+      ],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-085",
+      "name": "薤白",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-086",
+      "name": "覆盆子",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-087",
+      "name": "藿香",
+      "aliases": [],
+      "batchId": "nhc-2002-51",
+      "batch": {
+        "year": 2002,
+        "notice": "卫法监发〔2002〕51号",
+        "url": "https://www.nhc.gov.cn/wjw/gfxwj/200203/5e9768a72af64db89acb45fe30a810af.shtml",
+        "fieldSourceIds": [
+          "nhc-2002-51"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2002-51"
+      ],
+      "part": null,
+      "latinName": null,
+      "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-088",
+      "name": "当归",
+      "aliases": [],
+      "batchId": "nhc-2019-8",
+      "batch": {
+        "year": 2019,
+        "notice": "2019年第8号",
+        "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+        "fieldSourceIds": [
+          "nhc-2019-8"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "part": "根",
+      "latinName": "Angelica sinensis (Oliv.) Diels",
+      "foodUseScope": "spice_and_condiment_only",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-089",
+      "name": "山柰",
+      "aliases": [],
+      "batchId": "nhc-2019-8",
+      "batch": {
+        "year": 2019,
+        "notice": "2019年第8号",
+        "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+        "fieldSourceIds": [
+          "nhc-2019-8"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "part": "根茎",
+      "latinName": "Kaempferia galanga L.",
+      "foodUseScope": "spice_and_condiment_only",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-090",
+      "name": "西红花",
+      "aliases": [
+        "藏红花"
+      ],
+      "batchId": "nhc-2019-8",
+      "batch": {
+        "year": 2019,
+        "notice": "2019年第8号",
+        "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+        "fieldSourceIds": [
+          "nhc-2019-8"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "part": "柱头",
+      "latinName": "Crocus sativus L.",
+      "foodUseScope": "spice_and_condiment_only",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-091",
+      "name": "草果",
+      "aliases": [],
+      "batchId": "nhc-2019-8",
+      "batch": {
+        "year": 2019,
+        "notice": "2019年第8号",
+        "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+        "fieldSourceIds": [
+          "nhc-2019-8"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "part": "果实",
+      "latinName": "Amomum tsao-ko Crevost et Lemaire",
+      "foodUseScope": "spice_and_condiment_only",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-092",
+      "name": "姜黄",
+      "aliases": [],
+      "batchId": "nhc-2019-8",
+      "batch": {
+        "year": 2019,
+        "notice": "2019年第8号",
+        "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+        "fieldSourceIds": [
+          "nhc-2019-8"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "part": "根茎",
+      "latinName": "Curcuma longa L.",
+      "foodUseScope": "spice_and_condiment_only",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-093",
+      "name": "荜茇",
+      "aliases": [],
+      "batchId": "nhc-2019-8",
+      "batch": {
+        "year": 2019,
+        "notice": "2019年第8号",
+        "url": "https://zwfw.nhc.gov.cn/kzx/tzgg/qt_235/202001/t20200106_1452.html",
+        "fieldSourceIds": [
+          "nhc-2019-8"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2019-8"
+      ],
+      "part": "果穗",
+      "latinName": "Piper longum L.",
+      "foodUseScope": "spice_and_condiment_only",
+      "populationRestriction": null,
+      "batchPopulationRestriction": null,
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-094",
+      "name": "党参",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥根",
+      "latinName": "Codonopsis pilosula / C. pilosula var. modesta / C. tangshen",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": "不宜与藜芦同用",
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-095",
+      "name": "肉苁蓉（荒漠）",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥带鳞叶的肉质茎",
+      "latinName": "Cistanche deserticola Y.C. Ma",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-096",
+      "name": "铁皮石斛",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥茎",
+      "latinName": "Dendrobium officinale Kimura et Migo",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-097",
+      "name": "西洋参",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥根",
+      "latinName": "Panax quinquefolium L.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": "不宜与藜芦同用",
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-098",
+      "name": "黄芪",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥根",
+      "latinName": "Astragalus membranaceus var. mongholicus / A. membranaceus",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-099",
+      "name": "灵芝",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥子实体",
+      "latinName": "Ganoderma lucidum / Ganoderma sinense",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-100",
+      "name": "山茱萸",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥成熟果肉",
+      "latinName": "Cornus officinalis Sieb. et Zucc.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-101",
+      "name": "天麻",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥块茎",
+      "latinName": "Gastrodia elata Bl.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": "过敏体质人群不宜食用",
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-102",
+      "name": "杜仲叶",
+      "aliases": [],
+      "batchId": "nhc-2023-9",
+      "batch": {
+        "year": 2023,
+        "notice": "2023年第9号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+        "fieldSourceIds": [
+          "nhc-2023-9",
+          "nhc-2023-9-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2023-9",
+        "nhc-2023-9-interpretation"
+      ],
+      "part": "干燥叶",
+      "latinName": "Eucommia ulmoides Oliv.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-103",
+      "name": "地黄",
+      "aliases": [
+        "熟地黄"
+      ],
+      "batchId": "nhc-2024-4",
+      "batch": {
+        "year": 2024,
+        "notice": "2024年第4号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202408/53150d0918ec40899b5293147ec0dd01.shtml",
+        "fieldSourceIds": [
+          "nhc-2024-4",
+          "nhc-2024-4-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2024-4",
+        "nhc-2024-4-interpretation"
+      ],
+      "part": "新鲜或干燥块根",
+      "latinName": "Rehmannia glutinosa Libosch.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": "熟地黄仅限由地黄按传统加工方式制成",
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-104",
+      "name": "麦冬",
+      "aliases": [],
+      "batchId": "nhc-2024-4",
+      "batch": {
+        "year": 2024,
+        "notice": "2024年第4号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202408/53150d0918ec40899b5293147ec0dd01.shtml",
+        "fieldSourceIds": [
+          "nhc-2024-4",
+          "nhc-2024-4-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2024-4",
+        "nhc-2024-4-interpretation"
+      ],
+      "part": "干燥块根",
+      "latinName": "Ophiopogon japonicus (L.f.) Ker-Gawl.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-105",
+      "name": "天冬",
+      "aliases": [],
+      "batchId": "nhc-2024-4",
+      "batch": {
+        "year": 2024,
+        "notice": "2024年第4号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202408/53150d0918ec40899b5293147ec0dd01.shtml",
+        "fieldSourceIds": [
+          "nhc-2024-4",
+          "nhc-2024-4-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2024-4",
+        "nhc-2024-4-interpretation"
+      ],
+      "part": "干燥块根",
+      "latinName": "Asparagus cochinchinensis (Lour.) Merr.",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "nhc-food-medicine-106",
+      "name": "化橘红",
+      "aliases": [],
+      "batchId": "nhc-2024-4",
+      "batch": {
+        "year": 2024,
+        "notice": "2024年第4号",
+        "url": "https://www.nhc.gov.cn/sps/c100088/202408/53150d0918ec40899b5293147ec0dd01.shtml",
+        "fieldSourceIds": [
+          "nhc-2024-4",
+          "nhc-2024-4-interpretation"
+        ]
+      },
+      "fieldSourceIds": [
+        "nhc-2024-4",
+        "nhc-2024-4-interpretation"
+      ],
+      "part": "未成熟或近成熟果实的干燥外层果皮",
+      "latinName": "Citrus grandis “Tomentosa” / Citrus grandis",
+      "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+      "populationRestriction": null,
+      "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+      "specificRestriction": null,
+      "directoryMembership": "official_current_directory",
+      "productEligibility": "blocked_pending_use_specific_review",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "The 2002 source is a grouped name list and does not itself fix Latin identity, edible part, processing form, serving amount, population, or therapeutic use for each of its 87 entries.",
+    "The 2019 additions are limited to spice and condiment use; membership does not authorize therapeutic recipes.",
+    "The 2023 and 2024 additions carry batch-level special-population restrictions, plus item-specific restrictions where stated.",
+    "Directory membership is an ingredient identity and food-law fact, not proof of disease efficacy, a medicinal dose, or formula safety."
+  ]
+}

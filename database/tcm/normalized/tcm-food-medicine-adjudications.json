@@ -1,0 +1,925 @@
+{
+  "schemaVersion": 1,
+  "domain": "tcm_food_medicine_adjudications",
+  "generatedAt": "2026-07-10",
+  "status": "current_directory_identity_and_skill_claims_adjudicated_all_product_blocked",
+  "directorySource": "database/tcm/sources/nhc-food-medicine-directory.json",
+  "sourceRefs": {
+    "database/tcm/skill-v3/SKILL.md": {
+      "sha256": "a406bd46ed4bb859ee2d7f357f3dac75bcb32f335e488215da230933ab7996b6"
+    },
+    "database/tcm/skill-v3/references/47-温病-卫气营血三焦方证条文.md": {
+      "sha256": "1fc7e18a31d30b5c01475f68400be079c65cd64ef2c140467d200197ba599872"
+    },
+    "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md": {
+      "sha256": "18a7d6b563660b6958eb24365543a38b0b045b2349b8249f05b8de689df6e987"
+    },
+    "database/tcm/skill-v3/references/48-医家-衷中参西录要义.md": {
+      "sha256": "e40ba576d3d0a16af126cfcf0926f7a8aef3bd2126495da0baaf5b7c9455d18f"
+    }
+  },
+  "counts": {
+    "directoryEntries": 106,
+    "skillAFoodSubstances": 15,
+    "skillAMatchedCurrentDirectory": 13,
+    "skillANotInCurrentDirectory": 2,
+    "explicitFoodClaims": 8,
+    "explicitClaimIngredients": 38,
+    "claimIngredientsMatchedCurrentDirectory": 18,
+    "claimIngredientIdentityOrProcessGaps": 5,
+    "claimIngredientsNotInCurrentDirectory": 15
+  },
+  "skillAList": {
+    "sourcePath": "database/tcm/skill-v3/SKILL.md",
+    "sourceLine": 16,
+    "sourceText": "- **A 可直接执行**:起居作息、情志调摄、忌口,煎服操作,**按穴与自我按摩、热熨、泡脚、熏洗**(定位查 `39`,要领禁忌查 `40`——孕妇禁按穴清单、颈前眼区禁按等硬项必须随建议给出),以及**仅限教材注明药食兼用之品**的食疗(山药、大枣、枸杞、蜂蜜、薏苡仁、绿豆、生姜、山楂、莲子、芡实、百合、龙眼肉、黑芝麻、桑椹、核桃仁等)——仍须核对该品条目的使用注意(如蜂蜜便溏慎、龙眼肉湿盛中满忌)。**A⁻ 亚级(艾灸悬灸、耳穴压豆)**:可建议,但必须连同全套要领与禁忌一起给(`40`:实热证不灸、孕妇腹腰骶不灸、禁灸穴、防烫伤),不做\"裸建议\"",
+    "adjudications": [
+      {
+        "sourceName": "山药",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "山药",
+        "directoryId": "nhc-food-medicine-006",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "大枣",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "枣",
+        "directoryId": "nhc-food-medicine-037",
+        "aliases": [
+          "大枣",
+          "酸枣",
+          "黑枣"
+        ],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "枸杞",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "枸杞子",
+        "directoryId": "nhc-food-medicine-045",
+        "aliases": [
+          "枸杞"
+        ],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "蜂蜜",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "蜂蜜",
+        "directoryId": "nhc-food-medicine-076",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "薏苡仁",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "薏苡仁",
+        "directoryId": "nhc-food-medicine-084",
+        "aliases": [
+          "薏仁"
+        ],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "绿豆",
+        "matchStatus": "not_in_current_directory",
+        "directoryName": null,
+        "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "生姜",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "姜",
+        "directoryId": "nhc-food-medicine-043",
+        "aliases": [
+          "生姜",
+          "干姜"
+        ],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "山楂",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "山楂",
+        "directoryId": "nhc-food-medicine-007",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "莲子",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "莲子",
+        "directoryId": "nhc-food-medicine-060",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "芡实",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "芡实",
+        "directoryId": "nhc-food-medicine-030",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "百合",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "百合",
+        "directoryId": "nhc-food-medicine-022",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "龙眼肉",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "龙眼肉",
+        "directoryId": "nhc-food-medicine-020",
+        "aliases": [
+          "桂圆"
+        ],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "黑芝麻",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "黑芝麻",
+        "directoryId": "nhc-food-medicine-071",
+        "aliases": [],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "桑椹",
+        "matchStatus": "matched_current_directory",
+        "directoryName": "桑椹",
+        "directoryId": "nhc-food-medicine-054",
+        "aliases": [
+          "桑葚"
+        ],
+        "part": null,
+        "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+        "populationRestriction": null,
+        "batchPopulationRestriction": null,
+        "specificRestriction": null,
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      },
+      {
+        "sourceName": "核桃仁",
+        "matchStatus": "not_in_current_directory",
+        "directoryName": null,
+        "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+        "productEligibility": "blocked_pending_use_specific_review",
+        "runtimeEligibleFields": []
+      }
+    ],
+    "finding": "The source label “教材注明药食兼用” is not an official current-directory adjudication. Green bean and walnut kernel are not current directory entries; that does not deny ordinary-food status.",
+    "productEligibility": "blocked_pending_use_specific_review",
+    "runtimeEligibleFields": []
+  },
+  "explicitClaims": [
+    {
+      "id": "TCM-FOOD-CLAIM-001",
+      "sourcePath": "database/tcm/skill-v3/references/47-温病-卫气营血三焦方证条文.md",
+      "sourceLine": 195,
+      "sourceLabel": "A 级食疗性质",
+      "ingredientNames": [
+        "梨",
+        "荸荠",
+        "鲜苇根",
+        "麦冬",
+        "藕"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "梨",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "荸荠",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鲜苇根",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "鲜芦根",
+          "directoryId": "nhc-food-medicine-080",
+          "aliases": [
+            "鲜苇根"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "麦冬",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "麦冬",
+          "directoryId": "nhc-food-medicine-104",
+          "aliases": [],
+          "part": "干燥块根",
+          "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+          "populationRestriction": null,
+          "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "藕",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "mixed_ordinary_food_and_directory_items_no_formula_eligibility",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- 甘寒救液小方(第 12 条):口渴甚**雪梨浆**(甜水梨薄切凉水浸,时时频饮);吐白沫黏滞不快者**五汁饮**(梨汁、荸荠汁、鲜苇根汁、麦冬汁、藕汁,和匀凉服)——A 级食疗性质的原书出处(过敏与血糖等现代注意见教材层)。",
+      "sourceSha256": "1fc7e18a31d30b5c01475f68400be079c65cd64ef2c140467d200197ba599872"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-002",
+      "sourcePath": "database/tcm/skill-v3/references/47-温病-卫气营血三焦方证条文.md",
+      "sourceLine": 210,
+      "sourceLabel": "A 级药食边界方",
+      "ingredientNames": [
+        "荷叶",
+        "鲜银花",
+        "西瓜翠衣",
+        "鲜扁豆花",
+        "丝瓜皮",
+        "鲜竹叶心",
+        "杏仁",
+        "薏仁",
+        "滑石"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "荷叶",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "荷叶",
+          "directoryId": "nhc-food-medicine-058",
+          "aliases": [],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鲜银花",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "金银花",
+          "directoryId": "nhc-food-medicine-040",
+          "aliases": [
+            "银花",
+            "鲜银花"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "西瓜翠衣",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鲜扁豆花",
+          "matchStatus": "identity_or_process_variant_unadjudicated",
+          "directoryName": "白扁豆花",
+          "reason": "source omits the official white-bean identity",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "丝瓜皮",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鲜竹叶心",
+          "matchStatus": "identity_or_process_variant_unadjudicated",
+          "directoryName": "淡竹叶",
+          "reason": "plant part and material identity are not equivalent",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "杏仁",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "杏仁",
+          "directoryId": "nhc-food-medicine-027",
+          "aliases": [
+            "甜杏仁",
+            "苦杏仁"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "薏仁",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "薏苡仁",
+          "directoryId": "nhc-food-medicine-084",
+          "aliases": [
+            "薏仁"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "滑石",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "mixed_identity_and_non_directory_ingredients_formula_blocked",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- **清络饮**(第 27 条):暑伤肺经气分之**轻证**——鲜荷叶边、鲜银花、西瓜翠衣、鲜扁豆花、丝瓜皮、鲜竹叶心,\"凡暑伤肺络轻证皆可用\"(六鲜等分,夏季 A 级药食边界方的原书出处;教材 26 已收)。但咳无痰咳声清高加甘桔杏麦知;**暑瘵**(第 32 条,寒热舌白吐血)清络饮加杏仁、薏仁、滑石,\"难治\"——今咯血皆红线。",
+      "sourceSha256": "1fc7e18a31d30b5c01475f68400be079c65cd64ef2c140467d200197ba599872"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-003",
+      "sourcePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "sourceLine": 51,
+      "sourceLabel": "药食同源名方",
+      "ingredientNames": [
+        "当归",
+        "生姜",
+        "羊肉"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "当归",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "当归",
+          "directoryId": "nhc-food-medicine-088",
+          "aliases": [],
+          "part": "根",
+          "foodUseScope": "spice_and_condiment_only",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "生姜",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "姜",
+          "directoryId": "nhc-food-medicine-043",
+          "aliases": [
+            "生姜",
+            "干姜"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "羊肉",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "spice_only_member_does_not_authorize_therapeutic_formula",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- **腹满寒疝宿食10**:**腹诊总诀**★\"病者腹满,**按之不痛为虚,痛者为实**,可下之\";\"腹满时减,复如故,此为寒,当与温药\";\"**腹满不减,减不足言,当须下之**\";附子粳米汤(腹中寒气雷鸣切痛)、厚朴三物汤(痛而闭)、**大建中汤**(\"心胸中大寒痛,呕不能饮食……上冲皮起,出见有头足,上下痛而不可触近\")、大黄附子汤(胁下偏痛,温下法之祖);寒疝\"绕脐痛,若发则白汗出,手足厥冷\"大乌头煎(**\"不可一日再服\"**——原书自限剧毒药频次);**当归生姜羊肉汤**★(\"寒疝腹中痛,及胁痛里急\"——药食同源名方,[[23-病证用药索引]] 食疗层互参,虚寒腹痛产后可用而仍属 B 级辨证);宿食脉证与大承气/瓜蒂散(在上脘当吐)。",
+      "sourceSha256": "18a7d6b563660b6958eb24365543a38b0b045b2349b8249f05b8de689df6e987"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-004",
+      "sourcePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "sourceLine": 68,
+      "sourceLabel": "药食同源级配伍",
+      "ingredientNames": [
+        "甘草",
+        "小麦",
+        "大枣"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "甘草",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "甘草",
+          "directoryId": "nhc-food-medicine-015",
+          "aliases": [],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "小麦",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "大枣",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "枣",
+          "directoryId": "nhc-food-medicine-037",
+          "aliases": [
+            "大枣",
+            "酸枣",
+            "黑枣"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "ingredient_food_status_does_not_validate_therapeutic_indication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- **杂病22**:**热入血室**四条(与伤寒重出,经期外感之辨);\"妇人**咽中如有炙脔**,**半夏厚朴汤**主之\"★(梅核气原文,[[36-内科-气血津液病证]] 郁证主方);\"妇人**藏躁,喜悲伤欲哭,象如神灵所作,数欠伸,甘麦大枣汤**主之\"★(脏躁原文;\"亦补脾气\"——药食同源级配伍:甘草小麦大枣);**温经汤**★(\"妇人年五十所,病下利(利一作血)数十日不止,暮即发热,少腹里急,腹满,手掌烦热,**唇口干燥**……曾经半产,瘀血在少腹不去\";\"亦主妇人少腹寒,**久不受胎**,兼取崩中去血,或月水来过多,及至期不来\"——调经第一方,[[27-补益固涩剂]] 互参);带下总论\"妇人之病,因虚、积冷、结气……**非有鬼神**\"★;转胞不得溺用肾气丸;阴中坐药(蛇床子散/狼牙汤/矾石丸)为妇科外治之祖,**今日阴部溃疡分泌物异常一律就医**;\"陷经漏下\"胶姜汤(方阙)。",
+      "sourceSha256": "18a7d6b563660b6958eb24365543a38b0b045b2349b8249f05b8de689df6e987"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-005",
+      "sourcePath": "database/tcm/skill-v3/references/48-医家-衷中参西录要义.md",
+      "sourceLine": 53,
+      "sourceLabel": "食疗级凉润方",
+      "ingredientNames": [
+        "鲜茅根",
+        "鲜藕",
+        "鲜小蓟根"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "鲜茅根",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "鲜白茅根",
+          "directoryId": "nhc-food-medicine-079",
+          "aliases": [
+            "鲜茅根"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鲜藕",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鲜小蓟根",
+          "matchStatus": "identity_or_process_variant_unadjudicated",
+          "directoryName": "小蓟",
+          "reason": "root-only material is not established by the legacy name-only listing",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "part_identity_and_treatment_claim_unadjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- 保元寒降汤/保元清降汤(血脱气亦将脱,台参与赭石并用)、清降汤;**二鲜饮/三鲜饮**(鲜茅根、鲜藕,加鲜小蓟根)——虚劳痰中带血之食疗级凉润方。化瘀理膈丹(三七+鸦胆子[鸭蛋子]吞服,勿嚼)治瘀血膈上。",
+      "sourceSha256": "e40ba576d3d0a16af126cfcf0926f7a8aef3bd2126495da0baaf5b7c9455d18f"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-006",
+      "sourcePath": "database/tcm/skill-v3/references/48-医家-衷中参西录要义.md",
+      "sourceLine": 87,
+      "sourceLabel": "本门几乎全为药食两用",
+      "ingredientNames": [
+        "白术",
+        "干姜",
+        "鸡内金",
+        "枣肉",
+        "山药",
+        "鸡子黄",
+        "车前子",
+        "滑石",
+        "甘草",
+        "龙眼肉",
+        "硫黄"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "白术",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "干姜",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "姜",
+          "directoryId": "nhc-food-medicine-043",
+          "aliases": [
+            "生姜",
+            "干姜"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鸡内金",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "鸡内金",
+          "directoryId": "nhc-food-medicine-034",
+          "aliases": [],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "枣肉",
+          "matchStatus": "identity_or_process_variant_unadjudicated",
+          "directoryName": "枣",
+          "reason": "processed edible part is not fixed by the legacy name-only listing",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "山药",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "山药",
+          "directoryId": "nhc-food-medicine-006",
+          "aliases": [],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "鸡子黄",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "车前子",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "滑石",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "甘草",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "甘草",
+          "directoryId": "nhc-food-medicine-015",
+          "aliases": [],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "龙眼肉",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "龙眼肉",
+          "directoryId": "nhc-food-medicine-020",
+          "aliases": [
+            "桂圆"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "硫黄",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "overbroad_medicine_food_claim_contains_non_directory_and_process_variants",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- **泄泻食疗方系**(本门几乎全为药食两用,张氏特色最浓):**益脾饼**(白术四两、干姜二两、鸡内金二两、熟枣肉半斤,炙干当点心)治脾胃湿寒久泻;**薯蓣粥**(生怀山药轧细煮粥)——\"山药脾肾双补,在上能清,在下能固,**利小便而止大便**\",为小儿秋夏滑泻(伤阴发热、凉润温补皆不对证者)第一方;薯蓣鸡子黄粥(加熟鸡子黄固肠);薯蓣芣苢汤(山药+生车前子,小便不利兼大便滑泻);加味天水散(山药+滑石+甘草,暑日泄泻肌肤烧热)。扶中汤(于术、山药、龙眼肉)治久泻将成劳瘵。加味四神丸内加生硫黄——存目。",
+      "sourceSha256": "e40ba576d3d0a16af126cfcf0926f7a8aef3bd2126495da0baaf5b7c9455d18f"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-007",
+      "sourcePath": "database/tcm/skill-v3/references/48-医家-衷中参西录要义.md",
+      "sourceLine": 154,
+      "sourceLabel": "药食两用之品",
+      "ingredientNames": [
+        "鲜蒲公英"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "鲜蒲公英",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "蒲公英",
+          "directoryId": "nhc-food-medicine-075",
+          "aliases": [
+            "鲜蒲公英"
+          ],
+          "part": null,
+          "foodUseScope": "legacy_directory_name_only_part_and_processing_not_fixed_by_2002_list",
+          "populationRestriction": null,
+          "batchPopulationRestriction": null,
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "directory_membership_does_not_authorize_eye_treatment_or_external_route",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- **蒲公英汤**:鲜蒲公英四两(根叶茎花皆用)煎汤,温服一碗、余一碗乘热熏洗,治一切虚火实热眼疾肿疼——药食两用之品,然眼疾自疗风险高(青光眼急性发作等),**今凡目赤剧痛/视力骤降=红线**,此方存其食疗史料。磨翳水/磨翳散(生炉甘石水飞点眼)、护眉神应散诸外用眼药——**存目禁自制点眼**。",
+      "sourceSha256": "e40ba576d3d0a16af126cfcf0926f7a8aef3bd2126495da0baaf5b7c9455d18f"
+    },
+    {
+      "id": "TCM-FOOD-CLAIM-008",
+      "sourcePath": "database/tcm/skill-v3/references/48-医家-衷中参西录要义.md",
+      "sourceLine": 157,
+      "sourceLabel": "食疗级验案",
+      "ingredientNames": [
+        "煅牡蛎",
+        "黄芪",
+        "海带"
+      ],
+      "ingredients": [
+        {
+          "sourceName": "煅牡蛎",
+          "matchStatus": "identity_or_process_variant_unadjudicated",
+          "directoryName": "牡蛎",
+          "reason": "calcined medicinal material is not the same use form as a food-directory name",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "黄芪",
+          "matchStatus": "matched_current_directory",
+          "directoryName": "黄芪",
+          "directoryId": "nhc-food-medicine-098",
+          "aliases": [],
+          "part": "干燥根",
+          "foodUseScope": "traditional_food_use_subject_to_item_identity_and_applicable_rules",
+          "populationRestriction": null,
+          "batchPopulationRestriction": "孕妇、哺乳期妇女及婴幼儿等特殊人群不推荐食用",
+          "specificRestriction": null,
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "海带",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "adjudication": "processed_medicinal_dose_and_disease_claim_not_food_eligible",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": [],
+      "sourceText": "- **消瘰丸**(煅牡蛎十两、生黄芪四两、三棱莪术、血竭乳没、龙胆草、玄参、浙贝,海带汤送服):治瘰疬(颈淋巴结核)。两则食疗级验案:强壮者单用**煅牡蛎细末**每餐饭汤送七八钱,一月消;或**日日煮海带汤**饮之半月愈——惟脾胃弱者咸寒伤胃。※颈部肿块今须先排查(结核/肿瘤),B 级红线优先。",
+      "sourceSha256": "e40ba576d3d0a16af126cfcf0926f7a8aef3bd2126495da0baaf5b7c9455d18f"
+    }
+  ],
+  "findings": [
+    {
+      "id": "TCM-FM-001",
+      "status": "source_scope_overstated_blocked",
+      "observation": "Skill A-level wording treats 15 listed foods as “药食兼用”; 13 map to current directory and two do not.",
+      "affected": [
+        {
+          "sourceName": "绿豆",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        },
+        {
+          "sourceName": "核桃仁",
+          "matchStatus": "not_in_current_directory",
+          "directoryName": null,
+          "reason": "Absence from this directory is not a finding that the item is unsafe or not an ordinary food; it only cannot inherit food-medicine directory status.",
+          "productEligibility": "blocked_pending_use_specific_review",
+          "runtimeEligibleFields": []
+        }
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FM-002",
+      "status": "spice_only_scope_blocked",
+      "observation": "The 2019 directory addition for 当归 is spice-and-condiment-only and cannot authorize 当归生姜羊肉汤 as a therapeutic food formula.",
+      "affectedClaimIds": [
+        "TCM-FOOD-CLAIM-003"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FM-003",
+      "status": "formula_inheritance_blocked",
+      "observation": "Ingredient membership does not transfer to formula, processing form, medicinal dose, disease indication, pediatric use, or external route.",
+      "affectedClaimIds": [
+        "TCM-FOOD-CLAIM-001",
+        "TCM-FOOD-CLAIM-002",
+        "TCM-FOOD-CLAIM-003",
+        "TCM-FOOD-CLAIM-004",
+        "TCM-FOOD-CLAIM-005",
+        "TCM-FOOD-CLAIM-006",
+        "TCM-FOOD-CLAIM-007",
+        "TCM-FOOD-CLAIM-008"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-FM-004",
+      "status": "overbroad_recipe_group_blocked",
+      "observation": "The claim that the diarrhea recipe group is almost entirely medicine-food contains non-directory substances and unadjudicated processed parts.",
+      "affectedClaimIds": [
+        "TCM-FOOD-CLAIM-006"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": [],
+  "boundaries": [
+    "Current directory membership is preserved separately from ordinary-food status; not-in-directory is not a finding of non-food or unsafe status.",
+    "All aliases and processing forms are fail-closed unless the official item identity or announcement explicitly supports them.",
+    "No recipe, medicinal dose, treatment claim, pediatric use, eye application, or disease self-treatment becomes eligible through one or more directory ingredients.",
+    "This slice adjudicates the Skill A-level list and every explicit 药食同源/药食两用/食疗级 recipe claim; it does not validate general nutrition advice or every implicit food mention."
+  ]
+}
