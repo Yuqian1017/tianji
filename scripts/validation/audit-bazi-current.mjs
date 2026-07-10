@@ -162,7 +162,7 @@ function libraryResult(input, gender) {
     0,
   ).getLunar().getEightChar();
   eightChar.setSect(1);
-  const yun = eightChar.getYun(gender === 'male' ? 1 : 0);
+  const yun = eightChar.getYun(gender === 'male' ? 1 : 0, 1);
   const exactStart = {
     years: yun.getStartYear(),
     months: yun.getStartMonth(),
@@ -340,6 +340,7 @@ const report = {
     yearBoundary: 'Spring Commences / Lichun',
     monthBoundary: '12 minor solar terms / Jie',
     dayBoundary: '23:00, Sect 1',
+    dayunCalculation: 'Yun Sect 1; traditional shichen precision; 3 source days = 1 year; 1 shichen = 10 days',
     solarAdjustment: 'Equation of time plus longitude under the stated standard meridian',
   },
   comparator: {

@@ -68,6 +68,8 @@ test('finds January Dayun on both sides of the birth time', () => {
     days: 20,
     solarDate: '2026-04-21',
     roundedAge: 1,
+    calculationSect: 1,
+    precision: 'traditional_shichen',
   });
 
   assert.equal(female.dayun[0].startAge, 9);
@@ -77,7 +79,10 @@ test('finds January Dayun on both sides of the birth time', () => {
     days: 10,
     solarDate: '2033-07-11',
     roundedAge: 9,
+    calculationSect: 1,
+    precision: 'traditional_shichen',
   });
+  assert.equal(male.calendar.yunCalculationSect, 1);
 });
 
 test('day pillar is independent of the browser runtime timezone', () => {

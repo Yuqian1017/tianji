@@ -16,7 +16,7 @@
 |---|---|---|---|---|---|---|---|
 | VAL-INV-001 | P0 | 全库 | Runtime engine/data/prompt 与 raw source inventory | 结构 | V1 | in_progress | 枚举文件、导出、表与规则单元 |
 | VAL-BZ-001 | P0 | 八字 | 年月日时四柱与节气/日界口径 | 精确/流派确定性 | V3+V5 | in_progress | V3 已达：`sxtwl@2.0.7` 30/30 四柱一致，1,296 节令时刻最大差 20 秒；V5 UI/保存同路径证据待补 |
-| VAL-BZ-002 | P0 | 八字 | 大运顺逆、起运岁数、交运时间 | 流派确定性 | V3 | in_progress | 一月根因已修复，30 例精确起运与首运 0 mismatch；待第二独立实现和更多官方/人工 fixture |
+| VAL-BZ-002 | P0 | 八字 | 大运顺逆、起运岁数、交运时间 | 流派确定性 | V3 | pass | 明确采用 `Yun Sect 1 / traditional_shichen`；`sxtwl` 相邻节令加经典规则独立推导 30/30 方向、交运日期与首运干支一致；不覆盖其他流派或吉凶解释 |
 | VAL-BZ-003 | P1 | 八字 | 身强评分、五行计数与用神方向 | 流派/启发式 | V2+来源声明 | in_progress | 当前为自定义 40/40/20 与藏干 0.5 权重，需确认来源及产品标签 |
 | VAL-BZ-004 | P1 | 八字 | 天干五合、地支六合与“午未合火/土” | 来源忠实性 | V3 | school_difference | 合与合化已拆开；《三命通会》确认午未六合，compendium 明示火/土有争议。runtime 只显示“甲己合”“午未合”，候选化神留作元数据 |
 | VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
@@ -33,7 +33,7 @@
 | Finding ID | Priority | Case | Status | Observation | Required proof |
 |---|---|---|---|---|---|
 | F-BZ-001 | P1 | VAL-BZ-001 | verified_remediated | 近似节气已移出 runtime；`sxtwl` 第二实现 30/30 四柱一致，1,296 节令时刻最大差 20 秒 | 保持 V5 用户路径回归 |
-| F-BZ-002 | P1 | VAL-BZ-002 | remediated | 一月非连续节令搜索已删除；精确起运间隔和交运公历日期已保存 | 第二独立实现与扩展 fixture |
+| F-BZ-002 | P1 | VAL-BZ-002 | verified_remediated | 一月非连续节令搜索已删除；传统时辰精度的起运间隔、交运公历日期与口径元数据已保存 | 30 例独立推导 0 mismatch；其他流派另建 validation 单元 |
 | F-BZ-003 | P1 | VAL-BZ-003 | evidence_gap | 身强 /100、五行 0.5 权重和用神方向未见来源/流派声明 | 搜索来源并与当前 UI/Prompt 表达对照 |
 | F-BZ-004 | P1 | VAL-BZ-004 | resolved_school_difference | 旧表把两支同现直接显示为“午未合火”，混淆六合关系与有条件的合化，且未披露火/土分歧 | runtime 改为“午未合”；`huaCandidates` 保留火/土，不判断条件时不宣称合化 |
 | F-BZ-005 | P2 | VAL-SHARED-001 | remediated | 日柱改由历法适配层计算；UTC 与 Pacific/Apia 同一输入回归一致，39,447 日连续性通过 | 保持跨 TZ 回归 |
@@ -58,4 +58,5 @@
 | 2026-07-09 | VAL-BZ-001 | 第二实现审计反查验证脚本 | 发现大写 `XIAO_HAN` 指向下一年；已改为同年 `小寒` 并加入年份断言，证据重新生成 |
 | 2026-07-09 | VAL-BZ-004 | 《三命通会·论支元六合》、compendium `00-cosmology/03-tiangan-dizhi.md` 与 runtime 对照 | 午未六合可确认；合化火/土存在口径与条件差异。五合/六合均移除自动合化断言，15 项八字测试通过 |
 | 2026-07-09 | VAL-SHARED-001 | NOAA fractional-year 公式与闰年年末回归 | 分母改为官方公式固定的 365；修复 2024-12-31 约 27 秒额外偏差 |
-| 2026-07-09 | VAL-BZ-001 | Fresh code reviewer `019f49f1-4e13-7481-a276-ea33d57de668` | 无 Critical；陈旧 primary artifact 的 Important 已修复并加 source/artifact SHA256；大运第二实现缺口保持 open |
+| 2026-07-09 | VAL-BZ-001 | Fresh code reviewer `019f49f1-4e13-7481-a276-ea33d57de668` | 无 Critical；陈旧 primary artifact 的 Important 已修复并加 source/artifact SHA256；当时保留的大运证据缺口已由下一条独立推导关闭 |
+| 2026-07-09 | VAL-BZ-002 | `sxtwl@2.0.7` 相邻节令 + 《渊海子平·论起大运法》《三命通会·论大运》规则的独立手工推导；30 例 | 未调用 runtime `getYun()`；方向、传统时辰精度交运日期和首运干支 30/30 一致，声明口径内达到 V3 |

@@ -136,8 +136,8 @@
 | 项目路径 | `node_modules/lunar-javascript/`；依赖声明见 `package.json` |
 | 状态 | `runtime_truth`；修复前曾作为独立 comparator，修复后不再计作第二证据 |
 | 许可 | 包元数据声明 MIT |
-| 本轮用途 | 作为八字四柱、节令和大运 runtime 适配层；固定 `sect=1` 对齐当前 23:00 换日口径 |
-| 边界 | 运行依赖不能验证自己；2,592 次同库边界检查只证明接线和回归，大运仍需第二证据 |
+| 本轮用途 | 作为八字四柱、节令和大运 runtime 适配层；四柱固定 `sect=1` 对齐当前 23:00 换日口径，大运固定 Yun `sect=1` 并声明 `traditional_shichen` 精度 |
+| 边界 | 运行依赖不能验证自己；2,592 次同库边界检查只证明接线和回归，大运验证依赖下列独立推导证据 |
 
 ### SRC-VAL-SXTWL
 
@@ -149,8 +149,20 @@
 | 许可 | BSD-3-Clause |
 | 本地使用 | 隔离安装于 `/tmp/tianji-sxtwl-venv`；不进入产品依赖 |
 | 可重复入口 | `scripts/validation/audit-bazi-sxtwl.py`、`scripts/validation/requirements-bazi-secondary.txt`；脚本强制先重建 primary runtime artifact 并记录源码 SHA256 |
-| 本轮结果 | 30/30 四柱一致；1920-2027 的 1,296 个节令时刻全部在 30 秒内，最大差 20 秒 |
-| 边界 | 不提供本项目所用的大运接口；与另一实现一致仍不是数学证明，也不验证解释性八字规则 |
+| 本轮结果 | 30/30 四柱一致；1920-2027 的 1,296 个节令时刻全部在 30 秒内，最大差 20 秒；其节令时刻用于独立手工推导 30 例大运 |
+| 边界 | 不提供本项目所用的大运接口；大运规则来自经典并由项目审计脚本独立实现；一致仍不是数学证明，也不验证解释性八字规则 |
+
+### SRC-VAL-DAYUN-CLASSICS
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《渊海子平·论起大运法》与《三命通会·论大运》 |
+| 状态 | `validation_anchor`，传统大运规则文本 |
+| 在线校本 | `https://www.shidianguji.com/book/NGJ892411999032112149610/chapter/1lqsbrapj4372`、`https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1vhnp` |
+| 本轮用途 | 锚定阳男阴女顺、阴男阳女逆；取未来/过去相邻“节”；三日一岁；传统时辰折算 |
+| 实现方式 | `audit-bazi-sxtwl.py` 仅使用 `sxtwl` 节令和四柱，独立实现规则，不调用 runtime `getYun()` |
+| 本轮结果 | 30/30 大运方向、传统时辰精度交运日期和首运干支一致 |
+| 边界 | 只验证已声明的传统时辰口径；不证明其他流派、连续分钟折算或任何吉凶解释 |
 
 ### SRC-VAL-SANMING-LIUHE
 
@@ -288,7 +300,7 @@ escalation: self_care | clinician | urgent | emergency
 
 ## 12. 下一步
 
-1. 为大运补第二实现或可人工复核的同派推导 fixture，并继续八字解释层来源矩阵。
+1. 继续八字强弱、用神、合化条件和神煞的解释层来源矩阵。
 2. 按本清单为 package/source group 建立机器可读 manifest。
 3. 定义 normalized schema 和 review 状态机。
 4. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。

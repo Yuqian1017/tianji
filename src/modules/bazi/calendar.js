@@ -22,6 +22,8 @@ export const BAZI_CALENDAR_ENGINE = {
   name: 'lunar-javascript',
   version: '1.7.7',
   dayBoundarySect: 1,
+  yunCalculationSect: 1,
+  yunPrecision: 'traditional_shichen',
 };
 
 function toPillar(ganZhi) {
@@ -60,7 +62,10 @@ export function createBaziCalendar(year, month, day, hour, minute = 0) {
 }
 
 export function createDayun(eightChar, gender) {
-  const yun = eightChar.getYun(gender === 'male' ? 1 : 0);
+  const yun = eightChar.getYun(
+    gender === 'male' ? 1 : 0,
+    BAZI_CALENDAR_ENGINE.yunCalculationSect,
+  );
   const years = yun.getStartYear();
   const months = yun.getStartMonth();
   const days = yun.getStartDay();
@@ -74,6 +79,8 @@ export function createDayun(eightChar, gender) {
     days,
     solarDate: yun.getStartSolar().toYmd(),
     roundedAge,
+    calculationSect: BAZI_CALENDAR_ENGINE.yunCalculationSect,
+    precision: BAZI_CALENDAR_ENGINE.yunPrecision,
   };
   const dayun = yun.getDaYun().slice(1, 9).map((item, index) => {
     const ganZhi = item.getGanZhi();

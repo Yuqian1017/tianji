@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import hashlib
+import calendar as civil_calendar
 import statistics
 import subprocess
 import sys
@@ -32,6 +33,10 @@ SOLAR_TERM_NAMES = [
     "春分", "清明", "谷雨", "立夏", "小满", "芒种",
     "夏至", "小暑", "大暑", "立秋", "处暑", "白露",
     "秋分", "寒露", "霜降", "立冬", "小雪", "大雪",
+]
+JIA_ZI = [
+    STEMS[index % 10] + BRANCHES[index % 12]
+    for index in range(60)
 ]
 
 
@@ -69,6 +74,7 @@ def refresh_primary_artifact() -> dict[str, object]:
         PROJECT_ROOT / "src/modules/bazi/engine.js",
         PROJECT_ROOT / "src/lib/cities.js",
         PRIMARY_AUDIT_SCRIPT,
+        Path(__file__).resolve(),
     ]
     dirty_files = git_output("status", "--short").splitlines()
     return {
@@ -133,6 +139,161 @@ def collect_jie_boundaries(start_year: int, end_year: int) -> dict[tuple[int, st
                 result[(year, name)] = term_datetime(day)
             day = day.after(1)
     return result
+
+
+def shichen_ordinal(value: datetime) -> int:
+    if value.hour == 23:
+        return 11
+    if value.hour == 0:
+        return 0
+    return (value.hour + 1) // 2
+
+
+def traditional_shichen_interval(start: datetime, end: datetime) -> dict[str, int]:
+    day_difference = (end.date() - start.date()).days
+    shichen_difference = shichen_ordinal(end) - shichen_ordinal(start)
+    if shichen_difference < 0:
+        shichen_difference += 12
+        day_difference -= 1
+
+    converted_days = day_difference * 120 + shichen_difference * 10
+    return {
+        "years": converted_days // 360,
+        "months": (converted_days % 360) // 30,
+        "days": converted_days % 30,
+        "sourceDayDifference": day_difference,
+        "sourceShichenDifference": shichen_difference,
+    }
+
+
+def add_calendar_interval(
+    value: datetime,
+    years: int,
+    months: int,
+    days: int,
+) -> datetime:
+    target_year = value.year + years
+    target_day = min(
+        value.day,
+        civil_calendar.monthrange(target_year, value.month)[1],
+    )
+    result = value.replace(year=target_year, day=target_day)
+
+    month_offset = result.month - 1 + months
+    target_year = result.year + month_offset // 12
+    target_month = month_offset % 12 + 1
+    target_day = min(
+        result.day,
+        civil_calendar.monthrange(target_year, target_month)[1],
+    )
+    result = result.replace(
+        year=target_year,
+        month=target_month,
+        day=target_day,
+    )
+    return result + timedelta(days=days)
+
+
+def compare_dayun(primary: dict[str, object]) -> dict[str, object]:
+    jie_boundaries = sorted(
+        (timestamp, name)
+        for (_, name), timestamp in collect_jie_boundaries(1919, 2028).items()
+    )
+    rows = []
+
+    for case in primary["results"]:
+        birth = datetime(*case["effectiveInput"])
+        secondary_pillars, _ = sxtwl_pillars(case["effectiveInput"])
+        year_stem = secondary_pillars[0][0]
+        year_is_yang = STEMS.index(year_stem) % 2 == 0
+        forward = (
+            (year_is_yang and case["gender"] == "male")
+            or (not year_is_yang and case["gender"] == "female")
+        )
+
+        if forward:
+            target_time, target_name = next(
+                item for item in jie_boundaries if item[0] > birth
+            )
+            interval = traditional_shichen_interval(birth, target_time)
+        else:
+            target_time, target_name = next(
+                item for item in reversed(jie_boundaries) if item[0] <= birth
+            )
+            interval = traditional_shichen_interval(target_time, birth)
+
+        years = interval["years"]
+        months = interval["months"]
+        days = interval["days"]
+        month_pillar_index = JIA_ZI.index(secondary_pillars[1])
+        first_pillar = JIA_ZI[
+            (month_pillar_index + (1 if forward else -1)) % 60
+        ]
+        runtime_dayun = case["current"]["dayun"]
+        runtime_first_index = JIA_ZI.index(runtime_dayun["firstPillar"])
+        if runtime_first_index == (month_pillar_index + 1) % 60:
+            runtime_direction = "forward"
+        elif runtime_first_index == (month_pillar_index - 1) % 60:
+            runtime_direction = "reverse"
+        else:
+            runtime_direction = "invalid_first_pillar_step"
+        rounded_age = max(1, int(years + months / 12 + days / 360 + 0.5))
+        calculated = {
+            "direction": "forward" if forward else "reverse",
+            "exactStart": {
+                "years": years,
+                "months": months,
+                "days": days,
+                "solarDate": add_calendar_interval(
+                    birth,
+                    years,
+                    months,
+                    days,
+                ).date().isoformat(),
+            },
+            "roundedStartAge": rounded_age,
+            "firstPillar": first_pillar,
+        }
+        runtime = {
+            "direction": runtime_direction,
+            **runtime_dayun,
+        }
+        mismatches = [
+            field
+            for field in (
+                "direction",
+                "exactStart",
+                "roundedStartAge",
+                "firstPillar",
+            )
+            if runtime[field] != calculated[field]
+        ]
+        rows.append(
+            {
+                "id": case["id"],
+                "input": case["effectiveInput"],
+                "gender": case["gender"],
+                "forward": forward,
+                "targetJie": target_name,
+                "targetJieTime": target_time.isoformat(sep=" "),
+                "sourceDayDifference": interval["sourceDayDifference"],
+                "sourceShichenDifference": interval["sourceShichenDifference"],
+                "runtime": runtime,
+                "manualSxtwl": calculated,
+                "mismatches": mismatches,
+            }
+        )
+
+    return {
+        "summary": {
+            "cases": len(rows),
+            "matchingCases": sum(not row["mismatches"] for row in rows),
+            "mismatchCases": sum(bool(row["mismatches"]) for row in rows),
+            "policy": "year-stem gender direction; nearest Jie; 3 source days = 1 year; 1 shichen = 10 days",
+            "precision": "traditional_shichen",
+        },
+        "results": rows,
+    }
 
 
 def compare_pillars(primary: dict[str, object]) -> dict[str, object]:
@@ -222,6 +383,7 @@ def main() -> int:
     primary = json.loads(PRIMARY_ARTIFACT.read_text(encoding="utf-8"))
     pillars = compare_pillars(primary)
     boundaries = compare_boundaries(primary)
+    dayun = compare_dayun(primary)
     report = {
         "auditDate": "2026-07-09",
         "stage": "secondary_independent_cross_check",
@@ -236,19 +398,27 @@ def main() -> int:
         "scope": {
             "pillars": "30 stratified runtime cases, including minute-level Jie handling and Sect 1 Zi hour",
             "jieBoundaries": "All 1,296 minor solar terms from 1920 through 2027",
-            "excluded": "Dayun start calculation is not exposed by sxtwl and remains outside this independent check",
+            "dayun": "30 stratified cases independently derived from sxtwl Jie timestamps and the traditional shichen conversion rule",
+            "excluded": "Interpretive strength, YongShen, Shensha, and luck-quality judgments",
         },
         "pillars": pillars,
         "jieBoundaries": boundaries,
+        "dayun": dayun,
         "officialAnchors": {
             "1999CornOnEar": "sxtwl: 1999-06-06 11:09:07; HKO calendar date: 1999-06-06",
             "2026SpringCommences": "sxtwl: 2026-02-04 04:01:51; HKO rounded minute: 04:02",
+            "dayunRule": "Yuan Hai Zi Ping and San Ming Tong Hui: forward/reverse to the nearest Jie, 3 days per year, with elapsed shichen used for the remainder",
+        },
+        "referenceTexts": {
+            "yuanHaiZiPing": "https://www.shidianguji.com/book/NGJ892411999032112149610/chapter/1lqsbrapj4372",
+            "sanMingTongHui": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1vhnp",
         },
         "limitations": [
             "Agreement between two implementations is strong cross-check evidence, not a mathematical proof.",
             "sxtwl exposes day-level pillars, so minute-level Jie selection is reconstructed from its own astronomical JieQi timestamp.",
             "This audit validates deterministic calendar pillars and Jie timestamps, not interpretive BaZi rules.",
-            "Dayun remains independently unverified by sxtwl.",
+            "sxtwl does not expose Dayun; this audit independently implements only the declared traditional shichen rule on top of sxtwl Jie timestamps.",
+            "Dayun V3 evidence is limited to the 30 stratified cases and does not validate interpretive claims about whether a luck period is auspicious.",
         ],
     }
     OUTPUT_PATH.write_text(
@@ -258,6 +428,7 @@ def main() -> int:
     print(json.dumps({
         "pillars": pillars["summary"],
         "jieBoundaries": boundaries["summary"],
+        "dayun": dayun["summary"],
         "output": str(OUTPUT_PATH),
     }, ensure_ascii=False, indent=2))
 
@@ -265,6 +436,7 @@ def main() -> int:
         pillars["summary"]["mismatchCases"] == 0
         and boundaries["summary"]["missingInSxtwl"] == 0
         and boundaries["summary"]["over60Seconds"] == 0
+        and dayun["summary"]["mismatchCases"] == 0
     )
     return 0 if passed else 1
 

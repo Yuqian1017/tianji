@@ -10,10 +10,11 @@
   },
   "runtimeProvenance": {
     "primaryAuditCommand": "node scripts/validation/audit-bazi-current.mjs",
-    "gitCommit": "bde5b9f1e9a4abbdcde9aab2de04d306f9444875",
+    "gitCommit": "46573be0037d28cb4b51eed339e24aa1efd4241e",
     "workingTreeDirty": true,
     "dirtyFiles": [
       "M CHANGELOG.md",
+      " M docs/BAZI_FIX_FRESH_REVIEW_2026-07-09.md",
       " M docs/BAZI_VALIDATION_REPORT_2026-07-09.md",
       " M docs/DATABASE_COVERAGE_MATRIX.md",
       " M docs/DATABASE_VALIDATION_LEDGER.md",
@@ -21,32 +22,28 @@
       " M docs/meta/TIANJI_PROJECT_ROADMAP.md",
       " M docs/meta/TIANJI_TASK_SUPERVISOR.html",
       " M docs/meta/TIANJI_TASK_SUPERVISOR_STATE.json",
-      " M docs/superpowers/plans/2026-07-09-bazi-calendar-core-fix.md",
       " M docs/superpowers/specs/2026-07-09-bazi-calendar-core-fix-design.md",
+      " M docs/validation/artifacts/bazi-audit-2026-07-09-after-fix.json",
+      " M docs/validation/artifacts/bazi-audit-2026-07-09-sxtwl.json",
       " M scripts/validation/audit-bazi-current.mjs",
-      " M src/lib/cities.js",
-      " M src/modules/bazi/data.js",
-      " M test/bazi/relations.test.mjs",
-      " M test/bazi/solar-time.test.mjs",
-      "?? docs/BAZI_FIX_FRESH_REVIEW_2026-07-09.md",
-      "?? docs/validation/artifacts/bazi-audit-2026-07-09-after-fix.json",
-      "?? docs/validation/artifacts/bazi-audit-2026-07-09-sxtwl.json",
-      "?? scripts/validation/audit-bazi-sxtwl.py",
-      "?? scripts/validation/requirements-bazi-secondary.txt",
-      "?? test/bazi/properties.test.mjs"
+      " M scripts/validation/audit-bazi-sxtwl.py",
+      " M src/modules/bazi/calendar.js",
+      " M test/bazi/calendar.test.mjs"
     ],
     "sourceSha256": {
-      "src/modules/bazi/calendar.js": "db54fc684b539a61da3fe7d70bf9102af0949ef5c801b6ff65ad7c4fdafd4344",
+      "src/modules/bazi/calendar.js": "cabc7ec9985a8eabfcdd324909259c714f35a3d8db1353fdb56cca0666b20c34",
       "src/modules/bazi/engine.js": "829b19e43b99b10f9b4c6942d457fe9c9e4d08f4ec0fd2c358596338ff94ee6c",
       "src/lib/cities.js": "fc93ee029c3a770d27d15ef146caa033fadbf472c5607ec597dae782004cba99",
-      "scripts/validation/audit-bazi-current.mjs": "5dfe5169297369cae1cdbb6224d88a90550781a564d4bebf8cb8c0b16fa1326a"
+      "scripts/validation/audit-bazi-current.mjs": "18ca39576d79e9dcabe6c342742409d96c5cb376be639bf54d0bfa8e6d101229",
+      "scripts/validation/audit-bazi-sxtwl.py": "34ce7baa5b049bb22ccb4c27c7ed6e48a850249e62f9772a32a33b4a61977c8f"
     },
-    "primaryArtifactSha256": "0e0ff7dd339309f20c6cd1358f539a7ce9b8ac3ec96ddf1b931e59a3a579f471"
+    "primaryArtifactSha256": "f2b4a6f318da7ab224531eaa8947015b3efd3d97ea08abebcc8bb275d79d40d5"
   },
   "scope": {
     "pillars": "30 stratified runtime cases, including minute-level Jie handling and Sect 1 Zi hour",
     "jieBoundaries": "All 1,296 minor solar terms from 1920 through 2027",
-    "excluded": "Dayun start calculation is not exposed by sxtwl and remains outside this independent check"
+    "dayun": "30 stratified cases independently derived from sxtwl Jie timestamps and the traditional shichen conversion rule",
+    "excluded": "Interpretive strength, YongShen, Shensha, and luck-quality judgments"
   },
   "pillars": {
     "summary": {
@@ -9982,14 +9979,1201 @@
       }
     ]
   },
+  "dayun": {
+    "summary": {
+      "cases": 30,
+      "matchingCases": 30,
+      "mismatchCases": 0,
+      "policy": "year-stem gender direction; nearest Jie; 3 source days = 1 year; 1 shichen = 10 days",
+      "precision": "traditional_shichen"
+    },
+    "results": [
+      {
+        "id": "BZ-ORD-01",
+        "input": [
+          2005,
+          12,
+          23,
+          8,
+          37
+        ],
+        "gender": "male",
+        "forward": false,
+        "targetJie": "大雪",
+        "targetJieTime": "2005-12-07 08:32:41",
+        "sourceDayDifference": 16,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 5,
+            "months": 4,
+            "days": 0,
+            "solarDate": "2011-04-23"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "丁亥"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 5,
+            "months": 4,
+            "days": 0,
+            "solarDate": "2011-04-23"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "丁亥"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ORD-02",
+        "input": [
+          1988,
+          2,
+          15,
+          22,
+          30
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立春",
+        "targetJieTime": "1988-02-04 22:42:49",
+        "sourceDayDifference": 11,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 3,
+            "months": 8,
+            "days": 0,
+            "solarDate": "1991-10-15"
+          },
+          "roundedStartAge": 4,
+          "firstPillar": "癸丑"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 3,
+            "months": 8,
+            "days": 0,
+            "solarDate": "1991-10-15"
+          },
+          "roundedStartAge": 4,
+          "firstPillar": "癸丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ORD-03",
+        "input": [
+          1990,
+          7,
+          15,
+          12,
+          0
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "立秋",
+        "targetJieTime": "1990-08-08 02:45:32",
+        "sourceDayDifference": 23,
+        "sourceShichenDifference": 7,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 7,
+            "months": 10,
+            "days": 10,
+            "solarDate": "1998-05-25"
+          },
+          "roundedStartAge": 8,
+          "firstPillar": "甲申"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 7,
+            "months": 10,
+            "days": 10,
+            "solarDate": "1998-05-25"
+          },
+          "roundedStartAge": 8,
+          "firstPillar": "甲申"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ORD-04",
+        "input": [
+          2000,
+          1,
+          15,
+          10,
+          0
+        ],
+        "gender": "female",
+        "forward": true,
+        "targetJie": "立春",
+        "targetJieTime": "2000-02-04 20:40:24",
+        "sourceDayDifference": 20,
+        "sourceShichenDifference": 5,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 6,
+            "months": 9,
+            "days": 20,
+            "solarDate": "2006-11-04"
+          },
+          "roundedStartAge": 7,
+          "firstPillar": "戊寅"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 6,
+            "months": 9,
+            "days": 20,
+            "solarDate": "2006-11-04"
+          },
+          "roundedStartAge": 7,
+          "firstPillar": "戊寅"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ORD-05",
+        "input": [
+          2010,
+          10,
+          10,
+          14,
+          30
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "立冬",
+        "targetJieTime": "2010-11-07 20:42:29",
+        "sourceDayDifference": 28,
+        "sourceShichenDifference": 3,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 9,
+            "months": 5,
+            "days": 0,
+            "solarDate": "2020-03-10"
+          },
+          "roundedStartAge": 9,
+          "firstPillar": "丁亥"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 9,
+            "months": 5,
+            "days": 0,
+            "solarDate": "2020-03-10"
+          },
+          "roundedStartAge": 9,
+          "firstPillar": "丁亥"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ORD-06",
+        "input": [
+          2024,
+          5,
+          20,
+          8,
+          0
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立夏",
+        "targetJieTime": "2024-05-05 08:09:51",
+        "sourceDayDifference": 15,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 5,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2029-05-20"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "戊辰"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 5,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2029-05-20"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "戊辰"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-LC-01",
+        "input": [
+          2024,
+          2,
+          4,
+          16,
+          26
+        ],
+        "gender": "male",
+        "forward": false,
+        "targetJie": "小寒",
+        "targetJieTime": "2024-01-06 04:49:09",
+        "sourceDayDifference": 29,
+        "sourceShichenDifference": 6,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 9,
+            "months": 10,
+            "days": 0,
+            "solarDate": "2033-12-04"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "甲子"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 9,
+            "months": 10,
+            "days": 0,
+            "solarDate": "2033-12-04"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "甲子"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-LC-02",
+        "input": [
+          2024,
+          2,
+          4,
+          16,
+          28
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立春",
+        "targetJieTime": "2024-02-04 16:26:53",
+        "sourceDayDifference": 0,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2024-02-04"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "乙丑"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2024-02-04"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "乙丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-LC-03",
+        "input": [
+          2025,
+          2,
+          3,
+          22,
+          9
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "立春",
+        "targetJieTime": "2025-02-03 22:10:13",
+        "sourceDayDifference": 0,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2025-02-03"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "戊寅"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2025-02-03"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "戊寅"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-LC-04",
+        "input": [
+          2025,
+          2,
+          3,
+          22,
+          11
+        ],
+        "gender": "female",
+        "forward": true,
+        "targetJie": "惊蛰",
+        "targetJieTime": "2025-03-05 16:07:02",
+        "sourceDayDifference": 29,
+        "sourceShichenDifference": 9,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 9,
+            "months": 11,
+            "days": 0,
+            "solarDate": "2035-01-03"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "己卯"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 9,
+            "months": 11,
+            "days": 0,
+            "solarDate": "2035-01-03"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "己卯"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-JIE-01",
+        "input": [
+          1999,
+          6,
+          6,
+          12,
+          0
+        ],
+        "gender": "male",
+        "forward": false,
+        "targetJie": "芒种",
+        "targetJieTime": "1999-06-06 11:09:07",
+        "sourceDayDifference": 0,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "1999-06-06"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "己巳"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "1999-06-06"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "己巳"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-JIE-02",
+        "input": [
+          1999,
+          6,
+          7,
+          9,
+          11
+        ],
+        "gender": "female",
+        "forward": true,
+        "targetJie": "小暑",
+        "targetJieTime": "1999-07-07 21:24:59",
+        "sourceDayDifference": 30,
+        "sourceShichenDifference": 6,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 10,
+            "months": 2,
+            "days": 0,
+            "solarDate": "2009-08-07"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "辛未"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 10,
+            "months": 2,
+            "days": 0,
+            "solarDate": "2009-08-07"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "辛未"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-JIE-03",
+        "input": [
+          2025,
+          6,
+          5,
+          17,
+          55
+        ],
+        "gender": "male",
+        "forward": false,
+        "targetJie": "立夏",
+        "targetJieTime": "2025-05-05 13:56:57",
+        "sourceDayDifference": 31,
+        "sourceShichenDifference": 2,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 10,
+            "months": 4,
+            "days": 20,
+            "solarDate": "2035-10-25"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "庚辰"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 10,
+            "months": 4,
+            "days": 20,
+            "solarDate": "2035-10-25"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "庚辰"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-JIE-04",
+        "input": [
+          2025,
+          6,
+          5,
+          17,
+          57
+        ],
+        "gender": "female",
+        "forward": true,
+        "targetJie": "小暑",
+        "targetJieTime": "2025-07-07 04:04:43",
+        "sourceDayDifference": 31,
+        "sourceShichenDifference": 5,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 10,
+            "months": 5,
+            "days": 20,
+            "solarDate": "2035-11-25"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "癸未"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 10,
+            "months": 5,
+            "days": 20,
+            "solarDate": "2035-11-25"
+          },
+          "roundedStartAge": 10,
+          "firstPillar": "癸未"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-JIE-05",
+        "input": [
+          2026,
+          3,
+          5,
+          21,
+          58
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "惊蛰",
+        "targetJieTime": "2026-03-05 21:58:43",
+        "sourceDayDifference": 0,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2026-03-05"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "辛卯"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2026-03-05"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "辛卯"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-JIE-06",
+        "input": [
+          2026,
+          3,
+          5,
+          22,
+          0
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "惊蛰",
+        "targetJieTime": "2026-03-05 21:58:43",
+        "sourceDayDifference": 0,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2026-03-05"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "庚寅"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2026-03-05"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "庚寅"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ZI-01",
+        "input": [
+          1988,
+          2,
+          15,
+          22,
+          59
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "惊蛰",
+        "targetJieTime": "1988-03-05 16:46:32",
+        "sourceDayDifference": 18,
+        "sourceShichenDifference": 9,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 6,
+            "months": 3,
+            "days": 0,
+            "solarDate": "1994-05-15"
+          },
+          "roundedStartAge": 6,
+          "firstPillar": "乙卯"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 6,
+            "months": 3,
+            "days": 0,
+            "solarDate": "1994-05-15"
+          },
+          "roundedStartAge": 6,
+          "firstPillar": "乙卯"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ZI-02",
+        "input": [
+          1988,
+          2,
+          15,
+          23,
+          0
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "惊蛰",
+        "targetJieTime": "1988-03-05 16:46:32",
+        "sourceDayDifference": 18,
+        "sourceShichenDifference": 9,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 6,
+            "months": 3,
+            "days": 0,
+            "solarDate": "1994-05-15"
+          },
+          "roundedStartAge": 6,
+          "firstPillar": "乙卯"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 6,
+            "months": 3,
+            "days": 0,
+            "solarDate": "1994-05-15"
+          },
+          "roundedStartAge": 6,
+          "firstPillar": "乙卯"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ZI-03",
+        "input": [
+          1988,
+          2,
+          15,
+          23,
+          59
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立春",
+        "targetJieTime": "1988-02-04 22:42:49",
+        "sourceDayDifference": 11,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 3,
+            "months": 8,
+            "days": 0,
+            "solarDate": "1991-10-15"
+          },
+          "roundedStartAge": 4,
+          "firstPillar": "癸丑"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 3,
+            "months": 8,
+            "days": 0,
+            "solarDate": "1991-10-15"
+          },
+          "roundedStartAge": 4,
+          "firstPillar": "癸丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-ZI-04",
+        "input": [
+          1988,
+          2,
+          16,
+          0,
+          0
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立春",
+        "targetJieTime": "1988-02-04 22:42:49",
+        "sourceDayDifference": 11,
+        "sourceShichenDifference": 1,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 3,
+            "months": 8,
+            "days": 10,
+            "solarDate": "1991-10-26"
+          },
+          "roundedStartAge": 4,
+          "firstPillar": "癸丑"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 3,
+            "months": 8,
+            "days": 10,
+            "solarDate": "1991-10-26"
+          },
+          "roundedStartAge": 4,
+          "firstPillar": "癸丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-CAL-01",
+        "input": [
+          2000,
+          2,
+          29,
+          12,
+          0
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "惊蛰",
+        "targetJieTime": "2000-03-05 14:42:40",
+        "sourceDayDifference": 5,
+        "sourceShichenDifference": 1,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 1,
+            "months": 8,
+            "days": 10,
+            "solarDate": "2001-11-07"
+          },
+          "roundedStartAge": 2,
+          "firstPillar": "己卯"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 1,
+            "months": 8,
+            "days": 10,
+            "solarDate": "2001-11-07"
+          },
+          "roundedStartAge": 2,
+          "firstPillar": "己卯"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-CAL-02",
+        "input": [
+          2024,
+          2,
+          29,
+          12,
+          0
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立春",
+        "targetJieTime": "2024-02-04 16:26:53",
+        "sourceDayDifference": 24,
+        "sourceShichenDifference": 10,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 8,
+            "months": 3,
+            "days": 10,
+            "solarDate": "2032-06-08"
+          },
+          "roundedStartAge": 8,
+          "firstPillar": "乙丑"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 8,
+            "months": 3,
+            "days": 10,
+            "solarDate": "2032-06-08"
+          },
+          "roundedStartAge": 8,
+          "firstPillar": "乙丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-CAL-03",
+        "input": [
+          2024,
+          12,
+          31,
+          23,
+          0
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "小寒",
+        "targetJieTime": "2025-01-05 10:32:31",
+        "sourceDayDifference": 4,
+        "sourceShichenDifference": 6,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 1,
+            "months": 6,
+            "days": 0,
+            "solarDate": "2026-06-30"
+          },
+          "roundedStartAge": 2,
+          "firstPillar": "丁丑"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 1,
+            "months": 6,
+            "days": 0,
+            "solarDate": "2026-06-30"
+          },
+          "roundedStartAge": 2,
+          "firstPillar": "丁丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-SOLAR-01",
+        "input": [
+          2005,
+          12,
+          22,
+          21,
+          35
+        ],
+        "gender": "male",
+        "forward": false,
+        "targetJie": "大雪",
+        "targetJieTime": "2005-12-07 08:32:41",
+        "sourceDayDifference": 15,
+        "sourceShichenDifference": 7,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 5,
+            "months": 2,
+            "days": 10,
+            "solarDate": "2011-03-04"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "丁亥"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 5,
+            "months": 2,
+            "days": 10,
+            "solarDate": "2011-03-04"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "丁亥"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-SOLAR-02",
+        "input": [
+          2024,
+          5,
+          20,
+          1,
+          6
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "立夏",
+        "targetJieTime": "2024-05-05 08:09:51",
+        "sourceDayDifference": 14,
+        "sourceShichenDifference": 9,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 4,
+            "months": 11,
+            "days": 0,
+            "solarDate": "2029-04-20"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "戊辰"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 4,
+            "months": 11,
+            "days": 0,
+            "solarDate": "2029-04-20"
+          },
+          "roundedStartAge": 5,
+          "firstPillar": "戊辰"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-SOLAR-03",
+        "input": [
+          2025,
+          2,
+          3,
+          23,
+          12
+        ],
+        "gender": "male",
+        "forward": false,
+        "targetJie": "立春",
+        "targetJieTime": "2025-02-03 22:10:13",
+        "sourceDayDifference": 0,
+        "sourceShichenDifference": 0,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2025-02-03"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "丁丑"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 0,
+            "days": 0,
+            "solarDate": "2025-02-03"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "丁丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-DY-01",
+        "input": [
+          2025,
+          1,
+          1,
+          12,
+          0
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "小寒",
+        "targetJieTime": "2025-01-05 10:32:31",
+        "sourceDayDifference": 3,
+        "sourceShichenDifference": 11,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 1,
+            "months": 3,
+            "days": 20,
+            "solarDate": "2026-04-21"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "丁丑"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 1,
+            "months": 3,
+            "days": 20,
+            "solarDate": "2026-04-21"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "丁丑"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-DY-02",
+        "input": [
+          2025,
+          1,
+          1,
+          12,
+          0
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "大雪",
+        "targetJieTime": "2024-12-06 23:16:47",
+        "sourceDayDifference": 25,
+        "sourceShichenDifference": 7,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 8,
+            "months": 6,
+            "days": 10,
+            "solarDate": "2033-07-11"
+          },
+          "roundedStartAge": 9,
+          "firstPillar": "乙亥"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 8,
+            "months": 6,
+            "days": 10,
+            "solarDate": "2033-07-11"
+          },
+          "roundedStartAge": 9,
+          "firstPillar": "乙亥"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-DY-03",
+        "input": [
+          2025,
+          1,
+          7,
+          12,
+          0
+        ],
+        "gender": "male",
+        "forward": true,
+        "targetJie": "立春",
+        "targetJieTime": "2025-02-03 22:10:13",
+        "sourceDayDifference": 27,
+        "sourceShichenDifference": 5,
+        "runtime": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 9,
+            "months": 1,
+            "days": 20,
+            "solarDate": "2034-02-27"
+          },
+          "roundedStartAge": 9,
+          "firstPillar": "戊寅"
+        },
+        "manualSxtwl": {
+          "direction": "forward",
+          "exactStart": {
+            "years": 9,
+            "months": 1,
+            "days": 20,
+            "solarDate": "2034-02-27"
+          },
+          "roundedStartAge": 9,
+          "firstPillar": "戊寅"
+        },
+        "mismatches": []
+      },
+      {
+        "id": "BZ-DY-04",
+        "input": [
+          2025,
+          1,
+          7,
+          12,
+          0
+        ],
+        "gender": "female",
+        "forward": false,
+        "targetJie": "小寒",
+        "targetJieTime": "2025-01-05 10:32:31",
+        "sourceDayDifference": 2,
+        "sourceShichenDifference": 1,
+        "runtime": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 8,
+            "days": 10,
+            "solarDate": "2025-09-17"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "丙子"
+        },
+        "manualSxtwl": {
+          "direction": "reverse",
+          "exactStart": {
+            "years": 0,
+            "months": 8,
+            "days": 10,
+            "solarDate": "2025-09-17"
+          },
+          "roundedStartAge": 1,
+          "firstPillar": "丙子"
+        },
+        "mismatches": []
+      }
+    ]
+  },
   "officialAnchors": {
     "1999CornOnEar": "sxtwl: 1999-06-06 11:09:07; HKO calendar date: 1999-06-06",
-    "2026SpringCommences": "sxtwl: 2026-02-04 04:01:51; HKO rounded minute: 04:02"
+    "2026SpringCommences": "sxtwl: 2026-02-04 04:01:51; HKO rounded minute: 04:02",
+    "dayunRule": "Yuan Hai Zi Ping and San Ming Tong Hui: forward/reverse to the nearest Jie, 3 days per year, with elapsed shichen used for the remainder"
+  },
+  "referenceTexts": {
+    "yuanHaiZiPing": "https://www.shidianguji.com/book/NGJ892411999032112149610/chapter/1lqsbrapj4372",
+    "sanMingTongHui": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1vhnp"
   },
   "limitations": [
     "Agreement between two implementations is strong cross-check evidence, not a mathematical proof.",
     "sxtwl exposes day-level pillars, so minute-level Jie selection is reconstructed from its own astronomical JieQi timestamp.",
     "This audit validates deterministic calendar pillars and Jie timestamps, not interpretive BaZi rules.",
-    "Dayun remains independently unverified by sxtwl."
+    "sxtwl does not expose Dayun; this audit independently implements only the declared traditional shichen rule on top of sxtwl Jie timestamps.",
+    "Dayun V3 evidence is limited to the 30 stratified cases and does not validate interpretive claims about whether a luck period is auspicious."
   ]
 }

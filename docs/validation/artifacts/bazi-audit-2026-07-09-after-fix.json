@@ -7,6 +7,7 @@
     "yearBoundary": "Spring Commences / Lichun",
     "monthBoundary": "12 minor solar terms / Jie",
     "dayBoundary": "23:00, Sect 1",
+    "dayunCalculation": "Yun Sect 1; traditional shichen precision; 3 source days = 1 year; 1 shichen = 10 days",
     "solarAdjustment": "Equation of time plus longitude under the stated standard meridian"
   },
   "comparator": {
@@ -67552,7 +67553,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -67621,7 +67624,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -67690,7 +67695,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -67759,7 +67766,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -67828,7 +67837,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -67897,7 +67908,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -67966,7 +67979,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68035,7 +68050,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68104,7 +68121,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68173,7 +68192,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68242,7 +68263,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68311,7 +68334,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68380,7 +68405,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68449,7 +68476,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68518,7 +68547,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68587,7 +68618,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68656,7 +68689,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68725,7 +68760,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68794,7 +68831,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68863,7 +68902,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -68932,7 +68973,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69001,7 +69044,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69070,7 +69115,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69153,7 +69200,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69236,7 +69285,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69319,7 +69370,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69388,7 +69441,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69457,7 +69512,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69526,7 +69583,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
@@ -69595,7 +69654,9 @@
         "calendar": {
           "name": "lunar-javascript",
           "version": "1.7.7",
-          "dayBoundarySect": 1
+          "dayBoundarySect": 1,
+          "yunCalculationSect": 1,
+          "yunPrecision": "traditional_shichen"
         }
       },
       "library": {
