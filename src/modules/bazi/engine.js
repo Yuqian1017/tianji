@@ -6,34 +6,14 @@ import {
   HIDDEN_STEMS, MONTH_BRANCHES, NAYIN,
   CHANGSHENG_LABELS, YANG_START, YIN_START,
   BRANCH_RELATIONS, STEM_COMBINE, TAOHUA, YIMA, HUAGAI,
-  JIEQI_PRECISE, JIEQI_NAMES, approxJieqiDate,
 } from './data.js';
+import {
+  BAZI_CALENDAR_ENGINE,
+  createBaziCalendar,
+  createDayun,
+} from './calendar.js';
 
 // ========== 四柱计算 ==========
-
-/**
- * 获取某年立春精确 UTC 时间戳
- * 优先查精确表，否则用近似公式
- */
-function getLichunTime(year) {
-  const precise = JIEQI_PRECISE[year];
-  if (precise) return precise[0]; // 立春是每年数组的第一个
-  // 回退近似公式
-  const approx = approxJieqiDate(year, '立春');
-  if (approx) return approx;
-  console.warn(`getLichunTime: no data for year ${year}, falling back to Feb 4`);
-  return Date.UTC(year, 1, 4, 0, 0); // 粗略回退
-}
-
-/**
- * 判断出生是否在立春之前，决定年柱归属
- */
-function getAdjustedYear(year, month, day, hour, minute) {
-  const lichun = getLichunTime(year);
-  // 出生时间转 UTC（假设北京时间 UTC+8）
-  const birthUtc = Date.UTC(year, month - 1, day, hour - 8, minute);
-  return birthUtc < lichun ? year - 1 : year;
-}
 
 /**
  * 年柱
@@ -49,63 +29,12 @@ export function getYearPillar(adjustedYear) {
  * 返回 { monthIdx: 0-11, jieqiName: string, isApprox: boolean }
  */
 export function getMonthIndex(year, month, day, hour, minute) {
-  const birthUtc = Date.UTC(year, month - 1, day, hour - 8, minute);
-  let isApprox = false;
-
-  // 构建当年的12个节气时间 + 上一年的大雪和小寒
-  let boundaries = [];
-
-  const precise = JIEQI_PRECISE[year];
-  if (precise) {
-    // 精确表包含：[立春(0), 惊蛰(1), ..., 大雪(10), 小寒-next(11)]
-    boundaries = precise.map((time, idx) => ({ time, monthIdx: idx }));
-  } else {
-    isApprox = true;
-    // 用近似公式
-    const jieNames = ['立春','惊蛰','清明','立夏','芒种','小暑','立秋','白露','寒露','立冬','大雪'];
-    jieNames.forEach((name, idx) => {
-      boundaries.push({ time: approxJieqiDate(year, name), monthIdx: idx });
-    });
-    // 小寒属于次年1月，monthIdx=11
-    boundaries.push({ time: approxJieqiDate(year + 1, '小寒'), monthIdx: 11 });
-  }
-
-  // 还需要上一年的小寒（丑月起点）和大雪（子月起点）来处理1月出生
-  let prevDaxue, prevXiaohan;
-  const prevPrecise = JIEQI_PRECISE[year - 1];
-  if (prevPrecise) {
-    prevDaxue = prevPrecise[10];  // 大雪 monthIdx=10
-    prevXiaohan = prevPrecise[11]; // 小寒(当年) monthIdx=11
-  } else {
-    prevDaxue = approxJieqiDate(year - 1, '大雪');
-    prevXiaohan = approxJieqiDate(year, '小寒');
-    isApprox = true;
-  }
-
-  // 在立春之前的出生：可能在上年的子月(大雪后)或丑月(小寒后)
-  if (birthUtc < boundaries[0].time) {
-    // 在本年立春之前
-    if (prevXiaohan && birthUtc >= prevXiaohan) {
-      return { monthIdx: 11, jieqiName: '小寒', isApprox };
-    }
-    if (prevDaxue && birthUtc >= prevDaxue) {
-      return { monthIdx: 10, jieqiName: '大雪', isApprox };
-    }
-    // 更早 → 查上年节气（需要递归，但实际上不太可能在这个范围）
-    // 简化：如果在大雪之前，归为亥月(立冬后)
-    return { monthIdx: 9, jieqiName: '立冬', isApprox: true };
-  }
-
-  // 从后往前找
-  for (let i = boundaries.length - 1; i >= 0; i--) {
-    if (birthUtc >= boundaries[i].time) {
-      return { monthIdx: boundaries[i].monthIdx, jieqiName: JIEQI_NAMES[boundaries[i].monthIdx], isApprox };
-    }
-  }
-
-  // 兜底
-  console.warn('getMonthIndex: failed to determine month, defaulting to 寅月');
-  return { monthIdx: 0, jieqiName: '立春', isApprox: true };
+  const calendar = createBaziCalendar(year, month, day, hour, minute);
+  return {
+    monthIdx: calendar.monthIdx,
+    jieqiName: calendar.jieqiName,
+    isApprox: calendar.isApprox,
+  };
 }
 
 /**
@@ -127,20 +56,7 @@ export function getMonthPillar(yearStem, monthIdx) {
  * ⚠️ 子时(23:00)属于次日
  */
 export function getDayPillar(year, month, day, hour) {
-  let adjYear = year, adjMonth = month, adjDay = day;
-  if (hour >= 23) {
-    const d = new Date(year, month - 1, day + 1);
-    adjYear = d.getFullYear();
-    adjMonth = d.getMonth() + 1;
-    adjDay = d.getDate();
-  }
-
-  const baseDate = new Date(2024, 0, 1); // 2024-01-01 = 甲子
-  const target = new Date(adjYear, adjMonth - 1, adjDay);
-  const diffDays = Math.round((target - baseDate) / 86400000);
-  const idx = ((diffDays % 60) + 60) % 60;
-
-  return { stem: STEMS[idx % 10], branch: BRANCHES[idx % 12] };
+  return createBaziCalendar(year, month, day, hour, 0).pillars.day;
 }
 
 /**
@@ -211,8 +127,6 @@ export function getChangsheng(stem, branch) {
 export function getKongWang(dayStem, dayBranch) {
   const si = STEMS.indexOf(dayStem);
   const bi = BRANCHES.indexOf(dayBranch);
-  // 干支序号
-  const ganzhiIdx = (bi - si + 12) % 12;
   // 旬首地支序号 = 该旬第一个地支
   const xunStart = (bi - si + 12) % 12;
   // 空亡是旬中未被用到的两个地支
@@ -399,85 +313,6 @@ function detectStemCombines(stemList) {
   return results;
 }
 
-// ========== 大运 ==========
-
-function computeDayun(yearStem, monthPillar, gender, year, month, day, hour, minute) {
-  const yearYang = STEMS.indexOf(yearStem) % 2 === 0;
-  const isMale = gender === 'male';
-  const forward = (yearYang && isMale) || (!yearYang && !isMale);
-
-  // 起运年龄：出生到下/前一个节气的天数 ÷ 3
-  const birthUtc = Date.UTC(year, month - 1, day, hour - 8, minute);
-  let startAge = 1; // 默认起运年龄
-
-  // 获取当年节气（优先精确数据，不可用时用近似公式）
-  const jieqiNames12 = ['立春','惊蛰','清明','立夏','芒种','小暑','立秋','白露','寒露','立冬','大雪','小寒'];
-
-  function getJieqiTimestamps(y) {
-    const precise = JIEQI_PRECISE[y];
-    if (precise) return precise;
-    // Fallback: use approximate formula for any year
-    return jieqiNames12.map((name, i) => {
-      // 小寒 belongs to next year's January
-      const jYear = (name === '小寒') ? y + 1 : y;
-      return approxJieqiDate(jYear, name);
-    });
-  }
-
-  const jieqiTimes = getJieqiTimestamps(year);
-
-  if (forward) {
-    // 顺排：找出生后最近的节气
-    let nextJieqi = null;
-    for (const t of jieqiTimes) {
-      if (t > birthUtc) { nextJieqi = t; break; }
-    }
-    // 如果当年没有，查下一年
-    if (!nextJieqi) {
-      const nextYearTimes = getJieqiTimestamps(year + 1);
-      nextJieqi = nextYearTimes[0];
-    }
-    if (nextJieqi) {
-      const diffDays = (nextJieqi - birthUtc) / 86400000;
-      startAge = Math.max(1, Math.round(diffDays / 3));
-    }
-  } else {
-    // 逆排：找出生前最近的节气
-    let prevJieqi = null;
-    for (let i = jieqiTimes.length - 1; i >= 0; i--) {
-      if (jieqiTimes[i] <= birthUtc) { prevJieqi = jieqiTimes[i]; break; }
-    }
-    // 如果当年没有，查上一年
-    if (!prevJieqi) {
-      const prevYearTimes = getJieqiTimestamps(year - 1);
-      prevJieqi = prevYearTimes[prevYearTimes.length - 1];
-    }
-    if (prevJieqi) {
-      const diffDays = (birthUtc - prevJieqi) / 86400000;
-      startAge = Math.max(1, Math.round(diffDays / 3));
-    }
-  }
-
-  // 生成 8 步大运
-  const step = forward ? 1 : -1;
-  const si = STEMS.indexOf(monthPillar.stem);
-  const bi = BRANCHES.indexOf(monthPillar.branch);
-
-  return Array.from({ length: 8 }, (_, i) => {
-    const stemIdx = ((si + (i + 1) * step) % 10 + 10) % 10;
-    const branchIdx = ((bi + (i + 1) * step) % 12 + 12) % 12;
-    const stem = STEMS[stemIdx];
-    const branch = BRANCHES[branchIdx];
-    return {
-      stem,
-      branch,
-      startAge: startAge + i * 10,
-      endAge: startAge + (i + 1) * 10 - 1,
-      nayin: NAYIN[stem + branch] || '',
-    };
-  });
-}
-
 // ========== 五行统计 ==========
 
 function countWuxing(pillars) {
@@ -502,22 +337,16 @@ function countWuxing(pillars) {
 // ========== 主排盘函数 ==========
 
 export function paiBazi(year, month, day, hour, minute = 0, gender = 'male') {
-  // Step 1: 年柱（立春分界）
-  const adjustedYear = getAdjustedYear(year, month, day, hour, minute);
-  const yearPillar = getYearPillar(adjustedYear);
-
-  // Step 2: 月柱（节气分界 + 五虎遁）
-  const { monthIdx, jieqiName, isApprox } = getMonthIndex(year, month, day, hour, minute);
-  const monthPillar = getMonthPillar(yearPillar.stem, monthIdx);
-
-  // Step 3: 日柱
-  const dayPillar = getDayPillar(year, month, day, hour);
-
-  // Step 4: 时柱
-  const hourPillar = getHourPillar(dayPillar.stem, hour);
-
+  const calendar = createBaziCalendar(year, month, day, hour, minute);
+  const { adjustedYear, jieqiName, isApprox } = calendar;
+  const {
+    year: yearPillar,
+    month: monthPillar,
+    day: dayPillar,
+    hour: hourPillar,
+  } = calendar.pillars;
   const dayStem = dayPillar.stem;
-  const pillars = { year: yearPillar, month: monthPillar, day: dayPillar, hour: hourPillar };
+  const pillars = calendar.pillars;
 
   // Step 5: 十神（年/月/时天干 vs 日主）
   const shiShen = {
@@ -555,9 +384,10 @@ export function paiBazi(year, month, day, hour, minute = 0, gender = 'male') {
   const strength = assessStrength(dayStem, pillars);
 
   // Step 10: 大运
-  const dayun = computeDayun(yearPillar.stem, monthPillar, gender, year, month, day, hour, minute);
+  const { dayun, dayunStart } = createDayun(calendar.eightChar, gender);
   // 补充大运十神
   for (const d of dayun) {
+    d.nayin = NAYIN[d.stem + d.branch] || '';
     d.shiShen = getShiShen(dayStem, d.stem);
   }
 
@@ -581,6 +411,7 @@ export function paiBazi(year, month, day, hour, minute = 0, gender = 'male') {
   return {
     gender,
     birthInfo: { year, month, day, hour, minute },
+    calendar: BAZI_CALENDAR_ENGINE,
     adjustedYear,
     pillars,
     dayStem,
@@ -592,6 +423,7 @@ export function paiBazi(year, month, day, hour, minute = 0, gender = 'male') {
     changsheng,
     strength,
     dayun,
+    dayunStart,
     wuxingCount,
     interactions,
     stemCombines,
