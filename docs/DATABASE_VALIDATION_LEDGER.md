@@ -15,11 +15,11 @@
 | ID | Priority | Domain | Validation unit | Contract | Evidence target | Status | Current evidence / next action |
 |---|---|---|---|---|---|---|---|
 | VAL-INV-001 | P0 | 全库 | Runtime engine/data/prompt 与 raw source inventory | 结构 | V1 | in_progress | 枚举文件、导出、表与规则单元 |
-| VAL-BZ-001 | P0 | 八字 | 年月日时四柱与节气/日界口径 | 精确/流派确定性 | V3+V5 | fail | 30 例完成：2 例月柱 mismatch；1999 芒种日期有 HKO 官方锚点。见 `BAZI_VALIDATION_REPORT_2026-07-09.md` |
-| VAL-BZ-002 | P0 | 八字 | 大运顺逆、起运岁数、交运时间 | 流派确定性 | V3 | fail | 30 例中 6 例整数年龄/首运 mismatch；2025-01-01 男女起运出现 8-10 年级偏差 |
+| VAL-BZ-001 | P0 | 八字 | 年月日时四柱与节气/日界口径 | 精确/流派确定性 | V3+V5 | in_progress | V3 已达：`sxtwl@2.0.7` 30/30 四柱一致，1,296 节令时刻最大差 20 秒；V5 UI/保存同路径证据待补 |
+| VAL-BZ-002 | P0 | 八字 | 大运顺逆、起运岁数、交运时间 | 流派确定性 | V3 | in_progress | 一月根因已修复，30 例精确起运与首运 0 mismatch；待第二独立实现和更多官方/人工 fixture |
 | VAL-BZ-003 | P1 | 八字 | 身强评分、五行计数与用神方向 | 流派/启发式 | V2+来源声明 | in_progress | 当前为自定义 40/40/20 与藏干 0.5 权重，需确认来源及产品标签 |
-| VAL-BZ-004 | P1 | 八字 | 地支关系“午未合火” | 来源忠实性 | V3 | in_progress | 与常见“午未合土”口径可能冲突，待独立来源核对 |
-| VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | fail | NOAA 公式确认当前“真太阳时”缺均时差；Pacific/Apia 2011 跳日复现运行时 Date 导致日柱偏移 |
+| VAL-BZ-004 | P1 | 八字 | 天干五合、地支六合与“午未合火/土” | 来源忠实性 | V3 | school_difference | 合与合化已拆开；《三命通会》确认午未六合，compendium 明示火/土有争议。runtime 只显示“甲己合”“午未合”，候选化神留作元数据 |
+| VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/艾灸建议 | 医疗/安全 | V4+V5 | planned | 全量抽取消费点并反查安全表/现行来源 |
 | VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、变卦 | 精确/流派确定性 | V3+V5 | planned | 复用现有测试入口，补独立 fixtures |
 | VAL-ZW-001 | P1 | 紫微 | 十二宫、主星、四化、辅煞星 | 流派确定性 | V3 | planned | 先声明流派与版本 |
@@ -32,14 +32,15 @@
 
 | Finding ID | Priority | Case | Status | Observation | Required proof |
 |---|---|---|---|---|---|
-| F-BZ-001 | P1 | VAL-BZ-001 | confirmed | 精确节气只覆盖 2024-2026；1999-06-06/07 月柱错误；1920-2027 的 1,296 边界已全量复算，最大差约 23 小时 14 分，累计暴露窗口约占时间轴 2.171% | 对极值和修复方案做官方锚定与回归 |
-| F-BZ-002 | P1 | VAL-BZ-002 | confirmed | 一月大运前/后最近节搜索使用非连续时间序列；2025-01-01 男女起运分别偏约 10 年与 8 年 | 全量一月/年末与顺逆组合；补精确交运日期 |
+| F-BZ-001 | P1 | VAL-BZ-001 | verified_remediated | 近似节气已移出 runtime；`sxtwl` 第二实现 30/30 四柱一致，1,296 节令时刻最大差 20 秒 | 保持 V5 用户路径回归 |
+| F-BZ-002 | P1 | VAL-BZ-002 | remediated | 一月非连续节令搜索已删除；精确起运间隔和交运公历日期已保存 | 第二独立实现与扩展 fixture |
 | F-BZ-003 | P1 | VAL-BZ-003 | evidence_gap | 身强 /100、五行 0.5 权重和用神方向未见来源/流派声明 | 搜索来源并与当前 UI/Prompt 表达对照 |
-| F-BZ-004 | P1 | VAL-BZ-004 | hypothesis | `午未合火` 可能与常见 `午未合土` 口径冲突 | 至少两条独立来源或明确流派依据 |
-| F-BZ-005 | P2 | VAL-SHARED-001 | confirmed | 日柱使用运行环境本地 `Date`；Pacific/Apia 的 2011 跳日使同一输入较 UTC 偏移一日 | 改用与运行时区无关的公历序数，并全量属性测试 |
-| F-BZ-006 | P1 | VAL-SHARED-001 | confirmed | UI 标为“真太阳时”，算法只有经度修正；NOAA true solar time 公式还要求均时差，当前也未处理历史时区/夏令时 | 固定术语与完整时间合同后再实现/验证 |
-| F-BZ-007 | P2 | VAL-BZ-002 | confirmed | 大运只保存整数起运年龄，丢失月、日和实际交运日期 | 定义精确字段与 UI 展示口径，再按独立实现复算 |
-| F-BZ-008 | P1 | VAL-BZ-001 | confirmed | 2024-2026 手写“精确节”36 个边界中，6 个与独立实现相差 8-14 分钟；2026 立春另有 HKO 04:02 官方锚点 | 逐项官方秒级复核，淘汰手写表 |
+| F-BZ-004 | P1 | VAL-BZ-004 | resolved_school_difference | 旧表把两支同现直接显示为“午未合火”，混淆六合关系与有条件的合化，且未披露火/土分歧 | runtime 改为“午未合”；`huaCandidates` 保留火/土，不判断条件时不宣称合化 |
+| F-BZ-005 | P2 | VAL-SHARED-001 | remediated | 日柱改由历法适配层计算；UTC 与 Pacific/Apia 同一输入回归一致，39,447 日连续性通过 | 保持跨 TZ 回归 |
+| F-BZ-006 | P1 | VAL-SHARED-001 | partially_remediated | NOAA 均时差已加入并按固定 365 日分母校正闰年；UI 标准时口径已明确；历史时区/夏令时仍未解决 | IANA 时区数据与历史 DST fixture |
+| F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 精确年月日与 `solarDate`，整数年龄继续兼容 | 历史记录 schema/version 验证 |
+| F-BZ-008 | P1 | VAL-BZ-001 | verified_remediated | 手写“精确节”已退出八字 runtime，修复前数据保留在 before artifact；第二实现全范围复核通过 | 保持无 runtime import 回归 |
+| F-BZ-009 | P1 | VAL-BZ-004 | resolved | 天干两干同现原本直接显示“合化某五行”，未检查成化条件 | 五合标签只显示关系，候选化神留作元数据 |
 
 ## Evidence Log
 
@@ -50,3 +51,11 @@
 | 2026-07-09 | VAL-SHARED-001 | NOAA true solar time 公式；`TZ=UTC/America/Chicago/Asia/Shanghai/Pacific/Apia` 跨时区复算 | 当前太阳时缺均时差；Apia 2011 跳日导致日柱偏移 |
 | 2026-07-09 | VAL-BZ-001 | Git `d47165b` 与 `4f48bed` | 历史“立春误作甲子日基准”的 34 日偏移已修复；后续大运近似修复留下当前边界缺陷 |
 | 2026-07-09 | VAL-BZ-001 | 1920-2027 × 12 节 = 1,296 边界全量独立复算 | 1,260 个边界差超 1 小时，最大不足 24 小时；风险集中在边界窗口，不是全年整体错误 |
+| 2026-07-09 | VAL-BZ-001/002 | after-fix audit：30 例 + 1,296 节两侧 2,592 次 runtime 检查 | 四柱 0 mismatch，大运 0 mismatch，边界接线 0 mismatch，近似案例 0 |
+| 2026-07-09 | VAL-BZ-001 | Node 属性测试 | 1920-2027 共 39,447 日严格按 60 甲子递进；五虎遁、五鼠遁声明表通过 |
+| 2026-07-09 | VAL-SHARED-001 | NOAA 公式回归与跨 TZ 测试 | 均时差已实现；Apia 运行时偏移已消除；历史 DST 保持 open |
+| 2026-07-09 | VAL-BZ-001/VAL-SHARED-001 | 独立 `sxtwl@2.0.7`：30 例四柱 + 1920-2027 全部 1,296 个节令时刻 | 四柱 30/30 一致；节令 1,296/1,296 在 30 秒内，最大差 20 秒；四柱/节令达到 V3 |
+| 2026-07-09 | VAL-BZ-001 | 第二实现审计反查验证脚本 | 发现大写 `XIAO_HAN` 指向下一年；已改为同年 `小寒` 并加入年份断言，证据重新生成 |
+| 2026-07-09 | VAL-BZ-004 | 《三命通会·论支元六合》、compendium `00-cosmology/03-tiangan-dizhi.md` 与 runtime 对照 | 午未六合可确认；合化火/土存在口径与条件差异。五合/六合均移除自动合化断言，15 项八字测试通过 |
+| 2026-07-09 | VAL-SHARED-001 | NOAA fractional-year 公式与闰年年末回归 | 分母改为官方公式固定的 365；修复 2024-12-31 约 27 秒额外偏差 |
+| 2026-07-09 | VAL-BZ-001 | Fresh code reviewer `019f49f1-4e13-7481-a276-ea33d57de668` | 无 Critical；陈旧 primary artifact 的 Important 已修复并加 source/artifact SHA256；大运第二实现缺口保持 open |

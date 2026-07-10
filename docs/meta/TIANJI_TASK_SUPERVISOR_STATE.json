@@ -4,9 +4,9 @@
   "updatedAt": "2026-07-09",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
-  "overallPercent": 19,
-  "currentFocus": "按已批准设计修复八字确定性核心：历法适配、大运一月边界、太阳时均时差与回归证据。",
-  "nextDecision": "修复后重跑 30 例与全边界回归；通过后继续强弱/用神、其他排盘和中医安全验证。",
+  "overallPercent": 20,
+  "currentFocus": "八字四柱与节令达到 V3，fresh review 已收口；继续大运第二证据与强弱/用神验证。",
+  "nextDecision": "选择大运第二验证路径，并决定强弱/用神是补来源、标为启发式还是降级展示。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -14,7 +14,7 @@
       "id": "V0",
       "name": "数据库与排盘正确性验证",
       "status": "in_progress",
-      "progress": 32,
+      "progress": 56,
       "goal": "建立逐项验证体系，先证明或否定八字和共享历法，再覆盖其余算法、知识表与中医安全。",
       "doneWhen": "八字有独立复算结论；所有 runtime 数据进入 ledger；高风险内容有证据等级、findings 和下一门槛。",
       "evidence": [
@@ -22,7 +22,11 @@
         "已创建 DATABASE_VALIDATION_PLAN 与 DATABASE_VALIDATION_LEDGER",
         "30 例八字复算发现 2 个四柱 mismatch 与 6 个大运 mismatch",
         "HKO 历表与 NOAA 公式分别锚定节令和太阳时 finding",
-        "fresh PRD review 已完成，结论为 hold"
+        "fresh PRD review 已完成，结论为 hold",
+        "修复后 30 例 0 mismatch、2,592 边界侧检查通过、39,447 日连续性通过",
+        "sxtwl 第二实现 30/30 四柱一致，1,296 节令时刻最大差 20 秒，四柱/节令达到 V3",
+        "六合 runtime 已拆开关系与合化，午未火/土流派差异不再被自动判为火",
+        "fresh reviewer 无 Critical；陈旧 artifact Important 已用强制重建和源码 SHA256 关闭"
       ],
       "metrics": {
         "time": { "startedAt": "2026-07-09", "completedAt": null, "elapsed": "进行中" },
@@ -141,10 +145,34 @@
     {
       "id": "TJI-FIX-001",
       "name": "修复八字历法核心与大运",
-      "status": "in_progress",
+      "status": "completed",
       "phase": "V0",
       "doneWhen": "修复前四柱/大运 mismatch 清零，太阳时含均时差，before/after artifact 与回归测试完整。",
       "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-004",
+      "name": "八字四柱与节令第二独立实现复核",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "第二实现覆盖 30 个分层四柱与 1920-2027 全部节令，并记录差异范围和证据限制。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-VAL-005",
+      "name": "地支六合与午未合化口径审计",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "runtime 不把六合关系自动冒充为合化结果，并保留午未火/土分歧。",
+      "owner": "Codex"
+    },
+    {
+      "id": "TJI-FIX-REV-001",
+      "name": "八字核心修复 fresh code review",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "Critical/Important findings 已处理，残余风险写入 ledger。",
+      "owner": "Reviewer One / Codex"
     },
     {
       "id": "TJI-P0-01",
@@ -172,8 +200,8 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "remediation_in_progress", "rule": "当前八字核心不得进入教学或健康下游；修复后必须同路径复测。" },
-    { "name": "Product A 复用决策", "state": "held", "rule": "八字与共享历法审计完成前，不把现有实现默认视为可复用基线。" },
+    { "name": "排盘与数据库正确性", "state": "bazi_pillars_v3_dayun_interpretation_pending", "rule": "四柱与节令已达 V3；大运、解释层和八字健康仍不得随四柱自动进入 accepted。" },
+    { "name": "Product A 复用决策", "state": "partial", "rule": "八字 UI/账户/历史与确定性核心可继续；解释层仍按字段验证。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
     { "name": "中医安全", "state": "blocked", "rule": "未补齐安全元数据前，不扩大方药、艾灸或症状建议的产品消费范围。" },
@@ -193,7 +221,14 @@
     "1999 芒种月柱错误由 lunar-javascript 独立实现与香港天文台历表共同支持",
     "2025-01-01 男女起运分别出现约 10 年与 8 年偏差，一月节令搜索根因已定位",
     "NOAA 公式确认当前真太阳时缺均时差；Pacific/Apia 2011 跳日确认日柱依赖运行环境",
-    "PRD fresh review 完成并经主线程复核，结论为 hold"
-    ,"八字修复设计采用现有 lunar-javascript 适配层；手写/近似节气退出 runtime"
+    "PRD fresh review 完成并经主线程复核，结论为 hold",
+    "八字修复设计采用现有 lunar-javascript 适配层；手写/近似节气退出 runtime",
+    "修复后 30 例四柱/大运 mismatch 均为 0，runtime 近似案例为 0",
+    "1920-2027 的 2,592 次节令侧检查与 39,447 日连续性验证通过",
+    "太阳时已加入 NOAA 均时差；历史民用时区和 DST 继续保持 open",
+    "sxtwl@2.0.7 第二实现：30/30 四柱一致，1,296/1,296 节令时刻在 30 秒内，最大差 20 秒",
+    "第二实现发现审计脚本 XIAO_HAN 指向下一年；已改为同年小寒并加入年份断言",
+    "《三命通会》与 compendium 对照后，六合 runtime 只显示关系；午未火/土保留为候选元数据",
+    "fresh reviewer 无 Critical；第二审计现强制重建 primary artifact 并记录关键源码 SHA256"
   ]
 }

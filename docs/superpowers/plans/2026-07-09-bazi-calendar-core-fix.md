@@ -16,13 +16,13 @@
 - Create: `test/bazi/calendar.test.mjs`
 - Modify: `package.json`
 
-- [ ] **Step 1: Add `test:bazi` using Node's built-in test runner**
+- [x] **Step 1: Add `test:bazi` using Node's built-in test runner**
 
 ```json
 "test:bazi": "node --test test/bazi/*.test.mjs"
 ```
 
-- [ ] **Step 2: Write fixtures for the historical base, 1999 month boundary, 2026 Lichun, January Dayun, and TZ-independent day pillar**
+- [x] **Step 2: Write fixtures for the historical base, 1999 month boundary, 2026 Lichun, January Dayun, and TZ-independent day pillar**
 
 ```js
 test('uses the actual 1999 Corn on Ear boundary', () => {
@@ -43,13 +43,13 @@ test('finds January Dayun on both sides of the birth time', () => {
 });
 ```
 
-- [ ] **Step 3: Run RED**
+- [x] **Step 3: Run RED**
 
 Run: `npm run test:bazi`
 
 Expected: failures show 己巳 instead of 庚午, early 2026 Lichun switching, and 11/1 instead of 1/9 Dayun.
 
-- [ ] **Step 4: Commit the failing tests**
+- [x] **Step 4: Commit the failing tests**
 
 ```bash
 git add package.json test/bazi/calendar.test.mjs
@@ -63,7 +63,7 @@ git commit -m "test: capture bazi calendar regressions"
 - Modify: `src/modules/bazi/engine.js`
 - Test: `test/bazi/calendar.test.mjs`
 
-- [ ] **Step 1: Implement an exact calendar adapter**
+- [x] **Step 1: Implement an exact calendar adapter**
 
 ```js
 import { Solar } from 'lunar-javascript';
@@ -86,21 +86,21 @@ export function createBaziCalendar(year, month, day, hour, minute = 0) {
 }
 ```
 
-- [ ] **Step 2: Make `paiBazi`, `getMonthIndex`, and `getDayPillar` consume the adapter**
+- [x] **Step 2: Make `paiBazi`, `getMonthIndex`, and `getDayPillar` consume the adapter**
 
 Remove runtime imports of `JIEQI_PRECISE` and `approxJieqiDate`. Preserve public return fields and set `isApprox: false`.
 
-- [ ] **Step 3: Build Dayun from `eightChar.getYun()`**
+- [x] **Step 3: Build Dayun from `eightChar.getYun()`**
 
 Store `years`, `months`, `days`, `solarDate`, and `roundedAge`; generate eight GanZhi steps from `getDaYun().slice(1, 9)`.
 
-- [ ] **Step 4: Run GREEN**
+- [x] **Step 4: Run GREEN**
 
 Run: `npm run test:bazi`
 
 Expected: all calendar and Dayun regressions pass.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/modules/bazi/calendar.js src/modules/bazi/engine.js test/bazi/calendar.test.mjs
@@ -117,17 +117,17 @@ git commit -m "fix: replace bazi handwritten calendar core"
 - Modify: `src/modules/qimen/QimenModule.jsx`
 - Create: `test/bazi/solar-time.test.mjs`
 
-- [ ] **Step 1: Write NOAA formula tests**
+- [x] **Step 1: Write NOAA formula tests**
 
 Test `calcEquationOfTime` against fixed dates, verify longitude plus equation-of-time offset, and verify `adjustBirthTime` crossing the previous date.
 
-- [ ] **Step 2: Run RED**
+- [x] **Step 2: Run RED**
 
 Run: `node --test test/bazi/solar-time.test.mjs`
 
 Expected: failure because `calcEquationOfTime` and date-aware offset do not exist.
 
-- [ ] **Step 3: Implement date-aware offset**
+- [x] **Step 3: Implement date-aware offset**
 
 ```js
 export function calcTrueSolarTimeOffset(longitude, standardMeridian = 120, dateParts) {
@@ -136,17 +136,17 @@ export function calcTrueSolarTimeOffset(longitude, standardMeridian = 120, dateP
 }
 ```
 
-- [ ] **Step 4: Pass dates from every runtime call site and label the display `真太阳时（标准时口径）`**
+- [x] **Step 4: Pass dates from every runtime call site and label the display `真太阳时（标准时口径）`**
 
 Keep the old no-date API only as a compatibility fallback; no current UI path may call it without date parts.
 
-- [ ] **Step 5: Run GREEN and build**
+- [x] **Step 5: Run GREEN and build**
 
 Run: `npm run test:bazi && npm run build`
 
 Expected: tests pass and Vite build succeeds.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add src/lib/cities.js src/modules/bazi src/modules/bazihealth src/modules/ziwei src/modules/qimen test/bazi/solar-time.test.mjs
@@ -165,17 +165,17 @@ git commit -m "fix: include equation of time in solar correction"
 - Modify: `docs/meta/TIANJI_TASK_SUPERVISOR.html`
 - Modify: `docs/meta/TIANJI_PROJECT_ROADMAP.md`
 
-- [ ] **Step 1: Preserve the before-fix artifact and retarget the audit script**
+- [x] **Step 1: Preserve the before-fix artifact and retarget the audit script**
 
 The post-fix script must audit current runtime behavior; legacy handwritten table statistics stay only in the before-fix artifact/report.
 
-- [ ] **Step 2: Run the post-fix audit**
+- [x] **Step 2: Run the post-fix audit**
 
 Run: `node scripts/validation/audit-bazi-current.mjs`
 
 Expected: 30-case Four Pillars and Dayun mismatches are zero under the fixed policy.
 
-- [ ] **Step 3: Run all verification**
+- [x] **Step 3: Run all verification**
 
 ```bash
 npm run test:bazi
@@ -185,13 +185,13 @@ npm run validate:supervisor
 git diff --check
 ```
 
-- [ ] **Step 4: Update evidence without erasing residual gates**
+- [x] **Step 4: Update evidence without erasing residual gates**
 
 Mark BZ-F01/BZ-F02 remediated only after same-path tests pass. Keep strength/YongShen, branch-relation provenance and global historical timezone/DST as active validation items.
 
-- [ ] **Step 5: Request fresh code review and address Critical/Important findings**
+- [x] **Step 5: Request fresh code review and address Critical/Important findings**
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add docs scripts/validation

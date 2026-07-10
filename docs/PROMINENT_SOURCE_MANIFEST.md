@@ -98,7 +98,7 @@
 |---|---|
 | 名称 | 当前天机卷代码与运行时静态数据 |
 | 项目路径 | `src/`、`server/`、`test-liuyao.mjs` |
-| Git 基线 | `master`，盘点时 HEAD 为 `d85505c` |
+| Git 基线 | 初始盘点 HEAD 为 `d85505c`；2026-07-09 八字修复与验证记录见项目 changelog / validation artifacts |
 | 状态 | `runtime_truth` |
 | 内容 | 13 个业务模块、排盘引擎、Prompt、账户/历史、AI Provider、图像与城市/真太阳时能力 |
 | 能证明 | 当前产品实际支持的输入、计算、展示、数据表和 AI 调用行为 |
@@ -126,7 +126,7 @@
 | 机构 | NOAA Global Monitoring Laboratory |
 | URL | `https://gml.noaa.gov/grad/solcalc/solareqns.PDF` |
 | 本轮用途 | 确认 true solar time 的 offset 包含 equation of time、经度与时区 |
-| 审计结果 | 当前 `calcTrueSolarTimeOffset` 只有经度/标准经线项，不能证明为完整真太阳时 |
+| 审计结果 | 已加入 NOAA 均时差公式，并保留“标准时口径”标签；历史民用时区与 DST 仍未解决 |
 
 ### SRC-VAL-LUNAR-JS
 
@@ -134,10 +134,34 @@
 |---|---|
 | 名称 | `lunar-javascript@1.7.7` |
 | 项目路径 | `node_modules/lunar-javascript/`；依赖声明见 `package.json` |
-| 状态 | `validation_anchor`，独立实现 |
+| 状态 | `runtime_truth`；修复前曾作为独立 comparator，修复后不再计作第二证据 |
 | 许可 | 包元数据声明 MIT |
-| 本轮用途 | 对 30 例年月日时四柱与大运做独立复算；使用 `sect=1` 对齐当前 23:00 换日口径 |
-| 边界 | 开源实现不是官方历表或跨流派权威；与当前结果一致只算 V3 候选证据，关键边界仍需官方锚点 |
+| 本轮用途 | 作为八字四柱、节令和大运 runtime 适配层；固定 `sect=1` 对齐当前 23:00 换日口径 |
+| 边界 | 运行依赖不能验证自己；2,592 次同库边界检查只证明接线和回归，大运仍需第二证据 |
+
+### SRC-VAL-SXTWL
+
+| 字段 | 值 |
+|---|---|
+| 名称 | `sxtwl@2.0.7` / 寿星天文历 C++ 实现 |
+| 状态 | `validation_anchor`，第二独立实现 |
+| 上游 | `https://github.com/yuangu/sxtwl_cpp` |
+| 许可 | BSD-3-Clause |
+| 本地使用 | 隔离安装于 `/tmp/tianji-sxtwl-venv`；不进入产品依赖 |
+| 可重复入口 | `scripts/validation/audit-bazi-sxtwl.py`、`scripts/validation/requirements-bazi-secondary.txt`；脚本强制先重建 primary runtime artifact 并记录源码 SHA256 |
+| 本轮结果 | 30/30 四柱一致；1920-2027 的 1,296 个节令时刻全部在 30 秒内，最大差 20 秒 |
+| 边界 | 不提供本项目所用的大运接口；与另一实现一致仍不是数学证明，也不验证解释性八字规则 |
+
+### SRC-VAL-SANMING-LIUHE
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 《三命通会·论支元六合》 |
+| 状态 | `validation_anchor`，经典关系定义 |
+| 在线校本 | `https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1yasl` |
+| 本轮用途 | 确认午未属于六合；区分“六合关系”与后续合化判断 |
+| 项目对照 | `database/xuanxue/compendium-new/00-cosmology/03-tiangan-dizhi.md` 明示午未化火或土有争议 |
+| 边界 | 原典不能单独决定所有现代流派的合化条件；runtime 因此只输出关系，不自动宣称成化 |
 
 ## 4. 历史产品规格来源
 
@@ -264,7 +288,7 @@ escalation: self_care | clinician | urgent | emergency
 
 ## 12. 下一步
 
-1. 用第二独立实现和官方极值复核八字边界，完成属性测试并决定历法核心替换或修复。
+1. 为大运补第二实现或可人工复核的同派推导 fixture，并继续八字解释层来源矩阵。
 2. 按本清单为 package/source group 建立机器可读 manifest。
 3. 定义 normalized schema 和 review 状态机。
 4. 先抽取 TCM-SAFETY，并反查当前 APP-DATA 中全部药物、方剂、穴位、艾灸和剂量。

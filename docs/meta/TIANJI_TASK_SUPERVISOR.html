@@ -45,8 +45,8 @@
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">修复八字历法核心、大运与太阳时。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">重跑 before/after 回归，通过后继续其他数据库验证。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">八字四柱与节令已达 V3，fresh review 已收口；继续大运和强弱/用神验证。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">选择大运第二验证路径，并确定强弱/用神的产品标签。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
     </section>
 
@@ -69,11 +69,11 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 19,
-      currentFocus: '按已批准设计修复八字确定性核心：历法适配、大运一月边界、太阳时均时差与回归证据。',
-      nextDecision: '修复后重跑 30 例与全边界回归；通过后继续强弱/用神、其他排盘和中医安全验证。',
+      currentFocus: '八字四柱与节令达到 V3，fresh review 已收口；继续大运第二证据与强弱/用神验证。',
+      nextDecision: '选择大运第二验证路径，并决定强弱/用神是补来源、标为启发式还是降级展示。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
-        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 32, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 56, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'in_progress', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -81,8 +81,8 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'remediation_in_progress', rule: '当前八字核心不得进入教学或健康下游。' },
-        { name: 'Product A 复用决策', state: 'held', rule: '八字与共享历法审计前不默认复用。' },
+        { name: '排盘与数据库正确性', state: 'bazi_pillars_v3_dayun_interpretation_pending', rule: '四柱与节令已达 V3；大运和解释层仍不得自动进入 accepted。' },
+        { name: 'Product A 复用决策', state: 'partial', rule: '八字壳层和确定性核心可继续，解释层逐字段验证。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
         { name: '中医安全', state: 'blocked', rule: '安全元数据补齐前不扩大高风险内容消费。' },
@@ -90,8 +90,11 @@
       ],
       recentEvidence: [
         '旧日柱 34 天系统偏移已在 d47165b 修复',
-        '八字 30 例：2 个四柱 mismatch、6 个大运 mismatch',
-        '1920-2027 的 1,296 个节令边界已全量复算',
+        '八字修复后 30 例四柱/大运 mismatch 均为 0',
+        'sxtwl 第二实现 30/30 四柱一致，1,296 节令时刻最大差 20 秒',
+        '六合 runtime 只显示关系；午未火/土保留为候选元数据',
+        'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
+        '2,592 次节令侧检查与 39,447 日连续性通过',
         'HKO 历表与 NOAA 公式锚定节令和太阳时 finding',
         'PRD fresh review 完成，结论为 hold'
       ]
