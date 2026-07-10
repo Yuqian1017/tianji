@@ -1,0 +1,422 @@
+{
+  "audit": "tcm-theory-diagnosis-evidence-boundaries",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 5064,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "references": 14,
+    "sourceNonEmptyLines": 836,
+    "sourceMarkdownTables": 31,
+    "sourceMarkdownTableRows": 157,
+    "sections": 124,
+    "priorityLineCandidates": 127,
+    "findings": 14
+  },
+  "categories": {
+    "contract": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "source_inventory": {
+      "checks": 28,
+      "passed": 28,
+      "failed": 0
+    },
+    "line_preservation": {
+      "checks": 2508,
+      "passed": 2508,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 1954,
+      "passed": 1954,
+      "failed": 0
+    },
+    "section_preservation": {
+      "checks": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    "priority_preservation": {
+      "checks": 508,
+      "passed": 508,
+      "failed": 0
+    },
+    "finding_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "finding_integrity": {
+      "checks": 28,
+      "passed": 28,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "id": "TCM-TD-001",
+      "kind": "framework_boundary",
+      "status": "traditional_construct_not_biomedical_anatomy",
+      "sourceId": "ref02",
+      "sourceLine": 15,
+      "sourceText": "- **主血脉**:推动血行,心气充沛+血液充盈+脉道通利为三前提。其华在面,充在血脉。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW",
+        "WHO-TCIM-STRATEGY-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-002",
+      "kind": "unsupported_diagnostic",
+      "status": "unsupported_standalone_tongue_organ_diagnosis",
+      "sourceId": "ref09",
+      "sourceLine": 46,
+      "sourceText": "**原理**:舌为心之苗、脾之外候,五脏六腑之外候。分部:**舌尖候心肺、舌中候脾胃、舌根候肾、舌边候肝胆**(外感病亦可按三焦:尖上中中根下)。",
+      "comparatorSourceIds": [
+        "PUBMED-TEAM-DIAGNOSIS-RELIABILITY-2009",
+        "JACM-TCM-INTER-RATER-2019"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-003",
+      "kind": "reliability_limit",
+      "status": "diagnostic_framework_low_to_moderate_inter_rater_agreement",
+      "sourceId": "ref14",
+      "sourceLine": 82,
+      "sourceText": "- **证候诊断七步骤**:追问病史→审证求因(\"因\"重在引起现阶段表现之因,如痰湿)→确定病位→审察病机→分清病性(八纲)→详析病势→**确定证名(病因+病位+病机综合命名**,如\"脾虚湿滞\")。",
+      "comparatorSourceIds": [
+        "JACM-TCM-INTER-RATER-2019",
+        "PUBMED-FD-TCM-INSTRUMENTS-2021"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-004",
+      "kind": "reliability_limit",
+      "status": "pulse_diagnosis_reliability_requires_operational_definition",
+      "sourceId": "ref10",
+      "sourceLine": 66,
+      "sourceText": "### 28 病脉分类(按位、数、形、势)",
+      "comparatorSourceIds": [
+        "PUBMED-PULSE-RELIABILITY-2016"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-005",
+      "kind": "scope_mismatch",
+      "status": "incomplete_constitution_taxonomy_not_ccmq_equivalent",
+      "sourceId": "ref08",
+      "sourceLine": 47,
+      "sourceText": "**分类(阴阳分类法)**:",
+      "comparatorSourceIds": [
+        "PMC-CCMQ-60-9"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-006",
+      "kind": "unsupported_causal",
+      "status": "unsupported_constitution_determines_disease_claim",
+      "sourceId": "ref08",
+      "sourceLine": 57,
+      "sourceText": "2. **与发病**:体质强弱决定正气虚实、是否发病及发病类型(脾阳素虚者稍进生冷即泻)。",
+      "comparatorSourceIds": [
+        "PMC-CCMQ-60-9",
+        "WHO-TCIM-STRATEGY-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-007",
+      "kind": "unsupported_prevention",
+      "status": "unsupported_banlangen_influenza_prevention",
+      "sourceId": "ref07",
+      "sourceLine": 76,
+      "sourceText": "- **未病先防**:调摄精神(恬淡虚无)、锻炼身体、饮食有节、起居有常、适应自然、药物预防与人工免疫(人痘接种为先驱;板蓝根大青叶防流感之类)+**避其毒气**防邪侵。",
+      "comparatorSourceIds": [
+        "CDC-FLU-VACCINE",
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-008",
+      "kind": "unsupported_treatment",
+      "status": "unsupported_geography_based_drug_and_dose_rule",
+      "sourceId": "ref07",
+      "sourceLine": 60,
+      "sourceText": "- **因地**:西北高寒,病多寒宜辛温、药量可稍重;东南温热卑湿,病多热宜苦寒、药量宜稍轻。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW",
+        "WHO-TCIM-STRATEGY-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-009",
+      "kind": "unsafe_treatment",
+      "status": "unsafe_body_type_poison_tolerance_rule",
+      "sourceId": "ref08",
+      "sourceLine": 70,
+      "sourceText": "- 耐受个体差(灵枢·论痛):\"胃厚、色黑、大骨及肥者,皆**胜毒**;瘦而薄胃者,皆**不胜毒**\"——体弱者药量宜小的体质学出处(用药层见 `15`)。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW",
+        "WHO-TCIM-STRATEGY-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-010",
+      "kind": "unsupported_diagnostic",
+      "status": "unsupported_pediatric_finger_vein_severity_diagnosis",
+      "sourceId": "ref09",
+      "sourceLine": 67,
+      "sourceText": "- **小儿指纹**(三岁以下,代寸口):三关=风关(掌侧第一节)→气关→命关。要诀:**\"浮沉分表里,红紫辨寒热,淡滞定虚实,三关测轻重\"**;鲜红=外感风寒,紫红=热,青=风证痛证,紫黑=血络闭郁,淡白=脾虚;**透关射甲**=病情危重。",
+      "comparatorSourceIds": [
+        "JACM-TCM-INTER-RATER-2019",
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-011",
+      "kind": "unsupported_prognostic",
+      "status": "unsupported_voice_breathing_disease_localization_and_prognosis",
+      "sourceId": "ref09",
+      "sourceLine": 83,
+      "sourceText": "- **金匮首篇望闻三条**:鼻头色青=腹中痛(\"苦冷者死\");**语声寂然喜惊呼=骨节间病、喑喑然不彻=心膈间病、啾啾然细而长=头中病**(闻声定病位);**息摇肩者心中坚、息张口短气者肺痿唾沫、\"呼吸动摇振振者,不治\"**(呼吸形态的危重分级——耸肩呼吸、张口短气、全身随呼吸摇动逐级加重)。",
+      "comparatorSourceIds": [
+        "PUBMED-TEAM-DIAGNOSIS-RELIABILITY-2009",
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-012",
+      "kind": "unsupported_diagnostic",
+      "status": "unsupported_pulse_position_organ_diagnosis",
+      "sourceId": "ref10",
+      "sourceLine": 61,
+      "sourceText": "**部位**:独取寸口(腕后桡动脉)。高骨(桡骨茎突)内侧为**关**,腕端为**寸**,肘端为**尺**;浮中沉三候合为三部九候。分候脏腑:**左寸心、左关肝胆、左尺肾;右寸肺、右关脾胃、右尺肾(命门)**。",
+      "comparatorSourceIds": [
+        "PUBMED-PULSE-RELIABILITY-2016"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-013",
+      "kind": "unsupported_prediction",
+      "status": "unsupported_fixed_stroke_prodrome_prediction",
+      "sourceId": "ref07",
+      "sourceLine": 77,
+      "sourceText": "- **既病防变**:①早期诊治(\"见微知著,弥患于未萌,是为上工\"——如头目眩晕、拇食指麻木、肌肉瞤动为中风先兆);②防止传变(掌握六经/卫气营血/三焦/五行生克传变规律,截断病势——伤寒早治须把握太阳病阶段);③**先安未受邪之地**(\"见肝之病,知肝传脾,当先实脾\";温病热伤胃阴,甘寒中加咸寒先护肾阴——叶天士\"务在先安未受邪之地\")。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-TD-014",
+      "kind": "reliability_limit",
+      "status": "traditional_pattern_tables_not_validated_clinical_answer_key",
+      "sourceId": "ref14",
+      "sourceLine": 84,
+      "sourceText": "- **辨病与辨证结合**:\"辨证→辨病→辨证\"不断深化;病名诊断依临床特点(如痢疾:下利赤白、里急后重、夏秋多发);鉴别诊断(癫=静而多喜,狂=动而多怒,痫=猝倒抽搐吐沫作猪羊叫)。",
+      "comparatorSourceIds": [
+        "JACM-TCM-INTER-RATER-2019",
+        "PUBMED-FD-TCM-INSTRUMENTS-2021"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "All 836 non-empty lines and 157 Markdown table rows are preserved as blocked candidates.",
+    "The raw files are secondary Skill summaries without page-level textbook citations; source preservation is not content validation.",
+    "Traditional theory may be taught only with attribution and must not be translated into biomedical anatomy, etiology or causal fact.",
+    "Tongue, pulse, pattern, constitution and channel tables are not validated standalone diagnostic or treatment answer keys.",
+    "No drug, dose, prevention, prognosis, emergency or pediatric claim in this layer is runtime eligible."
+  ],
+  "sourceRefs": {
+    "ref01": {
+      "path": "database/tcm/skill-v3/references/01-总论与哲学基础.md",
+      "sha256": "737a9b1a326ec63089e67686bb0949ab5f3d28faf0a9528efa3d6baa7c95fe44"
+    },
+    "ref02": {
+      "path": "database/tcm/skill-v3/references/02-脏象.md",
+      "sha256": "2f3e12da2c1909b83cd169ab7c9e5362d6ffbca7b15efc9a4a341da495303b4a"
+    },
+    "ref03": {
+      "path": "database/tcm/skill-v3/references/03-脏腑关系.md",
+      "sha256": "c0fd7cca1f6d0f0057bddb62f461eb487f2de2dc85fe8fd9488d8126fb208fb4"
+    },
+    "ref04": {
+      "path": "database/tcm/skill-v3/references/04-精气血津液.md",
+      "sha256": "a575713f85cd8bb9321e8d92ebc6235f67c3a50e339bef2c413b845034708797"
+    },
+    "ref05": {
+      "path": "database/tcm/skill-v3/references/05-病因.md",
+      "sha256": "ef99504eb66c1154aad1a20f1145548fbcf023b32da0c85ae322be4ba888e607"
+    },
+    "ref06": {
+      "path": "database/tcm/skill-v3/references/06-病机.md",
+      "sha256": "08a3a8a37385830a1a506efefc4be900ac0620503a77ff9fce63871977462690"
+    },
+    "ref07": {
+      "path": "database/tcm/skill-v3/references/07-治则.md",
+      "sha256": "428d4ececa61170264d8a052ad3d710b9bdb4d5ccc45016d11090b28c6eba2f6"
+    },
+    "ref08": {
+      "path": "database/tcm/skill-v3/references/08-经络与体质.md",
+      "sha256": "8b19a7e5194141c95df4c73ea41aad4f64cc09d714e04691e8a1b05e569ff596"
+    },
+    "ref09": {
+      "path": "database/tcm/skill-v3/references/09-望诊闻诊.md",
+      "sha256": "eec7cf19398265c7e2e3c89a5e3a50100df11a9f8442b638f525aad32f5b901a"
+    },
+    "ref10": {
+      "path": "database/tcm/skill-v3/references/10-问诊切诊.md",
+      "sha256": "d6d66c9b032c40d17819a3604258a463e3a4bce2e24bd2ded6fa7d9bf92e9100"
+    },
+    "ref11": {
+      "path": "database/tcm/skill-v3/references/11-八纲辨证.md",
+      "sha256": "79f957166020e741f066bf171345c8d2eed85a0596f030ebb37f3f4fca3e7c4c"
+    },
+    "ref12": {
+      "path": "database/tcm/skill-v3/references/12-病因与气血津液辨证.md",
+      "sha256": "a54e0105e0d6c8c547af10b235802fae1acf89745aecc5545bc6611216dfd57b"
+    },
+    "ref13": {
+      "path": "database/tcm/skill-v3/references/13-脏腑辨证.md",
+      "sha256": "ee894ea16192a51d478d2a4961b5d74c8942c02619ffd194d58ced5e22b4aa67"
+    },
+    "ref14": {
+      "path": "database/tcm/skill-v3/references/14-六经卫气营血三焦经络辨证.md",
+      "sha256": "e60991e191306fe55117bc787a1609da251073c7dc75082c92dad12a5be303f8"
+    },
+    "evidence": {
+      "path": "database/tcm/sources/theory-diagnosis-evidence.json",
+      "sha256": "f11dc234e41e723b8cf2d69180292ef334bb94eccc0e06b6a78c09cf5aab9d4a"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "467874707b5eb6f96d042410fce6241d4cdea3e08dfff412a04c1ec58de75cc7"
+  },
+  "failures": []
+}

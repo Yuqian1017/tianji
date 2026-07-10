@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "status": "modern_evidence_and_standardization_comparators",
+  "generatedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "NCCIH-TCM-OVERVIEW",
+      "type": "official_health_agency",
+      "title": "Traditional Chinese Medicine: What You Need To Know",
+      "url": "https://www.nccih.nih.gov/health/traditional-chinese-medicine-what-you-need-to-know",
+      "facts": [
+        "Evidence differs by intervention; Chinese herbal product studies across many conditions have mixed or poor-quality results and do not support firm general conclusions.",
+        "TCM should not replace or delay conventional care, and herbal-product safety, contamination, substitution and interaction risks require clinician involvement."
+      ]
+    },
+    {
+      "id": "WHO-TCIM-STRATEGY-2025",
+      "type": "official_health_agency",
+      "title": "Global traditional medicine strategy 2025-2034",
+      "url": "https://www.who.int/teams/integrated-health-services/traditional-complementary-and-integrative-medicine/global-strategies",
+      "facts": [
+        "WHO calls for strengthening the evidence base and for regulation that supports safe and effective traditional medicine.",
+        "Cultural or historical use is not, by itself, a safety, effectiveness or clinical-integration validation."
+      ]
+    },
+    {
+      "id": "JACM-TCM-INTER-RATER-2019",
+      "type": "peer_reviewed_systematic_review",
+      "title": "Experimental Studies of Inter-Rater Agreement in Traditional Chinese Medicine: A Systematic Review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6864748/",
+      "facts": [
+        "Across 21 included studies, reported pairwise agreement averaged 57 percent and mean Cohen kappa averaged 0.34 in the subsets reporting those measures.",
+        "Agreement was generally low to moderate, with substantial methodological and reporting limitations."
+      ]
+    },
+    {
+      "id": "PUBMED-TEAM-DIAGNOSIS-RELIABILITY-2009",
+      "type": "peer_reviewed_review",
+      "title": "A review of the reliability of traditional East Asian medicine diagnoses",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19388857/",
+      "facts": [
+        "Tongue, pulse and other traditional diagnostic variables showed considerable variability across studies.",
+        "Pattern diagnosis and treatment studies generally did not show high reliability."
+      ]
+    },
+    {
+      "id": "PUBMED-PULSE-RELIABILITY-2016",
+      "type": "peer_reviewed_systematic_narrative_review",
+      "title": "Reliability of Manual Pulse Diagnosis Methods in Traditional East Asian Medicine",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27314975/",
+      "facts": [
+        "The review found little evidence for reliability of pulse diagnosis overall.",
+        "Acceptable reliability depended on concrete operational definitions; classical terminology and imprecise descriptions contributed to poor agreement."
+      ]
+    },
+    {
+      "id": "PMC-CCMQ-60-9",
+      "type": "peer_reviewed_instrument_study",
+      "title": "Development and evaluation of short-form version of the Constitution in Chinese Medicine Questionnaire",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10617149/",
+      "facts": [
+        "The reference CCMQ contains 60 items and measures nine traditional constitution types.",
+        "A three-type prose classification is not equivalent to the CCMQ instrument or its scoring contract."
+      ]
+    },
+    {
+      "id": "CDC-FLU-VACCINE",
+      "type": "official_health_agency",
+      "title": "Seasonal Flu Vaccine Basics",
+      "url": "https://www.cdc.gov/flu/vaccines/index.html",
+      "facts": [
+        "CDC recommends seasonal influenza vaccination for everyone six months and older with rare exceptions.",
+        "The comparator does not support presenting Banlangen or Isatis leaves as established influenza prevention."
+      ]
+    },
+    {
+      "id": "PUBMED-FD-TCM-INSTRUMENTS-2021",
+      "type": "peer_reviewed_systematic_review",
+      "title": "Evaluating traditional Chinese medicine diagnostic instruments for functional dyspepsia",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33665098/",
+      "facts": [
+        "Five identified pattern-diagnosis instruments had inadequate development quality.",
+        "None was considered reliable or valid for guiding TCM pattern diagnosis in that review."
+      ]
+    }
+  ],
+  "boundaries": [
+    "These comparators assess evidence, reliability, standardization and safety boundaries; they do not erase the historical or pedagogical value of traditional terminology.",
+    "A traditional framework statement may be taught as attributed tradition but must not be restated as modern anatomy, etiology, diagnosis, prognosis, prevention or treatment fact without separate evidence.",
+    "No finding in this layer makes a diagnosis, treatment, dosage, constitution score or emergency action eligible for product consumption."
+  ]
+}

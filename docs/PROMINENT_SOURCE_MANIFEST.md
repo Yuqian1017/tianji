@@ -372,6 +372,18 @@
 | 本轮结果 | 52 病种、689 条非空行、22 表/133 表格行完整 inventory；83 条关键词风险和 308 条广义处置候选只作优先复核；9 条冲突、9 条现代急症红线获有边界支持、2 条混合边界 |
 | 边界 | 只授证红线识别和升级方向；不授证传统病机、辨证、方剂、剂量、检查或疗效；急救号码和毒物服务必须按用户所在地本地化 |
 
+### SRC-VAL-TCM-THEORY-DIAGNOSIS
+
+| 字段 | 值 |
+|---|---|
+| 名称 | NCCIH/WHO/CDC 与同行评议中医诊断可靠性、体质量表 comparator |
+| 状态 | `validation_anchor`，传统框架向现代诊断/治疗外推的证据边界 |
+| 官方来源 | NCCIH TCM overview；WHO Global Traditional Medicine Strategy 2025-2034；CDC Seasonal Flu Vaccine Basics |
+| 同行评议来源 | 2019 TCM inter-rater 系统综述；2009 TEAM 诊断可靠性综述；2016 脉诊可靠性综述；CCMQ 60 项/9 类研究；2021 功能性消化不良诊断量表系统综述 |
+| 项目快照 | `database/tcm/sources/theory-diagnosis-evidence.json`，SHA256 `f11dc234e41e723b8cf2d69180292ef334bb94eccc0e06b6a78c09cf5aab9d4a` |
+| 本轮结果 | `01-14` 的 836 条非空行、31 表/157 表格行、124 标题和 127 条优先候选完整 inventory；14 个外推/可靠性 finding 全部 blocked |
+| 边界 | 只区分传统归属、证据可靠性和现代外推风险；不授证传统概念的现代效度，也不生成诊断、预后、预防、剂量或治疗建议 |
+
 ### SRC-VAL-DAYUN-CLASSICS
 
 | 字段 | 值 |
@@ -539,8 +551,8 @@
 | Source Group ID | 路径 | 内容 | 候选用途 | 边界 |
 |---|---|---|---|---|
 | TCM-INDEX | `references/00-证型直达选方总索引.md` | 证型、病种、针灸、经典路由 | 建立跨实体关系与检索路由 | 只用于路由，权威依据仍来自被指向条目 |
-| TCM-THEORY | `references/01-08*` | 基础理论、脏象、气血津液、病因病机、治则、经络体质 | 理论实体、课程、术语校正 | 以教材整理层为主 |
-| TCM-DIAGNOSIS | `references/09-14*` | 四诊、舌脉、八纲、脏腑、六经等辨证 | observation、pattern、differential | 文字/图像不能替代面诊 |
+| TCM-THEORY | `references/01-08*` | 基础理论、脏象、气血津液、病因病机、治则、经络体质 | 完整 blocked inventory、理论实体、课程候选 | 传统构造不得外推为现代解剖、生理、病因、预防或剂量事实 |
+| TCM-DIAGNOSIS | `references/09-14*` | 四诊、舌脉、八纲、脏腑、六经等辨证 | 完整 blocked inventory、observation/pattern 候选 | 诊断一致性有限；文字/图像、舌脉和证候表不能作为临床答案键 |
 | TCM-HERBS | `references/15-23*` | 470 余味中药、分类、病证反查、剂量与注意 | 中药实体、当前茶饮与药味审计 | 剂量未完成药典校准 |
 | TCM-FORMULAS | `references/24-30*` | 约 180 正方、160 余附方、方义、类方、使用注意 | 方剂实体、教学、方名审计 | 学习参考，不直接荐方 |
 | TCM-DISEASES | `references/31-37*` | 52 个主病种、689 条非空行、22 表/133 表格行 | 病种、证型、鉴别、红线、调护候选 | 红线已做首轮现代 comparator；全部治疗字段 blocked，不替代现代医学诊断 |
@@ -553,7 +565,8 @@
 | TCM-PREG-COMPAT-FORMULA-CANDIDATES | `database/tcm/normalized/tcm-pregnancy-compatibility-formula-candidates.json` | 妊娠表与剂量表、十八反十九畏、马兜铃酸监管药名、31 行/37 方名警示及逐条冲突 | 全量可审计候选层 | 所有记录 blocked；2020 历史支持不等于现行 product eligibility |
 | TCM-ACUPOINT-EXTERNAL-CANDIDATES | `database/tcm/normalized/tcm-acupoint-external-safety-candidates.json` | 361 经穴、40 奇穴、3 级操作声明、240 条风险/操作、27 病证处方和 30 个旧运行时穴位映射 | 全量可审计候选层 | 名称/数量目录核对不授证定位或疗效；全部记录 blocked |
 | TCM-DISEASE-RED-FLAG-CANDIDATES | `database/tcm/normalized/tcm-disease-red-flag-candidates.json` | `31-37` 的 52 病种、完整原文 inventory、83 条关键词风险、308 条广义处置候选和 20 个重点裁决 | 红线/家庭动作可审计候选层 | 两个筛选视图不代表完整临床语义；9 条支持红线不授证相邻治疗；所有记录 blocked |
-| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线 comparator 1 份，共 9 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
+| TCM-THEORY-DIAGNOSIS-CANDIDATES | `database/tcm/normalized/tcm-theory-diagnosis-candidates.json` | `01-14` 的完整原文 inventory、124 标题、127 条优先视图和 14 个重点裁决 | 传统框架/现代外推可审计候选层 | 原文无页码级教材引证；所有记录 blocked，不能作为临床答案键 |
+| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线 comparator 1 份；理论/诊断 comparator 1 份，共 10 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
@@ -634,7 +647,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 药典、妊娠/配伍/方剂、穴位/外治和病种红线四个候选层已完成当前公开证据范围的归一化并全部 blocked；继续取得适用现行药典/逐穴定位正文、裁决剩余监管状态，并转入 `01-14` 理论、四诊辨证与现代医疗解释边界。
+2. TCM 五个候选层已完成当前公开证据范围的归一化并全部 blocked；继续取得适用现行药典/逐穴定位正文、裁决剩余监管状态，并转入 `15-30` 完整中药与方剂核验。
 3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

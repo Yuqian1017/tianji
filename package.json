@@ -49,6 +49,8 @@
     "audit:tcm-acupoint-external-safety": "npm run build:tcm-acupoint-external-safety && node scripts/validation/audit-tcm-acupoint-external-safety.mjs",
     "build:tcm-disease-red-flags": "node scripts/validation/build-tcm-disease-red-flags-core.mjs",
     "audit:tcm-disease-red-flags": "npm run build:tcm-disease-red-flags && node scripts/validation/audit-tcm-disease-red-flags.mjs",
+    "build:tcm-theory-diagnosis": "node scripts/validation/build-tcm-theory-diagnosis-core.mjs",
+    "audit:tcm-theory-diagnosis": "npm run build:tcm-theory-diagnosis && node scripts/validation/audit-tcm-theory-diagnosis.mjs",
     "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",
     "audit:ziwu": "node scripts/validation/audit-ziwu.mjs",
     "audit:shared-time": "node scripts/validation/audit-shared-time-cities.mjs",

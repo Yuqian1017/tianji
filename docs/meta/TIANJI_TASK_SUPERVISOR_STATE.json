@@ -5,8 +5,8 @@
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
   "overallPercent": 57,
-  "currentFocus": "中医 `01-14` 基础理论、四诊辨证与现代医疗解释边界全量验证；四个高风险候选层继续 blocked。",
-  "nextDecision": "先 inventory 理论、舌脉、证候与辨证条目，再区分传统体系内部定义、现代事实声称和可触发医疗行动的解释；食疗/药食两用另批处理。",
+  "currentFocus": "中医 `15-30` 完整中药与方剂实体、剂量、禁忌和疗效边界验证；五个候选层继续 blocked。",
+  "nextDecision": "先全量 inventory 中药与方剂条目，再按药典身份、剂量、毒性、妊娠配伍、组成版本和现代适应证证据逐层裁决；食疗/药食两用另批处理。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -50,7 +50,9 @@
         "穴位/外治 763 条非空行、27 表/471 表格行完整 inventory；结构化候选共 4,904 项 0 fail，全部 blocked",
         "官方只授证现行 362/51 范围；缺 1/17 和 3 个名称差异为二级转录候选，GB31 旧 7 寸定位单独确认；401 条定位未获授证",
         "病种红线 52 病种、689 条非空行、22 表/133 表格行完整 inventory；83 条关键词风险与 308 条广义处置候选共 2,589 项 0 fail",
-        "病种层确认 9 条冲突、9 条有边界支持红线和 2 条混合边界；全部治疗字段 blocked"
+        "病种层确认 9 条冲突、9 条有边界支持红线和 2 条混合边界；全部治疗字段 blocked",
+        "理论/四诊辨证 836 条非空行、31 表/157 表格行、124 标题和 127 条优先候选共 5,064 项 0 fail",
+        "14 个现代外推/可靠性 finding 已裁决；舌脉、体质、预防、剂量和临床答案字段全部 blocked"
       ],
       "metrics": {
         "time": { "startedAt": "2026-07-09", "completedAt": null, "elapsed": "进行中" },
@@ -144,10 +146,10 @@
     },
     {
       "id": "TJI-VAL-019",
-      "name": "中医药典、妊娠、配伍、方剂与外治安全验证",
+      "name": "中医理论、药典、中药、方剂、诊断与外治安全验证",
       "status": "in_progress",
       "phase": "V0",
-      "doneWhen": "当前产品和 Skill 中的具体药名、剂量、妊娠/配伍禁忌、方剂警示与穴位外治逐项进入来源、安全和消费裁决；未通过项继续 blocked。",
+      "doneWhen": "Skill 中理论、诊断、具体药名、剂量、妊娠/配伍禁忌、方剂警示与穴位外治逐项进入来源、安全和消费裁决；未通过项继续 blocked。",
       "owner": "Codex"
     },
     {
@@ -336,11 +338,11 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "tcm_theory_diagnosis_in_progress", "rule": "药典、妊娠/配伍/方剂、穴位/外治和病种红线四个候选层已通过来源/阻断审计并全部 blocked；当前核验理论与四诊辨证。" },
+    { "name": "排盘与数据库正确性", "state": "tcm_herbs_formulas_in_progress", "rule": "药典、妊娠/配伍/方剂、穴位/外治、病种红线和理论/四诊辨证五个候选层已通过来源/阻断审计并全部 blocked；当前核验完整中药与方剂。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
-    { "name": "中医安全", "state": "theory_diagnosis_in_progress", "rule": "法定毒性 28 项已规范化；四个高风险候选层已审计但全部 blocked；理论/四诊辨证和食疗解释未通过前不扩大产品消费范围。" },
+    { "name": "中医安全", "state": "herbs_formulas_in_progress", "rule": "法定毒性 28 项已规范化；五个候选层已审计但全部 blocked；完整中药、方剂和食疗解释未通过前不扩大产品消费范围。" },
     { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
@@ -408,6 +410,9 @@
     "TJI-VAL-019 穴位/外治子批次：763 条非空行、27 表/471 表格行完整 inventory；结构化候选共 4,904 项审计 0 fail，全部 product blocked",
     "fresh reviewer 的 P1 原文表格漏 inventory 已修复；官方 362/51 范围与二级逐名转录已分层，逐名官方证据缺口保持 open；84 个运行时/相邻文件无旁路",
     "TJI-VAL-019 病种红线子批次：52 病种、689 条非空行、22 表/133 表格行完整 inventory；83 条关键词风险、308 条广义处置候选和 20 条裁决共 2,589 项 0 fail；全部 product blocked",
-    "病种层确认 9 条冲突、9 条支持红线和 2 条混合边界；fresh review 纠正关键词视图过度代表、急腹症证据映射和自杀风险边界"
+    "病种层确认 9 条冲突、9 条支持红线和 2 条混合边界；fresh review 纠正关键词视图过度代表、急腹症证据映射和自杀风险边界",
+    "TJI-VAL-019 理论/四诊辨证子批次：836 条非空行、31 表/157 表格行、124 标题、127 条优先候选和 14 finding 共 5,064 项 0 fail；全部 product blocked",
+    "NCCIH/WHO/CDC 与诊断可靠性综述确认：传统脏腑不作现代解剖等价，舌脉/证候表不作临床答案键，板蓝根防流感和地域/体型剂量等外推 blocked",
+    "理论/四诊 fresh review 无 P0/P1；headline count 与哈希独立复算一致；运行时清零过宽声明已降级，旧 tcm-data/望诊语义保持 open"
   ]
 }
