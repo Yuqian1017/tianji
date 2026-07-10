@@ -1,0 +1,2076 @@
+{
+  "schemaVersion": 1,
+  "source": "中华人民共和国药典：2020年版．一部 / 国家药典委员会药典数据库",
+  "sourceRole": "official_historical_comparator_not_current_2025_authority",
+  "bookId": 1,
+  "apiRoot": "https://ydz.chp.org.cn/front-api",
+  "officialHome": "http://ydz.chp.org.cn/",
+  "retrievedAt": "2026-07-10",
+  "copyright": "国家药典委员会；仅保存本项目候选药的短字段、入口 ID 与全文 hash，不镜像整部正文。",
+  "counts": {
+    "sourceRows": 100,
+    "namedSubstances": 101,
+    "officialMonographsFound": 79,
+    "officialMonographsMissingOrUnresolved": 22
+  },
+  "rows": [
+    {
+      "rowId": "tcm-skill-dose-row-001",
+      "sourceName": "细辛(解表)",
+      "substances": [
+        {
+          "substanceName": "细辛",
+          "officialTitle": "细辛",
+          "searchName": "细辛",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 357,
+          "englishTitle": "ASARI RADIX ET RHIZOMA",
+          "pageNum": 289,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,浸出物含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "1～3g。散剂每次服0.5～1g。外用适量。",
+          "attention": "不宜与藜芦同用。",
+          "htmlContentSha256": "c4d4a0e99e94c5f5eec14bf19ecd382947b87473e787a9c6fc355a61d5c6c942",
+          "searchResponseSha256": "10e8f651fec0abb05250a7bf1c8ebf57bf27225c89fd5ea9262b8c28f568d6d8",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=357"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-002",
+      "sourceName": "苍耳子(解表)",
+      "substances": [
+        {
+          "substanceName": "苍耳子",
+          "officialTitle": "苍耳子",
+          "searchName": "苍耳子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 251,
+          "englishTitle": "XANTHII FRUCTUS",
+          "pageNum": 218,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,鉴别检查,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～10g。",
+          "attention": null,
+          "htmlContentSha256": "043f7701d2fdd557dd12776b8d838eb1929f9c6ab924c754896ea327b1c2c859",
+          "searchResponseSha256": "2c425bfa1bc8ceff773d510ed53209ef99c09ee509f8b3da42fd43fc5677f365",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=251"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-003",
+      "sourceName": "苦豆子(清热燥湿)",
+      "substances": [
+        {
+          "substanceName": "苦豆子",
+          "officialTitle": "苦豆子",
+          "searchName": "苦豆子",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2dac6b8c4db830d29ac748319d19f58a01a20676586cf9bc56b2702a6be6e065"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-004",
+      "sourceName": "三棵针(清热燥湿)",
+      "substances": [
+        {
+          "substanceName": "三棵针",
+          "officialTitle": "三颗针",
+          "searchName": "三颗针",
+          "identityStatus": "source_name_error_corrected",
+          "found": true,
+          "entryId": 15,
+          "englishTitle": "BERBERIDIS RADIX",
+          "pageNum": 63,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,鉴别检查浸出物含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "9～15g。",
+          "attention": null,
+          "htmlContentSha256": "a41d7283b02e8e45f25fd75d918d1b4f2b462751ac38c5553b1f17d9335aabfa",
+          "searchResponseSha256": "1d3504fdf5b48ba77776a4cc8bc481c1a85510c6b18c1d919bf5910826626769",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=15"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-005",
+      "sourceName": "贯众(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "贯众",
+          "officialTitle": null,
+          "searchName": "贯众",
+          "identityStatus": "ambiguous_generic_name",
+          "found": false,
+          "reason": "ambiguous_generic_name"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-006",
+      "sourceName": "重楼(蚤休,清热解毒)",
+      "substances": [
+        {
+          "substanceName": "重楼",
+          "officialTitle": "重楼",
+          "searchName": "重楼",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 409,
+          "englishTitle": "PARIDIS RHIZOMA",
+          "pageNum": 320,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,鉴别检查含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～9g。外用适量，研末调敷。",
+          "attention": null,
+          "htmlContentSha256": "609db1357fa5ea4f89dc467fbd1d8b3f31c25c5906dd8cbc2758567165068607",
+          "searchResponseSha256": "2bc73d0ac6f90d4af6d2f6cb48b6a35d559f7effc216430ce77b9f721f207685",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=409"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-007",
+      "sourceName": "山豆根(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "山豆根",
+          "officialTitle": "山豆根",
+          "searchName": "山豆根",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 37,
+          "englishTitle": "SOPHORAE TONKINENSIS RADIX ET RHIZOMA",
+          "pageNum": 77,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,检查浸出物,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～6g。",
+          "attention": null,
+          "htmlContentSha256": "7bb14cece5f04aa903adfc563ce4b79b12d83d64a41f903d059dab9ddce116fb",
+          "searchResponseSha256": "fd519d1027436a4a0b174eba6243a6c7d5e8c247876c428dfda463d01b77a697",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=37"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-008",
+      "sourceName": "北豆根(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "北豆根",
+          "officialTitle": "北豆根",
+          "searchName": "北豆根",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 145,
+          "englishTitle": "MENISPERMI RHIZOMA",
+          "pageNum": 152,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～9g。",
+          "attention": null,
+          "htmlContentSha256": "ddd29792461950513010923c4fa88411a6b05c9336e3035212fadafc69f3688b",
+          "searchResponseSha256": "a6c5730062e20ec23bbe5275d89fd242748f225ca0653788127b28a02438e900",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=145"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-009",
+      "sourceName": "鸦胆子(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "鸦胆子",
+          "officialTitle": "鸦胆子",
+          "searchName": "鸦胆子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 399,
+          "englishTitle": "BRUCEAE FRUCTUS",
+          "pageNum": 315,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "0.5～2g，用龙眼肉包裹或装入胶囊吞服。外用适量。",
+          "attention": null,
+          "htmlContentSha256": "f29c5ac4cebe3db5a413fafa147566ae47ec6cb70d660449c944208df723b589",
+          "searchResponseSha256": "459cee73061d847fe8fde5e394b9e721476bc77e39a51a90c37b7c9b1569aad0",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=399"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-010",
+      "sourceName": "半边莲(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "半边莲",
+          "officialTitle": "半边莲",
+          "searchName": "半边莲",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 177,
+          "englishTitle": "LOBELIAE CHINENSIS HERBA",
+          "pageNum": 171,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,鉴别检查浸出物,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "9～15g。",
+          "attention": null,
+          "htmlContentSha256": "030d5712fdbadd0b8eb11f058d8df21799a5c3cbf5e777f55ad0ba4ba039a529",
+          "searchResponseSha256": "afb19eb2d6c1e29e667933b9ea02f7408abb56b3b62e809d1e843bcddda40b10",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=177"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-011",
+      "sourceName": "光慈菇(山慈菇非正品)",
+      "substances": [
+        {
+          "substanceName": "光慈菇",
+          "officialTitle": null,
+          "searchName": "光慈菇",
+          "identityStatus": "non_pharmacopoeia_distinct_substance",
+          "found": false,
+          "reason": "non_pharmacopoeia_distinct_substance"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-012",
+      "sourceName": "白薇(清虚热)",
+      "substances": [
+        {
+          "substanceName": "白薇",
+          "officialTitle": "白薇",
+          "searchName": "白薇",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 165,
+          "englishTitle": "CYNANCHI ATRATI RADIX ET RHIZOMA",
+          "pageNum": 164,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "5～10g。",
+          "attention": null,
+          "htmlContentSha256": "49ae53bae85b002836b7be3adc0e031cb090d1606698d4f38750ff1a7611851c",
+          "searchResponseSha256": "b62b75fdcc9b8c532e9fff057b02c527e79032db7e8fa74c6b6668d898862252",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=165"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-013",
+      "sourceName": "甘遂(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "甘遂",
+          "officialTitle": "甘遂",
+          "searchName": "甘遂",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 128,
+          "englishTitle": "KANSUI RADIX",
+          "pageNum": 138,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性状鉴别检查浸出物含量测定,鉴别检查浸出物含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.5～1.5g，炮制后多入丸散用。外用适量，生用。",
+          "attention": "孕妇禁用；不宜与甘草同用。",
+          "htmlContentSha256": "e05798a80975fe4e3815dc7c1b0ce31df76430109456e33f3418c9bc0c4677b0",
+          "searchResponseSha256": "4687124ec20821c617e5dc600a2dabc893ffbce4b74048bd3395ecc6ee3fff27",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=128"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-014",
+      "sourceName": "京大戟(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "京大戟",
+          "officialTitle": "京大戟",
+          "searchName": "京大戟",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 349,
+          "englishTitle": "EUPHORBIAE PEKINENSIS RADIX",
+          "pageNum": 285,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "1.5～3g。入丸散服，每次1g；内服醋制用。外用适量，生用。",
+          "attention": "孕妇禁用；不宜与甘草同用。",
+          "htmlContentSha256": "8e4cbf4e3d15827b93a318ec1f382433f8f53a5b20a5c26d03dc41eb8d7237f6",
+          "searchResponseSha256": "75714a09a97935673c004d5a6ddfb09215b4132c216519cccef9d7dd06d7e439",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=349"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-015",
+      "sourceName": "芫花(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "芫花",
+          "officialTitle": "芫花",
+          "searchName": "芫花",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 246,
+          "englishTitle": "GENKWA FLOS",
+          "pageNum": 215,
+          "partTitle": "性状,鉴别,浸出物,含量测定,炮制,性状鉴别浸出物含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "1.5～3g。醋芫花研末吞服，一次0.6～0.9g，一日1次。外用适量。",
+          "attention": "孕妇禁用；不宜与甘草同用。",
+          "htmlContentSha256": "068f035019282d59d892a637a8db3a58e8484fbf42c4834948c6bbb5d2b76875",
+          "searchResponseSha256": "4e1ab343f16ac6751d93897e9ee2c17f8f185b774e2db0c36fe9bacde75bdf6b",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=246"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-016",
+      "sourceName": "商陆(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "商陆",
+          "officialTitle": "商陆",
+          "searchName": "商陆",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 513,
+          "englishTitle": "PHYTOLACCAE RADIX",
+          "pageNum": 387,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～9g。外用适量，煎汤熏洗。",
+          "attention": "孕妇禁用。",
+          "htmlContentSha256": "8c5f4883436b9b1cc75e925f3e67ca9a47576556cf89c369b5e13e2aefaa8e07",
+          "searchResponseSha256": "cf7469650a077d0b36a4516548610f4b13fac4ae45eceb07e019c40acf67342d",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=513"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-017",
+      "sourceName": "牵牛子(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "牵牛子",
+          "officialTitle": "牵牛子",
+          "searchName": "牵牛子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 397,
+          "englishTitle": "PHARBITIDIS SEMEN",
+          "pageNum": 314,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,性状鉴别检查浸出物,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g。入丸散服，每次1.5～3g。",
+          "attention": "孕妇禁用；不宜与巴豆、巴豆霜同用。",
+          "htmlContentSha256": "3ab0b131940f3ac150790f417657e77fe6d560cff0a4fc6229922938a7d717c9",
+          "searchResponseSha256": "90c8dab906b34d82c5c7e9c2caccf0524dcbfe6af98ead93b73a47ac242e3743",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=397"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-018",
+      "sourceName": "巴豆(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "巴豆",
+          "officialTitle": "巴豆",
+          "searchName": "巴豆",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 116,
+          "englishTitle": "CROTONIS FRUCTUS",
+          "pageNum": 131,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "外用适量，研末涂患处，或捣烂以纱布包擦患处。",
+          "attention": "孕妇禁用；不宜与牵牛子同用。",
+          "htmlContentSha256": "43d01320b0c7721854b33453b7580d45568c04e67190ee43e069934500373102",
+          "searchResponseSha256": "e5873b4ca77b236b79a702116c1669ec1085387ee9e77aabed7c3d3a17cbf2a5",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=116"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-019",
+      "sourceName": "千金子(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "千金子",
+          "officialTitle": "千金子",
+          "searchName": "千金子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 48,
+          "englishTitle": "EUPHORBIAE SEMEN",
+          "pageNum": 85,
+          "partTitle": "性状,鉴别,含量测定,炮制,检查,性状鉴别含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "1～2g，去壳，去油用，多入丸散服。外用适量，捣烂敷患处。",
+          "attention": "孕妇禁用。以免中毒。",
+          "htmlContentSha256": "f47b6f708ecc324a67f842d5b085e5261b94e68e626b4a79e26c31f514b894e5",
+          "searchResponseSha256": "fcae64e49040c85ddf0db33b46a94b5a8107a0def75d872ab89e9fe0e26c91d2",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=48"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-020",
+      "sourceName": "川乌(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "川乌",
+          "officialTitle": "川乌",
+          "searchName": "川乌",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 54,
+          "englishTitle": "ACONITI RADIX",
+          "pageNum": 89,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "一般炮制后用。",
+          "attention": "生品内服宜慎；孕妇禁用；不宜与半夏、瓜蒌、瓜蒌子、瓜蒌皮、天花粉、川贝母、浙贝母、平贝母、伊贝母、湖北贝母、白蔹、白及同用。",
+          "htmlContentSha256": "1a812a8fa7e50c4d7e88da25602c3d02e13a68f174e0c295b0ad584cec143551",
+          "searchResponseSha256": "b8daed5702230a00f0b359571e1ff6790ef31bce93d0337a25d0b327d7ad989d",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=54"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-021",
+      "sourceName": "草乌(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "草乌",
+          "officialTitle": "草乌",
+          "searchName": "草乌",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 368,
+          "englishTitle": "ACONITI KUSNEZOFFII RADIX",
+          "pageNum": 296,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "一般炮制后用。",
+          "attention": "生品内服宜慎；孕妇禁用；不宜与半夏、瓜蒌、瓜蒌子、瓜蒌皮、天花粉、川贝母、浙贝母、平贝母、伊贝母、湖北贝母、白蔹、白及同用。",
+          "htmlContentSha256": "bd56f7152d08ef99b7ee9190e6c89797bd6cdddbda70f0991851bce33443b5a8",
+          "searchResponseSha256": "669ec85f9b46d76110ca2e4abca0c7d5f0d186d18aa3a0a4b3835fa084e57949",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=368"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-022",
+      "sourceName": "附子(温里)",
+      "substances": [
+        {
+          "substanceName": "附子",
+          "officialTitle": "附子",
+          "searchName": "附子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 294,
+          "englishTitle": "ACONITI LATERALIS RADIX PRAEPARATA",
+          "pageNum": 249,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查,鉴别检查,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～15g，先煎，久煎。",
+          "attention": "孕妇慎用；不宜与半夏、瓜蒌、瓜蒌子、瓜蒌皮、天花粉、川贝母、浙贝母、平贝母、伊贝母、湖北贝母、白蔹、白及同用。",
+          "htmlContentSha256": "020e04bf8a1f20556969fdccf29c20c5904ef67dc29fab616cdf4f7e39c762b6",
+          "searchResponseSha256": "2df7ab6ff8e6a6a7ea262a12e40805c5dea9a1addb9186fbe094617297aca671",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=294"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-023",
+      "sourceName": "吴茱萸(温里)",
+      "substances": [
+        {
+          "substanceName": "吴茱萸",
+          "officialTitle": "吴茱萸",
+          "searchName": "吴茱萸",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 266,
+          "englishTitle": "EUODIAE FRUCTUS",
+          "pageNum": 227,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性状鉴别检查,浸出物含量测定,鉴别检查,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "2～5g。外用适量。",
+          "attention": null,
+          "htmlContentSha256": "de0eb1613bbaf9cc189cefda3c50b8b1023a618ce807e007173eaa5787fa3528",
+          "searchResponseSha256": "35ed1cc5559cb9a15e4f45581123b68e59cd92a6c3c222437318bb9319ce9a88",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=266"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-024",
+      "sourceName": "蕲蛇(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "蕲蛇",
+          "officialTitle": "蕲蛇",
+          "searchName": "蕲蛇",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 593,
+          "englishTitle": "AGKISTRODON",
+          "pageNum": 437,
+          "partTitle": "性状,浸出物,炮制,鉴别,检查,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～9g；研末吞服，一次1～1.5g，一日2～3次。",
+          "attention": null,
+          "htmlContentSha256": "cf1e460600b36428db9fe3c26b188e578288145870278c6ae32c991a1cc05c8a",
+          "searchResponseSha256": "5d09131b5e26b0654cd502261658c7f2b552576f7b64ec84c1e4806ceec269e5",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=593"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-025",
+      "sourceName": "丁公藤(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "丁公藤",
+          "officialTitle": "丁公藤",
+          "searchName": "丁公藤",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 2,
+          "englishTitle": "ERYCIBES CAULIS",
+          "pageNum": 52,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,鉴别检查浸出物含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g，用于配制酒剂，内服或外搽。",
+          "attention": "本品有强烈的发汗作用，虚弱者慎用；孕妇禁用。",
+          "htmlContentSha256": "f9e7cbdcc04fe93fa7098916a46b3c3f239141f79dce72690c8f0db1bbe2abe8",
+          "searchResponseSha256": "2131869e9cbfc7cbf152528f348bd21c36f11cec7f3401494f36172bcdd7eb7c",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=2"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-026",
+      "sourceName": "昆明山海棠(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "昆明山海棠",
+          "officialTitle": "昆明山海棠",
+          "searchName": "昆明山海棠",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "775a79aec6d56da6a5662c7c084349304183ec36e0eae7cfe05374280e76342a"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-027",
+      "sourceName": "雪上一枝蒿(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "雪上一枝蒿",
+          "officialTitle": "雪上一枝蒿",
+          "searchName": "雪上一枝蒿",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "4f01131c6721b5d82001aafc1365c0927f39dd6470f67740a3a18007fbfce2ea"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-028",
+      "sourceName": "雷公藤(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "雷公藤",
+          "officialTitle": "雷公藤",
+          "searchName": "雷公藤",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-029",
+      "sourceName": "天山雪莲花(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "天山雪莲花",
+          "officialTitle": "天山雪莲",
+          "searchName": "天山雪莲",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 76,
+          "englishTitle": "SAUSSUREAE INVOLUCRATAE HERBA",
+          "pageNum": 104,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,性味,功能与主治,用法与用量,禁忌,贮藏",
+          "dose": "3～6g，水煎或酒浸服。外用适量。",
+          "attention": null,
+          "htmlContentSha256": "cecf86b0ec01c3d9f377de7215dd96ed134c9a3c142a641fab9abec617ae754b",
+          "searchResponseSha256": "10cb06cdbbe7c40c3a4a3c54c02732a0b27dc26b15deb8249150414a47f53fbc",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=76"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-030",
+      "sourceName": "石楠叶(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "石楠叶",
+          "officialTitle": "石楠叶",
+          "searchName": "石楠叶",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-031",
+      "sourceName": "香加皮(利水)",
+      "substances": [
+        {
+          "substanceName": "香加皮",
+          "officialTitle": "香加皮",
+          "searchName": "香加皮",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 405,
+          "englishTitle": "PERIPLOCAE CORTEX",
+          "pageNum": 318,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g。",
+          "attention": "不宜过量服用。",
+          "htmlContentSha256": "4090a532ef72fb21fdb00989fe78fdea39c433350e49b22be2b5873132311526",
+          "searchResponseSha256": "c0cd3b2ed36764628dd655b0193f303a143e5f30e15fe9a11fc52684e1501913",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=405"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-032",
+      "sourceName": "泽漆(利水)",
+      "substances": [
+        {
+          "substanceName": "泽漆",
+          "officialTitle": "泽漆",
+          "searchName": "泽漆",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-033",
+      "sourceName": "关木通(利水)",
+      "substances": [
+        {
+          "substanceName": "关木通",
+          "officialTitle": "关木通",
+          "searchName": "关木通",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-034",
+      "sourceName": "川楝子(理气)",
+      "substances": [
+        {
+          "substanceName": "川楝子",
+          "officialTitle": "川楝子",
+          "searchName": "川楝子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 58,
+          "englishTitle": "TOOSENDAN FRUCTUS",
+          "pageNum": 93,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性状鉴别检查浸出物含量测定,鉴别浸出物,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "5～10g。外用适量，研末调涂。",
+          "attention": null,
+          "htmlContentSha256": "c4f98da9b988eea5bfe7f9cd1cc26e92f06941ac9c2312d4ab873238fb2b9f33",
+          "searchResponseSha256": "284da5289658bfd4c00e15947e0af2859ae790806f0f0451ea945cd552baa394",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=58"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-035",
+      "sourceName": "青木香(理气)",
+      "substances": [
+        {
+          "substanceName": "青木香",
+          "officialTitle": "青木香",
+          "searchName": "青木香",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-036",
+      "sourceName": "天仙藤(理气)",
+      "substances": [
+        {
+          "substanceName": "天仙藤",
+          "officialTitle": "天仙藤",
+          "searchName": "天仙藤",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "f429c1a10b0e19e28947013c5f06c2824a81ac68412ff299ca02e18e27c5087e"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-037",
+      "sourceName": "使君子(驱虫)",
+      "substances": [
+        {
+          "substanceName": "使君子",
+          "officialTitle": "使君子",
+          "searchName": "使君子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 332,
+          "englishTitle": "QUISQUALIS FRUCTUS",
+          "pageNum": 273,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,鉴别检查,鉴别含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "使君子9～12g，捣碎入煎剂；使君子仁6～9g，多入丸散或单用，作1～2次分服。小儿每岁1～1.5粒，炒香嚼服，1日总量不超过20粒。",
+          "attention": "服药时忌饮浓茶。",
+          "htmlContentSha256": "86bb94c7d57e0998ac6be7c785722baf4cfb7d2087e3a56760011a925379c062",
+          "searchResponseSha256": "130becd97b96219435a90afdc5e6b8cee7ca70388640fc0fb9d570c96fa8cf19",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=332"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-038",
+      "sourceName": "苦楝皮(驱虫)",
+      "substances": [
+        {
+          "substanceName": "苦楝皮",
+          "officialTitle": "苦楝皮",
+          "searchName": "苦楝皮",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 314,
+          "englishTitle": "MELIAE CORTEX",
+          "pageNum": 261,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g。外用适量，研末，用猪脂调敷患处。",
+          "attention": "孕妇及肝肾功能不全者慎用。",
+          "htmlContentSha256": "af78f70a0a2e5b88ae7cea82b48170faee6b40c892a221d2e7c7b29f8cb6d36b",
+          "searchResponseSha256": "106b827eec49bd8529b0818de96f93d1822cbfaadf041cd990b206ab55ee6b61",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=314"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-039",
+      "sourceName": "雷丸(驱虫)",
+      "substances": [
+        {
+          "substanceName": "雷丸",
+          "officialTitle": "雷丸",
+          "searchName": "雷丸",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 565,
+          "englishTitle": "OMPHALIA",
+          "pageNum": 420,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,鉴别检查含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "15～21g，不宜入煎剂，一般研粉服，一次5～7g，饭后用温开水调服，一日3次，连服3天。",
+          "attention": null,
+          "htmlContentSha256": "617f63e9a45a04c87ec05551c4751476445685e0bc2cb73edfc76e081fff071f",
+          "searchResponseSha256": "8811bec5f64d87f75517be153508c10d74d7ecbfe724127dc9a994b46f179a24",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=565"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-040",
+      "sourceName": "鹤虱(驱虫)",
+      "substances": [
+        {
+          "substanceName": "鹤虱",
+          "officialTitle": "鹤虱",
+          "searchName": "鹤虱",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 599,
+          "englishTitle": "CARPESII FRUCTUS",
+          "pageNum": 441,
+          "partTitle": "性状,鉴别,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～9g。",
+          "attention": null,
+          "htmlContentSha256": "fff2b5558afa249d18b2586838fdff16bf9e1a04193ce2f11f561335ed950a5d",
+          "searchResponseSha256": "f269fef401f02d9a2b188972eb5d6ce9a46e632fde971084330b12410a8a393a",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=599"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-041",
+      "sourceName": "艾叶(止血)",
+      "substances": [
+        {
+          "substanceName": "艾叶",
+          "officialTitle": "艾叶",
+          "searchName": "艾叶",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 130,
+          "englishTitle": "ARTEMISIAE ARGYI FOLIUM",
+          "pageNum": 140,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～9g。外用适量，供灸治或熏洗用。",
+          "attention": null,
+          "htmlContentSha256": "40eb81074dd1d9325995a8e859150b014f160454b370a97debbfd42a60f8be38",
+          "searchResponseSha256": "23d405119b8bd284cca15f2a4bfaee67ced478923ad79008d07d3d11eb6d6a00",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=130"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-042",
+      "sourceName": "桃仁(活血)",
+      "substances": [
+        {
+          "substanceName": "桃仁",
+          "officialTitle": "桃仁",
+          "searchName": "桃仁",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 437,
+          "englishTitle": "PERSICAE SEMEN",
+          "pageNum": 339,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "5～10g。",
+          "attention": "孕妇慎用。",
+          "htmlContentSha256": "a099433f54db8a0743f39f8adcade9874c5c52c31441ada4ca5810c3bd3b3cec",
+          "searchResponseSha256": "cc0da6005837c4bd3f242b649492319ce1d061620811ff42264953ab5144be8e",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=437"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-043",
+      "sourceName": "益母草(活血)",
+      "substances": [
+        {
+          "substanceName": "益母草",
+          "officialTitle": "益母草",
+          "searchName": "益母草",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 457,
+          "englishTitle": "LEONURI HERBA",
+          "pageNum": 351,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "9～30g；鲜品12～40g。",
+          "attention": "孕妇慎用。",
+          "htmlContentSha256": "0e1da2aa7cda9ac5d64d8efaad375015b7af30fee0809549493eae19d91f1d75",
+          "searchResponseSha256": "77aca777e9ea414c1ab74d9b1667581ca8b13a739ecc6ff6a08943f056191a20",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=457"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-044",
+      "sourceName": "土鳖虫(活血)",
+      "substances": [
+        {
+          "substanceName": "土鳖虫",
+          "officialTitle": "土鳖虫（䗪虫）",
+          "searchName": "土鳖虫",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 23,
+          "englishTitle": "EUPOLYPHAGA STELEOPHAGA",
+          "pageNum": 68,
+          "partTitle": "性状,鉴别,检查,浸出物,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～10g。",
+          "attention": "孕妇禁用。",
+          "htmlContentSha256": "9d562748bf72f1a54d3ccb2824e30bc02fae2aee684587fa4565c3725d001615",
+          "searchResponseSha256": "67b1e312fd3296fe5bb2933507b49168fd2fe4968a475e74ae1cbb9c67df35f1",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=23"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-045",
+      "sourceName": "马钱子(疗伤)",
+      "substances": [
+        {
+          "substanceName": "马钱子",
+          "officialTitle": "马钱子",
+          "searchName": "马钱子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 72,
+          "englishTitle": "STRYCHNI SEMEN",
+          "pageNum": 101,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.3～0.6g，炮制后入丸散用。",
+          "attention": "孕妇禁用；不宜多服久服及生用；运动员慎用；有毒成分能经皮肤吸收，外用不宜大面积涂敷。",
+          "htmlContentSha256": "cfd8e8ba9c12dcf1b68723f9955d990a58b8062f40b335026ed871e9969d4041",
+          "searchResponseSha256": "a6084b492a3a8a219fab4b3b2ef5906b7111ca93a91d8e85f63b2914891dfa1a",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=72"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-046",
+      "sourceName": "水蛭(破血)",
+      "substances": [
+        {
+          "substanceName": "水蛭",
+          "officialTitle": "水蛭",
+          "searchName": "水蛭",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 122,
+          "englishTitle": "HIRUDO",
+          "pageNum": 134,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,鉴别检查,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "1～3g。",
+          "attention": "孕妇禁用。",
+          "htmlContentSha256": "d895b02a252687cc22fafb291c4e0922f98a51845ca8aa39db97cbb1fe393c34",
+          "searchResponseSha256": "c12901b1d037e2a77ae6af0022e1658c65dbc437f42d68e76fe6b2883d2650d3",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=122"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-047",
+      "sourceName": "虻虫(破血)",
+      "substances": [
+        {
+          "substanceName": "虻虫",
+          "officialTitle": "虻虫",
+          "searchName": "虻虫",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "aaf54be1b56ef972b050d0beb8a825d8e96602f219d78127ef93ddb15fc4c0ca"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-048",
+      "sourceName": "斑蝥(破血)",
+      "substances": [
+        {
+          "substanceName": "斑蝥",
+          "officialTitle": "斑蝥",
+          "searchName": "斑蝥",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 525,
+          "englishTitle": "MYLABRIS",
+          "pageNum": 394,
+          "partTitle": "性状,鉴别,含量测定,炮制,性状鉴别含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.03～0.06g，炮制后多入丸散用。外用适量，研末或浸酒醋，或制油膏涂敷患处，不宜大面积用。",
+          "attention": "本品有大毒，内服慎用；孕妇禁用。",
+          "htmlContentSha256": "7ac43328d91768e07eaf67cae9cca0fe364b3633584b9de5e41d531bfa46559b",
+          "searchResponseSha256": "3fd2163505605c1d80684944eb83dd11089e23ed04c5914f8893c066a4a495fc",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=525"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-049",
+      "sourceName": "半夏(化痰)",
+      "substances": [
+        {
+          "substanceName": "半夏",
+          "officialTitle": "半夏",
+          "searchName": "半夏",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 179,
+          "englishTitle": "PINELLIAE RHIZOMA",
+          "pageNum": 172,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,性状鉴别检查浸出物,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "内服一般炮制后使用，3～9g。外用适量，磨汁涂或研末以酒调敷患处。",
+          "attention": "不宜与川乌、制川乌、草乌、制草乌、附子同用；生品内服宜慎。",
+          "htmlContentSha256": "a856f019c89cfc7aeda4a5a4f271caddb544086582eea6ba6cdf205fdd1044be",
+          "searchResponseSha256": "40ab0b806ec5d6c04e51c2987642bb2a97017ab0047f3e8164b86ecdb0539c8b",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=179"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-050",
+      "sourceName": "天南星(化痰)",
+      "substances": [
+        {
+          "substanceName": "天南星",
+          "officialTitle": "天南星",
+          "searchName": "天南星",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 81,
+          "englishTitle": "ARISAEMATIS RHIZOMA",
+          "pageNum": 107,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性状鉴别检查浸出物含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "外用生品适量，研末以醋或酒调敷患处。",
+          "attention": "孕妇慎用；生品内服宜慎。",
+          "htmlContentSha256": "a8418df0e1b71c5cd80acd7deb2de7a44ec223c7e2fe4cfaa893a16fc0cf467d",
+          "searchResponseSha256": "557e48d518ce13318e237bccf8beabc43ab45a4fd88fb0748908539b000814b3",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=81"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-051",
+      "sourceName": "禹白附(化痰)",
+      "substances": [
+        {
+          "substanceName": "禹白附",
+          "officialTitle": "白附子",
+          "searchName": "白附子",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 156,
+          "englishTitle": "TYPHONII RHIZOMA",
+          "pageNum": 159,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,性状鉴别检查浸出物,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g。一般炮制后用，外用生品适量捣烂，熬膏或研末以酒调敷患处。",
+          "attention": "孕妇慎用；生品内服宜慎。",
+          "htmlContentSha256": "f5fb0565b1aa853ebb38078c439793dfad9ae20dcfce34d10bce7f344c3ea600",
+          "searchResponseSha256": "b8b49a221137940a3cf317de8dbea06a10d26b670afada635148cba2b37e0ec4",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=156"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-052",
+      "sourceName": "皂荚(化痰)",
+      "substances": [
+        {
+          "substanceName": "皂荚",
+          "officialTitle": "大皂角",
+          "searchName": "大皂角",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 27,
+          "englishTitle": "GLEDITSIAE SINENSIS FRUCTUS",
+          "pageNum": 71,
+          "partTitle": "性状,鉴别,炮制,性状鉴别,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "1～1.5g，多入丸散用。外用适量，研末吹鼻取嚏或研末调敷患处。",
+          "attention": "孕妇及咯血、吐血患者忌服。",
+          "htmlContentSha256": "2da3cacbde4fe332cf35a5753aa2b638c348c98a21115dd3b4a5e0e498454df2",
+          "searchResponseSha256": "fd95d82f1f2b1e67f8fc984afa4022b350993d67535686cf62fa959cbee300b4",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=27"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-053",
+      "sourceName": "黄药子(化痰)",
+      "substances": [
+        {
+          "substanceName": "黄药子",
+          "officialTitle": "黄药子",
+          "searchName": "黄药子",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "7821e3fbd881ae2cbb78dbe2a4c78d8f25aa517fe98075708e2b9c56771aaeba"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-054",
+      "sourceName": "苦杏仁(止咳)",
+      "substances": [
+        {
+          "substanceName": "苦杏仁",
+          "officialTitle": "苦杏仁",
+          "searchName": "苦杏仁",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 312,
+          "englishTitle": "ARMENIACAE SEMEN AMARUM",
+          "pageNum": 259,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "5～10g，生品入煎剂后下。",
+          "attention": "内服不宜过量，以免中毒。",
+          "htmlContentSha256": "c3ad4556f260fbac1f9d4ea2d2447bf46b4158d56a96b16e396a53bf9d741dfa",
+          "searchResponseSha256": "4c0e9fe50b833c9c30e3e1bb04da743e09f7bfb8c03f7865455953aabc31a4f0",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=312"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-055",
+      "sourceName": "马兜铃(止咳)",
+      "substances": [
+        {
+          "substanceName": "马兜铃",
+          "officialTitle": "马兜铃",
+          "searchName": "马兜铃",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "d739555835b0d1bc30efd50c1ca3aa9533d3c1b2668298f001c9fac091292751"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-056",
+      "sourceName": "白果(止咳)",
+      "substances": [
+        {
+          "substanceName": "白果",
+          "officialTitle": "白果",
+          "searchName": "白果",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 159,
+          "englishTitle": "GINKGO SEMEN",
+          "pageNum": 161,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,检查浸出物,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "5～10g。",
+          "attention": "生食有毒。",
+          "htmlContentSha256": "4acb3cbb43d7140a870edefa861c8cd67efd2f78609235c6b1b750d5582c7527",
+          "searchResponseSha256": "5e154b8deb808fb82e8b11a2345ef647872c5bc578b9b2384ab20687fdc609b1",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=159"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-057",
+      "sourceName": "洋金花(止咳)",
+      "substances": [
+        {
+          "substanceName": "洋金花",
+          "officialTitle": "洋金花",
+          "searchName": "洋金花",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 421,
+          "englishTitle": "DATURAE FLOS",
+          "pageNum": 328,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.3～0.6g，宜入丸散；亦可作卷烟分次燃吸（一日量不超过1.5g）。外用适量。",
+          "attention": "孕妇、外感及痰热咳喘、青光眼、高血压及心动过速患者禁用。",
+          "htmlContentSha256": "5964d885f0203c40db7cc7e1fc4dc6f66d8fa3101079f29df8f5b7db06c95c1c",
+          "searchResponseSha256": "42fefd82b996f5629a2658ae22982dde633d0ed74205bffaab1ec811b8405efe",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=421"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-058",
+      "sourceName": "华山参(止咳)",
+      "substances": [
+        {
+          "substanceName": "华山参",
+          "officialTitle": "华山参",
+          "searchName": "华山参",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 215,
+          "englishTitle": "PHYSOCHLAINAE RADIX",
+          "pageNum": 195,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.1～0.2g。",
+          "attention": "不宜多服，以免中毒；青光眼患者禁服；孕妇及前列腺重度肥大者慎用。",
+          "htmlContentSha256": "882adfde0caf2bb46d6059b53bde454c9def3b742ec363a0e5ebced50ceeee2b",
+          "searchResponseSha256": "bbc0e699c9d36aa77d5bcbca030549dd04460440cc1c9d50cc467696d4f947ec",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=215"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-059",
+      "sourceName": "朱砂(安神)",
+      "substances": [
+        {
+          "substanceName": "朱砂",
+          "officialTitle": "朱砂",
+          "searchName": "朱砂",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 210,
+          "englishTitle": "CINNABARIS",
+          "pageNum": 192,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,鉴别检查,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.1～0.5g，多入丸散服，不宜入煎剂。外用适量。",
+          "attention": "本品有毒，不宜大量服用，也不宜少量久服；孕妇及肝肾功能不全者禁用。",
+          "htmlContentSha256": "1d841640aaf05f90019d3be6705290471344f3b7b073787f9336aa9b344a37ca",
+          "searchResponseSha256": "082cfceeab622b340500761859dbc163abf6ef9ee500d517618edb3d50895b78",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=210"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-060",
+      "sourceName": "代赭石(平肝)",
+      "substances": [
+        {
+          "substanceName": "代赭石",
+          "officialTitle": "赭石",
+          "searchName": "赭石",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 591,
+          "englishTitle": "HAEMATITUM",
+          "pageNum": 437,
+          "partTitle": "性状,鉴别,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意",
+          "dose": "9～30g，先煎。",
+          "attention": "孕妇慎用。",
+          "htmlContentSha256": "06e63164546676b5f88e8df45954682ed3a2d43ae98fd747c70d0a28277e56e4",
+          "searchResponseSha256": "f3f2d8ffe225d6728efdf047bbf8792eeba57d15856a7451a2b591ca97fa7bb4",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=591"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-061",
+      "sourceName": "刺蒺藜(平肝)",
+      "substances": [
+        {
+          "substanceName": "刺蒺藜",
+          "officialTitle": "蒺藜",
+          "searchName": "蒺藜",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 559,
+          "englishTitle": "TRIBULI FRUCTUS",
+          "pageNum": 416,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,鉴别检查,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "6～10g。",
+          "attention": null,
+          "htmlContentSha256": "14f4009e5d4562393c460c5c4f083619e54fae0dca3a5177264df2745daff618",
+          "searchResponseSha256": "fc246c6543063496691194c1f694fb4dcd4d1a3c56d1abd3e88a650c622026c7",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=559"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-062",
+      "sourceName": "罗布麻(平肝)",
+      "substances": [
+        {
+          "substanceName": "罗布麻",
+          "officialTitle": "罗布麻叶",
+          "searchName": "罗布麻叶",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 327,
+          "englishTitle": "APOCYNI VENETI FOLIUM",
+          "pageNum": 269,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "6～12g。",
+          "attention": null,
+          "htmlContentSha256": "946874cb0539571e40625a2e93e8576a7eb53c7bd40f758533f911a0c8810b82",
+          "searchResponseSha256": "343b400321e31b83de88dfeffedd61a44bb67d98a2557c21098a93f9e3bdc512",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=327"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-063",
+      "sourceName": "全蝎(息风)",
+      "substances": [
+        {
+          "substanceName": "全蝎",
+          "officialTitle": "全蝎",
+          "searchName": "全蝎",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 220,
+          "englishTitle": "SCORPIO",
+          "pageNum": 198,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,性状鉴别检查浸出物,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g。",
+          "attention": "孕妇禁用。",
+          "htmlContentSha256": "a88cceb9df2466439afb7466debb544d81df9c9055b4e5aff96eee2f8a9d6571",
+          "searchResponseSha256": "8bc139b39df98181d0cff8e2f4f27e24869884fc92d43c171d4cf977ec92c5e5",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=220"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-064",
+      "sourceName": "蜈蚣(息风)",
+      "substances": [
+        {
+          "substanceName": "蜈蚣",
+          "officialTitle": "蜈蚣",
+          "searchName": "蜈蚣",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 567,
+          "englishTitle": "SCOLOPENDRA",
+          "pageNum": 421,
+          "partTitle": "性状,检查,浸出物,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～5g。",
+          "attention": "孕妇禁用。",
+          "htmlContentSha256": "1e1092a34fcc7581ed59ffce6ce1e64cc72af7e718c58caba8ca901911935902",
+          "searchResponseSha256": "22419ff28ebf873e730d9908b9f3e09ca9377d49f9d88725c5e04abb569343fb",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=567"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-065",
+      "sourceName": "麝香(开窍)",
+      "substances": [
+        {
+          "substanceName": "麝香",
+          "officialTitle": "麝香",
+          "searchName": "麝香",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 616,
+          "englishTitle": "MOSCHUS",
+          "pageNum": 451,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.03～0.1g，多入丸散用。外用适量。",
+          "attention": "孕妇禁用。",
+          "htmlContentSha256": "ac160707961d3f43ed550eddec39af91f2229a7de8be699f7de83c0e0282d54e",
+          "searchResponseSha256": "d892cc3919a1b6fa08feb926d85429845c16d0fd292cd45d921a67cf0eeb5b2d",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=616"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-066",
+      "sourceName": "仙茅(补阳)",
+      "substances": [
+        {
+          "substanceName": "仙茅",
+          "officialTitle": "仙茅",
+          "searchName": "仙茅",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 149,
+          "englishTitle": "CURCULIGINIS RHIZOMA",
+          "pageNum": 154,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～10g。",
+          "attention": null,
+          "htmlContentSha256": "cf71c079a05897550ddc4240953f4df686f1bf6785d6035b4517f57897615d36",
+          "searchResponseSha256": "e0258e29001594d0d30b628a431e57736efc94f21dbaa8662e684e08e099bdeb",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=149"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-067",
+      "sourceName": "蛤蚧(补阳)",
+      "substances": [
+        {
+          "substanceName": "蛤蚧",
+          "officialTitle": "蛤蚧",
+          "searchName": "蛤蚧",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 545,
+          "englishTitle": "GECKO",
+          "pageNum": 407,
+          "partTitle": "性状,鉴别,浸出物,炮制,鉴别浸出物,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～6g，多入丸散或酒剂。",
+          "attention": null,
+          "htmlContentSha256": "fdf38d5b15fb7079d7c61257319d2faafb7090b1f97e9d8ae0cfcbac0690d300",
+          "searchResponseSha256": "ace23a873eff4c95e0c4e06cfee2a0bd885ec9fe7056c161651b434704bc1e29",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=545"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-068",
+      "sourceName": "白扁豆(补气)",
+      "substances": [
+        {
+          "substanceName": "白扁豆",
+          "officialTitle": "白扁豆",
+          "searchName": "白扁豆",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 162,
+          "englishTitle": "LABLAB SEMEN ALBUM",
+          "pageNum": 163,
+          "partTitle": "性状,鉴别,检查,炮制,性状鉴别检查,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "9～15g。",
+          "attention": null,
+          "htmlContentSha256": "45bcaab8f7fba4b80753886c428ebd847696dcb63fe16f20b1a3b9e968983b1c",
+          "searchResponseSha256": "5cc3d79ac0400d8a9a7d4e01fea733017efc1985c568d25e23aff2fba439a20b",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=162"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-069",
+      "sourceName": "补骨脂(补阳)",
+      "substances": [
+        {
+          "substanceName": "补骨脂",
+          "officialTitle": "补骨脂",
+          "searchName": "补骨脂",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 289,
+          "englishTitle": "PSORALEAE FRUCTUS",
+          "pageNum": 244,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查,鉴别含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "6～10g。外用20%～30%酊剂涂患处。",
+          "attention": null,
+          "htmlContentSha256": "7bb8b8dc6a081a10dd1cad884bb9c1636f004961a5bd44f8cd7c1bf2fe2c444c",
+          "searchResponseSha256": "eb27a0b21bb2e4f2cd58d7154d44c8c930cb9ae5dcff7158da73b1e8f46663e3",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=289"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-070",
+      "sourceName": "鹿茸(补阳)",
+      "substances": [
+        {
+          "substanceName": "鹿茸",
+          "officialTitle": "鹿茸",
+          "searchName": "鹿茸",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 511,
+          "englishTitle": "CERVI CORNU PANTOTRICHUM",
+          "pageNum": 385,
+          "partTitle": "性状,鉴别,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "1～2g，研末冲服。",
+          "attention": null,
+          "htmlContentSha256": "1dac3c4dbdfe603c0f6b1c2197058d52448c1998fab66f7f97c49650fd874816",
+          "searchResponseSha256": "d8d6a4150a0ab7667ed69d9c184d0d49056308380557902eda6f4b879c6d2d5d",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=511"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-071",
+      "sourceName": "海马(补阳)",
+      "substances": [
+        {
+          "substanceName": "海马",
+          "officialTitle": "海马",
+          "searchName": "海马",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 461,
+          "englishTitle": "HIPPOCAMPUS",
+          "pageNum": 354,
+          "partTitle": "性状,鉴别,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～9g。外用适量，研末敷患处。",
+          "attention": null,
+          "htmlContentSha256": "70bbd831a01d86990f15aa6354fe899afa78182a7eec14e955e36efde57f3569",
+          "searchResponseSha256": "b7eebe443633838e5669b4aa4ecc44f5fb64bf9b7c91807a7f1a47d8ffaa204b",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=461"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-072",
+      "sourceName": "阳起石(补阳)",
+      "substances": [
+        {
+          "substanceName": "阳起石",
+          "officialTitle": "阳起石",
+          "searchName": "阳起石",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "e06f7bf6fbf26ed8e1d80436e728186769cb59f21fabd34849e1a373b27aee9f"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-073",
+      "sourceName": "紫石英(补阳)",
+      "substances": [
+        {
+          "substanceName": "紫石英",
+          "officialTitle": "紫石英",
+          "searchName": "紫石英",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 534,
+          "englishTitle": "FLUORITUM",
+          "pageNum": 400,
+          "partTitle": "性状,鉴别,含量测定,炮制,鉴别含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "9～15g，先煎。",
+          "attention": null,
+          "htmlContentSha256": "f8d83a9e67f25bdb19797fda714616adfbd1abdd470ff9247cf06bcade506fb9",
+          "searchResponseSha256": "e2aad557cd3e476621768e10613917045a25c0fbf82cb5ee66966de162125512",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=534"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-074",
+      "sourceName": "人参(补气)",
+      "substances": [
+        {
+          "substanceName": "人参",
+          "officialTitle": "人参",
+          "searchName": "人参",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 6,
+          "englishTitle": "GINSENG RADIX ET RHIZOMA",
+          "pageNum": 57,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～9g，另煎兑服；也可研粉吞服，一次2g，一日2次。",
+          "attention": "不宜与藜芦、五灵脂同用。",
+          "htmlContentSha256": "4c517bc0182944d4a285c18ca86f869084411eaf64b17d7ecf18fe8ceea2f825",
+          "searchResponseSha256": "7c0a34ccd0c4ad066a3e7ac06f906f170a03f4ec5595895f026301c0ccbebc34",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=6"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-075",
+      "sourceName": "党参(补气)",
+      "substances": [
+        {
+          "substanceName": "党参",
+          "officialTitle": "党参",
+          "searchName": "党参",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 443,
+          "englishTitle": "CODONOPSIS RADIX",
+          "pageNum": 342,
+          "partTitle": "性状,鉴别,检查,浸出物,炮制,鉴别检查浸出物,鉴别检查,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "9～30g。",
+          "attention": "不宜与藜芦同用。",
+          "htmlContentSha256": "849f8c7282a24c322d9f3fd22a532ae20e15a2deabd5d3ed1baf574ae23ffb59",
+          "searchResponseSha256": "587b30b006329fdcac858c582eca0e3fb4c81a337b079abb0898231f3e4051bb",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=443"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-076",
+      "sourceName": "甘草(补气)",
+      "substances": [
+        {
+          "substanceName": "甘草",
+          "officialTitle": "甘草",
+          "searchName": "甘草",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 126,
+          "englishTitle": "GLYCYRRHIZAE RADIX ET RHIZOMA",
+          "pageNum": 137,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "2～10g。",
+          "attention": "不宜与海藻、京大戟、红大戟、甘遂、芫花同用。",
+          "htmlContentSha256": "7f402f76da3ae25c440dd7eedfcf18c549b02f66029727e02c34a89b50532f8a",
+          "searchResponseSha256": "5eb5cd582ed5134c934a27281e65f6d7b77317746696d91dce65f0e4eadb9ac8",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=126"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-077",
+      "sourceName": "黄芪(补气)",
+      "substances": [
+        {
+          "substanceName": "黄芪",
+          "officialTitle": "黄芪",
+          "searchName": "黄芪",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 479,
+          "englishTitle": "ASTRAGALI RADIX",
+          "pageNum": 364,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,检查浸出物含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "9～30g。",
+          "attention": null,
+          "htmlContentSha256": "b8e04dc2fd598821bc3baac8e15522df8ef3862a816f149c944c722d8d7a74cb",
+          "searchResponseSha256": "eb10c64fc449a9a4b3c6f067a95e493d83dc1d9434bae549616e7b6e541b7158",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=479"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-078",
+      "sourceName": "罂粟壳(收涩)",
+      "substances": [
+        {
+          "substanceName": "罂粟壳",
+          "officialTitle": "罂粟壳",
+          "searchName": "罂粟壳",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 588,
+          "englishTitle": "PAPAVERIS PERICARPIUM",
+          "pageNum": 435,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,鉴别检查,浸出物含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "3～6g。",
+          "attention": "本品易成瘾，不宜常服；孕妇及儿童禁用；运动员慎用。",
+          "htmlContentSha256": "075e43843f176bf92044ff116bc5a9fa2df080df32e6aac49031f2dd25a22be6",
+          "searchResponseSha256": "3e9a427d5d11ca1bf4078f02966e0935e44e080750d005cded6d6a3a647e7b3c",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=588"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-079",
+      "sourceName": "肉豆蔻(收涩)",
+      "substances": [
+        {
+          "substanceName": "肉豆蔻",
+          "officialTitle": "肉豆蔻",
+          "searchName": "肉豆蔻",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 208,
+          "englishTitle": "MYRISTICAE SEMEN",
+          "pageNum": 190,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,性状鉴别检查含量测定,鉴别检查,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～10g。",
+          "attention": null,
+          "htmlContentSha256": "57c55ba5fbb1492ab7470387f5a832bc7fe1dc43c7e4397e73fe8a0ab869d02b",
+          "searchResponseSha256": "b7a21ed35810644ae94b3d70aae9bcd2ed2c1d48bdc382238f6d95ef66a96b89",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=208"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-080",
+      "sourceName": "赤石脂(收涩)",
+      "substances": [
+        {
+          "substanceName": "赤石脂",
+          "officialTitle": "赤石脂",
+          "searchName": "赤石脂",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 244,
+          "englishTitle": "HALLOYSITUM RUBRUM",
+          "pageNum": 214,
+          "partTitle": "性状,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "9～12g，先煎。外用适量，研末敷患处。",
+          "attention": "不宜与肉桂同用。",
+          "htmlContentSha256": "7eab9c3dcc688e678da24f8fb64a0ac5077ed951bc5b15fc281e8d7a2abdbfa5",
+          "searchResponseSha256": "300feda23f9a1ffa1f966d2178c7cd62cbb1b434bf4a2e04411636b969a4a1ed",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=244"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-081",
+      "sourceName": "禹余粮(收涩)",
+      "substances": [
+        {
+          "substanceName": "禹余粮",
+          "officialTitle": "禹余粮",
+          "searchName": "禹余粮",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 411,
+          "englishTitle": "LIMONITUM",
+          "pageNum": 322,
+          "partTitle": "性状,鉴别,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "9～15g，先煎；或入丸散。",
+          "attention": "孕妇慎用。",
+          "htmlContentSha256": "73f1c365a39edbb20516ea88220a26bac80e8a57bae5c9ef0ac7803d5ed1200f",
+          "searchResponseSha256": "1a0c39292ab776a1e5614c2250f98f3bcb9e457609db67f7d70b912f0614a6f2",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=411"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-082",
+      "sourceName": "常山(涌吐)",
+      "substances": [
+        {
+          "substanceName": "常山",
+          "officialTitle": "常山",
+          "searchName": "常山",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 493,
+          "englishTitle": "DICHROAE RADIX",
+          "pageNum": 375,
+          "partTitle": "性状,鉴别,检查,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "5～9g。",
+          "attention": "有催吐副作用，用量不宜过大；孕妇慎用。",
+          "htmlContentSha256": "73f8baf3dd715ce185087942e37bce77d5b04131a7065a6bdc19859ac234128d",
+          "searchResponseSha256": "9f6362a5d838c7ff50a7b4a62bcd18e185488af49f09eebaa2a89c88f38a141e",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=493"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-083",
+      "sourceName": "瓜蒂(涌吐)",
+      "substances": [
+        {
+          "substanceName": "瓜蒂",
+          "officialTitle": "瓜蒂",
+          "searchName": "瓜蒂",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-084",
+      "sourceName": "胆矾(涌吐)",
+      "substances": [
+        {
+          "substanceName": "胆矾",
+          "officialTitle": "胆矾",
+          "searchName": "胆矾",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-085",
+      "sourceName": "雄黄(攻毒)",
+      "substances": [
+        {
+          "substanceName": "雄黄",
+          "officialTitle": "雄黄",
+          "searchName": "雄黄",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 533,
+          "englishTitle": "REALGAR",
+          "pageNum": 399,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,鉴别检查含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.05～0.1g，入丸散用。外用适量，熏涂患处。",
+          "attention": "内服宜慎；不可久用；孕妇禁用。",
+          "htmlContentSha256": "761aa45059603ccfa42d7fd3581230fc706daba1778be27b0d67c92821015392",
+          "searchResponseSha256": "7b62b79ace7f0951cb3676c8169921c4392742608089537c39d0d058ebe58c8c",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=533"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-086",
+      "sourceName": "硫黄(攻毒)",
+      "substances": [
+        {
+          "substanceName": "硫黄",
+          "officialTitle": "硫黄",
+          "searchName": "硫黄",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 532,
+          "englishTitle": "SULFUR",
+          "pageNum": 399,
+          "partTitle": "性状,鉴别,含量测定,炮制,鉴别含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "外用适量，研末油调涂敷患处。内服1.5～3g，炮制后入丸散服。",
+          "attention": "孕妇慎用。不宜与芒硝、玄明粉同用。",
+          "htmlContentSha256": "1408b81adf5c0527103abb4430d048741c3620685903d56db76f2d42cd2b8427",
+          "searchResponseSha256": "98abf438a905feaddd04bc6f00c922346dde83fe3c0fcf11cec85fe7130015c9",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=532"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-087",
+      "sourceName": "白矾(攻毒)",
+      "substances": [
+        {
+          "substanceName": "白矾",
+          "officialTitle": "白矾",
+          "searchName": "白矾",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 158,
+          "englishTitle": "ALUMEN",
+          "pageNum": 160,
+          "partTitle": "性状,鉴别,检查,含量测定,炮制,鉴别检查含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "0.6～1.5g。外用适量，研末敷或化水洗患处。",
+          "attention": null,
+          "htmlContentSha256": "d5891554c3e89e2d717a92438f6e92fba4eeb2e155d59135430b7880e928011e",
+          "searchResponseSha256": "f29bc35812bd33b0f924b58c333d05d9d8d3fc608f917970542fa15a9acc11f9",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=158"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-088",
+      "sourceName": "蛇床子(攻毒)",
+      "substances": [
+        {
+          "substanceName": "蛇床子",
+          "officialTitle": "蛇床子",
+          "searchName": "蛇床子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 497,
+          "englishTitle": "CNIDII FRUCTUS",
+          "pageNum": 377,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～10g。外用适量，多煎汤熏洗，或研末调敷。",
+          "attention": null,
+          "htmlContentSha256": "2c44996699814c1b5b9375ab6a55ebd43dd35e4ebdbabd4b3a4e8b5c1aa50763",
+          "searchResponseSha256": "aabe67821ffc64b383983a7db46347401db29e44bfee61a2955165ca32fb69a8",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=497"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-089",
+      "sourceName": "蟾酥(攻毒)",
+      "substances": [
+        {
+          "substanceName": "蟾酥",
+          "officialTitle": "蟾酥",
+          "searchName": "蟾酥",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 614,
+          "englishTitle": "BUFONIS VENENUM",
+          "pageNum": 450,
+          "partTitle": "性状,鉴别,特征图谱,检查,含量测定,炮制,检査,特征图谱含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.015～0.03g，多入丸散用。外用适量。",
+          "attention": "孕妇慎用。",
+          "htmlContentSha256": "089dc387d58768f16ca0dfc963835bdc6701cfde649e1a24e8e3bd3c30e1467a",
+          "searchResponseSha256": "a2b6efeef143177a9b9ccf394916a6a16db61e20d53709cbcbd3366f0f52c8ef",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=614"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-090",
+      "sourceName": "樟脑(攻毒)",
+      "substances": [
+        {
+          "substanceName": "樟脑",
+          "officialTitle": "樟脑",
+          "searchName": "樟脑",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "3cd17c714584f850e202772f7f77d811c9507e62fea53438265a7ce98d5f645e"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-091",
+      "sourceName": "木鳖子(攻毒)",
+      "substances": [
+        {
+          "substanceName": "木鳖子",
+          "officialTitle": "木鳖子",
+          "searchName": "木鳖子",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 94,
+          "englishTitle": "MOMORDICAE SEMEN",
+          "pageNum": 115,
+          "partTitle": "性状,鉴别,含量测定,炮制,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "0.9～1.2g。外用适量，研末，用油或醋调涂患处。",
+          "attention": "孕妇慎用。",
+          "htmlContentSha256": "540326ff0ebb70ba38a7f2bfaa20384d31710a55578c1880f43be504b3229476",
+          "searchResponseSha256": "8580beb003958a305c5952b20bfed3477378d4b0782ef4bccc236f9b69ac0b44",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=94"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-092",
+      "sourceName": "土荆皮(攻毒)",
+      "substances": [
+        {
+          "substanceName": "土荆皮",
+          "officialTitle": "土荆皮",
+          "searchName": "土荆皮",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 21,
+          "englishTitle": "PSEUDOLARICIS CORTEX",
+          "pageNum": 67,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,炮制,鉴别检查,浸出物含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "外用适量，醋或酒浸涂擦，或研末调涂患处。",
+          "attention": null,
+          "htmlContentSha256": "0ea580f7c4d95d33bf115e6bd35d97df5c831c3cb774559782b748d9896c75b8",
+          "searchResponseSha256": "5ade748e6bf03510ca2106b88c9fd9c154d97b1a177e6915aa446897ed3f7890",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=21"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-093",
+      "sourceName": "蜂房(攻毒)",
+      "substances": [
+        {
+          "substanceName": "蜂房",
+          "officialTitle": "蜂房",
+          "searchName": "蜂房",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 568,
+          "englishTitle": "VESPAE NIDUS",
+          "pageNum": 422,
+          "partTitle": "性状,检查,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "3～5g。外用适量，研末油调敷患处，或煎水漱，或洗患处。",
+          "attention": null,
+          "htmlContentSha256": "0c424f872eb8124fea0d0a6049d349bef766a07d29900ef7a651ac6f018e669d",
+          "searchResponseSha256": "a076132fe636cc140fcbfa04830eb0209cb4679e42cd5400956c31c36f86a948",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=568"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-094",
+      "sourceName": "大蒜(攻毒)",
+      "substances": [
+        {
+          "substanceName": "大蒜",
+          "officialTitle": "大蒜",
+          "searchName": "大蒜",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 32,
+          "englishTitle": "ALLII SATIVI BULBUS",
+          "pageNum": 74,
+          "partTitle": "性状,鉴别,检查,浸出物,含量测定,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "9～15g。",
+          "attention": null,
+          "htmlContentSha256": "58d44a42d6baf8e63b274da37a2ae208969ba438a666510710edf496e69bae09",
+          "searchResponseSha256": "3f9037ecc2da10a001de04e2665d3b373efe9674f61079febc02a0086f9c9cdc",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=32"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-095",
+      "sourceName": "升药(红粉,拔毒)",
+      "substances": [
+        {
+          "substanceName": "升药",
+          "officialTitle": "红粉",
+          "searchName": "红粉",
+          "identityStatus": "official_title_normalized",
+          "found": true,
+          "entryId": 238,
+          "englishTitle": "HYDRARGYRI OXYDUM RUBRUM",
+          "pageNum": 210,
+          "partTitle": "性状,鉴别,检查,含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "外用适量，研极细粉单用或与其他药味配成散剂或制成药捻。",
+          "attention": "本品有毒，只可外用，不可内服；外用亦不宜久用；孕妇禁用。",
+          "htmlContentSha256": "b9feb7a89593de128f95315e0d050e68c015dc3273544778ddda6005b3ec3dc7",
+          "searchResponseSha256": "e1e436cebbf002049a8f5e8a730597e7b1b3ec0ce5d332447a23320cddceb4f8",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=238"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-096",
+      "sourceName": "轻粉(拔毒)",
+      "substances": [
+        {
+          "substanceName": "轻粉",
+          "officialTitle": "轻粉",
+          "searchName": "轻粉",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 398,
+          "englishTitle": "CALOMELAS",
+          "pageNum": 314,
+          "partTitle": "性状,鉴别,检查,含量测定,性味与归经,功能与主治,用法与用量,注意,贮藏",
+          "dose": "外用适量，研末掺敷患处。内服每次0.1～0.2g，一日1～2次，多入丸剂或装胶囊服，服后漱口。",
+          "attention": "本品有毒，不可过量；内服慎用；孕妇禁服。",
+          "htmlContentSha256": "10bb36fb749c49eb8d535a12367cf4aa28e923bdf000005683616e614bb5ce94",
+          "searchResponseSha256": "f3eaa6f16253aa23d5759b943c39be3cad5a5b1b48f86989b3acd23738235255",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=398"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-097",
+      "sourceName": "砒石/砒霜(拔毒)",
+      "substances": [
+        {
+          "substanceName": "砒石",
+          "officialTitle": null,
+          "searchName": null,
+          "identityStatus": "combined_source_row_requires_split",
+          "found": false,
+          "reason": "combined_source_row_requires_split"
+        },
+        {
+          "substanceName": "砒霜",
+          "officialTitle": null,
+          "searchName": null,
+          "identityStatus": "combined_source_row_requires_split",
+          "found": false,
+          "reason": "combined_source_row_requires_split"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-098",
+      "sourceName": "铅丹(拔毒)",
+      "substances": [
+        {
+          "substanceName": "铅丹",
+          "officialTitle": "铅丹",
+          "searchName": "铅丹",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "2f7ebb003915aa5a8e0d529408b5cb4cb3d2cfd45828d4ce0e9d49172dbe4932"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-099",
+      "sourceName": "炉甘石(拔毒)",
+      "substances": [
+        {
+          "substanceName": "炉甘石",
+          "officialTitle": "炉甘石",
+          "searchName": "炉甘石",
+          "identityStatus": "same_as_source_name",
+          "found": true,
+          "entryId": 352,
+          "englishTitle": "CALAMINA",
+          "pageNum": 286,
+          "partTitle": "性状,鉴别,含量测定,炮制,性味与归经,功能与主治,用法与用量,贮藏",
+          "dose": "外用适量。",
+          "attention": null,
+          "htmlContentSha256": "0379e34f2b14f391db605ced2c660a092ca987713ac22a7caf55957b18c718d3",
+          "searchResponseSha256": "9592e527b4002afbf93f37360a0fdb40bcb0a389cd7a9aceace5c7e45280e8a4",
+          "sourceUrl": "https://ydz.chp.org.cn/#/item?bookId=1&entryId=352"
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-100",
+      "sourceName": "硼砂(拔毒)",
+      "substances": [
+        {
+          "substanceName": "硼砂",
+          "officialTitle": "硼砂",
+          "searchName": "硼砂",
+          "identityStatus": "same_as_source_name",
+          "found": false,
+          "reason": "not_in_2020_official_digital_book",
+          "searchResponseSha256": "137e74d594d784c727ed5e514746b2661af7f2d17da4a78e96c82f4a927d8e5f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1336 @@
+{
+  "schemaVersion": 1,
+  "source": "2025年版《中华人民共和国药典》一部品名目录",
+  "sourceRole": "current_edition_catalog_identity_only_not_monograph_content",
+  "effectiveDate": "2025-10-01",
+  "announcementUrl": "https://english.nmpa.gov.cn/2025-06/11/c_1102172.htm",
+  "catalogUrl": "https://pharm.ncmi.cn/xwzx/202504/P020250407374829982808.pdf",
+  "catalogPdfSha256": "ed7c610a248e654eaa9db7a7335593816f0ff6afa7783528fd4016df9037d721",
+  "extractedTextSha256": "800c8fd48f4996db593401d0911c4e1669568002ff88f1d61fac0033c4f2b895",
+  "generatedAt": "2026-07-10",
+  "counts": {
+    "sourceRows": 100,
+    "namedSubstances": 101,
+    "currentMonographTitles": 79,
+    "currentTitlesMissingOrUnresolved": 22,
+    "ambiguousGenericNames": 1
+  },
+  "rows": [
+    {
+      "rowId": "tcm-skill-dose-row-001",
+      "sourceName": "细辛(解表)",
+      "substances": [
+        {
+          "substanceName": "细辛",
+          "officialTitle": "细辛",
+          "searchName": "细辛",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-002",
+      "sourceName": "苍耳子(解表)",
+      "substances": [
+        {
+          "substanceName": "苍耳子",
+          "officialTitle": "苍耳子",
+          "searchName": "苍耳子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-003",
+      "sourceName": "苦豆子(清热燥湿)",
+      "substances": [
+        {
+          "substanceName": "苦豆子",
+          "officialTitle": "苦豆子",
+          "searchName": "苦豆子",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-004",
+      "sourceName": "三棵针(清热燥湿)",
+      "substances": [
+        {
+          "substanceName": "三棵针",
+          "officialTitle": "三颗针",
+          "searchName": "三颗针",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-005",
+      "sourceName": "贯众(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "贯众",
+          "officialTitle": null,
+          "searchName": "贯众",
+          "identityStatus": "ambiguous_generic_name",
+          "titleIn2025Catalog": false,
+          "alternativesInCatalog": [
+            "绵马贯众",
+            "紫萁贯众"
+          ]
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-006",
+      "sourceName": "重楼(蚤休,清热解毒)",
+      "substances": [
+        {
+          "substanceName": "重楼",
+          "officialTitle": "重楼",
+          "searchName": "重楼",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-007",
+      "sourceName": "山豆根(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "山豆根",
+          "officialTitle": "山豆根",
+          "searchName": "山豆根",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-008",
+      "sourceName": "北豆根(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "北豆根",
+          "officialTitle": "北豆根",
+          "searchName": "北豆根",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-009",
+      "sourceName": "鸦胆子(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "鸦胆子",
+          "officialTitle": "鸦胆子",
+          "searchName": "鸦胆子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-010",
+      "sourceName": "半边莲(清热解毒)",
+      "substances": [
+        {
+          "substanceName": "半边莲",
+          "officialTitle": "半边莲",
+          "searchName": "半边莲",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-011",
+      "sourceName": "光慈菇(山慈菇非正品)",
+      "substances": [
+        {
+          "substanceName": "光慈菇",
+          "officialTitle": null,
+          "searchName": "光慈菇",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false,
+          "alternativesInCatalog": [
+            "山慈菇"
+          ]
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-012",
+      "sourceName": "白薇(清虚热)",
+      "substances": [
+        {
+          "substanceName": "白薇",
+          "officialTitle": "白薇",
+          "searchName": "白薇",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-013",
+      "sourceName": "甘遂(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "甘遂",
+          "officialTitle": "甘遂",
+          "searchName": "甘遂",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-014",
+      "sourceName": "京大戟(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "京大戟",
+          "officialTitle": "京大戟",
+          "searchName": "京大戟",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-015",
+      "sourceName": "芫花(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "芫花",
+          "officialTitle": "芫花",
+          "searchName": "芫花",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-016",
+      "sourceName": "商陆(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "商陆",
+          "officialTitle": "商陆",
+          "searchName": "商陆",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-017",
+      "sourceName": "牵牛子(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "牵牛子",
+          "officialTitle": "牵牛子",
+          "searchName": "牵牛子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-018",
+      "sourceName": "巴豆(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "巴豆",
+          "officialTitle": "巴豆",
+          "searchName": "巴豆",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-019",
+      "sourceName": "千金子(峻下逐水)",
+      "substances": [
+        {
+          "substanceName": "千金子",
+          "officialTitle": "千金子",
+          "searchName": "千金子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-020",
+      "sourceName": "川乌(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "川乌",
+          "officialTitle": "川乌",
+          "searchName": "川乌",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-021",
+      "sourceName": "草乌(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "草乌",
+          "officialTitle": "草乌",
+          "searchName": "草乌",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-022",
+      "sourceName": "附子(温里)",
+      "substances": [
+        {
+          "substanceName": "附子",
+          "officialTitle": "附子",
+          "searchName": "附子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-023",
+      "sourceName": "吴茱萸(温里)",
+      "substances": [
+        {
+          "substanceName": "吴茱萸",
+          "officialTitle": "吴茱萸",
+          "searchName": "吴茱萸",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-024",
+      "sourceName": "蕲蛇(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "蕲蛇",
+          "officialTitle": "蕲蛇",
+          "searchName": "蕲蛇",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-025",
+      "sourceName": "丁公藤(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "丁公藤",
+          "officialTitle": "丁公藤",
+          "searchName": "丁公藤",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-026",
+      "sourceName": "昆明山海棠(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "昆明山海棠",
+          "officialTitle": "昆明山海棠",
+          "searchName": "昆明山海棠",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-027",
+      "sourceName": "雪上一枝蒿(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "雪上一枝蒿",
+          "officialTitle": "雪上一枝蒿",
+          "searchName": "雪上一枝蒿",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-028",
+      "sourceName": "雷公藤(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "雷公藤",
+          "officialTitle": "雷公藤",
+          "searchName": "雷公藤",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-029",
+      "sourceName": "天山雪莲花(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "天山雪莲花",
+          "officialTitle": "天山雪莲",
+          "searchName": "天山雪莲",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-030",
+      "sourceName": "石楠叶(祛风湿)",
+      "substances": [
+        {
+          "substanceName": "石楠叶",
+          "officialTitle": "石楠叶",
+          "searchName": "石楠叶",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-031",
+      "sourceName": "香加皮(利水)",
+      "substances": [
+        {
+          "substanceName": "香加皮",
+          "officialTitle": "香加皮",
+          "searchName": "香加皮",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-032",
+      "sourceName": "泽漆(利水)",
+      "substances": [
+        {
+          "substanceName": "泽漆",
+          "officialTitle": "泽漆",
+          "searchName": "泽漆",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-033",
+      "sourceName": "关木通(利水)",
+      "substances": [
+        {
+          "substanceName": "关木通",
+          "officialTitle": "关木通",
+          "searchName": "关木通",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-034",
+      "sourceName": "川楝子(理气)",
+      "substances": [
+        {
+          "substanceName": "川楝子",
+          "officialTitle": "川楝子",
+          "searchName": "川楝子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-035",
+      "sourceName": "青木香(理气)",
+      "substances": [
+        {
+          "substanceName": "青木香",
+          "officialTitle": "青木香",
+          "searchName": "青木香",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-036",
+      "sourceName": "天仙藤(理气)",
+      "substances": [
+        {
+          "substanceName": "天仙藤",
+          "officialTitle": "天仙藤",
+          "searchName": "天仙藤",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-037",
+      "sourceName": "使君子(驱虫)",
+      "substances": [
+        {
+          "substanceName": "使君子",
+          "officialTitle": "使君子",
+          "searchName": "使君子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-038",
+      "sourceName": "苦楝皮(驱虫)",
+      "substances": [
+        {
+          "substanceName": "苦楝皮",
+          "officialTitle": "苦楝皮",
+          "searchName": "苦楝皮",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-039",
+      "sourceName": "雷丸(驱虫)",
+      "substances": [
+        {
+          "substanceName": "雷丸",
+          "officialTitle": "雷丸",
+          "searchName": "雷丸",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-040",
+      "sourceName": "鹤虱(驱虫)",
+      "substances": [
+        {
+          "substanceName": "鹤虱",
+          "officialTitle": "鹤虱",
+          "searchName": "鹤虱",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-041",
+      "sourceName": "艾叶(止血)",
+      "substances": [
+        {
+          "substanceName": "艾叶",
+          "officialTitle": "艾叶",
+          "searchName": "艾叶",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-042",
+      "sourceName": "桃仁(活血)",
+      "substances": [
+        {
+          "substanceName": "桃仁",
+          "officialTitle": "桃仁",
+          "searchName": "桃仁",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-043",
+      "sourceName": "益母草(活血)",
+      "substances": [
+        {
+          "substanceName": "益母草",
+          "officialTitle": "益母草",
+          "searchName": "益母草",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-044",
+      "sourceName": "土鳖虫(活血)",
+      "substances": [
+        {
+          "substanceName": "土鳖虫",
+          "officialTitle": "土鳖虫（䗪虫）",
+          "searchName": "土鳖虫",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-045",
+      "sourceName": "马钱子(疗伤)",
+      "substances": [
+        {
+          "substanceName": "马钱子",
+          "officialTitle": "马钱子",
+          "searchName": "马钱子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-046",
+      "sourceName": "水蛭(破血)",
+      "substances": [
+        {
+          "substanceName": "水蛭",
+          "officialTitle": "水蛭",
+          "searchName": "水蛭",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-047",
+      "sourceName": "虻虫(破血)",
+      "substances": [
+        {
+          "substanceName": "虻虫",
+          "officialTitle": "虻虫",
+          "searchName": "虻虫",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-048",
+      "sourceName": "斑蝥(破血)",
+      "substances": [
+        {
+          "substanceName": "斑蝥",
+          "officialTitle": "斑蝥",
+          "searchName": "斑蝥",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-049",
+      "sourceName": "半夏(化痰)",
+      "substances": [
+        {
+          "substanceName": "半夏",
+          "officialTitle": "半夏",
+          "searchName": "半夏",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-050",
+      "sourceName": "天南星(化痰)",
+      "substances": [
+        {
+          "substanceName": "天南星",
+          "officialTitle": "天南星",
+          "searchName": "天南星",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-051",
+      "sourceName": "禹白附(化痰)",
+      "substances": [
+        {
+          "substanceName": "禹白附",
+          "officialTitle": "白附子",
+          "searchName": "白附子",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-052",
+      "sourceName": "皂荚(化痰)",
+      "substances": [
+        {
+          "substanceName": "皂荚",
+          "officialTitle": "大皂角",
+          "searchName": "大皂角",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-053",
+      "sourceName": "黄药子(化痰)",
+      "substances": [
+        {
+          "substanceName": "黄药子",
+          "officialTitle": "黄药子",
+          "searchName": "黄药子",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-054",
+      "sourceName": "苦杏仁(止咳)",
+      "substances": [
+        {
+          "substanceName": "苦杏仁",
+          "officialTitle": "苦杏仁",
+          "searchName": "苦杏仁",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-055",
+      "sourceName": "马兜铃(止咳)",
+      "substances": [
+        {
+          "substanceName": "马兜铃",
+          "officialTitle": "马兜铃",
+          "searchName": "马兜铃",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-056",
+      "sourceName": "白果(止咳)",
+      "substances": [
+        {
+          "substanceName": "白果",
+          "officialTitle": "白果",
+          "searchName": "白果",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-057",
+      "sourceName": "洋金花(止咳)",
+      "substances": [
+        {
+          "substanceName": "洋金花",
+          "officialTitle": "洋金花",
+          "searchName": "洋金花",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-058",
+      "sourceName": "华山参(止咳)",
+      "substances": [
+        {
+          "substanceName": "华山参",
+          "officialTitle": "华山参",
+          "searchName": "华山参",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-059",
+      "sourceName": "朱砂(安神)",
+      "substances": [
+        {
+          "substanceName": "朱砂",
+          "officialTitle": "朱砂",
+          "searchName": "朱砂",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-060",
+      "sourceName": "代赭石(平肝)",
+      "substances": [
+        {
+          "substanceName": "代赭石",
+          "officialTitle": "赭石",
+          "searchName": "赭石",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-061",
+      "sourceName": "刺蒺藜(平肝)",
+      "substances": [
+        {
+          "substanceName": "刺蒺藜",
+          "officialTitle": "蒺藜",
+          "searchName": "蒺藜",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-062",
+      "sourceName": "罗布麻(平肝)",
+      "substances": [
+        {
+          "substanceName": "罗布麻",
+          "officialTitle": "罗布麻叶",
+          "searchName": "罗布麻叶",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-063",
+      "sourceName": "全蝎(息风)",
+      "substances": [
+        {
+          "substanceName": "全蝎",
+          "officialTitle": "全蝎",
+          "searchName": "全蝎",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-064",
+      "sourceName": "蜈蚣(息风)",
+      "substances": [
+        {
+          "substanceName": "蜈蚣",
+          "officialTitle": "蜈蚣",
+          "searchName": "蜈蚣",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-065",
+      "sourceName": "麝香(开窍)",
+      "substances": [
+        {
+          "substanceName": "麝香",
+          "officialTitle": "麝香",
+          "searchName": "麝香",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-066",
+      "sourceName": "仙茅(补阳)",
+      "substances": [
+        {
+          "substanceName": "仙茅",
+          "officialTitle": "仙茅",
+          "searchName": "仙茅",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-067",
+      "sourceName": "蛤蚧(补阳)",
+      "substances": [
+        {
+          "substanceName": "蛤蚧",
+          "officialTitle": "蛤蚧",
+          "searchName": "蛤蚧",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-068",
+      "sourceName": "白扁豆(补气)",
+      "substances": [
+        {
+          "substanceName": "白扁豆",
+          "officialTitle": "白扁豆",
+          "searchName": "白扁豆",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-069",
+      "sourceName": "补骨脂(补阳)",
+      "substances": [
+        {
+          "substanceName": "补骨脂",
+          "officialTitle": "补骨脂",
+          "searchName": "补骨脂",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-070",
+      "sourceName": "鹿茸(补阳)",
+      "substances": [
+        {
+          "substanceName": "鹿茸",
+          "officialTitle": "鹿茸",
+          "searchName": "鹿茸",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-071",
+      "sourceName": "海马(补阳)",
+      "substances": [
+        {
+          "substanceName": "海马",
+          "officialTitle": "海马",
+          "searchName": "海马",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-072",
+      "sourceName": "阳起石(补阳)",
+      "substances": [
+        {
+          "substanceName": "阳起石",
+          "officialTitle": "阳起石",
+          "searchName": "阳起石",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-073",
+      "sourceName": "紫石英(补阳)",
+      "substances": [
+        {
+          "substanceName": "紫石英",
+          "officialTitle": "紫石英",
+          "searchName": "紫石英",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-074",
+      "sourceName": "人参(补气)",
+      "substances": [
+        {
+          "substanceName": "人参",
+          "officialTitle": "人参",
+          "searchName": "人参",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-075",
+      "sourceName": "党参(补气)",
+      "substances": [
+        {
+          "substanceName": "党参",
+          "officialTitle": "党参",
+          "searchName": "党参",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-076",
+      "sourceName": "甘草(补气)",
+      "substances": [
+        {
+          "substanceName": "甘草",
+          "officialTitle": "甘草",
+          "searchName": "甘草",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-077",
+      "sourceName": "黄芪(补气)",
+      "substances": [
+        {
+          "substanceName": "黄芪",
+          "officialTitle": "黄芪",
+          "searchName": "黄芪",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-078",
+      "sourceName": "罂粟壳(收涩)",
+      "substances": [
+        {
+          "substanceName": "罂粟壳",
+          "officialTitle": "罂粟壳",
+          "searchName": "罂粟壳",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-079",
+      "sourceName": "肉豆蔻(收涩)",
+      "substances": [
+        {
+          "substanceName": "肉豆蔻",
+          "officialTitle": "肉豆蔻",
+          "searchName": "肉豆蔻",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-080",
+      "sourceName": "赤石脂(收涩)",
+      "substances": [
+        {
+          "substanceName": "赤石脂",
+          "officialTitle": "赤石脂",
+          "searchName": "赤石脂",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-081",
+      "sourceName": "禹余粮(收涩)",
+      "substances": [
+        {
+          "substanceName": "禹余粮",
+          "officialTitle": "禹余粮",
+          "searchName": "禹余粮",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-082",
+      "sourceName": "常山(涌吐)",
+      "substances": [
+        {
+          "substanceName": "常山",
+          "officialTitle": "常山",
+          "searchName": "常山",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-083",
+      "sourceName": "瓜蒂(涌吐)",
+      "substances": [
+        {
+          "substanceName": "瓜蒂",
+          "officialTitle": "瓜蒂",
+          "searchName": "瓜蒂",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-084",
+      "sourceName": "胆矾(涌吐)",
+      "substances": [
+        {
+          "substanceName": "胆矾",
+          "officialTitle": "胆矾",
+          "searchName": "胆矾",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-085",
+      "sourceName": "雄黄(攻毒)",
+      "substances": [
+        {
+          "substanceName": "雄黄",
+          "officialTitle": "雄黄",
+          "searchName": "雄黄",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-086",
+      "sourceName": "硫黄(攻毒)",
+      "substances": [
+        {
+          "substanceName": "硫黄",
+          "officialTitle": "硫黄",
+          "searchName": "硫黄",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-087",
+      "sourceName": "白矾(攻毒)",
+      "substances": [
+        {
+          "substanceName": "白矾",
+          "officialTitle": "白矾",
+          "searchName": "白矾",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-088",
+      "sourceName": "蛇床子(攻毒)",
+      "substances": [
+        {
+          "substanceName": "蛇床子",
+          "officialTitle": "蛇床子",
+          "searchName": "蛇床子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-089",
+      "sourceName": "蟾酥(攻毒)",
+      "substances": [
+        {
+          "substanceName": "蟾酥",
+          "officialTitle": "蟾酥",
+          "searchName": "蟾酥",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-090",
+      "sourceName": "樟脑(攻毒)",
+      "substances": [
+        {
+          "substanceName": "樟脑",
+          "officialTitle": "樟脑",
+          "searchName": "樟脑",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-091",
+      "sourceName": "木鳖子(攻毒)",
+      "substances": [
+        {
+          "substanceName": "木鳖子",
+          "officialTitle": "木鳖子",
+          "searchName": "木鳖子",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-092",
+      "sourceName": "土荆皮(攻毒)",
+      "substances": [
+        {
+          "substanceName": "土荆皮",
+          "officialTitle": "土荆皮",
+          "searchName": "土荆皮",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-093",
+      "sourceName": "蜂房(攻毒)",
+      "substances": [
+        {
+          "substanceName": "蜂房",
+          "officialTitle": "蜂房",
+          "searchName": "蜂房",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-094",
+      "sourceName": "大蒜(攻毒)",
+      "substances": [
+        {
+          "substanceName": "大蒜",
+          "officialTitle": "大蒜",
+          "searchName": "大蒜",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-095",
+      "sourceName": "升药(红粉,拔毒)",
+      "substances": [
+        {
+          "substanceName": "升药",
+          "officialTitle": "红粉",
+          "searchName": "红粉",
+          "identityStatus": "mapped_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-096",
+      "sourceName": "轻粉(拔毒)",
+      "substances": [
+        {
+          "substanceName": "轻粉",
+          "officialTitle": "轻粉",
+          "searchName": "轻粉",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-097",
+      "sourceName": "砒石/砒霜(拔毒)",
+      "substances": [
+        {
+          "substanceName": "砒石",
+          "officialTitle": null,
+          "searchName": null,
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false,
+          "alternativesInCatalog": []
+        },
+        {
+          "substanceName": "砒霜",
+          "officialTitle": null,
+          "searchName": null,
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false,
+          "alternativesInCatalog": []
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-098",
+      "sourceName": "铅丹(拔毒)",
+      "substances": [
+        {
+          "substanceName": "铅丹",
+          "officialTitle": "铅丹",
+          "searchName": "铅丹",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-099",
+      "sourceName": "炉甘石(拔毒)",
+      "substances": [
+        {
+          "substanceName": "炉甘石",
+          "officialTitle": "炉甘石",
+          "searchName": "炉甘石",
+          "identityStatus": "exact_current_monograph",
+          "titleIn2025Catalog": true
+        }
+      ]
+    },
+    {
+      "rowId": "tcm-skill-dose-row-100",
+      "sourceName": "硼砂(拔毒)",
+      "substances": [
+        {
+          "substanceName": "硼砂",
+          "officialTitle": "硼砂",
+          "searchName": "硼砂",
+          "identityStatus": "not_current_pharmacopoeia_monograph",
+          "titleIn2025Catalog": false
+        }
+      ]
+    }
+  ]
+}

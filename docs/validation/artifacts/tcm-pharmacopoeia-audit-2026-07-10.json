@@ -1,0 +1,225 @@
+{
+  "audit": "tcm-pharmacopoeia-candidates",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 2468,
+    "failures": 0,
+    "activeRuntimeFilesScanned": 22,
+    "sourceRows": 100,
+    "namedSubstances": 101,
+    "current2025CatalogTitles": 79,
+    "current2025MissingOrUnresolved": 22,
+    "ambiguousCurrentNames": 1,
+    "official2020Monographs": 79,
+    "official2020QuantityConcordant": 41,
+    "official2020QuantityConflicts": 38,
+    "emergencyInstructionRows": 11
+  },
+  "categories": {
+    "contract": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "row_preservation": {
+      "checks": 600,
+      "passed": 600,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 503,
+      "passed": 503,
+      "failed": 0
+    },
+    "snapshot_join": {
+      "checks": 703,
+      "passed": 703,
+      "failed": 0
+    },
+    "identity": {
+      "checks": 101,
+      "passed": 101,
+      "failed": 0
+    },
+    "historical_comparator": {
+      "checks": 518,
+      "passed": 518,
+      "failed": 0
+    },
+    "summary": {
+      "checks": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "adjudication": {
+      "checks": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "adjudicatedNames": {
+    "historicalQuantityConflicts": [
+      "苍耳子",
+      "三颗针",
+      "北豆根",
+      "半边莲",
+      "白薇",
+      "甘遂",
+      "芫花",
+      "商陆",
+      "牵牛子",
+      "吴茱萸",
+      "天山雪莲",
+      "川楝子",
+      "使君子",
+      "苦楝皮",
+      "鹤虱",
+      "艾叶",
+      "益母草",
+      "水蛭",
+      "半夏",
+      "白附子",
+      "苦杏仁",
+      "洋金花",
+      "赭石",
+      "蒺藜",
+      "罗布麻叶",
+      "仙茅",
+      "蛤蚧",
+      "白扁豆",
+      "补骨脂",
+      "人参",
+      "甘草",
+      "肉豆蔻",
+      "赤石脂",
+      "禹余粮",
+      "常山",
+      "蛇床子",
+      "木鳖子",
+      "大蒜"
+    ],
+    "current2025MissingOrUnresolved": [
+      "苦豆子",
+      "贯众",
+      "光慈菇",
+      "昆明山海棠",
+      "雪上一枝蒿",
+      "雷公藤",
+      "石楠叶",
+      "泽漆",
+      "关木通",
+      "青木香",
+      "天仙藤",
+      "虻虫",
+      "黄药子",
+      "马兜铃",
+      "阳起石",
+      "瓜蒂",
+      "胆矾",
+      "樟脑",
+      "砒石",
+      "砒霜",
+      "铅丹",
+      "硼砂"
+    ],
+    "emergencyInstructionRows": [
+      "川乌",
+      "附子",
+      "丁公藤",
+      "使君子",
+      "马钱子",
+      "半夏",
+      "天南星",
+      "洋金花",
+      "华山参",
+      "瓜蒂",
+      "胆矾"
+    ]
+  },
+  "findings": [
+    {
+      "id": "TCM-PHARM-001",
+      "severity": "high",
+      "status": "blocked",
+      "description": "The 2025 public evidence in this project is a current title catalog, not monograph dose text; no Skill dose is current-edition validated."
+    },
+    {
+      "id": "TCM-PHARM-002",
+      "severity": "high",
+      "status": "recorded",
+      "description": "Thirty-eight candidate substances differ from at least one gram quantity in the official 2020 digital monograph comparator."
+    },
+    {
+      "id": "TCM-ID-001",
+      "severity": "high",
+      "status": "corrected_in_normalized_layer",
+      "description": "The Skill source name 三棵针 is normalized to the official title 三颗针; the immutable raw import is unchanged."
+    },
+    {
+      "id": "TCM-ID-002",
+      "severity": "high",
+      "status": "blocked",
+      "description": "The generic identity 贯众 is ambiguous between at least 绵马贯众 and 紫萁贯众 in the 2025 catalog."
+    },
+    {
+      "id": "TCM-ID-003",
+      "severity": "critical",
+      "status": "blocked",
+      "description": "光慈菇 remains distinct and must not be mapped to the genuine 山慈菇 monograph."
+    },
+    {
+      "id": "TCM-SAFE-002",
+      "severity": "critical",
+      "status": "blocked",
+      "description": "Eleven raw rows contain emergency or home-antidote instructions; they are retained for audit only and excluded from runtime."
+    },
+    {
+      "id": "TCM-COMPAT-NAME-001",
+      "severity": "high",
+      "status": "source_error_confirmed",
+      "description": "The Skill compatibility table conflates 沙参 and 苦参 as 沙参(苦参); normalized consumers must keep them separate."
+    }
+  ],
+  "evidenceBoundary": [
+    "2025 catalog membership validates candidate identity only, not dose, preparation, contraindication, or clinical use.",
+    "2020 digital monographs are official historical comparators and are not represented as current 2025 authority.",
+    "Absence from the 2025 Pharmacopoeia catalog does not prove absence from every other applicable standard.",
+    "All 101 substances remain product-blocked and expose no runtime-eligible fields."
+  ],
+  "relevantSha256": {
+    "normalizedCore": "cf45902c8aa9869a1fdb555b72ca7ce7780e038f83c4e098e5c1242bc55c7506",
+    "rawSafetyReference": "ec4a66f0f6f812ee1d66accf8cbe095701b32a51936157d6dae87594608e1dcc",
+    "chp2020Snapshot": "decb0316a81ae7d864bc86f84db5b87bf6a1eb51cf29f8990ec36529511ad757",
+    "chp2025Snapshot": "4fab3ff363983550206c7d63669f91506b02041ed5e754d60c4ad776f41c9f53"
+  },
+  "sourceRefs": {
+    "skillSafetyReference": {
+      "path": "database/tcm/skill-v3/references/安全-配伍妊娠禁忌与毒性药.md",
+      "sha256": "ec4a66f0f6f812ee1d66accf8cbe095701b32a51936157d6dae87594608e1dcc",
+      "role": "raw_candidate_reference"
+    },
+    "chp2025Catalog": {
+      "path": "database/tcm/sources/chp2025-part1-candidate-index.json",
+      "sha256": "4fab3ff363983550206c7d63669f91506b02041ed5e754d60c4ad776f41c9f53",
+      "sourcePdfSha256": "ed7c610a248e654eaa9db7a7335593816f0ff6afa7783528fd4016df9037d721",
+      "role": "current_identity_catalog_only"
+    },
+    "chp2020Digital": {
+      "path": "database/tcm/sources/chp2020-tcm-safety-selected.json",
+      "sha256": "decb0316a81ae7d864bc86f84db5b87bf6a1eb51cf29f8990ec36529511ad757",
+      "role": "official_historical_dose_and_attention_comparator"
+    }
+  },
+  "failures": []
+}

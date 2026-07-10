@@ -5,8 +5,8 @@
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
   "overallPercent": 56,
-  "currentFocus": "中医逐药药典、妊娠、配伍、方剂与穴位外治安全验证；临床解释继续 blocked。",
-  "nextDecision": "先固定 Skill 剂量/妊娠/配伍表与当前 legacy 消费清单，再按现行权威来源分批裁决 product eligibility。",
+  "currentFocus": "中医妊娠禁忌、十八反十九畏、马兜铃酸与 31 条方剂警示全量规范化和现行来源复核；临床解释继续 blocked。",
+  "nextDecision": "先把妊娠、配伍、马兜铃酸和方剂警示逐条拆成稳定 ID、药名实体、来源定位与 product eligibility；优先裁决现行药典注意字段和监管状态，未通过项继续 blocked。",
   "antiDriftRule": "数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
   "phases": [
@@ -329,11 +329,11 @@
     }
   ],
   "gates": [
-    { "name": "排盘与数据库正确性", "state": "tcm_pharmacopoeia_validation_in_progress", "rule": "共享城市/民用时区当前域已通过；当前核验中医药典、妊娠、配伍、方剂与外治安全，临床解释继续 blocked。" },
+    { "name": "排盘与数据库正确性", "state": "tcm_pregnancy_compatibility_validation_in_progress", "rule": "100 行/101 味药典候选层已通过来源/阻断审计并全部 blocked；当前核验妊娠、配伍、马兜铃酸和方剂警示。" },
     { "name": "Product A 复用决策", "state": "partial", "rule": "已验证模块的壳层和确定性结构可继续；解释层逐字段 gate。" },
     { "name": "主线定义", "state": "hold", "rule": "PRD fresh review 已完成；关闭 correctness、TCM safety 与数据合同阻塞项后再确认。" },
     { "name": "数据库来源可追踪", "state": "baseline_complete", "rule": "规范化条目必须能回指 raw source 与文件。" },
-    { "name": "中医安全", "state": "partial_blocked", "rule": "法定毒性 28 项已规范化；剂量、妊娠、配伍、方剂和穴位外治仍 blocked，不扩大产品消费范围。" },
+    { "name": "中医安全", "state": "pregnancy_compatibility_in_progress", "rule": "法定毒性 28 项已规范化；药典候选 100 行/101 味已全量审计但剂量全部 blocked；妊娠、配伍、方剂和穴位外治未通过前不扩大产品消费范围。" },
     { "name": "教学答案可信", "state": "blocked", "rule": "测验规范答案必须来自已校勘知识点，AI 不能单独充当答案源。" },
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
@@ -388,6 +388,11 @@
     "TJI-VAL-017 完成：子午基础对应全天 1,440 分钟、4,457 项 0 fail；旁路旧医学化文案已移除",
     "TJI-VAL-018 完成：374 条 GeoNames 来源行、276 个中国城市省级合同、73,414 日、17,952 城市时点与 10 个 DST fixture 共 132,836 项 0 fail",
     "共享时间浏览器回归：拉斯维加斯为 America/Los_Angeles；纽约 2025-07-15 午时校正 -62 分；390x844 无水平溢出",
-    "第二轮 PRD fresh reviewer：5 个 P1、2 个 P2，无 P0；结论 HOLD"
+    "第二轮 PRD fresh reviewer：5 个 P1、2 个 P2，无 P0；结论 HOLD",
+    "中医剂量 Skill 已拆为 100 行/101 味候选；2025 药典第一部目录命中 79 味，22 味缺失或名称未裁决，所有候选继续 blocked",
+    "2020 官方数字药典历史正文命中 79 味；41 味克数覆盖一致，38 味存在数量差异，仅作历史冲突证据，不冒充 2025 现行剂量",
+    "原始安全表检出 11 行疑似居家急救/解毒指令并全部禁止产品展示；主配伍表“沙参(苦参)”混名已确认为来源错误",
+    "TJI-VAL-019 药典候选子批次完成：2,468 项 0 fail；全库 validation 109/109，专项 lint 和 production build 通过",
+    "药典候选 fresh review 无 P0；中文克数正则漏检 P1、运行时扫描范围与 Coverage 陈旧结论两个 P2 均已修复并复测"
   ]
 }
