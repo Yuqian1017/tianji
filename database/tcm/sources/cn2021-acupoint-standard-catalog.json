@@ -1,0 +1,3746 @@
+{
+  "schemaVersion": 1,
+  "status": "official_current_status_and_counts_with_secondary_name_transcription",
+  "generatedAt": "2026-07-10",
+  "sourceDocuments": [
+    {
+      "id": "CN-GBT-12346-2021",
+      "title": "经穴名称与定位",
+      "status": "current",
+      "officialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=397548AE7248D3D87DD15E0AB8107185",
+      "publishedAndEffective": "2021-11-26",
+      "statedScope": "362 meridian points"
+    },
+    {
+      "id": "CN-GBT-40997-2021",
+      "title": "经外奇穴名称与定位",
+      "status": "current",
+      "officialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=D2AEF8AD07C0150E19859079579EF99F",
+      "publishedAndEffective": "2021-11-26",
+      "statedScope": "51 extra points in common use"
+    }
+  ],
+  "structuredTranscriptionSupport": {
+    "repository": "https://github.com/luthepath/TCM-Input-Method",
+    "commit": "1a0bc95d3e15f01d1d7be8293ca8deac40ab058f",
+    "license": "MIT",
+    "role": "name-list transcription aid only; official standards control version and count",
+    "meridianFileSha256": "809cddf7cd678346d15f4b917288aa1430b3ece248e600851a688e73632d3848",
+    "extraPointFileSha256": "50555e1b8c56f6b5799809e921727a58cd4a4cc27b394c462b97379a207ae765",
+    "correctionsApplied": [
+      "Merged 金津 and 玉液 into the single current-standard entry 金津玉液.",
+      "Excluded the non-catalog test line 气室门天牖.",
+      "Added the transcribed GV29 印堂 candidate to reconcile the secondary 362-name list with the official count."
+    ]
+  },
+  "sourceRefs": {
+    "who2008NameIndex": {
+      "path": "database/tcm/sources/who2008-acupoint-name-index.json",
+      "sha256": "15efb2be8f1208028554a9bbb26733b96347dba573cb3e58677dcb176dbd9a67",
+      "sourcePdfSha256": "c9d4095383c636f85e61b5bc5d7631a658308c0336e8f691b0eb29f517d5bf5b"
+    }
+  },
+  "counts": {
+    "officialCurrentMeridianPointCount": 362,
+    "officialCurrentExtraPointCount": 51,
+    "transcribedMeridianPointNames": 362,
+    "transcribedExtraPointNames": 51,
+    "byMeridian": {
+      "LU": 11,
+      "LI": 20,
+      "ST": 45,
+      "SP": 21,
+      "HT": 9,
+      "SI": 19,
+      "BL": 67,
+      "KI": 27,
+      "PC": 9,
+      "TE": 23,
+      "GB": 44,
+      "LR": 14,
+      "GV": 29,
+      "CV": 24
+    }
+  },
+  "transcribedMeridianPoints": [
+    {
+      "code": "LU1",
+      "meridianCode": "LU",
+      "sequence": 1,
+      "pinyin": "Zhongfu",
+      "name": "中府",
+      "sourceHeadingSha256": "1efdd7ca7f6c0551ff46342a63776fbc101b75e4aa1afdbc5202fb0579fbcbb9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU2",
+      "meridianCode": "LU",
+      "sequence": 2,
+      "pinyin": "Yunmen",
+      "name": "云门",
+      "sourceHeadingSha256": "1cab497833d064695a72aae54fec3c7285dce8fe7ef38d2fdce4bc1486cde64e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU3",
+      "meridianCode": "LU",
+      "sequence": 3,
+      "pinyin": "Tianfu",
+      "name": "天府",
+      "sourceHeadingSha256": "4a58a4a87d19ccacd57576e2d2b31e641a022337bb4cc023c537c8f314e60f84",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU4",
+      "meridianCode": "LU",
+      "sequence": 4,
+      "pinyin": "Xiabai",
+      "name": "侠白",
+      "sourceHeadingSha256": "4985d39d4df56d067f7834b4f4ed4ffafac677c3109aa31b6f394be8551ead39",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU5",
+      "meridianCode": "LU",
+      "sequence": 5,
+      "pinyin": "Chize",
+      "name": "尺泽",
+      "sourceHeadingSha256": "cae45718c797434cf3157a89fcf2de856a232493e1ea4e95c883ac426f7685ad",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU6",
+      "meridianCode": "LU",
+      "sequence": 6,
+      "pinyin": "Kongzui",
+      "name": "孔最",
+      "sourceHeadingSha256": "3ee8672ba9c64a824db16a248bb6c5303c34f152062eaace1c573be42a4e98d6",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU7",
+      "meridianCode": "LU",
+      "sequence": 7,
+      "pinyin": "Lieque",
+      "name": "列缺",
+      "sourceHeadingSha256": "d5d2e667f5306e6088b8c15cbe5fcbb64b6ad481123496b4c6253b50e50d3aed",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU8",
+      "meridianCode": "LU",
+      "sequence": 8,
+      "pinyin": "Jingqu",
+      "name": "经渠",
+      "sourceHeadingSha256": "e59556c86bb5593855f9507c47dbfc91ea0ef73f1399a8bfad4fe7d520bf1bfd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU9",
+      "meridianCode": "LU",
+      "sequence": 9,
+      "pinyin": "Taiyuan",
+      "name": "太渊",
+      "sourceHeadingSha256": "8b796ca9c0b9633e5694ba6ef798f6997c5f18f6bd9ebcb1f52a274798e8d0a2",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU10",
+      "meridianCode": "LU",
+      "sequence": 10,
+      "pinyin": "Yuji",
+      "name": "鱼际",
+      "sourceHeadingSha256": "915adaad28952406dbbbdd0bb8f7715787511022d777ba57a75403d707e8f1dd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LU11",
+      "meridianCode": "LU",
+      "sequence": 11,
+      "pinyin": "Shaoshang",
+      "name": "少商",
+      "sourceHeadingSha256": "184ac80928a5b95e004750892603855ef99568473ad856e0adec524fafc0e1f5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI1",
+      "meridianCode": "LI",
+      "sequence": 1,
+      "pinyin": "Shangyang",
+      "name": "商阳",
+      "sourceHeadingSha256": "3ea63f7d571fdeeb8df92e422da90718e41901f04dc66121d5625d34cef4217f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI2",
+      "meridianCode": "LI",
+      "sequence": 2,
+      "pinyin": "Erjian",
+      "name": "二间",
+      "sourceHeadingSha256": "4dcd09acbd23ae1207f51912d90dec62ebe6e0e8fc314e9f7dd7552067baf645",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI3",
+      "meridianCode": "LI",
+      "sequence": 3,
+      "pinyin": "Sanjian",
+      "name": "三间",
+      "sourceHeadingSha256": "677cde5ff1b1ed9a6c438ea65554fd2ff085bd236a283fc2a3048109d4437521",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI4",
+      "meridianCode": "LI",
+      "sequence": 4,
+      "pinyin": "Hegu",
+      "name": "合谷",
+      "sourceHeadingSha256": "f474279945c039114d091e00ffdaffa8bbe5afa250061ecddcd8f9b7a64c65a1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI5",
+      "meridianCode": "LI",
+      "sequence": 5,
+      "pinyin": "Yangxi",
+      "name": "阳溪",
+      "sourceHeadingSha256": "613e7d6e9ab58ec5fd2d0268fb477fcc3240051e36cd78db9422dce0fb81284f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI6",
+      "meridianCode": "LI",
+      "sequence": 6,
+      "pinyin": "Pianli",
+      "name": "偏历",
+      "sourceHeadingSha256": "53d4c819afbe5811314e915d9b452fdd8034c816d7f26135758aeee19db1e936",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI7",
+      "meridianCode": "LI",
+      "sequence": 7,
+      "pinyin": "Wenliu",
+      "name": "温溜",
+      "sourceHeadingSha256": "271d84187803d5f4efeb1edba3064a1e269756eef3fc719cda3f7e5336ac95c6",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI8",
+      "meridianCode": "LI",
+      "sequence": 8,
+      "pinyin": "Xialian",
+      "name": "下廉",
+      "sourceHeadingSha256": "0227dbc19fa46300a637f903ed24e6e3ce9b8a769562477ff11fc8bb7dfcd1f4",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI9",
+      "meridianCode": "LI",
+      "sequence": 9,
+      "pinyin": "Shanglian",
+      "name": "上廉",
+      "sourceHeadingSha256": "3287cf7a3bc93fa6b5ddd6136eb3607ea550ab73784d084942ae98fba7933dc4",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI10",
+      "meridianCode": "LI",
+      "sequence": 10,
+      "pinyin": "Shousanli",
+      "name": "手三里",
+      "sourceHeadingSha256": "b89effa94bc46aa15858718f23ca38a6cb1d33034c34a1fefb9469479c97aa9b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI11",
+      "meridianCode": "LI",
+      "sequence": 11,
+      "pinyin": "Quchi",
+      "name": "曲池",
+      "sourceHeadingSha256": "23e0833a0b9c9e8654528152dab29d7fc0371f9fc66d3a97fa9c83f1de10a319",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI12",
+      "meridianCode": "LI",
+      "sequence": 12,
+      "pinyin": "Zhouliao",
+      "name": "肘髎",
+      "sourceHeadingSha256": "f6281a268a9aa16c784204679a9c0208d338cacdf90043b304a69b4b2b513720",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI13",
+      "meridianCode": "LI",
+      "sequence": 13,
+      "pinyin": "Shouwuli",
+      "name": "手五里",
+      "sourceHeadingSha256": "f22351b737a34e0b6090b3aaf0bd24390bd2353408afe0cbc6365185c66640a8",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI14",
+      "meridianCode": "LI",
+      "sequence": 14,
+      "pinyin": "Binao",
+      "name": "臂臑",
+      "sourceHeadingSha256": "6ffd50a8211f9842c23ef7e6df6872dbbdabcb90838c749bbb9e676adf4c4dcc",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI15",
+      "meridianCode": "LI",
+      "sequence": 15,
+      "pinyin": "Jianyu",
+      "name": "肩髃",
+      "sourceHeadingSha256": "97c25636aa97d0b82453732f0b67b89b0eb160c7e73a184e9502e6a434af95af",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI16",
+      "meridianCode": "LI",
+      "sequence": 16,
+      "pinyin": "Jugu",
+      "name": "巨骨",
+      "sourceHeadingSha256": "bd4e3f8f9b95feef4994ab456e6197d9b88a849a5eb8f0bbb7035f3c7313d425",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI17",
+      "meridianCode": "LI",
+      "sequence": 17,
+      "pinyin": "Tianding",
+      "name": "天鼎",
+      "sourceHeadingSha256": "1724008a721f970331e63f2a9af056e2059fd79140f82ce5e9b67c9bf7f80959",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI18",
+      "meridianCode": "LI",
+      "sequence": 18,
+      "pinyin": "Futu",
+      "name": "扶突",
+      "sourceHeadingSha256": "f7980953955a0410899bfc8e1628760cda774e4ad777571ad4a29d9737f0951a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI19",
+      "meridianCode": "LI",
+      "sequence": 19,
+      "pinyin": "Kouheliao",
+      "name": "口禾髎",
+      "sourceHeadingSha256": "1efd9a3c606cda5d9836f8cdb220b6d07629c9828514e311eed53df9f6102923",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LI20",
+      "meridianCode": "LI",
+      "sequence": 20,
+      "pinyin": "Yingxiang",
+      "name": "迎香",
+      "sourceHeadingSha256": "2c969310f4798cd8f12b4c51595a499c823ed6b13bce5b0172719b38f7183e66",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST1",
+      "meridianCode": "ST",
+      "sequence": 1,
+      "pinyin": "Chengqi",
+      "name": "承泣",
+      "sourceHeadingSha256": "738dc850d520457995cad1353faae9f211b4645753dfea4996ab3a51294401a6",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST2",
+      "meridianCode": "ST",
+      "sequence": 2,
+      "pinyin": "Sibai",
+      "name": "四白",
+      "sourceHeadingSha256": "f09b018017b28cf6ad14340017ab490140914a1cbbaa32297de2ea0306e81370",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST3",
+      "meridianCode": "ST",
+      "sequence": 3,
+      "pinyin": "Juliao",
+      "name": "巨髎",
+      "sourceHeadingSha256": "84284cf6f34a4d469c46055e80680c73b1d3b21c75682760d893dad751655844",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST4",
+      "meridianCode": "ST",
+      "sequence": 4,
+      "pinyin": "Dicang",
+      "name": "地仓",
+      "sourceHeadingSha256": "b4d59da6716f3a7104cb6f672329d1bc9aac55129d92a3d2c8c08badf5574a5d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST5",
+      "meridianCode": "ST",
+      "sequence": 5,
+      "pinyin": "Daying",
+      "name": "大迎",
+      "sourceHeadingSha256": "997aa2c458b79a5689d819d4ce5561e993b243493b04c8bb039666e25a124b86",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST6",
+      "meridianCode": "ST",
+      "sequence": 6,
+      "pinyin": "Jiache",
+      "name": "颊车",
+      "sourceHeadingSha256": "7cbcb1bdd1c3e48fde8787fca623b08ef6133ff9de0d2eefed40d16a3cee9317",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST7",
+      "meridianCode": "ST",
+      "sequence": 7,
+      "pinyin": "Xiaguan",
+      "name": "下关",
+      "sourceHeadingSha256": "dd0b43c933b67039e9ecd2fac8ff512e1e14703504662e70a4e924b80460d88c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST8",
+      "meridianCode": "ST",
+      "sequence": 8,
+      "pinyin": "Touwei",
+      "name": "头维",
+      "sourceHeadingSha256": "48a4f74777ab5e965cf4b453924b58d5243e484f5a72227ba6e12fd2fbbe8ff2",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST9",
+      "meridianCode": "ST",
+      "sequence": 9,
+      "pinyin": "Renying",
+      "name": "人迎",
+      "sourceHeadingSha256": "50286fc33cf2991ec6b5b215580546d8f184ed36f20003961772dc004abedb3c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST10",
+      "meridianCode": "ST",
+      "sequence": 10,
+      "pinyin": "Shuitu",
+      "name": "水突",
+      "sourceHeadingSha256": "7b45bbf2842ada7f5a8b234fdb29554e2a061d418573ea8dbec8e95410fc2e06",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST11",
+      "meridianCode": "ST",
+      "sequence": 11,
+      "pinyin": "Qishe",
+      "name": "气舍",
+      "sourceHeadingSha256": "6d29758155682ee501f158c32124838e7d012518e05f8d95a81161475af495de",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST12",
+      "meridianCode": "ST",
+      "sequence": 12,
+      "pinyin": "Quepen",
+      "name": "缺盆",
+      "sourceHeadingSha256": "70bc1c57ebf6dff2b5a4045e99380d35dda0cae980041a6a2af831579d370db1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST13",
+      "meridianCode": "ST",
+      "sequence": 13,
+      "pinyin": "Qihu",
+      "name": "气户",
+      "sourceHeadingSha256": "16b431e1a8576ca9f4b9b904f9ddc64dbb9b9219663786d46a1aef09006a51d1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST14",
+      "meridianCode": "ST",
+      "sequence": 14,
+      "pinyin": "Kufang",
+      "name": "库房",
+      "sourceHeadingSha256": "c33b6c06a9e49520ea84b658a8de0d2f88c184593789a12f836795234af9649c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST15",
+      "meridianCode": "ST",
+      "sequence": 15,
+      "pinyin": "Wuyi",
+      "name": "屋翳",
+      "sourceHeadingSha256": "1e0998035b75fd4d60e67bf0634705e808d2d89b7a4d1ec09ffd410498bdc4eb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST16",
+      "meridianCode": "ST",
+      "sequence": 16,
+      "pinyin": "Yingchuang",
+      "name": "膺窗",
+      "sourceHeadingSha256": "6880b27019fa62052b30dc58173588c6f2abb8a01fd7109281c79b20c29ba069",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST17",
+      "meridianCode": "ST",
+      "sequence": 17,
+      "pinyin": "Ruzhong",
+      "name": "乳中",
+      "sourceHeadingSha256": "da092c29a4db5a0e818d8c75061fe1bd84ff710fe227a4eb258110f8f4663074",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST18",
+      "meridianCode": "ST",
+      "sequence": 18,
+      "pinyin": "Rugen",
+      "name": "乳根",
+      "sourceHeadingSha256": "adc73b33ff9a9dbd73b6dab893cf2545ba8429b29c28e5e943cf6bce9429e1f2",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST19",
+      "meridianCode": "ST",
+      "sequence": 19,
+      "pinyin": "Burong",
+      "name": "不容",
+      "sourceHeadingSha256": "8ba8ce7b6ab5eca3014163d4a784e1d03fccdc62ca40e70d13dc0a69c441f0d6",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST20",
+      "meridianCode": "ST",
+      "sequence": 20,
+      "pinyin": "Chengman",
+      "name": "承满",
+      "sourceHeadingSha256": "658bb9c72c70d133ae7dbca321cd204406148ba732b3e0a184ed1576b4c2362d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST21",
+      "meridianCode": "ST",
+      "sequence": 21,
+      "pinyin": "Liangmen",
+      "name": "梁门",
+      "sourceHeadingSha256": "cb4c5ceab36b87f8955d244f679e7430d58939570f1ae023fe60e33d5d179c69",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST22",
+      "meridianCode": "ST",
+      "sequence": 22,
+      "pinyin": "Guanmen",
+      "name": "关门",
+      "sourceHeadingSha256": "0f7ff47fd914dfd40f12756647a7b0bdb44e38c74d6707945fdbc757021b3886",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST23",
+      "meridianCode": "ST",
+      "sequence": 23,
+      "pinyin": "Taiyi",
+      "name": "太乙",
+      "sourceHeadingSha256": "25dafec6b872f47aed42921b0027ce20210a4891acec0f7623cfc9cd3b1e9d85",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST24",
+      "meridianCode": "ST",
+      "sequence": 24,
+      "pinyin": "Huaroumen",
+      "name": "滑肉门",
+      "sourceHeadingSha256": "ae7230e0b2a99551a26ca155137a057222a4b99e56e1aeb2b81e9b587b3b73d3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST25",
+      "meridianCode": "ST",
+      "sequence": 25,
+      "pinyin": "Tianshu",
+      "name": "天枢",
+      "sourceHeadingSha256": "ce50245a743e76f6310582090fde6dad31262d7ca494da7985304cee9a202831",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST26",
+      "meridianCode": "ST",
+      "sequence": 26,
+      "pinyin": "Wailing",
+      "name": "外陵",
+      "sourceHeadingSha256": "c320f326a50b93734459b452ace9fe2293838f14a2404e723c178f44db8a9ad3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST27",
+      "meridianCode": "ST",
+      "sequence": 27,
+      "pinyin": "Daju",
+      "name": "大巨",
+      "sourceHeadingSha256": "f30ec752bc6f7451855d7b335604c1643cd9b98d993cf80f60811debc2fbdd62",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST28",
+      "meridianCode": "ST",
+      "sequence": 28,
+      "pinyin": "Shuidao",
+      "name": "水道",
+      "sourceHeadingSha256": "ea1fea8cab48e9b5abb670fb9ef121dd53efe6c1f7d230f76f80108824765f69",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST29",
+      "meridianCode": "ST",
+      "sequence": 29,
+      "pinyin": "Guilai",
+      "name": "归来",
+      "sourceHeadingSha256": "e1762ae321b6ae493fcf7ce237a772179424be8dbdb36c45d9767b28d93a8b2e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST30",
+      "meridianCode": "ST",
+      "sequence": 30,
+      "pinyin": "Qichong",
+      "name": "气冲",
+      "sourceHeadingSha256": "a42a95e81ad7c7e39020f0f3430833a1a6beeb0a2bad14034baf2a932f7a54db",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST31",
+      "meridianCode": "ST",
+      "sequence": 31,
+      "pinyin": "Biguan",
+      "name": "髀关",
+      "sourceHeadingSha256": "bc2c8a6c3c4e7dcc5bddb4c6d4a98d98e9c4e8c3915c2135ea159e0c3b9e84fc",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST32",
+      "meridianCode": "ST",
+      "sequence": 32,
+      "pinyin": "Futu",
+      "name": "伏兔",
+      "sourceHeadingSha256": "38ea88eabb2db6df9bc0d4ef19fbf9ff78b5168f556a92b13f7b37222e4f7289",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST33",
+      "meridianCode": "ST",
+      "sequence": 33,
+      "pinyin": "Yinshi",
+      "name": "阴市",
+      "sourceHeadingSha256": "7099aa558b9a0890d63e56e6b2b3b281b04d6a142bb7f8f362c151657b5c1168",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST34",
+      "meridianCode": "ST",
+      "sequence": 34,
+      "pinyin": "Liangqiu",
+      "name": "梁丘",
+      "sourceHeadingSha256": "a07e7d85af44e0a44e1d8861771837987280e6e54230932e75530e9233ff2377",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST35",
+      "meridianCode": "ST",
+      "sequence": 35,
+      "pinyin": "Dubi",
+      "name": "犊鼻",
+      "sourceHeadingSha256": "928dedeb7a0ef556a29792db8d978e541daf5abf80b4fb0cb443a01de62bebab",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST36",
+      "meridianCode": "ST",
+      "sequence": 36,
+      "pinyin": "Zusanli",
+      "name": "足三里",
+      "sourceHeadingSha256": "af82b4cbecf818bc1daf2ee414c05747b08a1662cd94002aaa415283fc32938c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST37",
+      "meridianCode": "ST",
+      "sequence": 37,
+      "pinyin": "Shangjuxu",
+      "name": "上巨虚",
+      "sourceHeadingSha256": "df1de6460df899b83a813b2ead13b1c8d2157478b4882b806b161eb0effeaf1f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST38",
+      "meridianCode": "ST",
+      "sequence": 38,
+      "pinyin": "Tiaokou",
+      "name": "条口",
+      "sourceHeadingSha256": "c25e024d33cdd816f1affa0e41f5832083f05d6cbf89af1d83718b72fe082140",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST39",
+      "meridianCode": "ST",
+      "sequence": 39,
+      "pinyin": "Xiajuxu",
+      "name": "下巨虚",
+      "sourceHeadingSha256": "845250eb28b3b4499f8cfbd08df7de6ee52fb04bdd38a5c184d609764bdf50d7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST40",
+      "meridianCode": "ST",
+      "sequence": 40,
+      "pinyin": "Fenglong",
+      "name": "丰隆",
+      "sourceHeadingSha256": "3caef8c315c53161824e457217d442d7a484c1d1ded30a4f89c866b6ad3145fa",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST41",
+      "meridianCode": "ST",
+      "sequence": 41,
+      "pinyin": "Jiexi",
+      "name": "解溪",
+      "sourceHeadingSha256": "575a9ced6c6108068081e8cf53499bb5441918d06ea5b10aeecbcb426bce54df",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST42",
+      "meridianCode": "ST",
+      "sequence": 42,
+      "pinyin": "Chongyang",
+      "name": "冲阳",
+      "sourceHeadingSha256": "caec40edce834e33491269b2dc7ca8beeab28cadeee7a5231ab17263bfc4485b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST43",
+      "meridianCode": "ST",
+      "sequence": 43,
+      "pinyin": "Xiangu",
+      "name": "陷谷",
+      "sourceHeadingSha256": "b082fd354fc4ac0dc4edfea2845d18ca247c659437d780326c86970320e8d2c1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST44",
+      "meridianCode": "ST",
+      "sequence": 44,
+      "pinyin": "Neiting",
+      "name": "内庭",
+      "sourceHeadingSha256": "1ec18b593e9755ee7e5ebac4df57f04f51b171d2b5fb3cb28989fec9e3777844",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "ST45",
+      "meridianCode": "ST",
+      "sequence": 45,
+      "pinyin": "Lidui",
+      "name": "厉兑",
+      "sourceHeadingSha256": "36c8fbe09135a7b17686c077715facbc4f9c412a63acd1398100fdde206ebac4",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP1",
+      "meridianCode": "SP",
+      "sequence": 1,
+      "pinyin": "Yinbai",
+      "name": "隐白",
+      "sourceHeadingSha256": "928368d71c3dd112e170b4ff20bfeefa549db37e547e0373a8bad1c488d7a022",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP2",
+      "meridianCode": "SP",
+      "sequence": 2,
+      "pinyin": "Dadu",
+      "name": "大都",
+      "sourceHeadingSha256": "aec763b6946cb00e1170d17e2e626929853ba65a1d1cd504b9dd5369c971897b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP3",
+      "meridianCode": "SP",
+      "sequence": 3,
+      "pinyin": "Taibai",
+      "name": "太白",
+      "sourceHeadingSha256": "996d6c31bcf4aa51fa307cc2a5c6da3d97c56b098c024b47737201a83ec92616",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP4",
+      "meridianCode": "SP",
+      "sequence": 4,
+      "pinyin": "Gongsun",
+      "name": "公孙",
+      "sourceHeadingSha256": "be04c6c18cfb7a00600f768ca3febc3117795fa3bd75092ed6b6e40b67b826ca",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP5",
+      "meridianCode": "SP",
+      "sequence": 5,
+      "pinyin": "Shangqiu",
+      "name": "商丘",
+      "sourceHeadingSha256": "2dc9db4f923629d4a2be5a909bb34841c5d716a7b6f87289725dad419ab39387",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP6",
+      "meridianCode": "SP",
+      "sequence": 6,
+      "pinyin": "Sanyinjiao",
+      "name": "三阴交",
+      "sourceHeadingSha256": "4b1c148d237cb20fa5508253f9a16fd3a20456f4ca2380a5d8185bff1d2b5a5d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP7",
+      "meridianCode": "SP",
+      "sequence": 7,
+      "pinyin": "Lougu",
+      "name": "漏谷",
+      "sourceHeadingSha256": "822ce2c88b6311ff3d6ab8c03359c5f6b9b19cccd2f9f060b5acaf5a8ccee323",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP8",
+      "meridianCode": "SP",
+      "sequence": 8,
+      "pinyin": "Diji",
+      "name": "地机",
+      "sourceHeadingSha256": "b0d61dfe09bb5eccec95c22c8151e418ce886990ccb3ba9c85ed9fa5c5f195d0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP9",
+      "meridianCode": "SP",
+      "sequence": 9,
+      "pinyin": "Yinlingquan",
+      "name": "阴陵泉",
+      "sourceHeadingSha256": "e979d11bd71e3cec31c701e9bf35b805dbe13ed3a014680f6917f88848787e3c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP10",
+      "meridianCode": "SP",
+      "sequence": 10,
+      "pinyin": "Xuehai",
+      "name": "血海",
+      "sourceHeadingSha256": "0e88641602beae29c839fa5cf47c3f0e91d4b712b07beb1dbfadf7b15ee7e3ad",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP11",
+      "meridianCode": "SP",
+      "sequence": 11,
+      "pinyin": "Jimen",
+      "name": "箕门",
+      "sourceHeadingSha256": "4991fcccdf5d46e50775880e1fc3e345663ac3dc37034288122683d903d3ddbe",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP12",
+      "meridianCode": "SP",
+      "sequence": 12,
+      "pinyin": "Chongmen",
+      "name": "冲门",
+      "sourceHeadingSha256": "fa935b4fdf3142e900d1f0ed5cbe2eae1c57bded8a1f08a2ec4d4fc154fa1856",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP13",
+      "meridianCode": "SP",
+      "sequence": 13,
+      "pinyin": "Fushe",
+      "name": "府舍",
+      "sourceHeadingSha256": "e2a6f22c8479965b54f1942f6d9610cf767d99de19df997a9e169579d8935ca8",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP14",
+      "meridianCode": "SP",
+      "sequence": 14,
+      "pinyin": "Fujie",
+      "name": "腹结",
+      "sourceHeadingSha256": "3662224447d7a771c8dffd30cbe9825e3930e76120dc7761f09a7f011bbc2b71",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP15",
+      "meridianCode": "SP",
+      "sequence": 15,
+      "pinyin": "Daheng",
+      "name": "大横",
+      "sourceHeadingSha256": "6dea3eb14ab446e9594e2b0d5624424022b81a0b9cc8923bfc4ab879f41cde82",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP16",
+      "meridianCode": "SP",
+      "sequence": 16,
+      "pinyin": "Fuai",
+      "name": "腹哀",
+      "sourceHeadingSha256": "2c2f6dac767547006a8f9b3fa7f3afab582b7b01ec288a9eed8de97c0e4d19b1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP17",
+      "meridianCode": "SP",
+      "sequence": 17,
+      "pinyin": "Shidou",
+      "name": "食窦",
+      "sourceHeadingSha256": "bdb68c9789d6defb50b5a161a1f0ce7fadba6581db04cca45b54e8541face215",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP18",
+      "meridianCode": "SP",
+      "sequence": 18,
+      "pinyin": "Tianxi",
+      "name": "天溪",
+      "sourceHeadingSha256": "ffe2c65c256b89e127ee20ea37adaee8f8ebb12a89e2df576eba60997e00926a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP19",
+      "meridianCode": "SP",
+      "sequence": 19,
+      "pinyin": "Xiongxiang",
+      "name": "胸乡",
+      "sourceHeadingSha256": "86e8e4a2ff87334d0f3b6836adc50acc29746ff62a96c2aa08840a64bebe8a58",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP20",
+      "meridianCode": "SP",
+      "sequence": 20,
+      "pinyin": "Zhourong",
+      "name": "周荣",
+      "sourceHeadingSha256": "8835cfcb97823d9f553f5a39d30a7b31cfc6cd89fda52fed03f1796ffed55006",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SP21",
+      "meridianCode": "SP",
+      "sequence": 21,
+      "pinyin": "Dabao",
+      "name": "大包",
+      "sourceHeadingSha256": "6345566a326ed5e434442663be812de1842700b0a5741f4b2f7f5f2b3b440f86",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT1",
+      "meridianCode": "HT",
+      "sequence": 1,
+      "pinyin": "Jiquan",
+      "name": "极泉",
+      "sourceHeadingSha256": "eab0e2b1af45b63df61e48a91684066398b96aab88d6c72a4d4f4815d3f91263",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT2",
+      "meridianCode": "HT",
+      "sequence": 2,
+      "pinyin": "Qingling",
+      "name": "青灵",
+      "sourceHeadingSha256": "caae8e7b198317e5315708cc1e52cb16e31e1aee1a9c99ac30c7a8dca7dd97fd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT3",
+      "meridianCode": "HT",
+      "sequence": 3,
+      "pinyin": "Shaohai",
+      "name": "少海",
+      "sourceHeadingSha256": "ce73c828c448ad5c8cbec6368b4862bcda91ce98b2c2cd2bb887188f3ddb450f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT4",
+      "meridianCode": "HT",
+      "sequence": 4,
+      "pinyin": "Lingdao",
+      "name": "灵道",
+      "sourceHeadingSha256": "91b1687e1e2cb42d4fcf2397509e9058fb884f3bc4c681fcd62434a6e11a121a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT5",
+      "meridianCode": "HT",
+      "sequence": 5,
+      "pinyin": "Tongli",
+      "name": "通里",
+      "sourceHeadingSha256": "c003f9144f078c292a3aac3e26e84d300a3e1bdaf5e10c97afc82b9d3e9fdcdb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT6",
+      "meridianCode": "HT",
+      "sequence": 6,
+      "pinyin": "Yinxi",
+      "name": "阴郄",
+      "sourceHeadingSha256": "a742ddb4b2275af43201d00181058c95b5af2a4b6f50ee69ea30957f1f352d71",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT7",
+      "meridianCode": "HT",
+      "sequence": 7,
+      "pinyin": "Shenmen",
+      "name": "神门",
+      "sourceHeadingSha256": "6d1af92a4e98fa844510f70706a9021bf208f69635a84410a124e2b203659357",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT8",
+      "meridianCode": "HT",
+      "sequence": 8,
+      "pinyin": "Shaofu",
+      "name": "少府",
+      "sourceHeadingSha256": "645afc97d9aa89598688475b7dfe4e2bd9847209190f53f392c13377b71ffd9d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "HT9",
+      "meridianCode": "HT",
+      "sequence": 9,
+      "pinyin": "Shaochong",
+      "name": "少冲",
+      "sourceHeadingSha256": "0394f014c47f92961e57d1cd3751b713228cca29657faacf907e3389a0a12e3a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI1",
+      "meridianCode": "SI",
+      "sequence": 1,
+      "pinyin": "Shaoze",
+      "name": "少泽",
+      "sourceHeadingSha256": "0a28400ddf51df010d6b09ac44a7407e06225644083519dd34aadab3f6caf96f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI2",
+      "meridianCode": "SI",
+      "sequence": 2,
+      "pinyin": "Qiangu",
+      "name": "前谷",
+      "sourceHeadingSha256": "fc184131e3208000dd5b3cd4e38958f8c1967dc6ea5aecf89f81d8411fe467d2",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI3",
+      "meridianCode": "SI",
+      "sequence": 3,
+      "pinyin": "Houxi",
+      "name": "后溪",
+      "sourceHeadingSha256": "66827c0c428d7a71997b7dea92b329300175067f02f325daff12c38449dd31a9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI4",
+      "meridianCode": "SI",
+      "sequence": 4,
+      "pinyin": "Wangu",
+      "name": "腕骨",
+      "sourceHeadingSha256": "3fa3f0f3f5f6cbab9b9216a9419e046dee1dc30bf17ec35ea15b69a711a7e912",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI5",
+      "meridianCode": "SI",
+      "sequence": 5,
+      "pinyin": "Yanggu",
+      "name": "阳谷",
+      "sourceHeadingSha256": "1d6b8406c84277ed0dc681595741d8db62b294c18ca0c88ee7efd42b4174c44a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI6",
+      "meridianCode": "SI",
+      "sequence": 6,
+      "pinyin": "Yanglao",
+      "name": "养老",
+      "sourceHeadingSha256": "1f4854782507c9da0371d07bdb625be821af4df59c18b44ceab730223d258a68",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI7",
+      "meridianCode": "SI",
+      "sequence": 7,
+      "pinyin": "Zhizheng",
+      "name": "支正",
+      "sourceHeadingSha256": "1aed332c814dbfe68aeb90e235ec7725c40acef30a8b06c2b50a4cff367c828b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI8",
+      "meridianCode": "SI",
+      "sequence": 8,
+      "pinyin": "Xiaohai",
+      "name": "小海",
+      "sourceHeadingSha256": "264904c4cdd30419294d6f8f22a5b6f445aaa400fdb4bddd7e18d426645b807d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI9",
+      "meridianCode": "SI",
+      "sequence": 9,
+      "pinyin": "Jianzhen",
+      "name": "肩贞",
+      "sourceHeadingSha256": "20a9eb2ec4fecd6c88c07c961c30d9cfc493843c0d58c830b7fac46005a855b2",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI10",
+      "meridianCode": "SI",
+      "sequence": 10,
+      "pinyin": "Naoshu",
+      "name": "臑俞",
+      "sourceHeadingSha256": "dc170c9afe91abc314e69a7f424cc45de871a98619d0a7534e9da68cf8c09963",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI11",
+      "meridianCode": "SI",
+      "sequence": 11,
+      "pinyin": "Tianzong",
+      "name": "天宗",
+      "sourceHeadingSha256": "3569af4328c5bac4842ec9c94934d62e766c729d0c0426b7864f7bd42448ef88",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI12",
+      "meridianCode": "SI",
+      "sequence": 12,
+      "pinyin": "Bingfeng",
+      "name": "秉风",
+      "sourceHeadingSha256": "9afd21120dd1e0582763ea7c27b80d7b213619a43812aecb046a4264fba48535",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI13",
+      "meridianCode": "SI",
+      "sequence": 13,
+      "pinyin": "Quyuan",
+      "name": "曲垣",
+      "sourceHeadingSha256": "dd0f9e30916b7dbf275b58b6e96270861594842d3d7d90cf2c04e01c557d9fa1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI14",
+      "meridianCode": "SI",
+      "sequence": 14,
+      "pinyin": "Jianwaishu",
+      "name": "肩外俞",
+      "sourceHeadingSha256": "b130be8a8d035e49975e09dfaeff2ddeadafc4af77f9298254b8f893916e5c24",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI15",
+      "meridianCode": "SI",
+      "sequence": 15,
+      "pinyin": "Jianzhongshu",
+      "name": "肩中俞",
+      "sourceHeadingSha256": "a54ee4d0894f74d39b24612190fb7b7a0be5644d0ccd7b4cfd853f52156985bd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI16",
+      "meridianCode": "SI",
+      "sequence": 16,
+      "pinyin": "Tianchuang",
+      "name": "天窗",
+      "sourceHeadingSha256": "aecd1154ebb0d6e15daed3c7a36868b3b73df194273b31831641fb3a2fb5face",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI17",
+      "meridianCode": "SI",
+      "sequence": 17,
+      "pinyin": "Tianrong",
+      "name": "天容",
+      "sourceHeadingSha256": "a4de5eb3391df895fbe3533daf2a27cbdfa077e429ffc68ab6226cadc3cdc80a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI18",
+      "meridianCode": "SI",
+      "sequence": 18,
+      "pinyin": "Quanliao",
+      "name": "颧髎",
+      "sourceHeadingSha256": "5181a7d3f3b4207456b5dbaedfb2c55f6bb8f45f5450b9e3f09e21ae209928a6",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "SI19",
+      "meridianCode": "SI",
+      "sequence": 19,
+      "pinyin": "Tinggong",
+      "name": "听宫",
+      "sourceHeadingSha256": "d8a59b99c33e5190e4d79d9358c1694baf5d0af0cda990726757b6ccd42d76cf",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL1",
+      "meridianCode": "BL",
+      "sequence": 1,
+      "pinyin": "Jingming",
+      "name": "睛明",
+      "sourceHeadingSha256": "ce2d9cb61fb223678e460eefae22f9a8d01c4fdff7309ca65988acd142618e38",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL2",
+      "meridianCode": "BL",
+      "sequence": 2,
+      "pinyin": "Cuanzhu",
+      "name": "攒竹",
+      "sourceHeadingSha256": "7d83a4dc0603101272cf6316104e9c83af677606103dd7f3083282d1610b0c5b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL3",
+      "meridianCode": "BL",
+      "sequence": 3,
+      "pinyin": "Meichong",
+      "name": "眉冲",
+      "sourceHeadingSha256": "8baafe3ae61bc9e5808541ef31e5fc5c204e62849f44359cebdfef5222549637",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL4",
+      "meridianCode": "BL",
+      "sequence": 4,
+      "pinyin": "Qucha",
+      "name": "曲差",
+      "sourceHeadingSha256": "095c752b0c97b0a7dd8d3525e1380451f71573262ac0955a10f9df5b84570da5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL5",
+      "meridianCode": "BL",
+      "sequence": 5,
+      "pinyin": "Wuchu",
+      "name": "五处",
+      "sourceHeadingSha256": "98806e7f196208b63d97629a25606b0ed292583a5053559051682cdff6f8feb9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL6",
+      "meridianCode": "BL",
+      "sequence": 6,
+      "pinyin": "Chengguang",
+      "name": "承光",
+      "sourceHeadingSha256": "6dc8b209ef94fffaf7ae459dcd7ef6bd5c8faedce07059e00f768aeb6ef269ad",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL7",
+      "meridianCode": "BL",
+      "sequence": 7,
+      "pinyin": "Tongtian",
+      "name": "通天",
+      "sourceHeadingSha256": "d4b7ecdca2723266b168be7fec08fcba346af389c3e17d771006b31e6b7f8a47",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL8",
+      "meridianCode": "BL",
+      "sequence": 8,
+      "pinyin": "Luoque",
+      "name": "络却",
+      "sourceHeadingSha256": "55a38503dc7585c7c36061018a46a9bd0458a1f274fe4eb55ae8ac7ea28593d4",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL9",
+      "meridianCode": "BL",
+      "sequence": 9,
+      "pinyin": "Yuzhen",
+      "name": "玉枕",
+      "sourceHeadingSha256": "dd12fbf36b5018e30e655dc33842e7b0e3b84f4ca9ba6668b32592ac8e15a689",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL10",
+      "meridianCode": "BL",
+      "sequence": 10,
+      "pinyin": "Tianzhu",
+      "name": "天柱",
+      "sourceHeadingSha256": "3648c9f06a2b34332b0a661f2d4bf4e333572ae0c22841bad5a9939ff844a3eb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL11",
+      "meridianCode": "BL",
+      "sequence": 11,
+      "pinyin": "Dazhu",
+      "name": "大杼",
+      "sourceHeadingSha256": "22358e6ed530c56dd24253fa3dbcdddacb8d9e2bc2feb870bff4879c6f3c15de",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL12",
+      "meridianCode": "BL",
+      "sequence": 12,
+      "pinyin": "Fengmen",
+      "name": "风门",
+      "sourceHeadingSha256": "d16a48f480e0d2fb88b3054eb4fdd99e4cd2efec7ba5ee691466c451b2577dd5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL13",
+      "meridianCode": "BL",
+      "sequence": 13,
+      "pinyin": "Feishu",
+      "name": "肺俞",
+      "sourceHeadingSha256": "15a38f7f91931c55533023933b3c9eb61e311ba24ad2a14d3a90c28e55f79fe1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL14",
+      "meridianCode": "BL",
+      "sequence": 14,
+      "pinyin": "Jueyinshu",
+      "name": "厥阴俞",
+      "sourceHeadingSha256": "684f5c13090351acf771d7686aaaad0c79a8a751daab30dccddd120cc2000a16",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL15",
+      "meridianCode": "BL",
+      "sequence": 15,
+      "pinyin": "Xinshu",
+      "name": "心俞",
+      "sourceHeadingSha256": "af48dce5d56840d46279026140b4070e3f242a1e52c5ba653d3a652cd2b3c002",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL16",
+      "meridianCode": "BL",
+      "sequence": 16,
+      "pinyin": "Dushu",
+      "name": "督俞",
+      "sourceHeadingSha256": "b3e03e1b4b06ac630f19298aaaf5929800d97639c9103b3f849c0ebfdde5c79a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL17",
+      "meridianCode": "BL",
+      "sequence": 17,
+      "pinyin": "Geshu",
+      "name": "膈俞",
+      "sourceHeadingSha256": "869d514d62d646825d0d8a2a3dafd01e728c65fd2493f66131147710ba9c23bd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL18",
+      "meridianCode": "BL",
+      "sequence": 18,
+      "pinyin": "Ganshu",
+      "name": "肝俞",
+      "sourceHeadingSha256": "a89f1e22265198db07596991f05dbc9e108d71bdbd342e48578995fe81df34cb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL19",
+      "meridianCode": "BL",
+      "sequence": 19,
+      "pinyin": "Danshu",
+      "name": "胆俞",
+      "sourceHeadingSha256": "a6bf494dd5399d8175febf9b6cbda5114b30eaa71fb2d1a51137a0706a0912f9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL20",
+      "meridianCode": "BL",
+      "sequence": 20,
+      "pinyin": "Pishu",
+      "name": "脾俞",
+      "sourceHeadingSha256": "3b17e32c043bab565fa39816969ff89cd7442e1508d8bc42a817c05c1071bf68",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL21",
+      "meridianCode": "BL",
+      "sequence": 21,
+      "pinyin": "Weishu",
+      "name": "胃俞",
+      "sourceHeadingSha256": "5330341d298641b37e95cea62abc74f11ed812c046f2a07df243a5df0c4d4b5a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL22",
+      "meridianCode": "BL",
+      "sequence": 22,
+      "pinyin": "Sanjiaoshu",
+      "name": "三焦俞",
+      "sourceHeadingSha256": "3949795c57aea3b932dd5139c8bd915e3dd1fe2bd1c4dbf227723924347a3238",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL23",
+      "meridianCode": "BL",
+      "sequence": 23,
+      "pinyin": "Shenshu",
+      "name": "肾俞",
+      "sourceHeadingSha256": "0766bdc4eb546ad50c2c756e3bf313732156a66f72d0fe7f67fe49f09f2230a0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL24",
+      "meridianCode": "BL",
+      "sequence": 24,
+      "pinyin": "Qihaishu",
+      "name": "气海俞",
+      "sourceHeadingSha256": "2b8f39c9137453ec3de547fd7b8c5a207ddd568b406e1b66fda70364b73b03bb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL25",
+      "meridianCode": "BL",
+      "sequence": 25,
+      "pinyin": "Dachangshu",
+      "name": "大肠俞",
+      "sourceHeadingSha256": "8a213da6f24d770d6f153e42f63b1c2402286f8cc5568169cd7eb25e7c20018d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL26",
+      "meridianCode": "BL",
+      "sequence": 26,
+      "pinyin": "Guanyuanshu",
+      "name": "关元俞",
+      "sourceHeadingSha256": "ac5d7eeeea5618ec108345bf8c06c76e114ed6579617fa710c3d675ee4f3e050",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL27",
+      "meridianCode": "BL",
+      "sequence": 27,
+      "pinyin": "Xiaochangshu",
+      "name": "小肠俞",
+      "sourceHeadingSha256": "680e19d731d7610c99ff30b0b462340a1eeccf091438af9ce350ac721d479974",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL28",
+      "meridianCode": "BL",
+      "sequence": 28,
+      "pinyin": "Pangguangshu",
+      "name": "膀胱俞",
+      "sourceHeadingSha256": "2fca360088735c6f384b6b49435388a6852e46d9d3966800176017291a9d7b1f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL29",
+      "meridianCode": "BL",
+      "sequence": 29,
+      "pinyin": "Zhonglushu",
+      "name": "中膂俞",
+      "sourceHeadingSha256": "7637f0b08c2054fed6875a8f7095b70809f24ba0641f27cc4c626af66712ee3b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL30",
+      "meridianCode": "BL",
+      "sequence": 30,
+      "pinyin": "Baihuanshu",
+      "name": "白环俞",
+      "sourceHeadingSha256": "8d6e6be9d5a8ba25354d303a5b1477988ca59d35e34b4ae73fe63058df90f6ba",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL31",
+      "meridianCode": "BL",
+      "sequence": 31,
+      "pinyin": "Shangliao",
+      "name": "上髎",
+      "sourceHeadingSha256": "38ff327ea0a047802de23ec431e3277dbebdb190dfe868c41e7070117fee21d9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL32",
+      "meridianCode": "BL",
+      "sequence": 32,
+      "pinyin": "Ciliao",
+      "name": "次髎",
+      "sourceHeadingSha256": "021d46763b4f2c676831885e938291c42e7812b4cf4db52cea671247c389f71d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL33",
+      "meridianCode": "BL",
+      "sequence": 33,
+      "pinyin": "Zhongliao",
+      "name": "中髎",
+      "sourceHeadingSha256": "d9cbcfa27d0628b64eefa0d505c52354f3deceefde9509e65d08eddc7d9f8f1e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL34",
+      "meridianCode": "BL",
+      "sequence": 34,
+      "pinyin": "Xialiao",
+      "name": "下髎",
+      "sourceHeadingSha256": "0ed92f9ff3d0b5fed50b56e78f8fe7d3713346581b589c65647a03236664d87c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL35",
+      "meridianCode": "BL",
+      "sequence": 35,
+      "pinyin": "Huiyang",
+      "name": "会阳",
+      "sourceHeadingSha256": "8b15e977cdc9102c4eb79d2b1c3fbd05832d1d0c9f9849d6645446172fee4ff5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL36",
+      "meridianCode": "BL",
+      "sequence": 36,
+      "pinyin": "Chengfu",
+      "name": "承扶",
+      "sourceHeadingSha256": "c5a70978a5f36b4f7a7da3f9c232ac94e40d17c94f84859c26505531caaa3483",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL37",
+      "meridianCode": "BL",
+      "sequence": 37,
+      "pinyin": "Yinmen",
+      "name": "殷门",
+      "sourceHeadingSha256": "5bcea6f9888244c25566b1efe06d7af9806b02dd4df72ebfb4d94de3a996a6a2",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL38",
+      "meridianCode": "BL",
+      "sequence": 38,
+      "pinyin": "Fuxi",
+      "name": "浮郄",
+      "sourceHeadingSha256": "81458ca18427f8f6ec2847f93de59a6e91d58e0339c7338ed7da1485a4607234",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL39",
+      "meridianCode": "BL",
+      "sequence": 39,
+      "pinyin": "Weiyang",
+      "name": "委阳",
+      "sourceHeadingSha256": "3593259918231348f67509f4bf0b077eedbdf92743d48e6ddccf713f2993bb4e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL40",
+      "meridianCode": "BL",
+      "sequence": 40,
+      "pinyin": "Weizhong",
+      "name": "委中",
+      "sourceHeadingSha256": "a1984e3c52b4f248815891081a948a3541d62887422b29732bb30f52c5a54458",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL41",
+      "meridianCode": "BL",
+      "sequence": 41,
+      "pinyin": "Fufen",
+      "name": "附分",
+      "sourceHeadingSha256": "c85cdd43f243e109a9223cc9b701c7cb4b36a5e6d4fa23aee34663cd76822d10",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL42",
+      "meridianCode": "BL",
+      "sequence": 42,
+      "pinyin": "Pohu",
+      "name": "魄户",
+      "sourceHeadingSha256": "a00e8177dff1f47aaf7fa3e08c4298d85f076291e2b8a941ff4c25f044b0fb41",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL43",
+      "meridianCode": "BL",
+      "sequence": 43,
+      "pinyin": "Gaohuang",
+      "name": "膏肓",
+      "sourceHeadingSha256": "32235db3ae93ad85c79e18c003286db623f5cad2e073987c4cd1cfd1ff3fc9ee",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL44",
+      "meridianCode": "BL",
+      "sequence": 44,
+      "pinyin": "Shentang",
+      "name": "神堂",
+      "sourceHeadingSha256": "ba6bdbdf4a7ea6fcced866b00efe2dab131621cccdddc7b27f17d57cc9df47bc",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL45",
+      "meridianCode": "BL",
+      "sequence": 45,
+      "pinyin": "Yixi",
+      "name": "譩譆",
+      "sourceHeadingSha256": "d6e059076f2b3638d3b7a45d0ba05a0ad3ac16e7223af5299e3284dac7a8ea27",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL46",
+      "meridianCode": "BL",
+      "sequence": 46,
+      "pinyin": "Geguan",
+      "name": "膈关",
+      "sourceHeadingSha256": "be017a39b7f4c41bab888d8e2221929ecab73cff078b2b8a7eae0a0417c6d477",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL47",
+      "meridianCode": "BL",
+      "sequence": 47,
+      "pinyin": "Hunmen",
+      "name": "魂门",
+      "sourceHeadingSha256": "3be3d0ea3d592f126afc80e05dcf62f5639d3eafed1fa4cfa306b35c494defc0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL48",
+      "meridianCode": "BL",
+      "sequence": 48,
+      "pinyin": "Yanggang",
+      "name": "阳纲",
+      "sourceHeadingSha256": "33419bf52bd4c47179d53a4997f406fc8650dc99e16087f73814648a255b6ea4",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL49",
+      "meridianCode": "BL",
+      "sequence": 49,
+      "pinyin": "Yishe",
+      "name": "意舍",
+      "sourceHeadingSha256": "56daa318d543e81f5261b3ff2689ae0762287f909ba3d16b34fe5dd3bc1b8d4e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL50",
+      "meridianCode": "BL",
+      "sequence": 50,
+      "pinyin": "Weicang",
+      "name": "胃仓",
+      "sourceHeadingSha256": "23ec2ea508a0a7831eecd9054b4fdae5a98d702c6bb79bb15dca00c98181d10d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL51",
+      "meridianCode": "BL",
+      "sequence": 51,
+      "pinyin": "Huangmen",
+      "name": "肓门",
+      "sourceHeadingSha256": "9452c6b30a82d302d85549128c64198db42e25b9ff94a361ccdd15cca03d4bdb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL52",
+      "meridianCode": "BL",
+      "sequence": 52,
+      "pinyin": "Zhishi",
+      "name": "志室",
+      "sourceHeadingSha256": "9b9b07c26c519308083e25fde97da8afb267ad8d27e48855eea0366c185a7ae1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL53",
+      "meridianCode": "BL",
+      "sequence": 53,
+      "pinyin": "Baohuang",
+      "name": "胞肓",
+      "sourceHeadingSha256": "cbce3f59cd20254d7956a17cb30be23a767269f1d79fb722f4199c1845af6b73",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL54",
+      "meridianCode": "BL",
+      "sequence": 54,
+      "pinyin": "Zhibian",
+      "name": "秩边",
+      "sourceHeadingSha256": "7782b5063453e3acf821351db592a320a832ec99b722b27a7fc01c732c6919ec",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL55",
+      "meridianCode": "BL",
+      "sequence": 55,
+      "pinyin": "Heyang",
+      "name": "合阳",
+      "sourceHeadingSha256": "6d89ff4d41aaa7cc872f495b1c6be05da3ddacfd53543a432b1f0a26e0ed3de5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL56",
+      "meridianCode": "BL",
+      "sequence": 56,
+      "pinyin": "Chengjin",
+      "name": "承筋",
+      "sourceHeadingSha256": "e14d7c66399bfb71aa9f64a0039c4bd4b4d87de5bc82de19f569c1a4ed3a66e5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL57",
+      "meridianCode": "BL",
+      "sequence": 57,
+      "pinyin": "Chengshan",
+      "name": "承山",
+      "sourceHeadingSha256": "c6b6dac897c8f81164ecfaff97374433f64de7ea58e33021f4d1eea08aa0bfbf",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL58",
+      "meridianCode": "BL",
+      "sequence": 58,
+      "pinyin": "Feiyang",
+      "name": "飞扬",
+      "sourceHeadingSha256": "5002195fb713d2f086e4a5271cbecb209fb616146c2aa13a1df1f0f60dba5c2c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL59",
+      "meridianCode": "BL",
+      "sequence": 59,
+      "pinyin": "Fuyang",
+      "name": "跗阳",
+      "sourceHeadingSha256": "c4381e21323b923d8cf5130cc162a32ccbeff6cc54d9e1833309ae2a84a14296",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL60",
+      "meridianCode": "BL",
+      "sequence": 60,
+      "pinyin": "Kunlun",
+      "name": "昆仑",
+      "sourceHeadingSha256": "807b50d4e17f51645cb1653de2777b5b54a467923a47d5e363e857b33f49121f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL61",
+      "meridianCode": "BL",
+      "sequence": 61,
+      "pinyin": "Pucan",
+      "name": "仆参",
+      "sourceHeadingSha256": "5361ca4a7ea623714535d4496d9e21d57765e3218bd915e9fd53020a72e5a43d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL62",
+      "meridianCode": "BL",
+      "sequence": 62,
+      "pinyin": "Shenmai",
+      "name": "申脉",
+      "sourceHeadingSha256": "c3e8218e939b1311b12e80fd0d6fd5685d9188a52e26a591f7d0aeea9c9201c4",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL63",
+      "meridianCode": "BL",
+      "sequence": 63,
+      "pinyin": "Jinmen",
+      "name": "金门",
+      "sourceHeadingSha256": "2dfcd273999bb5dd55b5053df2e5a3edd03e61061f915698c134df34c6361838",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL64",
+      "meridianCode": "BL",
+      "sequence": 64,
+      "pinyin": "Jinggu",
+      "name": "京骨",
+      "sourceHeadingSha256": "90aee84c266bc5a4ee1f68b533325ebbd09ffcff3d87725f87c88882f5b5b705",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL65",
+      "meridianCode": "BL",
+      "sequence": 65,
+      "pinyin": "Shugu",
+      "name": "束骨",
+      "sourceHeadingSha256": "4120a53983f49d6190c265999eca153d0c130a5fa8892d2720f1f6d34f332649",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL66",
+      "meridianCode": "BL",
+      "sequence": 66,
+      "pinyin": "Zutonggu",
+      "name": "足通谷",
+      "sourceHeadingSha256": "5be844dcdf8112381a45e3bbdb00de553ca234d3b77a44efda0aee0808661213",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "BL67",
+      "meridianCode": "BL",
+      "sequence": 67,
+      "pinyin": "Zhiyin",
+      "name": "至阴",
+      "sourceHeadingSha256": "d868bb9e6636f5203ff1298468265db93b796c06d7ed5e9d2b009c42fbe6dfd0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI1",
+      "meridianCode": "KI",
+      "sequence": 1,
+      "pinyin": "Yongquan",
+      "name": "涌泉",
+      "sourceHeadingSha256": "eb3ca2acfd1aa91f57b24cf525483104180ebc9512ccedecb354f8f3a367c706",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI2",
+      "meridianCode": "KI",
+      "sequence": 2,
+      "pinyin": "Rangu",
+      "name": "然谷",
+      "sourceHeadingSha256": "a1da75aaaabd355b5a3b796337c4031e4ff094bb37f5edbc40d2ba6e393864b7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI3",
+      "meridianCode": "KI",
+      "sequence": 3,
+      "pinyin": "Taixi",
+      "name": "太溪",
+      "sourceHeadingSha256": "4060412ba42c00520728cf18620318483990ba1df7263d5780818dea30539668",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI4",
+      "meridianCode": "KI",
+      "sequence": 4,
+      "pinyin": "Dazhong",
+      "name": "大钟",
+      "sourceHeadingSha256": "9a748e44c8d20cbe0559b23e6bffc9b1fb50a1a6eddb05454b566dadbdee8978",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI5",
+      "meridianCode": "KI",
+      "sequence": 5,
+      "pinyin": "Shuiquan",
+      "name": "水泉",
+      "sourceHeadingSha256": "52eaa01ebdacb4a55344560b888115a6d3d7a6b3d4804a1361a6d80ca7b25900",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI6",
+      "meridianCode": "KI",
+      "sequence": 6,
+      "pinyin": "Zhaohai",
+      "name": "照海",
+      "sourceHeadingSha256": "9c10147bbd3280641873f27ffaf45ccee909f2ae5ccbedbf880c2d967f35a020",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI7",
+      "meridianCode": "KI",
+      "sequence": 7,
+      "pinyin": "Fuliu",
+      "name": "复溜",
+      "sourceHeadingSha256": "25423438a08e632c5488ef23c3ad65b4cbec9df65a12b845acf529e42de138da",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI8",
+      "meridianCode": "KI",
+      "sequence": 8,
+      "pinyin": "Jiaoxin",
+      "name": "交信",
+      "sourceHeadingSha256": "1eed290bcfd0a197eef76442b8d530a05b3596923eca2400b5b7f47e787b1b75",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI9",
+      "meridianCode": "KI",
+      "sequence": 9,
+      "pinyin": "Zhubin",
+      "name": "筑宾",
+      "sourceHeadingSha256": "4f3c8babcd6d9ff31bcde89e7760fdf5f796e3bec45e753afe1b647b49dd2260",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI10",
+      "meridianCode": "KI",
+      "sequence": 10,
+      "pinyin": "Yingu",
+      "name": "阴谷",
+      "sourceHeadingSha256": "ace5f95e1f55a589d75651205fc485e68c2338bb2c2d41479fc191f5049161e1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI11",
+      "meridianCode": "KI",
+      "sequence": 11,
+      "pinyin": "Henggu",
+      "name": "横骨",
+      "sourceHeadingSha256": "f6eae74589d557c689f7f06b59f11c640b944ad95637ce61f8931969b5ba1865",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI12",
+      "meridianCode": "KI",
+      "sequence": 12,
+      "pinyin": "Dahe",
+      "name": "大赫",
+      "sourceHeadingSha256": "25602d090bc1b6ec7560d4f83d0a458f36be837d43eae1726453aad653c4b67b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI13",
+      "meridianCode": "KI",
+      "sequence": 13,
+      "pinyin": "Qixue",
+      "name": "气穴",
+      "sourceHeadingSha256": "1c69fcf28fc360a5e817607b0e4a677c6ca2590e7594f88462eaebc4697e1c3f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI14",
+      "meridianCode": "KI",
+      "sequence": 14,
+      "pinyin": "Siman",
+      "name": "四满",
+      "sourceHeadingSha256": "14bc6c79b996ad60102cc38dec488fe3aaf7e4cf55e839d8209eada567fd1361",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI15",
+      "meridianCode": "KI",
+      "sequence": 15,
+      "pinyin": "Zhongzhu",
+      "name": "中注",
+      "sourceHeadingSha256": "e1d15d278efb6aa7ce1bef5b8f4bad3fc87533c46f29bb86449901684e688dfe",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI16",
+      "meridianCode": "KI",
+      "sequence": 16,
+      "pinyin": "Huangshu",
+      "name": "肓俞",
+      "sourceHeadingSha256": "a1bf3eea8041193ed4a5d8caa1124e073a687fcd4ebd764746542fe4c1d29c62",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI17",
+      "meridianCode": "KI",
+      "sequence": 17,
+      "pinyin": "Shangqu",
+      "name": "商曲",
+      "sourceHeadingSha256": "5397592a90d5a917c105f8d14d3a151e6e96f2661a6353e9b4f5244b0cf9508b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI18",
+      "meridianCode": "KI",
+      "sequence": 18,
+      "pinyin": "Shiguan",
+      "name": "石关",
+      "sourceHeadingSha256": "cdc16d4084e109a229ee92f24249c90d47d7d935ff0a59bc37691aaf103de819",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI19",
+      "meridianCode": "KI",
+      "sequence": 19,
+      "pinyin": "Yindu",
+      "name": "阴都",
+      "sourceHeadingSha256": "01f11dd6cdb95c744c63ce9aabc7772800605ce546ed0c633419ab0bd5d1e158",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI20",
+      "meridianCode": "KI",
+      "sequence": 20,
+      "pinyin": "Futonggu",
+      "name": "腹通谷",
+      "sourceHeadingSha256": "e80ad971551e2bf2aef42d2b51ee413089eb61ff61f5e75fe4560bbe68982375",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI21",
+      "meridianCode": "KI",
+      "sequence": 21,
+      "pinyin": "Youmen",
+      "name": "幽门",
+      "sourceHeadingSha256": "d637eb807c0aa769c418729fdd5327c080883b8c69852eada4d42dc1574bb461",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI22",
+      "meridianCode": "KI",
+      "sequence": 22,
+      "pinyin": "Bulang",
+      "name": "步廊",
+      "sourceHeadingSha256": "ab80023a903b6cdc312e81f62a5a8860ae15ba1475583bd31782deaa2cdeccff",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI23",
+      "meridianCode": "KI",
+      "sequence": 23,
+      "pinyin": "Shenfeng",
+      "name": "神封",
+      "sourceHeadingSha256": "50895b33b641648725e35f81e0ec1329a5f498693b8e72ff6232312ac498b84d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI24",
+      "meridianCode": "KI",
+      "sequence": 24,
+      "pinyin": "Lingxu",
+      "name": "灵墟",
+      "sourceHeadingSha256": "113fb544d13edeb4bd913e8befa9a5b7202b27790536c74da04f2a08d1f90c62",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI25",
+      "meridianCode": "KI",
+      "sequence": 25,
+      "pinyin": "Shencang",
+      "name": "神藏",
+      "sourceHeadingSha256": "7d47935b7b420e623f6eb7951c3951f3e18a773c27d1bcbfcb262a05d5bcb263",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI26",
+      "meridianCode": "KI",
+      "sequence": 26,
+      "pinyin": "Yuzhong",
+      "name": "彧中",
+      "sourceHeadingSha256": "7b994e6eb8c6f609595ce22c1213739b02c27a61f1260b13b6edb59386de1501",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "KI27",
+      "meridianCode": "KI",
+      "sequence": 27,
+      "pinyin": "Shufu",
+      "name": "俞府",
+      "sourceHeadingSha256": "c8716f2e270294113cae99669e0b46a6c5e0ac463867aa90a3665ef6d7be83c3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC1",
+      "meridianCode": "PC",
+      "sequence": 1,
+      "pinyin": "Tianchi",
+      "name": "天池",
+      "sourceHeadingSha256": "72a5c515bef2ffaff4f40d70482d6ff3f274821e05352a857e2c8f7eddc553b5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC2",
+      "meridianCode": "PC",
+      "sequence": 2,
+      "pinyin": "Tianquan",
+      "name": "天泉",
+      "sourceHeadingSha256": "dfd081278f5ff034291101ccf739b1a9c0ed3d5752893c5f3a781bda08474002",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC3",
+      "meridianCode": "PC",
+      "sequence": 3,
+      "pinyin": "Quze",
+      "name": "曲泽",
+      "sourceHeadingSha256": "f254038d68115489267dd447622c01235536de08b20ab6265ab26a210d41a6fe",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC4",
+      "meridianCode": "PC",
+      "sequence": 4,
+      "pinyin": "Ximen",
+      "name": "郄门",
+      "sourceHeadingSha256": "b0a82067f09cf17fd9dada80b009666fb63e8c68a3c78e4c239db07fe1edb7c7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC5",
+      "meridianCode": "PC",
+      "sequence": 5,
+      "pinyin": "Jianshi",
+      "name": "间使",
+      "sourceHeadingSha256": "cb5c52fa7f493e25229c2e63e3cf270434dee9c901756c213660bead221e78a9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC6",
+      "meridianCode": "PC",
+      "sequence": 6,
+      "pinyin": "Neiguan",
+      "name": "内关",
+      "sourceHeadingSha256": "3777fcf701fb6c952a3fd2703de0c2ea5f119f463d8a186856ce55048fa62d4d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC7",
+      "meridianCode": "PC",
+      "sequence": 7,
+      "pinyin": "Daling",
+      "name": "大陵",
+      "sourceHeadingSha256": "974f7fd2f3814a92207304f09abf93bfce82961b5c1bea09d023e377a39956c0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC8",
+      "meridianCode": "PC",
+      "sequence": 8,
+      "pinyin": "Laogong",
+      "name": "劳宫",
+      "sourceHeadingSha256": "ddb8dcfc7cca7650a198b30b484f6228ac4f2be4b89d6f1e21edeaf6ed117d75",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "PC9",
+      "meridianCode": "PC",
+      "sequence": 9,
+      "pinyin": "Zhongchong",
+      "name": "中冲",
+      "sourceHeadingSha256": "d786dc5f8b8f945ba18ae4e6161a1a62c7f18b029c72391c418c1d5cb725acfe",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE1",
+      "meridianCode": "TE",
+      "sequence": 1,
+      "pinyin": "Guanchong",
+      "name": "关冲",
+      "sourceHeadingSha256": "6a39aaf6f6546eae63b485a0bc4ded2b705767ca3df76efd275b48d940dbcb34",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE2",
+      "meridianCode": "TE",
+      "sequence": 2,
+      "pinyin": "Yemen",
+      "name": "液门",
+      "sourceHeadingSha256": "42ff82907a5b8ef35f8f14ca9075eb94200a0526cebed8de3cad6c685b92b500",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE3",
+      "meridianCode": "TE",
+      "sequence": 3,
+      "pinyin": "Zhongzhu",
+      "name": "中渚",
+      "sourceHeadingSha256": "4507ded0de6fa2429de9e72414cba1b0680791cf1e3a1d5c55136ecb6a96592b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE4",
+      "meridianCode": "TE",
+      "sequence": 4,
+      "pinyin": "Yangchi",
+      "name": "阳池",
+      "sourceHeadingSha256": "73a5cb7168c05159601e52442f1d525271dc4488c4bb349f9be7fccbb6631b1f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE5",
+      "meridianCode": "TE",
+      "sequence": 5,
+      "pinyin": "Waiguan",
+      "name": "外关",
+      "sourceHeadingSha256": "43c2d88c1f3104cb9fdc4fc82b3a0df3cdd7a42957837c21d3ab6956e5069872",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE6",
+      "meridianCode": "TE",
+      "sequence": 6,
+      "pinyin": "Zhigou",
+      "name": "支沟",
+      "sourceHeadingSha256": "3fb72526e0a6e503797d1834431c5dbebdac182dc72d8349f4e1faffbcdf5a4e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE7",
+      "meridianCode": "TE",
+      "sequence": 7,
+      "pinyin": "Huizong",
+      "name": "会宗",
+      "sourceHeadingSha256": "4cffda2ea163cfd4c72811714f9841b2ae8b4309c66e5d09d2eac22b2f6c823c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE8",
+      "meridianCode": "TE",
+      "sequence": 8,
+      "pinyin": "Sanyangluo",
+      "name": "三阳络",
+      "sourceHeadingSha256": "76c61c781d09a20eaa5e4ca71572ae0e48b0d1e7ef50d9f70bbdb26935a6f1f9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE9",
+      "meridianCode": "TE",
+      "sequence": 9,
+      "pinyin": "Sidu",
+      "name": "四渎",
+      "sourceHeadingSha256": "952f30a214c95d2b5b8e47c3f7ff0671d0416bdf7889e3e936257e18c0471965",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE10",
+      "meridianCode": "TE",
+      "sequence": 10,
+      "pinyin": "Tianjing",
+      "name": "天井",
+      "sourceHeadingSha256": "102ef5d9d3153e44da5363e61abb2797865e216242c1732eed4dcd60e9a8ff25",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE11",
+      "meridianCode": "TE",
+      "sequence": 11,
+      "pinyin": "Qinglengyuan",
+      "name": "清泠渊",
+      "sourceHeadingSha256": "6f90fa2b0026efb7c42ca89ccb0b54a734f4609f2e55612ae71163c06dceba27",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE12",
+      "meridianCode": "TE",
+      "sequence": 12,
+      "pinyin": "Xiaoluo",
+      "name": "消泺",
+      "sourceHeadingSha256": "d970299fdadd5ccfb6107e4ac016220d4d63bdaea3f8aa9715c05878412c6d29",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE13",
+      "meridianCode": "TE",
+      "sequence": 13,
+      "pinyin": "Naohui",
+      "name": "臑会",
+      "sourceHeadingSha256": "6dde134cf35c8a6adafb676c6876881b1978ac8eb3a0a74dae644a96a890c2fd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE14",
+      "meridianCode": "TE",
+      "sequence": 14,
+      "pinyin": "Jianliao",
+      "name": "肩髎",
+      "sourceHeadingSha256": "9b5eff0d912fc7d7fc79cc95e59c54eccf51badf6c85820f578d07eb7d9b3a3f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE15",
+      "meridianCode": "TE",
+      "sequence": 15,
+      "pinyin": "Tianliao",
+      "name": "天髎",
+      "sourceHeadingSha256": "947a2954e5c8894d43a89b86efe563032f0938f8471ea3a1131660a162f479bc",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE16",
+      "meridianCode": "TE",
+      "sequence": 16,
+      "pinyin": "Tianyou",
+      "name": "天牖",
+      "sourceHeadingSha256": "84b8bf1ea69afa3d720d66c9a7ac9d95eed8f90f5e0667a216f1bda6916c5ba3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE17",
+      "meridianCode": "TE",
+      "sequence": 17,
+      "pinyin": "Yifeng",
+      "name": "翳风",
+      "sourceHeadingSha256": "243d9b4b41275ae3f1ac638fc05cf4d330c2c5c65f2233b7603777cc97c18d4c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE18",
+      "meridianCode": "TE",
+      "sequence": 18,
+      "pinyin": "Chimai",
+      "name": "瘈脉",
+      "sourceHeadingSha256": "e40d0f53e4dc2b735875bd44f97f8ba1e4212c42e375338eee22b6d466500c2b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE19",
+      "meridianCode": "TE",
+      "sequence": 19,
+      "pinyin": "Luxi",
+      "name": "颅息",
+      "sourceHeadingSha256": "b95ddb4e7f4511d7a025c87eefb0264799497fda695e8b03d938e52952268ba1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE20",
+      "meridianCode": "TE",
+      "sequence": 20,
+      "pinyin": "Jiaosun",
+      "name": "角孙",
+      "sourceHeadingSha256": "adb024d40bc066da695c5d8efe40ad5fef6cebd4d990985696ac180d56c64f9d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE21",
+      "meridianCode": "TE",
+      "sequence": 21,
+      "pinyin": "Ermen",
+      "name": "耳门",
+      "sourceHeadingSha256": "7fb9a20e85cfa659dd26bcfb98a4756e89e4360fc17fdb2d49ca1b93d7517f46",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE22",
+      "meridianCode": "TE",
+      "sequence": 22,
+      "pinyin": "Erheliao",
+      "name": "耳和髎",
+      "sourceHeadingSha256": "653e9511762a9d8fd90d15c45d39043487b473cb811454142c743bf4a7cdb6d0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "TE23",
+      "meridianCode": "TE",
+      "sequence": 23,
+      "pinyin": "Sizhukong",
+      "name": "丝竹空",
+      "sourceHeadingSha256": "23b07f6ac7609f492a958b59a4bd675f3b4c2f6a7b7e69b6ca5e9127098245bc",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB1",
+      "meridianCode": "GB",
+      "sequence": 1,
+      "pinyin": "Tongziliao",
+      "name": "瞳子髎",
+      "sourceHeadingSha256": "9c3b38120fd5256d4a602a2bfee57dfd38c50febb11806f9834397ae96a2f81c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB2",
+      "meridianCode": "GB",
+      "sequence": 2,
+      "pinyin": "Tinghui",
+      "name": "听会",
+      "sourceHeadingSha256": "53def24ba1dacef7593060d69cf3ddf6c676d54712b1cef69a90d9afe715285e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB3",
+      "meridianCode": "GB",
+      "sequence": 3,
+      "pinyin": "Shangguan",
+      "name": "上关",
+      "sourceHeadingSha256": "18fdbbb7a05aaf8a7fb4258d5a268d8e0c3b5ed2b92163a210495b7566f7ba46",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB4",
+      "meridianCode": "GB",
+      "sequence": 4,
+      "pinyin": "Hanyan",
+      "name": "颔厌",
+      "sourceHeadingSha256": "2ac14bad3b76f8b96007e304481a76ffe96ad2ef5af83b210ebaccd5c0d3deb7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB5",
+      "meridianCode": "GB",
+      "sequence": 5,
+      "pinyin": "Xuanlu",
+      "name": "悬颅",
+      "sourceHeadingSha256": "9241f9de530f793e67af05555edbd5f0c765934549ee5b3a66d1933b2e49510e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB6",
+      "meridianCode": "GB",
+      "sequence": 6,
+      "pinyin": "Xuanli",
+      "name": "悬厘",
+      "sourceHeadingSha256": "638dd131d5c13e65ee4ff93934415446d94cf59d40bf63908c1c89b699b7c0dd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB7",
+      "meridianCode": "GB",
+      "sequence": 7,
+      "pinyin": "Qubin",
+      "name": "曲鬓",
+      "sourceHeadingSha256": "1ad0a6bb66278531c96c00793d5055514d3a2576be5f11674fabd29a8dcfd5e1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB8",
+      "meridianCode": "GB",
+      "sequence": 8,
+      "pinyin": "Shuaigu",
+      "name": "率谷",
+      "sourceHeadingSha256": "72635a5c2c4feb9622f412fc3751d84894d76098bdde3f1badd906d621bd8289",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB9",
+      "meridianCode": "GB",
+      "sequence": 9,
+      "pinyin": "Tianchong",
+      "name": "天冲",
+      "sourceHeadingSha256": "fcb81468b41edeb485068c18ebe1487d8befcd68e19e2dd88dd4502d699fbb07",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB10",
+      "meridianCode": "GB",
+      "sequence": 10,
+      "pinyin": "Fubai",
+      "name": "浮白",
+      "sourceHeadingSha256": "c24223c6a83d9631884f3e1d5194a49327f07cee57dd0eff29dd0e40860a9644",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB11",
+      "meridianCode": "GB",
+      "sequence": 11,
+      "pinyin": "Touqiaoyin",
+      "name": "头窍阴",
+      "sourceHeadingSha256": "933fb2e8b7f9c65efaae9581ea9a3010dd91f1e968a1a17d35b4382778bb658f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB12",
+      "meridianCode": "GB",
+      "sequence": 12,
+      "pinyin": "Wangu",
+      "name": "完骨",
+      "sourceHeadingSha256": "03dd67ffe33273ebdff624855469c98c2f84b05d99d9d96c19e9d7e9e0851650",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB13",
+      "meridianCode": "GB",
+      "sequence": 13,
+      "pinyin": "Benshen",
+      "name": "本神",
+      "sourceHeadingSha256": "0012e34f707435967681a6af624c0f13925b63a67a3c7a4ea265b848cf6e093b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB14",
+      "meridianCode": "GB",
+      "sequence": 14,
+      "pinyin": "Yangbai",
+      "name": "阳白",
+      "sourceHeadingSha256": "94e9540e66f3cc1ed54ceba668004d6b3057817e15991bd695b70b9c97d2e1e0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB15",
+      "meridianCode": "GB",
+      "sequence": 15,
+      "pinyin": "Toulinqi",
+      "name": "头临泣",
+      "sourceHeadingSha256": "b3d04cd05c564cad62b174be00e616a21d7b92e1492c22108ccc6d8c78fcec1e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB16",
+      "meridianCode": "GB",
+      "sequence": 16,
+      "pinyin": "Muchuang",
+      "name": "目窗",
+      "sourceHeadingSha256": "393a56785f34240893903af54d57a19f3bec4d8ddb3483c15422cc2903555df8",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB17",
+      "meridianCode": "GB",
+      "sequence": 17,
+      "pinyin": "Zhengying",
+      "name": "正营",
+      "sourceHeadingSha256": "bf2c944c95f1042608717b3d0d17f6a7c47aa0aed881680be3ede22df6e7463b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB18",
+      "meridianCode": "GB",
+      "sequence": 18,
+      "pinyin": "Chengling",
+      "name": "承灵",
+      "sourceHeadingSha256": "7940fb0fa474f299e8a4e2430d89b964f49c59732b8477ece8c37037d2b14a93",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB19",
+      "meridianCode": "GB",
+      "sequence": 19,
+      "pinyin": "Naokong",
+      "name": "脑空",
+      "sourceHeadingSha256": "26d70dacce53f1b54f3b4278b35f88225166aab3bae92d3145790b2a2add88ac",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB20",
+      "meridianCode": "GB",
+      "sequence": 20,
+      "pinyin": "Fengchi",
+      "name": "风池",
+      "sourceHeadingSha256": "e5ea253f2db1f1ab1818f13b0cb181bbd6a1f8f0c60fea52200c7f020222668d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB21",
+      "meridianCode": "GB",
+      "sequence": 21,
+      "pinyin": "Jianjing",
+      "name": "肩井",
+      "sourceHeadingSha256": "ab30373dba864cc974bccdb0e0cc839851e536e78eaae1c8407f74f1e566584e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB22",
+      "meridianCode": "GB",
+      "sequence": 22,
+      "pinyin": "Yuanye",
+      "name": "渊腋",
+      "sourceHeadingSha256": "fc21c9ab1131a14fc8b26ca831995cbe69b7da9ef7bd0b14749d7fdad518ab9e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB23",
+      "meridianCode": "GB",
+      "sequence": 23,
+      "pinyin": "Zhejin",
+      "name": "辄筋",
+      "sourceHeadingSha256": "b70706db254c4befef64b15fe3d16244bb1c9bccffc760fcf40e6e31acb2b654",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB24",
+      "meridianCode": "GB",
+      "sequence": 24,
+      "pinyin": "Riyue",
+      "name": "日月",
+      "sourceHeadingSha256": "fb59a338dc2786c3093cfa88d351fd0ab5134c1169f777e36b89631d5c994f32",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB25",
+      "meridianCode": "GB",
+      "sequence": 25,
+      "pinyin": "Jingmen",
+      "name": "京门",
+      "sourceHeadingSha256": "a695fbd529dd48986f300636fd141c693d99cfef0cd73bda447064c595650e4b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB26",
+      "meridianCode": "GB",
+      "sequence": 26,
+      "pinyin": "Daimai",
+      "name": "带脉",
+      "sourceHeadingSha256": "7e414c78b0ca92880c3817771bf106cbb362a5b3835b295cc9815e71140edec5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB27",
+      "meridianCode": "GB",
+      "sequence": 27,
+      "pinyin": "Wushu",
+      "name": "五枢",
+      "sourceHeadingSha256": "ebc021d69ed1b1f3f03f507d90f56668cd9006253df74e9bee5fc05c0da8c832",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB28",
+      "meridianCode": "GB",
+      "sequence": 28,
+      "pinyin": "Weidao",
+      "name": "维道",
+      "sourceHeadingSha256": "e2831eeafe2325fb023db202970f4f4b6a6f654177e3891073cd1d41b144af2b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB29",
+      "meridianCode": "GB",
+      "sequence": 29,
+      "pinyin": "Juliao",
+      "name": "居髎",
+      "sourceHeadingSha256": "62feafd56e66a83e47e475a0eea149cc2494dc412deb0408421c101e5aea619f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB30",
+      "meridianCode": "GB",
+      "sequence": 30,
+      "pinyin": "Huantiao",
+      "name": "环跳",
+      "sourceHeadingSha256": "41354dcedd7ec6167ce27d388ace036993ac40f19c30639206782314bf04fb2d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB31",
+      "meridianCode": "GB",
+      "sequence": 31,
+      "pinyin": "Fengshi",
+      "name": "风市",
+      "sourceHeadingSha256": "5de2e8f21a52a1b13dc1a78a15946879a3b18d03780287dd907ff5f61d4beacf",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB32",
+      "meridianCode": "GB",
+      "sequence": 32,
+      "pinyin": "Zhongdu",
+      "name": "中渎",
+      "sourceHeadingSha256": "ddcc7628c03272c9cbab7213674f3130c8733e78bc65406819ddc0032a5c80d1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB33",
+      "meridianCode": "GB",
+      "sequence": 33,
+      "pinyin": "Xiyangguan",
+      "name": "膝阳关",
+      "sourceHeadingSha256": "cdbb4be3d9e7d3642a5ce38d552d10669cdf0a5cd2c652e61c5f40d0ea1bc6d3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB34",
+      "meridianCode": "GB",
+      "sequence": 34,
+      "pinyin": "Yanglingquan",
+      "name": "阳陵泉",
+      "sourceHeadingSha256": "897bc973d263dcb2b21644dec7030efd4eb56d01e663ea057af302dda5c00cd8",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB35",
+      "meridianCode": "GB",
+      "sequence": 35,
+      "pinyin": "Yangjiao",
+      "name": "阳交",
+      "sourceHeadingSha256": "ed68cc763d973624d3c85e834b1f0ba7929729e68daf625b4b0cbfb0c1dbd5f3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB36",
+      "meridianCode": "GB",
+      "sequence": 36,
+      "pinyin": "Waiqiu",
+      "name": "外丘",
+      "sourceHeadingSha256": "24be12350a9f3c5f1f8f26af62d58df5a1fa0af000a32bda56f7f5cc4f34d136",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB37",
+      "meridianCode": "GB",
+      "sequence": 37,
+      "pinyin": "Guangming",
+      "name": "光明",
+      "sourceHeadingSha256": "14a0de995429fc1106a3ea743c028e847c061325f31ce8c221df39c56e370eb7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB38",
+      "meridianCode": "GB",
+      "sequence": 38,
+      "pinyin": "Yangfu",
+      "name": "阳辅",
+      "sourceHeadingSha256": "ecc3353cc830cf8009c1b174912a80a2c6d8233d3a657fd31ad0e51f5a16c378",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB39",
+      "meridianCode": "GB",
+      "sequence": 39,
+      "pinyin": "Xuanzhong",
+      "name": "悬钟",
+      "sourceHeadingSha256": "20600f7a6b180b560a5cd2f50a140c442f5ae399785eccc1e5a60e86b56e7d25",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB40",
+      "meridianCode": "GB",
+      "sequence": 40,
+      "pinyin": "Qiuxu",
+      "name": "丘墟",
+      "sourceHeadingSha256": "33983c8b784fc332fb84eb88a711420e4271157c493a7859536dd6f93db294da",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB41",
+      "meridianCode": "GB",
+      "sequence": 41,
+      "pinyin": "Zulinqi",
+      "name": "足临泣",
+      "sourceHeadingSha256": "02698af86d54faaf28fa7c25ae8147624716ad8aa28bf2fe3d1debe380042d54",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB42",
+      "meridianCode": "GB",
+      "sequence": 42,
+      "pinyin": "Diwuhui",
+      "name": "地五会",
+      "sourceHeadingSha256": "ac507c9eb7f4c3e97cff222554df3a0bb1634a70310d13464dbeae1815b7cbe9",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB43",
+      "meridianCode": "GB",
+      "sequence": 43,
+      "pinyin": "Xiaxi",
+      "name": "侠溪",
+      "sourceHeadingSha256": "74bbd9cbd783bd42a0c1f8a912f2031c75f374c3ea76c19da9624db994cd2db1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GB44",
+      "meridianCode": "GB",
+      "sequence": 44,
+      "pinyin": "Zuqiaoyin",
+      "name": "足窍阴",
+      "sourceHeadingSha256": "a9bfa8d4b99fbfa23224a6c0a08b1cec3ccce8578642aaab3c9738bc3bcad50f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR1",
+      "meridianCode": "LR",
+      "sequence": 1,
+      "pinyin": "Dadun",
+      "name": "大敦",
+      "sourceHeadingSha256": "f092d4df3652f3e8fc1d575229e1401a637b0321fd230b25a525ae98a558237a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR2",
+      "meridianCode": "LR",
+      "sequence": 2,
+      "pinyin": "Xingjian",
+      "name": "行间",
+      "sourceHeadingSha256": "09635e5dd295a81766dc99b11ed77e9e000343f389e0e8104007fbe3261ac3c8",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR3",
+      "meridianCode": "LR",
+      "sequence": 3,
+      "pinyin": "Taichong",
+      "name": "太冲",
+      "sourceHeadingSha256": "82d779bd8ecfd31ac04cce1f0432ac4d9cd2773a0994712f12e2b90c3ee375bb",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR4",
+      "meridianCode": "LR",
+      "sequence": 4,
+      "pinyin": "Zhongfeng",
+      "name": "中封",
+      "sourceHeadingSha256": "4ad8eeb392e0ac38e1af0c89109c1b935523397e3161ef3d6b4211886cf8700e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR5",
+      "meridianCode": "LR",
+      "sequence": 5,
+      "pinyin": "Ligou",
+      "name": "蠡沟",
+      "sourceHeadingSha256": "a57244fe82fd9ad4a25e0825fa6f454d39a65087b9bb0106da2dfeebf21926ae",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR6",
+      "meridianCode": "LR",
+      "sequence": 6,
+      "pinyin": "Zhongdu",
+      "name": "中都",
+      "sourceHeadingSha256": "b89952f3db8706f359a8b8171a3ce8675b1f2cda15dae05413585f5395d23eb0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR7",
+      "meridianCode": "LR",
+      "sequence": 7,
+      "pinyin": "Xiguan",
+      "name": "膝关",
+      "sourceHeadingSha256": "16eca0b5f33e1b56c552c9068fb507d01b34be766bd39a6e0dad05d603be496e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR8",
+      "meridianCode": "LR",
+      "sequence": 8,
+      "pinyin": "Ququan",
+      "name": "曲泉",
+      "sourceHeadingSha256": "c062e94c8e38f980d1af44c7fd0c0166ba3020897d27ac4010b613d15ef2270c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR9",
+      "meridianCode": "LR",
+      "sequence": 9,
+      "pinyin": "Yinbao",
+      "name": "阴包",
+      "sourceHeadingSha256": "e14a90bba678e1be861eac8e3d589550c23aa4c87acf9f54219ca308816821f1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR10",
+      "meridianCode": "LR",
+      "sequence": 10,
+      "pinyin": "Zuwuli",
+      "name": "足五里",
+      "sourceHeadingSha256": "aa4eea561de7ef182ed86645cfb4f8ec87a82774df7d585717f13ec6ef98bd1e",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR11",
+      "meridianCode": "LR",
+      "sequence": 11,
+      "pinyin": "Yinlian",
+      "name": "阴廉",
+      "sourceHeadingSha256": "125b241743e01572e43db87e810356f8c56a6104f82c93bb370e8f111d8d041a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR12",
+      "meridianCode": "LR",
+      "sequence": 12,
+      "pinyin": "Jimai",
+      "name": "急脉",
+      "sourceHeadingSha256": "e6f0e777e18052b2f1081f4904ea07efcf80128b0e67e9c757c156ba1a22eb34",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR13",
+      "meridianCode": "LR",
+      "sequence": 13,
+      "pinyin": "Zhangmen",
+      "name": "章门",
+      "sourceHeadingSha256": "4deb0448f0c5c75543913e9823a6fabea7dbb38e01ab677b8e5c52eb07e6a8ab",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "LR14",
+      "meridianCode": "LR",
+      "sequence": 14,
+      "pinyin": "Qimen",
+      "name": "期门",
+      "sourceHeadingSha256": "142c56dc9f83432d0bd0ee49c9c2e6ce8bb2e059668357dcad9a3cf802090294",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV1",
+      "meridianCode": "GV",
+      "sequence": 1,
+      "pinyin": "Changqiang",
+      "name": "长强",
+      "sourceHeadingSha256": "b7a3832cf3394ec372c31e7e41362d9372d3c4de8403417e2ca2834ca02452fd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV2",
+      "meridianCode": "GV",
+      "sequence": 2,
+      "pinyin": "Yaoshu",
+      "name": "腰俞",
+      "sourceHeadingSha256": "3ce6813a94bcd4edbfe24e1d998f145804325018c650ec5cd66a40a7fb701861",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV3",
+      "meridianCode": "GV",
+      "sequence": 3,
+      "pinyin": "Yaoyangguan",
+      "name": "腰阳关",
+      "sourceHeadingSha256": "e79bbced0cb9b61ea83a7abae8f5f49d32aa1163d5d19a6e6e3ded1111d2ed88",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV4",
+      "meridianCode": "GV",
+      "sequence": 4,
+      "pinyin": "Mingmen",
+      "name": "命门",
+      "sourceHeadingSha256": "b40033f46959baecb45bf9778f4f3b0151363bc02a7de15ac39973e1476f9166",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV5",
+      "meridianCode": "GV",
+      "sequence": 5,
+      "pinyin": "Xuanshu",
+      "name": "悬枢",
+      "sourceHeadingSha256": "a740df73b799364750e54a6724e7ded427414368ebc06098892b521b0f54f2b5",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV6",
+      "meridianCode": "GV",
+      "sequence": 6,
+      "pinyin": "Jizhong",
+      "name": "脊中",
+      "sourceHeadingSha256": "bd95aadfe86bbdae1392bc912bd4b2105836a71ad0139ef12c5bb0f9c1f7b270",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV7",
+      "meridianCode": "GV",
+      "sequence": 7,
+      "pinyin": "Zhongshu",
+      "name": "中枢",
+      "sourceHeadingSha256": "35c9240efaa4cc81c17fb7780dd16fe6e1d13578e563efe5d33908e876d9fb72",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV8",
+      "meridianCode": "GV",
+      "sequence": 8,
+      "pinyin": "Jinsuo",
+      "name": "筋缩",
+      "sourceHeadingSha256": "1853a427ee7fa0275bb3c3d18831185cbe3490c61da4dd0c922ce4f671c7fe32",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV9",
+      "meridianCode": "GV",
+      "sequence": 9,
+      "pinyin": "Zhiyang",
+      "name": "至阳",
+      "sourceHeadingSha256": "5e993f291a29ce7cfde7abc29893ce9235c10f17cb7c7b6fcf370373f9bfd073",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV10",
+      "meridianCode": "GV",
+      "sequence": 10,
+      "pinyin": "Lingtai",
+      "name": "灵台",
+      "sourceHeadingSha256": "889e387384efc2fdfadfb230c2a41a4e2ec8f6dde9be9db7a8b522c1de3cefb1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV11",
+      "meridianCode": "GV",
+      "sequence": 11,
+      "pinyin": "Shendao",
+      "name": "神道",
+      "sourceHeadingSha256": "951fba33935d43974c9b1620d32febd1b84c046efdc362b2e89f4829a8544631",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV12",
+      "meridianCode": "GV",
+      "sequence": 12,
+      "pinyin": "Shenzhu",
+      "name": "身柱",
+      "sourceHeadingSha256": "44fdfd5e0f09879fb430e5d68f0857c3e14ce42c2aa5de498ef35be74c574ecc",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV13",
+      "meridianCode": "GV",
+      "sequence": 13,
+      "pinyin": "Taodao",
+      "name": "陶道",
+      "sourceHeadingSha256": "45928efd78d38b12092bb42b91e1eeee5ee301a73f680aa2f771b0240f3b12d1",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV14",
+      "meridianCode": "GV",
+      "sequence": 14,
+      "pinyin": "Dazhui",
+      "name": "大椎",
+      "sourceHeadingSha256": "5e512a5f000afdd172600619ef0b86225b40b2ae18458cb320efdc5a354cbcd7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV15",
+      "meridianCode": "GV",
+      "sequence": 15,
+      "pinyin": "Yamen",
+      "name": "哑门",
+      "sourceHeadingSha256": "72ac1045a5f2946a472f05007eaadd51d1674ae67e3270b61f2454f9b685e200",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV16",
+      "meridianCode": "GV",
+      "sequence": 16,
+      "pinyin": "Fengfu",
+      "name": "风府",
+      "sourceHeadingSha256": "206fb345fdb038cbfbd0f3fb54f74734d1f3638e1ab4297771693f56ae59ee1d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV17",
+      "meridianCode": "GV",
+      "sequence": 17,
+      "pinyin": "Naohu",
+      "name": "脑户",
+      "sourceHeadingSha256": "8329f728f7cf0dbb7e8359682805a6dc265d43314b52040c8a9af1029357bd13",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV18",
+      "meridianCode": "GV",
+      "sequence": 18,
+      "pinyin": "Qiangjian",
+      "name": "强间",
+      "sourceHeadingSha256": "a3fe9438b0d9c39e60a13e05fe997dbad70c6566578a685ccc6d952b80471060",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV19",
+      "meridianCode": "GV",
+      "sequence": 19,
+      "pinyin": "Houding",
+      "name": "后顶",
+      "sourceHeadingSha256": "df32869f716f36fabcee4946c6ae49fe4bdabe06d334dface41105cc98cfa456",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV20",
+      "meridianCode": "GV",
+      "sequence": 20,
+      "pinyin": "Baihui",
+      "name": "百会",
+      "sourceHeadingSha256": "789f1038dcdd45ee91686fdb9570cae52b50d6e913212911dbc258e14f15c95f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV21",
+      "meridianCode": "GV",
+      "sequence": 21,
+      "pinyin": "Qianding",
+      "name": "前顶",
+      "sourceHeadingSha256": "f1c18a00e243df3cf3f9e71bcf519a8f6e9e9a7da6f82445f6b4ac45c92f619f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV22",
+      "meridianCode": "GV",
+      "sequence": 22,
+      "pinyin": "Xinhui",
+      "name": "囟会",
+      "sourceHeadingSha256": "2031ada84fc1ddce19473cd07fb2cd91662939cc2fdaba6e4786d8d0f96dee41",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV23",
+      "meridianCode": "GV",
+      "sequence": 23,
+      "pinyin": "Shangxing",
+      "name": "上星",
+      "sourceHeadingSha256": "f55cb07e62d69435835c1dc21b77d15c1c205bdd264a9001ef9586165adac2f7",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV24",
+      "meridianCode": "GV",
+      "sequence": 24,
+      "pinyin": "Shenting",
+      "name": "神庭",
+      "sourceHeadingSha256": "533ee177e398728785c9f81a4cc23972c7eadc5dc0dafa648d19d5a3cb5c9c40",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV25",
+      "meridianCode": "GV",
+      "sequence": 25,
+      "pinyin": "Suliao",
+      "name": "素髎",
+      "sourceHeadingSha256": "49897f240e03585a8b9162509d8a5da3bf384d702261a4cbb111734becf3de10",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV26",
+      "meridianCode": "GV",
+      "sequence": 26,
+      "pinyin": "Shuigou",
+      "name": "水沟",
+      "sourceHeadingSha256": "0d4f9934c6bf487ee25a7d7a73e0aefd10cbf8d34fcabccc20e65a4ed5a53c53",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV27",
+      "meridianCode": "GV",
+      "sequence": 27,
+      "pinyin": "Duiduan",
+      "name": "兑端",
+      "sourceHeadingSha256": "70c917bd02e695d711aecd60366a38b30e3d5b48f54fab3f4d0000d11269587c",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV28",
+      "meridianCode": "GV",
+      "sequence": 28,
+      "pinyin": "Yinjiao",
+      "name": "龈交",
+      "sourceHeadingSha256": "6975b9bf23e3acc9f7a29a1b85578c89ec902fee23c39c4db010a07a2a64f29b",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "GV29",
+      "meridianCode": "GV",
+      "sequence": 29,
+      "pinyin": "Yintang",
+      "name": "印堂",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate beyond the WHO 361-point code domain; official page confirms only the current 362-point scope in this repository"
+    },
+    {
+      "code": "CV1",
+      "meridianCode": "CV",
+      "sequence": 1,
+      "pinyin": "Huiyin",
+      "name": "会阴",
+      "sourceHeadingSha256": "d082e5e8c63f4b5fab571f3e32f4a8346d52578ea4f728e0234e4547166207ad",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV2",
+      "meridianCode": "CV",
+      "sequence": 2,
+      "pinyin": "Qugu",
+      "name": "曲骨",
+      "sourceHeadingSha256": "4a694978c853c8efc670f9baa88b157f6d84b21bbccf286725d6d594335259e8",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV3",
+      "meridianCode": "CV",
+      "sequence": 3,
+      "pinyin": "Zhongji",
+      "name": "中极",
+      "sourceHeadingSha256": "bb7fcfe664cdbd471feddd48540b9f869136bfd6e40cd6f9d129f1a50dbcd6b6",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV4",
+      "meridianCode": "CV",
+      "sequence": 4,
+      "pinyin": "Guanyuan",
+      "name": "关元",
+      "sourceHeadingSha256": "87ec6fa746a3886df4a3383fbcfcb54108c8a45da71d289323ff434d947c1539",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV5",
+      "meridianCode": "CV",
+      "sequence": 5,
+      "pinyin": "Shimen",
+      "name": "石门",
+      "sourceHeadingSha256": "1e29ecd7790179dfa563f5552ef77f778057114d56cf1d097ddd49a52685ade3",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV6",
+      "meridianCode": "CV",
+      "sequence": 6,
+      "pinyin": "Qihai",
+      "name": "气海",
+      "sourceHeadingSha256": "fe9ab60912a1d46859a93248b8c635725fc4c7a7ceeffc5d19912a98e6fd2bba",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV7",
+      "meridianCode": "CV",
+      "sequence": 7,
+      "pinyin": "Yinjiao",
+      "name": "阴交",
+      "sourceHeadingSha256": "a9ecf19da8e591b455426de8b1f2995d1f1dc392cc085d5403dcf6556be50c0d",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV8",
+      "meridianCode": "CV",
+      "sequence": 8,
+      "pinyin": "Shenque",
+      "name": "神阙",
+      "sourceHeadingSha256": "de4fcd4619a8d23650dbaada4bc79652bfa1684dd67918a9b9baea3007096530",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV9",
+      "meridianCode": "CV",
+      "sequence": 9,
+      "pinyin": "Shuifen",
+      "name": "水分",
+      "sourceHeadingSha256": "7fef6f6b9cff6959bebe1e840d814587bf3bc5b6d68082eb2501966e377da681",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV10",
+      "meridianCode": "CV",
+      "sequence": 10,
+      "pinyin": "Xiawan",
+      "name": "下脘",
+      "sourceHeadingSha256": "2f993846f273ea383ad989813dd3385b1caaf3d1c6d09d6dc5da1775188246dd",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV11",
+      "meridianCode": "CV",
+      "sequence": 11,
+      "pinyin": "Jianli",
+      "name": "建里",
+      "sourceHeadingSha256": "69c97cc8272b2e9a402686b6ac5d98968c732e4d455383181ca763990347e535",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV12",
+      "meridianCode": "CV",
+      "sequence": 12,
+      "pinyin": "Zhongwan",
+      "name": "中脘",
+      "sourceHeadingSha256": "f4f1b15456c745e0fdfb7164ebc5af2376a26aca1fed30478d44c01d9cdbb19f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV13",
+      "meridianCode": "CV",
+      "sequence": 13,
+      "pinyin": "Shangwan",
+      "name": "上脘",
+      "sourceHeadingSha256": "accd6efef1f929cd41b1c327935ba1493e4c34e139aa8b46c89d684d6c8f3569",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV14",
+      "meridianCode": "CV",
+      "sequence": 14,
+      "pinyin": "Juque",
+      "name": "巨阙",
+      "sourceHeadingSha256": "3fb84261489737388ac8188a163446bf99248dfc1413130627947d24677ccbee",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV15",
+      "meridianCode": "CV",
+      "sequence": 15,
+      "pinyin": "Jiuwei",
+      "name": "鸠尾",
+      "sourceHeadingSha256": "5dc3da8831f8ce15de765f67c113a5109c249dbada2a0f41385aec78416b5a75",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV16",
+      "meridianCode": "CV",
+      "sequence": 16,
+      "pinyin": "Zhongting",
+      "name": "中庭",
+      "sourceHeadingSha256": "e911d2f56441ed7aecfdfa3039150b33ca7a21a178a6e43de55de479fa94fa0f",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV17",
+      "meridianCode": "CV",
+      "sequence": 17,
+      "pinyin": "Danzhong",
+      "name": "膻中",
+      "sourceHeadingSha256": "929474b51a5b9d82da22c804f8657aae14dddbb4452e65044716dd662b2cbcdf",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV18",
+      "meridianCode": "CV",
+      "sequence": 18,
+      "pinyin": "Yutang",
+      "name": "玉堂",
+      "sourceHeadingSha256": "ddde5258e3d95816d5dc75c80e1c6164e8614f67768f1ab004d6515c13c4e306",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV19",
+      "meridianCode": "CV",
+      "sequence": 19,
+      "pinyin": "Zigong",
+      "name": "紫宫",
+      "sourceHeadingSha256": "b16aa3ef921d92b9807852dc050f5fefe47f61c96df3204a05dbb3995fc3a476",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV20",
+      "meridianCode": "CV",
+      "sequence": 20,
+      "pinyin": "Huagai",
+      "name": "华盖",
+      "sourceHeadingSha256": "7c3457d4cf6c333089af5799823605e9930a26156fd438c70398a1964100c451",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV21",
+      "meridianCode": "CV",
+      "sequence": 21,
+      "pinyin": "Xuanji",
+      "name": "璇玑",
+      "sourceHeadingSha256": "f97fa63822788c7ad3ead102dc323acfa9f1638852276b2fb0dac3c7712435f0",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV22",
+      "meridianCode": "CV",
+      "sequence": 22,
+      "pinyin": "Tiantu",
+      "name": "天突",
+      "sourceHeadingSha256": "1a17723c0cfeaf7790c98afa1a33cf7f667b81bd9a9f24e2b23585b9ce817584",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV23",
+      "meridianCode": "CV",
+      "sequence": 23,
+      "pinyin": "Lianquan",
+      "name": "廉泉",
+      "sourceHeadingSha256": "7413ef5c79f6e0e7a0ba54f397c32c464b8aaa7ef0b189c573cfb61e67cc35af",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    },
+    {
+      "code": "CV24",
+      "meridianCode": "CV",
+      "sequence": 24,
+      "pinyin": "Chengjiang",
+      "name": "承浆",
+      "sourceHeadingSha256": "d85afa91b2d5c81c0162143f510ce21d59a70c3a085d7f3dfd71afcfbe4cda0a",
+      "nameEvidence": "secondary_transcription_candidate",
+      "source": "Secondary transcription candidate cross-checked against the WHO code domain"
+    }
+  ],
+  "transcribedExtraPointNames": [
+    "四神聪",
+    "当阳",
+    "鱼腰",
+    "太阳",
+    "耳尖",
+    "球后",
+    "上迎香",
+    "内迎香",
+    "聚泉",
+    "海泉",
+    "金津玉液",
+    "翳明",
+    "颈百劳",
+    "安眠",
+    "牵正",
+    "新设",
+    "血压点",
+    "子宫",
+    "提托",
+    "定喘",
+    "夹脊",
+    "胃脘下俞",
+    "接脊",
+    "痞根",
+    "腰宜",
+    "腰眼",
+    "十七椎",
+    "肩前",
+    "肘尖",
+    "二白",
+    "中泉",
+    "中魁",
+    "大骨空",
+    "小骨空",
+    "腰痛点",
+    "外劳宫",
+    "八邪",
+    "四缝",
+    "十宣",
+    "髋骨",
+    "鹤顶",
+    "百虫窝",
+    "内膝眼",
+    "胆囊",
+    "阑尾",
+    "内踝尖",
+    "外踝尖",
+    "八风",
+    "里内庭",
+    "独阴",
+    "气端"
+  ],
+  "boundaries": [
+    "The official pages establish current status and the 362/51 scope counts.",
+    "The checked-in repository cannot reproduce the complete official per-name catalogs; all per-name comparisons are secondary-transcription candidates.",
+    "The 361 WHO names are a primary-source historical/international comparator; the secondary transcription adds GV29 to reach the official 362 count.",
+    "This snapshot does not reproduce the complete copyrighted Chinese location prose and therefore does not by itself validate every location sentence.",
+    "The secondary transcription is not an independent authority and cannot override the official standard."
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "audit": "tcm-acupoint-external-treatment-safety-candidates",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 4904,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "meridianSourceRows": 361,
+    "meridianOfficialCount": 362,
+    "meridianTranscriptionNameDifferences": 3,
+    "meridianTranscriptionCandidateMissing": 1,
+    "extraPointSourceRows": 40,
+    "extraPointOfficialCount": 51,
+    "extraPointTranscriptionMatches": 34,
+    "extraPointTranscriptionMissing": 17,
+    "extraPointNonTranscriptionRows": 6,
+    "extraPointMixedIdentityRows": 1,
+    "extraPointDuplicateLocationRows": 1,
+    "operationSourceLevels": 3,
+    "treatmentClaimRecords": 240,
+    "diseasePrescriptionRows": 27,
+    "legacyAcupoints": 30,
+    "sourceNonEmptyLines": 763,
+    "sourceMarkdownTables": 27,
+    "sourceMarkdownTableRows": 471
+  },
+  "categories": {
+    "contract": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "meridian_preservation": {
+      "checks": 2166,
+      "passed": 2166,
+      "failed": 0
+    },
+    "secondary_transcription_comparison": {
+      "checks": 361,
+      "passed": 361,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 1402,
+      "passed": 1402,
+      "failed": 0
+    },
+    "official_scope": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "transcription_summary": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "catalog_summary": {
+      "checks": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "extra_preservation": {
+      "checks": 280,
+      "passed": 280,
+      "failed": 0
+    },
+    "extra_summary": {
+      "checks": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "operation_preservation": {
+      "checks": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    "claim_preservation": {
+      "checks": 480,
+      "passed": 480,
+      "failed": 0
+    },
+    "safety_summary": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "disease_preservation": {
+      "checks": 108,
+      "passed": 108,
+      "failed": 0
+    },
+    "disease_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "legacy_mapping": {
+      "checks": 61,
+      "passed": 61,
+      "failed": 0
+    },
+    "source_inventory": {
+      "checks": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "code": "BL45",
+      "sourceName": "譩嘻",
+      "transcribedCurrentName": "譩譆",
+      "evidenceStatus": "secondary_transcription_candidate",
+      "productEligibility": "blocked"
+    },
+    {
+      "code": "TE11",
+      "sourceName": "清冷渊",
+      "transcribedCurrentName": "清泠渊",
+      "evidenceStatus": "secondary_transcription_candidate",
+      "productEligibility": "blocked"
+    },
+    {
+      "code": "TE18",
+      "sourceName": "瘛脉",
+      "transcribedCurrentName": "瘈脉",
+      "evidenceStatus": "secondary_transcription_candidate",
+      "productEligibility": "blocked"
+    },
+    {
+      "id": "TCM-ACU-LOC-001",
+      "code": "GB31",
+      "name": "风市",
+      "sourceLocation": "大腿外侧中线,腘横纹上7寸;简便:直立垂手中指尖处",
+      "currentStandardDistance": "腘横纹上9寸",
+      "currentStandardContext": "GB/T 12346-2021 revised the GB31 expression and uses the iliotibial-band anatomical landmark; the Skill retains the older 7-cun statement.",
+      "status": "source_error_confirmed",
+      "productEligibility": "blocked"
+    },
+    {
+      "id": "TCM-EXT-001",
+      "severity": "critical",
+      "status": "unsupported_global_home_grade_blocked",
+      "observation": "Skill assigns all acupoint pressing and self-massage to A zero-threshold direct advice, but WHO treats tuina as screened practitioner care and FDA low-risk evidence is limited to P6 nausea devices.",
+      "productEligibility": "blocked"
+    },
+    {
+      "id": "TCM-EXT-002",
+      "severity": "critical",
+      "status": "moxibustion_home_protocols_blocked",
+      "observation": "Skill assigns suspended moxibustion to A-minus and gives concrete home regimens, including pregnancy; WHO and systematic-review evidence document burn and other hazards, with obstetric adverse-event evidence uncertain.",
+      "productEligibility": "blocked"
+    },
+    {
+      "id": "TCM-EXT-003",
+      "severity": "critical",
+      "status": "cross_modality_conversion_unsupported_blocked",
+      "observation": "Skill globally converts textbook needle prescriptions for 27 diseases into home pressing or moxibustion without independent modality-specific evidence.",
+      "productEligibility": "blocked"
+    },
+    {
+      "id": "TCM-EXT-004",
+      "severity": "high",
+      "status": "first_aid_source_conflict_blocked",
+      "observation": "Skill adds warm sugar water and acupoint pressing to fainting management after strong treatment; current WHO incident guidance instead requires stopping, positioning, assessment and referral as appropriate.",
+      "productEligibility": "blocked"
+    },
+    {
+      "id": "TCM-EXT-005",
+      "severity": "high",
+      "status": "professional_only_boundary_supported",
+      "observation": "The Skill B-grade prohibition on self-needling is directionally supported by WHO practitioner, infection-control, contraindication and incident-management requirements; procedural text still remains blocked from home instruction.",
+      "productEligibility": "blocked"
+    }
+  ],
+  "evidenceBoundary": [
+    "Official sources establish current status and the 362/51 scope counts; the checked-in per-name catalogs are secondary-transcription candidates, not independently reproducible official name lists.",
+    "Every non-empty line and Markdown table row in references 38-41 is preserved in the blocked source inventory; structured semantic parsers cover the explicitly counted point, safety-level, claim and disease domains.",
+    "The project does not store the complete current Chinese standard location prose; all 401 source location rows remain blocked, with GB31 recorded as a confirmed current-standard conflict.",
+    "Traditional indications and disease prescriptions are not validated by point-name correctness.",
+    "Professional-only agreement for needle procedures does not make procedural detail eligible for home use.",
+    "No A, A-minus or B source label is copied into runtime eligibility."
+  ],
+  "sourceRefs": {
+    "general": {
+      "path": "database/tcm/skill-v3/references/38-针灸-经络与腧穴总论.md",
+      "sha256": "c7fec30d5f0a2c0fa960459bddee14c1e74dd01dd55720fa8778be990ac4aeee"
+    },
+    "points": {
+      "path": "database/tcm/skill-v3/references/39-针灸-十四经穴与奇穴.md",
+      "sha256": "fa2667c278f7431e70387e8582554215d7a4742ff6d6c3a4dc365a4d8e89be8b"
+    },
+    "operations": {
+      "path": "database/tcm/skill-v3/references/40-针灸-灸法按摩与外治法.md",
+      "sha256": "8b0f5d62f2e76eb3877506c275195c0055db953e260b6713263b078167bd2b05"
+    },
+    "diseases": {
+      "path": "database/tcm/skill-v3/references/41-针灸-常见病证取穴.md",
+      "sha256": "dd65bda4516e432cc20afe987572a340c1fc2f6a85290bef8649906e705a547f"
+    },
+    "legacy": {
+      "path": "database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json",
+      "sha256": "fc0e038ea34ba7a75b5a1f07cd3705970232a1b39721f13aad55c969a11be585"
+    },
+    "standardCatalog": {
+      "path": "database/tcm/sources/cn2021-acupoint-standard-catalog.json",
+      "sha256": "b121d0a3d34bb48f8ed9a3b5d850cb5b65c78a76c493e2cb9affcd4558f53a38"
+    },
+    "externalSafety": {
+      "path": "database/tcm/sources/external-treatment-safety-evidence.json",
+      "sha256": "461c23d704bd490910fedb44b1cda123f9d34a382ff8863e6954fb512921ee94"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "5d939a5135c4ab9bf6eadfad4840201da2283105c5ea50c085f794f85cb71ef7"
+  },
+  "failures": []
+}

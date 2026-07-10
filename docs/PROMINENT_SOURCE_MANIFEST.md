@@ -337,6 +337,30 @@
 | 本轮结果 | 旧 34 题不匹配上述版本；体质判定与调养功能暂停 |
 | 边界 | 本轮未导入受版权保护的完整量表条目；取得合法文本和对应评分规范前不恢复运行时 |
 
+### SRC-VAL-TCM-ACUPOINT-STANDARDS
+
+| 字段 | 值 |
+|---|---|
+| 名称 | GB/T 12346-2021《经穴名称与定位》、GB/T 40997-2021《经外奇穴名称与定位》与 WHO 2008 穴位标准 |
+| 状态 | `validation_anchor`，官方现行状态/范围数量与历史国际 comparator；逐名清单为二级转录候选 |
+| 官方来源 | `https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=397548AE7248D3D87DD15E0AB8107185`、`https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=D2AEF8AD07C0150E19859079579EF99F`、`https://iris.who.int/items/f188654a-d8a7-4519-9979-8e2de713c060` |
+| 当前范围 | 现行中国目录为 362 经穴、51 经外奇穴；WHO 2008 comparator 为 361 经穴 |
+| 项目快照 | `database/tcm/sources/who2008-acupoint-name-index.json`，SHA256 `15efb2be8f1208028554a9bbb26733b96347dba573cb3e58677dcb176dbd9a67`；`database/tcm/sources/cn2021-acupoint-standard-catalog.json`，SHA256 `b121d0a3d34bb48f8ed9a3b5d850cb5b65c78a76c493e2cb9affcd4558f53a38` |
+| 转录支持 | `luthepath/TCM-Input-Method` commit `1a0bc95d3e15f01d1d7be8293ca8deac40ab058f`、MIT；只作结构化名称转录辅助，不能覆盖官方标准 |
+| 本轮结果 | 官方授证现行 362/51 范围；二级转录候选提示 Skill 缺 `GV29 印堂`、3 个经穴名差异，40 个奇穴为 34 匹配/缺 17/另有 6 未匹配；确认 `GB31 风市` 保留旧 7 寸定位，现行为 9 寸 |
+| 边界 | 项目不保存可复现的官方逐名清单或完整定位正文；逐名差异只作二级候选，401 条定位和传统主治全部 blocked |
+
+### SRC-VAL-TCM-EXTERNAL-TREATMENT-SAFETY
+
+| 字段 | 值 |
+|---|---|
+| 名称 | WHO 针灸/推拿执业基准、WHO 针灸安全指南、FDA P6 按压设备审查、Cochrane 胎位不正艾灸综述与艾灸不良事件综述 |
+| 状态 | `validation_anchor`，外治操作风险、禁忌和证据外推边界 |
+| 官方/研究来源 | `https://www.who.int/publications/i/item/978-92-4-001688-0`、WHO IRIS 针灸/推拿 PDF、`https://www.fda.gov/media/149637/download`、DOI `10.1002/14651858.CD003928.pub4`、PMCID `PMC4058265` |
+| 项目快照 | `database/tcm/sources/external-treatment-safety-evidence.json`，SHA256 `461c23d704bd490910fedb44b1cda123f9d34a382ff8863e6954fb512921ee94` |
+| 本轮结果 | 全局 A 级家庭按压无支持；家庭艾灸具体方案、针刺处方向按压/艾灸的跨模态转换、晕针糖水/按穴扩展均 blocked；禁止自行针刺的方向性边界得到支持 |
+| 边界 | FDA 证据只覆盖 P6 止吐设备；病例综述证明危害种类而非发生率；专业操作边界不授予任何程序性家庭指导资格 |
+
 ### SRC-VAL-DAYUN-CLASSICS
 
 | 字段 | 值 |
@@ -509,14 +533,15 @@
 | TCM-HERBS | `references/15-23*` | 470 余味中药、分类、病证反查、剂量与注意 | 中药实体、当前茶饮与药味审计 | 剂量未完成药典校准 |
 | TCM-FORMULAS | `references/24-30*` | 约 180 正方、160 余附方、方义、类方、使用注意 | 方剂实体、教学、方名审计 | 学习参考，不直接荐方 |
 | TCM-DISEASES | `references/31-37*` | 七大系统 50 余内科病种 | 病种、证型、鉴别、红线、调护 | 不替代现代医学诊断 |
-| TCM-ACUPOINTS | `references/38-41*` | 361 经穴、40 奇穴、定位、配穴、外治分级 | 穴位实体、按穴/艾灸安全 | 针刺等有创操作禁自行 |
+| TCM-ACUPOINTS | `references/38-41*` | 763 条非空行、27 表/471 表格行；361 经穴、40 奇穴、定位、27 病证配穴、外治分级 | 全原文 inventory、穴位/外治候选和来源差异审计 | 官方仅授证现行 362/51 范围；逐名为二级转录，定位、疗效及家庭操作全部 blocked |
 | TCM-CLASSICS | `references/42-45*` | 素问、灵枢、难经、伤寒、金匮要义与条文 | 经典出处、课程与解释 | 古方剂量不进入现代用药依据 |
 | TCM-WENBING-AUTHORS | `references/46-48*` | 医学心悟、温病三书、衷中参西录 | 医家观点、温病与历史课程 | 医家观点和时代内容不覆盖教材安全层 |
 | TCM-SAFETY | `references/安全-配伍妊娠禁忌与毒性药.md` | 配伍、妊娠、毒性、马兜铃酸、方剂级警示、忌口 | 第一批规范化；所有涉药消费硬门槛 | 仍需现行标准和项目复核 |
 | TCM-SAFETY-CORE | `database/tcm/normalized/tcm-safety-core.json` | 28 项法定毒性中药 blocklist、来源和产品资格 | 当前唯一 accepted 的中医规范安全切片 | 不含药典剂量、妊娠、配伍、方剂或穴位授证 |
 | TCM-PHARM-CANDIDATES | `database/tcm/normalized/tcm-pharmacopoeia-candidates.json` | 100 行/101 味原始剂量、2025 目录身份、2020 历史正文对照、名称裁决和急救标记 | 全量可审计候选层 | 101 味全部 blocked；不是 accepted 剂量库 |
 | TCM-PREG-COMPAT-FORMULA-CANDIDATES | `database/tcm/normalized/tcm-pregnancy-compatibility-formula-candidates.json` | 妊娠表与剂量表、十八反十九畏、马兜铃酸监管药名、31 行/37 方名警示及逐条冲突 | 全量可审计候选层 | 所有记录 blocked；2020 历史支持不等于现行 product eligibility |
-| TCM-PHARM-SOURCES | `database/tcm/sources/` | 两组 2025 目录索引、两组 2020 数字药典候选字段快照与马兜铃酸监管裁决，共 5 个文件 | 重建候选层和复核来源漂移 | 2025 只有目录身份；2020 仅为历史 comparator；2003/2004 通知不自动代表当前完整法律状态 |
+| TCM-ACUPOINT-EXTERNAL-CANDIDATES | `database/tcm/normalized/tcm-acupoint-external-safety-candidates.json` | 361 经穴、40 奇穴、3 级操作声明、240 条风险/操作、27 病证处方和 30 个旧运行时穴位映射 | 全量可审计候选层 | 名称/数量目录核对不授证定位或疗效；全部记录 blocked |
+| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；WHO 2008 名称索引、官方现行数量/二级逐名转录和外治安全证据 3 份，共 8 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
@@ -597,7 +622,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 药典剂量与妊娠/配伍/马兜铃酸/方剂候选层已完成当前公开证据范围的全量归一化；继续取得适用现行正文、裁决剩余现行监管状态，并转入穴位、按压、艾灸与有创外治安全。
+2. TCM 药典、妊娠/配伍/方剂和穴位/外治三个候选层已完成当前公开证据范围的全量归一化并全部 blocked；继续取得适用现行药典/逐穴定位正文、裁决剩余监管状态，并转入 `31-37` 病种红线与急症转诊验证。
 3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

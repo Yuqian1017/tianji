@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "status": "selected_primary_and_systematic_review_evidence",
+  "generatedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "WHO-ACUPUNCTURE-PRACTICE-2020",
+      "title": "WHO benchmarks for the practice of acupuncture",
+      "officialUrl": "https://www.who.int/publications/i/item/978-92-4-001688-0",
+      "officialPdfUrl": "https://iris.who.int/server/api/core/bitstreams/e4c8a673-688a-4a2a-af6d-f1c36438946a/content",
+      "pdfSha256": "bb9ff5c0100ab31b2ce66f2e98082dd9dc8bf2eca9f2515c64a346c6fb420f47",
+      "facts": [
+        { "locator": "2.1-2.2", "fact": "Needle selection, point location, disinfection, insertion angle, depth and manipulation are practitioner decisions tied to the individual patient and point." },
+        { "locator": "4.1", "fact": "Treatment requires risk disclosure, informed consent, monitoring and records." },
+        { "locator": "4.2", "fact": "Contraindications include coagulation disturbance, unstable epilepsy, an open fontanelle, pregnancy at the lower abdomen or lumbosacral region, damaged treatment regions and strict depth control near vital structures." },
+        { "locator": "4.3-4.4 and Annexes 1-2", "fact": "Safe practice requires infection control and incident protocols for fainting, excessive pain, stuck, bent or broken needles, pneumothorax, and nerve, vascular or organ injury." }
+      ]
+    },
+    {
+      "id": "WHO-TUINA-PRACTICE-2020",
+      "title": "WHO benchmarks for the practice of tuina",
+      "officialPdfUrl": "https://iris.who.int/server/api/core/bitstreams/ba223703-8c4d-4db8-9695-bece3fc7bfba/content",
+      "pdfSha256": "c78b5b5076e1ec4914cfc7cfe03dc69365b7b87e6fe702dbf8f7eceee3d3a147",
+      "facts": [
+        { "locator": "4.1", "fact": "Tuina is framed as practitioner-delivered treatment with informed consent and manipulation selected by health condition and response." },
+        { "locator": "4.2", "fact": "Contraindications include acute cardiac or cerebrovascular disease, severe infection, acute abdominal pain, bleeding tendency, intoxication, extreme weakness, pregnancy or menstruation at the abdomen or lumbosacral region, and damaged, infected, malignant or tendon-injured regions." },
+        { "locator": "4.4 and Annex 2", "fact": "Recognized incidents include injury to skin, tissue and bone, with urgent referral for severe injury." }
+      ]
+    },
+    {
+      "id": "WHO-ACUPUNCTURE-SAFETY-1999",
+      "title": "Guidelines on basic training and safety in acupuncture",
+      "officialPdfUrl": "https://iris.who.int/bitstreams/07296f71-3317-43df-8928-81f33be12cbe/download",
+      "pdfSha256": "af882fc42bf91ac31ec73756b47494037720016373f6579a8b1c75d3cbe54f12",
+      "facts": [
+        { "locator": "3.9", "fact": "Moxibustion burns should be prevented; direct scarring moxibustion is a special technique and requires informed consent, with added caution for impaired sensation, circulation and skin disease." },
+        { "locator": "5", "fact": "The guideline identifies pneumothorax, organ injury, upper-cervical central nervous system injury, eye, tracheal and carotid-adjacent points as requiring special skill and experience." }
+      ]
+    },
+    {
+      "id": "FDA-ACUPRESSURE-DEVICES-2021",
+      "title": "General and Plastic Surgery Devices Panel: acupressure devices for nausea",
+      "officialPdfUrl": "https://www.fda.gov/media/149637/download",
+      "pdfSha256": "a5a6e1a8eb233fc7462a8872a9279360dc3686185bd7702e3db220b0eefd5168",
+      "facts": [
+        { "locator": "Sections 4.4, 5.3, 5.5 and 8", "fact": "The reviewed low-risk device scope is a wrist device applying pressure at P6 for nausea; reported risks include discomfort, bruising, swelling, tenderness, skin irritation, redness and itching." },
+        { "locator": "Evidence boundary", "fact": "This device review does not validate all-point manual acupressure, disease-specific point prescriptions, force, duration or pregnancy points outside the P6 nausea-device scope." }
+      ]
+    },
+    {
+      "id": "COCHRANE-MOXIBUSTION-BREECH-2023",
+      "title": "Cephalic version by moxibustion for breech presentation",
+      "doi": "10.1002/14651858.CD003928.pub4",
+      "publicUrl": "https://www.cochrane.org/evidence/CD003928_moxibustion-turning-baby-breech-position",
+      "facts": [
+        { "locator": "Main results", "fact": "Moxibustion plus usual care probably reduces non-cephalic presentation at birth, but effects on several obstetric outcomes and adverse events are uncertain." },
+        { "locator": "Adverse events", "fact": "Reported adverse events include uterine contractions, nausea, headache, unpleasant odor, increased fetal movement and burns; reporting was inadequate in most trials." },
+        { "locator": "Evidence boundary", "fact": "The review does not support a fixed 80 percent success claim or an unrestricted family-operated daily regimen until correction." }
+      ]
+    },
+    {
+      "id": "MOXIBUSTION-AE-REVIEW-2014",
+      "title": "Safety of Moxibustion: A Systematic Review of Case Reports",
+      "pmid": "24976851",
+      "pmcid": "PMC4058265",
+      "doi": "10.1155/2014/783704",
+      "facts": [
+        { "locator": "Results", "fact": "The review found case reports of burns, allergy, infection, respiratory symptoms, fetal harm and other serious outcomes; case reports establish hazards but not incidence." },
+        { "locator": "Discussion", "fact": "Safety depends on site, duration, distance, practitioner skill, patient condition, smoke and treatment environment." }
+      ]
+    }
+  ],
+  "boundaries": [
+    "These facts are safety comparators, not proof that any treatment is effective for the Skill's listed diseases.",
+    "The WHO practice documents describe practitioner services and cannot be widened into a zero-training home-use license.",
+    "The FDA evidence is limited to P6 nausea devices and cannot validate the Skill's global A-grade acupressure category.",
+    "Case reports enumerate possible harms but do not estimate event rates."
+  ]
+}
