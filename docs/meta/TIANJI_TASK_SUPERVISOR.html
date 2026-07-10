@@ -45,8 +45,8 @@
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">中医病种红线与急症转诊边界全量验证。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">抽取 31-37 病种层的红旗征象、急症和家庭处置声明，再逐项核验。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">中医基础理论、四诊辨证与现代医疗解释边界全量验证。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">抽取 01-14 理论、舌脉和证候条目，分开传统定义、现代事实和行动建议。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
     </section>
 
@@ -69,8 +69,8 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 57,
-      currentFocus: '中医 `31-37` 病种、红旗征象、急症转诊与家庭处置边界全量验证；三个高风险候选层继续 blocked。',
-      nextDecision: '抽取全部病种、证型、红旗征象、急症和调护声明；先核现代医学红线与转诊边界，再处理传统病机和治法。',
+      currentFocus: '中医 `01-14` 基础理论、四诊辨证与现代医疗解释边界全量验证；四个高风险候选层继续 blocked。',
+      nextDecision: '先 inventory 理论、舌脉、证候与辨证条目，再区分传统定义、现代事实和可触发医疗行动的解释。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 97, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -81,11 +81,11 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'tcm_disease_red_flags_in_progress', rule: '药典、妊娠/配伍/方剂及穴位/外治三个候选层已通过来源/阻断审计并全部 blocked；当前核验病种红线。' },
+        { name: '排盘与数据库正确性', state: 'tcm_theory_diagnosis_in_progress', rule: '药典、妊娠/配伍/方剂、穴位/外治和病种红线四个候选层已通过来源/阻断审计并全部 blocked；当前核验理论与四诊辨证。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
-        { name: '中医安全', state: 'disease_red_flags_in_progress', rule: '法定毒性 28 项已规范化；三个高风险候选层已全量审计但全部 blocked；病种红旗、急症转诊和家庭处置未通过前不扩大产品消费范围。' },
+        { name: '中医安全', state: 'theory_diagnosis_in_progress', rule: '法定毒性 28 项已规范化；四个高风险候选层已审计但全部 blocked；理论/四诊辨证和食疗解释未通过前不扩大产品消费范围。' },
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
@@ -130,6 +130,8 @@
         '妊娠/配伍候选 fresh review 无 P0/P1；runtime 扫描 P2 已修复，84 个前端、服务端、JSON、入口和配置文本文件进入旁路审计',
         '穴位/外治 763 条非空行、27 表/471 表格行完整 inventory；结构化候选共 4,904 项 0 fail，全部 blocked',
         '官方只授证现行 362/51 范围；缺 1/17 和 3 个名称差异为二级转录候选，GB31 旧定位单独确认；401 条定位未获授证',
+        '病种红线 52 病种、689 条非空行、22 表/133 表格行完整 inventory；83 条关键词风险与 308 条广义处置候选共 2,589 项 0 fail',
+        '病种层确认 9 条冲突、9 条有边界支持红线和 2 条混合边界；全部治疗字段 blocked',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',

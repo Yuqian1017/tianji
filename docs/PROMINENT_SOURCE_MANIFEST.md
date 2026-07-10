@@ -361,6 +361,17 @@
 | 本轮结果 | 全局 A 级家庭按压无支持；家庭艾灸具体方案、针刺处方向按压/艾灸的跨模态转换、晕针糖水/按穴扩展均 blocked；禁止自行针刺的方向性边界得到支持 |
 | 边界 | FDA 证据只覆盖 P6 止吐设备；病例综述证明危害种类而非发生率；专业操作边界不授予任何程序性家庭指导资格 |
 
+### SRC-VAL-TCM-DISEASE-RED-FLAGS
+
+| 字段 | 值 |
+|---|---|
+| 名称 | CDC/AHA/NIDDK/NIH/WHO/HRSA/Red Cross/NHLBI 病种红线与急救 comparator |
+| 状态 | `validation_anchor`，现代急症识别、升级和家庭处置冲突边界 |
+| 官方来源 | CDC 卒中/癫痫/DKA/疟疾；AHA 心梗与 2024 First Aid；NIDDK 尿潴留；NIH MedlinePlus 消化道出血/中毒/急腹症；WHO 自杀；HRSA Poison Help；Red Cross 晕厥；NHLBI 哮喘 |
+| 项目快照 | `database/tcm/sources/disease-red-flag-evidence.json`，SHA256 `a39866694958d6674f33b6db67cf4a88a837be89d7f064d0af61f1c601ef74ea` |
+| 本轮结果 | 52 病种、689 条非空行、22 表/133 表格行完整 inventory；83 条关键词风险和 308 条广义处置候选只作优先复核；9 条冲突、9 条现代急症红线获有边界支持、2 条混合边界 |
+| 边界 | 只授证红线识别和升级方向；不授证传统病机、辨证、方剂、剂量、检查或疗效；急救号码和毒物服务必须按用户所在地本地化 |
+
 ### SRC-VAL-DAYUN-CLASSICS
 
 | 字段 | 值 |
@@ -532,7 +543,7 @@
 | TCM-DIAGNOSIS | `references/09-14*` | 四诊、舌脉、八纲、脏腑、六经等辨证 | observation、pattern、differential | 文字/图像不能替代面诊 |
 | TCM-HERBS | `references/15-23*` | 470 余味中药、分类、病证反查、剂量与注意 | 中药实体、当前茶饮与药味审计 | 剂量未完成药典校准 |
 | TCM-FORMULAS | `references/24-30*` | 约 180 正方、160 余附方、方义、类方、使用注意 | 方剂实体、教学、方名审计 | 学习参考，不直接荐方 |
-| TCM-DISEASES | `references/31-37*` | 七大系统 50 余内科病种 | 病种、证型、鉴别、红线、调护 | 不替代现代医学诊断 |
+| TCM-DISEASES | `references/31-37*` | 52 个主病种、689 条非空行、22 表/133 表格行 | 病种、证型、鉴别、红线、调护候选 | 红线已做首轮现代 comparator；全部治疗字段 blocked，不替代现代医学诊断 |
 | TCM-ACUPOINTS | `references/38-41*` | 763 条非空行、27 表/471 表格行；361 经穴、40 奇穴、定位、27 病证配穴、外治分级 | 全原文 inventory、穴位/外治候选和来源差异审计 | 官方仅授证现行 362/51 范围；逐名为二级转录，定位、疗效及家庭操作全部 blocked |
 | TCM-CLASSICS | `references/42-45*` | 素问、灵枢、难经、伤寒、金匮要义与条文 | 经典出处、课程与解释 | 古方剂量不进入现代用药依据 |
 | TCM-WENBING-AUTHORS | `references/46-48*` | 医学心悟、温病三书、衷中参西录 | 医家观点、温病与历史课程 | 医家观点和时代内容不覆盖教材安全层 |
@@ -541,7 +552,8 @@
 | TCM-PHARM-CANDIDATES | `database/tcm/normalized/tcm-pharmacopoeia-candidates.json` | 100 行/101 味原始剂量、2025 目录身份、2020 历史正文对照、名称裁决和急救标记 | 全量可审计候选层 | 101 味全部 blocked；不是 accepted 剂量库 |
 | TCM-PREG-COMPAT-FORMULA-CANDIDATES | `database/tcm/normalized/tcm-pregnancy-compatibility-formula-candidates.json` | 妊娠表与剂量表、十八反十九畏、马兜铃酸监管药名、31 行/37 方名警示及逐条冲突 | 全量可审计候选层 | 所有记录 blocked；2020 历史支持不等于现行 product eligibility |
 | TCM-ACUPOINT-EXTERNAL-CANDIDATES | `database/tcm/normalized/tcm-acupoint-external-safety-candidates.json` | 361 经穴、40 奇穴、3 级操作声明、240 条风险/操作、27 病证处方和 30 个旧运行时穴位映射 | 全量可审计候选层 | 名称/数量目录核对不授证定位或疗效；全部记录 blocked |
-| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；WHO 2008 名称索引、官方现行数量/二级逐名转录和外治安全证据 3 份，共 8 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
+| TCM-DISEASE-RED-FLAG-CANDIDATES | `database/tcm/normalized/tcm-disease-red-flag-candidates.json` | `31-37` 的 52 病种、完整原文 inventory、83 条关键词风险、308 条广义处置候选和 20 个重点裁决 | 红线/家庭动作可审计候选层 | 两个筛选视图不代表完整临床语义；9 条支持红线不授证相邻治疗；所有记录 blocked |
+| TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线 comparator 1 份，共 9 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
@@ -622,7 +634,7 @@ escalation: self_care | clinician | urgent | emergency
 ## 12. 下一步
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
-2. TCM 药典、妊娠/配伍/方剂和穴位/外治三个候选层已完成当前公开证据范围的全量归一化并全部 blocked；继续取得适用现行药典/逐穴定位正文、裁决剩余监管状态，并转入 `31-37` 病种红线与急症转诊验证。
+2. TCM 药典、妊娠/配伍/方剂、穴位/外治和病种红线四个候选层已完成当前公开证据范围的归一化并全部 blocked；继续取得适用现行药典/逐穴定位正文、裁决剩余监管状态，并转入 `01-14` 理论、四诊辨证与现代医疗解释边界。
 3. 按本清单为其余 package/source group 建立机器可读 manifest，并补齐条目级 `source_ref`。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

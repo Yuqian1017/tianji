@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "status": "official_modern_medicine_red_flag_comparators",
+  "generatedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "CDC-STROKE-SIGNS",
+      "title": "Signs and Symptoms of Stroke",
+      "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+      "facts": [
+        "Sudden face, arm, speech, vision, balance or severe-headache symptoms require immediate emergency activation.",
+        "A transient symptom does not remove the need for emergency assessment."
+      ]
+    },
+    {
+      "id": "AHA-HEART-ATTACK-WARNING",
+      "title": "Warning Signs of a Heart Attack",
+      "url": "https://www.heart.org/en/health-topics/heart-attack/warning-signs-of-a-heart-attack",
+      "facts": [
+        "Chest pressure, squeezing, fullness or pain, upper-body discomfort, shortness of breath, cold sweat, nausea or lightheadedness can be heart-attack warning signs.",
+        "Emergency services should be called rather than delaying or self-transporting."
+      ]
+    },
+    {
+      "id": "AHA-RED-CROSS-FIRST-AID-2024",
+      "title": "2024 American Heart Association and American Red Cross Guidelines for First Aid",
+      "url": "https://professional.heart.org/en/science-news/2024-aha-and-american-red-cross-guidelines-for-first-aid",
+      "facts": [
+        "Emergency services should be activated for acute non-traumatic chest pain.",
+        "Aspirin is conditional on alertness and absence of allergy or prior contraindication; the guideline does not support substituting unspecified traditional rescue pills for emergency care."
+      ]
+    },
+    {
+      "id": "CDC-SEIZURE-FIRST-AID",
+      "title": "First Aid for Seizures",
+      "url": "https://www.cdc.gov/epilepsy/first-aid-for-seizures/index.html",
+      "facts": [
+        "Keep the person safe, turn them on their side when appropriate, time the seizure, do not restrain them and do not put anything in their mouth.",
+        "Emergency help is required for a seizure lasting more than five minutes, repeated seizures, trouble breathing or waking, first seizure, injury, pregnancy or water exposure."
+      ]
+    },
+    {
+      "id": "NIDDK-URINARY-RETENTION",
+      "title": "Definition and Facts of Urinary Retention",
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-retention/definition-facts",
+      "facts": [
+        "Sudden inability to urinate with a full bladder is acute urinary retention.",
+        "Acute urinary retention can be life-threatening and requires emergency medical treatment right away."
+      ]
+    },
+    {
+      "id": "MEDLINEPLUS-GI-BLEEDING",
+      "title": "Gastrointestinal bleeding",
+      "url": "https://medlineplus.gov/ency/article/003133.htm",
+      "facts": [
+        "Black tarry stool, large amounts of blood in stool, vomiting blood or coffee-ground material, dizziness, chest or breathing symptoms, or severe abdominal pain with bleeding require emergency care."
+      ]
+    },
+    {
+      "id": "WHO-SUICIDE",
+      "title": "Suicide questions and answers",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/suicide",
+      "facts": [
+        "Suicidal or self-harm thoughts indicate severe emotional distress and warrant professional help.",
+        "If immediate danger is present, contact emergency or crisis services and do not leave the person alone."
+      ]
+    },
+    {
+      "id": "HRSA-POISON-HELP",
+      "title": "Poison Help: What You Can Do",
+      "url": "https://poisonhelp.hrsa.gov/what-you-can-do",
+      "facts": [
+        "Suspected poisoning requires immediate contact with poison experts; collapse, seizure, breathing difficulty or inability to wake requires emergency services."
+      ]
+    },
+    {
+      "id": "MEDLINEPLUS-POISON-FIRST-AID",
+      "title": "Poisoning first aid",
+      "url": "https://medlineplus.gov/ency/article/007579.htm",
+      "facts": [
+        "Do not induce vomiting unless directed by poison control or a health professional.",
+        "Do not give an unconscious person anything by mouth or use cure-all antidotes; do not wait for symptoms before seeking poison advice."
+      ]
+    },
+    {
+      "id": "RED-CROSS-FAINTING",
+      "title": "Fainting first aid",
+      "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/fainting",
+      "facts": [
+        "Assess responsiveness and breathing, use the recovery position when appropriate, monitor changes and activate emergency help for concerning features.",
+        "The guidance does not support routine oral sugar water while consciousness and swallowing safety are uncertain."
+      ]
+    },
+    {
+      "id": "NHLBI-ASTHMA-ATTACK",
+      "title": "Asthma Attack",
+      "url": "https://www.nhlbi.nih.gov/health/asthma/attacks",
+      "facts": [
+        "Call emergency services when prescribed relief medicine does not relieve an attack or breathing remains very hard.",
+        "Serious signs include drowsiness or confusion, blue skin or lips and severe breathing difficulty."
+      ]
+    },
+    {
+      "id": "MEDLINEPLUS-ABDOMINAL-PAIN",
+      "title": "Abdominal pain",
+      "url": "https://medlineplus.gov/ency/article/003120.htm",
+      "facts": [
+        "Sudden sharp pain, rigid or tender abdomen, inability to pass stool with vomiting, blood, pregnancy, breathing difficulty or severe associated symptoms require urgent or emergency assessment."
+      ]
+    },
+    {
+      "id": "CDC-DKA",
+      "title": "Diabetic Ketoacidosis",
+      "url": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html",
+      "facts": [
+        "DKA is life-threatening; fast deep breathing, fruity breath, persistent vomiting, breathing difficulty and multiple DKA symptoms require emergency care."
+      ]
+    },
+    {
+      "id": "CDC-MALARIA",
+      "title": "Case Management: Malaria Diagnosis and Treatment",
+      "url": "https://www.cdc.gov/malaria/php/public-health-strategy/case-diagnosis-treatment.html",
+      "facts": [
+        "Suspected malaria requires prompt diagnostic testing and recommended antimalarial treatment; malaria can be severe, fatal and a medical emergency."
+      ]
+    }
+  ],
+  "boundaries": [
+    "These sources validate emergency recognition and escalation boundaries, not traditional disease mechanisms, pattern differentiation, formulas or dosages.",
+    "Country-specific emergency numbers, poison lines and medicine availability must be localized before any product use.",
+    "A supported red-flag sentence does not make adjacent treatment text eligible.",
+    "All source treatment and home-action text remains blocked in this candidate layer."
+  ]
+}

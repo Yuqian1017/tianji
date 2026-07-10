@@ -1,0 +1,469 @@
+{
+  "audit": "tcm-disease-red-flags-and-home-actions",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 2589,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "diseaseSections": 52,
+    "sourceNonEmptyLines": 689,
+    "sourceMarkdownTables": 22,
+    "sourceMarkdownTableRows": 133,
+    "keywordRiskLineCandidates": 83,
+    "actionableLineCandidates": 308,
+    "conflictFindings": 9,
+    "supportedRedFlagFindings": 9,
+    "mixedBoundaryFindings": 2
+  },
+  "categories": {
+    "contract": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "source_inventory": {
+      "checks": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    "disease_preservation": {
+      "checks": 111,
+      "passed": 111,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 926,
+      "passed": 926,
+      "failed": 0
+    },
+    "risk_preservation": {
+      "checks": 249,
+      "passed": 249,
+      "failed": 0
+    },
+    "actionable_preservation": {
+      "checks": 1232,
+      "passed": 1232,
+      "failed": 0
+    },
+    "finding_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "finding_integrity": {
+      "checks": 40,
+      "passed": 40,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "id": "TCM-DIS-001",
+      "kind": "conflict",
+      "status": "conflict_do_not_induce_vomiting",
+      "sourceId": "ref33",
+      "sourceLine": 69,
+      "sourceText": "**先排它病(红线线索,教材原载)**:**喷射状呕吐**→查颅脑;呕吐不止伴尿少浮肿→查肾功能;伴剧烈腹痛便闭→肠梗阻;伴右上腹痛发热→肝胆胰;**育龄女性先验妊娠**;食物中毒→催吐/洗胃并就医。",
+      "comparatorSourceIds": [
+        "HRSA-POISON-HELP",
+        "MEDLINEPLUS-POISON-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-002",
+      "kind": "conflict",
+      "status": "conflict_emergency_retention_home_methods",
+      "sourceId": "ref35",
+      "sourceLine": 63,
+      "sourceText": "**急症处置(教材原载,水蓄膀胱)**:内服药缓不济急——①**取嚏法**(消毒棉签探鼻取嚏,或皂角末0.3~0.6g吹鼻)、探吐法——\"提壶揭盖\",开上窍通下窍;②**外敷法**——食盐250g炒热布包熨脐腹,或独头蒜+栀子捣烂贴脐,或葱白捣碎热熨脐上;③流水诱导法(听水声引尿意,适于精神性尿闭);④以上无效、小腹胀满特甚——**导尿**(医疗操作,急诊处理)。**老人少用阿托品类抗胆碱药以防诱发癃闭。**",
+      "comparatorSourceIds": [
+        "NIDDK-URINARY-RETENTION"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-003",
+      "kind": "conflict",
+      "status": "conflict_poisoning_home_antidote",
+      "sourceId": "ref37",
+      "sourceLine": 34,
+      "sourceText": "- **附子、川乌、草乌**:生用毒大须炮制,内服常用5~12g,小量递增、不可久服;**文火久煎或与甘草同煎可缓毒**;中毒表现——唇舌发麻、头晕、心悸、恶心、脉迟,**即停服,绿豆甘草汤频饮,危重按中毒急救**。",
+      "comparatorSourceIds": [
+        "HRSA-POISON-HELP",
+        "MEDLINEPLUS-POISON-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-004",
+      "kind": "conflict",
+      "status": "unsupported_universal_tcm_rescue_pill",
+      "sourceId": "ref32",
+      "sourceLine": 75,
+      "sourceText": "寒凝痛剧而四肢不温冷汗出——**即刻含化苏合香丸/麝香保心丸类并叫急救**。常用中成药(均B级):速效救心丸、苏合香丸、麝香保心丸——心绞痛患者应遵医嘱随身备药。",
+      "comparatorSourceIds": [
+        "AHA-HEART-ATTACK-WARNING",
+        "AHA-RED-CROSS-FIRST-AID-2024"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-005",
+      "kind": "conflict",
+      "status": "conflict_oral_intake_after_syncope",
+      "sourceId": "ref32",
+      "sourceLine": 165,
+      "sourceText": "- **气厥虚证**(紧张恐惧久站诱发,面白息微汗出——即血管迷走性晕厥类)——急救以平卧、**灌服温糖水**(教材原载)等;醒后四味回阳饮类;平时香砂六君丸、归脾丸调养。",
+      "comparatorSourceIds": [
+        "RED-CROSS-FAINTING"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-006",
+      "kind": "conflict",
+      "status": "unsupported_three_year_stroke_prediction",
+      "sourceId": "ref34",
+      "sourceLine": 133,
+      "sourceText": "**先兆(预防重点,教材古训)**:\"眩晕者,中风之渐也\";\"凡大指、次指麻木或不用者,三年内有中风之患\"——**头晕、一侧肢体麻木、一过性言语不利均为先兆,应就医控制血压、调摄起居饮食情志**。",
+      "comparatorSourceIds": [
+        "CDC-STROKE-SIGNS"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-007",
+      "kind": "supported_red_flag",
+      "status": "supported_seizure_first_aid",
+      "sourceId": "ref32",
+      "sourceLine": 129,
+      "sourceText": "**发作期现场处置(家属须知,非中医内容)**:移开周边硬物防磕碰、侧卧或头偏一侧防误吸、**勿强行按压肢体、勿往口中塞任何东西**、记录发作时长;**发作超过5分钟不止、连续发作、首次发作——立即叫急救**。",
+      "comparatorSourceIds": [
+        "CDC-SEIZURE-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-008",
+      "kind": "supported_red_flag",
+      "status": "supported_stroke_emergency",
+      "sourceId": "ref34",
+      "sourceLine": 129,
+      "sourceText": "> **红线之首:突然口眼歪斜、半身不遂、言语不利、昏仆——无论轻重,立即呼叫急救(缺血性中风溶栓有严格时间窗)。中医所有内容均为住院救治之辅助与恢复期康复。**",
+      "comparatorSourceIds": [
+        "CDC-STROKE-SIGNS"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-009",
+      "kind": "supported_red_flag",
+      "status": "supported_heart_attack_emergency",
+      "sourceId": "ref32",
+      "sourceLine": 77,
+      "sourceText": "**附·真心痛(红线,即心肌梗死)**:剧烈而持久的胸骨后疼痛(常>30分钟不缓解),伴汗出、肢冷、面白、唇紫、喘促,\"旦发夕死,夕发旦死\"。**立即呼叫急救,不做任何居家替代**;等待期卧床、保持情绪稳定、松解衣领(教材:低流量给氧、含化救心丸类属医疗处置)。中医分气虚血瘀(保元汤合血府逐瘀汤)、寒凝心脉(当归四逆汤加味)、正虚阳脱(四逆加人参汤)——皆为住院治疗内容。",
+      "comparatorSourceIds": [
+        "AHA-HEART-ATTACK-WARNING"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-010",
+      "kind": "supported_red_flag",
+      "status": "supported_acute_urinary_retention_emergency",
+      "sourceId": "ref35",
+      "sourceLine": 59,
+      "sourceText": "**定义**:小便量少、排尿困难,甚则闭塞不通。癃——点滴短少,病势缓;闭——点滴不通,病势急。对应尿潴留(前列腺增生、结石、神经性等)与肾衰少尿无尿。**先判断有无尿潴留(小腹膨隆胀满)**:有尿潴留多为下尿路梗阻;膀胱空虚而无尿则属肾衰,均需就医。",
+      "comparatorSourceIds": [
+        "NIDDK-URINARY-RETENTION"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-011",
+      "kind": "supported_red_flag",
+      "status": "supported_gi_bleeding_emergency",
+      "sourceId": "ref33",
+      "sourceLine": 43,
+      "sourceText": "**危重变证(红线)**:①**呕血、黑便**——出血,大量出血气随血脱;②**腹痛剧烈拒按、大汗淋漓、四肢厥冷**——疑穿孔/厥脱;二者立即急诊。久痛不愈、消瘦、痛规律改变——胃镜排查恶变。",
+      "comparatorSourceIds": [
+        "MEDLINEPLUS-GI-BLEEDING"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-012",
+      "kind": "mixed_boundary",
+      "status": "supported_professional_help_but_immediate_danger_escalation_missing",
+      "sourceId": "ref36",
+      "sourceLine": 14,
+      "sourceText": "> **就医提示**:出现持续情绪低落伴**消极自杀念头**、明显自伤风险,或幻听妄想等精神病性症状——精神科为主责,及早就诊,中医为辅助。",
+      "comparatorSourceIds": [
+        "WHO-SUICIDE"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-013",
+      "kind": "supported_red_flag",
+      "status": "supported_severe_asthma_escalation",
+      "sourceId": "ref31",
+      "sourceLine": 109,
+      "sourceText": "**危重指征(升级就医)**:发作持续数小时不缓解、口唇指甲紫绀、说话不能成句、端坐不能卧、意识改变——立即急诊(哮喘持续状态可致命)。",
+      "comparatorSourceIds": [
+        "NHLBI-ASTHMA-ATTACK"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-014",
+      "kind": "conflict",
+      "status": "conflict_do_not_induce_vomiting",
+      "sourceId": "ref33",
+      "sourceLine": 73,
+      "sourceText": "**治则**:和胃降逆为总则,但**勿见呕止呕**——胃有痈脓、痰饮、食滞、毒物时呕吐是排邪反应,当因势利导;误吞毒物当探吐。呕吐不止防津伤气脱。",
+      "comparatorSourceIds": [
+        "HRSA-POISON-HELP",
+        "MEDLINEPLUS-POISON-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-015",
+      "kind": "supported_red_flag",
+      "status": "supported_acute_abdomen_surgical_emergency",
+      "sourceId": "ref33",
+      "sourceLine": 129,
+      "sourceText": "- **外科急腹症**:**先腹痛后发热、痛剧有定处、腹肌紧张、反跳痛**——立即外科急诊(阑尾炎、穿孔、胰腺炎、肠梗阻等);",
+      "comparatorSourceIds": [
+        "MEDLINEPLUS-ABDOMINAL-PAIN"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-016",
+      "kind": "supported_red_flag",
+      "status": "supported_severe_acute_abdomen_emergency",
+      "sourceId": "ref33",
+      "sourceLine": 132,
+      "sourceText": "**危重指征**:腹痛剧烈、拒按、冷汗淋漓、四肢不温、呕吐不止——警惕厥脱,**立即急救**。",
+      "comparatorSourceIds": [
+        "MEDLINEPLUS-ABDOMINAL-PAIN"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-017",
+      "kind": "conflict",
+      "status": "unsupported_emergency_gi_bleed_dose",
+      "sourceId": "ref36",
+      "sourceLine": 39,
+      "sourceText": "| 吐血 | 胃热壅盛→泻心汤合十灰散;肝火犯胃→龙胆泻肝汤;气虚血溢→归脾汤(虚寒柏叶汤)。**教材:大黄为上消化道出血首选,粉剂3~5g日4次**——就医前提下 |",
+      "comparatorSourceIds": [
+        "MEDLINEPLUS-GI-BLEEDING"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-018",
+      "kind": "mixed_boundary",
+      "status": "mixed_convulsion_first_aid_mouth_action_blocked",
+      "sourceId": "ref37",
+      "sourceLine": 55,
+      "sourceText": "**护理要点(现场,重要)**:发作时**保持呼吸道通畅、清除假牙异物防窒息**;**勿强行按压捆绑肢体**(防骨折);减少搬动与声光刺激;高热者降温。口张目瞪、戴眼反折、遗尿、汗出如油为预后不良征。",
+      "comparatorSourceIds": [
+        "CDC-SEIZURE-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-019",
+      "kind": "conflict",
+      "status": "unsupported_acute_abdomen_formula_substitution",
+      "sourceId": "ref33",
+      "sourceLine": 136,
+      "sourceText": "**分证论治**:寒邪内阻——良附丸合正气天香散;湿热壅滞——大承气汤(胆囊炎样痛用大柴胡汤、阑尾炎样痛大黄牡丹皮汤——**此二者本属就医病**);饮食积滞——枳实导滞丸(轻者保和丸);肝郁气滞——柴胡疏肝散(痛引睾丸加橘核荔枝核);瘀血内停——少腹逐瘀汤;中虚脏寒——小建中汤(备选大建中/附子理中/温脾汤/当归四逆汤)。",
+      "comparatorSourceIds": [
+        "MEDLINEPLUS-ABDOMINAL-PAIN"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-DIS-020",
+      "kind": "supported_red_flag",
+      "status": "supported_urgent_cardiopulmonary_escalation",
+      "sourceId": "ref32",
+      "sourceLine": 46,
+      "sourceText": "**调护(A级)**:调情志避刺激;低脂低盐、忌过饥过饱浓茶咖啡烟酒;劳逸结合避剧烈运动;**中老年心悸频发伴心胸疼痛、喘促、肢冷汗出或晕厥——立即就医**。",
+      "comparatorSourceIds": [
+        "AHA-HEART-ATTACK-WARNING"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "All 52 disease sections and every non-empty source line remain blocked candidates.",
+    "The 83 keyword-risk lines and 308 broad actionable lines are prioritization subsets, not complete clinical-semantic validation.",
+    "Supported emergency recognition does not validate adjacent pattern differentiation, formulas, doses, tests or treatment instructions.",
+    "Conflict findings block the source home action; they do not replace individualized emergency-dispatch or clinician instructions.",
+    "Emergency numbers, poison services and medicine rules require locale-specific product handling.",
+    "Traditional mechanisms, pattern differentiation and treatments require separate source and efficacy review."
+  ],
+  "sourceRefs": {
+    "ref31": {
+      "path": "database/tcm/skill-v3/references/31-内科-肺系病证.md",
+      "sha256": "41a28fd5057b7e8c9ca56507b237414e0c6487b2e49d4091520ad6fbc8463ca3"
+    },
+    "ref32": {
+      "path": "database/tcm/skill-v3/references/32-内科-心系病证.md",
+      "sha256": "d20243c3d0305973db9dbb1870551043626032d888d4ffe31e95475574a9264d"
+    },
+    "ref33": {
+      "path": "database/tcm/skill-v3/references/33-内科-脾胃系病证.md",
+      "sha256": "7e1de47b933f1e3a1e24c5a28f7ac3112d6afd64e04e987440669ec4d9a6afdc"
+    },
+    "ref34": {
+      "path": "database/tcm/skill-v3/references/34-内科-肝胆病证.md",
+      "sha256": "340d325778d689be42239ea75421f4e0d651b0f5adae157e255242206e0897a1"
+    },
+    "ref35": {
+      "path": "database/tcm/skill-v3/references/35-内科-肾系病证.md",
+      "sha256": "51739dbbe2a32d86c58c32d9de6b66935fa9d6da9bedacf9a1c74731f60f63ef"
+    },
+    "ref36": {
+      "path": "database/tcm/skill-v3/references/36-内科-气血津液病证.md",
+      "sha256": "2b8417f3610587a29b8f77a177b2eb7f05602608697508693d190b1f365dc5b5"
+    },
+    "ref37": {
+      "path": "database/tcm/skill-v3/references/37-内科-肢体经络病证.md",
+      "sha256": "8797d3d558308165d92a6506f4bac9088070c6da90ebacdc9d3ba3ad447cbf9d"
+    },
+    "evidence": {
+      "path": "database/tcm/sources/disease-red-flag-evidence.json",
+      "sha256": "a39866694958d6674f33b6db67cf4a88a837be89d7f064d0af61f1c601ef74ea"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "cb43b2f189f7dba249f47596b0acf71aa4bdc6730d285bc0a52ef0941f434238"
+  },
+  "failures": []
+}
