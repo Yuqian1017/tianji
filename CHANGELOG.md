@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-10 - TCM herb catalog inventory and safety boundaries
+
+- 完成 `references/15-23` 的 1,331 条非空行、45 表/279 表格行、122 标题和 100 条实际病证反查完整 blocked inventory。
+- 新增 663 条重叠风险候选、20 个重点裁决、官方 comparator、8 项专项测试与 `audit:tcm-herb-catalog`；14,281 项检查 0 fail。
+- 确认原文“103 条”实际缺 52-54，并有 `47→36`、`60→55` 两处逆序；儿童比例剂量、6 条毒物处置、49 条外用路线、马兜铃酸、砷汞铅、21 条现代用途/疗效和急症反查均保持 blocked。
+
 ## 2026-07-10
 
 ### fix: 全量归一化并审计中医基础理论、四诊与辨证候选层

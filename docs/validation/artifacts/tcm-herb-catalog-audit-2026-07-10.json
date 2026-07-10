@@ -1,0 +1,507 @@
+{
+  "audit": "tcm-herb-catalog-evidence-boundaries",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 14281,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "references": 9,
+    "sourceNonEmptyLines": 1331,
+    "sourceMarkdownTables": 45,
+    "sourceMarkdownTableRows": 279,
+    "sections": 122,
+    "priorityLineCandidates": 663,
+    "diseaseHerbIndexEntries": 100,
+    "claimedDiseaseHerbIndexEntries": 103,
+    "missingDiseaseHerbIndexNumbers": 3,
+    "findings": 20
+  },
+  "categories": {
+    "contract": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "source_inventory": {
+      "checks": 18,
+      "passed": 18,
+      "failed": 0
+    },
+    "line_preservation": {
+      "checks": 3993,
+      "passed": 3993,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 4228,
+      "passed": 4228,
+      "failed": 0
+    },
+    "section_preservation": {
+      "checks": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    "priority_preservation": {
+      "checks": 5967,
+      "passed": 5967,
+      "failed": 0
+    },
+    "index_integrity": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "finding_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "finding_integrity": {
+      "checks": 40,
+      "passed": 40,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "priorityCategoryCounts": {
+    "dose": 472,
+    "toxicity": 125,
+    "heavyMetal": 42,
+    "modernEfficacy": 21,
+    "vulnerablePopulation": 150,
+    "homeAction": 6,
+    "externalAdministration": 49,
+    "reverseIndex": 100
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "id": "TCM-HC-001",
+      "kind": "source_integrity",
+      "status": "source_count_and_order_mismatch_103_claim_vs_100_entries",
+      "sourceId": "ref23",
+      "sourceLine": 3,
+      "sourceText": "> 提炼自《中药学》七版附篇\"临床常见百种病证用药简介\"(103 条)。正文各章以功效为纲纵向归类,此篇以病证为纲横向综合——**辨证选药的反查表**。用法:先辨证定型→查本表得候选药群→回查各药 reference 条目核对性能/禁忌→查 [[安全-配伍妊娠禁忌与毒性药]]。药序大体按主次。",
+      "comparatorSourceIds": [
+        "SOURCE-INVENTORY-DIRECT-COUNT"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-002",
+      "kind": "poisoning_first_aid",
+      "status": "unsafe_home_antidote_generalization",
+      "sourceId": "ref15",
+      "sourceLine": 63,
+      "sourceText": "| **相杀** | 一药能消除另一药毒副作用 | 制毒 | 生姜杀半夏毒、绿豆杀巴豆毒、防风杀砒霜毒 |",
+      "comparatorSourceIds": [
+        "HRSA-POISON-HELP",
+        "NLM-POISON-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-003",
+      "kind": "pediatric_dosing",
+      "status": "unsupported_universal_pediatric_fractional_dosing",
+      "sourceId": "ref15",
+      "sourceLine": 79,
+      "sourceText": "- 剂量考量:剧毒/峻烈药严控(从小量渐增,中病即止);花叶皮枝质轻量小,矿石贝壳质重量大;贵重药(犀角羚羊角麝香牛黄鹿茸珍珠)尽量减量;老幼孕产体弱减量(5岁以下用成人1/4,5岁以上减半);病重势急量大。",
+      "comparatorSourceIds": [
+        "FDA-SUPPLEMENT-MEDICATION-CHILDREN"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-004",
+      "kind": "dose_safety",
+      "status": "fixed_decoction_time_not_product_safety_authority",
+      "sourceId": "ref15",
+      "sourceLine": 81,
+      "sourceText": "- **先煎**:矿石贝壳类(磁石、代赭石、石膏、龙骨、牡蛎、石决明、龟板、鳖甲)打碎先煎20~30分钟;**附子、乌头等毒药先煎45~60分钟**降毒。",
+      "comparatorSourceIds": [
+        "NMPA-PHARMACOPOEIA-2025",
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-005",
+      "kind": "poison_tolerance",
+      "status": "unsafe_body_type_poison_tolerance",
+      "sourceId": "ref15",
+      "sourceLine": 99,
+      "sourceText": "- **体质与耐药**(灵枢·论痛):\"胃厚、色黑、大骨及肥者,皆**胜毒**;其瘦而薄胃者,皆**不胜毒**\"——同药同量,瘦弱者更易受药害;剂量因人(体质因素)的经典出处。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "HRSA-POISON-HELP"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-006",
+      "kind": "dose_extrapolation",
+      "status": "unsupported_geography_based_dosing",
+      "sourceId": "ref16",
+      "sourceLine": 12,
+      "sourceText": "- **禁忌与用法**:①发汗力强者量勿过大,防**过汗亡阳伤阴**;②汗为津液、血汗同源——**表虚自汗、阴虚盗汗、疮疡日久、淋证、失血者慎用**;③因时因地:春夏腠理疏、南方炎热量宜轻,冬季及北方严寒量宜重;④辛散轻扬,**入汤剂不宜久煎**。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "NMPA-PHARMACOPOEIA-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-007",
+      "kind": "administration_efficacy",
+      "status": "unsupported_intranasal_single_herb_effectiveness",
+      "sourceId": "ref16",
+      "sourceLine": 69,
+      "sourceText": "| 鹅不食草 | 辛温│肺肝 | 发散风寒,**通鼻窍**,止咳,解毒 | 各类鼻炎鼻塞(鼻腔给药单用有效);寒痰咳喘。6~10g |",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-008",
+      "kind": "modern_efficacy",
+      "status": "unsupported_modern_antihypertensive_claim",
+      "sourceId": "ref16",
+      "sourceLine": 100,
+      "sourceText": "- **★ 葛根** 甘辛凉│脾胃│**解肌退热,透疹,生津止渴,升阳止泻**——①表证发热**项背强痛**专长(无汗葛根汤,有汗桂枝加葛根汤;郁热柴葛解肌汤);②麻疹不透(升麻葛根汤);③**热病口渴、消渴**(鼓舞胃气上行生津,玉泉丸);④**热泻热痢**(葛根芩连汤)、**脾虚泄泻**(七味白术散)。现代:扩血管降压,善解高血压**项紧**。9~15g;生津退热透疹生用,**止泻煨用**。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW",
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-009",
+      "kind": "regulatory_identity",
+      "status": "cancelled_qingmuxiang_standard_but_dose_and_indication_present",
+      "sourceId": "ref19",
+      "sourceLine": 36,
+      "sourceText": "**青木香** ⚠辛苦寒│肝胃│行气止痛,解毒消肿——肝胃气滞兼热者宜;夏月泻痢腹痛;疔疮蛇伤。3~9g。**马兜铃之根,含马兜铃酸,过量致急性肾衰**;不宜多服→安全表。",
+      "comparatorSourceIds": [
+        "CN-NMPA-ARISTOLOCHIC-2003-2004",
+        "FDA-ARISTOLOCHIC-IMPORT-54-10"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-010",
+      "kind": "regulatory_identity",
+      "status": "restricted_tianxianteng_but_dose_and_indication_present",
+      "sourceId": "ref19",
+      "sourceLine": 55,
+      "sourceText": "| 天仙藤 | ⚠苦温 | 理气祛湿活血;妊娠水肿(天仙藤散)。**马兜铃地上部分,含马兜铃酸**→安全表 | 4.5~9g |",
+      "comparatorSourceIds": [
+        "CN-NMPA-ARISTOLOCHIC-2003-2004",
+        "FDA-ARISTOLOCHIC-IMPORT-54-10"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-011",
+      "kind": "regulatory_identity",
+      "status": "cancelled_guanmutong_standard_but_dose_and_indication_present",
+      "sourceId": "ref18",
+      "sourceLine": 227,
+      "sourceText": "**关木通** ⚠苦寒**有毒**│心小肠膀胱│利尿通淋,清心火,通经下乳——口舌生疮心烦尿赤(导赤散类);经闭乳少。**含马兜铃酸,过量/久服致急性肾功能衰竭**;3~6g,不宜久服,肾功能不全者及孕妇忌。**历代本草之\"木通\"为木通科木通,非关木通;处方建议以木通或川木通代替**。→安全表。",
+      "comparatorSourceIds": [
+        "CN-NMPA-ARISTOLOCHIC-2003-2004",
+        "FDA-ARISTOLOCHIC-IMPORT-54-10"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-012",
+      "kind": "regulatory_identity",
+      "status": "restricted_madouling_but_dose_and_indication_present",
+      "sourceId": "ref20",
+      "sourceLine": 94,
+      "sourceText": "**马兜铃** ⚠苦微辛寒│肺大肠│清肺化痰,止咳平喘,清肠消痔——肺热咳喘;肺虚火盛=补肺阿胶散;痔疮肿痛。3~10g。用量不宜过大(致呕吐);**含马兜铃酸(肾毒)**→安全表;虚寒喘咳脾虚便溏禁。",
+      "comparatorSourceIds": [
+        "CN-NMPA-ARISTOLOCHIC-2003-2004",
+        "FDA-ARISTOLOCHIC-IMPORT-54-10"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-013",
+      "kind": "pediatric_dosing",
+      "status": "unsupported_per_year_pediatric_deworming_dose",
+      "sourceId": "ref19",
+      "sourceLine": 91,
+      "sourceText": "| **★使君子** | 甘温 | **驱蛔要药,尤宜小儿**(甘香可嚼服);兼健脾消疳(肥儿丸) | 炒香嚼服6~9g,小儿每岁1~1.5粒、日总量≤20粒;**忌与热茶同服**(致呃逆腹泻);过量呃逆眩晕呕吐 |",
+      "comparatorSourceIds": [
+        "FDA-SUPPLEMENT-MEDICATION-CHILDREN",
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-014",
+      "kind": "poisoning_first_aid",
+      "status": "unsafe_home_induced_vomiting_instruction",
+      "sourceId": "ref22",
+      "sourceLine": 90,
+      "sourceText": "**总纲**:促使呕吐,治毒物、宿食、痰涎停于胃脘/胸膈以上——误食毒物尚在胃中、宿食未入肠之脘胀、痰涎壅盛喉风喘急、痰浊蒙窍癫痫发狂。**仅适用于形证俱实者**。用法铁律:**小量渐增,切忌骤用大量;中病即止,不可连服久服**;药后不吐可饮热开水助之或翎毛探喉;呕吐不止立即停药抢救;吐后适当休息,勿马上进食。**年老体弱、小儿、妇女胎前产后、素体失血、头晕心悸、劳嗽喘咳者均忌用**。",
+      "comparatorSourceIds": [
+        "HRSA-POISON-HELP",
+        "NLM-POISON-FIRST-AID"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-015",
+      "kind": "heavy_metal_safety",
+      "status": "arsenic_compound_dose_and_external_use_not_consumer_eligible",
+      "sourceId": "ref22",
+      "sourceLine": 153,
+      "sourceText": "辛大热大毒│肺肝│外用攻毒杀虫,蚀疮去腐;内服劫痰平喘,截疟——恶疮瘰疬顽癣牙疳痔疮(砒霜膏、**三品一条枪**);寒痰哮喘=紫金丹(配淡豆豉)。外用宜复方散剂/膏药/药捻;内服一次 **0.002~0.004g** 入丸散。**剧毒**:内服宜慎,外用防局部吸收中毒;**孕妇忌服;不可作酒剂服;忌火煅**→安全表。(现代:治急性早幼粒性白血病 APL。)",
+      "comparatorSourceIds": [
+        "CN-LEGAL-TOXIC-MEDICINES",
+        "FDA-HEAVY-METAL-HERBAL-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-016",
+      "kind": "heavy_metal_safety",
+      "status": "mercury_compound_oral_dose_not_consumer_eligible",
+      "sourceId": "ref20",
+      "sourceLine": 126,
+      "sourceText": "甘微寒有毒│心│**清心镇惊,安神解毒**——①心火亢盛之心神不宁要药=朱砂安神丸(配黄连当归生地);②惊风癫痫(安宫牛黄丸、磁朱丸均用);③疮毒咽痛口疮(紫金锭、冰硼散)。**只入丸散0.1~0.5g,不入煎剂;忌火煅**(析出汞);不可过量久服,孕妇肝肾功能不全禁→安全表。",
+      "comparatorSourceIds": [
+        "CN-LEGAL-TOXIC-MEDICINES",
+        "FDA-HEAVY-METAL-HERBAL-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-017",
+      "kind": "reverse_index_safety",
+      "status": "toxic_heavy_metal_reverse_lookup_not_prescribing_authority",
+      "sourceId": "ref23",
+      "sourceLine": 114,
+      "sourceText": "79. **脓成不溃**:砒霜 轻粉 升药 雄黄 **穿山甲 皂角刺**(透脓)",
+      "comparatorSourceIds": [
+        "CN-LEGAL-TOXIC-MEDICINES",
+        "FDA-HEAVY-METAL-HERBAL-2025"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-018",
+      "kind": "modern_efficacy",
+      "status": "modern_efficacy_claim_requires_indication_specific_evidence",
+      "sourceId": "ref21",
+      "sourceLine": 145,
+      "sourceText": "**羊红膻** 辛甘温│心肾肺脾│温肾助阳,活血化瘀,养心安神,温肺散寒——阳痿精冷;胸痹心痛;心悸失眠(治克山病);风寒/寒饮咳嗽。煎服 10~15g。阴虚内热、肺热咳嗽忌。",
+      "comparatorSourceIds": [
+        "NCCIH-TCM-OVERVIEW",
+        "FDA-DIETARY-SUPPLEMENTS-101"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-019",
+      "kind": "emergency_care",
+      "status": "emergency_disease_reverse_lookup_must_not_delay_standard_care",
+      "sourceId": "ref23",
+      "sourceLine": 47,
+      "sourceText": "28. **破伤风**:白附子 天麻 天南星 防风 蝉衣 僵蚕 全蝎 蜈蚣",
+      "comparatorSourceIds": [
+        "CDC-TETANUS-CLINICAL-CARE",
+        "CDC-MALARIA-TREATMENT"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-HC-020",
+      "kind": "reverse_index_boundary",
+      "status": "full_reverse_index_not_validated_prescribing_authority",
+      "sourceId": "ref23",
+      "sourceLine": 3,
+      "sourceText": "> 提炼自《中药学》七版附篇\"临床常见百种病证用药简介\"(103 条)。正文各章以功效为纲纵向归类,此篇以病证为纲横向综合——**辨证选药的反查表**。用法:先辨证定型→查本表得候选药群→回查各药 reference 条目核对性能/禁忌→查 [[安全-配伍妊娠禁忌与毒性药]]。药序大体按主次。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENTS-101",
+        "NCCIH-TCM-OVERVIEW"
+      ],
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "All 1,331 non-empty lines and 279 Markdown table rows are preserved as blocked candidates; preservation is not clinical validation.",
+    "The 663 priority lines are a broad risk view with overlapping categories, not a complete medicine-entity catalog or a validated prescribing dataset.",
+    "Reference 23 contains 100 entries despite claiming 103; numbers 52, 53 and 54 are missing, with source-order inversions 47 to 36 and 60 to 55; no content was inferred or silently reordered in the numbering audit.",
+    "Every dose, route, poisoning action, pediatric rule, pregnancy rule, disease mapping and modern efficacy claim remains blocked.",
+    "Cancelled or restricted aristolochic-acid medicines and arsenic, mercury or lead materials are not consumer or runtime eligible.",
+    "Runtime scanning only proves this blocked core and its finding IDs are not imported; it does not clear legacy TCM semantics elsewhere."
+  ],
+  "sourceRefs": {
+    "ref15": {
+      "path": "database/tcm/skill-v3/references/15-中药总论.md",
+      "sha256": "7e1bf6cd29d1cc7414fa4c4330c708bcbbbc873f98becbaa72a95bed9daa3bd2"
+    },
+    "ref16": {
+      "path": "database/tcm/skill-v3/references/16-解表药.md",
+      "sha256": "50ca7c486fe8ffb29a5e39f464d77297aba9dee8f0461edd066ded615d4a9375"
+    },
+    "ref17": {
+      "path": "database/tcm/skill-v3/references/17-清热药.md",
+      "sha256": "86002ae640fd3112e3e947b8d6bbbbc5da02be1c921834cb840e872e09f9f896"
+    },
+    "ref18": {
+      "path": "database/tcm/skill-v3/references/18-泻下祛风湿化湿利水温里药.md",
+      "sha256": "c2f77c4742fe7c3b509a39263a77d1bb6fd45cdc72fa572e7da0dedbb92252e4"
+    },
+    "ref19": {
+      "path": "database/tcm/skill-v3/references/19-理气消食驱虫止血活血药.md",
+      "sha256": "b7542623ba09a00e56ad583fa4f4b1ea6735061b2afce0d88784a89930a56c19"
+    },
+    "ref20": {
+      "path": "database/tcm/skill-v3/references/20-化痰止咳平喘安神平肝息风开窍药.md",
+      "sha256": "e377292ea0ebbb4b818cb7c0e9a15f208ddb171e14dda1279379879d87a2ef47"
+    },
+    "ref21": {
+      "path": "database/tcm/skill-v3/references/21-补虚药.md",
+      "sha256": "ecb7a6789177e4f483e5b969d03ba8a2707a5d83569a82ec4ac9a8e4c93be927"
+    },
+    "ref22": {
+      "path": "database/tcm/skill-v3/references/22-收涩涌吐攻毒拔毒药.md",
+      "sha256": "7bb72e7ee6d7090f3d2da679cbc6ba5bc5e4a8b1e584da9668195cc1f72ab641"
+    },
+    "ref23": {
+      "path": "database/tcm/skill-v3/references/23-病证用药索引.md",
+      "sha256": "f6fd80f0e3a1ae266b7af446cff11ed14cf3c00b4bd456a663ce816ed5500195"
+    },
+    "evidence": {
+      "path": "database/tcm/sources/herb-catalog-evidence.json",
+      "sha256": "3175dfe1f95f352f8ff904898eae8ef3c5a597b6d8272f7f707edb5f8343fb8b"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "034cc84bc81732ef89edb773118a2df5ff3bfe6b9b16547d21d54cd59a8e70c2"
+  },
+  "failures": []
+}

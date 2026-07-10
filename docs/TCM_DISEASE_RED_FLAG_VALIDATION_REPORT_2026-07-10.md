@@ -111,4 +111,4 @@ node --test test/tcm/tcm-disease-red-flags-*.test.mjs
 
 1. `31-37` 中未逐条裁决的检查建议、药物、方剂、剂量、调护和 A/B/C 标签继续 blocked，并转交药典/方剂及疗效验证层。
 2. `01-14` 基础理论、四诊和辨证已在后续批次完成 blocked inventory 与现代外推审计，见 `TCM_THEORY_DIAGNOSIS_VALIDATION_REPORT_2026-07-10.md`。
-3. 当前转入 `15-30` 完整中药与方剂；之后单独审计食疗/药食两用、长期养生与体质建议。
+3. `15-23` 中药资料已完成 blocked inventory 与重点风险裁决；当前转入 `24-30` 方剂，之后单独审计食疗/药食两用、长期养生与体质建议。

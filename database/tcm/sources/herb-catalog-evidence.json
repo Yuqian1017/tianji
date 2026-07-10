@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "status": "official_safety_regulatory_and_efficacy_boundary_comparators",
+  "generatedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "SOURCE-INVENTORY-DIRECT-COUNT",
+      "type": "local_source_direct_count",
+      "title": "Direct parse of references 15-23",
+      "path": "database/tcm/skill-v3/references",
+      "facts": [
+        "Reference 23 claims 103 disease-to-herb entries but contains 100 numbered entries.",
+        "Numbers 52, 53 and 54 are absent, and the source order has inversions from 47 to 36 and from 60 to 55; no missing content is inferred or fabricated."
+      ]
+    },
+    {
+      "id": "FDA-DIETARY-SUPPLEMENTS-101",
+      "type": "official_regulator",
+      "title": "FDA 101: Dietary Supplements",
+      "url": "https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements",
+      "facts": [
+        "Herbal and other dietary supplements can have strong biological effects, interactions and adverse events.",
+        "FDA does not approve dietary supplements for safety and effectiveness before sale, and disease treatment or prevention claims require the applicable drug evidence and regulation.",
+        "Consumers should discuss use with a health professional and should not assume that natural means safe."
+      ]
+    },
+    {
+      "id": "FDA-SUPPLEMENT-MEDICATION-CHILDREN",
+      "type": "official_regulator",
+      "title": "Mixing Medications and Dietary Supplements Can Endanger Your Health",
+      "url": "https://www.fda.gov/consumers/consumer-updates/mixing-medications-and-dietary-supplements-can-endanger-your-health",
+      "facts": [
+        "Children metabolize substances differently at different ages and can be harmed by supplement and medicine combinations.",
+        "A fixed fraction of an adult dose is not an adequate general pediatric dosing contract."
+      ]
+    },
+    {
+      "id": "HRSA-POISON-HELP",
+      "type": "official_health_agency",
+      "title": "Poison Help: What You Can Do",
+      "url": "https://poisonhelp.hrsa.gov/what-you-can-do",
+      "facts": [
+        "Suspected poisoning should prompt immediate contact with Poison Help rather than waiting for symptoms.",
+        "First-aid actions depend on the exposure and should come from a poison expert."
+      ]
+    },
+    {
+      "id": "NLM-POISON-FIRST-AID",
+      "type": "official_health_agency",
+      "title": "Poisoning first aid",
+      "url": "https://medlineplus.gov/ency/article/007579.htm",
+      "facts": [
+        "Do not induce vomiting unless directed by poison control or a health professional.",
+        "Do not try to neutralize a poison or use a cure-all antidote without professional direction."
+      ]
+    },
+    {
+      "id": "FDA-ARISTOLOCHIC-IMPORT-54-10",
+      "type": "official_regulator",
+      "title": "Import Alert 54-10: Products Containing Aristolochic Acid",
+      "url": "https://www.accessdata.fda.gov/cms_ia/importalert_141.html",
+      "facts": [
+        "Aristolochic acid is a potent carcinogen and nephrotoxin associated with irreversible renal damage and renal failure.",
+        "The alert names Ma dou ling, Tian xian teng, Qing mu xiang, Guang fang ji and related Aristolochia materials and requires analytical evidence for absence of aristolochic acid."
+      ]
+    },
+    {
+      "id": "CN-NMPA-ARISTOLOCHIC-2003-2004",
+      "type": "official_regulatory_notices",
+      "title": "NMPA notices on Guanmutong and six aristolochic-acid medicines",
+      "url": "https://amr.hainan.gov.cn/himpa/adr/tzgg/ypblfyxxtb/201708/t20170802_460140.html",
+      "facts": [
+        "The 2003 notice cancelled the medicinal standard for Guanmutong and required replacement with Mutong.",
+        "The 2004 notice cancelled standards for Guangfangji and Qingmuxiang and restricted formulas containing Madouling, Xungufeng, Tianxianteng and Zhushalian."
+      ]
+    },
+    {
+      "id": "CN-LEGAL-TOXIC-MEDICINES",
+      "type": "official_regulation",
+      "title": "Regulation on Medical Toxic Drugs and current official reproductions",
+      "url": "https://mpa.jl.gov.cn/xxgk_84894/zcfg/xzfg/202303/t20230301_8673915.html",
+      "facts": [
+        "The legal toxic-medicine control list includes arsenic, mercury and other high-risk Chinese medicines such as Pishi/Pishuang, Qingfen and Xionghuang.",
+        "This list is a minimum regulatory blocklist and not a complete clinical safety assessment."
+      ]
+    },
+    {
+      "id": "FDA-HEAVY-METAL-HERBAL-2025",
+      "type": "official_regulator",
+      "title": "FDA warning on heavy metal poisoning associated with traditional drug products",
+      "url": "https://www.fda.gov/drugs/fraudulent-products/fda-warns-about-heavy-metal-poisoning-associated-certain-unapproved-ayurvedic-drug-products",
+      "facts": [
+        "Lead, mercury and arsenic exposure can cause kidney, neurologic, gastrointestinal and other serious injury; acute ingestion can be life-threatening.",
+        "Consumers with possible exposure or symptoms should contact a health professional or poison center."
+      ]
+    },
+    {
+      "id": "NMPA-PHARMACOPOEIA-2025",
+      "type": "official_standard",
+      "title": "Pharmacopoeia of the People's Republic of China, 2025 edition",
+      "url": "https://english.nmpa.gov.cn/2025-06/11/c_1102172.htm",
+      "facts": [
+        "Medicine identity, processing, dosage and precautions require medicine-level comparison with the effective pharmacopoeia and applicable regulation.",
+        "A textbook summary or one generic decoction-time rule does not establish product eligibility."
+      ]
+    },
+    {
+      "id": "NCCIH-TCM-OVERVIEW",
+      "type": "official_health_agency",
+      "title": "Traditional Chinese Medicine: What You Need To Know",
+      "url": "https://www.nccih.nih.gov/health/traditional-chinese-medicine-what-you-need-to-know",
+      "facts": [
+        "Evidence for Chinese herbal products varies and many condition-level studies are mixed or poor quality.",
+        "Traditional use or a textbook modern-effect phrase does not validate a disease-specific effectiveness claim."
+      ]
+    },
+    {
+      "id": "CDC-TETANUS-CLINICAL-CARE",
+      "type": "official_health_agency",
+      "title": "Tetanus clinical care and treatment",
+      "url": "https://www.cdc.gov/tetanus/hcp/clinical-care/index.html",
+      "facts": [
+        "Tetanus is a medical emergency requiring hospitalization, medication and supportive care.",
+        "A disease-to-herb reverse lookup must not be presented as treatment or delay emergency care."
+      ]
+    },
+    {
+      "id": "CDC-MALARIA-TREATMENT",
+      "type": "official_health_agency",
+      "title": "Treatment of Malaria",
+      "url": "https://www.cdc.gov/malaria/treatment/index.html",
+      "facts": [
+        "Malaria is a medical emergency and requires prompt diagnosis and prescription treatment selected by species, location, age, pregnancy status and severity.",
+        "A reverse herb list cannot substitute for diagnostic testing or an approved antimalarial regimen."
+      ]
+    }
+  ],
+  "boundaries": [
+    "These sources establish safety, regulatory, pediatric, poisoning and evidence boundaries; they do not validate every traditional property or indication in references 15-23.",
+    "Complete source preservation and risk tagging are not medicine-by-medicine pharmacopoeia validation.",
+    "No dose, administration route, poisoning response, disease treatment, pediatric rule, pregnancy rule or modern efficacy claim becomes runtime eligible in this layer."
+  ]
+}
