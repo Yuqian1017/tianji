@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-10 - TCM classics and food-therapy inventory
+
+- 完成剩余 `references/42-48` 的 1,142 条非空行、8 表/79 表格行和 145 标题完整 blocked inventory；TCM 50 个 reference 至此全部进入逐批 inventory。
+- 新增 603 条重叠窄风险视图、20 个重点裁决、官方 comparator、6 项专项测试与 `audit:tcm-classics-food`；14,281 项检查 0 fail。
+- A/B 级、食疗级和药食两用均降为来源自述；旧 `tcm-data.js` 无 importer，八字健康食疗 runtime blocked；106 项食药物质和逐条剂量/疗效仍待现行裁决。
+
 ## 2026-07-10 - TCM formula catalog inventory and safety boundaries
 
 - 完成 `references/24-30` 的 820 条非空行、8 表/171 表格行、81 标题和 186 个格式化方剂定义的完整 blocked inventory。

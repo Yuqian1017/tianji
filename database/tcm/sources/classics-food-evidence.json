@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "status": "official_food_medicine_diet_supplement_and_emergency_boundary_comparators",
+  "generatedAt": "2026-07-10",
+  "sources": [
+    {
+      "id": "CLASSICS-FOOD-DIRECT-INVENTORY",
+      "type": "local_source_direct_count",
+      "title": "Direct parse of references 42-48 and legacy runtime consumers",
+      "path": "database/tcm/skill-v3/references",
+      "facts": [
+        "References 42-48 contain 1,142 non-empty lines, 8 Markdown tables with 79 data rows, and 145 H2/H3 sections.",
+        "Food therapy, source grades, historical formulas and modern safety annotations are interleaved; complete preservation does not make any entry food- or product-eligible."
+      ]
+    },
+    {
+      "id": "CN-NHC-FOOD-MEDICINE-RULE-2021",
+      "type": "official_regulation",
+      "title": "Rules for substances traditionally used as both food and Chinese medicinal materials",
+      "url": "https://www.nhc.gov.cn/wjw/c100175/202111/aac61b41730f4062bee4eefcf51933f4.shtml",
+      "facts": [
+        "Food-medicine substances must have traditional food use, be listed in the Chinese Pharmacopoeia, and pass directory and safety review.",
+        "Labels and marketing may not claim health functions or disease prevention and treatment."
+      ]
+    },
+    {
+      "id": "CN-NHC-FOOD-MEDICINE-106-2025",
+      "type": "official_current_scope",
+      "title": "NHC 2025 response on the current food-medicine directory",
+      "url": "https://www.nhc.gov.cn/wjw/jiany/202508/6141c788fa794723afb4e71af48b3d93.shtml",
+      "facts": [
+        "The current directory contains 106 substances and remains dynamically managed.",
+        "Directory inclusion and safety limits are material-specific; a historical medicine-food label is not automatic current inclusion."
+      ]
+    },
+    {
+      "id": "CN-NHC-HEALTH-LITERACY-2024",
+      "type": "official_health_guidance",
+      "title": "Chinese citizen health literacy explanations",
+      "url": "https://www.nhc.gov.cn/xcs/c100122/202405/f251e896a50a49ff8c632b4b3da93126/files/1734001844015_12363.pdf",
+      "facts": [
+        "Health foods are foods, not medicines, and cannot replace medicines for disease treatment.",
+        "Medical symptoms and emergencies require appropriate professional care rather than food or supplement substitution."
+      ]
+    },
+    {
+      "id": "WHO-HEALTHY-DIET",
+      "type": "official_health_guidance",
+      "title": "Healthy diet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+      "facts": [
+        "Adequacy, balance, moderation and diversity are the four core principles of a healthy diet.",
+        "A healthy diet must also be safe and free from microbial and chemical contaminants."
+      ]
+    },
+    {
+      "id": "NCCIH-SUPPLEMENT-SAFETY",
+      "type": "official_health_agency",
+      "title": "Dietary and Herbal Supplements",
+      "url": "https://www.nccih.nih.gov/health/dietary-and-herbal-supplements",
+      "facts": [
+        "Herbal supplements can interact with medicines and pose condition- or procedure-specific risks.",
+        "Safety and effectiveness require product- and use-specific evidence."
+      ]
+    },
+    {
+      "id": "FDA-DIETARY-SUPPLEMENT-DISEASE-CLAIMS",
+      "type": "official_regulator",
+      "title": "FDA dietary supplements and disease claims",
+      "url": "https://www.fda.gov/consumers/consumer-updates/10-facts-about-what-fda-does-and-does-not-approve",
+      "facts": [
+        "Herbs and dietary supplements are not FDA-approved to treat or prevent disease.",
+        "Food or supplement status does not establish a disease-treatment indication."
+      ]
+    },
+    {
+      "id": "NLM-POISON-FIRST-AID",
+      "type": "official_health_agency",
+      "title": "Poisoning first aid",
+      "url": "https://medlineplus.gov/ency/article/007579.htm",
+      "facts": [
+        "Do not induce vomiting or use a cure-all antidote unless directed by poison control or a health professional.",
+        "Suspected poisoning needs immediate professional guidance."
+      ]
+    },
+    {
+      "id": "CDC-STROKE-SIGNS",
+      "type": "official_health_agency",
+      "title": "Signs and Symptoms of Stroke",
+      "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+      "facts": [
+        "Sudden neurologic deficits require emergency response and immediate medical care.",
+        "Food, tea, or traditional formula advice must not delay evaluation."
+      ]
+    },
+    {
+      "id": "CDC-TB-TREATMENT",
+      "type": "official_health_agency",
+      "title": "Treating Tuberculosis",
+      "url": "https://www.cdc.gov/tb/treatment/index.html",
+      "facts": [
+        "Tuberculosis requires a complete prescribed antimicrobial regimen.",
+        "Food therapy and historical remedies are not substitutes for treatment."
+      ]
+    },
+    {
+      "id": "NCI-CANCER-TREATMENT",
+      "type": "official_health_agency",
+      "title": "Types of Cancer Treatment",
+      "url": "https://www.cancer.gov/about-cancer/treatment/types",
+      "facts": [
+        "Cancer treatment depends on cancer type and stage and may include surgery, medicines, radiation and other evidence-based care.",
+        "Historical food or formula claims do not establish cancer treatment efficacy."
+      ]
+    }
+  ],
+  "boundaries": [
+    "These comparators establish food eligibility, healthy-diet, supplement safety, poisoning, emergency and disease-treatment boundaries; they do not validate individual historical recipes.",
+    "No A/B grade, food-therapy, medicine-food, tea, juice, porridge, dose, disease mapping or home action in references 42-48 becomes runtime eligible in this layer.",
+    "Current directory membership, edible part, processing, limit, population and disease evidence require item-level adjudication."
+  ]
+}

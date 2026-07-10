@@ -55,6 +55,8 @@
     "audit:tcm-herb-catalog": "npm run build:tcm-herb-catalog && node scripts/validation/audit-tcm-herb-catalog.mjs",
     "build:tcm-formula-catalog": "node scripts/validation/build-tcm-formula-catalog-core.mjs",
     "audit:tcm-formula-catalog": "npm run build:tcm-formula-catalog && node scripts/validation/audit-tcm-formula-catalog.mjs",
+    "build:tcm-classics-food": "node scripts/validation/build-tcm-classics-food-core.mjs",
+    "audit:tcm-classics-food": "npm run build:tcm-classics-food && node scripts/validation/audit-tcm-classics-food.mjs",
     "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",
     "audit:ziwu": "node scripts/validation/audit-ziwu.mjs",
     "audit:shared-time": "node scripts/validation/audit-shared-time-cities.mjs",

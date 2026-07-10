@@ -1,0 +1,531 @@
+{
+  "audit": "tcm-classics-food-evidence-boundaries",
+  "generatedAt": "2026-07-10",
+  "result": "pass_with_all_candidates_blocked",
+  "summary": {
+    "checks": 14281,
+    "failures": 0,
+    "runtimeConsumerFilesScanned": 84,
+    "references": 7,
+    "sourceNonEmptyLines": 1142,
+    "sourceMarkdownTables": 8,
+    "sourceMarkdownTableRows": 79,
+    "sections": 145,
+    "priorityLineCandidates": 603,
+    "findings": 20
+  },
+  "categories": {
+    "contract": {
+      "checks": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "source_integrity": {
+      "checks": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    "source_inventory": {
+      "checks": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    "line_preservation": {
+      "checks": 3426,
+      "passed": 3426,
+      "failed": 0
+    },
+    "safety_gate": {
+      "checks": 4133,
+      "passed": 4133,
+      "failed": 0
+    },
+    "section_preservation": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "priority_preservation": {
+      "checks": 6633,
+      "passed": 6633,
+      "failed": 0
+    },
+    "finding_summary": {
+      "checks": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "finding_integrity": {
+      "checks": 40,
+      "passed": 40,
+      "failed": 0
+    },
+    "runtime_gate": {
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "priorityCategoryCounts": {
+    "foodTherapy": 85,
+    "diseaseFoodMapping": 76,
+    "dose": 161,
+    "toxicity": 150,
+    "contraindication": 343,
+    "emergency": 144,
+    "modernDisease": 64,
+    "vulnerablePopulation": 105,
+    "homeAction": 53,
+    "sourceGrade": 50
+  },
+  "runtimeLegacy": {
+    "tcmData": {
+      "path": "src/lib/tcm-data.js",
+      "status": "legacy_unconsumed",
+      "importers": [],
+      "productEligibility": "blocked"
+    },
+    "baziHealth": {
+      "dataPath": "src/modules/bazihealth/data.js",
+      "enginePath": "src/modules/bazihealth/engine.js",
+      "modulePath": "src/modules/bazihealth/BaziHealthModule.jsx",
+      "status": "runtime_blocked",
+      "productEligibility": "blocked"
+    }
+  },
+  "runtimeConsumerPaths": [
+    "index.html",
+    "package.json",
+    "public/vite.svg",
+    "server/auth.js",
+    "server/db.js",
+    "server/index.js",
+    "server/middleware.js",
+    "server/routes/auth.js",
+    "server/routes/history.js",
+    "src/App.jsx",
+    "src/components/BirthCityPicker.jsx",
+    "src/components/CameraCapture.jsx",
+    "src/components/HistoryDrawer.jsx",
+    "src/components/LoginPage.jsx",
+    "src/components/ModuleIntro.jsx",
+    "src/components/PalmLineQuestionnaire.jsx",
+    "src/components/SettingsPanel.jsx",
+    "src/components/ThemePicker.jsx",
+    "src/index.css",
+    "src/lib/ai.js",
+    "src/lib/aiProviders.js",
+    "src/lib/api.js",
+    "src/lib/camera.js",
+    "src/lib/cities.js",
+    "src/lib/cities.runtime.json",
+    "src/lib/history.js",
+    "src/lib/mediapipe.js",
+    "src/lib/tcm-data.js",
+    "src/main.jsx",
+    "src/modules/bazi/BaziModule.jsx",
+    "src/modules/bazi/calendar.js",
+    "src/modules/bazi/data.js",
+    "src/modules/bazi/engine.js",
+    "src/modules/bazi/prompt.js",
+    "src/modules/bazihealth/BaziHealthModule.jsx",
+    "src/modules/bazihealth/data.js",
+    "src/modules/bazihealth/engine.js",
+    "src/modules/bazihealth/prompt.js",
+    "src/modules/face/FaceModule.jsx",
+    "src/modules/face/data.js",
+    "src/modules/face/engine.js",
+    "src/modules/face/prompt.js",
+    "src/modules/fengshui/FengshuiModule.jsx",
+    "src/modules/fengshui/data.js",
+    "src/modules/fengshui/engine.js",
+    "src/modules/fengshui/prompt.js",
+    "src/modules/liuyao/LiuyaoModule.jsx",
+    "src/modules/liuyao/data.js",
+    "src/modules/liuyao/engine.js",
+    "src/modules/liuyao/prompt.js",
+    "src/modules/meihua/MeihuaModule.jsx",
+    "src/modules/meihua/data.js",
+    "src/modules/meihua/engine.js",
+    "src/modules/meihua/prompt.js",
+    "src/modules/meihua/strokes-unihan-17.js",
+    "src/modules/palm/PalmModule.jsx",
+    "src/modules/palm/data.js",
+    "src/modules/palm/engine.js",
+    "src/modules/palm/prompt.js",
+    "src/modules/qimen/QimenModule.jsx",
+    "src/modules/qimen/data.js",
+    "src/modules/qimen/engine.js",
+    "src/modules/qimen/prompt.js",
+    "src/modules/tizhi/TizhiModule.jsx",
+    "src/modules/tizhi/data.js",
+    "src/modules/tizhi/engine.js",
+    "src/modules/tizhi/prompt.js",
+    "src/modules/wangzhen/WangzhenModule.jsx",
+    "src/modules/wangzhen/data.js",
+    "src/modules/wangzhen/engine.js",
+    "src/modules/wangzhen/prompt.js",
+    "src/modules/wuyun/WuyunModule.jsx",
+    "src/modules/wuyun/data.js",
+    "src/modules/wuyun/engine.js",
+    "src/modules/wuyun/prompt.js",
+    "src/modules/ziwei/ZiweiModule.jsx",
+    "src/modules/ziwei/data.js",
+    "src/modules/ziwei/engine.js",
+    "src/modules/ziwei/prompt.js",
+    "src/modules/ziwu/ZiwuModule.jsx",
+    "src/modules/ziwu/data.js",
+    "src/modules/ziwu/engine.js",
+    "src/modules/ziwu/prompt.js",
+    "vite.config.js"
+  ],
+  "findings": [
+    {
+      "id": "TCM-CF-001",
+      "kind": "source_grade",
+      "status": "classic_food_grade_not_product_authority",
+      "sourceId": "ref42",
+      "sourceLine": 94,
+      "sourceText": "- 用药度(五常政大论70):\"**大毒治病,十去其六;常毒治病,十去其七;小毒治病,十去其八;无毒治病,十去其九。谷肉果菜,食养尽之,无使过之,伤其正也**\"——中病即止、食养收尾,本 Skill\"能食养不用药\"层级的经典依据(配 [[安全-配伍妊娠禁忌与毒性药]])。\"无盛盛,无虚虚,而遗人夭殃\"。",
+      "comparatorSourceIds": [
+        "CN-NHC-FOOD-MEDICINE-RULE-2021",
+        "WHO-HEALTHY-DIET"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-002",
+      "kind": "disease_food_mapping",
+      "status": "five_organ_food_mapping_not_modern_nutrition",
+      "sourceId": "ref43",
+      "sourceLine": 67,
+      "sourceText": "- **五谷五果五畜五菜配属表**(五味56):秔米甘/麻酸/大豆咸/麦苦/黄黍辛;枣甘/李酸/栗咸/杏苦/桃辛;牛甘/犬酸/猪咸/羊苦/鸡辛;葵甘/韭酸/藿咸/薤苦/葱辛。**五脏病所宜**:脾病宜秔米饭牛肉枣葵;心病宜麦羊肉杏薤;肾病宜大豆黄卷猪肉栗藿;肝病宜麻犬肉李韭;肺病宜黄黍鸡肉桃葱。**五禁**:肝病禁辛、心病禁咸、脾病禁酸、肾病禁甘、肺病禁苦。",
+      "comparatorSourceIds": [
+        "WHO-HEALTHY-DIET"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-003",
+      "kind": "source_grade",
+      "status": "author_grade_a_not_independent_safety_grade",
+      "sourceId": "ref46",
+      "sourceLine": 66,
+      "sourceText": "- 收尾名句:\"药补不如食补;我则曰:食补不如精补,精补不如神补。节饮食,惜精神,用药得宜,病有不痊焉者寡矣。\"(A 级养生说理直接可用。)",
+      "comparatorSourceIds": [
+        "WHO-HEALTHY-DIET"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-004",
+      "kind": "source_grade",
+      "status": "warm_disease_grade_a_food_therapy_not_adjudicated",
+      "sourceId": "ref47",
+      "sourceLine": 195,
+      "sourceText": "- 甘寒救液小方(第 12 条):口渴甚**雪梨浆**(甜水梨薄切凉水浸,时时频饮);吐白沫黏滞不快者**五汁饮**(梨汁、荸荠汁、鲜苇根汁、麦冬汁、藕汁,和匀凉服)——A 级食疗性质的原书出处(过敏与血糖等现代注意见教材层)。",
+      "comparatorSourceIds": [
+        "CN-NHC-FOOD-MEDICINE-RULE-2021"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-005",
+      "kind": "food_identity",
+      "status": "medicine_food_label_not_current_directory_adjudication",
+      "sourceId": "ref48",
+      "sourceLine": 154,
+      "sourceText": "- **蒲公英汤**:鲜蒲公英四两(根叶茎花皆用)煎汤,温服一碗、余一碗乘热熏洗,治一切虚火实热眼疾肿疼——药食两用之品,然眼疾自疗风险高(青光眼急性发作等),**今凡目赤剧痛/视力骤降=红线**,此方存其食疗史料。磨翳水/磨翳散(生炉甘石水飞点眼)、护眉神应散诸外用眼药——**存目禁自制点眼**。",
+      "comparatorSourceIds": [
+        "CN-NHC-FOOD-MEDICINE-106-2025"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-006",
+      "kind": "dose_and_disease",
+      "status": "high_dose_yam_tea_disease_claim_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 15,
+      "sourceText": "- **一味薯蓣饮**:生怀山药四两煮汁当茶——张氏食疗大剂之代表,治一切阴分亏损、虚热劳嗽、滑泻;**山药必生用,\"若用炒熟山药则分毫无效\"**。珠玉二宝粥(生山药+生薏米+柿霜饼)、沃雪汤、水晶桃(核桃仁+柿霜饼蒸融)同为脾肺阴虚食疗方系。",
+      "comparatorSourceIds": [
+        "CN-NHC-HEALTH-LITERACY-2024",
+        "NCCIH-SUPPLEMENT-SAFETY"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-007",
+      "kind": "efficacy",
+      "status": "cooked_yam_zero_effect_claim_unsupported",
+      "sourceId": "ref48",
+      "sourceLine": 15,
+      "sourceText": "- **一味薯蓣饮**:生怀山药四两煮汁当茶——张氏食疗大剂之代表,治一切阴分亏损、虚热劳嗽、滑泻;**山药必生用,\"若用炒熟山药则分毫无效\"**。珠玉二宝粥(生山药+生薏米+柿霜饼)、沃雪汤、水晶桃(核桃仁+柿霜饼蒸融)同为脾肺阴虚食疗方系。",
+      "comparatorSourceIds": [
+        "FDA-DIETARY-SUPPLEMENT-DISEASE-CLAIMS"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-008",
+      "kind": "pediatric",
+      "status": "pediatric_diarrhea_first_formula_claim_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 87,
+      "sourceText": "- **泄泻食疗方系**(本门几乎全为药食两用,张氏特色最浓):**益脾饼**(白术四两、干姜二两、鸡内金二两、熟枣肉半斤,炙干当点心)治脾胃湿寒久泻;**薯蓣粥**(生怀山药轧细煮粥)——\"山药脾肾双补,在上能清,在下能固,**利小便而止大便**\",为小儿秋夏滑泻(伤阴发热、凉润温补皆不对证者)第一方;薯蓣鸡子黄粥(加熟鸡子黄固肠);薯蓣芣苢汤(山药+生车前子,小便不利兼大便滑泻);加味天水散(山药+滑石+甘草,暑日泄泻肌肤烧热)。扶中汤(于术、山药、龙眼肉)治久泻将成劳瘵。加味四神丸内加生硫黄——存目。",
+      "comparatorSourceIds": [
+        "CN-NHC-HEALTH-LITERACY-2024"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-009",
+      "kind": "dose",
+      "status": "goji_one_liang_bedtime_dose_not_food_guidance",
+      "sourceId": "ref48",
+      "sourceLine": 173,
+      "sourceText": "- **山药**:生用煮汁,\"含蛋白质甚多,炒之则焦枯无效\";滋阴固气、利小便而止大便,粥食法为张氏食疗核心。**白术**:后天资生要药,与四类药同用分补四脏;重用两许止脾湿作渴、定虚喘。**熟地**:大剂(四两至一日十二两)救真阴亏极之脱、止下焦虚惫之泻(\"少用则作闷,多用转不闷\");地黄鲜、干、熟三级性用。**枸杞**:滋补肝肾,睡前嚼服一两解夜间燥热(元阴济元阳)。**龙眼肉**:蒸熟当点心,治心虚怔忡、脾虚便血。**大枣**:先煮去苦水再蒸熟,可多服久服。**胡桃+补骨脂**(青娥丸底):虚寒腰腿疼。**天冬**:嚼之无渣尽化津液,\"兼有人参气味\",柔中含刚。",
+      "comparatorSourceIds": [
+        "NCCIH-SUPPLEMENT-SAFETY",
+        "WHO-HEALTHY-DIET"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-010",
+      "kind": "efficacy",
+      "status": "pomegranate_three_month_lung_claim_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 188,
+      "sourceText": "- **半夏**:降胃安冲主药;**药局清半夏皆有矾,矾令人呕吐,用治呕吐血证必温水淘净矾味且加重分量**;自制半夏法(汤浸日换十日,剖瓣一沸取出);录日本医以小半夏加茯苓汤起英军医垂危呕吐案。反乌附。**栝蒌**:新炒蒌仁四两单用救温病结胸;皮清肺、瓤滋润、仁开胸。天花粉:清火生津,通行经络,疮家解毒生肌。**厚朴**:\"多用则破气,少用则通阳\"(叶天士语,张氏奉为确论);冲气上逆方中少用之以宣通。**莱菔子**:\"化气之品,非破气之品\",生升(升气化痰)炒降(降气消食);胡萝卜缨(经霜干品)浸水解砒毒二案存记。**生麦芽**:舒肝;**回乳用炒麦芽二两**。五味子:入煎必捣碎(仁辛济皮酸);咳有外感必配干姜、细辛(邹润安开阖论)。**干姜**:散而能守;配伍谱详(配厚朴/桂枝/黄芪/五味/赭石/白术)。**附子、乌头、天雄考**:旁生者附子、原种为乌头(宣通力优,金匮诸疼痛方用之)、独头不旁生为天雄(温补力雄,今药局大而圆之\"乌附子\"片即是);**皆反半夏**;凉亡阳者附子配萸肉人参,热亡阴者生地配萸肉人参。**肉桂**:气味俱浓忌久煎,去粗皮**整块入煎**;救脱用附子不用肉桂(桂兼走散非救危之药);木得桂则枯,善平肝。**茯苓**:淡养脾阴,敛心气安魂魄,**兼止汗要药**(单用四五两愈产后汗出心悸不寐案);入煎必切薄片或捣末。**滑石**:上清热下利湿;北方暑证宜滑石石膏各半配甘草。**牛膝**:引气血下行,治脑充血、上焦之火(牙疼、脑疼)要药;下焦滑脱者忌。**川楝子**:引肝胆之热自小便出,疝气向导。**竹茹**:降胃清肠,不 而宣通(损伤瘀血、齿龈出血);用嫩竹青皮。沙参:肺家气分中理血药。柏子仁:安五脏尤宜于肝(单用一两愈肝虚胁疼)。远志:酸辛理肺,兼有矾味,汤剂勿过二钱(多则呕)。**萆薢**:固涩下焦治失溺,**患淋证者禁用**(误作利淋药致癃闭两死案——重申醒脾升陷汤下之论)。石榴:酸敛肝、涩滑脱(连皮捣煮治泻痢崩带;肺劳喘嗽每晚食之三月愈案)。罂粟壳:敛肺涩肠,**嗽痢初起及兼外感者忌用**(成瘾性药材,今严管,存目)。常山:治疟要药,一剂分五六次徐服则不吐。木通:味实甚苦;《医宗金鉴》木通汤(单味二两取汗)治痛痹——※**木通有同名异物之患(关木通含马兜铃酸),见安全表,今用川木通/通草类并遵规范**。",
+      "comparatorSourceIds": [
+        "CDC-TB-TREATMENT",
+        "FDA-DIETARY-SUPPLEMENT-DISEASE-CLAIMS"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-011",
+      "kind": "eye_emergency",
+      "status": "eye_disease_dandelion_self_treatment_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 154,
+      "sourceText": "- **蒲公英汤**:鲜蒲公英四两(根叶茎花皆用)煎汤,温服一碗、余一碗乘热熏洗,治一切虚火实热眼疾肿疼——药食两用之品,然眼疾自疗风险高(青光眼急性发作等),**今凡目赤剧痛/视力骤降=红线**,此方存其食疗史料。磨翳水/磨翳散(生炉甘石水飞点眼)、护眉神应散诸外用眼药——**存目禁自制点眼**。",
+      "comparatorSourceIds": [
+        "CN-NHC-HEALTH-LITERACY-2024"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-012",
+      "kind": "mass_emergency",
+      "status": "neck_mass_kelp_and_oyster_cure_claim_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 157,
+      "sourceText": "- **消瘰丸**(煅牡蛎十两、生黄芪四两、三棱莪术、血竭乳没、龙胆草、玄参、浙贝,海带汤送服):治瘰疬(颈淋巴结核)。两则食疗级验案:强壮者单用**煅牡蛎细末**每餐饭汤送七八钱,一月消;或**日日煮海带汤**饮之半月愈——惟脾胃弱者咸寒伤胃。※颈部肿块今须先排查(结核/肿瘤),B 级红线优先。",
+      "comparatorSourceIds": [
+        "NCI-CANCER-TREATMENT"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-013",
+      "kind": "infectious_emergency",
+      "status": "cholera_food_and_ice_rescue_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 266,
+      "sourceText": "- **霍乱**(71):急救回生丹(阳证)、卫生防疫宝丹(凉热皆可)、急救回阳汤(吐泻止后之将脱,萸肉八钱人参八钱+朱砂童便);阴阳辨——**阴证有汗、阳证无汗**,眼窝青唇黑为阴,心中热思凉水为阳;大热者恣饮凉水/吞冰,张氏自病霍乱食冰二斤+白虎加人参汤案;鲜梨片蘸生石膏末为呕吐拒药通用法。**霍乱今为法定检疫传染病,以上全部存目**,现代处置见 [[33-内科-脾胃系病证]]吐泻诸节红线。",
+      "comparatorSourceIds": [
+        "CN-NHC-HEALTH-LITERACY-2024"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-014",
+      "kind": "poisoning",
+      "status": "arsenic_antidote_and_emesis_recipe_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 314,
+      "sourceText": "- **解砒石毒方**(44,石膏白矾鸡子清涌吐):急性砷中毒今必须急诊(洗胃+络合剂),存目。",
+      "comparatorSourceIds": [
+        "NLM-POISON-FIRST-AID"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-015",
+      "kind": "heavy_metal",
+      "status": "lead_formula_explicitly_prohibited",
+      "sourceId": "ref48",
+      "sourceLine": 310,
+      "sourceText": "- **愈痫丸/息神丸**(医话9):含硫化铅、黄丹(铅丹)——**铅制剂绝对禁服**;癫痫今属神经科规范治疗(痫病参 [[32-内科-心系病证]])。腹内动气之铅灰丸同禁。",
+      "comparatorSourceIds": [
+        "NCCIH-SUPPLEMENT-SAFETY"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-016",
+      "kind": "infectious_disease",
+      "status": "tuberculosis_food_or_herb_substitution_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 258,
+      "sourceText": "- **肺病(肺痨)分期论**(63):初期辛凉解表+玄参花粉银花贝母;中期山药茶汤+甘草三七细末;晚期咳吐脓血兼服**犀黄丸**(引《外科证治全生集》);土虚不生金者加百布圣(胃酶),肾虚者熟地枸杞。**阿司匹林治肺结核说为 1920 年代认识,今结核必抗痨规范治疗**(→[[31-内科-肺系病证]]肺痨红线)。三鲜饮(鲜茅根、鲜小蓟根、鲜藕)食疗;清金二妙丹(甘草远志末);肺病饮食宜忌单。",
+      "comparatorSourceIds": [
+        "CDC-TB-TREATMENT"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-017",
+      "kind": "cancer",
+      "status": "gastric_cancer_food_or_formula_substitution_blocked",
+      "sourceId": "ref48",
+      "sourceLine": 260,
+      "sourceText": "- **噎膈(原书明言即胃癌)与反胃**(65):参赭培气汤基础上确立**瘀血说**——贲门瘀血肿胀者兼用桃仁红花三棱䗪虫、生水蛭;自拟变质化瘀丸(三七桃仁硼砂甘草+西药沃剥即碘剂、百布圣)——中西药并用方案,存目不可仿;幽门癌多瘤赘加鸡内金水蛭。**今胃癌必内镜确诊、手术化疗为主**(→[[33-内科-脾胃系病证]]噎膈、[[36-内科-气血津液病证]]癌病红线)。",
+      "comparatorSourceIds": [
+        "NCI-CANCER-TREATMENT"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-018",
+      "kind": "disease_recipe",
+      "status": "pear_and_five_juice_disease_recipe_not_general_food_advice",
+      "sourceId": "ref47",
+      "sourceLine": 195,
+      "sourceText": "- 甘寒救液小方(第 12 条):口渴甚**雪梨浆**(甜水梨薄切凉水浸,时时频饮);吐白沫黏滞不快者**五汁饮**(梨汁、荸荠汁、鲜苇根汁、麦冬汁、藕汁,和匀凉服)——A 级食疗性质的原书出处(过敏与血糖等现代注意见教材层)。",
+      "comparatorSourceIds": [
+        "WHO-HEALTHY-DIET",
+        "CN-NHC-HEALTH-LITERACY-2024"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-019",
+      "kind": "runtime_legacy",
+      "status": "legacy_wuxing_food_tables_unconsumed_but_unvalidated",
+      "sourceId": "runtimeTcmData",
+      "sourceLine": 43,
+      "sourceText": "export const WUXING_FOOD_THERAPY = {",
+      "comparatorSourceIds": [
+        "WHO-HEALTHY-DIET"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "TCM-CF-020",
+      "kind": "runtime_block",
+      "status": "bazi_health_food_inference_runtime_blocked",
+      "sourceId": "runtimeBaziData",
+      "sourceLine": 13,
+      "sourceText": "nurture: { foods: ['枸杞', '菊花', '菠菜', '绿叶蔬菜', '酸味食物'], avoid: ['辛辣', '酒', '熬夜'] },",
+      "comparatorSourceIds": [
+        "WHO-HEALTHY-DIET",
+        "CN-NHC-HEALTH-LITERACY-2024"
+      ],
+      "foodEligibility": "not_adjudicated",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ],
+  "boundaries": [
+    "All 1,142 non-empty source lines and 79 Markdown table rows are preserved as blocked candidates; preservation is not historical-text, food, dose or clinical validation.",
+    "The 603 overlapping priority lines are narrow review views, not complete clinical semantics or a food-recipe entity catalog.",
+    "A/B grades and food-therapy or medicine-food labels are source assertions only; current 106-item directory identity, edible part, processing, limits and population scope remain unadjudicated.",
+    "No dose, disease mapping, pediatric or pregnancy use, poisoning action, emergency substitution, cancer/TB claim, self-treatment or home procedure is runtime eligible.",
+    "Legacy tcm-data food tables remain in source but have no importer; BaZi health food data remains imported only behind a hard runtime block."
+  ],
+  "sourceRefs": {
+    "ref42": {
+      "path": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "sha256": "a8a9481bfe4eb1ee6d6ed193d271c53d378a23a63f9ab1b9c582c1cb15ff2e47"
+    },
+    "ref43": {
+      "path": "database/tcm/skill-v3/references/43-经典-灵枢与难经要义.md",
+      "sha256": "da0b6dc02f972d921352631b0d9dc19d8e2ac86db59b9ee8c773bfd1fdf1034e"
+    },
+    "ref44": {
+      "path": "database/tcm/skill-v3/references/44-经典-伤寒论六经方证条文.md",
+      "sha256": "8df644ab15d92b494a6e9ba4edb0717a0c4e417d5d1361e4d06b8a9bb4fb8f36"
+    },
+    "ref45": {
+      "path": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "sha256": "18a7d6b563660b6958eb24365543a38b0b045b2349b8249f05b8de689df6e987"
+    },
+    "ref46": {
+      "path": "database/tcm/skill-v3/references/46-医家-医学心悟要义.md",
+      "sha256": "0df538f6e0c38f0a23e18c5237f8ac2799946409d4ce1ad9864e7929a30a61d1"
+    },
+    "ref47": {
+      "path": "database/tcm/skill-v3/references/47-温病-卫气营血三焦方证条文.md",
+      "sha256": "1fc7e18a31d30b5c01475f68400be079c65cd64ef2c140467d200197ba599872"
+    },
+    "ref48": {
+      "path": "database/tcm/skill-v3/references/48-医家-衷中参西录要义.md",
+      "sha256": "e40ba576d3d0a16af126cfcf0926f7a8aef3bd2126495da0baaf5b7c9455d18f"
+    },
+    "evidence": {
+      "path": "database/tcm/sources/classics-food-evidence.json",
+      "sha256": "66d8f3034d7b1f5b7ed2ac5203e1e7f8228a5a9cb09c3fca241a7a93235fd94e"
+    },
+    "runtimeTcmData": {
+      "path": "src/lib/tcm-data.js",
+      "sha256": "3beb7d04cee32831536411e9b9bbf905d7949f11d17ad55bc0e83ee71a3e8297"
+    },
+    "runtimeBaziData": {
+      "path": "src/modules/bazihealth/data.js",
+      "sha256": "1aead6173325de67513446936538bbcde3e49bd2563222ec3d87e91a6cb71796"
+    },
+    "runtimeBaziEngine": {
+      "path": "src/modules/bazihealth/engine.js",
+      "sha256": "2e828610d8afb225bd1e15b14b246a34074e37297aaaad05d6bea8e6d50ef491"
+    },
+    "runtimeBaziModule": {
+      "path": "src/modules/bazihealth/BaziHealthModule.jsx",
+      "sha256": "f068774158ce65290ebe6697454b53510bc2a74dd0791ec492274466e8b3e19d"
+    }
+  },
+  "relevantSha256": {
+    "normalizedCore": "f57f0f2a62922b09802e3d9f3817de90a8e4292fb1025b9e4d4c05d8067dbf5b"
+  },
+  "failures": []
+}

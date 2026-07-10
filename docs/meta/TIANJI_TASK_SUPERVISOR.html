@@ -69,8 +69,8 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 58,
-      currentFocus: '中医食疗、药食两用与养生建议验证；七个候选层继续 blocked，方剂逐方临床校勘仍 open。',
-      nextDecision: '先盘点食疗/药食两用 source 与全部 runtime 消费，再按药物身份、剂量、特殊人群、疾病替代和现代营养证据分层。',
+      currentFocus: '中医运行时同义语义与现行逐项授权收尾；50 个 reference 已完整 inventory，八个候选层继续 blocked。',
+      nextDecision: '逐项裁决旧 tcm-data、望诊追问和可见食疗/诊断文字，并建立 106 项食药物质、现行药典、逐药逐方和逐穴正文的授权缺口。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -81,11 +81,11 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'tcm_food_therapy_in_progress', rule: '七个中医候选层已通过来源/阻断审计并全部 blocked；当前核验食疗与药食两用。' },
+        { name: '排盘与数据库正确性', state: 'tcm_runtime_closeout_in_progress', rule: 'TCM 50 reference 已完整 inventory，八个候选层全部 blocked；当前收尾运行时语义与现行逐项授权。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
-        { name: '中医安全', state: 'food_therapy_in_progress', rule: '法定毒性 28 项已规范化；七个候选层已审计但全部 blocked；食疗解释和逐药逐方临床校勘未通过前不扩大产品消费范围。' },
+        { name: '中医安全', state: 'runtime_closeout_in_progress', rule: '法定毒性 28 项已规范化；八个候选层已审计但全部 blocked；运行时语义与现行逐项授权未通过前不扩大产品消费范围。' },
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
@@ -140,6 +140,8 @@
         '方剂 24-30 共 820 条非空行、8 表/171 表格行、186 个格式化定义、522 条重叠窄风险视图和 20 finding，11,395 项 0 fail',
         '括号出处格式漏掉四个正方的 parser 问题已修复；182 个教材正方逐分册计数匹配，4 个经典锚点另计；方剂内容全部保持 blocked',
         '方剂 fresh review 无 P0；两项 P1 旧口径已统一，P2 禁忌漏扫/现代用途误报已修复',
+        '经典/医家/食疗 42-48 共 1,142 条非空行、8 表/79 表格行、145 标题、603 条窄风险视图和 20 finding，14,281 项 0 fail',
+        'TCM 50 reference 已完整 inventory；A级/食疗级/药食两用均不授予产品资格',
         'fresh review 无 P0/P1；运行时清零过宽声明已降级，旧 tcm-data/望诊语义保持 open',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
