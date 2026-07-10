@@ -21,6 +21,14 @@ test('calculates NOAA equation of time from a civil date', () => {
       hour: 12,
     }) - 16.3653) < 0.01,
   );
+  assert.ok(
+    Math.abs(cities.calcEquationOfTime({
+      year: 2024,
+      month: 12,
+      day: 31,
+      hour: 12,
+    }) - (-2.9042)) < 0.01,
+  );
 });
 
 test('includes equation of time in the standard-time solar offset', () => {

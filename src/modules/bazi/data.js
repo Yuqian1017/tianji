@@ -185,11 +185,11 @@ export const YIN_START = { '乙':6, '丁':9, '己':9, '辛':0, '癸':3 };
 
 // === 天干五合 ===
 export const STEM_COMBINE = [
-  { pair: ['甲','己'], hua: 'earth', label: '甲己合化土' },
-  { pair: ['乙','庚'], hua: 'metal', label: '乙庚合化金' },
-  { pair: ['丙','辛'], hua: 'water', label: '丙辛合化水' },
-  { pair: ['丁','壬'], hua: 'wood', label: '丁壬合化木' },
-  { pair: ['戊','癸'], hua: 'fire', label: '戊癸合化火' },
+  { pair: ['甲','己'], huaCandidates: ['earth'], label: '甲己合' },
+  { pair: ['乙','庚'], huaCandidates: ['metal'], label: '乙庚合' },
+  { pair: ['丙','辛'], huaCandidates: ['water'], label: '丙辛合' },
+  { pair: ['丁','壬'], huaCandidates: ['wood'], label: '丁壬合' },
+  { pair: ['戊','癸'], huaCandidates: ['fire'], label: '戊癸合' },
 ];
 
 // === 地支关系 ===

@@ -513,11 +513,8 @@ export function calcEquationOfTime({ year, month, day, hour = 12, minute = 0 }) 
   const dayOfYear = (
     Date.UTC(year, month - 1, day) - Date.UTC(year, 0, 0)
   ) / 86400000;
-  const daysInYear = new Date(Date.UTC(year, 1, 29)).getUTCMonth() === 1
-    ? 366
-    : 365;
   const fractionalHour = hour + minute / 60;
-  const gamma = (2 * Math.PI / daysInYear)
+  const gamma = (2 * Math.PI / 365)
     * (dayOfYear - 1 + (fractionalHour - 12) / 24);
 
   return 229.18 * (

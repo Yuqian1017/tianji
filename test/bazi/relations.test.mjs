@@ -1,7 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { BRANCH_RELATIONS } from '../../src/modules/bazi/data.js';
+import {
+  BRANCH_RELATIONS,
+  STEM_COMBINE,
+} from '../../src/modules/bazi/data.js';
 
 test('Liuhe labels do not claim a completed elemental transformation', () => {
   for (const relation of BRANCH_RELATIONS.liuhe) {
@@ -15,4 +18,11 @@ test('Wu-Wei keeps both disputed transformation candidates as metadata', () => {
   );
 
   assert.deepEqual(relation.huaCandidates, ['fire', 'earth']);
+});
+
+test('stem-combination labels also avoid claiming automatic transformation', () => {
+  for (const relation of STEM_COMBINE) {
+    assert.equal(relation.label, `${relation.pair.join('')}合`);
+    assert.equal(relation.huaCandidates.length, 1);
+  }
 });
