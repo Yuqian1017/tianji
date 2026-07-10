@@ -1,0 +1,422 @@
+{
+  "auditDate": "2026-07-09",
+  "conclusion": "relation_tables_pass_transformation_and_interpretation_blocked",
+  "sourceProvenance": {
+    "gitCommit": "19c2131eb3b9315c161ad1613ef948088c0db17e",
+    "workingTreeDirty": false,
+    "dirtyFiles": [],
+    "sourceSha256": {
+      "src/modules/bazi/data.js": "1d3bebe93fb36e081ecfc9d9d676f8e80d3aa0937bdbfba1e5a154b1cfa8759e",
+      "src/modules/bazi/engine.js": "53cddf38ac8875b422a2548e7d3d1fe3e17cbea94b422ba07d01afabccf55a78",
+      "src/modules/bazi/BaziModule.jsx": "584b701bf90cbb1d99faefb622590570bc57ada9fd590e5a577d484701c162ef",
+      "scripts/validation/audit-bazi-relations.mjs": "f8a202b74131a2e2c137b194a6f92a4c6f457a7667b3ed1c854cefb51b7d10b2"
+    }
+  },
+  "sources": {
+    "stemAndBranchCompendium": "database/xuanxue/compendium-new/00-cosmology/03-tiangan-dizhi.md",
+    "shenshaCompendium": "database/xuanxue/compendium-new/reference/shensha-table.md",
+    "sanMingLiuhe": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1yasl",
+    "sanMingSanhe": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1ynfp",
+    "sanMingSixHarms": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1z02t",
+    "sanMingPunishments": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v6ol1zcpx",
+    "sanMingClashes": "https://www.shidianguji.com/book/SK1610/chapter/1kt0ayvn4fjf7",
+    "sanMingTransformationConditions": "https://www.shidianguji.com/book/SK1610/chapter/1kf5v7gfo2iwj",
+    "sanMingXianchi": "https://zh.wikisource.org/wiki/%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83/%E5%8D%B7%E4%BA%8C",
+    "sanMingYima": "https://www.shidianguji.com/zh/book/SK1610/chapter/1kt6e3p8yn2uf",
+    "wuXingJingJi": "https://ctext.org/wiki.pl?chapter=727777&if=gb"
+  },
+  "contracts": {
+    "relation": {
+      "relationStatus": "lookup_only",
+      "transformationStatus": "not_evaluated",
+      "interpretationStatus": "not_validated",
+      "poStatus": "school_difference_inactive"
+    },
+    "shensha": {
+      "validationStatus": "lookup_only",
+      "lookupBasis": "year_or_day_branch_school_specific",
+      "interpretationStatus": "not_validated"
+    }
+  },
+  "finiteTables": {
+    "stemCombines": {
+      "expected": [
+        "甲己",
+        "乙庚",
+        "丙辛",
+        "丁壬",
+        "戊癸"
+      ],
+      "actual": [
+        "甲己",
+        "乙庚",
+        "丙辛",
+        "丁壬",
+        "戊癸"
+      ],
+      "matches": true
+    },
+    "liuhe": {
+      "expected": [
+        "子丑",
+        "寅亥",
+        "卯戌",
+        "辰酉",
+        "巳申",
+        "午未"
+      ],
+      "actual": [
+        "子丑",
+        "寅亥",
+        "卯戌",
+        "辰酉",
+        "巳申",
+        "午未"
+      ],
+      "matches": true
+    },
+    "liuchong": {
+      "expected": [
+        "子午",
+        "丑未",
+        "寅申",
+        "卯酉",
+        "辰戌",
+        "巳亥"
+      ],
+      "actual": [
+        "子午",
+        "丑未",
+        "寅申",
+        "卯酉",
+        "辰戌",
+        "巳亥"
+      ],
+      "matches": true
+    },
+    "sanhe": {
+      "expected": [
+        "申子辰",
+        "亥卯未",
+        "寅午戌",
+        "巳酉丑"
+      ],
+      "actual": [
+        "申子辰",
+        "亥卯未",
+        "寅午戌",
+        "巳酉丑"
+      ],
+      "matches": true
+    },
+    "sanhui": {
+      "expected": [
+        "寅卯辰",
+        "巳午未",
+        "申酉戌",
+        "亥子丑"
+      ],
+      "actual": [
+        "寅卯辰",
+        "巳午未",
+        "申酉戌",
+        "亥子丑"
+      ],
+      "matches": true
+    },
+    "liuhai": {
+      "expected": [
+        "子未",
+        "丑午",
+        "寅巳",
+        "卯辰",
+        "申亥",
+        "酉戌"
+      ],
+      "actual": [
+        "子未",
+        "丑午",
+        "寅巳",
+        "卯辰",
+        "申亥",
+        "酉戌"
+      ],
+      "matches": true
+    },
+    "sanxingPairs": {
+      "expected": [
+        "寅巳",
+        "巳申",
+        "申寅",
+        "丑戌",
+        "戌未",
+        "未丑",
+        "子卯"
+      ],
+      "actual": [
+        "寅巳",
+        "巳申",
+        "申寅",
+        "丑戌",
+        "戌未",
+        "未丑",
+        "子卯"
+      ],
+      "matches": true
+    },
+    "zixing": {
+      "expected": [
+        "辰",
+        "午",
+        "酉",
+        "亥"
+      ],
+      "actual": [
+        "辰",
+        "午",
+        "酉",
+        "亥"
+      ],
+      "matches": true
+    },
+    "poCandidate": {
+      "expected": [
+        "子酉",
+        "丑辰",
+        "寅亥",
+        "卯午",
+        "巳申",
+        "未戌"
+      ],
+      "actual": [
+        "子酉",
+        "丑辰",
+        "寅亥",
+        "卯午",
+        "巳申",
+        "未戌"
+      ],
+      "matches": true
+    },
+    "taohua": {
+      "expected": {
+        "寅": "卯",
+        "午": "卯",
+        "戌": "卯",
+        "申": "酉",
+        "子": "酉",
+        "辰": "酉",
+        "巳": "午",
+        "酉": "午",
+        "丑": "午",
+        "亥": "子",
+        "卯": "子",
+        "未": "子"
+      },
+      "actual": {
+        "寅": "卯",
+        "午": "卯",
+        "戌": "卯",
+        "申": "酉",
+        "子": "酉",
+        "辰": "酉",
+        "巳": "午",
+        "酉": "午",
+        "丑": "午",
+        "亥": "子",
+        "卯": "子",
+        "未": "子"
+      },
+      "matches": true
+    },
+    "yima": {
+      "expected": {
+        "寅": "申",
+        "午": "申",
+        "戌": "申",
+        "申": "寅",
+        "子": "寅",
+        "辰": "寅",
+        "巳": "亥",
+        "酉": "亥",
+        "丑": "亥",
+        "亥": "巳",
+        "卯": "巳",
+        "未": "巳"
+      },
+      "actual": {
+        "寅": "申",
+        "午": "申",
+        "戌": "申",
+        "申": "寅",
+        "子": "寅",
+        "辰": "寅",
+        "巳": "亥",
+        "酉": "亥",
+        "丑": "亥",
+        "亥": "巳",
+        "卯": "巳",
+        "未": "巳"
+      },
+      "matches": true
+    },
+    "huagai": {
+      "expected": {
+        "寅": "戌",
+        "午": "戌",
+        "戌": "戌",
+        "申": "辰",
+        "子": "辰",
+        "辰": "辰",
+        "巳": "丑",
+        "酉": "丑",
+        "丑": "丑",
+        "亥": "未",
+        "卯": "未",
+        "未": "未"
+      },
+      "actual": {
+        "寅": "戌",
+        "午": "戌",
+        "戌": "戌",
+        "申": "辰",
+        "子": "辰",
+        "辰": "辰",
+        "巳": "丑",
+        "酉": "丑",
+        "丑": "丑",
+        "亥": "未",
+        "卯": "未",
+        "未": "未"
+      },
+      "matches": true
+    }
+  },
+  "interactionProbes": {
+    "pairPunishment": [
+      {
+        "type": "六合",
+        "label": "子丑合",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated",
+        "huaCandidates": [
+          "earth"
+        ],
+        "transformationStatus": "not_evaluated"
+      },
+      {
+        "type": "六害",
+        "label": "寅巳害",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated"
+      },
+      {
+        "type": "相刑",
+        "label": "寅刑巳",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated"
+      }
+    ],
+    "completePunishment": [
+      {
+        "type": "六合",
+        "label": "巳申合",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated",
+        "huaCandidates": [
+          "water"
+        ],
+        "transformationStatus": "not_evaluated"
+      },
+      {
+        "type": "六冲",
+        "label": "寅申冲",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated"
+      },
+      {
+        "type": "六害",
+        "label": "寅巳害",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated"
+      },
+      {
+        "type": "三刑",
+        "label": "寅巳申三刑",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated"
+      }
+    ],
+    "threeCombination": [
+      {
+        "type": "六冲",
+        "label": "子午冲",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated"
+      },
+      {
+        "type": "三合",
+        "label": "申子辰三合",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated",
+        "huaCandidates": [
+          "water"
+        ],
+        "transformationStatus": "not_evaluated"
+      }
+    ],
+    "disputedBreaking": [
+      {
+        "type": "六合",
+        "label": "寅亥合",
+        "relationStatus": "lookup_only",
+        "interpretationStatus": "not_validated",
+        "huaCandidates": [
+          "wood"
+        ],
+        "transformationStatus": "not_evaluated"
+      }
+    ]
+  },
+  "shenshaProbe": [
+    {
+      "name": "桃花",
+      "target": "酉",
+      "lookupBases": [
+        "day"
+      ],
+      "validationStatus": "lookup_only",
+      "lookupBasis": "year_or_day_branch_school_specific",
+      "interpretationStatus": "not_validated",
+      "label": "桃花(酉·日支查)"
+    },
+    {
+      "name": "驿马",
+      "target": "寅",
+      "lookupBases": [
+        "day"
+      ],
+      "validationStatus": "lookup_only",
+      "lookupBasis": "year_or_day_branch_school_specific",
+      "interpretationStatus": "not_validated",
+      "label": "驿马(寅·日支查)"
+    },
+    {
+      "name": "华盖",
+      "target": "辰",
+      "lookupBases": [
+        "day"
+      ],
+      "validationStatus": "lookup_only",
+      "lookupBasis": "year_or_day_branch_school_specific",
+      "interpretationStatus": "not_validated",
+      "label": "华盖(辰·日支查)"
+    }
+  ],
+  "limitations": [
+    "The finite lookup tables are validated; no relationship is interpreted as inherently auspicious or harmful.",
+    "Transformation candidates are metadata only because month command, exposed stems, obstruction, and strength conditions are not evaluated.",
+    "Branch breaking remains inactive because source traditions disagree, especially for Yin-Hai and Si-Shen.",
+    "Shensha lookup labels do not validate personality, health, event, or luck claims."
+  ]
+}
