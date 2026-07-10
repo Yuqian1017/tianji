@@ -1,6 +1,6 @@
 {
   "auditId": "VAL-MH-001",
-  "generatedAt": "2026-07-10T06:00:07.292Z",
+  "generatedAt": "2026-07-10",
   "scope": "Meihua deterministic charting, declared casting methods, stroke data, and interpretation boundary",
   "sources": [
     "https://ctext.org/wiki.pl?chapter=867487&if=gb",

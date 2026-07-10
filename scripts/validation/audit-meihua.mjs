@@ -228,7 +228,7 @@ const totalChecks = Object.values(sections).reduce((sum, section) => sum + secti
 const totalFailures = Object.values(sections).reduce((sum, section) => sum + section.failures, 0);
 const artifact = {
   auditId: 'VAL-MH-001',
-  generatedAt: new Date().toISOString(),
+  generatedAt: '2026-07-10',
   scope: 'Meihua deterministic charting, declared casting methods, stroke data, and interpretation boundary',
   sources: [
     'https://ctext.org/wiki.pl?chapter=867487&if=gb',
