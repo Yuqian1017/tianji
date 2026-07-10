@@ -48,7 +48,7 @@
 | VAL-QM-002 | P1 | 奇门解释 | 九星八门八神吉凶、格局、用神、克应、方位与现实预测 | 流派解释 | V3+来源声明 | blocked | 排盘通过不授证断事；AI/UI 明确 `not_validated`，移除健康、诉讼、投资与吉方吉时建议入口 |
 | VAL-FS-001 | P1 | 风水 | 三元九运、二十四山、下卦宅盘、年/月飞星与九宫布局 | 流派确定性 | V3 | pass | 声明沈氏玄空常用下卦正向盘口径；216 盘、6,469 项项目内检查 0 fail，独立实现 6,048 字段 0 mismatch；10,228 个时刻的历法边界 30,684 字段 0 mismatch |
 | VAL-FS-002 | P1 | 风水解释 | 九星/组合吉凶、形煞、格局断语、化解、布局与现实预测 | 流派解释/安全 | V3+来源声明 | blocked | 排盘结构通过不授证住宅或个人结果；AI/UI 移除吉凶色、疾病财务映射、摆件施工建议；替卦/兼向/出卦也不在实现范围 |
-| VAL-XIANG-001 | P1 | 面相/手相 | MediaPipe 几何、问卷外观与人格/职业/运势解释 | 观测可靠性+来源忠实性 | V3+V5 | in_progress | 运行时只保留几何、位置和用户/视觉外观描述；手指张开角已按度数直出，21 点不支持的掌丘饱满度估计已删除；五行面型/手型、三停、掌纹与丘位解释全部 `not_validated`，继续验证几何阈值和传统来源 |
+| VAL-XIANG-001 | P1 | 面相/手相 | MediaPipe 几何、问卷外观与人格/职业/运势解释 | 观测可靠性+来源忠实性 | V3+V5 | in_progress | 运行时只保留几何、位置和用户/视觉外观描述；角度单位、掌丘伪测量、面部对称性和小指关节的旋转依赖已修复；五行面型/手型、三停、掌纹与丘位解释全部 `not_validated`，继续用真实图像验证阈值与稳定性 |
 | VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | 两轮 fresh reviewer 均给出 hold；第二轮聚焦无界 V0、P1 工具闭环、可消费 DB、流派口径和掌握度合同，见 `PRD_FRESH_REVIEW_2026-07-10.md` |
 
 ## Findings
@@ -145,6 +145,7 @@
 | F-TCM-075 | P1 | VAL-TCM-009 | attached_formula_source_count_gap_blocked | 第 25 分册声明 45 个附方，但正文只明确列出 43 个；其余五册声明与显式实体数吻合 | 保留 2 个来源缺口，不把别名、加减描述或其他方名猜作缺失附方 |
 | F-XIANG-001 | P1 | VAL-XIANG-001 | interpretation_inference_remediated | 面相把三停、眉距、下巴比例直接推成阶段运势和人格；手相把指长、指缝、掌纹与丘位直接推成人格、事业、能力和命运 | 数据层移除人格/职业字段并标 `not_validated`；AI 输入、视觉追问和模块说明只保留可观察结构与传统术语，解释层继续 blocked |
 | F-XIANG-002 | P1 | VAL-XIANG-001 | geometry_contract_remediated | 手指间距实际为度数却按 `0.06` 阈值判宽窄；掌丘估计返回字符串却按数值比较，且 21 点骨架本身不覆盖掌丘表面 | 指缝只显示逐指角度；删除 `moundEstimates` 计算、展示与 prompt 消费，合成关键点回归固定能力边界 |
+| F-XIANG-003 | P1 | VAL-XIANG-001 | rotation_dependency_remediated | 面部对称性直接比较图片 x 坐标，小指关节判断直接比较 y 坐标；同一关键点旋转后结果改变 | 分别沿面部中轴法向和无名指轴投影；30°/90° 合成旋转属性测试固定结果不变 |
 | F-TCM-067 | P1 | VAL-TCM-001/010 | runtime_prompt_mismatch_remediated | 望诊 system prompt 每轮禁止医疗推断和调养建议，但 follow-up 输入框仍提示“追问具体调养方法”，主动诱导越界 | placeholder 改为复用 `WANGZHEN_FOLLOWUP_HINT`，只提示颜色、形态与拍摄质量；专项回归禁止旧文案恢复 |
 | F-TCM-068 | P0 | VAL-TCM-001/VAL-BZ-003 | cross_domain_health_inference_remediated | 普通八字模块仍提供“健康”快捷分析，手相把生命线映射为体质、养生和健康变化；两条路径都进入 AI | 删除八字健康入口和诱导示例，system prompt 对自由追问硬拒绝；手相只描述掌纹外观并禁止健康、寿命和医疗推断 |
 | F-TCM-069 | P0 | VAL-TCM-001 | face_health_inference_remediated | 面相 prompt 把疾厄宫直接映射健康并要求健康提示，面型数据还把几何分类写成面白/青/黑/红/黄 | 疾厄宫只保留传统名称；移除健康输出和伪肤色字段，首轮与追问统一禁止健康、疾病、寿命和医疗推断 |

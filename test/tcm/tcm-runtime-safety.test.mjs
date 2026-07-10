@@ -10,7 +10,7 @@ import { analyzeYear, formatForAI as formatWuyunForAI } from '../../src/modules/
 import { buildVisionMessage } from '../../src/modules/wangzhen/engine.js';
 import { buildFaceTextMessage } from '../../src/modules/face/engine.js';
 import { buildPalmTextMessage } from '../../src/modules/palm/engine.js';
-import { analyzeHandFeatures } from '../../src/lib/mediapipe.js';
+import { analyzeFaceFeatures, analyzeHandFeatures } from '../../src/lib/mediapipe.js';
 import {
   FACE_INTERPRETATION_VALIDATION,
   THREE_STOP_LABELS,
@@ -201,6 +201,66 @@ test('does not present hand-landmark proxies as palm-mound measurements', () => 
     moundEstimates: { jupiter: 'prominent' },
   }, {});
   assert.doesNotMatch(promptMessage.content, /丘位估计|木星丘|饱满|平坦/);
+});
+
+test('keeps pose-relative face and hand measurements invariant under image rotation', () => {
+  const rotate = (landmarks, degrees, center = { x: 0.5, y: 0.5 }) => {
+    const radians = degrees * Math.PI / 180;
+    const cosine = Math.cos(radians);
+    const sine = Math.sin(radians);
+    return landmarks.map(point => {
+      const x = point.x - center.x;
+      const y = point.y - center.y;
+      return {
+        ...point,
+        x: center.x + x * cosine - y * sine,
+        y: center.y + x * sine + y * cosine,
+      };
+    });
+  };
+
+  const face = Array.from({ length: 468 }, () => ({ x: 0.5, y: 0.5, z: 0 }));
+  Object.assign(face[10], { x: 0.5, y: 0.1 });
+  Object.assign(face[9], { x: 0.5, y: 0.3 });
+  Object.assign(face[1], { x: 0.5, y: 0.6 });
+  Object.assign(face[152], { x: 0.5, y: 0.9 });
+  Object.assign(face[234], { x: 0.2, y: 0.48 });
+  Object.assign(face[454], { x: 0.8, y: 0.55 });
+  Object.assign(face[172], { x: 0.3, y: 0.75 });
+  Object.assign(face[397], { x: 0.7, y: 0.78 });
+  Object.assign(face[33], { x: 0.3, y: 0.4 });
+  Object.assign(face[133], { x: 0.42, y: 0.41 });
+  Object.assign(face[362], { x: 0.58, y: 0.42 });
+  Object.assign(face[263], { x: 0.7, y: 0.45 });
+  Object.assign(face[159], { x: 0.34, y: 0.38 });
+  Object.assign(face[145], { x: 0.34, y: 0.43 });
+  Object.assign(face[386], { x: 0.66, y: 0.4 });
+  Object.assign(face[374], { x: 0.66, y: 0.45 });
+  Object.assign(face[70], { x: 0.43, y: 0.32 });
+  Object.assign(face[300], { x: 0.57, y: 0.33 });
+  Object.assign(face[6], { x: 0.5, y: 0.4, z: -0.03 });
+  Object.assign(face[98], { x: 0.46, y: 0.58 });
+  Object.assign(face[327], { x: 0.54, y: 0.59 });
+  Object.assign(face[61], { x: 0.35, y: 0.65 });
+  Object.assign(face[291], { x: 0.65, y: 0.7 });
+  Object.assign(face[0], { x: 0.5, y: 0.66 });
+  Object.assign(face[13], { x: 0.5, y: 0.64 });
+  Object.assign(face[14], { x: 0.5, y: 0.69 });
+  Object.assign(face[2], { x: 0.5, y: 0.62 });
+  assert.equal(analyzeFaceFeatures(face).symmetry, analyzeFaceFeatures(rotate(face, 30)).symmetry);
+
+  const hand = Array.from({ length: 21 }, (_, index) => ({
+    x: (index % 4) * 0.2,
+    y: Math.floor(index / 4) * 0.4,
+    z: 0,
+  }));
+  Object.assign(hand[0], { x: 0, y: 0 });
+  Object.assign(hand[14], { x: 0, y: 2 });
+  Object.assign(hand[16], { x: 0, y: 3 });
+  Object.assign(hand[20], { x: 1, y: 1.9 });
+  const before = analyzeHandFeatures(hand, 'Right');
+  const after = analyzeHandFeatures(rotate(hand, 90, { x: 0, y: 0 }), 'Right');
+  assert.equal(before.pinkyReachesRingJoint, after.pinkyReachesRingJoint);
 });
 
 test('keeps unvalidated legacy medical lookup tables out of runtime consumers', async () => {

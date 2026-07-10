@@ -114,6 +114,10 @@ function dist2d(a, b) {
   return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
 }
 
+function projection2d(point, origin, axis) {
+  return (point.x - origin.x) * axis.x + (point.y - origin.y) * axis.y;
+}
+
 /**
  * Analyze facial features from 468 face mesh landmarks.
  * Key landmark indices reference: https://github.com/google/mediapipe/blob/master/mediapipe/modules/face_geometry/data/canonical_face_model_uv_visualization.png
@@ -203,14 +207,22 @@ export function analyzeFaceFeatures(lm) {
   const yintangToFace = (yintangWidth / faceWidth).toFixed(3);
 
   // === Symmetry (对称性) ===
-  // Compare left vs right distances from midline (#10 x-coordinate as midline)
-  const midX = (lm[10].x + lm[152].x) / 2;
-  const leftCheekDist = Math.abs(lm[234].x - midX);
-  const rightCheekDist = Math.abs(lm[454].x - midX);
-  const leftEyeDist = Math.abs(lm[33].x - midX);
-  const rightEyeDist = Math.abs(lm[263].x - midX);
-  const leftMouthDist = Math.abs(lm[61].x - midX);
-  const rightMouthDist = Math.abs(lm[291].x - midX);
+  // Compare lateral distances after aligning to the forehead-to-chin axis.
+  const axisX = lm[152].x - lm[10].x;
+  const axisY = lm[152].y - lm[10].y;
+  const axisLength = Math.hypot(axisX, axisY) || 1;
+  const lateralAxis = { x: -axisY / axisLength, y: axisX / axisLength };
+  const midlineOrigin = {
+    x: (lm[10].x + lm[152].x) / 2,
+    y: (lm[10].y + lm[152].y) / 2,
+  };
+  const lateralDistance = point => Math.abs(projection2d(point, midlineOrigin, lateralAxis));
+  const leftCheekDist = lateralDistance(lm[234]);
+  const rightCheekDist = lateralDistance(lm[454]);
+  const leftEyeDist = lateralDistance(lm[33]);
+  const rightEyeDist = lateralDistance(lm[263]);
+  const leftMouthDist = lateralDistance(lm[61]);
+  const rightMouthDist = lateralDistance(lm[291]);
 
   const symmetryScores = [
     1 - Math.abs(leftCheekDist - rightCheekDist) / Math.max(leftCheekDist, rightCheekDist),
@@ -317,8 +329,13 @@ export function analyzeHandFeatures(lm, handedness = 'Unknown') {
     ringPinky: angleBetween(lm[0], lm[16], lm[20]),
   };
 
-  // Pinky length relative: does it reach ring finger first joint?
-  const pinkyReachesRingJoint = lm[20].y < lm[14].y; // tip above ring DIP
+  // Compare along the ring-finger axis so image rotation does not change the result.
+  const ringAxisX = lm[16].x - lm[0].x;
+  const ringAxisY = lm[16].y - lm[0].y;
+  const ringAxisLength = Math.hypot(ringAxisX, ringAxisY) || 1;
+  const ringAxis = { x: ringAxisX / ringAxisLength, y: ringAxisY / ringAxisLength };
+  const pinkyReachesRingJoint = projection2d(lm[20], lm[0], ringAxis)
+    >= projection2d(lm[14], lm[0], ringAxis);
 
   return {
     handType,
