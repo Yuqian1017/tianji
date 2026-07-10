@@ -1,0 +1,135 @@
+{
+  "auditDate": "2026-07-09",
+  "conclusion": "failed_as_authoritative_model_product_exposure_mitigated",
+  "sourceProvenance": {
+    "gitCommit": "1c25d4b60a459379e505ba32cb3d0ae917064aef",
+    "workingTreeDirty": false,
+    "dirtyFiles": [],
+    "sourceSha256": {
+      "src/modules/bazi/engine.js": "15f9cbaf7d7b4aef66f2eaf4f6ffa9848b006c32614b3a9441926af1737c8093",
+      "src/modules/bazi/prompt.js": "8967388bebb219466ac1c04f4b5e387e7b7ec487f685efa0dbf603b62e3feea0",
+      "src/modules/bazi/BaziModule.jsx": "62732e07c42293abeb4c41200bc8d0f052cc88956e9ec6ae46771eb0d8606194",
+      "src/modules/bazihealth/engine.js": "2e828610d8afb225bd1e15b14b246a34074e37297aaaad05d6bea8e6d50ef491",
+      "src/modules/bazihealth/BaziHealthModule.jsx": "b9a65de8d6e3189596fcc82ceb647e6cd1acc9e79a1acab62dfa2b1abfcd5da8",
+      "src/modules/bazihealth/prompt.js": "4e74dc579dd018da559d7b4ba1f12ccfad8e48047ae343517dc007271f2873e0",
+      "scripts/validation/audit-bazi-strength.mjs": "1e7f83045fbbb1fb470840e161e6517a7d21548576445fdfd6f964e546240ea5"
+    }
+  },
+  "sources": {
+    "compendiumSimplification": "database/xuanxue/compendium-new/04-bazi/03-geju.md",
+    "diTianSuiStrength": "https://zh.wikisource.org/wiki/%E6%BB%B4%E5%A4%A9%E9%AB%93/12",
+    "diTianSuiCases": "https://ctext.org/wiki.pl?chapter=126492&if=gb",
+    "ziPingYongShen": "https://ctext.org/wiki.pl?chapter=974137&if=gb"
+  },
+  "modelContract": {
+    "strength": {
+      "method": "simplified_support_balance_v1",
+      "validationStatus": "heuristic_only",
+      "limitations": [
+        "未处理从格、专旺、调候、格局、合化与藏干司令",
+        "分数没有经典量表依据，不能确定用神、忌神或吉凶"
+      ]
+    },
+    "wuxingCount": {
+      "method": "visible_stem_1_hidden_stem_0_5",
+      "validationStatus": "structural_count_only",
+      "limitation": "未计月令、藏干层级、透干通根与合化，不代表五行旺衰"
+    },
+    "sourceVsRuntime": {
+      "compendium": "月令五行关系；三透干各 10；有根加 15；阈值为正负 20",
+      "runtime": "月令十二长生 36/24/14/6；透干与统一 0.5 藏干折为 40；有根 16/4；阈值 58/38",
+      "sameAlgorithm": false
+    }
+  },
+  "classicalCounterexamples": [
+    {
+      "id": "DTS-WANGJI-01",
+      "input": [
+        2012,
+        2,
+        23,
+        12,
+        0,
+        "male"
+      ],
+      "expectedPillars": [
+        "壬辰",
+        "壬寅",
+        "甲寅",
+        "庚午"
+      ],
+      "sourceAssessment": "旺极；午火为用；庚金为病，不可把官杀与食伤一并判喜",
+      "legacyGenericDirection": "喜克泄耗：官杀·食伤·财星",
+      "conflict": true,
+      "pillars": [
+        "壬辰",
+        "壬寅",
+        "甲寅",
+        "庚午"
+      ],
+      "pillarsMatch": true,
+      "runtimeUnderlyingModel": {
+        "score": 71,
+        "label": "身旺",
+        "displayLabel": "简化模型偏强",
+        "validationStatus": "heuristic_only"
+      },
+      "productExposure": {
+        "numericScoreSentToAI": false,
+        "fixedYongShenSentToAI": false,
+        "heuristicWarningSentToAI": true
+      }
+    },
+    {
+      "id": "DTS-CONGSHI-01",
+      "input": [
+        1993,
+        12,
+        8,
+        18,
+        0,
+        "male"
+      ],
+      "expectedPillars": [
+        "癸酉",
+        "甲子",
+        "癸亥",
+        "辛酉"
+      ],
+      "sourceAssessment": "金水旺极，取金水而不取火土；顺势结论与普通身旺扶抑方向相反",
+      "legacyGenericDirection": "喜克泄耗：官杀·食伤·财星",
+      "conflict": true,
+      "pillars": [
+        "癸酉",
+        "甲子",
+        "癸亥",
+        "辛酉"
+      ],
+      "pillarsMatch": true,
+      "runtimeUnderlyingModel": {
+        "score": 81,
+        "label": "身旺",
+        "displayLabel": "简化模型偏强",
+        "validationStatus": "heuristic_only"
+      },
+      "productExposure": {
+        "numericScoreSentToAI": false,
+        "fixedYongShenSentToAI": false,
+        "heuristicWarningSentToAI": true
+      }
+    }
+  ],
+  "healthGate": {
+    "status": "blocked",
+    "code": "UNVALIDATED_BAZI_HEALTH_INFERENCE",
+    "reason": "八字五行结构计数尚未通过旺衰验证，也没有医学证据支持其推导脏腑风险、食疗或健康走势。",
+    "organRisksProduced": 0,
+    "lifeStagesProduced": 0,
+    "dietPlansProduced": 0
+  },
+  "limitations": [
+    "The classical examples validate contradictions in the former generic rule; they do not establish a replacement algorithm.",
+    "No percentage or hidden-stem weight has been accepted as canonical.",
+    "Health inference remains blocked pending separate traditional-knowledge and medical-safety evidence."
+  ]
+}
