@@ -239,78 +239,133 @@ function assessStrength(dayStem, pillars) {
 
 // ========== 神煞检测 ==========
 
-function detectShensha(dayBranch, yearBranch, allBranches) {
-  const result = [];
+export const BAZI_SHENSHA_MODEL = Object.freeze({
+  validationStatus: 'lookup_only',
+  lookupBasis: 'year_or_day_branch_school_specific',
+  interpretationStatus: 'not_validated',
+});
+
+export function detectShensha(dayBranch, yearBranch, allBranches) {
+  const result = new Map();
   const check = (table, name) => {
-    // 以日支查
-    const target = table[dayBranch];
-    if (target && allBranches.includes(target)) {
-      result.push(`${name}(${target}·日支见)`);
-    }
-    // 以年支查
-    const target2 = table[yearBranch];
-    if (target2 && target2 !== target && allBranches.includes(target2)) {
-      result.push(`${name}(${target2}·年支见)`);
+    for (const [basis, baseBranch] of [
+      ['day', dayBranch],
+      ['year', yearBranch],
+    ]) {
+      const target = table[baseBranch];
+      if (!target || !allBranches.includes(target)) continue;
+
+      const key = `${name}:${target}`;
+      const existing = result.get(key) || {
+        name,
+        target,
+        lookupBases: [],
+        ...BAZI_SHENSHA_MODEL,
+      };
+      if (!existing.lookupBases.includes(basis)) {
+        existing.lookupBases.push(basis);
+      }
+      result.set(key, existing);
     }
   };
   check(TAOHUA, '桃花');
   check(YIMA, '驿马');
   check(HUAGAI, '华盖');
-  return result;
+  return [...result.values()].map((item) => ({
+    ...item,
+    label: `${item.name}(${item.target}·${item.lookupBases.map((basis) => (
+      basis === 'day' ? '日支查' : '年支查'
+    )).join('/')})`,
+  }));
 }
 
 // ========== 地支关系检测 ==========
 
-function detectBranchInteractions(branchList) {
+export const BAZI_RELATION_MODEL = Object.freeze({
+  relationStatus: 'lookup_only',
+  transformationStatus: 'not_evaluated',
+  interpretationStatus: 'not_validated',
+  poStatus: 'school_difference_inactive',
+});
+
+function relationResult(type, label, extra = {}) {
+  return {
+    type,
+    label,
+    relationStatus: BAZI_RELATION_MODEL.relationStatus,
+    interpretationStatus: BAZI_RELATION_MODEL.interpretationStatus,
+    ...extra,
+  };
+}
+
+export function detectBranchInteractions(branchList) {
   const results = [];
   const branchSet = new Set(branchList);
 
   // 六合（两两配对）
-  for (const { pair, label } of BRANCH_RELATIONS.liuhe) {
+  for (const { pair, label, huaCandidates } of BRANCH_RELATIONS.liuhe) {
     if (branchSet.has(pair[0]) && branchSet.has(pair[1])) {
-      results.push({ type: '六合', label });
+      results.push(relationResult('六合', label, {
+        huaCandidates,
+        transformationStatus: BAZI_RELATION_MODEL.transformationStatus,
+      }));
     }
   }
 
   // 六冲
   for (const { pair, label } of BRANCH_RELATIONS.liuchong) {
     if (branchSet.has(pair[0]) && branchSet.has(pair[1])) {
-      results.push({ type: '六冲', label });
+      results.push(relationResult('六冲', label));
     }
   }
 
   // 三合（需要三个都在）
-  for (const { members, label } of BRANCH_RELATIONS.sanhe) {
+  for (const { members, label, huaCandidates } of BRANCH_RELATIONS.sanhe) {
     if (members.every(m => branchSet.has(m))) {
-      results.push({ type: '三合', label });
+      results.push(relationResult('三合', label, {
+        huaCandidates,
+        transformationStatus: BAZI_RELATION_MODEL.transformationStatus,
+      }));
     }
   }
 
   // 三会
-  for (const { members, label } of BRANCH_RELATIONS.sanhui) {
+  for (const { members, label, huaCandidates } of BRANCH_RELATIONS.sanhui) {
     if (members.every(m => branchSet.has(m))) {
-      results.push({ type: '三会', label });
+      results.push(relationResult('三会', label, {
+        huaCandidates,
+        transformationStatus: BAZI_RELATION_MODEL.transformationStatus,
+      }));
     }
   }
 
   // 六害
   for (const { pair, label } of BRANCH_RELATIONS.liuhai) {
     if (branchSet.has(pair[0]) && branchSet.has(pair[1])) {
-      results.push({ type: '六害', label });
+      results.push(relationResult('六害', label));
     }
   }
 
-  // 三刑
-  for (const { members, label } of BRANCH_RELATIONS.sanxing) {
+  // 两支相刑；三支齐全时合并为三刑。
+  for (const { members, pairs, label } of BRANCH_RELATIONS.sanxing) {
     if (members.every(m => branchSet.has(m))) {
-      results.push({ type: '三刑', label });
+      results.push(relationResult(
+        members.length === 3 ? '三刑' : '相刑',
+        label,
+      ));
+      continue;
+    }
+    for (const { pair, label: pairLabel } of pairs) {
+      if (branchSet.has(pair[0]) && branchSet.has(pair[1])) {
+        results.push(relationResult('相刑', pairLabel));
+      }
     }
   }
 
   // 自刑（同支出现2次以上）
   for (const b of BRANCH_RELATIONS.zixing) {
     if (branchList.filter(x => x === b).length >= 2) {
-      results.push({ type: '自刑', label: `${b}${b}自刑` });
+      results.push(relationResult('自刑', `${b}${b}自刑`));
     }
   }
 
@@ -444,9 +499,11 @@ export function paiBazi(year, month, day, hour, minute = 0, gender = 'male') {
     wuxingCount,
     wuxingCountModel: BAZI_WUXING_COUNT_MODEL,
     interactions,
+    relationModel: BAZI_RELATION_MODEL,
     stemCombines,
     kongWang,
     shensha,
+    shenshaModel: BAZI_SHENSHA_MODEL,
     isApprox, // 节气是否为近似值
     jieqiName,
   };
@@ -488,13 +545,15 @@ export function formatForAI(result, question) {
   lines.push(`空亡：${result.kongWang.join('、')}`);
 
   if (result.interactions.length > 0) {
-    lines.push(`地支关系：${result.interactions.map(i => i.label).join('；')}`);
+    lines.push(`地支关系（仅查表，未判合化或吉凶）：${result.interactions.map(i => i.label).join('；')}`);
   }
   if (result.stemCombines.length > 0) {
-    lines.push(`天干合：${result.stemCombines.join('；')}`);
+    lines.push(`天干合（仅关系，未判成化）：${result.stemCombines.join('；')}`);
   }
   if (result.shensha.length > 0) {
-    lines.push(`神煞：${result.shensha.join('、')}`);
+    lines.push(`神煞标签（仅查表，不作吉凶）：${result.shensha.map((item) => (
+      typeof item === 'string' ? item : item.label
+    )).join('、')}`);
   }
 
   lines.push('');

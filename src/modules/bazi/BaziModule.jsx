@@ -192,15 +192,14 @@ function BaziDisplay({ result }) {
       {/* 地支关系 + 天干合 + 神煞 */}
       {(interactions.length > 0 || stemCombines.length > 0 || shensha.length > 0) && (
         <div className="bg-[var(--color-bg-card)] card-blur border border-[var(--color-gold-border)] rounded-xl p-4">
-          <h4 className="text-[var(--color-gold)] text-sm font-title mb-2">命局关系</h4>
+          <h4 className="text-[var(--color-gold)] text-sm font-title mb-1">命局结构关系</h4>
+          <div className="text-[10px] text-[var(--color-text-dim)] font-body mb-2">
+            仅列查表关系与神煞标签，未判断合化或吉凶
+          </div>
           <div className="space-y-1 text-sm font-body">
             {interactions.map((rel, i) => (
               <div key={i} className="flex items-center gap-2">
-                <span className={`text-xs px-1.5 py-0.5 rounded ${
-                  rel.type === '六合' || rel.type === '三合' || rel.type === '三会'
-                    ? 'bg-[var(--color-jade-bg-faint)] text-[var(--color-jade)]'
-                    : 'bg-[var(--color-error-bg)] text-[var(--color-cinnabar)]'
-                }`}>
+                <span className="text-xs px-1.5 py-0.5 rounded bg-[var(--color-gold-bg)] text-[var(--color-gold)]">
                   {rel.type}
                 </span>
                 <span className="text-[var(--color-text)]">{rel.label}</span>
@@ -208,7 +207,7 @@ function BaziDisplay({ result }) {
             ))}
             {stemCombines.map((label, i) => (
               <div key={`sc${i}`} className="flex items-center gap-2">
-                <span className="text-xs px-1.5 py-0.5 rounded bg-[var(--color-jade-bg-faint)] text-[var(--color-jade)]">
+                <span className="text-xs px-1.5 py-0.5 rounded bg-[var(--color-gold-bg)] text-[var(--color-gold)]">
                   天干合
                 </span>
                 <span className="text-[var(--color-text)]">{label}</span>
@@ -219,7 +218,9 @@ function BaziDisplay({ result }) {
                 <span className="text-xs px-1.5 py-0.5 rounded bg-[var(--color-gold-bg)] text-[var(--color-gold)]">
                   神煞
                 </span>
-                <span className="text-[var(--color-text)]">{shensha.join('、')}</span>
+                <span className="text-[var(--color-text)]">{shensha.map((item) => (
+                  typeof item === 'string' ? item : item.label
+                )).join('、')}</span>
               </div>
             )}
           </div>

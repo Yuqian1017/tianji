@@ -41,12 +41,12 @@
         <h1>天机卷任务监督器</h1>
         <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
-      <div id="percent" class="percent">22%</div>
+      <div id="percent" class="percent">23%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">八字确定性核心已达 V3；身强/用神判 fail 并降级，八字健康已阻断。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">完成合化条件与神煞审计后，转入六爻确定性规则。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">八字第一轮已完成并划定复用边界；当前转入六爻确定性验证。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">为六爻装卦、世应、六亲、六神与变卦选择独立 fixture。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">正确性未取得独立证据前，暂停教学游戏和横向功能扩展。</p></article>
     </section>
 
@@ -68,12 +68,12 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 22,
-      currentFocus: '八字确定性核心达到 V3；身强/用神已判 fail 并降级，八字健康已阻断。',
-      nextDecision: '完成八字合化条件与神煞审计后，转入六爻确定性规则验证。',
+      overallPercent: 23,
+      currentFocus: '八字第一轮已完成：确定性核心和有限表可复用，合化/吉凶/健康保持 gate；转入六爻。',
+      nextDecision: '为六爻装卦、世应、六亲、六神与变卦选择独立 fixture 和口径。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
-        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 68, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 73, doneWhen: '八字有独立复算结论，所有 runtime 数据进入 ledger。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'review_pending', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -81,7 +81,7 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'bazi_deterministic_v3_interpretation_failed_safe', rule: '确定性核心已达 V3；身强/用神 fail 且只作启发式，其他解释层仍待验证。' },
+        { name: '排盘与数据库正确性', state: 'bazi_first_pass_scoped', rule: '八字确定性核心与有限表可复用；身强/用神、合化、吉凶和健康保持 fail/blocked。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字壳层和确定性核心可继续，解释层逐字段验证。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
@@ -96,6 +96,9 @@
         '两条原典命例否证统一用神方向；身强模型已降级',
         '八字健康风险、食疗、大运健康与 AI 通道已 blocked',
         'Playwright 实测八字卡无 /100 与固定用神，八字健康按钮 disabled',
+        '八字关系与神煞有限表全量匹配；两支相刑漏检已修复',
+        'Playwright 桌面与 390px 移动视口实测关系区无截断或溢出',
+        '合化与关系吉凶 blocked；相破保持流派差异 inactive',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',

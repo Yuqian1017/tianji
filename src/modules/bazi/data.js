@@ -211,16 +211,16 @@ export const BRANCH_RELATIONS = {
     { pair: ['巳','亥'], label: '巳亥冲' },
   ],
   sanhe: [
-    { members: ['申','子','辰'], hua: 'water', label: '申子辰合水' },
-    { members: ['亥','卯','未'], hua: 'wood', label: '亥卯未合木' },
-    { members: ['寅','午','戌'], hua: 'fire', label: '寅午戌合火' },
-    { members: ['巳','酉','丑'], hua: 'metal', label: '巳酉丑合金' },
+    { members: ['申','子','辰'], huaCandidates: ['water'], label: '申子辰三合' },
+    { members: ['亥','卯','未'], huaCandidates: ['wood'], label: '亥卯未三合' },
+    { members: ['寅','午','戌'], huaCandidates: ['fire'], label: '寅午戌三合' },
+    { members: ['巳','酉','丑'], huaCandidates: ['metal'], label: '巳酉丑三合' },
   ],
   sanhui: [
-    { members: ['寅','卯','辰'], hua: 'wood', label: '寅卯辰会木' },
-    { members: ['巳','午','未'], hua: 'fire', label: '巳午未会火' },
-    { members: ['申','酉','戌'], hua: 'metal', label: '申酉戌会金' },
-    { members: ['亥','子','丑'], hua: 'water', label: '亥子丑会水' },
+    { members: ['寅','卯','辰'], huaCandidates: ['wood'], label: '寅卯辰三会' },
+    { members: ['巳','午','未'], huaCandidates: ['fire'], label: '巳午未三会' },
+    { members: ['申','酉','戌'], huaCandidates: ['metal'], label: '申酉戌三会' },
+    { members: ['亥','子','丑'], huaCandidates: ['water'], label: '亥子丑三会' },
   ],
   liuhai: [
     { pair: ['子','未'], label: '子未害' },
@@ -231,9 +231,32 @@ export const BRANCH_RELATIONS = {
     { pair: ['酉','戌'], label: '酉戌害' },
   ],
   sanxing: [
-    { members: ['寅','巳','申'], type: '无恩之刑', label: '寅巳申三刑' },
-    { members: ['丑','戌','未'], type: '持势之刑', label: '丑戌未三刑' },
-    { members: ['子','卯'], type: '无礼之刑', label: '子卯刑' },
+    {
+      members: ['寅','巳','申'],
+      pairs: [
+        { pair: ['寅','巳'], label: '寅刑巳' },
+        { pair: ['巳','申'], label: '巳刑申' },
+        { pair: ['申','寅'], label: '申刑寅' },
+      ],
+      type: '无恩之刑',
+      label: '寅巳申三刑',
+    },
+    {
+      members: ['丑','戌','未'],
+      pairs: [
+        { pair: ['丑','戌'], label: '丑刑戌' },
+        { pair: ['戌','未'], label: '戌刑未' },
+        { pair: ['未','丑'], label: '未刑丑' },
+      ],
+      type: '持势之刑',
+      label: '丑戌未三刑',
+    },
+    {
+      members: ['子','卯'],
+      pairs: [{ pair: ['子','卯'], label: '子卯相刑' }],
+      type: '无礼之刑',
+      label: '子卯相刑',
+    },
   ],
   zixing: ['辰','午','酉','亥'],
   po: [

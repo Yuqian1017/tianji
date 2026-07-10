@@ -18,7 +18,9 @@
 | VAL-BZ-001 | P0 | 八字 | 年月日时四柱与节气/日界口径 | 精确/流派确定性 | V3+V5 | in_progress | V3 已达：`sxtwl@2.0.7` 30/30 四柱一致，1,296 节令时刻最大差 20 秒；V5 UI/保存同路径证据待补 |
 | VAL-BZ-002 | P0 | 八字 | 大运顺逆、起运岁数、交运时间 | 流派确定性 | V3 | pass | 明确采用 `Yun Sect 1 / traditional_shichen`；`sxtwl` 相邻节令加经典规则独立推导 30/30 方向、交运日期与首运干支一致；不覆盖其他流派或吉凶解释 |
 | VAL-BZ-003 | P1 | 八字 | 身强评分、五行计数与用神方向 | 流派/启发式 | V2+来源声明 | fail | `/100` 无经典量表依据，runtime 也不忠实于 compendium 简化版；两条《滴天髓阐微》命例反驳统一用神方向。产品已降级为 `heuristic_only`，不再输出确定用神 |
-| VAL-BZ-004 | P1 | 八字 | 天干五合、地支六合与“午未合火/土” | 来源忠实性 | V3 | school_difference | 合与合化已拆开；《三命通会》确认午未六合，compendium 明示火/土有争议。runtime 只显示“甲己合”“午未合”，候选化神留作元数据 |
+| VAL-BZ-004 | P1 | 八字 | 天干五合与地支合冲刑害会有限表 | 来源忠实性 | V3 | pass | 五合、六合、六冲、三合、三会、六害、两支相刑和自刑全量枚举通过；关系只作 `lookup_only`，相破因版本差异保持 inactive |
+| VAL-BZ-005 | P1 | 八字 | 桃花、驿马、华盖三张查表 | 流派查表 | V2+回归 | pass | 36/36 映射匹配传统分组；年支/日支并用明确为项目口径，只输出 `lookup_only` 标签，不作吉凶 |
+| VAL-BZ-006 | P1 | 八字 | 天干/地支合化成立条件与关系吉凶 | 流派解释 | V3 | blocked | 当前不检查月令、透干、旺气、伤克等成化条件；候选五行仅作元数据，所有现实事件与吉凶解释保持未验证 |
 | VAL-SHARED-001 | P0 | 共享历法 | 公农历、节气、时区、真太阳时 | 精确确定性 | V3 | in_progress | 节令时刻 V3；日柱 runtime 时区依赖和均时差已修复；全球历史民用时区/DST 仍待 IANA 数据与 fixture |
 | VAL-BZH-001 | P0 | 八字健康 | 五行计数到脏腑风险、疾病、食疗与大运健康的推导 | 医学安全/跨域推断 | V4+安全审查 | blocked | 未验证结构计数不能成为医学证据；runtime、旧历史和 AI 通道已硬阻断 |
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/艾灸建议 | 医疗/安全 | V4+V5 | planned | 全量抽取消费点并反查安全表/现行来源 |
@@ -43,6 +45,9 @@
 | F-BZH-001 | P0 | VAL-BZH-001 | mitigated_blocked | 旧 runtime 以天干 1/藏干 0.5 和固定阈值推导脏腑风险、疾病、食疗和大运健康 | 当前消费路径、旧历史和 AI prompt 均 blocked；独立传统与医学证据通过前不得恢复 |
 | F-BZ-008 | P1 | VAL-BZ-001 | verified_remediated | 手写“精确节”已退出八字 runtime，修复前数据保留在 before artifact；第二实现全范围复核通过 | 保持无 runtime import 回归 |
 | F-BZ-009 | P1 | VAL-BZ-004 | resolved | 天干两干同现原本直接显示“合化某五行”，未检查成化条件 | 五合标签只显示关系，候选化神留作元数据 |
+| F-BZ-REL-001 | P1 | VAL-BZ-004 | verified_remediated | 寅巳申、丑戌未原本要求三支全齐，漏掉两支相刑 | 两支相刑方向 7/7 全量测试；三支齐全只汇总一个三刑 |
+| F-BZ-REL-002 | P1 | VAL-BZ-006 | mitigated_blocked | 三合/三会标签原本直接写成合水、会木等已成化结果 | 标签改为关系，`huaCandidates` 与 `not_evaluated` 分离；UI/AI 不判合化或吉凶 |
+| F-BZ-REL-003 | P2 | VAL-BZ-004 | school_difference | `po` 有六破候选表但来源版本不同且 runtime 未消费 | 明确 `school_difference_inactive`；选定版本前不启用 |
 
 ## Evidence Log
 
@@ -63,3 +68,4 @@
 | 2026-07-09 | VAL-BZ-001 | Fresh code reviewer `019f49f1-4e13-7481-a276-ea33d57de668` | 无 Critical；陈旧 primary artifact 的 Important 已修复并加 source/artifact SHA256；当时保留的大运证据缺口已由下一条独立推导关闭 |
 | 2026-07-09 | VAL-BZ-002 | `sxtwl@2.0.7` 相邻节令 + 《渊海子平·论起大运法》《三命通会·论大运》规则的独立手工推导；30 例 | 未调用 runtime `getYun()`；方向、传统时辰精度交运日期和首运干支 30/30 一致，声明口径内达到 V3 |
 | 2026-07-09 | VAL-BZ-003/VAL-BZH-001 | `audit-bazi-strength.mjs`；compendium 算法对照；《滴天髓》《滴天髓阐微》《子平真诠评注》 | 两条原典反例复现；权威模型判定 fail；UI/AI 虚假精度已移除，八字健康输出归零并硬阻断 |
+| 2026-07-09 | VAL-BZ-004/005/006 | `audit-bazi-relations.mjs`；《三命通会》关系与神煞篇；《五行精纪》 | 关系与神煞有限表全量匹配；两支相刑漏检修复；合化/吉凶 blocked；相破保持流派差异 inactive |

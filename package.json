@@ -11,6 +11,7 @@
     "start": "node server/index.js",
     "lint": "eslint .",
     "test:bazi": "node --test test/bazi/*.test.mjs",
+    "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview"

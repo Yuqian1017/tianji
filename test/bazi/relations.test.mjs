@@ -26,3 +26,15 @@ test('stem-combination labels also avoid claiming automatic transformation', () 
     assert.equal(relation.huaCandidates.length, 1);
   }
 });
+
+test('three-combination and directional-meeting labels do not claim transformation', () => {
+  for (const relation of BRANCH_RELATIONS.sanhe) {
+    assert.equal(relation.label, `${relation.members.join('')}三合`);
+    assert.equal(relation.huaCandidates.length, 1);
+  }
+
+  for (const relation of BRANCH_RELATIONS.sanhui) {
+    assert.equal(relation.label, `${relation.members.join('')}三会`);
+    assert.equal(relation.huaCandidates.length, 1);
+  }
+});
