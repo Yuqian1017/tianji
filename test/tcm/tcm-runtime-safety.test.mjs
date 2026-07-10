@@ -8,6 +8,20 @@ import { ZIWU_LIUZHU } from '../../src/modules/ziwu/data.js';
 import { formatForAI as formatZiwuForAI } from '../../src/modules/ziwu/engine.js';
 import { analyzeYear, formatForAI as formatWuyunForAI } from '../../src/modules/wuyun/engine.js';
 import { buildVisionMessage } from '../../src/modules/wangzhen/engine.js';
+import { buildFaceTextMessage } from '../../src/modules/face/engine.js';
+import { buildPalmTextMessage } from '../../src/modules/palm/engine.js';
+import {
+  FACE_INTERPRETATION_VALIDATION,
+  THREE_STOP_LABELS,
+  TWELVE_PALACES,
+  WUXING_FACE_TYPES,
+} from '../../src/modules/face/data.js';
+import {
+  FINGER_MEANINGS,
+  HAND_WUXING_TYPES,
+  MOUND_NAMES,
+  PALM_INTERPRETATION_VALIDATION,
+} from '../../src/modules/palm/data.js';
 
 const ROOT = new URL('../../', import.meta.url);
 
@@ -125,6 +139,45 @@ test('blocks health inference in the active face-reading AI path', async () => {
   assert.doesNotMatch(facePrompt, /疾厄宫\(山根\)→健康|健康提示/);
   assert.doesNotMatch(faceData, /健康·抗病力|面白|面青|面黑润|面红|面黄/);
   assert.match(faceEngine, /不作健康、体质、寿命或医疗推断/);
+});
+
+test('keeps face and palm geometry separate from personality, career, and fortune claims', async () => {
+  assert.equal(FACE_INTERPRETATION_VALIDATION.status, 'blocked_unvalidated_interpretation');
+  assert.equal(PALM_INTERPRETATION_VALIDATION.status, 'blocked_unvalidated_interpretation');
+  assert.ok(Object.values(WUXING_FACE_TYPES).every(item => !('personality' in item) && !('career' in item)));
+  assert.ok(Object.values(HAND_WUXING_TYPES).every(item => !('personality' in item) && !('career' in item)));
+  assert.ok(Object.values(THREE_STOP_LABELS).every(item => !('period' in item) && !('governs' in item)));
+  assert.ok(Object.values(TWELVE_PALACES).every(item => item.interpretationStatus === 'not_validated'));
+  assert.ok(Object.values(MOUND_NAMES).every(item => item.interpretationStatus === 'not_validated'));
+  assert.ok(Object.values(FINGER_MEANINGS).every(item => item.interpretationStatus === 'not_validated'));
+
+  const faceMessage = buildFaceTextMessage({
+    faceShape: 'metal', widthHeightRatio: 0.8, jawCheekRatio: 0.9,
+    threeStops: { upper: 36, middle: 32, lower: 32 },
+    eyes: { aspect: 0.3, toFaceRatio: 0.11, interEyeToEye: 1 },
+    nose: { toFaceRatio: 0.18, bridgeDepth: 0.03 },
+    mouth: { toFaceRatio: 0.22, lipRatio: 1 },
+    brows: { gapToEye: 1.6 }, yintang: { toFaceRatio: 0.06 },
+    chin: { toFaceRatio: 0.3 }, symmetry: 90,
+  });
+  assert.doesNotMatch(faceMessage.content, /少年得志|学业佳|事业心强|晚年有福|子女孝顺|心胸开阔|晚年运佳|行动力强/);
+
+  const palmMessage = buildPalmTextMessage({
+    handType: 'earth', handedness: 'Right', palmRatio: 1,
+    indexRingRatio: 1.03, fingerGaps: { a: 0.07 }, pinkyReachesRingJoint: true,
+    moundEstimates: { jupiter: 0.7 },
+  }, {
+    lifeLine: '长且深·弧度大', headLine: '直线·很长',
+    heartLine: '很多分叉', fateLine: '有且清晰',
+  });
+  assert.doesNotMatch(palmMessage.content, /理性主导|感性\/冒险|性格开放|谨慎保守|思维理性|艺术天分|感情经历丰富|事业目标明确|主领导力/);
+
+  const facePrompt = await source('src/modules/face/prompt.js');
+  const palmPrompt = await source('src/modules/palm/prompt.js');
+  assert.match(facePrompt, /不得把几何比例.*人格、职业或现实运势/);
+  assert.match(palmPrompt, /不得把手部比例或掌纹.*人格、职业、能力或现实运势/);
+  assert.doesNotMatch(facePrompt, /三停均匀最佳|高挺=有主见事业心|圆润有肉=聚财/);
+  assert.doesNotMatch(palmPrompt, /食指>无名指|运动\/艺术天赋|有且清晰=目标明确/);
 });
 
 test('keeps unvalidated legacy medical lookup tables out of runtime consumers', async () => {

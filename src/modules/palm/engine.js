@@ -109,7 +109,7 @@ export function buildPalmTextMessage(features, answers, userNote) {
     for (const [key, val] of Object.entries(features.moundEstimates)) {
       const mound = MOUND_NAMES[key];
       if (mound) {
-        lines.push(`  ${mound.name}（${mound.location}）：${val > 0.6 ? '饱满' : val > 0.4 ? '适中' : '平坦'} — 主${mound.governs}`);
+        lines.push(`  ${mound.name}（${mound.location}）：${val > 0.6 ? '饱满' : val > 0.4 ? '适中' : '平坦'}`);
       }
     }
     lines.push('');
@@ -139,7 +139,7 @@ export function buildPalmTextMessage(features, answers, userNote) {
     lines.push('', `用户补充说明：${userNote}`);
   }
 
-  lines.push('', '请按文化学习口径说明可见结构与传统术语，不作健康、体质、寿命或医疗推断。');
+  lines.push('', '请按文化学习口径说明可见结构与传统术语；不得把手部比例或掌纹推断为人格、职业、能力、财富、关系或现实运势，也不作健康、体质、寿命或医疗推断。');
 
   return { role: 'user', content: lines.join('\n') };
 }
@@ -162,7 +162,7 @@ export function buildPalmVisionMessage(base64, features, answers) {
     `  感情线：${answers?.heartLine || '未填'}`,
     `  命运线：${answers?.fateLine || '未填'}`,
     '',
-    '请只描述照片中可见的掌纹走向、纹路深浅、特殊标记（岛纹、星纹、十字纹等）、手指关节比例和大小鱼际外观；不得据此推断健康、体质、寿命或医疗需求。',
+    '请只描述照片中可见的掌纹走向、纹路深浅、特殊标记（岛纹、星纹、十字纹等）、手指关节比例和大小鱼际外观；不得据此推断人格、职业、能力、财富、关系、现实运势、健康、体质、寿命或医疗需求。',
   ].join('\n');
 
   return {

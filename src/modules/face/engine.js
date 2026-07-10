@@ -47,7 +47,7 @@ export function buildFaceTextMessage(features, userNote) {
     lines.push('', `用户补充说明：${userNote}`);
   }
 
-  lines.push('', '请按文化学习口径说明几何结构与传统术语，不作健康、体质、寿命或医疗推断。');
+  lines.push('', '请按文化学习口径说明几何结构与传统术语；不得把几何比例推断为人格、职业、能力、财富、关系或现实运势，也不作健康、体质、寿命或医疗推断。');
 
   return { role: 'user', content: lines.join('\n') };
 }
