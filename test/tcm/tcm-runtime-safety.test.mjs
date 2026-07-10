@@ -70,6 +70,10 @@ test('limits visual inspection to observable image features', async () => {
   const prompt = await source('src/modules/wangzhen/prompt.js');
   assert.match(prompt, /客观观察助手/);
   assert.doesNotMatch(prompt, /脏腑判断|体质倾向|调养建议/);
+
+  const ui = await source('src/modules/wangzhen/WangzhenModule.jsx');
+  assert.match(ui, /WANGZHEN_FOLLOWUP_HINT/);
+  assert.doesNotMatch(ui, /追问具体调养方法/);
 });
 
 test('does not expose concrete herbal doses through active TCM runtime paths', async () => {

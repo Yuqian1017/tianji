@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-10 - TCM runtime semantic closeout
+
+- 修复望诊 follow-up UI 与安全 prompt 不一致：移除“追问具体调养方法”，统一为颜色、形态和拍摄质量范围提示。
+- 增加回归，确保望诊 UI 引用 `WANGZHEN_FOLLOWUP_HINT` 且不恢复调养诱导文字。
+
 ## 2026-07-10 - TCM classics and food-therapy inventory
 
 - 完成剩余 `references/42-48` 的 1,142 条非空行、8 表/79 表格行和 145 标题完整 blocked inventory；TCM 50 个 reference 至此全部进入逐批 inventory。

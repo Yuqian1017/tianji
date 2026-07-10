@@ -424,6 +424,7 @@
     "括号出处格式漏掉四个正方的 parser 问题已修复；182 个教材正方逐分册计数匹配，4 个经典锚点另计；同名异方、青木香、重金属、急症、催吐、妊娠和现代适应证全部 blocked",
     "方剂 fresh review 无 P0；两项 P1 旧口径已统一，P2 禁忌漏扫/现代用途误报已修复为 158 条禁忌视图与 10 条现代用途视图",
     "TJI-VAL-019 经典/医家/食疗 42-48 子批次：1,142 条非空行、8 表/79 表格行、145 标题、603 条重叠窄风险视图和 20 finding 共 14,281 项 0 fail",
-    "TCM 50 个 reference 已全部进入完整 inventory；A级/食疗级/药食两用均不授予产品资格，旧 tcm-data 无 importer，八字健康食疗 runtime blocked"
+    "TCM 50 个 reference 已全部进入完整 inventory；A级/食疗级/药食两用均不授予产品资格，旧 tcm-data 无 importer，八字健康食疗 runtime blocked",
+    "运行时语义收尾：望诊 follow-up 已移除“调养方法”诱导，统一复用仅限颜色、形态与拍摄质量的安全提示"
   ]
 }

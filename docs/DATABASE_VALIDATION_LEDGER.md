@@ -140,6 +140,7 @@
 | F-TCM-064 | P1 | VAL-TCM-009 | modern_efficacy_scope_blocked | 10 条现代用途/疗效风险行缺逐方逐适应证证据；方剂学史、辞典数量和“现代用量”已从该 taxonomy 排除 | 每个制剂和适应证须独立审查；传统出处不构成现代疗效证明 |
 | F-TCM-065 | P1 | VAL-TCM-009 | vulnerable_population_scope_blocked | 62 条涉及妊娠、儿童、老人或虚弱人群的文字未形成可验证剂量/禁忌合同 | 特殊人群字段全部 blocked，后续需方剂级权威来源和临床审查 |
 | F-TCM-066 | P1 | VAL-TCM-009 | attached_formula_entity_gap_blocked | 分册自称 182 个附方，但本轮只固定计数声明和原文，没有把附方全部解析成独立实体 | 不把 182 的声明当实体完整性；后续逐条拆方名、出处、组成与版本 |
+| F-TCM-067 | P1 | VAL-TCM-001/010 | runtime_prompt_mismatch_remediated | 望诊 system prompt 每轮禁止医疗推断和调养建议，但 follow-up 输入框仍提示“追问具体调养方法”，主动诱导越界 | placeholder 改为复用 `WANGZHEN_FOLLOWUP_HINT`，只提示颜色、形态与拍摄质量；专项回归禁止旧文案恢复 |
 | F-WY-001 | P1 | VAL-WY-001 | verified_remediated | 五运旧时间轴把二至五运错误地直接切在春分、芒种、处暑、立冬 | 改为春分后 13 日、芒种后 10 日、处暑后 7 日、立冬后 4 日的来源固定日级规则 |
 | F-WY-002 | P1 | VAL-WY-001 | verified_remediated | 旧实现缺少主运太少，且 UI 正则把六气全名截断 | 补齐十干主运太少；丙午/乙巳桌面和移动端显示完整主客运气 |
 | F-WY-003 | P1 | VAL-WY-001 | bounded | 旧状态把“基础排列未验证”与“完整运气学未实现”混为一体 | 基础年结构标 source-pinned；交司时刻、平气/天符/岁会、胜复及现实解释显式 not_implemented/blocked |

@@ -3,7 +3,7 @@ import { DIAGNOSIS_TYPES, getDiagnosisType } from './data.js';
 import { buildVisionMessage, buildFollowUpMessage } from './engine.js';
 import { aiInterpret } from '../../lib/ai.js';
 import { getActiveApiKey } from '../../lib/aiProviders.js';
-import { WANGZHEN_SYSTEM_PROMPT } from './prompt.js';
+import { WANGZHEN_FOLLOWUP_HINT, WANGZHEN_SYSTEM_PROMPT } from './prompt.js';
 import ModuleIntro from '../../components/ModuleIntro.jsx';
 import CameraCapture from '../../components/CameraCapture.jsx';
 
@@ -357,7 +357,7 @@ export default function WangzhenModule({
                 value={followUpInput}
                 onChange={e => setFollowUpInput(e.target.value)}
                 onKeyDown={handleFollowUpKeyDown}
-                placeholder="追问具体调养方法..."
+                placeholder={WANGZHEN_FOLLOWUP_HINT}
                 className="flex-1 bg-[var(--color-surface-dim)] border border-[var(--color-surface-border)] rounded-lg px-3 py-2.5
                   text-[var(--color-text)] placeholder:text-[var(--color-placeholder)] input-focus-ring font-body text-sm"
               />
