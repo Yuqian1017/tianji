@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "domain": "ziwu-basic-meridian-clock",
+  "status": "source_pinned_full_finite_domain",
+  "timeBasis": {
+    "clock": "local_civil_time",
+    "precision": "minute",
+    "boundaryRule": "子时 starts at 23:00; each period spans 120 minutes; end is exclusive"
+  },
+  "scope": {
+    "included": [
+      "twelve earthly-branch periods",
+      "two-hour local civil clock labels",
+      "twelve channel names and associated organ labels",
+      "traditional five-phase labels"
+    ],
+    "excluded": [
+      "纳甲法",
+      "纳子法",
+      "井荥输经合开穴",
+      "灵龟八法",
+      "针刺补泻",
+      "clinical timing claims",
+      "organ function peak claims",
+      "symptom attribution",
+      "health or treatment advice"
+    ]
+  },
+  "productEligibility": {
+    "culturalStructureDisplay": "allowed",
+    "clinicalInterpretation": "blocked",
+    "acupunctureGuidance": "blocked"
+  },
+  "entries": [
+    { "shichen": "子", "hours": "23:00-01:00", "hourStart": 23, "organ": "胆", "meridian": "足少阳胆经", "wuxing": "wood" },
+    { "shichen": "丑", "hours": "01:00-03:00", "hourStart": 1, "organ": "肝", "meridian": "足厥阴肝经", "wuxing": "wood" },
+    { "shichen": "寅", "hours": "03:00-05:00", "hourStart": 3, "organ": "肺", "meridian": "手太阴肺经", "wuxing": "metal" },
+    { "shichen": "卯", "hours": "05:00-07:00", "hourStart": 5, "organ": "大肠", "meridian": "手阳明大肠经", "wuxing": "metal" },
+    { "shichen": "辰", "hours": "07:00-09:00", "hourStart": 7, "organ": "胃", "meridian": "足阳明胃经", "wuxing": "earth" },
+    { "shichen": "巳", "hours": "09:00-11:00", "hourStart": 9, "organ": "脾", "meridian": "足太阴脾经", "wuxing": "earth" },
+    { "shichen": "午", "hours": "11:00-13:00", "hourStart": 11, "organ": "心", "meridian": "手少阴心经", "wuxing": "fire" },
+    { "shichen": "未", "hours": "13:00-15:00", "hourStart": 13, "organ": "小肠", "meridian": "手太阳小肠经", "wuxing": "fire" },
+    { "shichen": "申", "hours": "15:00-17:00", "hourStart": 15, "organ": "膀胱", "meridian": "足太阳膀胱经", "wuxing": "water" },
+    { "shichen": "酉", "hours": "17:00-19:00", "hourStart": 17, "organ": "肾", "meridian": "足少阴肾经", "wuxing": "water" },
+    { "shichen": "戌", "hours": "19:00-21:00", "hourStart": 19, "organ": "心包", "meridian": "手厥阴心包经", "wuxing": "fire" },
+    { "shichen": "亥", "hours": "21:00-23:00", "hourStart": 21, "organ": "三焦", "meridian": "手少阳三焦经", "wuxing": "fire" }
+  ],
+  "sourceAdjudications": [
+    {
+      "issue": "The continuous-flow paragraph has 手太阴心经 at noon in the local text.",
+      "decision": "Use 手少阴心经.",
+      "basis": "The same work lists 少阴心 among the twelve channels, labels the noon section 手少阴心经, and states 午时气血注此 under that channel. 手太阴 is the lung-channel designation and is internally inconsistent here.",
+      "classification": "local_text_typographical_or_ocr_error"
+    }
+  ],
+  "sources": [
+    {
+      "role": "primary_text_witness",
+      "title": "针灸大成",
+      "path": "database/tcm/skill-v3/sources/针灸大成.txt",
+      "witnesses": [
+        "lines 392-393: continuous twelve-period channel sequence from 寅 through 丑",
+        "line 389 and lines 2702-2711: 手少阴心经 nomenclature adjudication",
+        "lines 469-470: full 子午流注 includes sixty-six transport points"
+      ]
+    },
+    {
+      "role": "secondary_raw_candidate_only",
+      "title": "xuanxue compendium 中医篇第二课",
+      "path": "database/xuanxue/compendium-new/08-zhongyi/02-jingluo-ziwu.md",
+      "note": "The twelve-row mapping may corroborate structure; its health, detox, medication-timing and disease claims are not accepted."
+    }
+  ]
+}

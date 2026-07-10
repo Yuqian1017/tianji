@@ -6,14 +6,11 @@ export function getCurrentShichen(date = new Date()) {
 
   const hour = d.getHours();
   const minute = d.getMinutes();
-  let index = ZIWU_LIUZHU.findIndex(entry => entry.hourStart === hour || entry.hourStart + 1 === hour);
-  if (hour === 0) index = 0;
-  if (index < 0) throw new RangeError(`No traditional shichen mapping for hour ${hour}`);
+  const index = Math.floor(((hour + 1) % 24) / 2);
 
   const entry = ZIWU_LIUZHU[index];
-  const startMinutes = entry.hourStart === 23 ? 23 * 60 : entry.hourStart * 60;
-  const currentMinutes = hour === 0 ? 24 * 60 + minute : hour * 60 + minute;
-  const progress = Math.min(100, Math.round(((currentMinutes - startMinutes) / 120) * 100));
+  const minutesSinceStart = ((hour + 1) % 2) * 60 + minute;
+  const progress = Math.round((minutesSinceStart / 120) * 100);
 
   return { index, entry, progress };
 }
@@ -34,7 +31,8 @@ export function formatForAI(date = new Date()) {
     `五行标签: ${entry.wuxing}`,
     `时段进度: ${progress}%`,
     `验证状态: ${ZIWU_MODEL.structureStatus}`,
-    '边界: 此对应只作传统文化结构展示，不代表器官功能高峰或医学判断。',
+    '边界: 此对应只作传统文化结构展示，不代表器官功能高峰，不作个人身体判断或治疗时机判断。',
+    `未实现层: ${ZIWU_MODEL.unimplemented.join('、')}`,
   ];
   return lines.join('\n');
 }

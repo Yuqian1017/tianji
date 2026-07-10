@@ -69,7 +69,7 @@ function MeridianClock({ activeIndex, progress }) {
         {ZIWU_LIUZHU[activeIndex]?.shichen}时
       </text>
       <text x={cx} y={cy + 5} textAnchor="middle" className="text-[10px] font-body" fill="var(--color-text-dim)">
-        {ZIWU_LIUZHU[activeIndex]?.organ}经当令
+        常见对应·{ZIWU_LIUZHU[activeIndex]?.organ}
       </text>
       <text x={cx} y={cy + 20} textAnchor="middle" className="text-[9px] font-body" fill="var(--color-text-dim)">
         {ZIWU_LIUZHU[activeIndex]?.hours}
@@ -247,7 +247,7 @@ export default function ZiwuModule({
     <div className="space-y-4 font-body">
       <ModuleIntro
         moduleId="ziwu"
-        origin="当前保留常见十二时辰与十二经脉对应表，作为传统文化结构展示；其历史源流和临床含义仍在校核。"
+        origin="十二时辰与十二经脉对应表已按《针灸大成》固定；这里只展示基础对应，未实现纳甲、纳子、开穴和针刺补泻。"
         strengths="时辰结构 · 经脉名称 · 流注次序 · 五行标签"
       />
 
@@ -273,7 +273,7 @@ export default function ZiwuModule({
         </div>
       </div>
 
-      {/* 当令经络详情 */}
+      {/* 经络对应详情 */}
       <MeridianCard entry={activeEntry} />
 
       {/* 十二时辰总览 */}

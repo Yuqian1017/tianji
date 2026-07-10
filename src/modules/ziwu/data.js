@@ -3,10 +3,12 @@
  * This is a cultural mapping, not a clinically validated body schedule.
  */
 export const ZIWU_MODEL = Object.freeze({
-  model: 'common_traditional_meridian_clock_mapping',
-  structureStatus: 'candidate_traditional_mapping',
-  clinicalInterpretation: 'not_validated',
+  model: 'twelve_period_meridian_correspondence',
+  structureStatus: 'source_pinned_basic_meridian_clock',
+  timeBasis: 'local_civil_clock_minute_precision',
+  clinicalInterpretation: 'blocked_not_validated',
   productScope: 'cultural_structure_only',
+  unimplemented: Object.freeze(['纳甲法', '纳子法', '井荥输经合开穴', '灵龟八法', '针刺补泻']),
 });
 
 export const ZIWU_LIUZHU = [

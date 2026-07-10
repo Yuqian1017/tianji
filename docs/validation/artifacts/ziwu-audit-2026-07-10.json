@@ -1,0 +1,109 @@
+{
+  "audit": "ziwu-basic-meridian-clock",
+  "generatedAt": "2026-07-10",
+  "result": "pass_source_pinned_basic_correspondence",
+  "scope": {
+    "included": [
+      "twelve earthly-branch periods",
+      "two-hour local civil clock labels",
+      "twelve channel names and associated organ labels",
+      "traditional five-phase labels"
+    ],
+    "excluded": [
+      "纳甲法",
+      "纳子法",
+      "井荥输经合开穴",
+      "灵龟八法",
+      "针刺补泻",
+      "clinical timing claims",
+      "organ function peak claims",
+      "symptom attribution",
+      "health or treatment advice"
+    ]
+  },
+  "timeBasis": {
+    "clock": "local_civil_time",
+    "precision": "minute",
+    "boundaryRule": "子时 starts at 23:00; each period spans 120 minutes; end is exclusive"
+  },
+  "summary": {
+    "checks": 4457,
+    "failures": 0,
+    "tableRows": 12,
+    "dayMinutes": 1440
+  },
+  "categories": {
+    "contract": {
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "source_witness": {
+      "checks": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "source_adjudication": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "runtime_contract": {
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "finite_table": {
+      "checks": 85,
+      "passed": 85,
+      "failed": 0
+    },
+    "full_day_minutes": {
+      "checks": 4320,
+      "passed": 4320,
+      "failed": 0
+    },
+    "runtime_safety": {
+      "checks": 22,
+      "passed": 22,
+      "failed": 0
+    },
+    "raw_source_quarantine": {
+      "checks": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "sourceAdjudications": [
+    {
+      "issue": "The continuous-flow paragraph has 手太阴心经 at noon in the local text.",
+      "decision": "Use 手少阴心经.",
+      "basis": "The same work lists 少阴心 among the twelve channels, labels the noon section 手少阴心经, and states 午时气血注此 under that channel. 手太阴 is the lung-channel designation and is internally inconsistent here.",
+      "classification": "local_text_typographical_or_ocr_error"
+    }
+  ],
+  "sourceRefs": [
+    {
+      "role": "primary_text_witness",
+      "title": "针灸大成",
+      "path": "database/tcm/skill-v3/sources/针灸大成.txt",
+      "witnesses": [
+        "lines 392-393: continuous twelve-period channel sequence from 寅 through 丑",
+        "line 389 and lines 2702-2711: 手少阴心经 nomenclature adjudication",
+        "lines 469-470: full 子午流注 includes sixty-six transport points"
+      ]
+    },
+    {
+      "role": "secondary_raw_candidate_only",
+      "title": "xuanxue compendium 中医篇第二课",
+      "path": "database/xuanxue/compendium-new/08-zhongyi/02-jingluo-ziwu.md",
+      "note": "The twelve-row mapping may corroborate structure; its health, detox, medication-timing and disease claims are not accepted."
+    }
+  ],
+  "relevantSha256": {
+    "normalizedCore": "23b32edaf2da8251f09559c197c22cdca98acc9acf8414e6ae16f7e8e4743f6b",
+    "zhenjiuDachengWitness": "331ff2ca46de4f649ec553c4e5adfa1f86ab25a3413b2d4b901792d7900669aa",
+    "quarantinedCompendium": "8620223a36df1d78c0cd1466b1023d8b0f84b35cb1651977d17062e41f8323fa"
+  },
+  "failures": []
+}

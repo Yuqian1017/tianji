@@ -26,6 +26,7 @@
 | VAL-TCM-001 | P0 | 中医 | 当前 app 中具体药味/剂量/穴位/艾灸与图像推断 | 医疗/安全 | V4+V5 | in_progress | 旧 34 题、9 调养方案、28 药物标签、22 计量项、30 去重穴位已归档；运行时剂量/裸艾灸/疾病推断已隔离，待逐项权威复核 |
 | VAL-TCM-002 | P0 | 中医 | Skill v3 安全表、毒性、妊娠、配伍与剂量 | 医疗/来源 | V4 | in_progress | 98 manifest 文件和安装/上游副本一致；法定毒性清单 28/28；100 行/101 药名剂量表结构通过但未按 2025 药典校准，继续 blocked |
 | VAL-WY-001 | P1 | 五运六气 | 十干中运、主客运太少、十二支司天在泉、主客六气与日级边界标签 | 传统来源确定性 | V2+V5 | pass | 《素问》《医宗金鉴》与教材交叉固定有限规则；60 年、3,325 项 0 fail；桌面/390×844 通过；古法时刻、派生层与现实解释不在授证范围 |
+| VAL-ZWL-001 | P1 | 子午流注 | 12 时辰、民用时间边界、12 经脉顺序与基础文化展示 | 来源忠实性+有限表 | V2+V5 | pass | 《针灸大成》固定 12 行与循环；全天 1,440 分钟、4,457 项 0 fail；午时心经文本冲突已裁定；完整针法与医学解释 excluded |
 | VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、旬空、伏神、变卦 | 精确/流派确定性 | V3+V5 | pass | 京房八宫纳甲口径；17,026 项项目内全量检查 0 fail，`iching-shifa@1.8.0` 64 静卦与 4,032 动卦对拍 0 mismatch；Playwright 桌面/390px 全六老阳样例通过 |
 | VAL-LY-002 | P1 | 六爻 | 用神、旺衰、冲合空亡与现实吉凶解释 | 流派解释 | V3+来源声明 | blocked | 排盘结构通过不授证现实预测；AI prompt 与 UI 已标 `not_validated`，禁止无条件成败、应期和高风险建议 |
 | VAL-MH-001 | P1 | 梅花 | 报数/农历时间起卦、互卦、变卦、动爻、体用与笔画数据 | 精确/声明口径 | V3+V5 | pass | 63,061 项全量检查 0 fail；Playwright 报数、时间、文字三路径与桌面/390px 通过；结构可复用，现代文字法单列适配状态 |
@@ -38,7 +39,7 @@
 | VAL-QM-002 | P1 | 奇门解释 | 九星八门八神吉凶、格局、用神、克应、方位与现实预测 | 流派解释 | V3+来源声明 | blocked | 排盘通过不授证断事；AI/UI 明确 `not_validated`，移除健康、诉讼、投资与吉方吉时建议入口 |
 | VAL-FS-001 | P1 | 风水 | 三元九运、二十四山、下卦宅盘、年/月飞星与九宫布局 | 流派确定性 | V3 | pass | 声明沈氏玄空常用下卦正向盘口径；216 盘、6,469 项项目内检查 0 fail，独立实现 6,048 字段 0 mismatch；10,228 个时刻的历法边界 30,684 字段 0 mismatch |
 | VAL-FS-002 | P1 | 风水解释 | 九星/组合吉凶、形煞、格局断语、化解、布局与现实预测 | 流派解释/安全 | V3+来源声明 | blocked | 排盘结构通过不授证住宅或个人结果；AI/UI 移除吉凶色、疾病财务映射、摆件施工建议；替卦/兼向/出卦也不在实现范围 |
-| VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | Fresh reviewer 给出 hold；主线程已逐项回看 PRD、当前中医消费点与旧规格，见 `PRD_FRESH_REVIEW_2026-07-09.md` |
+| VAL-PRD-001 | P1 | 产品 | 主 PRD fresh review | 产品/证据 | independent review | pass | 两轮 fresh reviewer 均给出 hold；第二轮聚焦无界 V0、P1 工具闭环、可消费 DB、流派口径和掌握度合同，见 `PRD_FRESH_REVIEW_2026-07-10.md` |
 
 ## Findings
 
@@ -61,7 +62,9 @@
 | F-BZ-007 | P2 | VAL-BZ-002 | remediated | 已新增 `dayunStart` 传统时辰精度年月日、`solarDate` 与口径元数据，整数年龄继续兼容 | 历史记录 schema/version 验证 |
 | F-BZH-001 | P0 | VAL-BZH-001 | mitigated_blocked | 旧 runtime 以天干 1/藏干 0.5 和固定阈值推导脏腑风险、疾病、食疗和大运健康 | 当前消费路径、旧历史和 AI prompt 均 blocked；独立传统与医学证据通过前不得恢复 |
 | F-TCM-001 | P0 | VAL-TCM-001 | mitigated_blocked | 体质模块用 34 题历史简化稿冒充 ZYYXH/T 157-2009 正式量表，并输出药茶、克数、穴位与艾灸方案 | 功能暂停；旧内容完整归档为 `removed_pending_review`；取得合法完整量表和独立验证前不得恢复 |
-| F-TCM-002 | P0 | VAL-TCM-001 | mitigated | 子午流注把传统时辰对应扩写为排毒、疾病提示和最佳吸收时段 | 运行时只保留时辰/经脉/脏腑名称/五行标签；临床解释与穴位动作移除 |
+| F-TCM-002 | P0 | VAL-TCM-001/VAL-ZWL-001 | verified_remediated_basic_scope | 子午流注把传统时辰对应扩写为排毒、疾病提示和最佳吸收时段，八字健康旁路仍残留同类旧句 | 12 行基础结构按《针灸大成》固定；Ziwu 与旁路旧句移除；4,457 项 0 fail；临床解释与完整针法 excluded |
+| F-ZWL-001 | P1 | VAL-ZWL-001 | adjudicated | 本地《针灸大成》连续段写“午时手太阴心经”，与同书十二经表、心经章及午时歌冲突 | 规范库采用内部一致的“手少阴心经”，保留冲突及裁定依据，不把本地 OCR/排印错误复制到 runtime |
+| F-ZWL-002 | P1 | VAL-ZWL-001 | bounded | 当前功能名“子午流注”可能让 12 行时辰表被误解为完整针法 | 模型明确只授证基础对应；纳甲、纳子、六十六穴开穴、灵龟八法和针刺补泻均 not_implemented/blocked |
 | F-TCM-003 | P0 | VAL-TCM-001/VAL-WY-001 | verified_remediated_basic_scope | 五运六气旧算法直接生成重点脏腑、疾病风险和食疗建议 | 基础年结构已来源固定并全量核验；所有健康、疾病和现实气候预测继续 blocked |
 | F-TCM-004 | P0 | VAL-TCM-001 | mitigated | 望诊视觉模型从单张照片推断脏腑、体质并给调养建议 | prompt/UI 限制为可见颜色、形态、纹理与拍摄质量描述，不作医学推断 |
 | F-TCM-005 | P0 | VAL-TCM-002 | blocked | Skill 的 100 行/101 药名剂量表来自七版教材且自述未按现行药典校准 | 所有剂量 product eligibility=`blocked`；逐药对照 2025 药典后再评审 |
@@ -132,3 +135,4 @@
 | 2026-07-10 | VAL-FS-001/002 | `audit-fengshui.mjs`；隔离 `@soul-atelier/xuankong@0.2.1`、`@soul-atelier/calendar@0.3.0`/tyme4ts | 216 张下卦盘项目内 6,469 项 0 fail；第二实现盘面 6,048 字段及 10,228 时刻年/月边界 30,684 字段 0 mismatch；解释、替卦与现实建议 blocked |
 | 2026-07-10 | VAL-TCM-001/002 | `audit-tcm-safety.mjs`；Skill SHA manifest；上游 `966a88a`；国务院/NMPA/深圳政府毒性清单；2025 药典公告；CCMQ 研究；桌面/390×844 产品路径 | 213 项 0 fail；TCM 9/9、全库 79/79；28 项法定毒性清单规范化；100 行/101 药名剂量表保持 blocked；旧 22 计量项和 30 穴位归档并移出运行时；四个中医入口无旧医疗动作词、无水平溢出、console 0 error/warning |
 | 2026-07-10 | VAL-WY-001 | `audit-wuyun.mjs`；《素问》《医宗金鉴》《中医基础理论》；规范 JSON；桌面/390×844 | 60 年基础年结构 3,325 项 0 fail；修复主运太少、五运交司日标签、非法输入和六气名称截断；复杂派生层与现实/医学解释 excluded |
+| 2026-07-10 | VAL-ZWL-001 | `audit-ziwu.mjs`；《针灸大成》；规范 JSON；Ziwu 与八字健康旁路回归；桌面/390×844 | 12 行有限表、全天 1,440 分钟共 4,457 项 0 fail；移除当令/排毒/最佳时段旧句；午时心经冲突已裁定；无横向溢出或行内裁切；完整针法与临床解释 excluded |

@@ -68,12 +68,12 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 52,
-      currentFocus: '子午流注传统对应表与来源边界验证；临床解释继续 blocked。',
-      nextDecision: '全量核验十二时辰、十二经脉、次序和历史来源，再继续共享时间/城市与药典外治安全层。',
+      overallPercent: 54,
+      currentFocus: '共享真太阳时、城市经度、时区与日期边界验证；中医临床解释继续 blocked。',
+      nextDecision: '核验共享城市数据和四个排盘入口的时间消费一致性，再继续药典、妊娠、配伍、方剂与外治安全层。',
       antiDriftRule: '数据库与排盘正确性未取得独立证据前，暂停教学/游戏实现和新的横向功能扩展。',
       phases: [
-        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 95, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
+        { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 96, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
         { id: 'P0', name: '主线恢复与数据库基线', status: 'review_pending', progress: 95, doneWhen: '三份基线文档通过一致性校验并经用户确认。' },
         { id: 'P1', name: '教学核心可玩切片', status: 'pending', progress: 0, doneWhen: '完成一个学习到渡劫的可玩闭环。' },
         { id: 'P2', name: '实战工具接入学习循环', status: 'pending', progress: 0, doneWhen: '至少一个工具能回写领域掌握度。' },
@@ -81,7 +81,7 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'ziwu_source_review_in_progress', rule: '五运基础年结构已通过；当前核验子午流注传统对应。' },
+        { name: '排盘与数据库正确性', state: 'shared_time_city_validation_in_progress', rule: '五运与子午基础结构已通过；当前核验共享时间、城市与跨入口消费。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'baseline_complete', rule: '规范化条目必须回指 raw source。' },
@@ -115,6 +115,8 @@
         'database/fengshui/fengshui-core.json 已生成；解释与替卦 blocked',
         'TJI-VAL-015 首批安全门槛通过：213 项审计与四个产品入口回归通过，医学层继续 blocked',
         'TJI-VAL-016 完成：五运六气基础年结构 3,325 项 0 fail，桌面/390x844 通过',
+        'TJI-VAL-017 完成：子午基础对应全天 1,440 分钟、4,457 项 0 fail；旁路旧医学化文案已移除',
+        '第二轮 PRD fresh reviewer：5 个 P1、2 个 P2，无 P0；结论 HOLD',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',
         '2,592 次节令侧检查与 39,447 日连续性通过',
