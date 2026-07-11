@@ -6,7 +6,9 @@ import test from 'node:test';
 import {
   FACE_INTERPRETATION_VALIDATION,
   FACE_TRADITIONAL_CLAIM_IDS,
+  PARENTS_PALACE_VARIANT,
   THREE_STOP_LABELS,
+  TWELVE_PALACES,
   WUXING_FACE_TYPES,
 } from '../../src/modules/face/data.js';
 import { FACE_SYSTEM_PROMPT } from '../../src/modules/face/prompt.js';
@@ -14,6 +16,7 @@ import {
   PALM_INTERPRETATION_VALIDATION,
   PALM_TRADITIONAL_CLAIM_IDS,
   HAND_WUXING_TYPES,
+  MOUND_NAMES,
 } from '../../src/modules/palm/data.js';
 import { PALM_SYSTEM_PROMPT } from '../../src/modules/palm/prompt.js';
 
@@ -152,8 +155,24 @@ test('face and palm runtime expose only source-pinned cultural claims', async ()
   for (const item of Object.values(THREE_STOP_LABELS)) {
     assert.ok(runtimeIds.has(item.sourceClaimId), `${item.name} lacks a runtime-eligible source claim`);
   }
+  for (const item of Object.values(TWELVE_PALACES)) {
+    assert.equal(item.interpretationStatus, 'source_pinned_location');
+    assert.ok(runtimeIds.has(item.sourceClaimId), `${item.traditionalName} lacks a runtime-eligible source claim`);
+  }
+  assert.equal(Object.keys(TWELVE_PALACES).length, 12);
+  assert.equal(PARENTS_PALACE_VARIANT.interpretationStatus, 'source_pinned_location');
+  assert.ok(runtimeIds.has(PARENTS_PALACE_VARIANT.sourceClaimId));
   for (const item of Object.values(HAND_WUXING_TYPES)) {
     assert.ok(runtimeIds.has(item.sourceClaimId), `${item.name} lacks a runtime-eligible source claim`);
+  }
+  for (const item of Object.values(MOUND_NAMES)) {
+    assert.equal(item.tradition, 'western_planetary_chiromancy');
+    if (item.sourceClaimId) {
+      assert.equal(item.interpretationStatus, 'source_pinned_location_only');
+      assert.ok(runtimeIds.has(item.sourceClaimId), `${item.name} lacks a runtime-eligible source claim`);
+    } else {
+      assert.equal(item.interpretationStatus, 'source_not_yet_located');
+    }
   }
 
   assert.match(FACE_SYSTEM_PROMPT, /逐条提供.*典籍.*出处/);

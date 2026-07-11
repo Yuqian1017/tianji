@@ -44,6 +44,84 @@
           "locator": "CTP URN ctp:ws905153, HTML row p50 (displayed text row 49)",
           "originalText": "金形方正色潔白，木形瘦直骨節堅，水形圓厚重而黑，火形豐銳赤焦燥，土形敦厚色黃光。",
           "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p308-ming-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p308 (displayed text row 307), 十二宮相論",
+          "originalText": "命宮者，居兩眉之間，山根之上。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p313-wealth-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p313 (displayed text row 312), 十二宮相論",
+          "originalText": "鼻乃財星，位居土宿。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p318-siblings-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p318 (displayed text row 317), 十二宮相論",
+          "originalText": "兄弟位居兩眉，屬羅計。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p323-property-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p323 (displayed text row 322), 十二宮相論",
+          "originalText": "田宅者，立居兩眼。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p328-children-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p328 (displayed text row 327), 十二宮相論",
+          "originalText": "男女者，位居兩眼之下，名曰淚堂。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p333-servants-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p333 (displayed text row 332), 十二宮相論",
+          "originalText": "奴僕者，位居地閣，重接水星。頰圓豐滿，侍立成群。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p338-spouse-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p338 (displayed text row 337), 十二宮相論",
+          "originalText": "妻妾者，位居魚尾，號曰奸門。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p343-illness-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p343 (displayed text row 342), 十二宮相論",
+          "originalText": "疾厄者，印堂之下，位居山根。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p348-migration-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p348 (displayed text row 347), 十二宮相論",
+          "originalText": "遷移者，位居眉角，號曰天倉。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p353-office-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p353 (displayed text row 352), 十二宮相論",
+          "originalText": "官祿者，位居中正，上合離宮。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p358-fortune-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p358 (displayed text row 357), 十二宮相論",
+          "originalText": "福德者，位居天倉，牽連地閣。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p363-appearance-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p363 (displayed text row 362), 十二宮相論",
+          "originalText": "相貌者，先觀五岳，次辨三停。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p368-parents-palace",
+          "locator": "CTP URN ctp:ws905153, HTML row p368 (displayed text row 367), 十二宮總訣",
+          "originalText": "父母宮論曰：日月角須要高。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
         }
       ]
     },
@@ -120,6 +198,57 @@
           "locator": "HTML row p19 (displayed text row 18), 手掌圖說",
           "originalText": "餘於手掌相法，經驗甚少。乃枝葉小法。茲姑志之。大抵木形宜長直。金形宜方正。水形宜圓短。土形宜敦厚。火形宜尖露。其它末敢必其為貴賤也。",
           "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        }
+      ]
+    },
+    {
+      "id": "xiangshu-shenxiang-quanbian-shidian-volume-8",
+      "title": "神相全編卷之八",
+      "sourceType": "classical_text_transcription_candidate",
+      "traditionalAttribution": "題宋陳摶秘傳，明袁忠徹訂正",
+      "attributionStatus": "traditional_attribution_not_independently_established",
+      "witness": "識典古籍轉錄，卷八；與致和堂藏板明刊本的逐頁對勘待完成",
+      "witnessStatus": "transcription_located_scan_crosscheck_pending",
+      "url": "https://www.shidianguji.com/zh/book/SDZJ0174/chapter/1k2ktfsndzlej",
+      "scanUrl": "https://old.shuge.org/ebook/shen-xiang-quan-bian/",
+      "repository": "識典古籍；書格明刊本影像說明",
+      "excerpts": [
+        {
+          "id": "sxqb-shidian-v8-palm-three-lines",
+          "locator": "卷八·論掌紋, chapter 1k2ktfsne0nbv, pages 737-739, lines 330-332",
+          "originalText": "掌上三紋者，上畫應天，象君象父，定其貴賤也；中畫應人，象賢象愚，辨其貧富也；下畫應地，象臣象母，主有壽夭也。三紋瑩淨，無紋破者，福祿之相也。",
+          "transcriptionStatus": "bounded_shidian_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-shidian-v8-three-talents",
+          "locator": "卷八·相三才, chapter 1k2ktfss8qdqi, page 760, lines 623-628",
+          "originalText": "三才紋者，乃掌中三大紋也。自上至下，第一紋居火，為天紋，主根基；第二紋居土，為地紋，主財祿；第三紋居明堂，為人紋，主福德。",
+          "transcriptionStatus": "bounded_shidian_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-shidian-v8-finger-form",
+          "locator": "卷八·論手, chapter 1k2ktfsndzy1n, pages 709-711",
+          "originalText": "指纖而長者，聰俊；指短而突者，愚賤。指柔而密者，蓄積；指硬而疏者，破敗。",
+          "transcriptionStatus": "bounded_shidian_transcription_scan_crosscheck_pending"
+        }
+      ]
+    },
+    {
+      "id": "western-1911-britannica-palmistry",
+      "title": "1911 Encyclopaedia Britannica: Palmistry",
+      "sourceType": "historical_reference_witness",
+      "traditionalAttribution": "Encyclopaedia Britannica, 11th edition",
+      "attributionStatus": "established_publication",
+      "witness": "1911 Encyclopaedia Britannica public-domain text on Wikisource",
+      "witnessStatus": "text_witness_located",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Palmistry",
+      "repository": "Wikisource",
+      "excerpts": [
+        {
+          "id": "britannica-1911-palmistry-planetary-mounts",
+          "locator": "Palmistry, paragraph beginning 'These lines isolate certain swellings or monticuli'",
+          "originalText": "The ball of the thumb is called the mountain of Venus; the base of the index finger the mountain of Jupiter; the root of the middle finger the mountain of Saturn; the bases of ring and little finger the mountains of the Sun and Mercury. Above the mountain of Mercury, and between the lines of head and heart is the mountain of Mars, and above the line of heart the mountain of the Moon.",
+          "transcriptionStatus": "public_domain_wikisource_text"
         }
       ]
     }

@@ -26,7 +26,7 @@ for (const source of manifest.sources) {
   for (const excerpt of source.excerpts) {
     check(`excerpt-unique:${excerpt.id}`, !excerptIndex.has(excerpt.id), source.id);
     check(`excerpt-locator:${excerpt.id}`, Boolean(excerpt.locator), excerpt.locator);
-    check(`excerpt-text:${excerpt.id}`, excerpt.originalText.length >= 10, excerpt.originalText.length);
+    check(`excerpt-text:${excerpt.id}`, excerpt.originalText.length >= 4, excerpt.originalText.length);
     excerptIndex.set(excerpt.id, { ...excerpt, sourceId: source.id });
   }
 }

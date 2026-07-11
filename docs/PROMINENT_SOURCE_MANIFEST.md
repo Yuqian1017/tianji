@@ -286,7 +286,7 @@
 | 版本线索 | 题宋陈抟秘传、明袁忠彻订正；书格著录为十二卷首一卷、致和堂藏板明刊本 |
 | 影印见证 | `https://old.shuge.org/ebook/shen-xiang-quan-bian/` |
 | 可搜索转录 | `https://ctext.org/wiki.pl?chapter=905153&if=en`，CTP URN `ctp:ws905153` |
-| 已固定内容 | 三停原文与“不可一体而断”；掌有八卦及部分掌形/掌纹传统判断 |
+| 已固定内容 | 三停原文与“不可一体而断”；五岳、五行面型及十二宫位置；当前编号十二宫与父母宫总诀的版本差异 |
 | 归属边界 | 书名页传统题署不等于宋代作者身份已被现代版本学确认；关键条目仍需与影印页逐页复核 |
 
 ### SRC-VAL-XIANGSHU-TIEGUANDAO
@@ -318,6 +318,26 @@
 | 可搜索转录 | `https://ctext.org/wiki.pl?chapter=419831&if=en` |
 | 已固定内容 | 木长直、金方正、水圆短、土敦厚、火尖露的五形手分类 |
 | 作者自限 | 同段明确写手掌相法“经验甚少”且“其它末敢必其为贵贱”；该保留意见与规则本身同时入库 |
+
+### SRC-VAL-XIANGSHU-SHENXIANG-SHIDIAN-V8
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 识典古籍《神相全编》卷八转录见证 |
+| 状态 | `classical_text_transcription_candidate`；书格影印交叉校勘待完成 |
+| 转录/影印 | `https://www.shidianguji.com/zh/book/SDZJ0174/chapter/1k2ktfsndzlej`；`https://old.shuge.org/ebook/shen-xiang-quan-bian/` |
+| 已固定内容 | “掌中三大纹”为三才纹；天、地、人纹的卷内次序与传统关联；一般性指形长短、柔硬条目 |
+| 边界 | 当前见证不证明现代生命线、智慧线、感情线与地、人、天纹的一一对应，也不支持旧库按具体手指配置的现代能力标签 |
+
+### SRC-VAL-XIANGSHU-WESTERN-PALMISTRY-1911
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 1911 Encyclopaedia Britannica `Palmistry` |
+| 状态 | `historical_reference_witness`；西方手相史料，不是中国相术典籍 |
+| 公开文本 | `https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Palmistry` |
+| 已固定内容 | 金星、木星、土星、太阳、水星、火星与月丘的西方命名和位置描述 |
+| 边界 | 只用于识别旧库中的跨传统来源；不支持中国五行配属、人格吉凶，也不支持旧库细分的火星正丘、负丘和平原 |
 
 ### SRC-VAL-TCM-OFFICIAL-SAFETY
 
@@ -745,6 +765,6 @@ escalation: self_care | clinician | urgent | emergency
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
 2. 以医经、本草、方书和医家版本为核心，逐方、逐药、逐理论条目建立原文见证；现行药典、逐穴正文和监管资料作为现代边界层并行核验。
-3. 相术两份 Markdown 的 386 条非空行已全部入 inventory，31 条已进入首批裁决、255 条待找出处；首批 4 个见证、11 段短摘录、18 条条目和 13 条旧文裁决已完成，继续把 CText 定位与影印页复核。
+3. 相术两份 Markdown 的 386 条非空行已全部入 inventory，142 条已裁决、144 条待找出处；6 个来源记录、28 段摘录、36 条条目和 18 条旧文裁决已完成，继续把 CText/识典定位与影印页复核，并优先处理五官、气色和掌纹细断。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

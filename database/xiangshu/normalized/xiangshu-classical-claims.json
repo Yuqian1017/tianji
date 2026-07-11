@@ -113,6 +113,160 @@
       "runtimeEligible": true
     },
     {
+      "id": "face.palaces.ming.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "命宮者，居兩眉之間，山根之上。",
+      "normalizedClaim": "《神相全编》把命宫定位在两眉之间、山根之上。",
+      "sourceRefIds": ["sxqb-905153-p308-ming-palace"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.wealth.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "鼻乃財星，位居土宿。",
+      "normalizedClaim": "《神相全编》十二宫财帛段以鼻为财星。",
+      "sourceRefIds": ["sxqb-905153-p313-wealth-palace"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.siblings.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "兄弟位居兩眉，屬羅計。",
+      "normalizedClaim": "《神相全编》把兄弟宫定位在两眉。",
+      "sourceRefIds": ["sxqb-905153-p318-siblings-palace"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.property.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "田宅者，立居兩眼。",
+      "normalizedClaim": "《神相全编》当前见证把田宅宫定位为两眼，而不是旧库所写的眉眼之间。",
+      "sourceRefIds": ["sxqb-905153-p323-property-palace"],
+      "interpretationStatus": "exact_witness_conflicts_with_compendium",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.children.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "男女者，位居兩眼之下，名曰淚堂。",
+      "normalizedClaim": "《神相全编》以“男女宫”称子女相关宫位，定位在两眼之下的泪堂。",
+      "sourceRefIds": ["sxqb-905153-p328-children-palace"],
+      "interpretationStatus": "exact_witness_with_modern_alias",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.servants.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "奴僕者，位居地閣，重接水星。頰圓豐滿，侍立成群。",
+      "normalizedClaim": "《神相全编》以“奴仆宫”称该宫位，涉及地阁、水星和两颊；旧库“交友宫=腮部”是后来的改名和缩写。",
+      "sourceRefIds": ["sxqb-905153-p333-servants-palace"],
+      "interpretationStatus": "witness_with_modern_alias_and_simplification",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.spouse.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "妻妾者，位居魚尾，號曰奸門。",
+      "normalizedClaim": "《神相全编》以“妻妾宫”称该宫位，定位在鱼尾、奸门。",
+      "sourceRefIds": ["sxqb-905153-p338-spouse-palace"],
+      "interpretationStatus": "exact_witness_with_modern_alias",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.illness.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "疾厄者，印堂之下，位居山根。",
+      "normalizedClaim": "《神相全编》把疾厄宫定位在印堂之下、山根；这里只授证传统位置，不授证医学诊断。",
+      "sourceRefIds": ["sxqb-905153-p343-illness-palace"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.migration.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "遷移者，位居眉角，號曰天倉。",
+      "normalizedClaim": "《神相全编》把迁移宫定位在眉角，又称天仓。",
+      "sourceRefIds": ["sxqb-905153-p348-migration-palace"],
+      "interpretationStatus": "exact_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.office.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "官祿者，位居中正，上合離宮。",
+      "normalizedClaim": "《神相全编》把官禄宫定位在中正，上合离宫；旧库“额头中央”只是粗略转述。",
+      "sourceRefIds": ["sxqb-905153-p353-office-palace"],
+      "interpretationStatus": "exact_witness_with_broad_compendium_paraphrase",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.fortune.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "福德者，位居天倉，牽連地閣。",
+      "normalizedClaim": "《神相全编》把福德宫定位在天仓并牵连地阁；旧库“眉尾上方”只覆盖天仓的一部分。",
+      "sourceRefIds": ["sxqb-905153-p358-fortune-palace"],
+      "interpretationStatus": "exact_witness_with_incomplete_compendium_paraphrase",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.appearance.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "相貌者，先觀五岳，次辨三停。",
+      "normalizedClaim": "《神相全编》编号十二宫的第十二项是相貌宫，以五岳和三停为整体观察对象。",
+      "sourceRefIds": ["sxqb-905153-p363-appearance-palace"],
+      "interpretationStatus": "exact_witness_missing_from_compendium_table",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.parents.location",
+      "domain": "face",
+      "topic": "twelve_palaces",
+      "originalText": "父母宮論曰：日月角須要高。",
+      "normalizedClaim": "《神相全编》在“十二宫总诀”中另列父母宫，观察日月角；它不是当前见证编号十二宫中的第十二项。",
+      "sourceRefIds": ["sxqb-905153-p368-parents-palace"],
+      "interpretationStatus": "exact_witness_outside_numbered_twelve",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.palaces.set_variant",
+      "domain": "face",
+      "topic": "source_criticism",
+      "originalText": "十二相貌……十二宮總訣……父母宮論曰。",
+      "normalizedClaim": "当前《神相全编》见证的编号十二宫以相貌宫收尾，父母宫另见总诀；旧库以父母宫替换相貌宫，属于体系版本差异。",
+      "sourceRefIds": ["sxqb-905153-p363-appearance-palace", "sxqb-905153-p368-parents-palace"],
+      "interpretationStatus": "exact_witness_variant_adjudication",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
       "id": "palm.bagua.locations",
       "domain": "palm",
       "topic": "palm_bagua",
@@ -197,6 +351,50 @@
       "normalizedClaim": "该本序言承认文本含有后世增饰，不能把全部内容无条件认定为汉代原作。",
       "sourceRefIds": ["xfxf-preface-textual-caution"],
       "interpretationStatus": "exact_preface_caution",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.three_talents.definition",
+      "domain": "palm",
+      "topic": "palm_lines",
+      "originalText": "三才紋者，乃掌中三大紋也。",
+      "normalizedClaim": "《神相全编》卷八把掌中三大纹称为三才纹。",
+      "sourceRefIds": ["sxqb-shidian-v8-three-talents"],
+      "interpretationStatus": "transcription_witness_scan_crosscheck_pending",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.three_talents.names_and_associations",
+      "domain": "palm",
+      "topic": "palm_lines",
+      "originalText": "第一紋居火，為天紋，主根基；第二紋居土，為地紋，主財祿；第三紋居明堂，為人紋，主福德。",
+      "normalizedClaim": "该卷从上至下列天纹、地纹、人纹及其传统关联；此处没有建立与现代感情线、生命线、智慧线名称的一一对应。",
+      "sourceRefIds": ["sxqb-shidian-v8-three-talents", "sxqb-shidian-v8-palm-three-lines"],
+      "interpretationStatus": "transcription_witness_mapping_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.fingers.generic_form_associations",
+      "domain": "palm",
+      "topic": "finger_form",
+      "originalText": "指纖而長者，聰俊；指短而突者，愚賤。指柔而密者，蓄積；指硬而疏者，破敗。",
+      "normalizedClaim": "《神相全编》卷八确有笼统的指形长短、柔硬与传统判断，但未把食指、无名指、小指分别映射到旧库的现代能力标签。",
+      "sourceRefIds": ["sxqb-shidian-v8-finger-form"],
+      "interpretationStatus": "transcription_witness_scan_crosscheck_pending",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.western_planetary_mounds.locations",
+      "domain": "palm",
+      "topic": "planetary_mounds",
+      "originalText": "The ball of the thumb is called the mountain of Venus; the base of the index finger the mountain of Jupiter; the root of the middle finger the mountain of Saturn; the bases of ring and little finger the mountains of the Sun and Mercury. Above the mountain of Mercury, and between the lines of head and heart is the mountain of Mars, and above the line of heart the mountain of the Moon.",
+      "normalizedClaim": "1911年《大英百科全书》的西方手相条目记录了金星、木星、土星、太阳、水星、火星和月丘的命名与位置；这不是中国八卦掌位体系，也不足以支持旧库细分的火星正丘、负丘和平原。",
+      "sourceRefIds": ["britannica-1911-palmistry-planetary-mounts"],
+      "interpretationStatus": "historical_western_witness",
       "runtimePolicy": "cultural_learning_with_citation",
       "runtimeEligible": true
     }

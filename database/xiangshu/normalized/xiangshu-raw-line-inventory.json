@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "doctrine": "classical_source_first",
-  "generatedAt": "2026-07-10T21:49:47.369Z",
+  "generatedAt": "2026-07-11T17:27:32.755Z",
   "scope": "Every non-empty line in the two canonical xiangshu raw Markdown files.",
   "sourceFiles": [
     {
@@ -22,8 +22,8 @@
   "counts": {
     "records": 386,
     "structural": 100,
-    "adjudicatedRecords": 31,
-    "pendingSourceAdjudication": 255
+    "adjudicatedRecords": 142,
+    "pendingSourceAdjudication": 144
   },
   "records": [
     {
@@ -1742,10 +1742,41 @@
       "lineKind": "table_row",
       "rawText": "| **命宫** | 两眉之间（印堂） | 总运·性格·精神 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1756,10 +1787,41 @@
       "lineKind": "table_row",
       "rawText": "| **财帛宫** | 鼻头（准头） | 财运·理财能力 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1770,10 +1832,41 @@
       "lineKind": "table_row",
       "rawText": "| **兄弟宫** | 眉毛 | 兄弟朋友·人际 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1784,10 +1877,41 @@
       "lineKind": "table_row",
       "rawText": "| **夫妻宫** | 眼尾（鱼尾纹区域） | 婚姻·感情 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1798,10 +1922,41 @@
       "lineKind": "table_row",
       "rawText": "| **子女宫** | 眼下（泪堂/卧蚕） | 子女·生育·桃花 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1812,10 +1967,41 @@
       "lineKind": "table_row",
       "rawText": "| **疾厄宫** | 山根（鼻梁鼻骨交界） | 健康·抗病力 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1826,10 +2012,41 @@
       "lineKind": "table_row",
       "rawText": "| **迁移宫** | 额头两侧（天仓） | 出行·外出运·贵人 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1840,10 +2057,41 @@
       "lineKind": "table_row",
       "rawText": "| **交友宫** | 腮部 | 下属·朋友·社交 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1854,10 +2102,41 @@
       "lineKind": "table_row",
       "rawText": "| **官禄宫** | 额头中央 | 事业·权力·名声 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1868,10 +2147,41 @@
       "lineKind": "table_row",
       "rawText": "| **田宅宫** | 眉眼之间 | 不动产·家庭 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1882,10 +2192,41 @@
       "lineKind": "table_row",
       "rawText": "| **福德宫** | 眉尾上方 | 精神生活·福气 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1896,10 +2237,41 @@
       "lineKind": "table_row",
       "rawText": "| **父母宫** | 额头左右日月角 | 父母缘·遗传 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.table"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p363-appearance-palace",
+        "sxqb-905153-p368-parents-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1938,10 +2310,40 @@
       "lineKind": "code",
       "rawText": "'命宫':   { location:'两眉之间·印堂', governs:'总运·性格', good:'宽阔明亮', bad:'狭窄·有纹·发暗' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1952,10 +2354,40 @@
       "lineKind": "code",
       "rawText": "'财帛宫': { location:'鼻头', governs:'财运', good:'圆润有肉·色润', bad:'尖薄·红赤·有痣' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1966,10 +2398,40 @@
       "lineKind": "code",
       "rawText": "'兄弟宫': { location:'眉毛', governs:'兄弟·人际', good:'浓密顺畅·长过目', bad:'稀疏·断裂·杂乱' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1980,10 +2442,40 @@
       "lineKind": "code",
       "rawText": "'夫妻宫': { location:'眼尾', governs:'婚姻感情', good:'平满无纹', bad:'鱼尾纹深·有痣·凹陷' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1994,10 +2486,40 @@
       "lineKind": "code",
       "rawText": "'子女宫': { location:'眼下卧蚕', governs:'子女·桃花', good:'饱满润泽', bad:'凹陷·暗沉·有纹' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2008,10 +2530,40 @@
       "lineKind": "code",
       "rawText": "'疾厄宫': { location:'山根', governs:'健康', good:'高挺无纹', bad:'低平·有横纹·有痣' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2022,10 +2574,40 @@
       "lineKind": "code",
       "rawText": "'迁移宫': { location:'额头两侧', governs:'出行·贵人', good:'丰满明亮', bad:'凹陷·有疤' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2036,10 +2618,40 @@
       "lineKind": "code",
       "rawText": "'交友宫': { location:'腮部', governs:'社交·下属', good:'丰满有肉', bad:'削瘦·无肉' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2050,10 +2662,40 @@
       "lineKind": "code",
       "rawText": "'官禄宫': { location:'额头中央', governs:'事业', good:'宽阔明亮·无纹', bad:'狭窄·有疤痕' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2064,10 +2706,40 @@
       "lineKind": "code",
       "rawText": "'田宅宫': { location:'眉眼之间', governs:'不动产', good:'宽广·眼窝不深陷', bad:'眉压眼·眼窝深陷' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2078,10 +2750,40 @@
       "lineKind": "code",
       "rawText": "'福德宫': { location:'眉尾上方', governs:'精神·福气', good:'平满', bad:'凹陷·有恶痣' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2092,10 +2794,40 @@
       "lineKind": "code",
       "rawText": "'父母宫': { location:'额头左右', governs:'父母缘', good:'饱满对称', bad:'凹陷·不对称·有疤' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.twelve_palaces.legacy_code"
+      ],
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p308-ming-palace",
+        "sxqb-905153-p313-wealth-palace",
+        "sxqb-905153-p318-siblings-palace",
+        "sxqb-905153-p338-spouse-palace",
+        "sxqb-905153-p328-children-palace",
+        "sxqb-905153-p343-illness-palace",
+        "sxqb-905153-p348-migration-palace",
+        "sxqb-905153-p333-servants-palace",
+        "sxqb-905153-p353-office-palace",
+        "sxqb-905153-p323-property-palace",
+        "sxqb-905153-p358-fortune-palace",
+        "sxqb-905153-p368-parents-palace",
+        "sxqb-905153-p363-appearance-palace"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2946,10 +3678,18 @@
       "lineKind": "code",
       "rawText": "起点：拇指和食指之间",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2960,10 +3700,18 @@
       "lineKind": "code",
       "rawText": "走向：围绕拇指丘向手腕方向弧形延伸",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2974,10 +3722,18 @@
       "lineKind": "code",
       "rawText": "看什么：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -2988,10 +3744,18 @@
       "lineKind": "code",
       "rawText": "长度 → 不代表寿命长短！代表生命力·精力·体质",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3002,10 +3766,18 @@
       "lineKind": "code",
       "rawText": "深浅 → 深而清晰 = 精力充沛·体质好",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3016,10 +3788,18 @@
       "lineKind": "code",
       "rawText": "浅而模糊 = 体质偏弱·需注意健康",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3030,10 +3810,18 @@
       "lineKind": "code",
       "rawText": "弧度 → 弧度大（远离拇指）= 精力旺盛·活动范围大",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3044,10 +3832,18 @@
       "lineKind": "code",
       "rawText": "弧度小（贴近拇指）= 宅·精力一般",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3058,10 +3854,18 @@
       "lineKind": "code",
       "rawText": "分支 → 向上分支 = 积极向上的变化",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3072,10 +3876,18 @@
       "lineKind": "code",
       "rawText": "向下分支 = 精力分散",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3086,10 +3898,18 @@
       "lineKind": "code",
       "rawText": "断裂 → 不代表早亡！代表生活重大变化（换工作/搬家/大病后恢复）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3100,10 +3920,18 @@
       "lineKind": "code",
       "rawText": "岛纹 → 该阶段身体虚弱或困顿",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3114,10 +3942,18 @@
       "lineKind": "code",
       "rawText": "链状 → 体质差·从小多病",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3170,10 +4006,18 @@
       "lineKind": "code",
       "rawText": "起点：食指下方（与生命线同起点或略上）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3184,10 +4028,18 @@
       "lineKind": "code",
       "rawText": "走向：横向或斜向延伸至手掌中部或对侧",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3198,10 +4050,18 @@
       "lineKind": "code",
       "rawText": "看什么：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3212,10 +4072,18 @@
       "lineKind": "code",
       "rawText": "长度 → 长 = 思维缜密·善于分析",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3226,10 +4094,18 @@
       "lineKind": "code",
       "rawText": "短 = 直觉型·行动派·不爱深想",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3240,10 +4116,18 @@
       "lineKind": "code",
       "rawText": "深浅 → 深 = 专注力强·意志坚定",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3254,10 +4138,18 @@
       "lineKind": "code",
       "rawText": "浅 = 注意力分散·想法多但不持久",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3268,10 +4160,18 @@
       "lineKind": "code",
       "rawText": "走向 → 直线（横穿）= 理性·逻辑·适合理工商",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3282,10 +4182,18 @@
       "lineKind": "code",
       "rawText": "下弯（向月丘）= 感性·想象力·适合艺术创意",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3296,10 +4204,18 @@
       "lineKind": "code",
       "rawText": "大幅下弯 = 极度浪漫·脱离现实倾向",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3310,10 +4226,18 @@
       "lineKind": "code",
       "rawText": "起点 → 与生命线相连 = 谨慎·依赖家庭",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3324,10 +4248,18 @@
       "lineKind": "code",
       "rawText": "与生命线分离 = 独立·大胆·自主",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3338,10 +4270,18 @@
       "lineKind": "code",
       "rawText": "分叉 → 尾端分叉（作家叉）= 善于表达·多才多艺",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3352,10 +4292,18 @@
       "lineKind": "code",
       "rawText": "岛纹 → 该阶段精神压力大·注意力下降",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3366,10 +4314,18 @@
       "lineKind": "code",
       "rawText": "断裂 → 思维方式重大转变",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3422,10 +4378,18 @@
       "lineKind": "code",
       "rawText": "起点：小指下方",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3436,10 +4400,18 @@
       "lineKind": "code",
       "rawText": "走向：横向延伸至食指或中指方向",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3450,10 +4422,18 @@
       "lineKind": "code",
       "rawText": "看什么：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3464,10 +4444,18 @@
       "lineKind": "code",
       "rawText": "长度 → 延伸到食指下 = 重感情·理想主义·完美主义",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3478,10 +4466,18 @@
       "lineKind": "code",
       "rawText": "止于中指下 = 以自我为中心的感情观",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3492,10 +4488,18 @@
       "lineKind": "code",
       "rawText": "在食指中指间 = 平衡型·最理想",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3506,10 +4510,18 @@
       "lineKind": "code",
       "rawText": "深浅 → 深而清晰 = 感情深厚·重感情",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3520,10 +4532,18 @@
       "lineKind": "code",
       "rawText": "浅而细 = 感情淡薄·理性对待感情",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3534,10 +4554,18 @@
       "lineKind": "code",
       "rawText": "走向 → 平直 = 理性看待感情·不太浪漫",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3548,10 +4576,18 @@
       "lineKind": "code",
       "rawText": "上弯 = 热情·主动·感情丰富",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3562,10 +4598,18 @@
       "lineKind": "code",
       "rawText": "下弯 = 被动·压抑感情",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3576,10 +4620,18 @@
       "lineKind": "code",
       "rawText": "分支 → 尾端多分支 = 多情·桃花多",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3590,10 +4642,18 @@
       "lineKind": "code",
       "rawText": "无分支 = 专一",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3604,10 +4664,18 @@
       "lineKind": "code",
       "rawText": "链状 → 感情经历多波折",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3618,10 +4686,18 @@
       "lineKind": "code",
       "rawText": "断裂 → 感情重大创伤或观念巨变",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3632,10 +4708,18 @@
       "lineKind": "code",
       "rawText": "双重感情线 → 感情强烈·精力旺盛",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3674,10 +4758,18 @@
       "lineKind": "code",
       "rawText": "const MAIN_LINES = {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3688,10 +4780,18 @@
       "lineKind": "code",
       "rawText": "lifeLine: {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3702,10 +4802,18 @@
       "lineKind": "code",
       "rawText": "name: '生命线', altName: '地纹',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3716,10 +4824,18 @@
       "lineKind": "code",
       "rawText": "start: '拇指食指之间', end: '手腕方向',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3730,10 +4846,18 @@
       "lineKind": "code",
       "rawText": "governs: '生命力·精力·体质·生活变化',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3744,10 +4868,18 @@
       "lineKind": "code",
       "rawText": "deepClear: '精力充沛·体质强',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3758,10 +4890,18 @@
       "lineKind": "code",
       "rawText": "shallowFaint: '体质偏弱·需保养',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3772,10 +4912,18 @@
       "lineKind": "code",
       "rawText": "long: '生命力旺盛', short: '不代表短寿·精力集中型',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3786,10 +4934,18 @@
       "lineKind": "code",
       "rawText": "NOTE: '生命线长短≠寿命长短！这是最常见的误解。'",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3800,10 +4956,18 @@
       "lineKind": "code",
       "rawText": "},",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3814,10 +4978,18 @@
       "lineKind": "code",
       "rawText": "headLine: {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3828,10 +5000,18 @@
       "lineKind": "code",
       "rawText": "name: '智慧线', altName: '人纹',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3842,10 +5022,18 @@
       "lineKind": "code",
       "rawText": "start: '食指下方', end: '掌中部或斜下',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3856,10 +5044,18 @@
       "lineKind": "code",
       "rawText": "governs: '思维方式·智力·职业倾向',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3870,10 +5066,18 @@
       "lineKind": "code",
       "rawText": "straight: '理性逻辑·理工商', curved: '感性创意·艺术文',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3884,10 +5088,18 @@
       "lineKind": "code",
       "rawText": "long: '深思型·分析能力强', short: '直觉型·行动派',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3898,10 +5110,18 @@
       "lineKind": "code",
       "rawText": "},",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3912,10 +5132,18 @@
       "lineKind": "code",
       "rawText": "heartLine: {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3926,10 +5154,18 @@
       "lineKind": "code",
       "rawText": "name: '感情线', altName: '天纹',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3940,10 +5176,18 @@
       "lineKind": "code",
       "rawText": "start: '小指下方', end: '食指或中指方向',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3954,10 +5198,18 @@
       "lineKind": "code",
       "rawText": "governs: '感情态度·恋爱观·人际',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3968,10 +5220,18 @@
       "lineKind": "code",
       "rawText": "toIndex: '理想主义·重感情', toMiddle: '自我中心·实际',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3982,10 +5242,18 @@
       "lineKind": "code",
       "rawText": "deep: '感情浓烈·专注', shallow: '感情淡·理性',",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3996,10 +5264,18 @@
       "lineKind": "code",
       "rawText": "},",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4010,10 +5286,18 @@
       "lineKind": "code",
       "rawText": "};",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.three_main_lines"
+      ],
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-three-talents",
+        "sxqb-shidian-v8-palm-three-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4696,10 +5980,16 @@
       "lineKind": "table_row",
       "rawText": "| 丘 | 位置 | 五行 | 丰隆代表 | 凹陷代表 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4724,10 +6014,16 @@
       "lineKind": "table_row",
       "rawText": "| **木星丘** | 食指下 | 木 | 野心·领导力·自信 | 缺乏自信·被动 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4738,10 +6034,16 @@
       "lineKind": "table_row",
       "rawText": "| **土星丘** | 中指下 | 土 | 严肃·责任·智慧 | 孤僻·悲观 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4752,10 +6054,16 @@
       "lineKind": "table_row",
       "rawText": "| **太阳丘** | 无名指下 | 火 | 艺术·名声·乐观 | 平庸·缺乏创意 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4766,10 +6074,16 @@
       "lineKind": "table_row",
       "rawText": "| **水星丘** | 小指下 | 水 | 口才·商才·灵活 | 沟通能力差 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4780,10 +6094,16 @@
       "lineKind": "table_row",
       "rawText": "| **金星丘** | 拇指根（大鱼际） | 金 | 精力·热情·爱 | 冷漠·精力弱 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4794,10 +6114,16 @@
       "lineKind": "table_row",
       "rawText": "| **月丘** | 小指侧掌底 | 水 | 想象力·直觉·旅行 | 想象力贫乏 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4808,10 +6134,16 @@
       "lineKind": "table_row",
       "rawText": "| **火星上丘** | 木星丘与金星丘间 | 火 | 勇气·进取 | 胆小 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4822,10 +6154,16 @@
       "lineKind": "table_row",
       "rawText": "| **火星下丘** | 水星丘与月丘间 | 火 | 忍耐力·抗压 | 脆弱 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4836,10 +6174,16 @@
       "lineKind": "table_row",
       "rawText": "| **火星平原** | 掌心中央 | — | 如凹陷深 = 内心空虚 | — |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.planetary_mounds"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_planetary_mounds.locations"
+      ],
+      "sourceRefIds": [
+        "britannica-1911-palmistry-planetary-mounts"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4906,10 +6250,16 @@
       "lineKind": "code",
       "rawText": "食指长（接近中指）→ 领导力强·野心大",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4920,10 +6270,16 @@
       "lineKind": "code",
       "rawText": "食指短 → 缺自信·服从型",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4934,10 +6290,16 @@
       "lineKind": "code",
       "rawText": "无名指长（超过中指第一节中线）→ 冒险·赌性·艺术",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4948,10 +6310,16 @@
       "lineKind": "code",
       "rawText": "无名指短 → 保守·稳健",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4962,10 +6330,16 @@
       "lineKind": "code",
       "rawText": "小指长（超过无名指第一关节）→ 口才好·善沟通",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4976,10 +6350,16 @@
       "lineKind": "code",
       "rawText": "小指短 → 表达能力弱·但可能很真诚",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -4990,10 +6370,16 @@
       "lineKind": "code",
       "rawText": "拇指大而粗 → 意志力强·有主见",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5004,10 +6390,16 @@
       "lineKind": "code",
       "rawText": "拇指小而细 → 优柔寡断·感性",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger_specific_traits"
+      ],
+      "canonicalClaimIds": [
+        "palm.fingers.generic_form_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-shidian-v8-finger-form"
+      ],
       "runtimeEligible": false
     },
     {

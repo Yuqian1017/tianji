@@ -45,8 +45,8 @@
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">全库改按典籍见证优先验证，相术先逐条校勘原文与旧扩写。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">全量裁决面相/手相 raw 并绑定影印页，再重审中医经典与方剂来源。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">相术十二宫与掌相传统分层已完成，继续校勘五官、气色和掌纹细断。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">继续裁决相术剩余 144 条并绑定影印页，再重审中医经典与方剂来源。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容。</p></article>
     </section>
 
@@ -69,8 +69,8 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 58,
-      currentFocus: '全库改按典籍见证优先验证：相术先逐条校勘原文与旧扩写，中医把古籍核心与现代安全边界分层。',
-      nextDecision: '全量裁决面相/手相 raw 并绑定影印页；随后按同一合同重审中医经典、方剂和其余术数解释层。',
+      currentFocus: '全库改按典籍见证优先验证：相术已完成十二宫与掌相传统分层，继续五官、气色和掌纹细断；中医把古籍核心与现代安全边界分层。',
+      nextDecision: '继续裁决相术剩余 144 条并绑定影印页；随后按同一合同重审中医经典、方剂和其余术数解释层。',
       antiDriftRule: '现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -151,6 +151,9 @@
         '手部几何合同：指缝由错误宽窄阈值改为逐指角度；21 点不支持的掌丘饱满度伪测量已从特征、UI 和 AI 输入删除',
         '相术旋转不变性：面部对称性与小指关节改为轴向投影；同一合成关键点旋转 30°/90° 后结果一致',
         '相术典籍首批审计：386 条 raw 非空行完整入库，31 条已裁决、255 条待找出处；4 个见证、11 段短摘录、18 条条目、13 条旧文裁决共 199 项 0 fail',
+        '相术第二批审计：142 条已裁决、144 条待找出处；6 个来源记录、28 段摘录、36 条主张、18 条旧文裁决共 381 项 0 fail',
+        '十二宫修正田宅宫位置并保留相貌宫/父母宫版本差异；三才纹与现代三主线保持分层',
+        '行星掌丘归为西方手相传统；仅来源支持的位置可运行，火星细分与人格吉凶继续待证',
         'fresh review 无 P0/P1；运行时清零过宽声明已降级，旧 tcm-data/望诊语义保持 open',
         '六合 runtime 只显示关系；午未火/土保留为候选元数据',
         'fresh reviewer 无 Critical；陈旧 artifact Important 已修复',

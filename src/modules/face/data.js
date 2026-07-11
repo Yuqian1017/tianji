@@ -17,6 +17,20 @@ export const FACE_TRADITIONAL_CLAIM_IDS = Object.freeze([
   'face.five_mountains.traditional_association',
   'face.five_elements.forms',
   'face.five_elements.traditional_associations',
+  'face.palaces.ming.location',
+  'face.palaces.wealth.location',
+  'face.palaces.siblings.location',
+  'face.palaces.property.location',
+  'face.palaces.children.location',
+  'face.palaces.servants.location',
+  'face.palaces.spouse.location',
+  'face.palaces.illness.location',
+  'face.palaces.migration.location',
+  'face.palaces.office.location',
+  'face.palaces.fortune.location',
+  'face.palaces.appearance.location',
+  'face.palaces.parents.location',
+  'face.palaces.set_variant',
 ]);
 
 export const WUXING_FACE_TYPES = {
@@ -121,16 +135,24 @@ export function describeSymmetry(score) {
 }
 
 export const TWELVE_PALACES = {
-  '命宫': { location: '两眉之间·印堂', interpretationStatus: 'not_validated' },
-  '财帛宫': { location: '鼻头', interpretationStatus: 'not_validated' },
-  '兄弟宫': { location: '眉毛', interpretationStatus: 'not_validated' },
-  '夫妻宫': { location: '眼尾', interpretationStatus: 'not_validated' },
-  '子女宫': { location: '眼下', interpretationStatus: 'not_validated' },
-  '疾厄宫': { location: '山根', interpretationStatus: 'not_validated' },
-  '迁移宫': { location: '额头两侧', interpretationStatus: 'not_validated' },
-  '交友宫': { location: '腮部', interpretationStatus: 'not_validated' },
-  '官禄宫': { location: '额头中央', interpretationStatus: 'not_validated' },
-  '田宅宫': { location: '眉眼之间', interpretationStatus: 'not_validated' },
-  '福德宫': { location: '眉尾上方', interpretationStatus: 'not_validated' },
-  '父母宫': { location: '额头左右', interpretationStatus: 'not_validated' },
+  '命宫': { traditionalName: '命宫', location: '两眉之间·山根之上', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.ming.location' },
+  '财帛宫': { traditionalName: '财帛宫', location: '鼻', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.wealth.location' },
+  '兄弟宫': { traditionalName: '兄弟宫', location: '两眉', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.siblings.location' },
+  '夫妻宫': { traditionalName: '妻妾宫', modernAlias: '夫妻宫', location: '鱼尾·奸门', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.spouse.location' },
+  '子女宫': { traditionalName: '男女宫', modernAlias: '子女宫', location: '两眼之下·泪堂', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.children.location' },
+  '疾厄宫': { traditionalName: '疾厄宫', location: '印堂之下·山根', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.illness.location' },
+  '迁移宫': { traditionalName: '迁移宫', location: '眉角·天仓', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.migration.location' },
+  '交友宫': { traditionalName: '奴仆宫', modernAlias: '交友宫', location: '地阁·水星·两颊', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.servants.location' },
+  '官禄宫': { traditionalName: '官禄宫', location: '中正·上合离宫', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.office.location' },
+  '田宅宫': { traditionalName: '田宅宫', location: '两眼', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.property.location' },
+  '福德宫': { traditionalName: '福德宫', location: '天仓·牵连地阁', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.fortune.location' },
+  '相貌宫': { traditionalName: '相貌宫', location: '五岳·三停', setStatus: 'numbered_twelve_in_current_witness', interpretationStatus: 'source_pinned_location', sourceClaimId: 'face.palaces.appearance.location' },
 };
+
+export const PARENTS_PALACE_VARIANT = Object.freeze({
+  traditionalName: '父母宫',
+  location: '日月角',
+  setStatus: 'outside_numbered_twelve_in_current_witness',
+  interpretationStatus: 'source_pinned_location',
+  sourceClaimId: 'face.palaces.parents.location',
+});

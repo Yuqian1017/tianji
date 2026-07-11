@@ -13,6 +13,7 @@ import { buildPalmTextMessage } from '../../src/modules/palm/engine.js';
 import { analyzeFaceFeatures, analyzeHandFeatures } from '../../src/lib/mediapipe.js';
 import {
   FACE_INTERPRETATION_VALIDATION,
+  PARENTS_PALACE_VARIANT,
   THREE_STOP_LABELS,
   TWELVE_PALACES,
   WUXING_FACE_TYPES,
@@ -149,8 +150,12 @@ test('keeps face and palm geometry separate from personality, career, and fortun
   assert.ok(Object.values(WUXING_FACE_TYPES).every(item => !('personality' in item) && !('career' in item)));
   assert.ok(Object.values(HAND_WUXING_TYPES).every(item => !('personality' in item) && !('career' in item)));
   assert.ok(Object.values(THREE_STOP_LABELS).every(item => !('period' in item) && !('governs' in item)));
-  assert.ok(Object.values(TWELVE_PALACES).every(item => item.interpretationStatus === 'not_validated'));
-  assert.ok(Object.values(MOUND_NAMES).every(item => item.interpretationStatus === 'not_validated'));
+  assert.ok(Object.values(TWELVE_PALACES).every(item => item.interpretationStatus === 'source_pinned_location'));
+  assert.equal(PARENTS_PALACE_VARIANT.interpretationStatus, 'source_pinned_location');
+  assert.ok(Object.values(MOUND_NAMES).every(item => (
+    item.tradition === 'western_planetary_chiromancy'
+      && ['source_pinned_location_only', 'source_not_yet_located'].includes(item.interpretationStatus)
+  )));
   assert.ok(Object.values(FINGER_MEANINGS).every(item => item.interpretationStatus === 'not_validated'));
 
   const faceMessage = buildFaceTextMessage({

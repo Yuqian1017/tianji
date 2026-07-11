@@ -119,6 +119,83 @@
       "canonicalClaimIds": [],
       "reason": "旧文混合“传统说法”和“现代手相学”，但没有给出两者各自版本与出处。",
       "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.twelve_palaces.table",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:148-159",
+      "rawText": "旧表以命、财帛、兄弟、夫妻、子女、疾厄、迁移、交友、官禄、田宅、福德、父母组成十二宫，并附位置和主管事项",
+      "status": "mixed_witness_supported_and_variant",
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.appearance.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "reason": "《神相全编》当前见证支持多数宫位位置，但用妻妾、男女、奴仆等旧称；田宅宫明确为两眼；编号十二宫以相貌宫收尾，父母宫另见总诀。旧表附加的整组主管事项未在本条中逐项授证。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.twelve_palaces.legacy_code",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:163-174",
+      "rawText": "旧 JavaScript 十二宫对象包含 location、governs、good、bad 字段",
+      "status": "mixed_witness_supported_and_variant",
+      "canonicalClaimIds": [
+        "face.palaces.ming.location",
+        "face.palaces.wealth.location",
+        "face.palaces.siblings.location",
+        "face.palaces.spouse.location",
+        "face.palaces.children.location",
+        "face.palaces.illness.location",
+        "face.palaces.migration.location",
+        "face.palaces.servants.location",
+        "face.palaces.office.location",
+        "face.palaces.property.location",
+        "face.palaces.fortune.location",
+        "face.palaces.parents.location",
+        "face.palaces.set_variant"
+      ],
+      "reason": "位置字段部分可由见证校正；governs、good、bad 是尚未逐条定位的解释层，不能随位置一并晋升。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.three_main_lines",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:33-120",
+      "rawText": "旧库把生命线、智慧线、感情线分别等同于地纹、人纹、天纹，并配置大量现代解释",
+      "status": "modern_mapping_not_established",
+      "canonicalClaimIds": [
+        "palm.three_talents.definition",
+        "palm.three_talents.names_and_associations"
+      ],
+      "reason": "《神相全编》卷八支持掌中三大纹及天、地、人三才纹，但当前见证没有建立它们与现代生命线、智慧线、感情线的一一对应，也不支持旧库整组现代解释。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.planetary_mounds",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:186-196",
+      "rawText": "木星、土星、太阳、水星、金星、月与火星诸掌丘的位置、五行及人格吉凶解释",
+      "status": "cross_tradition_partly_source_pinned",
+      "canonicalClaimIds": ["palm.western_planetary_mounds.locations"],
+      "reason": "行星掌丘可在西方手相历史见证中定位，不能冒充中国八卦掌位；当前见证只授证若干名称和位置，不授证旧表的五行、人格、吉凶或三分火星丘体系。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.finger_specific_traits",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:205-212",
+      "rawText": "食指、无名指、小指和拇指长短分别对应领导力、冒险、口才和意志等能力",
+      "status": "modern_specific_mapping_not_located",
+      "canonicalClaimIds": ["palm.fingers.generic_form_associations"],
+      "reason": "《神相全编》卷八有一般性的指形长短、柔硬传统判断，但未支持旧库按具体手指配置的现代能力标签。",
+      "runtimeEligible": false
     }
   ]
 }

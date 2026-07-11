@@ -15,6 +15,10 @@ export const PALM_TRADITIONAL_CLAIM_IDS = Object.freeze([
   'palm.form.authorial_caution',
   'palm.square.thick_center',
   'palm.xufu.textual_layer_caution',
+  'palm.three_talents.definition',
+  'palm.three_talents.names_and_associations',
+  'palm.fingers.generic_form_associations',
+  'palm.western_planetary_mounds.locations',
 ]);
 
 export const HAND_WUXING_TYPES = {
@@ -105,15 +109,15 @@ export const PALM_LINE_QUESTIONS = [
 ];
 
 export const MOUND_NAMES = {
-  jupiter: { name: '木星丘', location: '食指根部', interpretationStatus: 'not_validated' },
-  saturn: { name: '土星丘', location: '中指根部', interpretationStatus: 'not_validated' },
-  apollo: { name: '太阳丘', location: '无名指根部', interpretationStatus: 'not_validated' },
-  mercury: { name: '水星丘', location: '小指根部', interpretationStatus: 'not_validated' },
-  venus: { name: '金星丘', location: '拇指根部（大鱼际）', interpretationStatus: 'not_validated' },
-  luna: { name: '月丘', location: '小鱼际', interpretationStatus: 'not_validated' },
-  mars_positive: { name: '火星正丘', location: '拇指与木星丘之间', interpretationStatus: 'not_validated' },
-  mars_negative: { name: '火星负丘', location: '水星丘与月丘之间', interpretationStatus: 'not_validated' },
-  mars_plain: { name: '火星平原', location: '掌心中央', interpretationStatus: 'not_validated' },
+  jupiter: { name: '木星丘', location: '食指根部', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_pinned_location_only', sourceClaimId: 'palm.western_planetary_mounds.locations' },
+  saturn: { name: '土星丘', location: '中指根部', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_pinned_location_only', sourceClaimId: 'palm.western_planetary_mounds.locations' },
+  apollo: { name: '太阳丘', location: '无名指根部', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_pinned_location_only', sourceClaimId: 'palm.western_planetary_mounds.locations' },
+  mercury: { name: '水星丘', location: '小指根部', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_pinned_location_only', sourceClaimId: 'palm.western_planetary_mounds.locations' },
+  venus: { name: '金星丘', location: '拇指根部（大鱼际）', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_pinned_location_only', sourceClaimId: 'palm.western_planetary_mounds.locations' },
+  luna: { name: '月丘', location: '感情线上方', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_pinned_location_only', sourceClaimId: 'palm.western_planetary_mounds.locations' },
+  mars_positive: { name: '火星正丘', location: '拇指与木星丘之间', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_not_yet_located' },
+  mars_negative: { name: '火星负丘', location: '水星丘与月丘之间', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_not_yet_located' },
+  mars_plain: { name: '火星平原', location: '掌心中央', tradition: 'western_planetary_chiromancy', interpretationStatus: 'source_not_yet_located' },
 };
 
 export const FINGER_MEANINGS = {
