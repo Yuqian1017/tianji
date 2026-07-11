@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "doctrine": "classical_source_first",
-  "generatedAt": "2026-07-11T17:27:32.755Z",
+  "generatedAt": "2026-07-11T17:34:17.713Z",
   "scope": "Every non-empty line in the two canonical xiangshu raw Markdown files.",
   "sourceFiles": [
     {
@@ -22,8 +22,8 @@
   "counts": {
     "records": 386,
     "structural": 100,
-    "adjudicatedRecords": 142,
-    "pendingSourceAdjudication": 144
+    "adjudicatedRecords": 191,
+    "pendingSourceAdjudication": 95
   },
   "records": [
     {
@@ -748,10 +748,16 @@
       "lineKind": "code",
       "rawText": "宽阔饱满：聪明·少年运好·有领导力",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.forehead.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.forehead.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p12-forehead-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -762,10 +768,16 @@
       "lineKind": "code",
       "rawText": "狭窄凹陷：少年辛苦·思虑多",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.forehead.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.forehead.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p12-forehead-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -776,10 +788,16 @@
       "lineKind": "code",
       "rawText": "有纹：额纹三条清晰（天纹·人纹·地纹）= 有阅历",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.forehead.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.forehead.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p12-forehead-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -790,10 +808,16 @@
       "lineKind": "code",
       "rawText": "发际线整齐：做事有条理",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.forehead.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.forehead.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p12-forehead-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -804,10 +828,16 @@
       "lineKind": "code",
       "rawText": "发际线杂乱/美人尖：早年波折·但有个性",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.forehead.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.forehead.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p12-forehead-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -860,10 +890,16 @@
       "lineKind": "code",
       "rawText": "浓密顺畅：精力旺盛·兄弟缘好·重情义",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -874,10 +910,16 @@
       "lineKind": "code",
       "rawText": "稀疏散乱：孤僻·兄弟缘薄",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -888,10 +930,16 @@
       "lineKind": "code",
       "rawText": "眉长过目：有寿·聪明",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -902,10 +950,16 @@
       "lineKind": "code",
       "rawText": "眉短不过目：性急·兄弟少",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -916,10 +970,16 @@
       "lineKind": "code",
       "rawText": "两眉距离宽（>一指半）：心胸宽·乐观",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -930,10 +990,16 @@
       "lineKind": "code",
       "rawText": "两眉距离窄（<一指）：心思重·易焦虑",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -944,10 +1010,16 @@
       "lineKind": "code",
       "rawText": "眉尾上扬：有志气·不服输",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -958,10 +1030,16 @@
       "lineKind": "code",
       "rawText": "眉尾下垂：温和·但缺乏冲劲",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -972,10 +1050,16 @@
       "lineKind": "code",
       "rawText": "一字眉：意志坚定·执行力强",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -986,10 +1070,16 @@
       "lineKind": "code",
       "rawText": "柳叶眉：温柔·感性·人缘好",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eyebrow.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eyebrow.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p318-eyebrow-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1042,10 +1132,16 @@
       "lineKind": "code",
       "rawText": "大而有神：聪明·开朗·桃花旺",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1056,10 +1152,16 @@
       "lineKind": "code",
       "rawText": "小而有神：精明·谨慎·城府深",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1070,10 +1172,16 @@
       "lineKind": "code",
       "rawText": "眼神温和：善良·好相处",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1084,10 +1192,16 @@
       "lineKind": "code",
       "rawText": "眼神锐利：决断力强·有威严",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1098,10 +1212,16 @@
       "lineKind": "code",
       "rawText": "眼白多（三白眼/四白眼）：性格极端·需注意",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1112,10 +1232,16 @@
       "lineKind": "code",
       "rawText": "桃花眼（眼尾微翘·水汪汪）：异性缘极佳",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1126,10 +1252,16 @@
       "lineKind": "code",
       "rawText": "丹凤眼：有权威·适合领导",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1140,10 +1272,16 @@
       "lineKind": "code",
       "rawText": "瞳仁大而黑亮：心地善良·有福",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1154,10 +1292,16 @@
       "lineKind": "code",
       "rawText": "眼下卧蚕饱满：子女缘好·异性缘佳",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1168,10 +1312,16 @@
       "lineKind": "code",
       "rawText": "眼下凹陷/泪沟深：子女缘薄·肾气不足",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.eye.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.eye_white.traditional_association"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p700-eye-white"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1224,10 +1374,16 @@
       "lineKind": "code",
       "rawText": "鼻梁高挺：自尊心强·有主见·事业心",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1238,10 +1394,16 @@
       "lineKind": "code",
       "rawText": "鼻梁低平：随和·配合性强·但缺乏主见",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1252,10 +1414,16 @@
       "lineKind": "code",
       "rawText": "鼻头圆润有肉：聚财·心地善良",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1266,10 +1434,16 @@
       "lineKind": "code",
       "rawText": "鼻头尖薄：花钱快·心思敏感",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1280,10 +1454,16 @@
       "lineKind": "code",
       "rawText": "鼻翼饱满：存钱能力强",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1294,10 +1474,16 @@
       "lineKind": "code",
       "rawText": "鼻翼薄/鼻孔外露：存不住钱",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1308,10 +1494,16 @@
       "lineKind": "code",
       "rawText": "鼻梁有节/驼峰鼻：性格倔强·中年有波折",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1322,10 +1514,16 @@
       "lineKind": "code",
       "rawText": "鼻歪：心术不正或中年运势偏离",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.nose.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.nose.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p605-p608-nose-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1392,10 +1590,16 @@
       "lineKind": "code",
       "rawText": "小嘴：谨慎·保守·精细",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1406,10 +1610,16 @@
       "lineKind": "code",
       "rawText": "嘴唇厚（尤其下唇）：重感情·享受型",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1420,10 +1630,16 @@
       "lineKind": "code",
       "rawText": "嘴唇薄：理性·善言·但薄情倾向",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1434,10 +1650,16 @@
       "lineKind": "code",
       "rawText": "上唇厚下唇薄：付出型",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1448,10 +1670,16 @@
       "lineKind": "code",
       "rawText": "下唇厚上唇薄：接受型·享福",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1462,10 +1690,16 @@
       "lineKind": "code",
       "rawText": "嘴角上扬：乐观·人缘好",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1476,10 +1710,16 @@
       "lineKind": "code",
       "rawText": "嘴角下垂：悲观·不满·晚年孤",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1490,10 +1730,16 @@
       "lineKind": "code",
       "rawText": "唇色红润：健康·有福",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1504,10 +1750,16 @@
       "lineKind": "code",
       "rawText": "唇色暗淡/发紫：脾胃或血液循环问题",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1560,10 +1812,16 @@
       "lineKind": "code",
       "rawText": "耳大而厚：有福·肾气足·长寿",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1574,10 +1832,16 @@
       "lineKind": "code",
       "rawText": "耳小而薄：肾气弱·精力不足",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1588,10 +1852,16 @@
       "lineKind": "code",
       "rawText": "耳垂大而饱满：有福·晚年好",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1602,10 +1872,16 @@
       "lineKind": "code",
       "rawText": "耳垂薄/无耳垂：物质运一般",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1616,10 +1892,16 @@
       "lineKind": "code",
       "rawText": "耳朵贴脑（正面看不见耳朵）：聪明·善于理财",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1630,10 +1912,16 @@
       "lineKind": "code",
       "rawText": "耳朵招风（正面明显外扩）：个性独立·花钱大方",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1644,10 +1932,16 @@
       "lineKind": "code",
       "rawText": "耳高过眉：智商高·有名望",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.chin.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.chin.traditional_form"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p594-chin-form"
+      ],
       "runtimeEligible": false
     },
     {

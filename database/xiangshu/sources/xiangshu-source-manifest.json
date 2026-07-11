@@ -122,6 +122,42 @@
           "locator": "CTP URN ctp:ws905153, HTML row p368 (displayed text row 367), 十二宮總訣",
           "originalText": "父母宮論曰：日月角須要高。",
           "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p12-forehead-form",
+          "locator": "CTP URN ctp:ws905153, HTML row p12 (displayed text row 11)",
+          "originalText": "額方者頂起，則為輔佐良臣；額闊者，貴亦堪誇；額塌者，少年虛耗；額低者，刑克愚頑；部位傾陷，髮際參差者，照依刑克兼觀，不可一例而言，有誤相訣。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p318-eyebrow-form",
+          "locator": "CTP URN ctp:ws905153, HTML row p318 (displayed text row 317), 兄弟宮",
+          "originalText": "眉長過目，三四兄弟無刑。眉秀而疏，枝幹自然端正，有如新月。若是短粗，同氣連枝見別。眉環塞眼，雁行必疏。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p700-eye-white",
+          "locator": "CTP URN ctp:ws905153, HTML row p700 (displayed text row 699)",
+          "originalText": "眼中如火主剛強。面上青容冷面主狠癖。眼有三角面肉橫，主剛強。唇高嘴超主性剛。眼白多主性癖。",
+          "transcriptionStatus": "bounded_ctext_transcription_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p605-p608-nose-form",
+          "locator": "CTP URN ctp:ws905153, HTML rows p605 and p608 (displayed text rows 604 and 607)",
+          "originalText": "土星是鼻，須要准頭豐厚，兩孔不露，年上壽上平滿直端聳不偏。土宿歪斜受苦辛，准頭尖薄主孤貧，傍觀勾曲如鷹嘴，心裏奸謀必害人。",
+          "transcriptionStatus": "bounded_excerpt_from_two_ctext_rows_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p48-p554-mouth-form",
+          "locator": "CTP URN ctp:ws905153, HTML rows p48 and p554 (displayed text rows 47 and 553)",
+          "originalText": "口為出納官：唇紅齒白，兩唇齊豐，人中深長，仰月彎弓，四字口方。口者，心之外表，賞罰之所出，榮辱之所關。欲端而厚，言不亂發，謂之口德。若方廣有棱者，主壽形；如弓稍向上者，主貴；若尖而薄反者，主賤。",
+          "transcriptionStatus": "bounded_excerpt_from_two_ctext_rows_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p594-chin-form",
+          "locator": "CTP URN ctp:ws905153, HTML row p594 (displayed text row 593)",
+          "originalText": "三才者，額為天，欲闊而圓，名曰有天者貴。鼻為人，欲旺而齊，名曰有人者壽。頦為地，欲方而闊，名曰有地者富。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
         }
       ]
     },

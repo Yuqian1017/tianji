@@ -1,15 +1,15 @@
 {
   "audit": "xiangshu-classical-source-contract",
-  "generatedAt": "2026-07-11T17:27:32.953Z",
+  "generatedAt": "2026-07-11T17:34:17.852Z",
   "doctrine": "classical_source_first",
   "counts": {
     "sources": 6,
-    "excerpts": 28,
-    "claims": 36,
-    "adjudications": 18,
+    "excerpts": 34,
+    "claims": 42,
+    "adjudications": 24,
     "rawInventoryRecords": 386,
-    "pendingRawSourceAdjudications": 144,
-    "checks": 381,
+    "pendingRawSourceAdjudications": 95,
+    "checks": 453,
     "failures": 0
   },
   "scope": {
@@ -327,6 +327,96 @@
       "id": "excerpt-text:sxqb-905153-p368-parents-palace",
       "pass": true,
       "detail": 13
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p12-forehead-form",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p12-forehead-form",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p12 (displayed text row 11)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p12-forehead-form",
+      "pass": true,
+      "detail": 70
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p318-eyebrow-form",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p318-eyebrow-form",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p318 (displayed text row 317), 兄弟宮"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p318-eyebrow-form",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p700-eye-white",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p700-eye-white",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p700 (displayed text row 699)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p700-eye-white",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p605-p608-nose-form",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p605-p608-nose-form",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML rows p605 and p608 (displayed text rows 604 and 607)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p605-p608-nose-form",
+      "pass": true,
+      "detail": 61
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p48-p554-mouth-form",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p48-p554-mouth-form",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML rows p48 and p554 (displayed text rows 47 and 553)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p48-p554-mouth-form",
+      "pass": true,
+      "detail": 97
+    },
+    {
+      "id": "excerpt-unique:sxqb-905153-p594-chin-form",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p594-chin-form",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p594 (displayed text row 593)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p594-chin-form",
+      "pass": true,
+      "detail": 52
     },
     {
       "id": "source-url:xiangshu-shenxiang-tieguandao",
@@ -1718,6 +1808,198 @@
       "detail": "cultural_learning_with_citation"
     },
     {
+      "id": "claim-unique:face.features.forehead.traditional_forms",
+      "pass": true,
+      "detail": "face.features.forehead.traditional_forms"
+    },
+    {
+      "id": "claim-original:face.features.forehead.traditional_forms",
+      "pass": true,
+      "detail": "額闊者，貴亦堪誇；額塌者，少年虛耗；額低者，刑克愚頑；部位傾陷，髮際參差者，照依刑克兼觀，不可一例而言。"
+    },
+    {
+      "id": "claim-normalized:face.features.forehead.traditional_forms",
+      "pass": true,
+      "detail": "《神相全编》当前见证确有额阔、额塌、额低和发际参差等传统判断，并明确提醒不能一例而断；旧库的领导力、条理性和个性等现代词不是逐字转录。"
+    },
+    {
+      "id": "claim-sources:face.features.forehead.traditional_forms",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p12-forehead-form"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.features.forehead.traditional_forms:sxqb-905153-p12-forehead-form",
+      "pass": true,
+      "detail": "sxqb-905153-p12-forehead-form"
+    },
+    {
+      "id": "claim-runtime-policy:face.features.forehead.traditional_forms",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.features.eyebrow.traditional_forms",
+      "pass": true,
+      "detail": "face.features.eyebrow.traditional_forms"
+    },
+    {
+      "id": "claim-original:face.features.eyebrow.traditional_forms",
+      "pass": true,
+      "detail": "眉長過目，三四兄弟無刑。眉秀而疏，枝幹自然端正，有如新月。若是短粗，同氣連枝見別。眉環塞眼，雁行必疏。"
+    },
+    {
+      "id": "claim-normalized:face.features.eyebrow.traditional_forms",
+      "pass": true,
+      "detail": "《神相全编》兄弟宫段确有眉长过目、眉秀而疏、如新月、短粗和眉环塞眼等传统判断；旧库扩写的乐观、焦虑、执行力等现代人格词未被本段支持。"
+    },
+    {
+      "id": "claim-sources:face.features.eyebrow.traditional_forms",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p318-eyebrow-form"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.features.eyebrow.traditional_forms:sxqb-905153-p318-eyebrow-form",
+      "pass": true,
+      "detail": "sxqb-905153-p318-eyebrow-form"
+    },
+    {
+      "id": "claim-runtime-policy:face.features.eyebrow.traditional_forms",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.features.eye_white.traditional_association",
+      "pass": true,
+      "detail": "face.features.eye_white.traditional_association"
+    },
+    {
+      "id": "claim-original:face.features.eye_white.traditional_association",
+      "pass": true,
+      "detail": "眼白多主性癖。"
+    },
+    {
+      "id": "claim-normalized:face.features.eye_white.traditional_association",
+      "pass": true,
+      "detail": "《神相全编》当前见证有“眼白多主性癖”的传统断语，但未在此处建立三白眼、四白眼与旧库“性格极端”的现代分级。"
+    },
+    {
+      "id": "claim-sources:face.features.eye_white.traditional_association",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p700-eye-white"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.features.eye_white.traditional_association:sxqb-905153-p700-eye-white",
+      "pass": true,
+      "detail": "sxqb-905153-p700-eye-white"
+    },
+    {
+      "id": "claim-runtime-policy:face.features.eye_white.traditional_association",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.features.nose.traditional_forms",
+      "pass": true,
+      "detail": "face.features.nose.traditional_forms"
+    },
+    {
+      "id": "claim-original:face.features.nose.traditional_forms",
+      "pass": true,
+      "detail": "土星是鼻，須要准頭豐厚，兩孔不露，年上壽上平滿直端聳不偏。土宿歪斜受苦辛，准頭尖薄主孤貧。"
+    },
+    {
+      "id": "claim-normalized:face.features.nose.traditional_forms",
+      "pass": true,
+      "detail": "《神相全编》当前见证有准头丰厚、鼻孔不露、鼻部端直、歪斜和准头尖薄等传统判断；旧库关于储蓄、事业心、饮酒及心术的整组现代化转述不能整体晋升。"
+    },
+    {
+      "id": "claim-sources:face.features.nose.traditional_forms",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p605-p608-nose-form"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.features.nose.traditional_forms:sxqb-905153-p605-p608-nose-form",
+      "pass": true,
+      "detail": "sxqb-905153-p605-p608-nose-form"
+    },
+    {
+      "id": "claim-runtime-policy:face.features.nose.traditional_forms",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.features.mouth.traditional_forms",
+      "pass": true,
+      "detail": "face.features.mouth.traditional_forms"
+    },
+    {
+      "id": "claim-original:face.features.mouth.traditional_forms",
+      "pass": true,
+      "detail": "口為出納官：唇紅齒白，兩唇齊豐，人中深長，仰月彎弓，四字口方。欲端而厚。若方廣有棱者，主壽形；如弓稍向上者，主貴；若尖而薄反者，主賤。"
+    },
+    {
+      "id": "claim-normalized:face.features.mouth.traditional_forms",
+      "pass": true,
+      "detail": "《神相全编》当前见证记录唇色、两唇齐丰、四字口、方广有棱、弓形和尖薄等传统判断；旧库的大方、表达力、保守和人缘等现代人格词未获本段支持。"
+    },
+    {
+      "id": "claim-sources:face.features.mouth.traditional_forms",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.features.mouth.traditional_forms:sxqb-905153-p48-p554-mouth-form",
+      "pass": true,
+      "detail": "sxqb-905153-p48-p554-mouth-form"
+    },
+    {
+      "id": "claim-runtime-policy:face.features.mouth.traditional_forms",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:face.features.chin.traditional_form",
+      "pass": true,
+      "detail": "face.features.chin.traditional_form"
+    },
+    {
+      "id": "claim-original:face.features.chin.traditional_form",
+      "pass": true,
+      "detail": "頦為地，欲方而闊，名曰有地者富。"
+    },
+    {
+      "id": "claim-normalized:face.features.chin.traditional_form",
+      "pass": true,
+      "detail": "《神相全编》三才段把颏部比作地，并以方阔为传统理想形态；旧库按圆、方、尖、双下巴分配晚年、执行力和依赖性的体系未在本段定位。"
+    },
+    {
+      "id": "claim-sources:face.features.chin.traditional_form",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p594-chin-form"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.features.chin.traditional_form:sxqb-905153-p594-chin-form",
+      "pass": true,
+      "detail": "sxqb-905153-p594-chin-form"
+    },
+    {
+      "id": "claim-runtime-policy:face.features.chin.traditional_form",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
       "id": "adjudication-locator:compendium.face.three_stops.equal",
       "pass": true,
       "detail": "10-xiangshu/01-mianxiang.md:18"
@@ -1992,6 +2274,96 @@
       "id": "adjudication-runtime-blocked:compendium.palm.finger_specific_traits",
       "pass": true,
       "detail": "modern_specific_mapping_not_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.forehead.features",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:64-68"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.forehead.features",
+      "pass": true,
+      "detail": "当前见证支持额阔、额塌、额低、发际参差等传统判断，并提醒不可一例而断；旧库的领导力、条理性、个性和整套额纹解释未逐项定位。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.forehead.features",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.eyebrow.features",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:74-83"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.eyebrow.features",
+      "pass": true,
+      "detail": "当前见证支持眉长过目、眉秀而疏、如新月、短粗和眉环塞眼等传统说法，但不支持旧库整组现代人格词和数值化眉间距阈值。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.eyebrow.features",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.eye.features",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:89-98"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.eye.features",
+      "pass": true,
+      "detail": "当前见证可定位“眼白多主性癖”等传统断语，但没有支持旧库三白/四白现代分级、桃花和领导力标签；“肾气不足”属于另需医学与典籍双重处理的扩写。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.eye.features",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.nose.features",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:104-112"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.nose.features",
+      "pass": true,
+      "detail": "当前见证支持准头丰厚、鼻孔不露、鼻部端直、歪斜和准头尖薄等传统判断，但旧库储蓄能力、事业心、饮酒及敏感等现代词没有逐项来源。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.nose.features",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.mouth.features",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:118-126"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.mouth.features",
+      "pass": true,
+      "detail": "当前见证支持唇红齿白、两唇齐丰、四字口、方广有棱、弓形和尖薄等传统判断，但旧库大方、表达力、保守、人缘与健康等现代标签未逐项定位。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.mouth.features",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.chin.features",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:132-138"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.chin.features",
+      "pass": true,
+      "detail": "当前见证只支持颏部以方阔为传统理想形态；旧库对圆、尖、双下巴及晚年、执行力、依赖性和子女的整套映射尚未定位。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.chin.features",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
     },
     {
       "id": "raw-preserved:database/xuanxue/compendium-new/10-xiangshu/01-mianxiang.md",

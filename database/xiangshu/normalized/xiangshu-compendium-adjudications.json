@@ -196,6 +196,60 @@
       "canonicalClaimIds": ["palm.fingers.generic_form_associations"],
       "reason": "《神相全编》卷八有一般性的指形长短、柔硬传统判断，但未支持旧库按具体手指配置的现代能力标签。",
       "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.forehead.features",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:64-68",
+      "rawText": "额头宽窄、额纹和发际线分别对应聪明、少年运、阅历、条理性与个性",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.features.forehead.traditional_forms"],
+      "reason": "当前见证支持额阔、额塌、额低、发际参差等传统判断，并提醒不可一例而断；旧库的领导力、条理性、个性和整套额纹解释未逐项定位。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.eyebrow.features",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:74-83",
+      "rawText": "眉毛浓疏、长短、间距、眉尾和眉形分别对应精力、亲缘、心胸、焦虑、志气和性格",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.features.eyebrow.traditional_forms"],
+      "reason": "当前见证支持眉长过目、眉秀而疏、如新月、短粗和眉环塞眼等传统说法，但不支持旧库整组现代人格词和数值化眉间距阈值。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.eye.features",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:89-98",
+      "rawText": "眼睛大小、眼神、眼白、眼型、瞳仁和眼下形态分别对应人格、权威、桃花、福气、子女及肾气",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.features.eye_white.traditional_association"],
+      "reason": "当前见证可定位“眼白多主性癖”等传统断语，但没有支持旧库三白/四白现代分级、桃花和领导力标签；“肾气不足”属于另需医学与典籍双重处理的扩写。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.nose.features",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:104-112",
+      "rawText": "鼻梁、准头、鼻翼、鼻孔、鼻节、鼻歪和红鼻分别对应主见、事业、财富、性格与饮酒",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.features.nose.traditional_forms"],
+      "reason": "当前见证支持准头丰厚、鼻孔不露、鼻部端直、歪斜和准头尖薄等传统判断，但旧库储蓄能力、事业心、饮酒及敏感等现代词没有逐项来源。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.mouth.features",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:118-126",
+      "rawText": "嘴唇大小厚薄、嘴角、唇色和牙齿分别对应性格、表达、人缘、健康和运势",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.features.mouth.traditional_forms"],
+      "reason": "当前见证支持唇红齿白、两唇齐丰、四字口、方广有棱、弓形和尖薄等传统判断，但旧库大方、表达力、保守、人缘与健康等现代标签未逐项定位。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.chin.features",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:132-138",
+      "rawText": "下巴长短、圆方尖和双下巴分别对应晚年、执行力、依赖性、子女与福气",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.features.chin.traditional_form"],
+      "reason": "当前见证只支持颏部以方阔为传统理想形态；旧库对圆、尖、双下巴及晚年、执行力、依赖性和子女的整套映射尚未定位。",
+      "runtimeEligible": false
     }
   ]
 }

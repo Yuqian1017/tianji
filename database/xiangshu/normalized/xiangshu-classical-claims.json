@@ -397,6 +397,72 @@
       "interpretationStatus": "historical_western_witness",
       "runtimePolicy": "cultural_learning_with_citation",
       "runtimeEligible": true
+    },
+    {
+      "id": "face.features.forehead.traditional_forms",
+      "domain": "face",
+      "topic": "forehead_form",
+      "originalText": "額闊者，貴亦堪誇；額塌者，少年虛耗；額低者，刑克愚頑；部位傾陷，髮際參差者，照依刑克兼觀，不可一例而言。",
+      "normalizedClaim": "《神相全编》当前见证确有额阔、额塌、额低和发际参差等传统判断，并明确提醒不能一例而断；旧库的领导力、条理性和个性等现代词不是逐字转录。",
+      "sourceRefIds": ["sxqb-905153-p12-forehead-form"],
+      "interpretationStatus": "bounded_witness_with_no_single_factor_caution",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.features.eyebrow.traditional_forms",
+      "domain": "face",
+      "topic": "eyebrow_form",
+      "originalText": "眉長過目，三四兄弟無刑。眉秀而疏，枝幹自然端正，有如新月。若是短粗，同氣連枝見別。眉環塞眼，雁行必疏。",
+      "normalizedClaim": "《神相全编》兄弟宫段确有眉长过目、眉秀而疏、如新月、短粗和眉环塞眼等传统判断；旧库扩写的乐观、焦虑、执行力等现代人格词未被本段支持。",
+      "sourceRefIds": ["sxqb-905153-p318-eyebrow-form"],
+      "interpretationStatus": "bounded_witness_with_modern_extrapolation_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.features.eye_white.traditional_association",
+      "domain": "face",
+      "topic": "eye_form",
+      "originalText": "眼白多主性癖。",
+      "normalizedClaim": "《神相全编》当前见证有“眼白多主性癖”的传统断语，但未在此处建立三白眼、四白眼与旧库“性格极端”的现代分级。",
+      "sourceRefIds": ["sxqb-905153-p700-eye-white"],
+      "interpretationStatus": "exact_short_witness_with_taxonomy_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.features.nose.traditional_forms",
+      "domain": "face",
+      "topic": "nose_form",
+      "originalText": "土星是鼻，須要准頭豐厚，兩孔不露，年上壽上平滿直端聳不偏。土宿歪斜受苦辛，准頭尖薄主孤貧。",
+      "normalizedClaim": "《神相全编》当前见证有准头丰厚、鼻孔不露、鼻部端直、歪斜和准头尖薄等传统判断；旧库关于储蓄、事业心、饮酒及心术的整组现代化转述不能整体晋升。",
+      "sourceRefIds": ["sxqb-905153-p605-p608-nose-form"],
+      "interpretationStatus": "bounded_witness_with_modern_extrapolation_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.features.mouth.traditional_forms",
+      "domain": "face",
+      "topic": "mouth_form",
+      "originalText": "口為出納官：唇紅齒白，兩唇齊豐，人中深長，仰月彎弓，四字口方。欲端而厚。若方廣有棱者，主壽形；如弓稍向上者，主貴；若尖而薄反者，主賤。",
+      "normalizedClaim": "《神相全编》当前见证记录唇色、两唇齐丰、四字口、方广有棱、弓形和尖薄等传统判断；旧库的大方、表达力、保守和人缘等现代人格词未获本段支持。",
+      "sourceRefIds": ["sxqb-905153-p48-p554-mouth-form"],
+      "interpretationStatus": "bounded_witness_with_modern_extrapolation_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "face.features.chin.traditional_form",
+      "domain": "face",
+      "topic": "chin_form",
+      "originalText": "頦為地，欲方而闊，名曰有地者富。",
+      "normalizedClaim": "《神相全编》三才段把颏部比作地，并以方阔为传统理想形态；旧库按圆、方、尖、双下巴分配晚年、执行力和依赖性的体系未在本段定位。",
+      "sourceRefIds": ["sxqb-905153-p594-chin-form"],
+      "interpretationStatus": "exact_short_witness_with_compendium_taxonomy_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
     }
   ]
 }

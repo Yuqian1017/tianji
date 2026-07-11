@@ -67,6 +67,8 @@ test('raw inventory preserves every non-empty face and palm line', async () => {
 
   assert.equal(inventory.doctrine, 'classical_source_first');
   assert.equal(inventory.records.length, 386);
+  assert.equal(inventory.counts.adjudicatedRecords, 191);
+  assert.equal(inventory.counts.pendingSourceAdjudication, 95);
 
   for (const source of inventory.sourceFiles) {
     const rawText = await readFile(new URL(`../../${source.path}`, import.meta.url), 'utf8');
