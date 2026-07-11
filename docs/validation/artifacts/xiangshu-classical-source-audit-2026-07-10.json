@@ -1,15 +1,15 @@
 {
   "audit": "xiangshu-classical-source-contract",
-  "generatedAt": "2026-07-11T17:34:17.852Z",
+  "generatedAt": "2026-07-11T17:42:25.827Z",
   "doctrine": "classical_source_first",
   "counts": {
-    "sources": 6,
-    "excerpts": 34,
-    "claims": 42,
-    "adjudications": 24,
+    "sources": 7,
+    "excerpts": 37,
+    "claims": 45,
+    "adjudications": 41,
     "rawInventoryRecords": 386,
-    "pendingRawSourceAdjudications": 95,
-    "checks": 453,
+    "pendingRawSourceAdjudications": 0,
+    "checks": 534,
     "failures": 0
   },
   "scope": {
@@ -419,6 +419,21 @@
       "detail": 52
     },
     {
+      "id": "excerpt-unique:sxqb-905153-p535-complexion",
+      "pass": true,
+      "detail": "xiangshu-shenxiang-quanbian-ming-print"
+    },
+    {
+      "id": "excerpt-locator:sxqb-905153-p535-complexion",
+      "pass": true,
+      "detail": "CTP URN ctp:ws905153, HTML row p535 (displayed text row 534)"
+    },
+    {
+      "id": "excerpt-text:sxqb-905153-p535-complexion",
+      "pass": true,
+      "detail": 62
+    },
+    {
       "id": "source-url:xiangshu-shenxiang-tieguandao",
       "pass": true,
       "detail": "https://ctext.org/wiki.pl?chapter=351787&if=en"
@@ -612,6 +627,51 @@
       "id": "excerpt-text:sxqb-shidian-v8-finger-form",
       "pass": true,
       "detail": 36
+    },
+    {
+      "id": "source-url:western-indian-palmistry-dale-lines",
+      "pass": true,
+      "detail": "https://en.wikisource.org/wiki/Indian_Palmistry/The_Lines"
+    },
+    {
+      "id": "source-attribution:western-indian-palmistry-dale-lines",
+      "pass": true,
+      "detail": "wikisource_author_record"
+    },
+    {
+      "id": "source-witness:western-indian-palmistry-dale-lines",
+      "pass": true,
+      "detail": "text_witness_located_scan_page_crosscheck_pending"
+    },
+    {
+      "id": "excerpt-unique:dale-indian-palmistry-fate-sun-lines",
+      "pass": true,
+      "detail": "western-indian-palmistry-dale-lines"
+    },
+    {
+      "id": "excerpt-locator:dale-indian-palmistry-fate-sun-lines",
+      "pass": true,
+      "detail": "The Lines, opening numbered list, items 6 and 8"
+    },
+    {
+      "id": "excerpt-text:dale-indian-palmistry-fate-sun-lines",
+      "pass": true,
+      "detail": 315
+    },
+    {
+      "id": "excerpt-unique:dale-indian-palmistry-liver-line",
+      "pass": true,
+      "detail": "western-indian-palmistry-dale-lines"
+    },
+    {
+      "id": "excerpt-locator:dale-indian-palmistry-liver-line",
+      "pass": true,
+      "detail": "The Lines, opening numbered list item 2 and section The Liver Line"
+    },
+    {
+      "id": "excerpt-text:dale-indian-palmistry-liver-line",
+      "pass": true,
+      "detail": 179
     },
     {
       "id": "source-url:western-1911-britannica-palmistry",
@@ -2000,6 +2060,102 @@
       "detail": "cultural_learning_with_citation"
     },
     {
+      "id": "claim-unique:face.complexion.traditional_color_associations",
+      "pass": true,
+      "detail": "face.complexion.traditional_color_associations"
+    },
+    {
+      "id": "claim-original:face.complexion.traditional_color_associations",
+      "pass": true,
+      "detail": "夫氣色印堂山根光明者吉，暗慘者滯。年壽黃明者吉，黑病赤官災青破耗白哭泣。准頭黃明者，喜慶立至。"
+    },
+    {
+      "id": "claim-normalized:face.complexion.traditional_color_associations",
+      "pass": true,
+      "detail": "《神相全编》当前见证确有按部位明暗与黄、黑、赤、青、白作传统判断的气色层；它不支持把这些颜色直接等同现代肝、肺、肾、脾疾病诊断。"
+    },
+    {
+      "id": "claim-sources:face.complexion.traditional_color_associations",
+      "pass": true,
+      "detail": [
+        "sxqb-905153-p535-complexion"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:face.complexion.traditional_color_associations:sxqb-905153-p535-complexion",
+      "pass": true,
+      "detail": "sxqb-905153-p535-complexion"
+    },
+    {
+      "id": "claim-runtime-policy:face.complexion.traditional_color_associations",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.western_lines.fate_and_sun_definitions",
+      "pass": true,
+      "detail": "palm.western_lines.fate_and_sun_definitions"
+    },
+    {
+      "id": "claim-original:palm.western_lines.fate_and_sun_definitions",
+      "pass": true,
+      "detail": "The Sun line, called for clearness Via Solis, is a right line which begins at the mount of Apollo and stretches into the hollow of the hand after curving towards the mount of the Moon. The line of Fortune or Saturn begins at the wrist lines, extends through the hollow of the hand to the mount of the middle finger."
+    },
+    {
+      "id": "claim-normalized:palm.western_lines.fate_and_sun_definitions",
+      "pass": true,
+      "detail": "《Indian Palmistry》记录太阳线和命运/土星线的位置与名称，证明旧库这两类术语属于西式/印度手相文献传统；它不支持旧库整组现代职业和成名年龄解释。"
+    },
+    {
+      "id": "claim-sources:palm.western_lines.fate_and_sun_definitions",
+      "pass": true,
+      "detail": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.western_lines.fate_and_sun_definitions:dale-indian-palmistry-fate-sun-lines",
+      "pass": true,
+      "detail": "dale-indian-palmistry-fate-sun-lines"
+    },
+    {
+      "id": "claim-runtime-policy:palm.western_lines.fate_and_sun_definitions",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
+      "id": "claim-unique:palm.western_lines.liver_health_variant",
+      "pass": true,
+      "detail": "palm.western_lines.liver_health_variant"
+    },
+    {
+      "id": "claim-original:palm.western_lines.liver_health_variant",
+      "pass": true,
+      "detail": "The Liver or natural mean runs straight through the middle of the hand. The Liver Line. This line being straight and not dissected by obscure little lines, denotes a healthy body."
+    },
+    {
+      "id": "claim-normalized:palm.western_lines.liver_health_variant",
+      "pass": true,
+      "detail": "该历史见证存在肝线及健康关联，但其名称、位置和解释体系与旧库“健康线从小指下斜向生命线”并不一致，因此只能记录跨版本差异，不能授证旧库医学推断。"
+    },
+    {
+      "id": "claim-sources:palm.western_lines.liver_health_variant",
+      "pass": true,
+      "detail": [
+        "dale-indian-palmistry-liver-line"
+      ]
+    },
+    {
+      "id": "claim-source-resolves:palm.western_lines.liver_health_variant:dale-indian-palmistry-liver-line",
+      "pass": true,
+      "detail": "dale-indian-palmistry-liver-line"
+    },
+    {
+      "id": "claim-runtime-policy:palm.western_lines.liver_health_variant",
+      "pass": true,
+      "detail": "cultural_learning_with_citation"
+    },
+    {
       "id": "adjudication-locator:compendium.face.three_stops.equal",
       "pass": true,
       "detail": "10-xiangshu/01-mianxiang.md:18"
@@ -2338,7 +2494,7 @@
     {
       "id": "adjudication-locator:compendium.face.mouth.features",
       "pass": true,
-      "detail": "10-xiangshu/01-mianxiang.md:118-126"
+      "detail": "10-xiangshu/01-mianxiang.md:117-126"
     },
     {
       "id": "adjudication-reason:compendium.face.mouth.features",
@@ -2364,6 +2520,261 @@
       "id": "adjudication-runtime-blocked:compendium.face.chin.features",
       "pass": true,
       "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.lesson-header",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:3-5"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.lesson-header",
+      "pass": true,
+      "detail": "难度标签属于课程编排；师父引语没有作品、人物或版本见证，只能保留为旧产品编辑文本，不能冒充典籍原文或历史事实。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.lesson-header",
+      "pass": true,
+      "detail": "editorial_product_metadata_not_source"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.legacy-wuxing-code-shell",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:48-54"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.legacy-wuxing-code-shell",
+      "pass": true,
+      "detail": "对象声明与闭合符属于旧产品示例代码，不需要典籍出处；对象内部形态和人格字段已由单独裁决处理，此条不改变其内容状态。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.legacy-wuxing-code-shell",
+      "pass": true,
+      "detail": "legacy_product_code_container"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.legacy-palace-code-shell",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:146-175"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.legacy-palace-code-shell",
+      "pass": true,
+      "detail": "表头、对象声明与闭合符属于旧产品结构元数据；十二宫内容已有独立逐宫裁决，此条不授予任何位置或解释来源。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.legacy-palace-code-shell",
+      "pass": true,
+      "detail": "legacy_product_code_container"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.ai-product-spec",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:203-217"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.ai-product-spec",
+      "pass": true,
+      "detail": "这些行描述旧产品拟议功能、免责声明和课程导航，不是待回指典籍的传统知识；其中综合人格、财运、健康简评也不能作为已验证产品能力恢复。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.ai-product-spec",
+      "pass": true,
+      "detail": "legacy_product_spec_not_classical_claim"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.lesson-header",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:3-5"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.lesson-header",
+      "pass": true,
+      "detail": "难度标签属于课程编排；师父引语及左右手规则没有作品、版本和定位，只能保留为旧编辑文本，不能冒充典籍引文。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.lesson-header",
+      "pass": true,
+      "detail": "editorial_product_metadata_not_source"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.legacy-wuxing-code-shell",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:20-26"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.legacy-wuxing-code-shell",
+      "pass": true,
+      "detail": "对象声明与闭合符属于旧产品示例代码；内部五形形态和人格字段已有独立裁决，此条不改变其内容状态。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.legacy-wuxing-code-shell",
+      "pass": true,
+      "detail": "legacy_product_code_container"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.ai-product-spec",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:244-264"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.ai-product-spec",
+      "pass": true,
+      "detail": "这些行属于旧产品功能、拍摄流程、免责声明和导航，不是传统知识；掌丘测量及综合人格、事业、健康简评不因出现在产品说明里取得来源资格。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.ai-product-spec",
+      "pass": true,
+      "detail": "legacy_product_spec_not_classical_claim"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.five-element-legacy-code-content",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:49-53"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.five-element-legacy-code-content",
+      "pass": true,
+      "detail": "金方、木瘦直、水圆厚、火丰锐、土敦厚可回接《神相全编》；代码里的完整细节和果断、仁慈、智慧、热情、稳重等现代人格词不能随形态一并晋升。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.five-element-legacy-code-content",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.five-element-legacy-code-content",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:21-25"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.five-element-legacy-code-content",
+      "pass": true,
+      "detail": "木长直、金方正、水圆短、土敦厚、火尖露可回接《公笃相法》；代码里的质地细节和务实、理想、聪明、热情等人格词未获该见证支持。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.five-element-legacy-code-content",
+      "pass": true,
+      "detail": "partly_supported_with_extra_claims"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.three-stops-period-mapping",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:14-16"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.three-stops-period-mapping",
+      "pass": true,
+      "detail": "当前见证支持三停部位和部分初中末阶段传统说法，但未支持旧库精确年龄段及智慧、事业、意志、财富、子女等整组事项；原典还明确提醒不可一体而断。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.three-stops-period-mapping",
+      "pass": true,
+      "detail": "period_and_topic_mapping_not_established"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.ear-low-trait",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:139"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.ear-low-trait",
+      "pass": true,
+      "detail": "本轮在选定《神相全编》见证中未定位到该现代人格二联结论，不能仅因相术典籍存在耳相章节而推定成立。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.ear-low-trait",
+      "pass": true,
+      "detail": "source_not_yet_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.face.complexion-medical-mix",
+      "pass": true,
+      "detail": "10-xiangshu/01-mianxiang.md:183-195"
+    },
+    {
+      "id": "adjudication-reason:compendium.face.complexion-medical-mix",
+      "pass": true,
+      "detail": "《神相全编》确有按部位明暗和多种颜色作传统吉凶判断，但旧库把颜色直接等同肝气、肺气、肾虚、脾虚、失血、消化问题和具体宫位事件，超出本段见证并混入医学诊断。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.face.complexion-medical-mix",
+      "pass": true,
+      "detail": "partly_supported_with_medical_extrapolation"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.fate-line",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:130-140"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.fate-line",
+      "pass": true,
+      "detail": "历史西式/印度手相见证支持命运/土星线由腕部向中指丘延伸的术语体系，但不支持旧库自由职业、家族帮助、公众事业和 35/50 岁节点等整组现代解释。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.fate-line",
+      "pass": true,
+      "detail": "cross_tradition_definition_supported_interpretations_not"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.sun-line",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:146-153"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.sun-line",
+      "pass": true,
+      "detail": "历史西式/印度手相见证支持太阳线/Via Solis 的名称和大致位置，但不支持旧库默默耕耘、靠才华成名、从感情线起即中晚年成名和越长越好等整组解释。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.sun-line",
+      "pass": true,
+      "detail": "cross_tradition_definition_supported_interpretations_not"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.marriage-lines",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:159-168"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.marriage-lines",
+      "pass": true,
+      "detail": "本轮没有为这组婚姻线分类选定可定位的历史见证；搜索结果中的现代网页不能代替版本明确的文献来源。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.marriage-lines",
+      "pass": true,
+      "detail": "source_not_yet_located"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.health-line",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:174-179"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.health-line",
+      "pass": true,
+      "detail": "历史见证存在肝线及健康关联，但位置和术语与旧库不一致；旧库消化系统、肝胆问题和神经紧张等医学推断不能由手纹直接授证。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.health-line",
+      "pass": true,
+      "detail": "historical_variant_conflicts_and_medical_extrapolation"
+    },
+    {
+      "id": "adjudication-locator:compendium.palm.finger-gap-pinky-trait",
+      "pass": true,
+      "detail": "10-xiangshu/02-shouxiang.md:218-221"
+    },
+    {
+      "id": "adjudication-reason:compendium.palm.finger-gap-pinky-trait",
+      "pass": true,
+      "detail": "指缝理财二分已另行裁决；本轮仍未定位小指歪斜或距离与独立人格的具体版本见证。"
+    },
+    {
+      "id": "adjudication-runtime-blocked:compendium.palm.finger-gap-pinky-trait",
+      "pass": true,
+      "detail": "source_not_yet_located"
     },
     {
       "id": "raw-preserved:database/xuanxue/compendium-new/10-xiangshu/01-mianxiang.md",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "doctrine": "classical_source_first",
-  "generatedAt": "2026-07-11T17:34:17.713Z",
+  "generatedAt": "2026-07-11T17:42:25.137Z",
   "scope": "Every non-empty line in the two canonical xiangshu raw Markdown files.",
   "sourceFiles": [
     {
@@ -22,8 +22,8 @@
   "counts": {
     "records": 386,
     "structural": 100,
-    "adjudicatedRecords": 191,
-    "pendingSourceAdjudication": 95
+    "adjudicatedRecords": 286,
+    "pendingSourceAdjudication": 0
   },
   "records": [
     {
@@ -48,8 +48,10 @@
       "lineKind": "blockquote",
       "rawText": "> **难度标签**：🟢必修：五官定位·三停·五行面型 | 🟡进阶：十二宫·流年气色 | 🔴专研：骨相·百岁流年图",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.lesson-header"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -62,8 +64,10 @@
       "lineKind": "blockquote",
       "rawText": "> *\"相由心生，但也由形定。面相不是迷信——它是几千年观察人类面部特征与性格命运关联的经验体系。\"——师父*",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.lesson-header"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -132,10 +136,17 @@
       "lineKind": "code",
       "rawText": "上停：发际线 → 眉毛    代表：少年运（15-30岁）·智慧·祖荫·父母缘",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.three-stops-period-mapping"
+      ],
+      "canonicalClaimIds": [
+        "face.three_stops.definition",
+        "face.three_stops.no_single_factor"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p14-three-stops"
+      ],
       "runtimeEligible": false
     },
     {
@@ -146,10 +157,17 @@
       "lineKind": "code",
       "rawText": "中停：眉毛 → 鼻尖      代表：中年运（31-50岁）·事业·意志·自我",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.three-stops-period-mapping"
+      ],
+      "canonicalClaimIds": [
+        "face.three_stops.definition",
+        "face.three_stops.no_single_factor"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p14-three-stops"
+      ],
       "runtimeEligible": false
     },
     {
@@ -160,10 +178,17 @@
       "lineKind": "code",
       "rawText": "下停：鼻尖 → 下巴      代表：晚年运（51岁后）·财富·子女·晚景",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.three-stops-period-mapping"
+      ],
+      "canonicalClaimIds": [
+        "face.three_stops.definition",
+        "face.three_stops.no_single_factor"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p14-three-stops"
+      ],
       "runtimeEligible": false
     },
     {
@@ -580,8 +605,10 @@
       "lineKind": "code",
       "rawText": "const FACE_WUXING = {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -594,10 +621,17 @@
       "lineKind": "code",
       "rawText": "metal: { shape:'方脸', features:'骨骼分明·线条硬朗·面白', personality:'果断刚毅' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell",
+        "compendium.face.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "face.five_elements.forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p50-five-element-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -608,10 +642,17 @@
       "lineKind": "code",
       "rawText": "wood:  { shape:'长脸', features:'瘦长·额窄颧高·面青', personality:'仁慈善思' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell",
+        "compendium.face.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "face.five_elements.forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p50-five-element-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -622,10 +663,17 @@
       "lineKind": "code",
       "rawText": "water: { shape:'圆脸', features:'肉多圆润·面黑润·下巴圆', personality:'智慧灵活' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell",
+        "compendium.face.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "face.five_elements.forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p50-five-element-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -636,10 +684,17 @@
       "lineKind": "code",
       "rawText": "fire:  { shape:'尖脸', features:'额宽下巴窄·面红·眼锐', personality:'热情急躁' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell",
+        "compendium.face.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "face.five_elements.forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p50-five-element-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -650,10 +705,17 @@
       "lineKind": "code",
       "rawText": "earth: { shape:'方圆', features:'敦厚·鼻大·面黄·肉厚', personality:'稳重诚信' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell",
+        "compendium.face.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "face.five_elements.forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p50-five-element-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -664,8 +726,10 @@
       "lineKind": "code",
       "rawText": "};",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-wuxing-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -1576,10 +1640,16 @@
       "lineKind": "code",
       "rawText": "大嘴：慷慨·口才好·社交达人",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.mouth.features"
+      ],
+      "canonicalClaimIds": [
+        "face.features.mouth.traditional_forms"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p48-p554-mouth-form"
+      ],
       "runtimeEligible": false
     },
     {
@@ -1952,8 +2022,10 @@
       "lineKind": "code",
       "rawText": "耳低于眉：性格温和·服从性强",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ear-low-trait"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -2008,8 +2080,10 @@
       "lineKind": "table_row",
       "rawText": "| 宫位 | 位置 | 主管 |",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-palace-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -2038,7 +2112,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2083,7 +2158,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2128,7 +2204,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2173,7 +2250,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2218,7 +2296,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2263,7 +2342,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2308,7 +2388,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2353,7 +2434,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2398,7 +2480,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2443,7 +2526,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2488,7 +2572,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2533,7 +2618,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.table"
+        "compendium.face.twelve_palaces.table",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2590,8 +2676,10 @@
       "lineKind": "code",
       "rawText": "const FACE_12_PALACES = {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-palace-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -2606,7 +2694,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2650,7 +2739,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2694,7 +2784,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2738,7 +2829,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2782,7 +2874,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2826,7 +2919,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2870,7 +2964,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2914,7 +3009,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -2958,7 +3054,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -3002,7 +3099,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -3046,7 +3144,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -3090,7 +3189,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.face.twelve_palaces.legacy_code"
+        "compendium.face.twelve_palaces.legacy_code",
+        "compendium.face.legacy-palace-code-shell"
       ],
       "canonicalClaimIds": [
         "face.palaces.ming.location",
@@ -3132,8 +3232,10 @@
       "lineKind": "code",
       "rawText": "};",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.legacy-palace-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3202,10 +3304,16 @@
       "lineKind": "code",
       "rawText": "气色是面相的「动态指标」——面型五官是先天的，气色是当前状态。",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3216,10 +3324,16 @@
       "lineKind": "code",
       "rawText": "红润/黄明：运势好·健康·有喜事",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3230,10 +3344,16 @@
       "lineKind": "code",
       "rawText": "暗沉/灰败：运势低·健康差·需注意",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3244,10 +3364,16 @@
       "lineKind": "code",
       "rawText": "青色：肝气郁结·受惊·有怒气",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3258,10 +3384,16 @@
       "lineKind": "code",
       "rawText": "白色：肺气虚·悲伤·失血",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3272,10 +3404,16 @@
       "lineKind": "code",
       "rawText": "黑色：肾虚·恐惧·重病征兆",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3286,10 +3424,16 @@
       "lineKind": "code",
       "rawText": "黄色：脾虚·消化问题",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3300,10 +3444,16 @@
       "lineKind": "code",
       "rawText": "某个宫位突然变色 → 该宫对应的事务即将有变化",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3314,10 +3464,16 @@
       "lineKind": "code",
       "rawText": "如：印堂发暗 → 近期运势下降",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3328,10 +3484,16 @@
       "lineKind": "code",
       "rawText": "鼻头发红 → 最近花钱多/有酒色之事",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3342,10 +3504,16 @@
       "lineKind": "code",
       "rawText": "眼下发青 → 睡眠差/肾虚/子女有事",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.complexion-medical-mix"
+      ],
+      "canonicalClaimIds": [
+        "face.complexion.traditional_color_associations"
+      ],
+      "sourceRefIds": [
+        "sxqb-905153-p535-complexion"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3412,8 +3580,10 @@
       "lineKind": "code",
       "rawText": "AI通过摄像头或照片分析时，重点看：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3426,8 +3596,10 @@
       "lineKind": "code",
       "rawText": "1. 面型判断（五行归类）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3440,8 +3612,10 @@
       "lineKind": "code",
       "rawText": "2. 三停比例（上中下哪个突出）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3454,8 +3628,10 @@
       "lineKind": "code",
       "rawText": "3. 五官逐一分析（大小·形状·位置·对称性）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3468,8 +3644,10 @@
       "lineKind": "code",
       "rawText": "4. 印堂状态（命宫）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3482,8 +3660,10 @@
       "lineKind": "code",
       "rawText": "5. 整体气色",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3496,8 +3676,10 @@
       "lineKind": "code",
       "rawText": "6. 痣的位置和含义（可选）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3510,8 +3692,10 @@
       "lineKind": "code",
       "rawText": "7. 综合给出性格·财运·事业·感情·健康的简评",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3538,8 +3722,10 @@
       "lineKind": "blockquote",
       "rawText": "> ⚠️ **重要声明**：面相分析基于传统文化经验，不是科学诊断。AI分析受拍摄角度、光线、表情影响，仅供趣味参考。",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3566,8 +3752,10 @@
       "lineKind": "prose",
       "rawText": "**下一课 →** [手相](02-shouxiang.md)",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.face.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3594,8 +3782,10 @@
       "lineKind": "blockquote",
       "rawText": "> **难度标签**：🟢必修：三大主线·手型 | 🟡进阶：辅助线·丘位·指节 | 🔴专研：特殊纹路·流年推算",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.lesson-header"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3608,8 +3798,10 @@
       "lineKind": "blockquote",
       "rawText": "> *\"手是人的第二张脸。掌纹记录了你的先天禀赋和后天经历。左手看先天，右手看后天——但现代手相学以常用手为主。\"——师父*",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.lesson-header"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3804,8 +3996,10 @@
       "lineKind": "code",
       "rawText": "const HAND_WUXING = {",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -3818,10 +4012,17 @@
       "lineKind": "code",
       "rawText": "metal: { palm:'方形', fingers:'短·齐·骨节明显', texture:'硬·弹性好', personality:'务实守信' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell",
+        "compendium.palm.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "palm.form.five_elements"
+      ],
+      "sourceRefIds": [
+        "gdxfx-419831-p19-five-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3832,10 +4033,17 @@
       "lineKind": "code",
       "rawText": "wood:  { palm:'长方形', fingers:'长·纤细·指节匀称', texture:'偏硬·有弹性', personality:'理想主义·艺术' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell",
+        "compendium.palm.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "palm.form.five_elements"
+      ],
+      "sourceRefIds": [
+        "gdxfx-419831-p19-five-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3846,10 +4054,17 @@
       "lineKind": "code",
       "rawText": "water: { palm:'圆形', fingers:'圆润·指尖圆', texture:'软·肉多', personality:'灵活聪明' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell",
+        "compendium.palm.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "palm.form.five_elements"
+      ],
+      "sourceRefIds": [
+        "gdxfx-419831-p19-five-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3860,10 +4075,17 @@
       "lineKind": "code",
       "rawText": "fire:  { palm:'长形·偏瘦', fingers:'尖·指缝大', texture:'偏干·掌红', personality:'热情创造' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell",
+        "compendium.palm.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "palm.form.five_elements"
+      ],
+      "sourceRefIds": [
+        "gdxfx-419831-p19-five-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3874,10 +4096,17 @@
       "lineKind": "code",
       "rawText": "earth: { palm:'方厚', fingers:'短粗·有力', texture:'厚实·粗糙', personality:'踏实耐劳' },",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell",
+        "compendium.palm.five-element-legacy-code-content"
+      ],
+      "canonicalClaimIds": [
+        "palm.form.five_elements"
+      ],
+      "sourceRefIds": [
+        "gdxfx-419831-p19-five-forms"
+      ],
       "runtimeEligible": false
     },
     {
@@ -3888,8 +4117,10 @@
       "lineKind": "code",
       "rawText": "};",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.legacy-wuxing-code-shell"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -5672,10 +5903,16 @@
       "lineKind": "code",
       "rawText": "位置：掌心纵向，从手腕向中指方向延伸",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5686,10 +5923,16 @@
       "lineKind": "code",
       "rawText": "含义：事业·命运走向·社会地位",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5700,10 +5943,16 @@
       "lineKind": "code",
       "rawText": "有且清晰 → 事业目标明确·有方向感",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5714,10 +5963,16 @@
       "lineKind": "code",
       "rawText": "没有 → 不代表没事业！代表自由职业型·不走传统路线",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5728,10 +5983,16 @@
       "lineKind": "code",
       "rawText": "起于手腕中央 → 白手起家·靠自己",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5742,10 +6003,16 @@
       "lineKind": "code",
       "rawText": "起于生命线 → 家族帮助·受家庭影响",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5756,10 +6023,16 @@
       "lineKind": "code",
       "rawText": "起于月丘（小指侧掌底）→ 贵人运·适合公众事业",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5770,10 +6043,16 @@
       "lineKind": "code",
       "rawText": "起于智慧线 → 中年（35左右）才找到方向",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5784,10 +6063,16 @@
       "lineKind": "code",
       "rawText": "起于感情线 → 晚成型·50后才稳定",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5798,10 +6083,16 @@
       "lineKind": "code",
       "rawText": "断断续续 → 事业多变·跳槽多",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.fate-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5854,10 +6145,16 @@
       "lineKind": "code",
       "rawText": "位置：无名指下方的纵向线",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5868,10 +6165,16 @@
       "lineKind": "code",
       "rawText": "含义：名声·成就·满足感·艺术才华",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5882,10 +6185,16 @@
       "lineKind": "code",
       "rawText": "有且清晰 → 有名望·事业有成就感·不一定有钱但有满足",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5896,10 +6205,16 @@
       "lineKind": "code",
       "rawText": "没有 → 默默耕耘型·不求名",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5910,10 +6225,16 @@
       "lineKind": "code",
       "rawText": "从感情线起 → 中晚年成名",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5924,10 +6245,16 @@
       "lineKind": "code",
       "rawText": "从智慧线起 → 靠才华成名",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5938,10 +6265,16 @@
       "lineKind": "code",
       "rawText": "越长越好",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.sun-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.fate_and_sun_definitions"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-fate-sun-lines"
+      ],
       "runtimeEligible": false
     },
     {
@@ -5994,8 +6327,10 @@
       "lineKind": "code",
       "rawText": "位置：小指根部与感情线之间的短横线",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6008,8 +6343,10 @@
       "lineKind": "code",
       "rawText": "含义：重要感情关系（不一定是法律婚姻）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6022,8 +6359,10 @@
       "lineKind": "code",
       "rawText": "一条深而清晰 → 一段重要感情·稳定",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6036,8 +6375,10 @@
       "lineKind": "code",
       "rawText": "两条或以上 → 多段重要感情经历",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6050,8 +6391,10 @@
       "lineKind": "code",
       "rawText": "长 → 感情持久深厚",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6064,8 +6407,10 @@
       "lineKind": "code",
       "rawText": "短 → 短暂但深刻的关系",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6078,8 +6423,10 @@
       "lineKind": "code",
       "rawText": "上翘 → 对感情要求高·可能不婚",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6092,8 +6439,10 @@
       "lineKind": "code",
       "rawText": "下弯 → 对方可能先离开",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6106,8 +6455,10 @@
       "lineKind": "code",
       "rawText": "分叉 → 有分离可能",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.marriage-lines"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6162,10 +6513,16 @@
       "lineKind": "code",
       "rawText": "位置：从小指下方斜向生命线方向",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.health-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.liver_health_variant"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-liver-line"
+      ],
       "runtimeEligible": false
     },
     {
@@ -6176,10 +6533,16 @@
       "lineKind": "code",
       "rawText": "含义：健康状况（反向指标——没有最好）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.health-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.liver_health_variant"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-liver-line"
+      ],
       "runtimeEligible": false
     },
     {
@@ -6190,10 +6553,16 @@
       "lineKind": "code",
       "rawText": "没有 → 好事！代表健康状况佳",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.health-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.liver_health_variant"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-liver-line"
+      ],
       "runtimeEligible": false
     },
     {
@@ -6204,10 +6573,16 @@
       "lineKind": "code",
       "rawText": "有且波浪/断续 → 消化系统·肝胆问题",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.health-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.liver_health_variant"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-liver-line"
+      ],
       "runtimeEligible": false
     },
     {
@@ -6218,10 +6593,16 @@
       "lineKind": "code",
       "rawText": "有且清晰 → 需注意健康·神经紧张型",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
-      "canonicalClaimIds": [],
-      "sourceRefIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.health-line"
+      ],
+      "canonicalClaimIds": [
+        "palm.western_lines.liver_health_variant"
+      ],
+      "sourceRefIds": [
+        "dale-indian-palmistry-liver-line"
+      ],
       "runtimeEligible": false
     },
     {
@@ -6746,8 +7127,10 @@
       "lineKind": "code",
       "rawText": "手指并拢时：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger-gap-pinky-trait"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -6762,7 +7145,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.palm.finger_gaps_wealth"
+        "compendium.palm.finger_gaps_wealth",
+        "compendium.palm.finger-gap-pinky-trait"
       ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
@@ -6778,7 +7162,8 @@
       "preservationStatus": "raw_preserved",
       "adjudicationStatus": "partially_or_fully_adjudicated",
       "adjudicationIds": [
-        "compendium.palm.finger_gaps_wealth"
+        "compendium.palm.finger_gaps_wealth",
+        "compendium.palm.finger-gap-pinky-trait"
       ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
@@ -6792,8 +7177,10 @@
       "lineKind": "code",
       "rawText": "小指特别歪/远离无名指 → 独立·与众不同",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.finger-gap-pinky-trait"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7014,8 +7401,10 @@
       "lineKind": "code",
       "rawText": "AI通过摄像头或照片分析时，重点看：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7028,8 +7417,10 @@
       "lineKind": "code",
       "rawText": "1. 手型判断（五行归类）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7042,8 +7433,10 @@
       "lineKind": "code",
       "rawText": "2. 三大主线（生命线·智慧线·感情线的长度·深浅·走向·特征）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7056,8 +7449,10 @@
       "lineKind": "code",
       "rawText": "3. 命运线有无及状态",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7070,8 +7465,10 @@
       "lineKind": "code",
       "rawText": "4. 掌丘隆起/凹陷情况",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7084,8 +7481,10 @@
       "lineKind": "code",
       "rawText": "5. 手指比例",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7098,8 +7497,10 @@
       "lineKind": "code",
       "rawText": "6. 特殊纹路（岛纹·链纹·星纹·十字纹等）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7112,8 +7513,10 @@
       "lineKind": "code",
       "rawText": "7. 综合给出性格·事业·感情·健康·财运简评",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7126,8 +7529,10 @@
       "lineKind": "code",
       "rawText": "拍摄要求：",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7140,8 +7545,10 @@
       "lineKind": "code",
       "rawText": "- 掌心朝上·手指自然张开",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7154,8 +7561,10 @@
       "lineKind": "code",
       "rawText": "- 光线充足均匀·避免阴影",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7168,8 +7577,10 @@
       "lineKind": "code",
       "rawText": "- 尽量垂直拍摄（减少透视变形）",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7182,8 +7593,10 @@
       "lineKind": "code",
       "rawText": "- 拍常用手（惯用手）为主",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7210,8 +7623,10 @@
       "lineKind": "blockquote",
       "rawText": "> ⚠️ **重要声明**：手相分析基于传统文化经验，不是科学诊断。掌纹会随年龄和经历变化。AI分析受拍摄质量影响，仅供趣味参考。",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false
@@ -7238,8 +7653,10 @@
       "lineKind": "prose",
       "rawText": "**← 上一课** [面相](01-mianxiang.md)",
       "preservationStatus": "raw_preserved",
-      "adjudicationStatus": "source_not_yet_located",
-      "adjudicationIds": [],
+      "adjudicationStatus": "partially_or_fully_adjudicated",
+      "adjudicationIds": [
+        "compendium.palm.ai-product-spec"
+      ],
       "canonicalClaimIds": [],
       "sourceRefIds": [],
       "runtimeEligible": false

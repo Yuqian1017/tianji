@@ -158,6 +158,12 @@
           "locator": "CTP URN ctp:ws905153, HTML row p594 (displayed text row 593)",
           "originalText": "三才者，額為天，欲闊而圓，名曰有天者貴。鼻為人，欲旺而齊，名曰有人者壽。頦為地，欲方而闊，名曰有地者富。",
           "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
+        },
+        {
+          "id": "sxqb-905153-p535-complexion",
+          "locator": "CTP URN ctp:ws905153, HTML row p535 (displayed text row 534)",
+          "originalText": "夫氣色印堂山根光明者吉，暗慘者滯。年壽黃明者吉，黑病赤官災青破耗白哭泣。准頭黃明者，喜慶立至。黑大病。赤紅者破耗。白者破毒。",
+          "transcriptionStatus": "bounded_excerpt_from_longer_ctext_row_scan_crosscheck_pending"
         }
       ]
     },
@@ -266,6 +272,31 @@
           "locator": "卷八·論手, chapter 1k2ktfsndzy1n, pages 709-711",
           "originalText": "指纖而長者，聰俊；指短而突者，愚賤。指柔而密者，蓄積；指硬而疏者，破敗。",
           "transcriptionStatus": "bounded_shidian_transcription_scan_crosscheck_pending"
+        }
+      ]
+    },
+    {
+      "id": "western-indian-palmistry-dale-lines",
+      "title": "Indian Palmistry: The Lines",
+      "sourceType": "historical_reference_witness",
+      "traditionalAttribution": "Mrs. J. B. Dale (Helena Fenwick Dale)",
+      "attributionStatus": "wikisource_author_record",
+      "witness": "Public-domain scan transcription on Wikisource",
+      "witnessStatus": "text_witness_located_scan_page_crosscheck_pending",
+      "url": "https://en.wikisource.org/wiki/Indian_Palmistry/The_Lines",
+      "repository": "Wikisource",
+      "excerpts": [
+        {
+          "id": "dale-indian-palmistry-fate-sun-lines",
+          "locator": "The Lines, opening numbered list, items 6 and 8",
+          "originalText": "The Sun line, called for clearness Via Solis, is a right line which begins at the mount of Apollo and stretches into the hollow of the hand after curving towards the mount of the Moon. The line of Fortune or Saturn begins at the wrist lines, extends through the hollow of the hand to the mount of the middle finger.",
+          "transcriptionStatus": "public_domain_wikisource_text_scan_page_crosscheck_pending"
+        },
+        {
+          "id": "dale-indian-palmistry-liver-line",
+          "locator": "The Lines, opening numbered list item 2 and section The Liver Line",
+          "originalText": "The Liver or natural mean runs straight through the middle of the hand. The Liver Line. This line being straight and not dissected by obscure little lines, denotes a healthy body.",
+          "transcriptionStatus": "public_domain_wikisource_text_scan_page_crosscheck_pending"
         }
       ]
     },

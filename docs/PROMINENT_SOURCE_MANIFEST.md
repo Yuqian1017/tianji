@@ -286,7 +286,7 @@
 | 版本线索 | 题宋陈抟秘传、明袁忠彻订正；书格著录为十二卷首一卷、致和堂藏板明刊本 |
 | 影印见证 | `https://old.shuge.org/ebook/shen-xiang-quan-bian/` |
 | 可搜索转录 | `https://ctext.org/wiki.pl?chapter=905153&if=en`，CTP URN `ctp:ws905153` |
-| 已固定内容 | 三停原文与“不可一体而断”；五岳、五行面型及十二宫位置；当前编号十二宫与父母宫总诀的版本差异；额、眉、眼、鼻、口、颏六组界定原文 |
+| 已固定内容 | 三停原文与“不可一体而断”；五岳、五行面型及十二宫位置；当前编号十二宫与父母宫总诀的版本差异；额、眉、眼、鼻、口、颏及气色界定原文 |
 | 归属边界 | 书名页传统题署不等于宋代作者身份已被现代版本学确认；关键条目仍需与影印页逐页复核 |
 
 ### SRC-VAL-XIANGSHU-TIEGUANDAO
@@ -338,6 +338,16 @@
 | 公开文本 | `https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Palmistry` |
 | 已固定内容 | 金星、木星、土星、太阳、水星、火星与月丘的西方命名和位置描述 |
 | 边界 | 只用于识别旧库中的跨传统来源；不支持中国五行配属、人格吉凶，也不支持旧库细分的火星正丘、负丘和平原 |
+
+### SRC-VAL-XIANGSHU-INDIAN-PALMISTRY-LINES
+
+| 字段 | 值 |
+|---|---|
+| 名称 | Helena Fenwick Dale, `Indian Palmistry: The Lines` |
+| 状态 | `historical_reference_witness`；西式/印度手相历史材料，不是中国相术典籍 |
+| 公开文本 | `https://en.wikisource.org/wiki/Indian_Palmistry/The_Lines` |
+| 已固定内容 | 太阳线/Via Solis、命运/土星线和肝线的历史名称、位置及部分传统关联 |
+| 边界 | 只用于识别跨传统术语和版本差异；不支持旧库职业年龄节点、婚姻线整套解释或通过掌纹作现代医学诊断 |
 
 ### SRC-VAL-TCM-OFFICIAL-SAFETY
 
@@ -765,6 +775,6 @@ escalation: self_care | clinician | urgent | emergency
 
 1. 共享城市与民用时区当前 374 城市域已通过；若扩大为任意坐标或固定 tzdb 版本，另建来源快照和 validation 单元。
 2. 以医经、本草、方书和医家版本为核心，逐方、逐药、逐理论条目建立原文见证；现行药典、逐穴正文和监管资料作为现代边界层并行核验。
-3. 相术两份 Markdown 的 386 条非空行已全部入 inventory，191 条已裁决、95 条待找出处；6 个来源记录、34 段摘录、42 条条目和 24 条旧文裁决已完成，继续把 CText/识典定位与影印页复核，并优先处理气色、五官剩余细断和掌纹辅助线。
+3. 相术两份 Markdown 的 386 条非空行已逐行分类完成：100 条结构、286 条裁决、0 条无人裁决；7 个来源记录、37 段摘录、45 条条目和 41 条旧文裁决共 534 项 0 fail。下一步对 accepted 主张做 CText/识典与影印页逐条复核，并独立验证真实图片视觉测量。
 4. 定义跨域 normalized schema、流派/口径字段和 review 状态机；现有逐域 core 不等于统一知识数据库已经完成。
 5. 在继续全库验证的同时，按 fresh PRD review 单独收敛首个教学切片的最小数据合同和工具闭环，避免把无界审计永久设为产品总闸。

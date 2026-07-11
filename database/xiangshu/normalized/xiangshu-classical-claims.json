@@ -463,6 +463,39 @@
       "interpretationStatus": "exact_short_witness_with_compendium_taxonomy_boundary",
       "runtimePolicy": "cultural_learning_with_citation",
       "runtimeEligible": true
+    },
+    {
+      "id": "face.complexion.traditional_color_associations",
+      "domain": "face",
+      "topic": "complexion",
+      "originalText": "夫氣色印堂山根光明者吉，暗慘者滯。年壽黃明者吉，黑病赤官災青破耗白哭泣。准頭黃明者，喜慶立至。",
+      "normalizedClaim": "《神相全编》当前见证确有按部位明暗与黄、黑、赤、青、白作传统判断的气色层；它不支持把这些颜色直接等同现代肝、肺、肾、脾疾病诊断。",
+      "sourceRefIds": ["sxqb-905153-p535-complexion"],
+      "interpretationStatus": "bounded_witness_with_medical_equivalence_boundary",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.western_lines.fate_and_sun_definitions",
+      "domain": "palm",
+      "topic": "western_auxiliary_lines",
+      "originalText": "The Sun line, called for clearness Via Solis, is a right line which begins at the mount of Apollo and stretches into the hollow of the hand after curving towards the mount of the Moon. The line of Fortune or Saturn begins at the wrist lines, extends through the hollow of the hand to the mount of the middle finger.",
+      "normalizedClaim": "《Indian Palmistry》记录太阳线和命运/土星线的位置与名称，证明旧库这两类术语属于西式/印度手相文献传统；它不支持旧库整组现代职业和成名年龄解释。",
+      "sourceRefIds": ["dale-indian-palmistry-fate-sun-lines"],
+      "interpretationStatus": "historical_cross_tradition_witness",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
+    },
+    {
+      "id": "palm.western_lines.liver_health_variant",
+      "domain": "palm",
+      "topic": "western_auxiliary_lines",
+      "originalText": "The Liver or natural mean runs straight through the middle of the hand. The Liver Line. This line being straight and not dissected by obscure little lines, denotes a healthy body.",
+      "normalizedClaim": "该历史见证存在肝线及健康关联，但其名称、位置和解释体系与旧库“健康线从小指下斜向生命线”并不一致，因此只能记录跨版本差异，不能授证旧库医学推断。",
+      "sourceRefIds": ["dale-indian-palmistry-liver-line"],
+      "interpretationStatus": "historical_witness_conflicts_with_compendium_mapping",
+      "runtimePolicy": "cultural_learning_with_citation",
+      "runtimeEligible": true
     }
   ]
 }

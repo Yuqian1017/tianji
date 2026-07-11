@@ -235,7 +235,7 @@
     },
     {
       "id": "compendium.face.mouth.features",
-      "rawLocator": "10-xiangshu/01-mianxiang.md:118-126",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:117-126",
       "rawText": "嘴唇大小厚薄、嘴角、唇色和牙齿分别对应性格、表达、人缘、健康和运势",
       "status": "partly_supported_with_extra_claims",
       "canonicalClaimIds": ["face.features.mouth.traditional_forms"],
@@ -249,6 +249,159 @@
       "status": "partly_supported_with_extra_claims",
       "canonicalClaimIds": ["face.features.chin.traditional_form"],
       "reason": "当前见证只支持颏部以方阔为传统理想形态；旧库对圆、尖、双下巴及晚年、执行力、依赖性和子女的整套映射尚未定位。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.lesson-header",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:3-5",
+      "rawText": "课程难度标签与师父体例导语",
+      "status": "editorial_product_metadata_not_source",
+      "canonicalClaimIds": [],
+      "reason": "难度标签属于课程编排；师父引语没有作品、人物或版本见证，只能保留为旧产品编辑文本，不能冒充典籍原文或历史事实。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.legacy-wuxing-code-shell",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:48-54",
+      "rawText": "FACE_WUXING JavaScript 示例对象及其结构外壳",
+      "status": "legacy_product_code_container",
+      "canonicalClaimIds": [],
+      "reason": "对象声明与闭合符属于旧产品示例代码，不需要典籍出处；对象内部形态和人格字段已由单独裁决处理，此条不改变其内容状态。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.legacy-palace-code-shell",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:146-175",
+      "rawText": "十二宫表头、FACE_12_PALACES JavaScript 示例对象及结构外壳",
+      "status": "legacy_product_code_container",
+      "canonicalClaimIds": [],
+      "reason": "表头、对象声明与闭合符属于旧产品结构元数据；十二宫内容已有独立逐宫裁决，此条不授予任何位置或解释来源。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.ai-product-spec",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:203-217",
+      "rawText": "AI 分析步骤、拍摄限制、趣味参考声明与课程导航",
+      "status": "legacy_product_spec_not_classical_claim",
+      "canonicalClaimIds": [],
+      "reason": "这些行描述旧产品拟议功能、免责声明和课程导航，不是待回指典籍的传统知识；其中综合人格、财运、健康简评也不能作为已验证产品能力恢复。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.lesson-header",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:3-5",
+      "rawText": "课程难度标签与师父体例导语",
+      "status": "editorial_product_metadata_not_source",
+      "canonicalClaimIds": [],
+      "reason": "难度标签属于课程编排；师父引语及左右手规则没有作品、版本和定位，只能保留为旧编辑文本，不能冒充典籍引文。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.legacy-wuxing-code-shell",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:20-26",
+      "rawText": "HAND_WUXING JavaScript 示例对象及其结构外壳",
+      "status": "legacy_product_code_container",
+      "canonicalClaimIds": [],
+      "reason": "对象声明与闭合符属于旧产品示例代码；内部五形形态和人格字段已有独立裁决，此条不改变其内容状态。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.ai-product-spec",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:244-264",
+      "rawText": "AI 分析步骤、拍摄要求、趣味参考声明与课程导航",
+      "status": "legacy_product_spec_not_classical_claim",
+      "canonicalClaimIds": [],
+      "reason": "这些行属于旧产品功能、拍摄流程、免责声明和导航，不是传统知识；掌丘测量及综合人格、事业、健康简评不因出现在产品说明里取得来源资格。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.five-element-legacy-code-content",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:49-53",
+      "rawText": "五行面型 JavaScript 示例中的形态、色泽和人格字段",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["face.five_elements.forms"],
+      "reason": "金方、木瘦直、水圆厚、火丰锐、土敦厚可回接《神相全编》；代码里的完整细节和果断、仁慈、智慧、热情、稳重等现代人格词不能随形态一并晋升。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.five-element-legacy-code-content",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:21-25",
+      "rawText": "五行手型 JavaScript 示例中的掌形、指形、质地和人格字段",
+      "status": "partly_supported_with_extra_claims",
+      "canonicalClaimIds": ["palm.form.five_elements"],
+      "reason": "木长直、金方正、水圆短、土敦厚、火尖露可回接《公笃相法》；代码里的质地细节和务实、理想、聪明、热情等人格词未获该见证支持。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.three-stops-period-mapping",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:14-16",
+      "rawText": "上中下三停分别配置 15-30、31-50、51 岁后及智慧、事业、财富等事项",
+      "status": "period_and_topic_mapping_not_established",
+      "canonicalClaimIds": ["face.three_stops.definition", "face.three_stops.no_single_factor"],
+      "reason": "当前见证支持三停部位和部分初中末阶段传统说法，但未支持旧库精确年龄段及智慧、事业、意志、财富、子女等整组事项；原典还明确提醒不可一体而断。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.ear-low-trait",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:139",
+      "rawText": "耳低于眉对应温和与服从",
+      "status": "source_not_yet_located",
+      "canonicalClaimIds": [],
+      "reason": "本轮在选定《神相全编》见证中未定位到该现代人格二联结论，不能仅因相术典籍存在耳相章节而推定成立。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.face.complexion-medical-mix",
+      "rawLocator": "10-xiangshu/01-mianxiang.md:183-195",
+      "rawText": "气色明暗及青白黑黄红分别对应运势、喜事、肝肺肾脾疾病和宫位事务变化",
+      "status": "partly_supported_with_medical_extrapolation",
+      "canonicalClaimIds": ["face.complexion.traditional_color_associations"],
+      "reason": "《神相全编》确有按部位明暗和多种颜色作传统吉凶判断，但旧库把颜色直接等同肝气、肺气、肾虚、脾虚、失血、消化问题和具体宫位事件，超出本段见证并混入医学诊断。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.fate-line",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:130-140",
+      "rawText": "命运线位置、起点和形态对应事业方向、白手起家、家族、贵人及年龄阶段",
+      "status": "cross_tradition_definition_supported_interpretations_not",
+      "canonicalClaimIds": ["palm.western_lines.fate_and_sun_definitions"],
+      "reason": "历史西式/印度手相见证支持命运/土星线由腕部向中指丘延伸的术语体系，但不支持旧库自由职业、家族帮助、公众事业和 35/50 岁节点等整组现代解释。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.sun-line",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:146-153",
+      "rawText": "太阳线位置与有无、起点、长度对应名声、成就、艺术和成名阶段",
+      "status": "cross_tradition_definition_supported_interpretations_not",
+      "canonicalClaimIds": ["palm.western_lines.fate_and_sun_definitions"],
+      "reason": "历史西式/印度手相见证支持太阳线/Via Solis 的名称和大致位置，但不支持旧库默默耕耘、靠才华成名、从感情线起即中晚年成名和越长越好等整组解释。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.marriage-lines",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:159-168",
+      "rawText": "婚姻线的位置、数量、长短、弯曲和分叉对应关系次数、稳定性、不婚及分离",
+      "status": "source_not_yet_located",
+      "canonicalClaimIds": [],
+      "reason": "本轮没有为这组婚姻线分类选定可定位的历史见证；搜索结果中的现代网页不能代替版本明确的文献来源。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.health-line",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:174-179",
+      "rawText": "健康线位置、有无和波浪断续对应健康、消化、肝胆及神经紧张",
+      "status": "historical_variant_conflicts_and_medical_extrapolation",
+      "canonicalClaimIds": ["palm.western_lines.liver_health_variant"],
+      "reason": "历史见证存在肝线及健康关联，但位置和术语与旧库不一致；旧库消化系统、肝胆问题和神经紧张等医学推断不能由手纹直接授证。",
+      "runtimeEligible": false
+    },
+    {
+      "id": "compendium.palm.finger-gap-pinky-trait",
+      "rawLocator": "10-xiangshu/02-shouxiang.md:218-221",
+      "rawText": "并拢手指观察及小指歪斜/远离无名指对应独立与众不同",
+      "status": "source_not_yet_located",
+      "canonicalClaimIds": [],
+      "reason": "指缝理财二分已另行裁决；本轮仍未定位小指歪斜或距离与独立人格的具体版本见证。",
       "runtimeEligible": false
     }
   ]
