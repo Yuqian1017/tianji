@@ -8,22 +8,22 @@ const A = '/assets/game';
 
 // Background switches keyed by node id (applied when currentNodeId reaches the key).
 export const BG_SWITCH = {
-  'ch1-settings': `${A}/title-art.png`,
-  'ch1-s1-header': `${A}/bg-shanmen.png`,
-  'ch1-s1-060': `${A}/bg-jieyindian.png`,
-  'ch1-s2-header': `${A}/bg-langting.png`,
-  'ch1-s3-header': `${A}/bg-cangjinge.png`,
-  'ch1-s4-header': `${A}/bg-cangjinge.png`,
-  'ch1-s5-header': `${A}/bg-mingshitang.png`,
-  'ch1-s6-header': `${A}/bg-mingshitang.png`,
-  'ch1-s7-header': `${A}/bg-shanjing.png`,
+  'ch1-settings': `${A}/title-art.webp`,
+  'ch1-s1-header': `${A}/bg-shanmen.webp`,
+  'ch1-s1-060': `${A}/bg-jieyindian.webp`,
+  'ch1-s2-header': `${A}/bg-langting.webp`,
+  'ch1-s3-header': `${A}/bg-cangjinge.webp`,
+  'ch1-s4-header': `${A}/bg-cangjinge.webp`,
+  'ch1-s5-header': `${A}/bg-mingshitang.webp`,
+  'ch1-s6-header': `${A}/bg-mingshitang.webp`,
+  'ch1-s7-header': `${A}/bg-shanjing.webp`,
   // 石窟 reveal: all three CP-02 branches
-  'ch1-s7-cp02a040': `${A}/bg-shiku.png`,
-  'ch1-s7-cp02b050': `${A}/bg-shiku.png`,
-  'ch1-s7-cp02c020': `${A}/bg-shiku.png`,
-  'ch1-s8-header': `${A}/bg-shiku.png`,
-  'ch1-s8-420': `${A}/bg-mingshitang.png`,
-  'ch1-s8-hook': `${A}/bg-chenguang.png`,
+  'ch1-s7-cp02a040': `${A}/bg-shiku.webp`,
+  'ch1-s7-cp02b050': `${A}/bg-shiku.webp`,
+  'ch1-s7-cp02c020': `${A}/bg-shiku.webp`,
+  'ch1-s8-header': `${A}/bg-shiku.webp`,
+  'ch1-s8-420': `${A}/bg-mingshitang.webp`,
+  'ch1-s8-hook': `${A}/bg-chenguang.webp`,
 };
 
 // BGM switches keyed by node id. null = fade out.
@@ -37,8 +37,8 @@ export const BGM_SWITCH = {
 };
 
 export const PORTRAITS = {
-  female: `${A}/portrait-shen-f.png`,
-  male: `${A}/portrait-shen-m.png`,
+  female: `${A}/portrait-shen-f-cut.webp`, // birefnet alpha cutout (2026-07-12)
+  male: `${A}/portrait-shen-m-cut.webp`,
 };
 
 // Portrait visible from scene 2 onward (沈疏桐 in-scene rule of thumb for ch1).
@@ -51,14 +51,14 @@ export function portraitVisible(nodeId) {
 // instead the Player tracks "last switch seen" while advancing. For save-resume,
 // derive the latest switch at or before the node via scene-prefix fallback:
 export const SCENE_FALLBACK_BG = {
-  1: `${A}/bg-shanmen.png`,
-  2: `${A}/bg-langting.png`,
-  3: `${A}/bg-cangjinge.png`,
-  4: `${A}/bg-cangjinge.png`,
-  5: `${A}/bg-mingshitang.png`,
-  6: `${A}/bg-mingshitang.png`,
-  7: `${A}/bg-shanjing.png`,
-  8: `${A}/bg-shiku.png`,
+  1: `${A}/bg-shanmen.webp`,
+  2: `${A}/bg-langting.webp`,
+  3: `${A}/bg-cangjinge.webp`,
+  4: `${A}/bg-cangjinge.webp`,
+  5: `${A}/bg-mingshitang.webp`,
+  6: `${A}/bg-mingshitang.webp`,
+  7: `${A}/bg-shanjing.webp`,
+  8: `${A}/bg-shiku.webp`,
 };
 export const SCENE_FALLBACK_BGM = {
   1: `${A}/bgm-main.mp3`,
@@ -75,14 +75,14 @@ export function fallbackForNode(nodeId) {
   const m = /^ch1-s(\d)/.exec(nodeId || '');
   const scene = m ? Number(m[1]) : 0;
   return {
-    bg: SCENE_FALLBACK_BG[scene] || `${A}/title-art.png`,
+    bg: SCENE_FALLBACK_BG[scene] || `${A}/title-art.webp`,
     bgm: SCENE_FALLBACK_BGM[scene] || null,
   };
 }
 
 export const PRELOAD_IMAGES = [
-  `${A}/title-art.png`, `${A}/bg-shanmen.png`, `${A}/bg-jieyindian.png`,
-  `${A}/bg-langting.png`, `${A}/bg-cangjinge.png`, `${A}/bg-mingshitang.png`,
-  `${A}/bg-shanjing.png`, `${A}/bg-shiku.png`, `${A}/bg-chenguang.png`,
-  `${A}/portrait-shen-f.png`, `${A}/portrait-shen-m.png`,
+  `${A}/title-art.webp`, `${A}/bg-shanmen.webp`, `${A}/bg-jieyindian.webp`,
+  `${A}/bg-langting.webp`, `${A}/bg-cangjinge.webp`, `${A}/bg-mingshitang.webp`,
+  `${A}/bg-shanjing.webp`, `${A}/bg-shiku.webp`, `${A}/bg-chenguang.webp`,
+  `${A}/portrait-shen-f-cut.webp`, `${A}/portrait-shen-m-cut.webp`,
 ];

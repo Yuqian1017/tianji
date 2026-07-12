@@ -232,7 +232,11 @@ export default function Player({ save, setSave, onExit }) {
           <div className="leading-loose text-[var(--color-text)] font-body whitespace-pre-line">{nodeText()}</div>
         )}
         {isResume ? (
-          <Continue onClick={resumeCast} label="——继续摇卦——" />
+          activeCast?.paused === true ? (
+            <Continue onClick={resumeCast} label="——继续摇卦——" />
+          ) : (
+            <div className="mt-3 text-center text-xs text-[var(--color-text-dim)] font-body">（摇卦进行中——掷上方铜钱）</div>
+          )
         ) : (
           <div className="text-right text-xs text-[var(--color-text-dim)] mt-2 opacity-50 animate-pulse">▸</div>
         )}
@@ -351,9 +355,10 @@ export default function Player({ save, setSave, onExit }) {
           alt="沈疏桐"
           className="absolute bottom-0 right-[6%] h-[86%] object-contain transition-all duration-300"
           style={{
-            // multiply blends the plain cream canvas into the scene (poor-man's alpha)
-            mixBlendMode: 'multiply',
-            filter: speaking ? 'brightness(1.02)' : 'brightness(0.78)',
+            // alpha-cutout portraits (birefnet) — no blend tricks needed
+            filter: speaking
+              ? 'brightness(1.03) drop-shadow(0 6px 18px rgba(0,0,0,0.35))'
+              : 'brightness(0.72) drop-shadow(0 6px 14px rgba(0,0,0,0.25))',
             transform: speaking ? 'scale(1)' : 'scale(0.985)',
           }}
           onError={(e) => { console.warn('[game] portrait missing:', portraitSrc); e.target.style.display = 'none'; }}

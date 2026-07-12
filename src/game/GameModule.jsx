@@ -45,7 +45,7 @@ export default function GameModule() {
       {/* title art backdrop */}
       <div
         className="absolute inset-0 bg-cover bg-center rounded-2xl opacity-90"
-        style={{ backgroundImage: 'url(/assets/game/title-art.png)' }}
+        style={{ backgroundImage: 'url(/assets/game/title-art.webp)' }}
       />
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/45 via-transparent to-black/20" />
       <div className="relative max-w-md mx-auto text-center space-y-6 py-10">
