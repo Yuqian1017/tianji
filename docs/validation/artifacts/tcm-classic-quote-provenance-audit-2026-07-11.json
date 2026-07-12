@@ -1,0 +1,2991 @@
+{
+  "audit": "tcm-classic-quote-provenance",
+  "generatedAt": "2026-07-12T03:21:21.978Z",
+  "scope": "reference_42_suwen_explicit_quotes",
+  "counts": {
+    "quotes": 111,
+    "exactText": 12,
+    "normalizedContiguous": 63,
+    "segmentedEllipsis": 7,
+    "unresolved": 29,
+    "checks": 561,
+    "failures": 0
+  },
+  "boundaries": [
+    "A text match proves only that the quoted character sequence occurs in the selected local witness.",
+    "Unresolved includes editorial prompts, paraphrases, stitched excerpts, later commentary, textual variants, and possible transcription errors; each requires manual adjudication.",
+    "No quote, dose, treatment, diagnosis, prognosis, or self-care instruction becomes runtime eligible through this inventory."
+  ],
+  "failures": [],
+  "checks": [
+    {
+      "id": "doctrine",
+      "pass": true,
+      "detail": "classical_source_first"
+    },
+    {
+      "id": "scope",
+      "pass": true,
+      "detail": "reference_42_suwen_explicit_quotes"
+    },
+    {
+      "id": "record-count",
+      "pass": true,
+      "detail": 111
+    },
+    {
+      "id": "unresolved-count",
+      "pass": true,
+      "detail": 29
+    },
+    {
+      "id": "source-hash:ref42",
+      "pass": true,
+      "detail": "database/tcm/skill-v3/references/42-经典-素问要义.md"
+    },
+    {
+      "id": "source-hash:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "database/tcm/skill-v3/sources/黄帝内经素问.txt"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0004Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0004Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0005Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0023Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0023Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0023Q1",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0023Q1",
+      "pass": true,
+      "detail": 48
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0023Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0023Q1",
+      "pass": true,
+      "detail": [
+        7
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0023Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0023Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0023Q2",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0023Q2",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0023Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0023Q2",
+      "pass": true,
+      "detail": [
+        7
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0023Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0023Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0023Q3",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0023Q3",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0023Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0023Q3",
+      "pass": true,
+      "detail": [
+        8
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0024Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0024Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0024Q1",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0024Q1",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0024Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0024Q1",
+      "pass": true,
+      "detail": [
+        9
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0025Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0025Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0025Q1",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0025Q1",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0025Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0025Q1",
+      "pass": true,
+      "detail": [
+        21
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0025Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0026Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": 26
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": 49
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0027Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0027Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0027Q1",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0027Q1",
+      "pass": true,
+      "detail": 22
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0027Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0027Q1",
+      "pass": true,
+      "detail": [
+        27
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0027Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0027Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0027Q2",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0027Q2",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0027Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0027Q2",
+      "pass": true,
+      "detail": [
+        31
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0027Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0027Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0027Q3",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0027Q3",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0027Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0027Q3",
+      "pass": true,
+      "detail": [
+        31
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0027Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0027Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0027Q4",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0027Q4",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0027Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0027Q4",
+      "pass": true,
+      "detail": [
+        33
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0028Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0028Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0028Q1",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0028Q1",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0028Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0028Q1",
+      "pass": true,
+      "detail": [
+        34
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0028Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0028Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0028Q2",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0028Q2",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0028Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0028Q2",
+      "pass": true,
+      "detail": [
+        34
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0028Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0028Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0028Q3",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0028Q3",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0028Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0028Q3",
+      "pass": true,
+      "detail": [
+        247
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0029Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0029Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0029Q1",
+      "pass": true,
+      "detail": 29
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0029Q1",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0029Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0029Q1",
+      "pass": true,
+      "detail": [
+        261
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0029Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": 29
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0030Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0030Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0030Q1",
+      "pass": true,
+      "detail": 30
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0030Q1",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0030Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0030Q1",
+      "pass": true,
+      "detail": [
+        56
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0031Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0031Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0031Q1",
+      "pass": true,
+      "detail": 31
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0031Q1",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0031Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0031Q1",
+      "pass": true,
+      "detail": [
+        130
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0032Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0032Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0032Q1",
+      "pass": true,
+      "detail": 32
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0032Q1",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0032Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0032Q1",
+      "pass": true,
+      "detail": [
+        141
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0032Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0032Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0032Q2",
+      "pass": true,
+      "detail": 32
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0032Q2",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0032Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0032Q2",
+      "pass": true,
+      "detail": [
+        142
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0032Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0032Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0032Q3",
+      "pass": true,
+      "detail": 32
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0032Q3",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0032Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0032Q3",
+      "pass": true,
+      "detail": [
+        143
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q1",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q1",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0036Q1",
+      "pass": true,
+      "detail": [
+        51
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q2",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q2",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0036Q2",
+      "pass": true,
+      "detail": [
+        51
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q3",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q3",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0036Q3",
+      "pass": true,
+      "detail": [
+        55
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q5",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q5"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q5",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q5",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q5",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0036Q5",
+      "pass": true,
+      "detail": [
+        54
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q6",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q6"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q6",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q6",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q6",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0036Q6",
+      "pass": true,
+      "detail": [
+        55
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0036Q7",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0036Q7"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0036Q7",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0036Q7",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0036Q7",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0036Q7",
+      "pass": true,
+      "detail": [
+        70
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0037Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": 37
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0037Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0037Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0037Q2",
+      "pass": true,
+      "detail": 37
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0037Q2",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0037Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0037Q2",
+      "pass": true,
+      "detail": [
+        71
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0037Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0037Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0037Q3",
+      "pass": true,
+      "detail": 37
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0037Q3",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0037Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0037Q3",
+      "pass": true,
+      "detail": [
+        71
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0037Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0037Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0037Q4",
+      "pass": true,
+      "detail": 37
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0037Q4",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0037Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0037Q4",
+      "pass": true,
+      "detail": [
+        68
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0038Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": 38
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": 97
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0038Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0038Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0038Q2",
+      "pass": true,
+      "detail": 38
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0038Q2",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0038Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0038Q2",
+      "pass": true,
+      "detail": [
+        93
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0039Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0039Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0039Q1",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0039Q1",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0039Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0039Q1",
+      "pass": true,
+      "detail": [
+        104
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0039Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0039Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0039Q2",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0039Q2",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0039Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0039Q2",
+      "pass": true,
+      "detail": [
+        104
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0039Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0039Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0039Q3",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0039Q3",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0039Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0039Q3",
+      "pass": true,
+      "detail": [
+        104
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0039Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0039Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0039Q4",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0039Q4",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0039Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0039Q4",
+      "pass": true,
+      "detail": [
+        104
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0039Q5",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0039Q5"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0039Q5",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0039Q5",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0039Q5",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0039Q5",
+      "pass": true,
+      "detail": [
+        104
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0039Q6",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0039Q6"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0039Q6",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0039Q6",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0039Q6",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0039Q6",
+      "pass": true,
+      "detail": [
+        104
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0040Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0040Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0040Q1",
+      "pass": true,
+      "detail": 40
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0040Q1",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0040Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0040Q1",
+      "pass": true,
+      "detail": [
+        118
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0040Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": 40
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0040Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": 40
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": 33
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0041Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0041Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0041Q1",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0041Q1",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0041Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0041Q1",
+      "pass": true,
+      "detail": [
+        228
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0041Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0041Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0041Q2",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0041Q2",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0041Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0041Q2",
+      "pass": true,
+      "detail": [
+        229
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0045Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0045Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0045Q1",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0045Q1",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0045Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0045Q1",
+      "pass": true,
+      "detail": [
+        161
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0045Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0045Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0045Q2",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0045Q2",
+      "pass": true,
+      "detail": 32
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0045Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0045Q2",
+      "pass": true,
+      "detail": [
+        161
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0046Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0046Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0046Q1",
+      "pass": true,
+      "detail": 46
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0046Q1",
+      "pass": true,
+      "detail": 75
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0046Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0046Q1",
+      "pass": true,
+      "detail": [
+        165
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0046Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0046Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0046Q2",
+      "pass": true,
+      "detail": 46
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0046Q2",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0046Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0046Q2",
+      "pass": true,
+      "detail": [
+        164
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0047Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0047Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0047Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0047Q2",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0047Q2",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0047Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0047Q2",
+      "pass": true,
+      "detail": [
+        187
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0047Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0047Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0047Q3",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0047Q3",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0047Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0047Q3",
+      "pass": true,
+      "detail": [
+        185
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0048Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0048Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0048Q1",
+      "pass": true,
+      "detail": 48
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0048Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0048Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0048Q1",
+      "pass": true,
+      "detail": [
+        212
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0048Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0048Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0048Q2",
+      "pass": true,
+      "detail": 48
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0048Q2",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0048Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0048Q2",
+      "pass": true,
+      "detail": [
+        212
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0048Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0048Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0048Q3",
+      "pass": true,
+      "detail": 48
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0048Q3",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0048Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0048Q3",
+      "pass": true,
+      "detail": [
+        296
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0049Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0049Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0049Q1",
+      "pass": true,
+      "detail": 49
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0049Q1",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0049Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0049Q1",
+      "pass": true,
+      "detail": [
+        1036
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0049Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0049Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0049Q2",
+      "pass": true,
+      "detail": 49
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0049Q2",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0049Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0049Q2",
+      "pass": true,
+      "detail": [
+        1037
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0049Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": 49
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0056Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0056Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0056Q1",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0056Q1",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0056Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0056Q1",
+      "pass": true,
+      "detail": [
+        331
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0056Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0056Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0056Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0056Q3",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0056Q3",
+      "pass": true,
+      "detail": 18
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0056Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0056Q3",
+      "pass": true,
+      "detail": [
+        335
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0057Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0057Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0057Q1",
+      "pass": true,
+      "detail": 57
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0057Q1",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0057Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0057Q1",
+      "pass": true,
+      "detail": [
+        357
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0058Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0058Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0058Q1",
+      "pass": true,
+      "detail": 58
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0058Q1",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0058Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0058Q1",
+      "pass": true,
+      "detail": [
+        396
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0058Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0058Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0058Q2",
+      "pass": true,
+      "detail": 58
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0058Q2",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0058Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0058Q2",
+      "pass": true,
+      "detail": [
+        399
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0059Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0059Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0059Q1",
+      "pass": true,
+      "detail": 59
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0059Q1",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0059Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0059Q1",
+      "pass": true,
+      "detail": [
+        409
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0060Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0060Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0060Q1",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0060Q1",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0060Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0060Q1",
+      "pass": true,
+      "detail": [
+        205
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0061Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": 61
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": 32
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0061Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": 61
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0062Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0062Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0062Q1",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0062Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0062Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0062Q1",
+      "pass": true,
+      "detail": [
+        462
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0063Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": 63
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0064Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0064Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0064Q1",
+      "pass": true,
+      "detail": 64
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0064Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0064Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0064Q1",
+      "pass": true,
+      "detail": [
+        364
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0064Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0064Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0064Q2",
+      "pass": true,
+      "detail": 64
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0064Q2",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0064Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0064Q2",
+      "pass": true,
+      "detail": [
+        364
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0065Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0065Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0065Q1",
+      "pass": true,
+      "detail": 65
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0065Q1",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0065Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0065Q1",
+      "pass": true,
+      "detail": [
+        377
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0066Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0066Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0066Q1",
+      "pass": true,
+      "detail": 66
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0066Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0066Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0066Q1",
+      "pass": true,
+      "detail": [
+        412
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0066Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0066Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0066Q2",
+      "pass": true,
+      "detail": 66
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0066Q2",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0066Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0066Q2",
+      "pass": true,
+      "detail": [
+        494
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0066Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0066Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0066Q3",
+      "pass": true,
+      "detail": 66
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0066Q3",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0066Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0066Q3",
+      "pass": true,
+      "detail": [
+        417
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0067Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0067Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0067Q1",
+      "pass": true,
+      "detail": 67
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0067Q1",
+      "pass": true,
+      "detail": 30
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0067Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0067Q1",
+      "pass": true,
+      "detail": [
+        309
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0067Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0067Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0067Q2",
+      "pass": true,
+      "detail": 67
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0067Q2",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0067Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0067Q2",
+      "pass": true,
+      "detail": [
+        309
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0068Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0068Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0068Q1",
+      "pass": true,
+      "detail": 68
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0068Q1",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0068Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0068Q1",
+      "pass": true,
+      "detail": [
+        314
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0068Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0068Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0068Q2",
+      "pass": true,
+      "detail": 68
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0068Q2",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0068Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0068Q2",
+      "pass": true,
+      "detail": [
+        314
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0068Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0068Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0068Q3",
+      "pass": true,
+      "detail": 68
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0068Q3",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0068Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0068Q3",
+      "pass": true,
+      "detail": [
+        315
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0069Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": 69
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0069Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0069Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0069Q2",
+      "pass": true,
+      "detail": 69
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0069Q2",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0069Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0069Q2",
+      "pass": true,
+      "detail": [
+        484
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0076Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0076Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0076Q1",
+      "pass": true,
+      "detail": 76
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0076Q1",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0076Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0076Q1",
+      "pass": true,
+      "detail": [
+        1010
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0089Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0089Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0089Q1",
+      "pass": true,
+      "detail": 89
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0089Q1",
+      "pass": true,
+      "detail": 18
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0089Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0089Q1",
+      "pass": true,
+      "detail": [
+        1012
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0089Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": 89
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0090Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": 69
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0090Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0090Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0090Q2",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0090Q2",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0090Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0090Q2",
+      "pass": true,
+      "detail": [
+        1010
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0091Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0091Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0091Q1",
+      "pass": true,
+      "detail": 91
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0091Q1",
+      "pass": true,
+      "detail": 22
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0091Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0091Q1",
+      "pass": true,
+      "detail": [
+        1016
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0091Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": 91
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0092Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0092Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0092Q1",
+      "pass": true,
+      "detail": 92
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0092Q1",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0092Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0092Q1",
+      "pass": true,
+      "detail": [
+        1018
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0092Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0092Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0092Q2",
+      "pass": true,
+      "detail": 92
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0092Q2",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0092Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0092Q2",
+      "pass": true,
+      "detail": [
+        1002
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0093Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0093Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0093Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0093Q2",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0093Q2",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0093Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0093Q2",
+      "pass": true,
+      "detail": [
+        655
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0093Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0093Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0093Q3",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0093Q3",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0093Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0093Q3",
+      "pass": true,
+      "detail": [
+        655
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0093Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0093Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0093Q4",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0093Q4",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0093Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0093Q4",
+      "pass": true,
+      "detail": [
+        1006
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0094Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0094Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0094Q1",
+      "pass": true,
+      "detail": 94
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0094Q1",
+      "pass": true,
+      "detail": 63
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0094Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0094Q1",
+      "pass": true,
+      "detail": [
+        774
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0094Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": 94
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0094Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0094Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0094Q3",
+      "pass": true,
+      "detail": 94
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0094Q3",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0094Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0094Q3",
+      "pass": true,
+      "detail": [
+        774
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0095Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": 95
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": 35
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0096Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0096Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0096Q1",
+      "pass": true,
+      "detail": 96
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0096Q1",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0096Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0096Q1",
+      "pass": true,
+      "detail": [
+        949
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0097Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0097Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0097Q1",
+      "pass": true,
+      "detail": 97
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0097Q1",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0097Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0097Q1",
+      "pass": true,
+      "detail": [
+        697
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0103Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": 103
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0103Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": 103
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": 43
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0103Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": 103
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0104Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0104Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0104Q1",
+      "pass": true,
+      "detail": 104
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0104Q1",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0104Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "located-contract:tcm.classic.ref42.quote.L0104Q1",
+      "pass": true,
+      "detail": [
+        968
+      ]
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0105Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": 105
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    },
+    {
+      "id": "unique:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref42.quote.L0111Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": 111
+    },
+    {
+      "id": "quote-text:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": "manual_adjudication_required"
+    }
+  ]
+}

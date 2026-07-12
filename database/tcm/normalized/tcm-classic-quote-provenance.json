@@ -1,0 +1,2024 @@
+{
+  "schemaVersion": 1,
+  "doctrine": "classical_source_first",
+  "generatedAt": "2026-07-11",
+  "scope": "reference_42_suwen_explicit_quotes",
+  "status": "text_match_inventory_not_content_adjudication",
+  "sourceRefs": {
+    "ref42": {
+      "path": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "sha256": "a8a9481bfe4eb1ee6d6ed193d271c53d378a23a63f9ab1b9c582c1cb15ff2e47"
+    },
+    "huangdi-neijing-suwen-local-text": {
+      "path": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sha256": "ca9f5592564f787898e5f0488ef6b14950c80287af78b8ac88ba6a2d9b4f340f"
+    }
+  },
+  "counts": {
+    "quotes": 111,
+    "exactText": 12,
+    "normalizedContiguous": 63,
+    "segmentedEllipsis": 7,
+    "unresolved": 29
+  },
+  "boundaries": [
+    "A text match proves only that the quoted character sequence occurs in the selected local witness.",
+    "Unresolved includes editorial prompts, paraphrases, stitched excerpts, later commentary, textual variants, and possible transcription errors; each requires manual adjudication.",
+    "No quote, dose, treatment, diagnosis, prognosis, or self-care instruction becomes runtime eligible through this inventory."
+  ],
+  "records": [
+    {
+      "id": "tcm.classic.ref42.quote.L0004Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 4,
+      "quoteText": "某论断出自素问哪一篇+原文关键句",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0004Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 4,
+      "quoteText": "经典怎么说",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0005Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 5,
+      "quoteText": "等)属文献记载,**一律不作用药依据**——尤其小金丹含辰砂、雄黄、雌黄,剧毒,是",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0023Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 23,
+      "quoteText": "**法于阴阳,和于术数,食饮有节,起居有常,不妄作劳**,故能形与神俱,而尽终其天年,度百岁乃去",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        7
+      ],
+      "sourceSnippets": [
+        "昔在黄帝，生而神灵，弱而能言，幼而徇齐，长而敦敏，成而登天。乃问于天师曰：余闻上古之人，春秋皆度百岁，而动作不衰；今时之人，年半百而动作皆衰者，时世异耶？人将失之耶？歧伯对曰：上古之人，其知道者，法于阴阳，和于术数，食饮有节，起居有常，不妄作劳，故能形与神俱，而尽终其天年，度百岁乃去。今时之人不然也，以酒为浆，以妄为常，醉以入房，以欲竭其精，以耗散其真，不知持满，不时御神，务快其心，逆于生乐，起居无节，故半百而衰也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0023Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 23,
+      "quoteText": "以酒为浆,以妄为常,醉以入房……故半百而衰",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        7
+      ],
+      "sourceSnippets": [
+        "昔在黄帝，生而神灵，弱而能言，幼而徇齐，长而敦敏，成而登天。乃问于天师曰：余闻上古之人，春秋皆度百岁，而动作不衰；今时之人，年半百而动作皆衰者，时世异耶？人将失之耶？歧伯对曰：上古之人，其知道者，法于阴阳，和于术数，食饮有节，起居有常，不妄作劳，故能形与神俱，而尽终其天年，度百岁乃去。今时之人不然也，以酒为浆，以妄为常，醉以入房，以欲竭其精，以耗散其真，不知持满，不时御神，务快其心，逆于生乐，起居无节，故半百而衰也。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0023Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 23,
+      "quoteText": "**恬惔虚无,真气从之,精神内守,病安从来**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        8
+      ],
+      "sourceSnippets": [
+        "夫上古圣人之教下也，皆谓之虚邪贼风，避之有时，恬惔虚无，真气从之，精神内守，病安从来？是以志闲而少欲，心安而不惧，形劳而不倦，气从以顺，各从其欲，皆得所愿。故美其食，任其服，乐其俗，高下不相慕，其民故曰朴。是以嗜欲不能劳其目，淫邪不能惑其心，愚智贤不肖不惧于物，故合于道。所以能年皆度百岁，而动作不衰者，以其德全不危也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0024Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 24,
+      "quoteText": "肾者主水,受五藏六府之精而藏之",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        9
+      ],
+      "sourceSnippets": [
+        "帝曰：人年老而无子者，材力尽邪，将天数然也？歧伯曰：女子七岁，肾气盛，齿更发长；二七而天癸至，任脉通，太冲脉盛，月事以时下，故有子；三七，肾气平均，故真牙生而长极；四七，筋骨坚，发长极，身体盛壮；五七，阳明脉衰，面始焦，发始堕；六七，三阳脉衰于上，面皆焦，发始白；七七，任脉虚，太冲脉衰少，天癸竭，地道不通，故形坏而无子也。丈夫八岁，肾气实，发长齿更；二八，肾气盛，天癸至，精气溢泻，阴阳和，故能有子；三八，肾气平均，筋骨劲强，故真牙生而长极；四八，筋骨隆盛，肌肉满壮；五八，肾气衰，发堕齿槁；六八，阳气衰竭于上，面焦，发鬓颁白；七八，肝气衰，筋不能动，天癸竭，精少，肾藏衰，形体皆极；八八，则齿发去。肾者主水，受五藏六府之精而藏之，故五藏盛，乃能泻。今五藏皆衰，筋骨解堕，天癸尽矣。故发鬓白，身体重，行步不正，而无子耳。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0025Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 25,
+      "quoteText": "春夏养阳,秋冬养阴",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        21
+      ],
+      "sourceSnippets": [
+        "夫四时阴阳者，万物之根本也。所以圣人春夏养阳，秋冬养阴，以从其根，故与万物沉浮于生长之门。逆其根，则伐其本，坏其真矣。故阴阳四时者，万物之终始也，死生之本也。逆之则灾害生，从之则苛疾不起，是谓得道。道者，圣人行之，愚者佩之。从阴阳则生，逆之则死；从之则治，逆之则乱。反顺为逆，是谓内格。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0025Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 25,
+      "quoteText": "逆春气则伤肝,夏为寒变",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0026Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 26,
+      "quoteText": "**圣人不治已病治未病**,不治已乱治未乱……夫病已成而后药之,譬犹渴而穿井,斗而铸锥,不亦晚乎!",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0027Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 27,
+      "quoteText": "**阳气者,若天与日,失其所则折寿而不彰**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        27
+      ],
+      "sourceSnippets": [
+        "阳气者，若天与日，失其所则折寿而不彰。故天运当以日光明，是故阳因而上，卫外者也。因于寒，欲如运枢，起居如惊，神气乃浮。因于暑，汗，烦则喘喝，静则多言，体若燔炭，汗出而散。因于湿，首如裹，湿热不攘，大筋緛短，小筋弛长，緛短为拘，弛长为痿。因于气，为肿，四维相代，阳气乃竭。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0027Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 27,
+      "quoteText": "平旦人气生,日中而阳气隆,日西而阳气已虚",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        31
+      ],
+      "sourceSnippets": [
+        "故阳气者，一日而主外。平旦人气生，日中而阳气隆，日西而阳气已虚，气门乃闭。是故暮而收拒，无扰筋骨，无见雾露。反此三时，形乃困薄。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0027Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 27,
+      "quoteText": "暮而收拒,无扰筋骨,无见雾露",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        31
+      ],
+      "sourceSnippets": [
+        "故阳气者，一日而主外。平旦人气生，日中而阳气隆，日西而阳气已虚，气门乃闭。是故暮而收拒，无扰筋骨，无见雾露。反此三时，形乃困薄。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0027Q4",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 27,
+      "quoteText": "**阴平阳秘,精神乃治;阴阳离决,精气乃绝**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        33
+      ],
+      "sourceSnippets": [
+        "凡阴阳之要，阳密乃固。两者不和，若春无秋，若冬无夏。因而和之，是谓圣度。故阳强不能密，阴气乃绝；阴平阳秘，精神乃治；阴阳离决，精气乃绝。因于露风，乃生寒热。是以春伤于风，邪气留连，乃为洞泄；夏伤于暑，秋为痎疟；秋伤于湿，上逆而咳，发为痿厥；冬伤于寒，春必温病。四时之气，更伤五藏。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0028Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 28,
+      "quoteText": "阴之所生,本在五味;阴之五宫,伤在五味",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        34
+      ],
+      "sourceSnippets": [
+        "阴之所生，本在五味；阴之五宫，伤在五味。是故味过于酸，肝气以津，脾气乃绝；味过于咸，大骨气劳，短肌，心气抑；味过于甘，心气喘满，色黑，肾气不衡；味过于苦，脾气不濡，胃气乃厚；味过于辛，筋脉沮弛，精神乃央。是故谨和五味，骨正筋柔，气血以流，腠理以密，如是则骨气以精，谨道如法，长有天命。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0028Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 28,
+      "quoteText": "**谨和五味,骨正筋柔……长有天命**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        34
+      ],
+      "sourceSnippets": [
+        "阴之所生，本在五味；阴之五宫，伤在五味。是故味过于酸，肝气以津，脾气乃绝；味过于咸，大骨气劳，短肌，心气抑；味过于甘，心气喘满，色黑，肾气不衡；味过于苦，脾气不濡，胃气乃厚；味过于辛，筋脉沮弛，精神乃央。是故谨和五味，骨正筋柔，气血以流，腠理以密，如是则骨气以精，谨道如法，长有天命。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0028Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 28,
+      "quoteText": "**五谷为养,五果为助,五畜为益,五菜为充**,气味合而服之,以补精益气",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        247
+      ],
+      "sourceSnippets": [
+        "肝色青，宜食甘，粳米、牛肉、枣、葵皆甘。心色赤，宜食酸，小豆、犬肉、李、韭皆酸。肺色白，宜食苦，麦、羊肉、杏、薤皆苦。脾色黄，宜食咸，大豆、豕肉、栗、藿皆咸；肾色黑，宜食辛，黄黍、鸡肉、桃、葱皆辛。辛散，酸收，甘缓，苦坚，咸耎。毒药攻邪，五谷为养，五果为助，五畜为益，五菜为充，气味合而服之，以补精益气。此五者，有辛酸甘苦咸，各有所利，或散或收，或缓或急，或坚或耎，四时五藏，病随五味所宜也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0029Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 29,
+      "quoteText": "久视伤血,久卧伤气,久坐伤肉,久立伤骨,久行伤筋",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        261
+      ],
+      "sourceSnippets": [
+        "五劳所伤：久视伤血，久卧伤气，久坐伤肉，久立伤骨，久行伤筋。是谓五劳所伤。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0029Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 29,
+      "quoteText": "起而行之",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0030Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 30,
+      "quoteText": "冬伤于寒,春必温病;春伤于风,夏生飧泄;夏伤于暑,秋必痎疟;秋伤于湿,冬生咳嗽",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        56
+      ],
+      "sourceSnippets": [
+        "天有四时五行，以生长收藏，以生寒暑燥湿风。人有五藏化五气，以生喜怒悲忧恐。故喜怒伤气，寒暑伤形。暴怒伤阴，暴喜伤阳。厥气上行，满脉去形。喜怒不节，寒暑过度，生乃不固。故重阴必阳，重阳必阴。故曰：冬伤于寒，春必温病；春伤于风，夏生飧泄；夏伤于暑，秋必痎疟；秋伤于湿，冬生咳嗽。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0031Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 31,
+      "quoteText": "圣人杂合以治,各得其所宜",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        130
+      ],
+      "sourceSnippets": [
+        "故圣人杂合以治，各得其所宜。故治所以异而病皆愈者，得病之情，知治之大体也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0032Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 32,
+      "quoteText": "精神不进,志意不治,故病不可愈",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        141
+      ],
+      "sourceSnippets": [
+        "帝曰：形弊血尽而功不立者何？岐伯曰：神不使也。帝曰：何谓神不使？岐伯曰：针石，道也。精神不进，志意不治，故病不可愈。今精坏神去，荣卫不可复收。何者？嗜欲无穷，而忧患不止，精气弛坏，营泣卫除，故神去之而病不愈也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0032Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 32,
+      "quoteText": "病为本,工为标",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        142
+      ],
+      "sourceSnippets": [
+        "帝曰：夫病之始生也，极微极精，必先入结于皮肤。今良工皆称曰病成，名曰逆，则针石不能治，良药不能及也。今良工皆得其法，守其数，亲戚兄弟远近，音声日闻于耳，五色日见于目，而病不愈者，亦何暇不早乎？岐伯曰：病为本，工为标，标本不得，邪气不服，此之谓也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0032Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 32,
+      "quoteText": "**开鬼门,洁净府**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        143
+      ],
+      "sourceSnippets": [
+        "帝曰：其有不从毫毛而生，五藏阳以竭也，津液充郭，其魄独居，孤精于内，气耗于外，形不可与衣相保，此四极急而动中，是气拒于内，而形施于外，治之奈何？岐伯曰：平治于权衡，去宛陈莝，微动四极，温衣，缪刺其处，以复其形。开鬼门，洁净府，精以时服，五阳已布，疏涤五藏，故精自生，形自盛，骨肉相保，巨气乃平。帝曰：善。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "**阴阳者,天地之道也……治病必求于本**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        51
+      ],
+      "sourceSnippets": [
+        "黄帝曰：阴阳者，天地之道也，万物之纲纪，变化之父母，生杀之本始，神明之府也，治病必求于本。故积阳为天，积阴为地。阴静阳躁，阳生阴长，阳杀阴藏。阳化气，阴成形。寒极生热，热极生寒。寒气生浊，热气生清。清气在下，则生飧泄；浊气在上，则生胀。此阴阳反作，病之逆从也。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "阳化气,阴成形",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        51
+      ],
+      "sourceSnippets": [
+        "黄帝曰：阴阳者，天地之道也，万物之纲纪，变化之父母，生杀之本始，神明之府也，治病必求于本。故积阳为天，积阴为地。阴静阳躁，阳生阴长，阳杀阴藏。阳化气，阴成形。寒极生热，热极生寒。寒气生浊，热气生清。清气在下，则生飧泄；浊气在上，则生胀。此阴阳反作，病之逆从也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "重寒则热,重热则寒",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        55
+      ],
+      "sourceSnippets": [
+        "阴胜则阳病，阳胜则阴病。阳胜则热，阴胜则寒。重寒则热，重热则寒。寒伤形，热伤气，气伤痛，形伤肿。故先痛而后肿者，气伤形也；先肿而后痛者，形伤气也。风胜则动，热胜则肿，燥胜则干，寒胜则浮，湿胜则濡泻。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q4",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "**壮火食气,少火生气**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q5",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "气味辛甘发散为阳,酸苦涌泄为阴",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        54
+      ],
+      "sourceSnippets": [
+        "壮火之气衰，少火之气壮；壮火食气，气食少火；壮火散气，少火生气。气味辛甘发散为阳，酸苦涌泄为阴。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q6",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "风胜则动,热胜则肿,燥胜则干,寒胜则浮,湿胜则濡泻",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        55
+      ],
+      "sourceSnippets": [
+        "阴胜则阳病，阳胜则阴病。阳胜则热，阴胜则寒。重寒则热，重热则寒。寒伤形，热伤气，气伤痛，形伤肿。故先痛而后肿者，气伤形也；先肿而后痛者，形伤气也。风胜则动，热胜则肿，燥胜则干，寒胜则浮，湿胜则濡泻。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q7",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 36,
+      "quoteText": "**善诊者,察色按脉,先别阴阳**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        70
+      ],
+      "sourceSnippets": [
+        "善诊者，察色按脉，先别阴阳；审清浊而知部分；视喘息、听音声而知所苦；观权衡规矩而知病所主；按尺寸、观浮沉滑涩而知病所生。以治无过，以诊则不失矣！"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0037Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 37,
+      "quoteText": "其高者,因而越之;其下者,引而竭之;中满者,泻之于内;其在皮者,汗而发之",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0037Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 37,
+      "quoteText": "形不足者,温之以气;精不足者,补之以味",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        71
+      ],
+      "sourceSnippets": [
+        "故曰：病之始起也，可刺而已；其盛，可待衰而已。故因其轻而扬之，因其重而减之，因其衰而彰之。形不足者，温之以气；精不足者，补之以味。其高者，因而越之；其下者，引而竭之；中满者，泻之于内；其有邪者，渍形以为汗；其在皮者，汗而发之；其慓悍者，按而收之；其实者，散而泻之。审其阴阳，以别柔刚。阳病治阴，阴病治阳，定其血气，各守其乡，血实宜决之，气虚宜掣引之。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0037Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 37,
+      "quoteText": "阳病治阴,阴病治阳",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        71
+      ],
+      "sourceSnippets": [
+        "故曰：病之始起也，可刺而已；其盛，可待衰而已。故因其轻而扬之，因其重而减之，因其衰而彰之。形不足者，温之以气；精不足者，补之以味。其高者，因而越之；其下者，引而竭之；中满者，泻之于内；其有邪者，渍形以为汗；其在皮者，汗而发之；其慓悍者，按而收之；其实者，散而泻之。审其阴阳，以别柔刚。阳病治阴，阴病治阳，定其血气，各守其乡，血实宜决之，气虚宜掣引之。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0037Q4",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 37,
+      "quoteText": "善治者治皮毛",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        68
+      ],
+      "sourceSnippets": [
+        "故邪风之至，疾如风雨，故善治者治皮毛，其次治肌肤，其次治筋脉，其次治六府，其次治五藏。治五藏者，半死半生也。故天之邪气，感则害人五藏；水谷之寒热，感则害于六府；地之湿气，感则害皮肉筋脉。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0038Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 38,
+      "quoteText": "心者,君主之官,神明出焉;肺者,相傅之官;肝者,将军之官;胆者,中正之官;膻中者,臣使之官;脾胃者,仓廪之官;大肠传道、小肠受盛;肾者,作强之官;三焦者,决渎之官;膀胱者,州都之官,气化则能出矣",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0038Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 38,
+      "quoteText": "主明则下安,以此养生则寿",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        93
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：愿闻十二藏之相使，贵贱何如？岐伯对曰：悉乎哉问也！请遂言之。心者，君主之官也，神明出焉；肺者，相傅之官，治节出焉；肝者，将军之官，谋虑出焉；胆者，中正之官，决断出焉；膻中者，臣使之官，喜乐出焉；脾胃者，仓廪之官，五味出焉；大肠者，传道之官，变化出焉；小肠者，受盛之官，化物出焉；肾者，作强之官，伎巧出焉；三焦者，决渎之官，水道出焉；膀胱者，州都之官，津液藏焉，气化则能出矣。凡此十二官者，不得相失也。故主明则下安，以此养生则寿，殁世不殆，以为天下则大昌。主不明则十二官危，使道闭塞而不通，形乃大伤，以此养生则殃，以为天下者，其宗大危，戒之戒之！"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0039Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 39,
+      "quoteText": "生之本,神之变",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        104
+      ],
+      "sourceSnippets": [
+        "帝曰：藏象何如？岐伯曰：心者，生之本，神之变也；其华在面，其充在血脉，为阳中之太阳，通于夏气。肺者，气之本，魄之处也；其华在毛，其充在皮，为阳中之太阴，通于秋气。肾者，主蛰，封藏之本，精之处也；其华在发，其充在骨，为阴中之少阴，通于冬气。肝者，罢极之本，魂之居也，其华在爪，其充在筋，以生血气，其味酸，其色苍，此为阳中之少阳，通于春气。脾、胃、大肠、小肠、三焦、膀胱者，仓廪之本，营之居也，名曰器，能化糟粕，转味而入出者也；其华在唇四白，其充在肌，其味甘，其色黄，此至阴之类，通于土气。凡十一藏，取决于胆也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0039Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 39,
+      "quoteText": "气之本,魄之处",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        104
+      ],
+      "sourceSnippets": [
+        "帝曰：藏象何如？岐伯曰：心者，生之本，神之变也；其华在面，其充在血脉，为阳中之太阳，通于夏气。肺者，气之本，魄之处也；其华在毛，其充在皮，为阳中之太阴，通于秋气。肾者，主蛰，封藏之本，精之处也；其华在发，其充在骨，为阴中之少阴，通于冬气。肝者，罢极之本，魂之居也，其华在爪，其充在筋，以生血气，其味酸，其色苍，此为阳中之少阳，通于春气。脾、胃、大肠、小肠、三焦、膀胱者，仓廪之本，营之居也，名曰器，能化糟粕，转味而入出者也；其华在唇四白，其充在肌，其味甘，其色黄，此至阴之类，通于土气。凡十一藏，取决于胆也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0039Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 39,
+      "quoteText": "**封藏之本,精之处**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        104
+      ],
+      "sourceSnippets": [
+        "帝曰：藏象何如？岐伯曰：心者，生之本，神之变也；其华在面，其充在血脉，为阳中之太阳，通于夏气。肺者，气之本，魄之处也；其华在毛，其充在皮，为阳中之太阴，通于秋气。肾者，主蛰，封藏之本，精之处也；其华在发，其充在骨，为阴中之少阴，通于冬气。肝者，罢极之本，魂之居也，其华在爪，其充在筋，以生血气，其味酸，其色苍，此为阳中之少阳，通于春气。脾、胃、大肠、小肠、三焦、膀胱者，仓廪之本，营之居也，名曰器，能化糟粕，转味而入出者也；其华在唇四白，其充在肌，其味甘，其色黄，此至阴之类，通于土气。凡十一藏，取决于胆也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0039Q4",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 39,
+      "quoteText": "罢极之本,魂之居",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        104
+      ],
+      "sourceSnippets": [
+        "帝曰：藏象何如？岐伯曰：心者，生之本，神之变也；其华在面，其充在血脉，为阳中之太阳，通于夏气。肺者，气之本，魄之处也；其华在毛，其充在皮，为阳中之太阴，通于秋气。肾者，主蛰，封藏之本，精之处也；其华在发，其充在骨，为阴中之少阴，通于冬气。肝者，罢极之本，魂之居也，其华在爪，其充在筋，以生血气，其味酸，其色苍，此为阳中之少阳，通于春气。脾、胃、大肠、小肠、三焦、膀胱者，仓廪之本，营之居也，名曰器，能化糟粕，转味而入出者也；其华在唇四白，其充在肌，其味甘，其色黄，此至阴之类，通于土气。凡十一藏，取决于胆也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0039Q5",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 39,
+      "quoteText": "仓廪之本",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        104
+      ],
+      "sourceSnippets": [
+        "帝曰：藏象何如？岐伯曰：心者，生之本，神之变也；其华在面，其充在血脉，为阳中之太阳，通于夏气。肺者，气之本，魄之处也；其华在毛，其充在皮，为阳中之太阴，通于秋气。肾者，主蛰，封藏之本，精之处也；其华在发，其充在骨，为阴中之少阴，通于冬气。肝者，罢极之本，魂之居也，其华在爪，其充在筋，以生血气，其味酸，其色苍，此为阳中之少阳，通于春气。脾、胃、大肠、小肠、三焦、膀胱者，仓廪之本，营之居也，名曰器，能化糟粕，转味而入出者也；其华在唇四白，其充在肌，其味甘，其色黄，此至阴之类，通于土气。凡十一藏，取决于胆也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0039Q6",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 39,
+      "quoteText": "凡十一藏,取决于胆也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        104
+      ],
+      "sourceSnippets": [
+        "帝曰：藏象何如？岐伯曰：心者，生之本，神之变也；其华在面，其充在血脉，为阳中之太阳，通于夏气。肺者，气之本，魄之处也；其华在毛，其充在皮，为阳中之太阴，通于秋气。肾者，主蛰，封藏之本，精之处也；其华在发，其充在骨，为阴中之少阴，通于冬气。肝者，罢极之本，魂之居也，其华在爪，其充在筋，以生血气，其味酸，其色苍，此为阳中之少阳，通于春气。脾、胃、大肠、小肠、三焦、膀胱者，仓廪之本，营之居也，名曰器，能化糟粕，转味而入出者也；其华在唇四白，其充在肌，其味甘，其色黄，此至阴之类，通于土气。凡十一藏，取决于胆也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0040Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 40,
+      "quoteText": "五藏者,藏精气而不泻也,故满而不能实;六府者,传化物而不藏,故实而不能满",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        118
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：余闻方士或以脑髓为藏，或以肠胃为藏，或以为府，敢问更相反，皆自谓是，不知其道，愿闻其说。岐伯对曰：脑、髓、骨、脉、胆、女子胞，此六者，地气之所生也，皆藏于阴而象于地，故藏而不泻，名曰奇恒之府。夫胃、大肠、小肠、三焦、膀胱，此五者，天气之所生也，其气象天，故泻而不藏，此受五藏浊气，名曰传化之府，此不能久留，输泻者也。魄门亦为五藏使，水谷不得久藏。所谓五藏者，藏精气而不泻也，故满而不能实；六府者，传化物而不藏，故实而不能满也。所以然者，水谷入口，则胃实而肠虚，食下，则肠实而胃虚。故曰实而不满、满而不实也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0040Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 40,
+      "quoteText": "气口何以独为五藏主——五藏六府之气味皆出于胃,变见于气口",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0040Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 40,
+      "quoteText": "拘于鬼神者,不可与言至德;**病不许治者,病必不治,治之无功矣**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0041Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 41,
+      "quoteText": "**生病起于过用**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        228
+      ],
+      "sourceSnippets": [
+        "故饮食饱甚，汗出于胃；惊而夺精，汗出于心；持重远行，汗出于肾；疾走恐惧，汗出于肝；摇体劳苦，汗出于脾。故春秋冬夏，四时阴阳，生病起于过用，此为常也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0041Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 41,
+      "quoteText": "食气入胃,散精于肝……饮入于胃,游溢精气,上输于脾,脾气散精,上归于肺,通调水道,下输膀胱",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        229
+      ],
+      "sourceSnippets": [
+        "食气入胃，散精于肝，淫气于筋。食气入胃，浊气归心，淫精于脉。脉气流经，经气归于肺，肺朝百脉，输精于皮毛。毛脉合精，行气于府。府精神明，留于四藏，气归于权衡。权衡以平，气口成寸，以决死生。饮入于胃，游溢精气，上输于脾，脾气散精，上归于肺，通调水道，下输膀胱。水精四布，五经并行，合于四时五藏阴阳，揆度以为常也。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0045Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 45,
+      "quoteText": "诊法常以平旦",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        161
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：诊法何如？岐伯对曰：诊法常以平旦，阴气未动，阳气未散，饮食未进，经脉未盛，络脉调匀，气血未乱，故乃可诊有过之脉。切脉动静而视精明，察五色，观五藏有余不足，六府强弱，形之盛衰，以此参伍，决死生之分。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0045Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 45,
+      "quoteText": "切脉动静而视精明,察五色,观五藏有余不足……以此参伍,决死生之分",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        161
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：诊法何如？岐伯对曰：诊法常以平旦，阴气未动，阳气未散，饮食未进，经脉未盛，络脉调匀，气血未乱，故乃可诊有过之脉。切脉动静而视精明，察五色，观五藏有余不足，六府强弱，形之盛衰，以此参伍，决死生之分。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0046Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 46,
+      "quoteText": "头者,精明之府,头倾视深,精神将夺矣;背者,胸中之府,背曲肩随,府将坏矣;腰者,肾之府,转摇不能,肾将惫矣;膝者,筋之府,屈伸不能,行则偻附,筋将惫矣",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        165
+      ],
+      "sourceSnippets": [
+        "夫五藏者，身之强也。头者，精明之府，头倾视深，精神将夺矣；背者，胸中之府，背曲肩随，府将坏矣；腰者，肾之府，转摇不能，肾将惫矣；膝者，筋之府，屈伸不能，行则偻附，筋将惫矣；骨者，髓之府，不能久立，行则振掉，骨将惫矣。得强则生，失强则死。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0046Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 46,
+      "quoteText": "衣被不敛,言语善恶不避亲疏者,此神明之乱也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        164
+      ],
+      "sourceSnippets": [
+        "五藏者，中之守也。中盛藏满，气胜伤恐者，声如从室中言，是中气之湿也；言而微，终日乃复言者，此夺气也；衣被不敛，言语善恶，不避亲疏者，此神明之乱也；仓廪不藏者，是门户不要也；水泉不止者，是膀胱不藏也。得守者生，失守者死。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0047Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 47,
+      "quoteText": "平人之常气禀于胃,**人无胃气曰逆,逆者死**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0047Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 47,
+      "quoteText": "人以水谷为本,故人绝水谷则死",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        187
+      ],
+      "sourceSnippets": [
+        "人以水谷为本，故人绝水谷则死，脉无胃气亦死。所谓无胃气者，但得真藏脉，不得胃气也。所谓脉不得胃气者，肝不弦，肾不石也。太阳脉至，洪大以长；少阳脉至，乍数乍疏，乍短乍长；阳明脉至，浮大而短。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0047Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 47,
+      "quoteText": "妇人手少阴脉动甚者,妊子也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        185
+      ],
+      "sourceSnippets": [
+        "颈脉动喘疾咳，曰水。目裹微肿，如卧蚕起之状，曰水。溺黄赤，安卧者，黄疸。已食如饥者，胃疸。面肿曰风。足胫肿曰水。目黄者，曰黄疸。妇人手少阴脉动甚者，妊子也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0048Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 48,
+      "quoteText": "**五实死,五虚死**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        212
+      ],
+      "sourceSnippets": [
+        "黄帝曰：余闻虚实以决死生，愿闻其情。岐伯曰：五实死，五虚死。帝曰：愿闻五实五虚。岐伯曰：脉盛、皮热、腹胀、前后不通、闷瞀，此谓五实。脉细、皮寒、气少、泄利前后、饮食不入，此谓五虚。帝曰：其时有生者，何也？岐伯曰：浆粥入胃，泄注止，则虚者活；身汗得后利，则实者活。此其候也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0048Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 48,
+      "quoteText": "浆粥入胃,泄注止,则虚者活;身汗得后利,则实者活",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        212
+      ],
+      "sourceSnippets": [
+        "黄帝曰：余闻虚实以决死生，愿闻其情。岐伯曰：五实死，五虚死。帝曰：愿闻五实五虚。岐伯曰：脉盛、皮热、腹胀、前后不通、闷瞀，此谓五实。脉细、皮寒、气少、泄利前后、饮食不入，此谓五虚。帝曰：其时有生者，何也？岐伯曰：浆粥入胃，泄注止，则虚者活；身汗得后利，则实者活。此其候也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0048Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 48,
+      "quoteText": "邪气盛则实,精气夺则虚",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        296
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：何谓虚实？岐伯对曰：邪气盛则实，精气夺则虚。帝曰：虚实何如？岐伯曰：气虚者，肺虚也；气逆者，足寒也。非其时则生，当其时则死。余藏皆如此。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0049Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 49,
+      "quoteText": "必问尝贵后贱",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1036
+      ],
+      "sourceSnippets": [
+        "帝曰：凡未诊病者，必问尝贵后贱，虽不中邪，病从内生，名曰脱营。尝富后贫，名曰失精，五气留连，病有所并。医工诊之，不在藏府，不变躯形，诊之而疑，不知病名，身体日减，气虚无精，病深无气，洒洒然时惊。病深者，以其外耗于卫，内夺于荣，良工所失，不知病情，此亦治之一过也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0049Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 49,
+      "quoteText": "必问饮食居处,暴乐暴苦",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1037
+      ],
+      "sourceSnippets": [
+        "凡欲诊病者，必问饮食居处，暴乐暴苦，始乐后苦，皆伤精气，精气竭绝，形体毁沮。暴怒伤阴，暴喜伤阳，厥气上行，满脉去形。愚医治之，不知补泻，不知病情，精华日脱，邪气乃并。此治之二过也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0049Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 49,
+      "quoteText": "诊病不问其始,忧患饮食之失节,卒持寸口,何病能中",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0056Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 56,
+      "quoteText": "今夫热病者,皆伤寒之类也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        331
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：今夫热病者，皆伤寒之类也。或愈或死，其死皆以六七日之间，其愈皆以十日以上者何也？不知其解，愿闻其故。岐伯对曰：巨阳者，诸阳之属也。其脉连于风府，故为诸阳主气也。人之伤于寒也，则为病热，热虽甚不死；其两感于寒而病者，必不免于死。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0056Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 56,
+      "quoteText": "其未满三日者可汗,其满三日者可泄",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0056Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 56,
+      "quoteText": "病热少愈,**食肉则复,多食则遗**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        335
+      ],
+      "sourceSnippets": [
+        "帝曰：热病已愈，时有所遗者，何也？岐伯曰：诸遗者，热甚而强食之，故有所遗也。若此者，皆病已衰而热有所藏，因其谷气相薄，两热相合，故有所遗也。帝曰：善。治遗奈何？岐伯曰：视其虚实，调其逆从，可使必已矣。帝曰：病热当何禁之？岐伯曰：病热少愈，食肉则复，多食则遗，此其禁也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0057Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 57,
+      "quoteText": "**邪之所凑,其气必虚**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        357
+      ],
+      "sourceSnippets": [
+        "帝曰：愿闻其说。岐伯曰：邪之所凑，其气必虚。阴虚者阳必凑之，故少气时热而汗出也。小便黄者，少腹中有热也。不能正偃者，胃中不和也。正偃则咳甚，上迫肺也。诸有水气者，微肿先见于目下也。帝曰：何以言？岐伯曰：水者阴也，目下亦阴也，腹者至阴之所居，故水在腹者，必使目下肿也。真气上逆，故口苦舌干，卧不得正偃，正偃则咳出清水也。诸水病者，故不得卧，卧则惊，惊则咳甚也。腹中鸣者，病本于胃也。薄脾则烦不能食，食不下者，胃脘隔也。身重难以行者，胃脉在足也。月事不来者，胞脉闭也。胞脉者，属心而络于胞中。今气上迫肺，心气不得下通，故月事不来也。帝曰：善。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0058Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 58,
+      "quoteText": "**五藏六府皆令人咳,非独肺也**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        396
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：肺之令人咳，何也？岐伯对曰：五藏六府皆令人咳，非独肺也。帝曰：愿闻其状。岐伯曰：皮毛者，肺之合也，皮毛先受邪气，邪气以从其合也。其寒饮食入胃，从肺脉上至于肺则肺寒，肺寒则外内合邪，因而客之，则为肺咳。五藏各以其时受病，非其时，各传以与之。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0058Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 58,
+      "quoteText": "聚于胃,关于肺",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        399
+      ],
+      "sourceSnippets": [
+        "帝曰：六府之咳奈何？安所受病？岐伯曰：五藏之久咳，乃移于六府。脾咳不已，则胃受之，胃咳之状，咳而呕，呕甚则长虫出。肝咳不已，则胆受之，胆咳之状，咳呕胆汁。肺咳不已，则大肠受之，大肠咳状，咳而遗失。心咳不已，则小肠受之，小肠咳状，咳而失气，气与咳俱失。肾咳不已，则膀胱受之，膀胱咳状，咳而遗溺。久咳不已，则三焦受之，三焦咳状，咳而腹满，不欲食饮。此皆聚于胃，关于肺，使人多涕唾而面浮肿气逆也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0059Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 59,
+      "quoteText": "**百病生于气也**——怒则气上,喜则气缓,悲则气消,恐则气下,寒则气收,炅则气泄,惊则气乱,劳则气耗,思则气结",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        409
+      ],
+      "sourceSnippets": [
+        "帝曰：善。余知百病生于气也。怒则气上，喜则气缓，悲则气消，恐则气下，寒则气收，炅则气泄，惊则气乱，劳则气耗，思则气结，九气不同，何病之生？岐伯曰：怒则气逆，甚则呕血及飧泄，故气上矣。喜则气和志达，荣卫通利，故气缓矣。悲则心系急，肺布叶举，而上焦不通，荣卫不散，热气在中，故气消矣。恐则精却，却则上焦闭，闭则气还，还则下焦胀，故气不行矣。寒则腠理闭，气不行，故气收矣。炅则腠理开，荣卫通，汗大泄，故气泄。惊则心无所倚，神无所归，虑无所定，故气乱矣。劳则喘息汗出，外内皆越，故气耗矣。思则心有所存，神有所归，正气留而不行，故气结矣。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0060Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 60,
+      "quoteText": "**风者,百病之长也**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        205
+      ],
+      "sourceSnippets": [
+        "是故风者，百病之长也。今风寒客于人，使人毫毛毕直，皮肤闭而为热，当是之时，可汗而发也；或痹不仁肿痛，当是之时，可汤熨及火灸刺而去之。弗治，病入舍于肺，名曰肺痹，发咳上气。弗治，肺即传而行之肝，病名曰肝痹，一名曰厥，胁痛出食，当是之时，可按若刺耳。弗治，肝传之脾，病名曰脾风，发瘅，腹中热，烦心出黄，当此之时，可按、可药、可浴。弗治，脾传之肾，病名曰疝瘕，少腹冤热而痛，出白，一名曰蛊，当此之时，可按、可药。弗治，肾传之心，病筋脉相引而急，病名曰瘛，当此之时，可灸、可药。弗治，满十日，法当死。肾因传之心，心即复反传而行之肺，发寒热，法当三岁死，此病之次也。然其卒发者，不必治于传，或其传化有不以次，不以次入者，忧恐悲喜怒，令不得以其次，故令人有大病矣。因而喜大虚，则肾气乘矣，怒则肝气乘矣，悲则肺气乘矣，恐则脾气乘矣，忧则心气乘矣，此其道也。故病有五，五五二十五变，及其传化。传，乘之名也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0061Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 61,
+      "quoteText": "**风寒湿三气杂至,合而为痹**——风胜行痹,寒胜痛痹,湿胜著痹",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0061Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 61,
+      "quoteText": "痹入藏者死,留筋骨间者疼久,留皮肤间者易已",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0062Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 62,
+      "quoteText": "**治痿者独取阳明**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        462
+      ],
+      "sourceSnippets": [
+        "帝曰：如夫子言可矣，论言治痿者独取阳明，何也？岐伯曰：阳明者，五藏六府之海，主润宗筋，宗筋主束骨而利机关也。冲脉者，经脉之海也，主渗灌溪谷，与阳明合于宗筋，阴阳揔宗筋之会，会于气街，而阳明为之长，皆属于带脉，而络于督脉。故阳明虚则宗筋纵，带脉不引，故足痿不用也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0063Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 63,
+      "quoteText": "厥……或令人暴不知人",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0064Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 64,
+      "quoteText": "**胃不和则卧不安**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        364
+      ],
+      "sourceSnippets": [
+        "帝曰：人有逆气不得卧而息有音者，有不得卧而息无音者，有起居如故而息有音者，有得卧，行而喘者，有不得卧，不能行而喘者，有不得卧，卧而喘者，皆何藏使然？愿闻其故。岐伯曰：不得卧而息有音者，是阳明之逆也。足三阳者下行，今逆而上行，故息有音也。阳明者，胃脉也。胃者，六府之海，其气亦下行。阳明逆，不得从其道，故不得卧也。《下经》曰：胃不和则卧不安，此之谓也。夫起居如故而息有音者，此肺之络脉逆也，络脉不得随经上下，故留经而不行。络脉之病人也微，故起居如故而息有音也。夫不得卧，卧则喘者，是水气之客也。夫水者，循津液而流也。肾者，水藏，主津液，主卧与喘也。帝曰：善。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0064Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 64,
+      "quoteText": "不得卧而息有音者,是阳明之逆也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        364
+      ],
+      "sourceSnippets": [
+        "帝曰：人有逆气不得卧而息有音者，有不得卧而息无音者，有起居如故而息有音者，有得卧，行而喘者，有不得卧，不能行而喘者，有不得卧，卧而喘者，皆何藏使然？愿闻其故。岐伯曰：不得卧而息有音者，是阳明之逆也。足三阳者下行，今逆而上行，故息有音也。阳明者，胃脉也。胃者，六府之海，其气亦下行。阳明逆，不得从其道，故不得卧也。《下经》曰：胃不和则卧不安，此之谓也。夫起居如故而息有音者，此肺之络脉逆也，络脉不得随经上下，故留经而不行。络脉之病人也微，故起居如故而息有音也。夫不得卧，卧则喘者，是水气之客也。夫水者，循津液而流也。肾者，水藏，主津液，主卧与喘也。帝曰：善。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0065Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 65,
+      "quoteText": "必须其自衰乃刺之",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        377
+      ],
+      "sourceSnippets": [
+        "帝曰：夫经言有余者泻之，不足者补之。今热为有余，寒为不足。夫疟者之寒，汤火不能温也，及其热，冰水不能寒也，此皆有余不足之类。当此之时，良工不能止，必须其自衰乃刺之，其故何也？愿闻其说。岐伯曰：经言无刺熇熇之热，无刺浑浑之脉，无刺漉漉之汗，故为其病逆，未可治也。夫疟之始发也，阳气并于阴，当是之时，阳虚而阴盛，外无气，故先寒栗也。阴气逆极，则复出之阳，阳与阴复并于外，则阴虚而阳实，故先热而渴。夫疟气者，并于阳则阳胜，并于阴则阴胜，阴胜则寒，阳胜则热。疟者，风寒之气不常也，病极则复至。病之发也，如火之热，如风雨不可当也。故经言曰：方其盛时必毁，因其衰也，事必大昌。此之谓也。夫疟之未发也，阴未并阳，阳未并阴，因而调之，真气得安，邪气乃亡。故工不能治其已发，为其气逆也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0066Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 66,
+      "quoteText": "心腹满,旦食则不能暮食",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        412
+      ],
+      "sourceSnippets": [
+        "黄帝问曰：有病心腹满，旦食则不能暮食，此为何病？岐伯对曰：名为鼓胀。帝曰：治之奈何？岐伯曰：治之以鸡矢醴，一剂知，二剂已。帝曰：其时有复发者，何也？岐伯曰：此饮食不节，故时有病也。虽然其病且已，时故当病，气聚于腹也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0066Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 66,
+      "quoteText": "转为消渴",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        494
+      ],
+      "sourceSnippets": [
+        "帝曰：有病口甘者，病名为何？何以得之？岐伯曰：此五气之溢也，名曰脾瘅。夫五味入口，藏于胃，脾为之行其精气，津液在脾，故令人口甘也。此肥美之所发也，此人必数食甘美而多肥也，肥者令人内热，甘者令人中满，故其气上溢，转为消渴。治之以兰，除陈气也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0066Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 66,
+      "quoteText": "身有病而无邪脉",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        417
+      ],
+      "sourceSnippets": [
+        "帝曰：善。何以知怀子之且生也？岐伯曰：身有病而无邪脉也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0067Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 67,
+      "quoteText": "消瘅仆击、偏枯痿厥、气满发逆,甘肥贵人,则**高梁之疾**也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        309
+      ],
+      "sourceSnippets": [
+        "凡治消瘅、仆击、偏枯、痿厥、气满发逆，甘肥贵人，则高梁之疾也。隔塞闭绝，上下不通，则暴忧之病也。暴厥而聋，偏塞闭不通，内气暴薄也。不从内，外中风之病，故瘦留著也。蹠跛，寒风湿之病也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0067Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 67,
+      "quoteText": "隔塞闭绝,上下不通,则暴忧之病也",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        309
+      ],
+      "sourceSnippets": [
+        "凡治消瘅、仆击、偏枯、痿厥、气满发逆，甘肥贵人，则高梁之疾也。隔塞闭绝，上下不通，则暴忧之病也。暴厥而聋，偏塞闭不通，内气暴薄也。不从内，外中风之病，故瘦留著也。蹠跛，寒风湿之病也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0068Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 68,
+      "quoteText": "阳道实,阴道虚",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        314
+      ],
+      "sourceSnippets": [
+        "帝曰：愿闻其异状也。岐伯曰：阳者，天气也，主外；阴者，地气也，主内。故阳道实，阴道虚。故犯贼风虚邪者，阳受之；食饮不节，起居不时者，阴受之。阳受之则入六府，阴受之则入五藏。入六府则身热不时卧，上为喘呼；入五藏，则A1J8满闭塞，下为飧泄，久为肠澼。故喉主天气，咽主地气。故阳受风气，阴受湿气。故阴气从足上行至头，而下行循臂至指端；阳气从手上行至头，而下行至足。故曰：阳病者，上行极而下；阴病者，下行极而上。故伤于风者，上先受之；伤于湿者，下先受之。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0068Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 68,
+      "quoteText": "**伤于风者,上先受之;伤于湿者,下先受之**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        314
+      ],
+      "sourceSnippets": [
+        "帝曰：愿闻其异状也。岐伯曰：阳者，天气也，主外；阴者，地气也，主内。故阳道实，阴道虚。故犯贼风虚邪者，阳受之；食饮不节，起居不时者，阴受之。阳受之则入六府，阴受之则入五藏。入六府则身热不时卧，上为喘呼；入五藏，则A1J8满闭塞，下为飧泄，久为肠澼。故喉主天气，咽主地气。故阳受风气，阴受湿气。故阴气从足上行至头，而下行循臂至指端；阳气从手上行至头，而下行至足。故曰：阳病者，上行极而下；阴病者，下行极而上。故伤于风者，上先受之；伤于湿者，下先受之。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0068Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 68,
+      "quoteText": "脾病而四支不用",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        315
+      ],
+      "sourceSnippets": [
+        "帝曰：脾病而四支不用，何也？岐伯曰：四支皆禀气于胃，而不得至经，必因于脾，乃得禀也。今脾病不能为胃行其津液，四支不得禀水谷气，气日以衰，脉道不利，筋骨肌肉皆无气以生，故不用焉。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0069Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 69,
+      "quoteText": "弃衣而走,登高而歌,妄言骂詈",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0069Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 69,
+      "quoteText": "夺其食即已",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        484
+      ],
+      "sourceSnippets": [
+        "帝曰：有病怒狂者，此病安生？岐伯曰：生于阳也。帝曰：阳何以使人狂？岐伯曰：阳气者，因暴折而难决，故善怒也，病名曰阳厥。帝曰：何以知之？岐伯曰：阳明者常动，巨阳、少阳不动，不动而动大疾，此其候也。帝曰：治之奈何？岐伯曰：夺其食即已。夫食入于阴，长气于阳，故夺其食即已。使之服以生铁洛为饮。夫生铁洛者，下气疾也。"
+      ],
+      "matchType": "exact_text",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0076Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 76,
+      "quoteText": "审察病机,无失气宜……谨守病机,各司其属,有者求之,无者求之,盛者责之,虚者责之。",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1010
+      ],
+      "sourceSnippets": [
+        "帝曰：善。夫百病之生也，皆生于风寒暑湿燥火，以之化之变也。经言盛者泻之，虚者补之，余锡以方士，而方士用之，尚未能十全，余欲令要道必行，桴鼓相应，犹拔刺雪污，工巧神圣，可得闻乎？岐伯曰：审察病机，无失气宜。此之谓也。帝曰：愿闻病机何如？岐伯曰：诸风掉眩，皆属于肝；诸寒收引，皆属于肾；诸气膹郁，皆属于肺；诸湿肿满，皆属于脾；诸热瞀瘛，皆属于火；诸痛痒疮，皆属于心；诸厥固泄，皆属于下；诸痿喘呕，皆属于上；诸禁鼓栗，如丧神守，皆属于火；诸痉项强，皆属于湿；诸逆冲上，皆属于火；诸胀腹大，皆属于热；诸躁狂越，皆属于火；诸暴强直，皆属于风；诸病有声，鼓之如鼓，皆属于热；诸病胕肿，疼酸惊骇，皆属于火；诸转反戾，水液浑浊，皆属于热；诸病水液，澄澈清冷，皆属于寒；诸呕吐酸，暴注下迫，皆属于热。故《大要》曰：谨守病机，各司其属，有者求之，无者求之，盛者责之，虚者责之，必先五胜，疏其血气，令其调达，而致和平。此之谓也。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0089Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 89,
+      "quoteText": "**寒者热之,热者寒之**,微者逆之",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1012
+      ],
+      "sourceSnippets": [
+        "帝曰：非调气而得者，治之奈何？有毒无毒，何先何后？愿闻其道。岐伯曰：有毒无毒，所治为主，适大小为制也。帝曰：请言其制。岐伯曰：君一臣二，制之小也；君一臣三佐五，制之中也；君一臣三佐九，制之大也。寒者热之，热者寒之，微者逆之，甚者从之，坚者削之，客者除之，劳者温之，结者散之，留者攻之，燥者濡之，急者缓之，散者收之，损者温之，逸者行之，惊者平之，上之下之，摩之浴之，薄之劫之，开之发之，适事为故。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0089Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 89,
+      "quoteText": "甚者从之——**热因寒用,寒因热用,塞因塞用,通因通用**,必伏其所主,而先其所因",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0090Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 90,
+      "quoteText": "坚者削之,客者除之,**劳者温之**,结者散之,留者攻之,燥者濡之,急者缓之,散者收之,损者温之,惊者平之,上之下之,摩之浴之……适事为故",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0090Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 90,
+      "quoteText": "疏其血气,令其调达,而致和平",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1010
+      ],
+      "sourceSnippets": [
+        "帝曰：善。夫百病之生也，皆生于风寒暑湿燥火，以之化之变也。经言盛者泻之，虚者补之，余锡以方士，而方士用之，尚未能十全，余欲令要道必行，桴鼓相应，犹拔刺雪污，工巧神圣，可得闻乎？岐伯曰：审察病机，无失气宜。此之谓也。帝曰：愿闻病机何如？岐伯曰：诸风掉眩，皆属于肝；诸寒收引，皆属于肾；诸气膹郁，皆属于肺；诸湿肿满，皆属于脾；诸热瞀瘛，皆属于火；诸痛痒疮，皆属于心；诸厥固泄，皆属于下；诸痿喘呕，皆属于上；诸禁鼓栗，如丧神守，皆属于火；诸痉项强，皆属于湿；诸逆冲上，皆属于火；诸胀腹大，皆属于热；诸躁狂越，皆属于火；诸暴强直，皆属于风；诸病有声，鼓之如鼓，皆属于热；诸病胕肿，疼酸惊骇，皆属于火；诸转反戾，水液浑浊，皆属于热；诸病水液，澄澈清冷，皆属于寒；诸呕吐酸，暴注下迫，皆属于热。故《大要》曰：谨守病机，各司其属，有者求之，无者求之，盛者责之，虚者责之，必先五胜，疏其血气，令其调达，而致和平。此之谓也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0091Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 91,
+      "quoteText": "**诸寒之而热者取之阴,热之而寒者取之阳**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1016
+      ],
+      "sourceSnippets": [
+        "帝曰：论言治寒以热，治热以寒，而方士不能废绳墨而更其道也。有病热者，寒之而热，有病寒者，热之而寒，二者皆在，新病复起，奈何治？岐伯曰：诸寒之而热者取之阴，热之而寒者取之阳，所谓求其属也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0091Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 91,
+      "quoteText": "壮水之主以制阳光,益火之源以消阴翳",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0092Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 92,
+      "quoteText": "**主病之谓君,佐君之谓臣,应臣之谓使**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1018
+      ],
+      "sourceSnippets": [
+        "帝曰：善。方制君臣何谓也？岐伯曰：主病之谓君，佐君之谓臣，应臣之谓使，非上下三品之谓也。帝曰：三品何谓？岐伯曰：所以明善恶之殊贯也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0092Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 92,
+      "quoteText": "君一臣二,奇之制也……近者奇之,远者偶之",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1002
+      ],
+      "sourceSnippets": [
+        "帝曰：气有多少，病有盛衰，治有缓急，方有大小，愿闻其约奈何？岐伯曰：气有高下，病有远近，证有中外，治有轻重，适其至所为故也。《大要》曰：君一臣二，奇之制也；君二臣四，偶之制也；君二臣三，奇之制也；君二臣六，偶之制也。故曰：近者奇之，远者偶之，汗者不以奇，下者不以偶，补上治上制以缓，补下治下制以急，急则气味厚，缓则气味薄，适其至所，此之谓也。病所远而中道气味之者，食而过之，无越其制度也。是故平气之道，近而奇偶，制小其服也。远而奇偶，制大其服也。大则数少，小则数多。多则九之，少则二之。奇之不去则偶之，是谓重方。偶之不去，则反佐以取之，所谓寒热温凉，反从其病也。"
+      ],
+      "matchType": "segmented_ellipsis",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0093Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 93,
+      "quoteText": "**急则治标,缓则治本**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0093Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 93,
+      "quoteText": "小大不利治其标,小大利治其本",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        655
+      ],
+      "sourceSnippets": [
+        "治反为逆，治得为从。先病而后逆者治其本，先逆而后病者治其本，先寒而后生病者治其本，先病而后生寒者治其本，先热而后生病者治其本，先热而后生中满者治其标，先病而后泄者治其本，先泄而后生他病者治其本，必且调之，乃治其他病，先病而后生中满者治其标，先中满而后烦心者治其本。人有客气，有同气。小大不利治其标，小大利治其本。病发而有余，本而标之，先治其本，后治其标；病发而不足，标而本之，先治其标，后治其本。谨察间甚，以意调之，间者并行，甚者独行。先小大不利而后生病者治其本。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0093Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 93,
+      "quoteText": "间者并行,甚者独行",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        655
+      ],
+      "sourceSnippets": [
+        "治反为逆，治得为从。先病而后逆者治其本，先逆而后病者治其本，先寒而后生病者治其本，先病而后生寒者治其本，先热而后生病者治其本，先热而后生中满者治其标，先病而后泄者治其本，先泄而后生他病者治其本，必且调之，乃治其他病，先病而后生中满者治其标，先中满而后烦心者治其本。人有客气，有同气。小大不利治其标，小大利治其本。病发而有余，本而标之，先治其本，后治其标；病发而不足，标而本之，先治其标，后治其本。谨察间甚，以意调之，间者并行，甚者独行。先小大不利而后生病者治其本。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0093Q4",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 93,
+      "quoteText": "知标与本,用之不殆",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        1006
+      ],
+      "sourceSnippets": [
+        "帝曰：六气标本，所从不同奈何？岐伯曰：气有从本者，有从标本者，有不从标本者也。帝曰：愿卒闻之。岐伯曰：少阳太阴从本，少阴太阳从本从标，阳明厥阴不从标本，从乎中也。故从本者，化生于本；从标本者，有标本之化；从中者，以中气为化也。帝曰：脉从而病反者，其诊何如？岐伯曰：脉至而从，按之不鼓，诸阳皆然。帝曰：诸阴之反，其脉何如？岐伯曰：脉至而从，按之鼓甚而盛也。是故百病之起，有生于本者，有生于标者，有生于中气者，有取本而得者，有取标而得者，有取中气而得者，有取标本而得者，有逆取而得者，有从取而得者。逆，正顺也；若顺，逆也。故曰：知标与本，用之不殆，明知逆顺，正行无问。此之谓也。不知是者，不足以言诊，足以乱经。故《大要》曰：粗工嘻嘻，以为可知，言热未已，寒病复始，同气异形，迷诊乱经。此之谓也。夫标本之道，要而博，小而大，可以言一而知百病之害。言标与本，易而勿损，察本与标，气可令调，明知胜复，为万民式，天之道毕矣。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0094Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 94,
+      "quoteText": "**大毒治病,十去其六;常毒治病,十去其七;小毒治病,十去其八;无毒治病,十去其九。谷肉果菜,食养尽之,无使过之,伤其正也**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        774
+      ],
+      "sourceSnippets": [
+        "帝曰：有毒无毒服有约乎？岐伯曰：病有久新，方有大小，有毒无毒，固宜常制矣。大毒治病，十去其六；常毒治病，十去其七；小毒治病，十去其八；无毒治病，十去其九。谷肉果菜，食养尽之，无使过之，伤其正也。不尽，行复如法。必先岁气，无伐天和。无盛盛，无虚虚，而遗人夭殃，无致邪，无失正，绝人长命。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0094Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 94,
+      "quoteText": "能食养不用药",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0094Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 94,
+      "quoteText": "无盛盛,无虚虚,而遗人夭殃",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        774
+      ],
+      "sourceSnippets": [
+        "帝曰：有毒无毒服有约乎？岐伯曰：病有久新，方有大小，有毒无毒，固宜常制矣。大毒治病，十去其六；常毒治病，十去其七；小毒治病，十去其八；无毒治病，十去其九。谷肉果菜，食养尽之，无使过之，伤其正也。不尽，行复如法。必先岁气，无伐天和。无盛盛，无虚虚，而遗人夭殃，无致邪，无失正，绝人长命。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0095Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 95,
+      "quoteText": "妇人重身,毒之何如?**有故无殒,亦无殒也**……衰其太半而止,过者死",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0096Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 96,
+      "quoteText": "**木郁达之,火郁发之,土郁夺之,金郁泄之,水郁折之**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        949
+      ],
+      "sourceSnippets": [
+        "帝曰：善。郁之甚者，治之奈何？岐伯曰：木郁达之，火郁发之，土郁夺之，金郁泄之，水郁折之。然调其气，过者折之，以其畏也，所谓泻之。帝曰：假者何如？岐伯曰：有假其气，则无禁也。所谓主气不足，客气胜也。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0097Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 97,
+      "quoteText": "**亢则害,承乃制,制则生化**",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        697
+      ],
+      "sourceSnippets": [
+        "帝曰：善。愿闻地理之应六节气位何如？岐伯曰：显明之右，君火之位也；君火之右，退行一步，相火治之；复行一步，土气治之；复行一步，金气治之；复行一步，水气治之；复行一步，木气治之；复行一步，君火治之。相火之下，水气承之；水位之下，土气承之；土位之下，风气承之；风位之下，金气承之；金位之下，火气承之；君火之下，阴精承之。帝曰：何也？岐伯曰：亢则害，承乃制，制则生化，外列盛衰，害则败乱，生化大病。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0103Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 103,
+      "quoteText": "针刺禁自行",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0103Q2",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 103,
+      "quoteText": "刺中心,一日死……刺头,中脑户,入脑立死;刺缺盆,中内陷,气泄,令人喘咳逆(气胸)……",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0103Q3",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 103,
+      "quoteText": "无刺大醉、大怒、大劳、新饱、大饥、大渴、大惊之人",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0104Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 104,
+      "quoteText": "风淫于内治以辛凉",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [
+        968
+      ],
+      "sourceSnippets": [
+        "帝曰：善。治之奈何？岐伯曰：诸气在泉，风淫于内，治以辛凉，佐以苦，以甘缓之，以辛散之。热淫于内，治以咸寒，佐以甘苦，以酸收之，以苦发之。湿淫于内，治以苦热，佐以酸淡，以苦燥之，以淡泄之。火淫于内，治以咸冷，佐以苦辛，以酸收之，以苦发之。燥淫于内，治以苦温，佐以甘辛，以苦下之。寒淫于内，治以甘热，佐以苦辛，以咸泻之，以辛润之，以苦坚之。"
+      ],
+      "matchType": "normalized_contiguous",
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0105Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 105,
+      "quoteText": "正气存内,邪不可干,避其毒气",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0111Q1",
+      "referenceId": "ref42",
+      "referencePath": "database/tcm/skill-v3/references/42-经典-素问要义.md",
+      "referenceLine": 111,
+      "quoteText": "其数八/七/五/九/六",
+      "sourceId": "huangdi-neijing-suwen-local-text",
+      "sourcePath": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sourceLines": [],
+      "sourceSnippets": [],
+      "matchType": "unresolved",
+      "reviewStatus": "manual_adjudication_required",
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ]
+}
