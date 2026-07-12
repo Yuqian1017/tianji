@@ -41,10 +41,13 @@ export const PORTRAITS = {
   male: `${A}/portrait-shen-m-cut.webp`,
 };
 
-// Portrait visible from scene 2 onward (沈疏桐 in-scene rule of thumb for ch1).
+// Portrait visibility: ch1 from scene 2 onward; bonus qiannang (qn-) scenes 3+ (廊亭夜起).
 export function portraitVisible(nodeId) {
-  const m = /^ch1-s(\d)/.exec(nodeId || '');
-  return m ? Number(m[1]) >= 2 : false;
+  const ch1 = /^ch1-s(\d)/.exec(nodeId || '');
+  if (ch1) return Number(ch1[1]) >= 2;
+  const qn = /^qn-s(\d)/.exec(nodeId || '');
+  if (qn) return Number(qn[1]) >= 3;
+  return false;
 }
 
 // Resolve current bg/bgm for a node by walking the chapter path is overkill;
@@ -72,6 +75,11 @@ export const SCENE_FALLBACK_BGM = {
 };
 
 export function fallbackForNode(nodeId) {
+  if (/^qn-/.test(nodeId || '')) {
+    // bonus《钱囊》: pavilion nights + main theme by default; switches refine per scene
+    const s = Number(/^qn-s(\d)/.exec(nodeId)?.[1] || 0);
+    return { bg: s === 2 ? `${A}/bg-shanmen.webp` : `${A}/bg-langting.webp`, bgm: s >= 3 ? `${A}/bgm-dawn.mp3` : `${A}/bgm-main.mp3` };
+  }
   const m = /^ch1-s(\d)/.exec(nodeId || '');
   const scene = m ? Number(m[1]) : 0;
   return {
@@ -79,6 +87,13 @@ export function fallbackForNode(nodeId) {
     bgm: SCENE_FALLBACK_BGM[scene] || null,
   };
 }
+
+// Bonus chapter switches (merged into the same lookup by Player)
+BG_SWITCH['qn-s1-header'] = `${A}/bg-langting.webp`;
+BG_SWITCH['qn-s2-header'] = `${A}/bg-shanmen.webp`;
+BG_SWITCH['qn-s3-header'] = `${A}/bg-langting.webp`;
+BGM_SWITCH['qn-s1-header'] = `${A}/bgm-main.mp3`;
+BGM_SWITCH['qn-s3-header'] = `${A}/bgm-dawn.mp3`;
 
 export const PRELOAD_IMAGES = [
   `${A}/title-art.webp`, `${A}/bg-shanmen.webp`, `${A}/bg-jieyindian.webp`,

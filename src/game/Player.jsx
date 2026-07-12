@@ -9,7 +9,7 @@
 //  - scoredChoice: applyScoredChoice handles rewards/demotion; branch prose lives
 //    in the chapter data itself (B/C chains), Player only reports value changes.
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { CHAPTER_1 } from './chapters/chapter1.js';
+import { CHAPTER_1 } from './chapters/index.js';
 import CastPanel from './CastPanel.jsx';
 import {
   persistSave, renderTemplate, pickVariant,
@@ -43,7 +43,7 @@ function GenderButton({ value, set, current, label }) {
   );
 }
 
-function Hud({ save }) {
+function Hud({ save, chapter }) {
   return (
     <div className="flex items-center justify-between text-xs font-body text-[var(--color-text-dim)] px-1">
       <div className="flex gap-3">
@@ -51,7 +51,7 @@ function Hud({ save }) {
         <span>好感 <b className="text-[var(--color-text)]">{save.favor}</b></span>
       </div>
       <div className="flex gap-2">
-        {CHAPTER_1.knowledgePoints.map((kp) => (
+        {(chapter.knowledgePoints || []).map((kp) => (
           <span key={kp} className={save.pendingReview.includes(kp) ? 'text-[var(--color-gold)]' : ''}>
             {KP_SHORT[kp]}·{save.mastery[kp] || '—'}{save.pendingReview.includes(kp) ? '⟳' : ''}
           </span>
@@ -61,8 +61,8 @@ function Hud({ save }) {
   );
 }
 
-export default function Player({ save, setSave, onExit }) {
-  const nodes = CHAPTER_1.nodes;
+export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
+  const nodes = chapter.nodes;
   const node = nodes[save.currentNodeId];
   // transient (non-persisted) UI state
   const [pendingResponse, setPendingResponse] = useState(null); // choice response being shown
@@ -324,7 +324,7 @@ export default function Player({ save, setSave, onExit }) {
           </div>
         )}
         <SaveSummary save={save} />
-        <Continue onClick={() => { advance(null, (s) => applyChapterEnd(s, node, CHAPTER_1.id)); onExit(); }} label="存档并返回" />
+        <Continue onClick={() => { advance(null, (s) => applyChapterEnd(s, node, chapter.id)); onExit(); }} label="存档并返回" />
       </div>
     );
   } else {
@@ -367,7 +367,7 @@ export default function Player({ save, setSave, onExit }) {
 
       {/* HUD */}
       <div className="absolute top-0 inset-x-0 z-30 px-4 py-2 bg-gradient-to-b from-black/30 to-transparent">
-        <div className="[&_*]:!text-white/90"><Hud save={save} /></div>
+        <div className="[&_*]:!text-white/90"><Hud save={save} chapter={chapter} /></div>
       </div>
 
       {/* toast */}
@@ -429,7 +429,7 @@ function SaveSummary({ save }) {
         <span>沈疏桐好感 <b>{save.favor}</b></span>
       </div>
       <div className="space-y-1">
-        {CHAPTER_1.knowledgePoints.map((kp) => (
+        {(CHAPTER_1.knowledgePoints || []).map((kp) => (
           <div key={kp} className="flex justify-between text-xs">
             <span className="text-[var(--color-text-dim)]">{KP_SHORT[kp]}（{kp}）</span>
             <span>
