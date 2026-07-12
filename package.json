@@ -26,6 +26,7 @@
     "audit:bazi-relations": "node scripts/validation/audit-bazi-relations.mjs",
     "audit:bazi-strength": "node scripts/validation/audit-bazi-strength.mjs",
     "audit:liuyao": "node scripts/validation/audit-liuyao.mjs",
+    "audit:chapter1": "node scripts/validation/audit-chapter1-script.mjs",
     "audit:meihua": "node scripts/validation/audit-meihua.mjs",
     "audit:yijing": "node scripts/validation/audit-yijing-core.mjs",
     "audit:ziwei": "node scripts/validation/audit-ziwei.mjs",
