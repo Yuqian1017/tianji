@@ -18,7 +18,7 @@
 - 每个来源的许可、完整性、整理状态和使用边界是什么。
 - 规范化条目以后必须如何回指来源。
 
-本清单登记 source package 和主要 source group，不替代未来的逐条 `source_ref`。逐条溯源在规范化阶段生成。
+本清单登记 source package 和主要 source group，不替代未来的逐条 `source_ref`。逐条溯源在规范化阶段生成。全量文件级入口为 `database/sources/source-library.json`；本文保留重要来源的人工说明与使用边界。
 
 ## 2. 来源状态词
 
@@ -690,6 +690,7 @@
 | TCM-FOOD-MEDICINE-ADJUDICATIONS | `database/tcm/normalized/tcm-food-medicine-adjudications.json` | 106 项目录、Skill A 清单 15 项、8 条食疗/药食配方和 38 个原料引用 | 食品身份、部位/炮制缺口和配方继承裁决 | 目录身份已固定；全部具体产品用法 blocked |
 | TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
+| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 9 个来源组、252 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
 ## 7. 当前 Runtime 来源组

@@ -65,6 +65,8 @@
     "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",
     "audit:ziwu": "node scripts/validation/audit-ziwu.mjs",
     "audit:shared-time": "node scripts/validation/audit-shared-time-cities.mjs",
+    "build:source-library": "node scripts/validation/build-source-library.mjs",
+    "audit:source-library": "npm run build:source-library && node --test test/shared/source-library.test.mjs",
     "build:xiangshu-inventory": "node scripts/validation/build-xiangshu-raw-inventory.mjs",
     "audit:xiangshu-sources": "npm run build:xiangshu-inventory && node scripts/validation/audit-xiangshu-classical-sources.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",

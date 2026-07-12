@@ -37,6 +37,7 @@
 | `docs/PRD.md` | 当前产品主旨、范围、需求和验收合同 |
 | `docs/DATABASE_COVERAGE_MATRIX.md` | 每个知识域已有数据、运行时、验证状态和缺口 |
 | `docs/PROMINENT_SOURCE_MANIFEST.md` | 原始资料、典籍、版本见证和现代边界来源清单 |
+| `database/sources/source-library.json` | 全项目参考文献与典籍的逐文件中央索引、canonical 路径及校验值 |
 | `docs/DATABASE_SOURCE_DOCTRINE.md` | 典籍见证、传统解释、现代边界和产品呈现的分层规则 |
 | `docs/DATABASE_VALIDATION_PLAN.md` / `LEDGER.md` | 验证方法、逐项证据与结果 |
 | `docs/meta/TIANJI_PROJECT_ROADMAP.md` | 从数据库验证到教学游戏切片的阶段顺序 |
