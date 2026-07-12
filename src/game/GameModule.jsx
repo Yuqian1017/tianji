@@ -47,7 +47,7 @@ export default function GameModule() {
   }
 
   const bonusQiannang = CHAPTERS['qiannang'];
-  const bonusUnlocked = bonusQiannang && save?.completedChapters?.includes('ch1') && (save?.favor ?? 0) >= 10;
+  const bonusUnlocked = bonusQiannang && save?.completedChapters?.includes('ch1') && (save?.favor ?? 0) >= 8;
   const bonusDone = save?.completedChapters?.includes('qiannang');
 
   const hasProgress = save?.currentNodeId;
