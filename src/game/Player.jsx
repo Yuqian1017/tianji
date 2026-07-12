@@ -17,6 +17,7 @@ import {
   dynamicOptionText,
 } from './state.js';
 import { throwCoins, paipan } from '../modules/liuyao/engine.js';
+import { BG_SWITCH, BGM_SWITCH, PORTRAITS, portraitVisible, fallbackForNode } from './presentation.js';
 
 const KP_SHORT = { 'KP-LY-001': '认卦', 'KP-LY-002': '摇卦', 'KP-LY-003': '动变' };
 
@@ -67,6 +68,42 @@ export default function Player({ save, setSave, onExit }) {
   const [pendingResponse, setPendingResponse] = useState(null); // choice response being shown
   const [toast, setToast] = useState(null);                     // teachMoment / reward toast
   const [activeCast, setActiveCast] = useState(null);           // {nodeId, thrown[], paused}
+  const [bg, setBg] = useState(() => fallbackForNode(save.currentNodeId).bg); // resume-safe
+  const bgmRef = useRef(null);                                  // HTMLAudio, lazy
+
+  // presentation switches: bg + bgm keyed by node id (resume falls back per scene)
+  const sceneRef = useRef(null);
+  useEffect(() => {
+    const id = save.currentNodeId;
+    const scene = /^ch1-s(\d)/.exec(id || '')?.[1] || null;
+    if (BG_SWITCH[id]) {
+      setBg(BG_SWITCH[id]);
+    } else if (scene !== null && scene !== sceneRef.current) {
+      // exact-node switch missed (fast advance / resume) → scene-level fallback
+      setBg(fallbackForNode(id).bg);
+    }
+    sceneRef.current = scene;
+    const bgmSrc = BGM_SWITCH[id];
+    if (bgmSrc !== undefined) {
+      if (!bgmRef.current) { bgmRef.current = new Audio(); bgmRef.current.loop = true; bgmRef.current.volume = 0.35; }
+      const audio = bgmRef.current;
+      if (bgmSrc === null) { audio.pause(); }
+      else if (!audio.src.endsWith(bgmSrc)) {
+        audio.src = bgmSrc;
+        audio.play().catch((e) => console.warn('[game] bgm autoplay blocked or missing:', e.message));
+      }
+    } else if (!bgmRef.current) {
+      // resume mid-scene: start fallback bgm lazily
+      const fb = fallbackForNode(id).bgm;
+      if (fb) {
+        bgmRef.current = new Audio(fb); bgmRef.current.loop = true; bgmRef.current.volume = 0.35;
+        bgmRef.current.play().catch((e) => console.warn('[game] bgm autoplay blocked or missing:', e.message));
+      }
+    }
+  }, [save.currentNodeId]);
+
+  // stop bgm on unmount (exit to title)
+  useEffect(() => () => { bgmRef.current?.pause(); }, []);
 
   const commit = useCallback((mutated, nextId) => {
     const next = persistSave({ ...mutated, currentNodeId: nextId });
@@ -188,21 +225,16 @@ export default function Player({ save, setSave, onExit }) {
     const favorMutator = node.effects?.favor ? (s) => applyFavor(s, node.effects.favor) : undefined;
     body = (
       <div className={clickable ? 'cursor-pointer' : ''} onClick={clickable ? () => advance(node.next, favorMutator) : undefined}>
-        {node.aside && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed mb-3 font-body">{T(node.aside)}</div>}
+        {node.aside && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed mb-2 font-body">{T(node.aside)}</div>}
         {node.type === 'dialogue' ? (
-          <div className="leading-loose font-body">
-            <span className="text-[var(--color-gold)] font-medium">{T(node.speaker)}</span>
-            <span className="text-[var(--color-text-dim)]">：「</span>
-            <span className="text-[var(--color-text)]">{nodeText()}</span>
-            <span className="text-[var(--color-text-dim)]">」</span>
-          </div>
+          <div className="leading-loose font-body text-[var(--color-text)]">「{nodeText()}」</div>
         ) : (
           <div className="leading-loose text-[var(--color-text)] font-body whitespace-pre-line">{nodeText()}</div>
         )}
         {isResume ? (
           <Continue onClick={resumeCast} label="——继续摇卦——" />
         ) : (
-          <div className="text-right text-xs text-[var(--color-text-dim)] mt-3 opacity-50">▸</div>
+          <div className="text-right text-xs text-[var(--color-text-dim)] mt-2 opacity-50 animate-pulse">▸</div>
         )}
       </div>
     );
@@ -298,28 +330,87 @@ export default function Player({ save, setSave, onExit }) {
   }
 
   // PLACEHOLDER-RENDER-2
+  const isDialogNode = node.type === 'narration' || node.type === 'dialogue';
+  const showPortrait = portraitVisible(save.currentNodeId);
+  const portraitSrc = PORTRAITS[save.settings.seniorGender] || PORTRAITS.female;
+  const speaking = node.type === 'dialogue' && node.speaker === '沈疏桐';
+
   return (
-    <div className="max-w-xl mx-auto space-y-4 pb-16">
-      <Hud save={save} />
+    <div className="fixed inset-0 overflow-hidden select-none">
+      {/* background layer */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-[background-image] duration-700"
+        style={{ backgroundImage: `url(${bg})` }}
+      />
+      <div className="absolute inset-0 bg-black/15" />
+
+      {/* portrait layer (沈疏桐, gender variant) */}
+      {showPortrait && (
+        <img
+          src={portraitSrc}
+          alt="沈疏桐"
+          className="absolute bottom-0 right-[6%] h-[86%] object-contain transition-all duration-300"
+          style={{
+            // multiply blends the plain cream canvas into the scene (poor-man's alpha)
+            mixBlendMode: 'multiply',
+            filter: speaking ? 'brightness(1.02)' : 'brightness(0.78)',
+            transform: speaking ? 'scale(1)' : 'scale(0.985)',
+          }}
+          onError={(e) => { console.warn('[game] portrait missing:', portraitSrc); e.target.style.display = 'none'; }}
+        />
+      )}
+
+      {/* HUD */}
+      <div className="absolute top-0 inset-x-0 z-30 px-4 py-2 bg-gradient-to-b from-black/30 to-transparent">
+        <div className="[&_*]:!text-white/90"><Hud save={save} /></div>
+      </div>
+
+      {/* toast */}
       {toast && (
-        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)] text-sm text-[var(--color-gold)] shadow-md font-body">
+        <div className="absolute top-12 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-[var(--color-surface)]/95 border border-[var(--color-gold-border)] text-sm text-[var(--color-gold)] shadow-md font-body">
           {toast.text}
         </div>
       )}
-      {/* cast panel persists (compact) while interleave chain plays */}
+
+      {/* cast panel: centered overlay during casting */}
       {activeCast && castNode && (
-        <CastPanel
-          node={castNode}
-          settings={save.settings}
-          thrown={activeCast.thrown}
-          paused={activeCast.paused === true}
-          onThrow={handleThrow}
-        />
+        <div className="absolute inset-x-0 top-[8%] z-20 flex justify-center px-4">
+          <div className="w-full max-w-md max-h-[64vh] overflow-y-auto rounded-xl shadow-xl bg-[var(--color-surface)]/97">
+            <CastPanel
+              node={castNode}
+              settings={save.settings}
+              thrown={activeCast.thrown}
+              paused={activeCast.paused === true}
+              onThrow={handleThrow}
+            />
+          </div>
+        </div>
       )}
-      <div className="border border-[var(--color-border)] rounded-xl p-5 bg-[var(--color-surface)] min-h-[120px]">
-        {body}
-      </div>
-      <button onClick={onExit} className="text-xs text-[var(--color-text-dim)] hover:text-[var(--color-text)] font-body">← 存档并退出</button>
+
+      {/* main content: dialog box (bottom) for text nodes; centered overlay card otherwise */}
+      {isDialogNode ? (
+        <div className="absolute bottom-0 inset-x-0 z-20 px-4 pb-4">
+          <div className="max-w-3xl mx-auto rounded-xl border border-[var(--color-gold-border)]/60 bg-[var(--color-surface)]/94 shadow-xl px-6 py-4 min-h-[120px] backdrop-blur-sm">
+            {node.type === 'dialogue' && (
+              <div className="inline-block -mt-7 mb-1 px-3 py-1 rounded-md bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)] text-[var(--color-gold)] text-sm font-medium font-body shadow-sm">
+                {T(node.speaker)}
+              </div>
+            )}
+            {body}
+          </div>
+        </div>
+      ) : (
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-4 overflow-y-auto py-14">
+          <div className="w-full max-w-xl rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/96 shadow-xl p-6 backdrop-blur-sm">
+            {body}
+          </div>
+        </div>
+      )}
+
+      {/* exit */}
+      <button onClick={onExit} className="absolute bottom-1 left-3 z-30 text-xs text-white/70 hover:text-white font-body">
+        ← 存档并退出
+      </button>
     </div>
   );
 }
