@@ -1,7 +1,7 @@
 // Game module entry — save management + player mount (M1-4/M1-6).
 import { useState, useEffect } from 'react';
 import Player from './Player.jsx';
-import { CHAPTER_1 } from './chapters/chapter1.js';
+import { CHAPTERS, CHAPTER_1 } from './chapters/index.js';
 import { loadSave, newSave, persistSave, clearSave } from './state.js';
 import { PRELOAD_IMAGES } from './presentation.js';
 
@@ -15,12 +15,20 @@ export default function GameModule() {
   }, []);
 
   const startNew = () => {
-    const fresh = persistSave({ ...newSave(), currentNodeId: CHAPTER_1.entryNode });
+    const fresh = persistSave({ ...newSave(), currentChapter: CHAPTER_1.id, currentNodeId: CHAPTER_1.entryNode });
     setSave(fresh);
     setPlaying(true);
   };
 
   const continueSave = () => setPlaying(true);
+
+  const startBonus = (chapterId) => {
+    const ch = CHAPTERS[chapterId];
+    if (!ch) { console.error(`[game] bonus chapter not registered: ${chapterId}`); return; }
+    const next = persistSave({ ...save, currentChapter: chapterId, currentNodeId: ch.entryNode });
+    setSave(next);
+    setPlaying(true);
+  };
 
   const resetConfirm = () => {
     // in-app modal discipline: no window.confirm — lightweight two-step button
@@ -34,8 +42,13 @@ export default function GameModule() {
   };
 
   if (playing && save?.currentNodeId) {
-    return <Player save={save} setSave={setSave} onExit={() => setPlaying(false)} />;
+    const activeChapter = CHAPTERS[save.currentChapter || 'ch1'] || CHAPTER_1;
+    return <Player save={save} setSave={setSave} chapter={activeChapter} onExit={() => setPlaying(false)} />;
   }
+
+  const bonusQiannang = CHAPTERS['qiannang'];
+  const bonusUnlocked = bonusQiannang && save?.completedChapters?.includes('ch1') && (save?.favor ?? 0) >= 10;
+  const bonusDone = save?.completedChapters?.includes('qiannang');
 
   const hasProgress = save?.currentNodeId;
   const finished = save?.completedChapters?.includes(CHAPTER_1.id);
@@ -66,6 +79,11 @@ export default function GameModule() {
         )}
         {finished && (
           <div className="text-sm text-amber-200 font-body drop-shadow">✦ 本章已通关 · 灵力 {save.lingli} · 好感 {save.favor}</div>
+        )}
+        {bonusUnlocked && (
+          <button onClick={() => startBonus('qiannang')} className="w-full py-3 rounded-lg bg-rose-50/85 border border-rose-200 text-rose-800 font-medium font-body shadow-lg">
+            {bonusDone ? '重温番外 ·《钱囊》' : '✧ 番外解锁 ·《钱囊》'}
+          </button>
         )}
         <button onClick={startNew} className="w-full py-3 rounded-lg border border-white/60 text-white font-body hover:bg-white/10 transition-colors shadow-lg backdrop-blur-sm">
           {hasProgress ? '重新入门（新开档）' : '入山门'}
