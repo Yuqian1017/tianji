@@ -1,0 +1,67 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-2 script lint.",
+  "sourceDoc": "docs/script/CHAPTER_2_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-004",
+ "domain": "liuyao",
+ "domainCn": "六爻（装卦）",
+ "name": "八宫与卦宫归属",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-001"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-12",
+   "by": "落听潮 — 跟随制审计第二批（双典籍互证 + 引擎 64/64 程序化对撞）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "乾宮八卦：﹝俱屬金﹞乾為天﹐天風姤﹐天山遁﹐天地否﹐風地觀﹐山地剝﹐火地晉﹐火天大有。／坎宮八卦：﹝俱屬水﹞坎為水﹐水澤節﹐水雷屯﹐水火旣濟﹐澤火革﹐雷火豐﹐地火明夷﹐地水師。／艮宮八卦：﹝屬土﹞艮為山﹐山火賁﹐山天大畜﹐山澤損﹐火澤睽﹐天澤履﹐風澤中孚﹐風山漸。／震宮八卦：﹝屬木﹞震為雷﹐雷地豫﹐雷水解﹐雷風恆﹐地風升﹐水風井﹐澤風大過﹐澤雷隨。（巽離坤兌四宫同段照录，见 witness）",
+   "source": "《增删卜易·八宮六十四卦卦名》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 137-169",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（快照 zengshanbuyi-wiki-950329-2026-07-12.html）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "遊魂卦為各宮之第七卦﹐如乾宮中之火地晉﹐坤宮中之水天需。歸魂卦為各宮之第八卦﹐如乾宮中之火天大有﹐坤宮中之水地比。",
+   "source": "《增删卜易·歸魂遊魂章第又二十六》",
+   "locator": "ctext wiki chapter=950329，提取行 1657-1661",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "八宮所屬：干屬金，坎為水，艮屬土，震巽屬木，離屬火，坤屬土，兌屬金．",
+   "source": "《卜筮正宗·八宮所屬》（王洪绪辑）",
+   "locator": "ctext wiki chapter=889452，提取行 287",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（「干」=「乾」转录讹，快照内注）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  },
+  {
+   "text": "晉者進也．乃乾宮之第七卦名曰游魂卦．……大有者寬也．乃乾宮之末卦，名歸魂．",
+   "source": "《卜筮正宗·六十四卦名（裝卦表）》乾宫散文",
+   "locator": "ctext wiki chapter=889452，提取行 937",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（与《增删》歸魂遊魂章互证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  },
+  {
+   "text": "八卦各宮全圖：﹝初學點卦﹐不會裝卦者﹐須裝照此全圖裝拼世應五行﹞。",
+   "source": "《增删卜易·八宮圖第三》",
+   "locator": "ctext wiki chapter=950329，提取行 171-173",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（初学查全图＝本章简化口径的典籍背书）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "2026-07-12：八宫归属+宫内位次与 src/modules/liuyao/data.js JINGFANG 表程序化对撞 64/64 match（见 witness JSON engineCrossCheck 字段）",
+ "sourceNote": "八宫分卦通称京房八宫（汉·京房易学一系），本卡不引《京氏易传》原文、不认定源流史实，教学口径从清代实操二书（跟随制：排盘引擎即按其验证）。",
+ "modernExplain": "（整理者转述）六十四卦分属八宫，每宫八卦，八宫以其纯卦为名（乾坎艮震巽离坤兑）。同宫同五行：乾兑属金、坎属水、艮坤属土、震巽属木、离属火。宫内位次固定：第一卦为八纯卦（本宫卦），其后一世至五世，第七卦名游魂，第八卦名归魂。知道一张卦归哪宫，就知道它的五行（宫五行即后续断法里的『我』）和它在宫中的位次。初学不必背全六十四卦归属——照全图查是典籍明许的正途，要背的是『八宫各八卦、位次不乱』这套骨架。",
+ "gameLine": "六十四卦不是散兵游勇——八宫各统八卦，同宫同姓。宫主打头，一世到五世排下去，第七个游魂，第八个归魂：找到宫，卦就有了籍贯。",
+ "usedInChoicePoints": [
+  "CH2-CP-01"
+ ]
+}

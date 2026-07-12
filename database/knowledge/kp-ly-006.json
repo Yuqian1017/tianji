@@ -1,0 +1,59 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-2 script lint.",
+  "sourceDoc": "docs/script/CHAPTER_2_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-006",
+ "domain": "liuyao",
+ "domainCn": "六爻（装卦）",
+ "name": "世应（安法与含义）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-004"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-12",
+   "by": "落听潮 — 跟随制审计第二批（双典籍互证 + 引擎 64/64 程序化对撞）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "安世應訣／八卦之首世六當，以下初爻輪上揚，游魂八宮四爻立，歸魂八卦三爻詳。",
+   "source": "《卜筮正宗·安世應訣》（王洪绪辑）",
+   "locator": "ctext wiki chapter=889452，提取行 501-503",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（「輪上揚」他本或作「颺／飏」）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  },
+  {
+   "text": "乾為天「世」在六﹐天風姤「世」在初﹐天山遁「世」在二﹐天地否「世」在三﹐天地觀「世」在四﹐山地剝「世」在五﹐火地晉「世」在四﹐火天大有「世」退在三。／隔世爻兩位卽是應爻﹐餘卦仿此。",
+   "source": "《增删卜易·世應章第六》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 687-691",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（「天地觀」＝「風地觀」转录讹，快照内注；与安世应诀互证一致）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "凡卦中世應二爻，世為自己，應作他人，世應相生相合是雲賓主相投；世應相克相衝可見兩情不睦。……或指實某處地頭，或指此山此水、此寺此壇等類、俱以應爻為用神也。",
+   "source": "《卜筮正宗·十八論·世應論用神第二》",
+   "locator": "ctext wiki chapter=889452，提取行 1945",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（「是雲」＝「是謂／是云」转录；生克断法部分超纲存证不入 gameLine）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  },
+  {
+   "text": "世應當中兩間爻，忌神發動莫相交，元辰與用當中動，生世扶身事事高，",
+   "source": "《卜筮正宗·定間爻歌》",
+   "locator": "ctext wiki chapter=889452，提取行 603-605",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（首句佐证世应相隔两位；忌神元辰句超纲存证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  }
+ ],
+ "engineCrossCheck": "2026-07-12：世位（本宫六/一世初…五世五/游魂四/归魂三）+ 应位（隔世爻两位）与 src/modules/liuyao/data.js JINGFANG 表 world/response 程序化对撞 64/64 match（见 witness JSON engineCrossCheck 字段）",
+ "modernExplain": "（整理者转述）每卦六爻中安『世』『应』两爻。含义：世为自己（问卦人一方），应作他人（对方、彼处、所问的另一端）。安法由卦在宫中的位次定：八纯卦（宫首）世在第六爻；一世卦世在初爻，二世在二，依次轮上，五世在五；游魂卦世在四爻，归魂卦世在三爻。从世爻隔两位就是应爻——世初应四、世二应五、世三应六、世四应初、世五应二、世六应三。练气期口径止步于『安世应 + 世我应彼』；世应生克旺衰等断法属后续章节。",
+ "gameLine": "世是你自己，应是对面那一头。宫里排第几，世就落在哪一爻；从世隔两位，就是应——一张卦从此分了你我。",
+ "usedInChoicePoints": [
+  "CH2-CP-02"
+ ]
+}

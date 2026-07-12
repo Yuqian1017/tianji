@@ -1,0 +1,54 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-2 script lint.",
+  "sourceDoc": "docs/script/CHAPTER_2_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-005",
+ "domain": "liuyao",
+ "domainCn": "六爻（装卦）",
+ "name": "纳甲装地支（简化口径）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-001",
+  "KP-LY-002"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-12",
+   "by": "落听潮 — 跟随制审计第二批（双典籍互证 + 引擎 24/24 程序化对撞）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "乾在內：子水寅木辰土。乾在外：午火申金戌土。／坎在內：寅木辰土午火。坎在外：申金戌土子水。／辰在內：辰土午火申金。辰在外：戌土子水寅木。／震在內：子水寅木辰土。震在外；午火申金戌土。／巽在內：丑土亥水酉金。巽在外：未土巳火卯木。／離在內：卯木丑土亥水。離在外：酉金未土巳火。／坤在內：未土巳火卯木。坤在外：丑土亥水酉金。／兌在內：巳火卯木丑土。兌在外：亥水酉金未土。",
+   "source": "《增删卜易·渾天甲子章第四》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 625-641",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（两处「辰在內／外」＝「艮」转录讹，已与《卜筮正宗》纳甲歌+引擎互证复原；快照内注）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "如得天風姤卦﹐上三爻是乾卦。卽乾在外：午火申金戌土。下三爻是巽卦。卽巽在內：丑土亥水酉金。點卦由下而上﹐故裝五行也由下而上﹐餘仿此。",
+   "source": "《增删卜易·渾天甲子章第四》装卦实例",
+   "locator": "ctext wiki chapter=950329，提取行 643",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "納甲裝卦歌　從下裝起／干金甲子外壬午（乾）……坎水戊寅外戊申……艮土丙辰外丙戍……震木庚子外庚午……巽木辛丑外辛未……離火巳卯外巳酉……坤土乙未外癸丑……兌金丁亥（脱「丁巳外」）……",
+   "source": "《卜筮正宗·納甲裝卦歌》（王洪绪辑）",
+   "locator": "ctext wiki chapter=889452，提取行 465-475",
+   "witness": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json（本歌转录讹损较多：干＝乾、戍＝戌、離火两「巳」＝「己」、兑句脱字——逐处已注并与增删互证；存证天干体系，教学引用以增删为主）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  }
+ ],
+ "engineCrossCheck": "2026-07-12：八卦内外纳支+五行与 src/modules/liuyao/data.js NAJIA/BRANCH_WUXING 表程序化对撞 24/24 组 match（见 witness JSON engineCrossCheck 字段）",
+ "simplificationNote": "简化口径（练气期）：只装地支、随支记五行，天干存而不论——此非游戏自创：《增删卜易·渾天甲子章》通篇即只列地支五行（天干仅存于章名「渾天甲子」与《卜筮正宗》纳甲歌）。完整天干装法（乾内甲外壬、坤内乙外癸等）随后续章节展开；本章剧情中天干仅由{{senior}}口头带过一句，不教不考。",
+ "modernExplain": "（整理者转述）装卦即给六爻逐爻配上地支——地支各有五行，爻从此『有名有姓』。八卦各有固定纳支，且同一卦在内卦（下三爻）与外卦（上三爻）装法不同：如乾内卦自下而上子寅辰、外卦午申戌；离内卦卯丑亥、外卦酉未巳。装的方向与画卦相同：自下而上。初学照表装，装熟自明其律（阳卦隔位顺行、阴卦隔位逆行——此规律句为整理者观察，不入考点）。",
+ "gameLine": "爻画只分阴阳，是没名字的骨头——装上地支，卦才有名有姓：内外卦各有各的装法，从下往上，一爻一支，支里带着五行。",
+ "usedInChoicePoints": [
+  "CH2-CP-03"
+ ]
+}
