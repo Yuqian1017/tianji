@@ -99,7 +99,7 @@ for (const record of core.records) {
 const failures = checks.filter(item => !item.pass);
 const artifact = {
   audit: 'tcm-classic-quote-provenance',
-  generatedAt: new Date().toISOString(),
+  generatedAt: '2026-07-11',
   scope: core.scope,
   counts: {
     ...core.counts,
