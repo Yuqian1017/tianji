@@ -1,0 +1,27 @@
+{
+ "fetchedAt": "2026-07-12",
+ "source": "ctext.org (Chinese Text Project)",
+ "purpose": "Pinned transcription witness for Chapter 1 KP cards (KP-LY-001/002/003). Full-page HTML archived at database/sources/ctext/*.html; this file extracts only the paragraphs cited by KP cards.",
+ "note": "ctext paragraph numbers follow the /zh page anchor numbering as of fetch date. Attribution: https://ctext.org/zh",
+ "pages": {
+  "xi-ci-shang": {
+   "url": "https://ctext.org/book-of-changes/xi-ci-shang/zh",
+   "title": "周易·繫辭上",
+   "paragraphs": {
+    "6": "一陰一陽之謂道，繼之者善也，成之者性也。仁者見之謂之仁，知者見之謂之知。百姓日用而不知，故君子之道鮮矣。顯諸仁，藏諸用，鼓萬物而不與聖人同懮，盛德大業至矣哉。富有之謂大業，日新之謂盛德。生生之謂易，成象之謂乾，效法之為坤，極數知來之謂占，通變之謂事，陰陽不測之謂神。",
+    "12": "是故，易有太極，是生兩儀，兩儀生四象，四象生八卦，八卦定吉凶，吉凶生大業。是故，法象莫大乎天地，變通莫大乎四時，縣象著明莫大乎日月，崇高莫大乎富貴；備物致用，立成器以為天下利，莫大乎聖人；探賾索隱，鉤深致遠，以定天下之吉凶，成天下之亹亹者，莫大乎蓍龜。"
+   }
+  },
+  "shuo-gua": {
+   "url": "https://ctext.org/book-of-changes/shuo-gua/zh",
+   "title": "周易·說卦",
+   "paragraphs": {
+    "2": "昔者聖人之作《易》也，將以順性命之理，是以立天之道曰陰與陽，立地之道曰柔與剛，立人之道曰仁與義。兼三才而兩之，故《易》六畫而成卦。分陰分陽，迭用柔剛，故《易》六位而成章。",
+    "7": "乾，健也；坤，順也；震，動也；巽，入也；坎，陷也；離，麗也；艮，止也；兌，說也。",
+    "15": "坎為水，為溝瀆，為隱伏，為矯輮，為弓輪。其於人也，為加憂，為心病，為耳痛，為血卦，為赤。其於馬也，為美脊，為亟心，為下首，為薄蹄，為曳。其於輿也，為多眚，為通，為月，為盜。其於木也，為堅多心。",
+    "16": "離為火，為日，為電，為中女，為甲胃，為戈兵。其於人也，為大腹。為乾卦，為鱉，為蟹，為蠃，為蚌，為龜。其於木也，為科上槁。",
+    "17": "艮為山，為徑路，為小石，為門闕，為果蓏，為閽寺，為指，為狗，為鼠，為黔喙之屬。其於木也，為堅多節。"
+   }
+  }
+ }
+}

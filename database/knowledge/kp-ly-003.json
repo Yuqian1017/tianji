@@ -1,0 +1,51 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by scripts/validation/audit-chapter1-script.mjs.",
+  "sourceDoc": "docs/script/CHAPTER_1_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-003",
+ "domain": "liuyao",
+ "domainCn": "六爻",
+ "name": "动爻与变卦",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-001",
+  "KP-LY-002"
+ ],
+ "status": "accepted",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-12",
+   "by": "落听潮 — 跟随制审计首批（三轮 fresh-context 审查收敛）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-12",
+   "by": "宗主 — M0 gate 过目通过"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "六爻不動則不變，動則必變，「○」為陽動則變「⚋」，「ㄨ」為陰動則變「⚊」。如乾卦初爻動則變為巽卦……坤卦中爻動，變為坎卦……變出之爻安六親者仍照正卦而推，餘卦仿此。",
+   "source": "《增删卜易·卷之一·动变章第七》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329",
+   "witness": "⚠️ ctext wiki 转录本；末句涉六亲装变，超出第一章教学范围，照录存证不入 gameLine",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "三背為重，三字為交，重交之爻謂之發動，重作單屬陽，交作拆屬陰，凡動爻有變，重變拆，交變單，餘爻仿此。",
+   "source": "《卜筮正宗·卷一·以钱代蓍法》末段",
+   "locator": "ctext wiki chapter=889452",
+   "witness": "⚠️ ctext wiki 转录本（与《增删卜易》互证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  }
+ ],
+ "modernExplain": "（整理者转述）六爻中的「重」（老阳）与「交」（老阴）称为动爻——不动则卦不变，一动则必变：老阳动而变阴，老阴动而变阳。动爻翻转后得到的新卦称「变卦」，原卦称「本卦」。第一章教学口径止步于「动则必变、识别本卦与变卦」；变卦参断的完整规则（动变生克等）属后续章节。",
+ "gameLine": "重和交是动爻——六爻不动则不变，动则必变：阳动变阴，阴动变阳。本卦是事情此刻的模样，变卦是它要去的方向。",
+ "gameLineNote": "末句「模样／方向」为练气期教学简化口径（整理者转述性质）；严格的动变参断细则在筑基阶段随《增删卜易》后续章节展开，剧本第五幕已留「卦到这就说完了」的补丁口。",
+ "usedInChoicePoints": [
+  "CH1-CP-01"
+ ]
+}

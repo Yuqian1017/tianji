@@ -1,0 +1,96 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by scripts/validation/audit-chapter1-script.mjs.",
+  "sourceDoc": "docs/script/CHAPTER_1_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-001",
+ "domain": "liuyao",
+ "domainCn": "六爻（基础通识）",
+ "name": "阴阳爻与卦的构成",
+ "difficulty": "必修",
+ "prereqIds": [],
+ "status": "accepted",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-12",
+   "by": "落听潮 — 跟随制审计首批（三轮 fresh-context 审查收敛）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-12",
+   "by": "宗主 — M0 gate 过目通过"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "一陰一陽之謂道，繼之者善也，成之者性也。",
+   "source": "《周易·系辞上》",
+   "locator": "ctext 段 [6]",
+   "witness": "database/sources/ctext/zhouyi-xici-shuogua-2026-07-12.json",
+   "url": "https://ctext.org/book-of-changes/xi-ci-shang/zh"
+  },
+  {
+   "text": "是故，易有太極，是生兩儀，兩儀生四象，四象生八卦，八卦定吉凶，吉凶生大業。",
+   "source": "《周易·系辞上》",
+   "locator": "ctext 段 [12]",
+   "witness": "database/sources/ctext/zhouyi-xici-shuogua-2026-07-12.json",
+   "url": "https://ctext.org/book-of-changes/xi-ci-shang/zh"
+  },
+  {
+   "text": "昔者聖人之作《易》也，將以順性命之理，是以立天之道曰陰與陽，立地之道曰柔與剛，立人之道曰仁與義。兼三才而兩之，故《易》六畫而成卦。",
+   "source": "《周易·说卦》",
+   "locator": "ctext 段 [2]",
+   "witness": "database/sources/ctext/zhouyi-xici-shuogua-2026-07-12.json",
+   "url": "https://ctext.org/book-of-changes/shuo-gua/zh"
+  },
+  {
+   "text": "乾，健也；坤，順也；震，動也；巽，入也；坎，陷也；離，麗也；艮，止也；兌，說也。",
+   "source": "《周易·说卦》",
+   "locator": "ctext 段 [7]",
+   "witness": "database/sources/ctext/zhouyi-xici-shuogua-2026-07-12.json",
+   "url": "https://ctext.org/book-of-changes/shuo-gua/zh"
+  },
+  {
+   "text": "艮為山，為徑路，為小石，為門闕，為果蓏，為閽寺，為指，為狗，為鼠，為黔喙之屬。其於木也，為堅多節。",
+   "source": "《周易·说卦》",
+   "locator": "ctext 段 [17]（坎[15]/離[16]同快照）",
+   "witness": "database/sources/ctext/zhouyi-xici-shuogua-2026-07-12.json",
+   "url": "https://ctext.org/book-of-changes/shuo-gua/zh"
+  },
+  {
+   "text": "乾三連，☰，連得三爻俱是單，為乾卦。﹝一點為單﹞／坤六斷，☷……／艮覆碗，☶，初爻、二爻俱是拆，三爻單，為艮卦。／離中虛，☲，初爻單、二爻拆、三爻單，為離卦。／坎中滿，☵，初爻拆、二爻單、三爻拆，為坎卦。",
+   "source": "《增删卜易·卷之一·卦象图第二》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329",
+   "witness": "⚠️ ctext wiki 开放编辑转录本（关键句已与《卜筮正宗·八卦象例》chapter=889452 互证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "plotHexagramWitnesses": [
+  {
+   "hexagram": "泰",
+   "quote": "泰：小往大來，吉亨。（乾下坤上）",
+   "witness": "database/sources/wikisource/zhouyi-64-mediawiki-2026-07-10.json",
+   "pageid": 12609
+  },
+  {
+   "hexagram": "賁",
+   "quote": "賁：亨。小利有攸往。／初九：賁其趾，舍車而徒。／象曰：山下有火，賁。（離下艮上）",
+   "witness": "database/sources/wikisource/zhouyi-64-mediawiki-2026-07-10.json",
+   "pageid": 12673
+  },
+  {
+   "hexagram": "艮",
+   "quote": "彖曰：艮，止也。／象曰：兼山，艮。（艮下艮上）",
+   "witness": "database/sources/wikisource/zhouyi-64-mediawiki-2026-07-10.json",
+   "pageid": 12579
+  }
+ ],
+ "modernExplain": "（整理者转述）卦由「爻」组成：连成一条整线的是阳爻，断成两截的是阴爻。三爻叠成一个三画卦（八卦：乾坤震巽坎离艮兑，各有取象，如乾为天、艮为山）；两个三画卦上下相叠，成六画的完整卦（六十四卦）。六爻自下而上数：初、二、三、四、五、上；下三爻称内卦，上三爻称外卦。卦名通例为「外卦象 + 内卦象 + 专名」连读（如山火贲：外艮山、内离火）。",
+ "gameLine": "连的是阳爻，断的是阴爻；下三道内卦、上三道外卦，从地里往上长——这就是一张卦的全部骨头。",
+ "usedInChoicePoints": [
+  "CH1-CP-02",
+  "CH1-CP-03"
+ ]
+}

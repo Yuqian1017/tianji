@@ -1,0 +1,72 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by scripts/validation/audit-chapter1-script.mjs.",
+  "sourceDoc": "docs/script/CHAPTER_1_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-002",
+ "domain": "liuyao",
+ "domainCn": "六爻",
+ "name": "三钱摇卦法（六掷成卦）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-001"
+ ],
+ "status": "accepted",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-12",
+   "by": "落听潮 — 跟随制审计首批（三轮 fresh-context 审查收敛）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-12",
+   "by": "宗主 — M0 gate 过目通过"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "以錢三文熏於爐上致敬而祝曰：天何言哉，叩之即應神之靈矣，感而遂通。今有（某姓）有事關心，不知休咎罔釋厥疑，惟神惟靈若可若否，望垂昭報。祝畢擲錢，一背為單畫一，二背為拆畫一，三背為重畫「０」，三字為交畫「X」。自下裝上，三擲內卦成，再祝曰：某宮三象吉凶未判，再求外象三爻以成一卦，以決憂疑。祝畢複如前法再擲合成一卦而斷吉凶。至敬至誠無不感應。訣曰：兩背由來拆，雙眉本是單，渾眉交定位，總背是重安。單單單曰乾，拆拆拆曰坤，單拆單曰離，拆單拆曰坎，餘卦仿此。三背為重，三字為交，重交之爻謂之發動。",
+   "source": "《卜筮正宗·卷一·以钱代蓍法》（王洪绪辑）",
+   "locator": "ctext wiki chapter=889452",
+   "witness": "⚠️ ctext wiki 转录本；「眉」指钱面字纹，「畫『０』」即动爻圈记「○」",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  },
+  {
+   "text": "占卦時，首先將三个銅錢平入于手心，兩手合扣，問事之人要集中意念，腦子只準專想所要預測之事，反覆搖動手中銅錢，然後將銅錢擲于盤中，看銅錢的背和字的情況。一个背，兩个字，稱作「單」，畫作「⚊」為少陽。兩个背，一个字，稱作「拆」，畫作「⚋」為少陰。三个背，沒有字，稱作「重」，畫作「○」為老陽，是變爻。三个字，沒有背，稱作「交」，畫作「ㄨ」為老陰，是變爻。共搖六次，第一次為初爻，畫在卦的最下面，依次上升，第六次為第六爻，畫在卦的最上面。如遇有ㄨ、○，再畫出變卦來。",
+   "source": "《增删卜易·卷之一·占卦法》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329",
+   "witness": "⚠️ ctext wiki 转录本（与《卜筮正宗》互证一致）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "自鬼谷以錢代蓍，而易之道一變。",
+   "source": "《卜筮正宗·凡例》",
+   "locator": "ctext wiki chapter=889452",
+   "witness": "托源声明，非史实认定",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  }
+ ],
+ "modernExplain": "（整理者转述）取三枚铜钱，合掌摇后掷出，共六次；每次按「背面朝上的个数」记一爻：一背为单（少阳，阳爻），两背为拆（少阴，阴爻），三背为重（老阳，阳爻而动），三字为交（老阴，阴爻而动）。第一掷为初爻画在最下，依次向上装；前三掷成内卦，后三掷成外卦。摇卦须一事一问、意念专注。",
+ "gameLine": "背几个，比什么都要紧：一背单、两背拆，三背是重、三字是交。六掷从下往上装，卦就成了。",
+ "conflicts": [
+  {
+   "id": "CONFLICT-COIN-FACE",
+   "recordedAt": "2026-07-12",
+   "description": "两典籍互证口径为「以背记数」：一背=单(7)、两背=拆(8)、三背=重(老阳 9)、三字=交(老阴 6)。项目 src/modules/liuyao/engine.js:56 注释「正面(字)=3 反面(花)=2」与此相反（三字记 9）。排盘数学（6/7/8/9→卦）不受影响（17,026 项验证无损）。",
+   "resolution": "采纳典籍口径为铜钱面语义标准；M1 修正 engine.js 注释与摇卦 UI 显示映射（任务 M1-5），不动排盘数学。剧本演出已按典籍口径写作。",
+   "doctrineRef": "DB-006"
+  }
+ ],
+ "pendingVerification": [
+  {
+   "item": "现存《火珠林》辑本（题宋·麻衣道者，ctext wiki chapter=597193）经 2026-07-12 全文检索无掷钱操作章句（「以錢代蓍」「三錢」「擲錢」均 0 命中）。三钱法后世通称「火珠林法」属托源；待核《火珠林》影印本是否含起例章（现存辑本或有脱佚）。",
+   "blocking": false,
+   "note": "KP-002 判定依据未引火珠林，不阻塞。PRD § 8.3 的『三钱起卦法源流』表述按见证现状修正为：火珠林为纳甲六亲断法早期见证。"
+  }
+ ],
+ "usedInChoicePoints": [
+  "CH1-CP-03"
+ ]
+}
