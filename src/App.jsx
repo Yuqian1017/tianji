@@ -3,6 +3,7 @@ import { loadHistoryFromServer, saveHistoryRecord, deleteHistoryRecord, loadHist
 import { getToken, clearToken, setLogoutCallback } from './lib/api.js';
 import { apiFetch } from './lib/api.js';
 import LoginPage from './components/LoginPage.jsx';
+import GameModule from './game/GameModule.jsx';
 import SettingsPanel from './components/SettingsPanel.jsx';
 import HistoryDrawer from './components/HistoryDrawer.jsx';
 import ThemePicker from './components/ThemePicker.jsx';
@@ -21,6 +22,8 @@ import FaceModule from './modules/face/FaceModule.jsx';
 import PalmModule from './modules/palm/PalmModule.jsx';
 
 const TABS = [
+  { id: 'game', label: '天机·第一卦', icon: '/assets/icon-liuyao.webp' },
+  { id: 'divider-paipan', label: '排盘' },
   { id: 'liuyao', label: '六爻占卜', icon: '/assets/icon-liuyao.webp' },
   { id: 'meihua', label: '梅花易数', icon: '/assets/icon-meihua.webp' },
   { id: 'bazi', label: '八字命理', icon: '/assets/icon-bazi.webp' },
@@ -339,6 +342,7 @@ export default function App() {
             加载历史记录...
           </div>
         )}
+        {activeTab === 'game' && <GameModule />}
         {activeTab === 'liuyao' && <LiuyaoModule {...moduleProps} />}
         {activeTab === 'meihua' && <MeihuaModule {...moduleProps} />}
         {activeTab === 'bazi' && <BaziModule {...moduleProps} />}

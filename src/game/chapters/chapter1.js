@@ -792,6 +792,9 @@ export const CHAPTER_1 = {
       type: 'dialogue', speaker: '沈疏桐',
       text: '内卦定了，还差外卦。仪轨里这时候要再祝一句——念：内象已成，吉凶未判，再求外象三爻，以成一卦，以决忧疑。',
       aside: '你跟着念了。三枚钱回到掌心。',
+      // Player contract: render this node, then hand control back to the paused
+      // cast panel for throws 4-6; on the 6th throw advance to `next` (s5-295 六爻排齐).
+      resumeCast: true,
       next: 'ch1-s5-295',
     },
     'ch1-s5-295': {
