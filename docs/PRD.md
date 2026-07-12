@@ -2,10 +2,47 @@
 
 - 文档状态：Validation hold；待数据库/排盘审计与本文 fresh review 阻塞项关闭
 - 版本：0.1
-- 更新日期：2026-07-09
+- 更新日期：2026-07-11
 - 适用范围：统一产品（Product C）及其 Product A、Product B、Database 子系统
 - 历史依据：`database/xuanxue/compendium-new/` 中的 `APP-SPEC*`、`GAME-DESIGN.md`、`DIFFICULTY-MAP.md` 与 `CC-FIRST-TASK.md`
 - 配套文档：`DATABASE_COVERAGE_MATRIX.md`、`PROMINENT_SOURCE_MANIFEST.md`
+
+## 0. 旧规格与当前文档位置
+
+旧项目没有单一的 `PRD.md`；产品主旨分散在原始 compendium 根目录的多份规格中。原始目录仍保留在：
+
+- `/Users/junshi/xuanxue-compendium-new/`
+- `/Users/junshi/xuanxue-compendium-vision api/`
+
+天机卷仓库内的 canonical 历史副本位于：
+
+- `database/xuanxue/compendium-new/`
+- `database/xuanxue/compendium-vision-api/`
+
+截至 2026-07-11，下面六份关键规格与 `/Users/junshi/xuanxue-compendium-new/` 原件逐字节一致：
+
+| 旧文件 | 原本职责 | 当前去向 |
+|---|---|---|
+| `APP-SPEC.md` | Product C 总规格：工具、教学、测验和 AI | 本文的统一产品定义、系统模型与需求 |
+| `APP-SPEC-A.md` | Product A：先做排盘与 AI 解读工具 | 本文实战工具层、当前产品基线与复用决策 |
+| `APP-SPEC-B.md` | Product B：修仙学堂、学习、答题、灵力与渡劫 | 本文修仙学堂、学习循环、首个可玩版本与教学需求 |
+| `GAME-DESIGN.md` | 境界、NPC、成就、道侣与长期剧情 | 本文游戏进度与叙事层；完整旧设计继续作为后续资产保留 |
+| `DIFFICULTY-MAP.md` | 各领域必修、进阶和专研分级 | `DATABASE_COVERAGE_MATRIX.md` 与未来知识点难度字段的候选输入 |
+| `CHANGELOG.md` | 旧阶段计划和开发顺序 | `meta/TIANJI_PROJECT_ROADMAP.md` 与根目录 `CHANGELOG.md` |
+
+当前重组后的权威文档分工：
+
+| 当前文件 | 权威职责 |
+|---|---|
+| `docs/PRD.md` | 当前产品主旨、范围、需求和验收合同 |
+| `docs/DATABASE_COVERAGE_MATRIX.md` | 每个知识域已有数据、运行时、验证状态和缺口 |
+| `docs/PROMINENT_SOURCE_MANIFEST.md` | 原始资料、典籍、版本见证和现代边界来源清单 |
+| `docs/DATABASE_SOURCE_DOCTRINE.md` | 典籍见证、传统解释、现代边界和产品呈现的分层规则 |
+| `docs/DATABASE_VALIDATION_PLAN.md` / `LEDGER.md` | 验证方法、逐项证据与结果 |
+| `docs/meta/TIANJI_PROJECT_ROADMAP.md` | 从数据库验证到教学游戏切片的阶段顺序 |
+| `docs/meta/TIANJI_TASK_SUPERVISOR_STATE.json` | 当前执行状态和下一步的机器可读快照 |
+
+历史规格继续作为证据和设计资产保存；发生冲突时，以本文及上述当前状态文档为准，不反向改写旧文件。
 
 ## 1. 执行结论
 
