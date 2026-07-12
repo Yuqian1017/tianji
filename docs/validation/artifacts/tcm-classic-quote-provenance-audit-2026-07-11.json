@@ -1,19 +1,23 @@
 {
   "audit": "tcm-classic-quote-provenance",
-  "generatedAt": "2026-07-12T03:21:21.978Z",
+  "generatedAt": "2026-07-12T03:38:25.409Z",
   "scope": "reference_42_suwen_explicit_quotes",
   "counts": {
     "quotes": 111,
     "exactText": 12,
-    "normalizedContiguous": 63,
+    "normalizedContiguous": 64,
     "segmentedEllipsis": 7,
-    "unresolved": 29,
-    "checks": 561,
+    "unresolved": 28,
+    "manualAdjudicated": 28,
+    "pendingManual": 0,
+    "referenceCorrected": 1,
+    "checks": 693,
     "failures": 0
   },
   "boundaries": [
     "A text match proves only that the quoted character sequence occurs in the selected local witness.",
-    "Unresolved includes editorial prompts, paraphrases, stitched excerpts, later commentary, textual variants, and possible transcription errors; each requires manual adjudication.",
+    "Mechanical unresolved means the exact normalized sequence does not occur contiguously; it remains unresolved even after its editorial form is manually classified.",
+    "Manual form adjudication distinguishes traceable abridgement, stitched excerpts, commentary, editorial prose, textual variants, and transcription issues without accepting the underlying claim.",
     "No quote, dose, treatment, diagnosis, prognosis, or self-care instruction becomes runtime eligible through this inventory."
   ],
   "failures": [],
@@ -29,6 +33,16 @@
       "detail": "reference_42_suwen_explicit_quotes"
     },
     {
+      "id": "schema-version",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "status",
+      "pass": true,
+      "detail": "text_match_and_manual_form_adjudication_not_content_acceptance"
+    },
+    {
       "id": "record-count",
       "pass": true,
       "detail": 111
@@ -36,7 +50,22 @@
     {
       "id": "unresolved-count",
       "pass": true,
-      "detail": 29
+      "detail": 28
+    },
+    {
+      "id": "manual-count",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "pending-manual-count",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "id": "reference-correction-count",
+      "pass": true,
+      "detail": 1
     },
     {
       "id": "source-hash:ref42",
@@ -47,6 +76,11 @@
       "id": "source-hash:huangdi-neijing-suwen-local-text",
       "pass": true,
       "detail": "database/tcm/skill-v3/sources/黄帝内经素问.txt"
+    },
+    {
+      "id": "source-hash:ref42-manual-adjudications",
+      "pass": true,
+      "detail": "database/tcm/adjudications/tcm-classic-quote-adjudications.json"
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0004Q1",
@@ -71,7 +105,22 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0004Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": "editorial_instruction"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0004Q1",
+      "pass": true,
+      "detail": "Template wording that describes how the reference file should be used."
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0004Q2",
@@ -96,7 +145,22 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0004Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": "editorial_instruction"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0004Q2",
+      "pass": true,
+      "detail": "A sample user question, not wording attributed to the Suwen."
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0005Q1",
@@ -121,7 +185,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0005Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": "editorial_safety_prose"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0005Q1",
+      "pass": true,
+      "detail": "The quote extractor crossed Markdown emphasis inside a modern safety note."
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0005Q1:1087",
+      "pass": true,
+      "detail": 1087
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0023Q1",
@@ -279,9 +363,36 @@
       "detail": "blocked"
     },
     {
-      "id": "unresolved-contract:tcm.classic.ref42.quote.L0025Q2",
+      "id": "located-contract:tcm.classic.ref42.quote.L0025Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": [
+        15
+      ]
+    },
+    {
+      "id": "correction-result:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": "逆春气则伤肝,夏为寒变 -> 逆之则伤肝,夏为寒变"
+    },
+    {
+      "id": "correction-original:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": "逆春气则伤肝,夏为寒变"
+    },
+    {
+      "id": "correction-reason:tcm.classic.ref42.quote.L0025Q2",
+      "pass": true,
+      "detail": "The original wording conflated two distinct passages in the same chapter."
+    },
+    {
+      "id": "correction-source-line:tcm.classic.ref42.quote.L0025Q2:15",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "correction-source-line:tcm.classic.ref42.quote.L0025Q2:20",
+      "pass": true,
+      "detail": 20
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0026Q1",
@@ -306,7 +417,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0026Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0026Q1",
+      "pass": true,
+      "detail": "One source sentence is abridged and contains Markdown emphasis."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0026Q1:22",
+      "pass": true,
+      "detail": 22
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0027Q1",
@@ -547,7 +678,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0029Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": "editorial_gloss"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0029Q2",
+      "pass": true,
+      "detail": "Modern editorial advice derived from the preceding five-labors passage."
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0029Q2:261",
+      "pass": true,
+      "detail": 261
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0030Q1",
@@ -788,7 +939,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0036Q4",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0036Q4",
+      "pass": true,
+      "detail": "Joins two clauses while omitting the intervening clauses."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0036Q4:54",
+      "pass": true,
+      "detail": 54
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0036Q5",
@@ -894,7 +1065,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0037Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0037Q1",
+      "pass": true,
+      "detail": "Selects several clauses from one longer source line."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0037Q1:71",
+      "pass": true,
+      "detail": 71
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0037Q2",
@@ -1000,7 +1191,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0038Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0038Q1",
+      "pass": true,
+      "detail": "Compresses the twelve-official passage and drops several functions."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0038Q1:93",
+      "pass": true,
+      "detail": 93
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0038Q2",
@@ -1241,7 +1452,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0040Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0040Q2",
+      "pass": true,
+      "detail": "Joins the question to a later answer clause and omits the middle explanation."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0040Q2:119",
+      "pass": true,
+      "detail": 119
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0040Q3",
@@ -1266,7 +1497,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0040Q3",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0040Q3",
+      "pass": true,
+      "detail": "Selects two non-adjacent clauses from the same source line."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0040Q3:119",
+      "pass": true,
+      "detail": 119
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0041Q1",
@@ -1453,7 +1704,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0047Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0047Q1",
+      "pass": true,
+      "detail": "Omits one sentence between the opening and concluding clauses."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0047Q1:180",
+      "pass": true,
+      "detail": 180
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0047Q2",
@@ -1667,7 +1938,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0049Q3",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0049Q3",
+      "pass": true,
+      "detail": "Compresses the fourth-error passage and omits several history-taking clauses."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0049Q3:1046",
+      "pass": true,
+      "detail": 1046
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0056Q1",
@@ -1719,7 +2010,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0056Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0056Q2",
+      "pass": true,
+      "detail": "Drops the repeated terminal phrase from both clauses."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0056Q2:334",
+      "pass": true,
+      "detail": 334
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0056Q3",
@@ -1906,7 +2217,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0061Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0061Q1",
+      "pass": true,
+      "detail": "Compresses repeated particles and the three explanatory clauses."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0061Q1:446",
+      "pass": true,
+      "detail": 446
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0061Q2",
@@ -1931,7 +2262,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0061Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": "paraphrased_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0061Q2",
+      "pass": true,
+      "detail": "Replaces pronouns and shortens the repeated phrase about lingering obstruction."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0061Q2:451",
+      "pass": true,
+      "detail": 451
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0062Q1",
@@ -1983,7 +2334,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0063Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0063Q1",
+      "pass": true,
+      "detail": "Uses an ellipsis to reduce a longer question to its diagnostic phrase."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0063Q1:471",
+      "pass": true,
+      "detail": 471
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0064Q1",
@@ -2305,7 +2676,37 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0069Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": "stitched_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0069Q1",
+      "pass": true,
+      "detail": "Stitches behavior descriptions distributed across three consecutive dialogue lines."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0069Q1:324",
+      "pass": true,
+      "detail": 324
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0069Q1:325",
+      "pass": true,
+      "detail": 325
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0069Q1:326",
+      "pass": true,
+      "detail": 326
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0069Q2",
@@ -2411,7 +2812,32 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0089Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": "stitched_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0089Q2",
+      "pass": true,
+      "detail": "Joins the general reverse-treatment clause to the following detailed answer."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0089Q2:1012",
+      "pass": true,
+      "detail": 1012
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0089Q2:1013",
+      "pass": true,
+      "detail": 1013
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0090Q1",
@@ -2436,7 +2862,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0090Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0090Q1",
+      "pass": true,
+      "detail": "Selects many clauses from a longer treatment list and omits several entries."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0090Q1:1012",
+      "pass": true,
+      "detail": 1012
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0090Q2",
@@ -2515,7 +2961,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0091Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": "later_commentary"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": "not_suwen_body_text"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0091Q2",
+      "pass": true,
+      "detail": "The reference itself identifies this wording as Wang Bing commentary on the Suwen sentence."
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0091Q2:1016",
+      "pass": true,
+      "detail": 1016
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0092Q1",
@@ -2594,7 +3060,32 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0093Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": "later_formulaic_summary"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": "not_suwen_body_text"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0093Q1",
+      "pass": true,
+      "detail": "A later compact maxim; the local Suwen body instead gives detailed root-branch rules."
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0093Q1:655",
+      "pass": true,
+      "detail": 655
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0093Q1:1006",
+      "pass": true,
+      "detail": 1006
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0093Q2",
@@ -2727,7 +3218,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0094Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": "editorial_gloss"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0094Q2",
+      "pass": true,
+      "detail": "A Skill-level product rule inferred from the food-support passage, not source wording."
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0094Q2:774",
+      "pass": true,
+      "detail": 774
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0094Q3",
@@ -2779,7 +3290,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0095Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0095Q1",
+      "pass": true,
+      "detail": "Abridges the dialogue while retaining the main clauses from one source line."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0095Q1:948",
+      "pass": true,
+      "detail": 948
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0096Q1",
@@ -2858,7 +3389,37 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0103Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": "editorial_safety_label"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0103Q1",
+      "pass": true,
+      "detail": "Modern safety conclusion drawn from the cited injury and contraindication passages."
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0103Q1:525",
+      "pass": true,
+      "detail": 525
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0103Q1:526",
+      "pass": true,
+      "detail": 526
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref42.quote.L0103Q1:527",
+      "pass": true,
+      "detail": 527
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0103Q2",
@@ -2883,7 +3444,32 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0103Q2",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": "stitched_source_quote_with_modern_gloss"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0103Q2",
+      "pass": true,
+      "detail": "Stitches separate injury clauses and adds a modern parenthetical interpretation."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0103Q2:525",
+      "pass": true,
+      "detail": 525
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0103Q2:526",
+      "pass": true,
+      "detail": 526
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0103Q3",
@@ -2908,7 +3494,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0103Q3",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0103Q3",
+      "pass": true,
+      "detail": "Compresses repeated prohibitive wording into a single list."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0103Q3:527",
+      "pass": true,
+      "detail": 527
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0104Q1",
@@ -2960,7 +3566,27 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0105Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": "ocr_variant_in_apocryphal_appendix"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": "source_variant_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0105Q1",
+      "pass": true,
+      "detail": "Traceable to the locally included later appendix; the witness has an OCR substitution for the final phrase."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0105Q1:1086",
+      "pass": true,
+      "detail": 1086
     },
     {
       "id": "unique:tcm.classic.ref42.quote.L0111Q1",
@@ -2985,7 +3611,47 @@
     {
       "id": "unresolved-contract:tcm.classic.ref42.quote.L0111Q1",
       "pass": true,
-      "detail": "manual_adjudication_required"
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": "compiled_shorthand"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref42.quote.L0111Q1",
+      "pass": true,
+      "detail": "Slash notation compiles five values that occur separately across five source lines."
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0111Q1:41",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0111Q1:42",
+      "pass": true,
+      "detail": 42
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0111Q1:43",
+      "pass": true,
+      "detail": 43
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0111Q1:44",
+      "pass": true,
+      "detail": 44
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref42.quote.L0111Q1:45",
+      "pass": true,
+      "detail": 45
     }
   ]
 }

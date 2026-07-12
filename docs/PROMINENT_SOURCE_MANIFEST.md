@@ -686,7 +686,7 @@
 | TCM-HERB-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-herb-catalog-candidates.json` | `15-23` 完整原文 inventory、663 条风险视图、100 条病证反查和 20 个重点裁决 | 中药剂量/毒性/现代疗效与反查风险可审计候选层 | 风险视图类别重叠且不是完整实体授证；所有记录 blocked |
 | TCM-FORMULA-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-formula-catalog-candidates.json` | `24-30` 完整原文 inventory、186 个格式化定义、180 个显式附方实体、522 条重叠窄风险视图和 21 个重点裁决 | 方剂身份/计数、剂量、禁忌、毒性、急症与现代疗效风险可审计候选层 | 附方声明 182、显式实体 180且第 25 分册缺 2；所有记录 blocked |
 | TCM-CLASSICS-FOOD-CANDIDATES | `database/tcm/normalized/tcm-classics-food-candidates.json` | `42-48` 完整原文 inventory、603 条重叠窄风险视图、20 个重点裁决和旧食疗 runtime 状态 | 经典/医家、食药身份、剂量、禁忌、急症与疾病替代风险候选层 | A/B/食疗/药食标签不授予资格；所有记录 blocked |
-| TCM-CLASSIC-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-quote-provenance.json` | `42-经典-素问要义.md` 的 111 段显式引文与本地《黄帝内经素问》逐段文本比对 | 经典引文连续/省略分段命中与人工裁决队列 | 82 段可定位、29 段待裁决；文本命中不授证解释、医学等价或产品用途 |
+| TCM-CLASSIC-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-quote-provenance.json`；`database/tcm/adjudications/tcm-classic-quote-adjudications.json` | `42-经典-素问要义.md` 的 111 段显式引文与本地《黄帝内经素问》逐段文本比对 | 经典引文连续/省略分段命中、人工形态裁决与 normalized 修正记录 | 83 段机械定位、28 段人工裁决、0 段待人工、1 条拼接误引覆盖校正；Skill 原包保持原哈希；文本命中不授证解释、医学等价或产品用途 |
 | TCM-FOOD-MEDICINE-ADJUDICATIONS | `database/tcm/normalized/tcm-food-medicine-adjudications.json` | 106 项目录、Skill A 清单 15 项、8 条食疗/药食配方和 38 个原料引用 | 食品身份、部位/炮制缺口和配方继承裁决 | 目录身份已固定；全部具体产品用法 blocked |
 | TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |

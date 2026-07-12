@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "scope": "reference_42_suwen_quote_form_adjudications_and_corrections",
+  "doctrine": "classify_non_verbatim_form_without_promoting_content",
+  "referenceCorrections": [
+    {
+      "id": "tcm.classic.ref42.quote.L0025Q2",
+      "originalText": "逆春气则伤肝,夏为寒变",
+      "correctedText": "逆之则伤肝,夏为寒变",
+      "sourceLines": [15, 20],
+      "reason": "The original wording conflated two distinct passages in the same chapter."
+    }
+  ],
+  "records": [
+    {
+      "id": "tcm.classic.ref42.quote.L0004Q1",
+      "category": "editorial_instruction",
+      "verdict": "not_a_classical_quote",
+      "sourceLines": [],
+      "relatedSourceLines": [],
+      "note": "Template wording that describes how the reference file should be used."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0004Q2",
+      "category": "editorial_instruction",
+      "verdict": "not_a_classical_quote",
+      "sourceLines": [],
+      "relatedSourceLines": [],
+      "note": "A sample user question, not wording attributed to the Suwen."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0005Q1",
+      "category": "editorial_safety_prose",
+      "verdict": "not_a_classical_quote",
+      "sourceLines": [],
+      "relatedSourceLines": [1087],
+      "note": "The quote extractor crossed Markdown emphasis inside a modern safety note."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0026Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [22],
+      "relatedSourceLines": [],
+      "note": "One source sentence is abridged and contains Markdown emphasis."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0029Q2",
+      "category": "editorial_gloss",
+      "verdict": "not_a_classical_quote",
+      "sourceLines": [],
+      "relatedSourceLines": [261],
+      "note": "Modern editorial advice derived from the preceding five-labors passage."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0036Q4",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [54],
+      "relatedSourceLines": [],
+      "note": "Joins two clauses while omitting the intervening clauses."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0037Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [71],
+      "relatedSourceLines": [],
+      "note": "Selects several clauses from one longer source line."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0038Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [93],
+      "relatedSourceLines": [],
+      "note": "Compresses the twelve-official passage and drops several functions."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0040Q2",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [119],
+      "relatedSourceLines": [],
+      "note": "Joins the question to a later answer clause and omits the middle explanation."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0040Q3",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [119],
+      "relatedSourceLines": [],
+      "note": "Selects two non-adjacent clauses from the same source line."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0047Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [180],
+      "relatedSourceLines": [],
+      "note": "Omits one sentence between the opening and concluding clauses."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0049Q3",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [1046],
+      "relatedSourceLines": [],
+      "note": "Compresses the fourth-error passage and omits several history-taking clauses."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0056Q2",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [334],
+      "relatedSourceLines": [],
+      "note": "Drops the repeated terminal phrase from both clauses."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0061Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [446],
+      "relatedSourceLines": [],
+      "note": "Compresses repeated particles and the three explanatory clauses."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0061Q2",
+      "category": "paraphrased_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [451],
+      "relatedSourceLines": [],
+      "note": "Replaces pronouns and shortens the repeated phrase about lingering obstruction."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0063Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [471],
+      "relatedSourceLines": [],
+      "note": "Uses an ellipsis to reduce a longer question to its diagnostic phrase."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0069Q1",
+      "category": "stitched_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [324, 325, 326],
+      "relatedSourceLines": [],
+      "note": "Stitches behavior descriptions distributed across three consecutive dialogue lines."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0089Q2",
+      "category": "stitched_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [1012, 1013],
+      "relatedSourceLines": [],
+      "note": "Joins the general reverse-treatment clause to the following detailed answer."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0090Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [1012],
+      "relatedSourceLines": [],
+      "note": "Selects many clauses from a longer treatment list and omits several entries."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0091Q2",
+      "category": "later_commentary",
+      "verdict": "not_suwen_body_text",
+      "sourceLines": [],
+      "relatedSourceLines": [1016],
+      "note": "The reference itself identifies this wording as Wang Bing commentary on the Suwen sentence."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0093Q1",
+      "category": "later_formulaic_summary",
+      "verdict": "not_suwen_body_text",
+      "sourceLines": [],
+      "relatedSourceLines": [655, 1006],
+      "note": "A later compact maxim; the local Suwen body instead gives detailed root-branch rules."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0094Q2",
+      "category": "editorial_gloss",
+      "verdict": "not_a_classical_quote",
+      "sourceLines": [],
+      "relatedSourceLines": [774],
+      "note": "A Skill-level product rule inferred from the food-support passage, not source wording."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0095Q1",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [948],
+      "relatedSourceLines": [],
+      "note": "Abridges the dialogue while retaining the main clauses from one source line."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0103Q1",
+      "category": "editorial_safety_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLines": [],
+      "relatedSourceLines": [525, 526, 527],
+      "note": "Modern safety conclusion drawn from the cited injury and contraindication passages."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0103Q2",
+      "category": "stitched_source_quote_with_modern_gloss",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [525, 526],
+      "relatedSourceLines": [],
+      "note": "Stitches separate injury clauses and adds a modern parenthetical interpretation."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0103Q3",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [527],
+      "relatedSourceLines": [],
+      "note": "Compresses repeated prohibitive wording into a single list."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0105Q1",
+      "category": "ocr_variant_in_apocryphal_appendix",
+      "verdict": "source_variant_traceable",
+      "sourceLines": [1086],
+      "relatedSourceLines": [],
+      "note": "Traceable to the locally included later appendix; the witness has an OCR substitution for the final phrase."
+    },
+    {
+      "id": "tcm.classic.ref42.quote.L0111Q1",
+      "category": "compiled_shorthand",
+      "verdict": "non_verbatim_traceable",
+      "sourceLines": [41, 42, 43, 44, 45],
+      "relatedSourceLines": [],
+      "note": "Slash notation compiles five values that occur separately across five source lines."
+    }
+  ]
+}

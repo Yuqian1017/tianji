@@ -41,12 +41,12 @@
         <h1>天机卷任务监督器</h1>
         <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
-      <div id="percent" class="percent">45%</div>
+      <div id="percent" class="percent">58%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">《素问要义》111 段显式引文已首轮比对，29 段进入人工裁决。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">裁决《素问》未命中项，再扩展到灵枢、难经、伤寒、金匮与医家温病。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">《素问要义》111 段引文首轮裁决完成，83 段机械定位、28 段人工分类、0 段待人工。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">按同一合同扩展到灵枢、难经、伤寒、金匮与医家温病。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容。</p></article>
     </section>
 
@@ -69,8 +69,8 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 58,
-      currentFocus: '中医典籍逐条回接原文：《素问要义》111 段显式引文已首轮比对，29 段进入人工裁决；相术并行保留影印校勘与真实图片验证。',
-      nextDecision: '先裁决《素问》29 段未命中项，再按同一合同扩展到灵枢、难经、伤寒、金匮和医家温病资料。',
+      currentFocus: '中医典籍逐条回接原文：《素问要义》111 段引文首轮裁决完成，83 段机械定位、28 段人工分类、0 段待人工；相术并行保留影印校勘与真实图片验证。',
+      nextDecision: '按《素问》同一合同扩展到灵枢、难经、伤寒、金匮和医家温病资料。',
       antiDriftRule: '现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -158,8 +158,9 @@
         '原典传统断语保留；旧库现代人格、能力、职业、健康和数值阈值不随局部见证整体晋升',
         '相术两份 raw 逐行裁决完成：386 条非空行中 100 条结构、286 条裁决、0 条无人裁决；534 项 0 fail',
         '相术待办归零不等于内容全对；未定位、跨传统冲突、医学扩写和影印未校勘项继续 blocked/open',
-        '中医经典回接启动：《素问要义》111 段显式引文中 82 段已文本定位、29 段待人工裁决',
-        '《素问》引文 provenance 共 561 项 0 fail；所有记录 blocked，文本命中不授证解释、现代医学类比或用法',
+        '《素问要义》111 段显式引文首轮完成：83 段机械定位、28 段人工形态裁决、0 段待人工',
+        'normalized 覆盖层校正 1 条拼接误引，Skill 原包保持原哈希；王冰注、后世口诀、现代括注和遗篇已与《素问》核心正文分层',
+        '《素问》引文 provenance 共 693 项 0 fail；所有记录 blocked，文本命中与形态裁决不授证解释、现代医学类比或用法',
         '中央来源库已索引 9 个来源组、252 个文件；逐文件 canonical 路径、字节数和 SHA256 可重建',
         'vision-api compendium 当前为 46 个相同镜像和 24 个历史变体，不再笼统称为完整副本',
         'fresh review 无 P0/P1；运行时清零过宽声明已降级，旧 tcm-data/望诊语义保持 open',
