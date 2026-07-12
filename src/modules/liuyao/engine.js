@@ -53,10 +53,13 @@ export function getKongWang(dayStem, dayBranch) {
 
 // ===== 三枚铜钱随机 =====
 export function throwCoins() {
-  // 每枚铜钱: 正面(字)=3 反面(花)=2
+  // 每枚铜钱: 背面(无字)=3 字面(有字)=2
+  // 典籍口径（《卜筮正宗·以钱代蓍法》/《增删卜易·占卦法》互证，2026-07-12 跟随制审计）:
+  // 一背为单(7 少阳) 两背为拆(8 少阴) 三背为重(9 老阳,动) 三字为交(6 老阴,动)
+  // 即「以背记数」: coins 数组中 3 = 背面。见 database/knowledge/kp-ly-002.json CONFLICT-COIN-FACE。
   const coins = [0, 0, 0].map(() => (Math.random() < 0.5 ? 3 : 2));
   const total = coins.reduce((a, b) => a + b, 0);
-  return { coins, total }; // total: 6=老阴 7=少阳 8=少阴 9=老阳
+  return { coins, total }; // total: 6=老阴 7=少阳 8=少阴 9=老阳（数值→卦的映射不变）
 }
 
 // ===== 一键随机起卦 =====

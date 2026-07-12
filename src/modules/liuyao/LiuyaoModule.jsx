@@ -12,7 +12,8 @@ function CoinAnimation({ phase, coins }) {
     <div className="flex justify-center items-center gap-6 py-5">
       {[0, 1, 2].map((i) => {
         const isLanding = phase === 'landing' && coins;
-        const isFront = isLanding && coins[i] === 3; // 字面 = front
+        // 典籍口径: coins 值 3 = 背面(无字), 2 = 字面。见 engine.js throwCoins 注释。
+        const isFront = isLanding && coins[i] === 2; // 字面 = front
 
         return (
           <div key={i} className="flex flex-col items-center">
@@ -26,7 +27,7 @@ function CoinAnimation({ phase, coins }) {
             >
               <img
                 src={isLanding ? (isFront ? '/assets/coin-front.webp' : '/assets/coin-back.webp') : '/assets/coin-front.webp'}
-                alt={isLanding ? (isFront ? '字' : '花') : ''}
+                alt={isLanding ? (isFront ? '字' : '背') : ''}
                 className="w-full h-full object-cover rounded-full drop-shadow-md"
               />
             </div>
@@ -41,7 +42,7 @@ function CoinAnimation({ phase, coins }) {
             {/* Label */}
             {isLanding && (
               <span className={`text-xs mt-1 font-bold font-body ${isFront ? 'text-[var(--color-gold)]' : 'text-[var(--color-text-dim)]'}`}>
-                {isFront ? '字' : '花'}
+                {isFront ? '字' : '背'}
               </span>
             )}
           </div>
@@ -53,12 +54,13 @@ function CoinAnimation({ phase, coins }) {
 
 // ===== 铜钱结果组件 =====
 function CoinThrow({ value, label }) {
-  // value: 6=老阴(3花), 7=少阳(2花1字), 8=少阴(1花2字), 9=老阳(3字)
-  let coinFaces; // true = 字(front), false = 花(back)
-  if (value === 6) coinFaces = [false, false, false];
-  else if (value === 7) coinFaces = [true, false, false];
-  else if (value === 8) coinFaces = [true, true, false];
-  else if (value === 9) coinFaces = [true, true, true];
+  // 典籍口径（以背记数）: 6=老阴·交(3字), 7=少阳·单(1背2字), 8=少阴·拆(2背1字), 9=老阳·重(3背)
+  // 出处:《卜筮正宗·以钱代蓍法》「兩背由來拆，雙眉本是單，渾眉交定位，總背是重安」
+  let coinFaces; // true = 字(front), false = 背(back)
+  if (value === 6) coinFaces = [true, true, true];
+  else if (value === 7) coinFaces = [true, true, false];
+  else if (value === 8) coinFaces = [true, false, false];
+  else if (value === 9) coinFaces = [false, false, false];
 
   const typeMap = { 6: '老阴 ⚋×', 7: '少阳 ⚊', 8: '少阴 ⚋', 9: '老阳 ⚊○' };
   const isMoving = value === 6 || value === 9;
@@ -71,7 +73,7 @@ function CoinThrow({ value, label }) {
           <img
             key={i}
             src={isFront ? '/assets/coin-front.webp' : '/assets/coin-back.webp'}
-            alt={isFront ? '字' : '花'}
+            alt={isFront ? '字' : '背'}
             className="w-7 h-7 object-cover rounded-full"
           />
         ))}
