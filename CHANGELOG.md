@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-07-12 - M0 gate 通过 + M1 数据层完成（知识库/剧本数据化/lint/铜钱面修正）
+
+- **M0 gate 通过**：宗主过目通过第一章剧本，三张 KP 卡升 accepted（`7ebee7d`）。
+- **M1-1 知识库文件层**（`577ba54`）：`database/knowledge/kp-ly-00{1,2,3}.json`（PRD § 4.1 全字段 + statusHistory + 冲突/待核记录）；`database/sources/ctext/` 系辞/说卦 pinned 见证快照（原始 HTML×2 + 提取 JSON），闭合审查 advisory。
+- **M1-2 剧本数据化**（`527f9b3` + `de2e053`）：`src/game/chapters/chapter1.js` 节点流 320 节点全章转录（9 种节点类型；CP-01/02/03 三线分支路由；固定掷序破案卦 + 真随机本命卦）。台词逐字忠实：agent 5 段 + 主 session 8 段抽查全 verbatim，Han-only 字数偏差 -2.35%。
+- **M1-3 lint 管道**（`527f9b3`）：`npm run audit:chapter1`——图连通/CP 完整性（三档 verdict + basis + optimal 强制 sourceRef）/KP accepted gate/账目断言（灵力 12+15+10=37、好感 10）/KP 教学闭环/模板变量白名单/变体骨架 parity/掷序守卫。全章转录后全绿 exit 0。
+- **M1-5a 铜钱面口径修正**（`0c98315`）：engine.js 注释 + LiuyaoModule 显示映射按典籍翻转（3=背；三背=重=老阳），label 花→背。排盘数学零改动：test:liuyao fail 0，audit:liuyao 17,026 项 0 fail。
+- 下一批：M1-4 章节播放器 / M1-5b 摇卦交互组件 / M1-6 三数值系统。
+
 ## 2026-07-12 - 第一章剧本三轮 fresh-context 审查收敛
 
 - /iterative-review 三轮收敛：R1 全量（opus）抓 2 P1——第七幕时辰倒退（丑末寅初早于第五幕寅时，改寅正）、KP-002 引导教学块缺失（六掷段补块，灵力账目口径改为「教学块 12 + CP 掌握奖 15 + 通关 10 = 37」）——及 3 P2（好感对账 +10、拼音禁直显 M1 注记、柴刀红鲱鱼收束）；R2（opus）验真全部修复 + 抓 2 P2（三线汇合点措辞矛盾→统一「岔路口」+ M1 路由标注；CP-03 B/C 分支散文化，闭合「卦从地里长出来」母题第三次回收）；R3（sonnet，delta）**convergence verified 0 findings**。
