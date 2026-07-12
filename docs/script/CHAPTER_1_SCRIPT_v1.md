@@ -1,7 +1,7 @@
 # 第一章《第一卦》剧本 v1
 
 - 版本：v1.0（2026-07-12）
-- 状态：**三轮 fresh-context 审查收敛，待宗主过目（M0 gate）**
+- 状态：**M0 gate 已通过**（三轮 fresh-context 审查收敛 → 宗主过目通过 2026-07-12）；M1 开发依据本稿
 - 依据：`docs/PRD.md` v2（§ 4 教学体系 / § 9 第一章规格）、`docs/HANDOFF_2026-07-11_chapter1_script.md`
 - 性质：**人读版剧本**。结构化 TS/YAML 数据格式为 M1 工作，本文档不承担。
 - 审查历史（/iterative-review，2026-07-12）：
@@ -1002,7 +1002,7 @@
 | name | 阴阳爻与卦的构成 |
 | difficulty | 必修 |
 | prereq_ids | 无 |
-| status | **reviewed → 待宗主过目后 accepted** |
+| status | **accepted**（宗主过目通过 2026-07-12） |
 
 **典籍原文（照录）**：
 
@@ -1041,7 +1041,7 @@
 | name | 三钱摇卦法 |
 | difficulty | 必修 |
 | prereq_ids | KP-LY-001 |
-| status | **reviewed → 待宗主过目后 accepted** |
+| status | **accepted**（宗主过目通过 2026-07-12） |
 
 **典籍原文（照录）**：
 
@@ -1071,7 +1071,7 @@
 | name | 动爻与变卦 |
 | difficulty | 必修 |
 | prereq_ids | KP-LY-001, KP-LY-002 |
-| status | **reviewed → 待宗主过目后 accepted** |
+| status | **accepted**（宗主过目通过 2026-07-12） |
 
 **典籍原文（照录）**：
 
