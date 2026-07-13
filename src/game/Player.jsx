@@ -10,16 +10,19 @@
 //    in the chapter data itself (B/C chains), Player only reports value changes.
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { CHAPTER_1 } from './chapters/index.js';
-import CastPanel from './CastPanel.jsx';
+import CastPanel, { DressingBoard } from './CastPanel.jsx';
 import {
   persistSave, renderTemplate, pickVariant,
   applyTeachMoment, applyScoredChoice, applyFavor, applyChapterEnd,
-  dynamicOptionText,
+  dynamicOptionText, natalPalaceText,
 } from './state.js';
 import { throwCoins, paipan } from '../modules/liuyao/engine.js';
 import { BG_SWITCH, BGM_SWITCH, PORTRAITS, portraitVisible, fallbackForNode } from './presentation.js';
 
-const KP_SHORT = { 'KP-LY-001': '认卦', 'KP-LY-002': '摇卦', 'KP-LY-003': '动变' };
+const KP_SHORT = {
+  'KP-LY-001': '认卦', 'KP-LY-002': '摇卦', 'KP-LY-003': '动变',
+  'KP-LY-004': '八宫', 'KP-LY-005': '纳甲', 'KP-LY-006': '世应',
+};
 
 function Continue({ onClick, label = '继续 ▸' }) {
   return (
@@ -68,6 +71,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   const [pendingResponse, setPendingResponse] = useState(null); // choice response being shown
   const [toast, setToast] = useState(null);                     // teachMoment / reward toast
   const [activeCast, setActiveCast] = useState(null);           // {nodeId, thrown[], paused}
+  const [activeDressing, setActiveDressing] = useState(null);   // 装卦盘 board (ch2) — set by dressingUpdate nodes; ephemeral, rebuilt at next update on refresh
   const [bg, setBg] = useState(() => fallbackForNode(save.currentNodeId).bg); // resume-safe
   const bgmRef = useRef(null);                                  // HTMLAudio, lazy
 
@@ -75,7 +79,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   const sceneRef = useRef(null);
   useEffect(() => {
     const id = save.currentNodeId;
-    const scene = /^ch1-s(\d)/.exec(id || '')?.[1] || null;
+    const scene = /^(?:ch\d+|qn)-s(\d)/.exec(id || '')?.[1] || null;
     if (BG_SWITCH[id]) {
       setBg(BG_SWITCH[id]);
     } else if (scene !== null && scene !== sceneRef.current) {
@@ -178,6 +182,12 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       });
       advance(node.next, (s) => applyTeachMoment(s, node));
     }
+    if (node?.type === 'dressingUpdate') {
+      // 装卦盘 state event — board carries FULL cumulative state (idempotent), so no
+      // processed-guard needed: StrictMode double-run re-commits the same next id harmlessly.
+      setActiveDressing(node.board || null);
+      advance(node.next);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [save.currentNodeId, node?.type]);
 
@@ -205,7 +215,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   // ── per-type rendering ────────────────────────────────────────────
   let body = null;
 
-  if (node.type === 'teachMoment') {
+  if (node.type === 'teachMoment' || node.type === 'dressingUpdate') {
     body = null; // settled by effect; brief blank frame before advance
   } else if (node.type === 'settings') {
     body = <SettingsForm onSubmit={(settings) => advance(node.next, (s) => ({ ...s, settings }))} />;
@@ -245,7 +255,16 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   } else if (node.type === 'choice' || node.type === 'scoredChoice') {
     if (pendingResponse) {
       const { option } = pendingResponse;
-      const resp = option.response;
+      let resp = option.response;
+      // ch2 6.4 籍贯查询: substitute the 〔按玩家实际本命卦生成…〕 placeholder with the
+      // player's actual natal palace/position (fails loudly to the literal placeholder text).
+      if (resp && option.dynamicNatal) {
+        const t = natalPalaceText(save.natalHexagram);
+        if (t) {
+          const sub = (s) => (typeof s === 'string' ? s.replace(/〔[^〕]*〕/, `「${t}」`) : s);
+          resp = { ...resp, text: sub(resp.text), aside: sub(resp.aside) };
+        }
+      }
       body = (
         <div>
           {resp?.aside && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed mb-3 font-body">{T(resp.aside)}</div>}
@@ -308,7 +327,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   } else if (node.type === 'chapterEnd') {
     body = (
       <div className="space-y-5 py-2">
-        <div className="text-center text-xl font-display text-[var(--color-text)]">【第一章 · 终】</div>
+        <div className="text-center text-xl font-display text-[var(--color-text)]">{node.title || '【第一章 · 终】'}</div>
         <div className="text-center text-sm text-[var(--color-gold)] font-body">章节通关 · 灵力 +{node.rewards?.lingli || 0}</div>
         {node.hooks?.length > 0 && (
           <div className="space-y-2">
@@ -323,7 +342,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
             {T(node.nextChapterTeaser)}
           </div>
         )}
-        <SaveSummary save={save} />
+        <SaveSummary save={save} chapter={chapter} />
         <Continue onClick={() => { advance(null, (s) => applyChapterEnd(s, node, chapter.id)); onExit(); }} label="存档并返回" />
       </div>
     );
@@ -392,6 +411,15 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
         </div>
       )}
 
+      {/* 装卦盘: persistent board while dressing sequence is live (ch2); hidden during an active cast */}
+      {activeDressing && !activeCast && (
+        <div className="absolute inset-x-0 top-[7%] z-20 flex justify-center px-4 pointer-events-none">
+          <div className="w-full max-w-xs">
+            <DressingBoard board={activeDressing} />
+          </div>
+        </div>
+      )}
+
       {/* main content: dialog box (bottom) for text nodes; centered overlay card otherwise */}
       {isDialogNode ? (
         <div className="absolute bottom-0 inset-x-0 z-20 px-4 pb-4">
@@ -420,7 +448,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   );
 }
 
-function SaveSummary({ save }) {
+function SaveSummary({ save, chapter = CHAPTER_1 }) {
   return (
     <div className="border border-[var(--color-border)] rounded-lg p-3 space-y-2 text-sm font-body">
       <div className="text-xs text-[var(--color-text-dim)]">本章结算</div>
@@ -429,7 +457,7 @@ function SaveSummary({ save }) {
         <span>沈疏桐好感 <b>{save.favor}</b></span>
       </div>
       <div className="space-y-1">
-        {(CHAPTER_1.knowledgePoints || []).map((kp) => (
+        {(chapter.knowledgePoints || []).map((kp) => (
           <div key={kp} className="flex justify-between text-xs">
             <span className="text-[var(--color-text-dim)]">{KP_SHORT[kp]}（{kp}）</span>
             <span>

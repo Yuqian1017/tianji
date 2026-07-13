@@ -22,9 +22,10 @@ export default function GameModule() {
 
   const continueSave = () => setPlaying(true);
 
-  const startBonus = (chapterId) => {
+  // Start any registered chapter on the existing save (main-line ch2+, bonus chapters).
+  const startChapter = (chapterId) => {
     const ch = CHAPTERS[chapterId];
-    if (!ch) { console.error(`[game] bonus chapter not registered: ${chapterId}`); return; }
+    if (!ch) { console.error(`[game] chapter not registered: ${chapterId}`); return; }
     const next = persistSave({ ...save, currentChapter: chapterId, currentNodeId: ch.entryNode });
     setSave(next);
     setPlaying(true);
@@ -46,12 +47,17 @@ export default function GameModule() {
     return <Player save={save} setSave={setSave} chapter={activeChapter} onExit={() => setPlaying(false)} />;
   }
 
+  // 番外《钱囊》 gate: ch2 通关 + 好感 ≥8 — 策划案 § 1.2 原定位置，M2 接入第二章后回迁
+  // (原 M1 临时口径为 ch1 通关；HANDOFF_2026-07-12_m2 § 3 第 7 条)
   const bonusQiannang = CHAPTERS['qiannang'];
-  const bonusUnlocked = bonusQiannang && save?.completedChapters?.includes('ch1') && (save?.favor ?? 0) >= 8;
+  const bonusUnlocked = bonusQiannang && save?.completedChapters?.includes('ch2') && (save?.favor ?? 0) >= 8;
   const bonusDone = save?.completedChapters?.includes('qiannang');
 
   const hasProgress = save?.currentNodeId;
   const finished = save?.completedChapters?.includes(CHAPTER_1.id);
+  const ch2 = CHAPTERS['ch2'];
+  const ch2Done = save?.completedChapters?.includes('ch2');
+  const ch2Available = ch2 && finished; // 主线顺序: 第一章通关解锁第二章
 
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center">
@@ -78,10 +84,22 @@ export default function GameModule() {
           </button>
         )}
         {finished && (
-          <div className="text-sm text-amber-200 font-body drop-shadow">✦ 本章已通关 · 灵力 {save.lingli} · 好感 {save.favor}</div>
+          <div className="text-sm text-amber-200 font-body drop-shadow">
+            ✦ 第一章通关{ch2Done ? ' · 第二章通关' : ''} · 灵力 {save.lingli} · 好感 {save.favor}
+          </div>
+        )}
+        {ch2Available && !ch2Done && !hasProgress && (
+          <button onClick={() => startChapter('ch2')} className="w-full py-3 rounded-lg bg-amber-50/90 border border-amber-300 text-amber-900 font-medium font-body shadow-lg">
+            ▶ 继续主线 · 第二章《装卦》
+          </button>
+        )}
+        {ch2Done && (
+          <button onClick={() => startChapter('ch2')} className="w-full py-2.5 rounded-lg border border-amber-200/70 text-amber-100 text-sm font-body hover:bg-white/10 shadow">
+            重温 · 第二章《装卦》
+          </button>
         )}
         {bonusUnlocked && (
-          <button onClick={() => startBonus('qiannang')} className="w-full py-3 rounded-lg bg-rose-50/85 border border-rose-200 text-rose-800 font-medium font-body shadow-lg">
+          <button onClick={() => startChapter('qiannang')} className="w-full py-3 rounded-lg bg-rose-50/85 border border-rose-200 text-rose-800 font-medium font-body shadow-lg">
             {bonusDone ? '重温番外 ·《钱囊》' : '✧ 番外解锁 ·《钱囊》'}
           </button>
         )}

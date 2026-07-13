@@ -12,12 +12,17 @@
   "KP-LY-001",
   "KP-LY-002"
  ],
- "status": "reviewed",
+ "status": "accepted",
  "statusHistory": [
   {
    "status": "reviewed",
    "at": "2026-07-12",
    "by": "落听潮 — 跟随制审计第二批（双典籍互证 + 引擎 24/24 程序化对撞）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-12",
+   "by": "宗主 — 过目通过（「你来决定吧，接着往下推」，裁定委托落听潮执行）"
   }
  ],
  "safetyLevel": null,

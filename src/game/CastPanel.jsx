@@ -101,10 +101,10 @@ export default function CastPanel({ node, settings, thrown, paused, onThrow }) {
         </div>
       )}
 
-      {/* speaker line for last throw */}
+      {/* speaker line for last throw (per-throw speaker override — ch2 self-reported casts; default 沈疏桐 for ch1 compat) */}
       {lastLine && !paused && (
         <div className="text-sm leading-relaxed font-body border-t border-[var(--color-border)] pt-3">
-          <span className="text-[var(--color-gold)] font-medium">沈疏桐</span>：
+          <span className="text-[var(--color-gold)] font-medium">{renderTemplate(perThrow[count - 1]?.speaker || '沈疏桐', settings)}</span>：
           {renderTemplate(lastLine, settings)}
         </div>
       )}
@@ -121,6 +121,46 @@ export default function CastPanel({ node, settings, thrown, paused, onThrow }) {
       {paused && !done && (
         <div className="text-center text-xs text-[var(--color-text-dim)] font-body">——摇卦暂歇，听{renderTemplate('{{senior}}', settings)}讲——</div>
       )}
+    </div>
+  );
+}
+
+/**
+ * DressingBoard — 装卦盘 (chapter-2 M2 extension per handoff note: CastPanel 扩展，逐爻显示纳甲/世应标记).
+ * Pure display driven by Player.activeDressing (set by dressingUpdate nodes carrying FULL cumulative state —
+ * idempotent by design: no reducer, refresh recovers at the next update node).
+ * board: { throws:number[6], revealed:[{pos:1-6, branch, wuxing}], marks:{world,response}|null }
+ */
+export function DressingBoard({ board }) {
+  if (!board?.throws) return null;
+  const revealed = board.revealed || [];
+  const byPos = {};
+  for (const r of revealed) byPos[r.pos] = r;
+  const marks = board.marks || null;
+  return (
+    <div className="border border-[var(--color-gold-border)]/70 rounded-xl px-4 py-3 bg-[var(--color-surface)]/95 shadow-lg">
+      <div className="text-center text-[10px] tracking-[0.4em] text-[var(--color-text-dim)] font-body mb-2">装 卦</div>
+      <div className="max-w-[250px] mx-auto flex flex-col-reverse gap-1.5">
+        {board.throws.map((total, i) => {
+          const pos = i + 1;
+          const r = byPos[pos];
+          const mark = marks?.world === pos ? '世' : marks?.response === pos ? '应' : '';
+          return (
+            <div key={i} className="flex items-center gap-2">
+              <span className="text-[10px] w-7 text-[var(--color-text-dim)] font-body">{YAO_LABELS[i]}</span>
+              <div className="flex-1"><YaoLine total={total} /></div>
+              <span className="text-xs w-11 text-right font-body">
+                {r ? (
+                  <b className="text-[var(--color-gold)]">{r.branch}<span className="opacity-70 font-normal">{r.wuxing}</span></b>
+                ) : (
+                  <span className="opacity-25">·</span>
+                )}
+              </span>
+              <span className="text-[10px] w-4 font-body font-bold text-[var(--color-gold)]">{mark}</span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

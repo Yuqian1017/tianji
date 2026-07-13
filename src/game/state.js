@@ -113,7 +113,27 @@ export function applyFavor(save, favor) {
 }
 
 // ── CP-03 dynamic option text (natal cast is random; options must describe the actual hexagram) ──
-import { getTrigramFromValues } from '../modules/liuyao/engine.js';
+import { getTrigramFromValues, paipan } from '../modules/liuyao/engine.js';
+import { JINGFANG } from '../modules/liuyao/data.js';
+
+// ch2 6.4 籍贯查询: palace/position/type of the player's natal hexagram (date-independent
+// facts — paipan's date params only affect 六神/空亡, not palace membership).
+export function natalPalaceText(natal) {
+  if (!natal?.throws || natal.throws.length !== 6) {
+    console.warn('[game] natalPalaceText called without a valid natal hexagram');
+    return null;
+  }
+  const r = paipan(natal.throws, { year: 2026, month: 1, day: 1, hour: 0, minute: 0 });
+  const palaceGua = JINGFANG[r.benGua.palace]?.gua || [];
+  const idx = palaceGua.findIndex((g) => g.name === r.benGua.name);
+  if (idx === -1) {
+    console.warn(`[game] natal hexagram ${r.benGua.name} not found in palace ${r.benGua.palace}`);
+    return null;
+  }
+  const ordinal = ['一', '二', '三', '四', '五', '六', '七', '八'][idx];
+  const typeLabel = r.benGua.guaType === '本宫' ? '宫主' : r.benGua.guaType;
+  return `${r.benGua.name}——${r.benGua.palace}第${ordinal}，${typeLabel}`;
+}
 
 const YAO_NAMES_CN = ['初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 

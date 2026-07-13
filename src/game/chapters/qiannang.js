@@ -704,6 +704,7 @@ export const CHAPTER_QIANNANG = {
     // ═══════════════ 番外《钱囊》 · 终 ═══════════════
     'qn-end': {
       type: 'chapterEnd',
+      title: '【番外《钱囊》· 终】',
       rewards: { lingli: 5 },
       hooks: [
         '{{ta}}望后山——三条线埋向同一座山',
