@@ -41,6 +41,15 @@ export const PORTRAITS = {
   male: `${A}/portrait-shen-m-cut.webp`,
 };
 
+// NPC portraits (UIUX batch 2026-07-13, owner feedback: 重要 NPC 必须有立绘).
+// Keyed by speaker name as it appears in dialogue nodes; shown on the LEFT side
+// (沈疏桐 keeps the right). Speakers absent here simply show no portrait.
+export const NPC_PORTRAITS = {
+  '郑司书': `${A}/portrait-zheng-cut.webp`,
+  '顾小满': `${A}/portrait-gu-cut.webp`,
+  '韩长老': `${A}/portrait-han-cut.webp`,
+};
+
 // Portrait visibility: ch1 from scene 2 onward; ch2 throughout (沈疏桐全程在场);
 // bonus qiannang (qn-) scenes 3+ (廊亭夜起).
 export function portraitVisible(nodeId) {
@@ -140,4 +149,6 @@ export const PRELOAD_IMAGES = [
   `${A}/bg-langting.webp`, `${A}/bg-cangjinge.webp`, `${A}/bg-mingshitang.webp`,
   `${A}/bg-shanjing.webp`, `${A}/bg-shiku.webp`, `${A}/bg-chenguang.webp`,
   `${A}/portrait-shen-f-cut.webp`, `${A}/portrait-shen-m-cut.webp`,
+  `${A}/portrait-zheng-cut.webp`, `${A}/portrait-gu-cut.webp`, `${A}/portrait-han-cut.webp`,
+  `${A}/ui-corner-cloud.webp`,
 ];

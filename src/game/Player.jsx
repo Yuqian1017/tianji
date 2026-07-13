@@ -17,7 +17,7 @@ import {
   dynamicOptionText, natalPalaceText,
 } from './state.js';
 import { throwCoins, paipan } from '../modules/liuyao/engine.js';
-import { BG_SWITCH, BGM_SWITCH, PORTRAITS, portraitVisible, fallbackForNode } from './presentation.js';
+import { BG_SWITCH, BGM_SWITCH, PORTRAITS, NPC_PORTRAITS, portraitVisible, fallbackForNode } from './presentation.js';
 import './game-ui.css';
 
 const KP_SHORT = {
@@ -73,6 +73,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   const [toast, setToast] = useState(null);                     // teachMoment / reward toast
   const [activeCast, setActiveCast] = useState(null);           // {nodeId, thrown[], paused}
   const [activeDressing, setActiveDressing] = useState(null);   // 装卦盘 board (ch2) — set by dressingUpdate nodes; ephemeral, rebuilt at next update on refresh
+  const [npcOnStage, setNpcOnStage] = useState(null);           // NPC portrait stage (left side): set when a portrait-bearing NPC speaks, cleared per scene
   const [bg, setBg] = useState(() => fallbackForNode(save.currentNodeId).bg); // resume-safe
   const bgmRef = useRef(null);                                  // HTMLAudio, lazy
 
@@ -81,6 +82,10 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   useEffect(() => {
     const id = save.currentNodeId;
     const scene = /^(?:ch\d+|qn)-s(\d)/.exec(id || '')?.[1] || null;
+    // NPC stage: scene boundary clears; a portrait-bearing NPC entering dialogue takes the left slot
+    const n = nodes[id];
+    if (n?.type === 'sceneHeader') setNpcOnStage(null);
+    else if (n?.type === 'dialogue' && NPC_PORTRAITS[n.speaker]) setNpcOnStage(n.speaker);
     if (BG_SWITCH[id]) {
       setBg(BG_SWITCH[id]);
     } else if (scene !== null && scene !== sceneRef.current) {
@@ -105,7 +110,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
         bgmRef.current.play().catch((e) => console.warn('[game] bgm autoplay blocked or missing:', e.message));
       }
     }
-  }, [save.currentNodeId]);
+  }, [save.currentNodeId, nodes]);
 
   // stop bgm on unmount (exit to title)
   useEffect(() => () => { bgmRef.current?.pause(); }, []);
@@ -370,6 +375,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   const showPortrait = portraitVisible(save.currentNodeId);
   const portraitSrc = PORTRAITS[save.settings.seniorGender] || PORTRAITS.female;
   const speaking = node.type === 'dialogue' && node.speaker === '沈疏桐';
+  const npcSpeaking = node.type === 'dialogue' && npcOnStage && node.speaker === npcOnStage;
 
   return (
     <div className="fixed inset-0 overflow-hidden select-none">
@@ -380,17 +386,35 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       />
       <div className="absolute inset-0 bg-black/15" />
 
+      {/* NPC portrait layer (left slot; smaller than 沈疏桐 = supporting-cast hierarchy) */}
+      {npcOnStage && (
+        <img
+          src={NPC_PORTRAITS[npcOnStage]}
+          alt={npcOnStage}
+          className="absolute bottom-0 left-[-4%] h-[74%] object-contain transition-all duration-300"
+          style={{
+            zIndex: npcSpeaking ? 12 : 10, // speaker-in-front (VN two-shot convention)
+            filter: npcSpeaking
+              ? 'brightness(1.03) drop-shadow(0 6px 18px rgba(0,0,0,0.35))'
+              : 'brightness(0.62) drop-shadow(0 6px 14px rgba(0,0,0,0.25))',
+            transform: npcSpeaking ? 'scale(1)' : 'scale(0.985)',
+          }}
+          onError={(e) => { console.warn('[game] npc portrait missing:', npcOnStage); e.target.style.display = 'none'; }}
+        />
+      )}
+
       {/* portrait layer (沈疏桐, gender variant) */}
       {showPortrait && (
         <img
           src={portraitSrc}
           alt="沈疏桐"
-          className="absolute bottom-0 right-[6%] h-[86%] object-contain transition-all duration-300"
+          className={`absolute bottom-0 h-[86%] object-contain transition-all duration-300 ${npcOnStage ? 'right-[-6%]' : 'right-[6%]'}`}
           style={{
+            zIndex: speaking ? 12 : 11, // stays above a silent NPC, yields to a speaking one
             // alpha-cutout portraits (birefnet) — no blend tricks needed
             filter: speaking
               ? 'brightness(1.03) drop-shadow(0 6px 18px rgba(0,0,0,0.35))'
-              : 'brightness(0.72) drop-shadow(0 6px 14px rgba(0,0,0,0.25))',
+              : `brightness(${npcOnStage ? 0.62 : 0.72}) drop-shadow(0 6px 14px rgba(0,0,0,0.25))`,
             transform: speaking ? 'scale(1)' : 'scale(0.985)',
           }}
           onError={(e) => { console.warn('[game] portrait missing:', portraitSrc); e.target.style.display = 'none'; }}
@@ -436,7 +460,18 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       {/* main content: dialog box (bottom) for text nodes; centered overlay card otherwise */}
       {isDialogNode ? (
         <div className="absolute bottom-0 inset-x-0 z-20 px-4 pb-4">
-          <div className="max-w-3xl mx-auto g-paper-panel rounded-xl px-6 py-5 min-h-[132px]">
+          <div className="relative max-w-3xl mx-auto g-paper-panel rounded-xl px-6 py-5 min-h-[132px]">
+            {/* 祥云角花 — generated ornament, multiply blend over paper; clipped in its own
+                inset layer so the seal name plate (negative-margin tab) stays unclipped */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-xl" aria-hidden="true">
+              <img
+                src="/assets/game/ui-corner-cloud.webp"
+                alt=""
+                className="absolute -top-1 -right-1 w-24 opacity-45 rotate-90"
+                style={{ mixBlendMode: 'multiply' }}
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+            </div>
             {node.type === 'dialogue' && (
               <div className="inline-block -mt-9 mb-1.5 px-4 py-1 rounded-md g-name-plate text-sm font-medium font-body">
                 {T(node.speaker)}
