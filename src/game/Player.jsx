@@ -210,7 +210,16 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
 
   // ── render helpers ────────────────────────────────────────────────
   const T = (text) => renderTemplate(text, save.settings);
-  const nodeText = () => T(pickVariant(node, save.settings));
+  const nodeText = () => {
+    let t = pickVariant(node, save.settings);
+    // ch2 6.4: narration nodes flagged dynamicNatal carry a 〔…〕 placeholder replaced
+    // with the player's actual natal palace lookup (literal text is the loud fallback).
+    if (node.dynamicNatal && typeof t === 'string') {
+      const natal = natalPalaceText(save.natalHexagram);
+      if (natal) t = t.replace(/〔[^〕]*〕/, `「${natal}」`);
+    }
+    return T(t);
+  };
 
   // ── per-type rendering ────────────────────────────────────────────
   let body = null;

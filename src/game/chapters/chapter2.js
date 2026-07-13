@@ -1971,6 +1971,7 @@ export const CHAPTER_2 = {
   },
   'ch2-s6-680': {
     type: 'narration',
+    dynamicNatal: true, // renderer substitutes the 〔…〕 span via natalPalaceText(save.natalHexagram)
     text: '你把那张卦在轴上找到了：〔按玩家实际本命卦生成：某宫，第几，某世/游魂/归魂〕。原来它一直有籍贯，有位次，有名有姓——只是还没到开口的时候。',
     m1Note: '〔按玩家实际本命卦生成〕段由渲染层按 player.natalHexagram 动态替换（选项 dynamicNatal 标记）；此处字面文本为 fallback。',
     next: 'ch2-s6-drclear',
