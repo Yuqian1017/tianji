@@ -4,6 +4,7 @@ import Player from './Player.jsx';
 import { CHAPTERS, CHAPTER_1 } from './chapters/index.js';
 import { loadSave, newSave, persistSave, clearSave } from './state.js';
 import { PRELOAD_IMAGES } from './presentation.js';
+import './game-ui.css';
 
 export default function GameModule() {
   const [save, setSave] = useState(() => loadSave());
@@ -67,17 +68,17 @@ export default function GameModule() {
         style={{ backgroundImage: 'url(/assets/game/title-art.webp)' }}
       />
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/45 via-transparent to-black/20" />
-      <div className="relative max-w-md mx-auto text-center space-y-6 py-10">
-      <div className="space-y-2">
-        <div className="text-xs tracking-[0.5em] text-white/85 font-body drop-shadow">修仙 · 恋爱 · 学卦</div>
-        <h2 className="text-4xl font-bold font-display text-white drop-shadow-lg">天机 · 第一章</h2>
-        <div className="text-xl font-display text-amber-200 drop-shadow">《第一卦》</div>
-        <p className="text-sm text-white/90 font-body leading-relaxed px-6 pt-2 drop-shadow">
+      <div className="relative max-w-md mx-auto text-center space-y-5 py-8 px-4">
+      <div className="g-scrim-panel rounded-2xl px-6 py-5 space-y-2">
+        <div className="text-xs tracking-[0.5em] text-white/90 font-body">修仙 · 恋爱 · 学卦</div>
+        <h2 className="text-4xl font-bold font-display text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.85)]">天机 · 第一章</h2>
+        <div className="text-xl font-display text-amber-200 [text-shadow:0_1px_8px_rgba(0,0,0,0.9)]">《第一卦》</div>
+        <p className="text-sm text-white/95 font-body leading-relaxed px-2 pt-2">
           入太卜宗，遇引路人，摇你人生第一卦。<br />玩完这一章，你会真的用三枚硬币起一卦。
         </p>
       </div>
 
-      <div className="space-y-3 px-8">
+      <div className="g-scrim-panel rounded-2xl px-5 py-4 space-y-3">
         {hasProgress && !finished && (
           <button onClick={continueSave} className="w-full py-3 rounded-lg bg-amber-100/90 border border-amber-300 text-amber-900 font-medium font-body shadow-lg">
             继续修行（{save.settings.playerName || '无名'} · 灵力 {save.lingli}）

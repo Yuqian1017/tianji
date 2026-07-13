@@ -24,8 +24,8 @@ function CoinRow({ total }) {
           key={i}
           className={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-xs font-bold ${
             isBack
-              ? 'bg-[var(--color-surface-dim)] border-[var(--color-border)] text-[var(--color-text-dim)]'
-              : 'bg-[var(--color-gold-bg-faint)] border-[var(--color-gold-border)] text-[var(--color-gold)]'
+              ? 'bg-[var(--g-paper-soft)] border-[var(--g-gold-line-soft)] text-[var(--g-ink-dim)]'
+              : 'bg-[var(--g-gold-wash)] border-[var(--g-gold-line)] text-[var(--g-gold-deep)]'
           }`}
         >
           {isBack ? '背' : '字'}
@@ -41,16 +41,16 @@ function YaoLine({ total, highlight }) {
     <div className={`flex items-center gap-2 ${highlight ? 'animate-pulse' : ''}`}>
       <div className="flex-1 flex gap-1.5">
         {info.yang ? (
-          <div className={`h-2 flex-1 rounded-sm ${info.moving ? 'bg-[var(--color-gold)]' : 'bg-[var(--color-text)]'}`} />
+          <div className={`h-2 flex-1 rounded-sm ${info.moving ? 'bg-[var(--g-gold-deep)]' : 'bg-[var(--g-ink)]'}`} />
         ) : (
           <>
-            <div className={`h-2 flex-1 rounded-sm ${info.moving ? 'bg-[var(--color-gold)]' : 'bg-[var(--color-text)]'}`} />
+            <div className={`h-2 flex-1 rounded-sm ${info.moving ? 'bg-[var(--g-gold-deep)]' : 'bg-[var(--g-ink)]'}`} />
             <div className="w-4" />
-            <div className={`h-2 flex-1 rounded-sm ${info.moving ? 'bg-[var(--color-gold)]' : 'bg-[var(--color-text)]'}`} />
+            <div className={`h-2 flex-1 rounded-sm ${info.moving ? 'bg-[var(--g-gold-deep)]' : 'bg-[var(--g-ink)]'}`} />
           </>
         )}
       </div>
-      {info.moving && <span className="text-[var(--color-gold)] text-xs font-bold">{info.yang ? '○' : '×'}</span>}
+      {info.moving && <span className="text-[var(--g-gold-deep)] text-xs font-bold">{info.yang ? '○' : '×'}</span>}
     </div>
   );
 }
@@ -71,8 +71,8 @@ export default function CastPanel({ node, settings, thrown, paused, onThrow }) {
   const lastLine = count > 0 ? perThrow[count - 1]?.speakerLine : null;
 
   return (
-    <div className="border border-[var(--color-gold-border)] rounded-xl p-4 bg-[var(--color-surface)] space-y-4">
-      <div className="text-center text-sm text-[var(--color-text-dim)] font-body">
+    <div className="border border-[var(--g-gold-line)] rounded-xl p-4 bg-[var(--g-paper)] space-y-4">
+      <div className="text-center text-sm text-[var(--g-ink-dim)] font-body">
         问卦：{renderTemplate(node.question, settings)}
       </div>
 
@@ -80,12 +80,12 @@ export default function CastPanel({ node, settings, thrown, paused, onThrow }) {
       <div className="max-w-[200px] mx-auto flex flex-col-reverse gap-2">
         {thrown.map((total, i) => (
           <div key={i} className="flex items-center gap-2">
-            <span className="text-[10px] w-7 text-[var(--color-text-dim)] font-body">{YAO_LABELS[i]}</span>
+            <span className="text-[10px] w-7 text-[var(--g-ink-dim)] font-body">{YAO_LABELS[i]}</span>
             <div className="flex-1"><YaoLine total={total} highlight={i === count - 1 && !done} /></div>
           </div>
         ))}
         {thrown.length === 0 && (
-          <div className="text-center text-xs text-[var(--color-text-dim)] py-3 font-body">卦纸空白，待你第一掷</div>
+          <div className="text-center text-xs text-[var(--g-ink-dim)] py-3 font-body">卦纸空白，待你第一掷</div>
         )}
       </div>
 
@@ -95,16 +95,16 @@ export default function CastPanel({ node, settings, thrown, paused, onThrow }) {
           <CoinRow total={lastTotal} />
           <div className="text-center text-sm font-body">
             <span className="font-bold">{RESULT_INFO[lastTotal].name}</span>
-            <span className="text-[var(--color-text-dim)]"> · {RESULT_INFO[lastTotal].yao}</span>
-            {RESULT_INFO[lastTotal].moving && <span className="text-[var(--color-gold)]"> · 动</span>}
+            <span className="text-[var(--g-ink-dim)]"> · {RESULT_INFO[lastTotal].yao}</span>
+            {RESULT_INFO[lastTotal].moving && <span className="text-[var(--g-gold-deep)]"> · 动</span>}
           </div>
         </div>
       )}
 
       {/* speaker line for last throw (per-throw speaker override — ch2 self-reported casts; default 沈疏桐 for ch1 compat) */}
       {lastLine && !paused && (
-        <div className="text-sm leading-relaxed font-body border-t border-[var(--color-border)] pt-3">
-          <span className="text-[var(--color-gold)] font-medium">{renderTemplate(perThrow[count - 1]?.speaker || '沈疏桐', settings)}</span>：
+        <div className="text-sm leading-relaxed font-body border-t border-[var(--g-gold-line-soft)] pt-3">
+          <span className="text-[var(--g-gold-deep)] font-medium">{renderTemplate(perThrow[count - 1]?.speaker || '沈疏桐', settings)}</span>：
           {renderTemplate(lastLine, settings)}
         </div>
       )}
@@ -113,13 +113,13 @@ export default function CastPanel({ node, settings, thrown, paused, onThrow }) {
       {!done && !paused && (
         <button
           onClick={onThrow}
-          className="w-full py-2.5 rounded-lg bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)] text-[var(--color-gold)] font-medium hover:opacity-80 transition-opacity font-body"
+          className="w-full py-2.5 rounded-lg bg-[var(--g-gold-wash)] border border-[var(--g-gold-line)] text-[var(--g-gold-deep)] font-medium hover:opacity-80 transition-opacity font-body"
         >
           {count === 0 ? '合掌摇钱，掷第一次' : `第 ${count + 1} 掷（${YAO_LABELS[count]}）`}
         </button>
       )}
       {paused && !done && (
-        <div className="text-center text-xs text-[var(--color-text-dim)] font-body">——摇卦暂歇，听{renderTemplate('{{senior}}', settings)}讲——</div>
+        <div className="text-center text-xs text-[var(--g-ink-dim)] font-body">——摇卦暂歇，听{renderTemplate('{{senior}}', settings)}讲——</div>
       )}
     </div>
   );
@@ -138,8 +138,8 @@ export function DressingBoard({ board }) {
   for (const r of revealed) byPos[r.pos] = r;
   const marks = board.marks || null;
   return (
-    <div className="border border-[var(--color-gold-border)]/70 rounded-xl px-4 py-3 bg-[var(--color-surface)]/95 shadow-lg">
-      <div className="text-center text-[10px] tracking-[0.4em] text-[var(--color-text-dim)] font-body mb-2">装 卦</div>
+    <div className="border border-[var(--g-gold-line)]/70 rounded-xl px-4 py-3 bg-[var(--g-paper)]/95 shadow-lg">
+      <div className="text-center text-[10px] tracking-[0.4em] text-[var(--g-ink-dim)] font-body mb-2">装 卦</div>
       <div className="max-w-[250px] mx-auto flex flex-col-reverse gap-1.5">
         {board.throws.map((total, i) => {
           const pos = i + 1;
@@ -147,16 +147,16 @@ export function DressingBoard({ board }) {
           const mark = marks?.world === pos ? '世' : marks?.response === pos ? '应' : '';
           return (
             <div key={i} className="flex items-center gap-2">
-              <span className="text-[10px] w-7 text-[var(--color-text-dim)] font-body">{YAO_LABELS[i]}</span>
+              <span className="text-[10px] w-7 text-[var(--g-ink-dim)] font-body">{YAO_LABELS[i]}</span>
               <div className="flex-1"><YaoLine total={total} /></div>
               <span className="text-xs w-11 text-right font-body">
                 {r ? (
-                  <b className="text-[var(--color-gold)]">{r.branch}<span className="opacity-70 font-normal">{r.wuxing}</span></b>
+                  <b className="text-[var(--g-gold-deep)]">{r.branch}<span className="opacity-70 font-normal">{r.wuxing}</span></b>
                 ) : (
                   <span className="opacity-25">·</span>
                 )}
               </span>
-              <span className="text-[10px] w-4 font-body font-bold text-[var(--color-gold)]">{mark}</span>
+              <span className="text-[10px] w-4 font-body font-bold text-[var(--g-gold-deep)]">{mark}</span>
             </div>
           );
         })}

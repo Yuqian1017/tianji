@@ -1,0 +1,117 @@
+/* Game-scoped visual system (Galgame UIUX batch, 2026-07-13 owner feedback).
+   The player renders fullscreen OVER artwork — it must NOT depend on app theme
+   variables (--color-surface was undefined → transparent dialog box, the P0
+   readability bug). All tokens here are self-contained and solid-by-default;
+   translucency is baked into the token value, never via Tailwind /NN modifiers
+   on var() colors (that combination fails silently).
+   Namespace: --g-* on :root (no collision with app --color-*). */
+
+:root {
+  /* paper surfaces (rice-paper 宣纸) */
+  --g-paper: #f6efdf;            /* dialog / cards main surface */
+  --g-paper-soft: #efe6d0;       /* pressed / secondary surface */
+  --g-paper-edge: #e6d9bc;       /* subtle inner edge */
+
+  /* ink text */
+  --g-ink: #2b2013;              /* primary text on paper */
+  --g-ink-dim: rgba(43, 32, 19, 0.64);
+  --g-ink-faint: rgba(43, 32, 19, 0.42);
+
+  /* gold accents (deep enough to read on paper) */
+  --g-gold: #96742a;
+  --g-gold-deep: #7a5c1e;
+  --g-gold-line: rgba(150, 116, 42, 0.6);
+  --g-gold-line-soft: rgba(150, 116, 42, 0.32);
+  --g-gold-wash: rgba(150, 116, 42, 0.12);
+
+  /* frame & shadow (separates paper from artwork) */
+  --g-frame: rgba(58, 42, 22, 0.65);
+  --g-shadow: 0 12px 32px rgba(20, 12, 4, 0.5), 0 2px 8px rgba(20, 12, 4, 0.35);
+
+  /* seal red (name plate / emphasis chips) */
+  --g-seal: #8d3a2a;
+  --g-seal-deep: #74291c;
+  --g-seal-text: #f8ecd8;
+
+  /* HUD over artwork (dark ink bar, readable on any scene) */
+  --g-hud-bg: rgba(18, 12, 6, 0.55);
+  --g-hud-text: rgba(250, 243, 228, 0.95);
+  --g-hud-text-dim: rgba(250, 243, 228, 0.68);
+
+  /* scrim for title screen text blocks */
+  --g-scrim: rgba(16, 11, 5, 0.52);
+}
+
+/* Paper panel primitive — dialog box, overlay cards, cast panel share it.
+   Double frame: outer ink line + inner gold hairline (via box-shadow inset). */
+.g-paper-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 244, 0.65), rgba(255, 252, 244, 0) 42%),
+    var(--g-paper);
+  border: 1px solid var(--g-frame);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 250, 238, 0.55),
+    inset 0 0 0 3px var(--g-gold-line-soft),
+    var(--g-shadow);
+  color: var(--g-ink);
+}
+
+/* seal-style name plate */
+.g-name-plate {
+  background: linear-gradient(180deg, var(--g-seal), var(--g-seal-deep));
+  color: var(--g-seal-text);
+  border: 1px solid rgba(255, 240, 214, 0.35);
+  box-shadow:
+    inset 0 0 0 1px rgba(120, 32, 18, 0.6),
+    0 3px 8px rgba(20, 12, 4, 0.4);
+  letter-spacing: 0.12em;
+}
+
+/* choice option card */
+.g-option {
+  background: var(--g-paper);
+  border: 1px solid var(--g-gold-line-soft);
+  box-shadow: inset 0 0 0 1px rgba(255, 250, 238, 0.5), 0 2px 6px rgba(20, 12, 4, 0.25);
+  color: var(--g-ink);
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.1s ease;
+}
+.g-option:hover {
+  background: #fbf5e6;
+  border-color: var(--g-gold-line);
+  transform: translateY(-1px);
+}
+
+/* quiet paper button (continue / secondary actions) */
+.g-quiet-btn {
+  background: var(--g-paper-soft);
+  border: 1px solid var(--g-gold-line-soft);
+  color: var(--g-ink-dim);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.g-quiet-btn:hover { color: var(--g-ink); border-color: var(--g-gold-line); }
+
+/* primary gold action (cast throw button etc.) */
+.g-gold-btn {
+  background: linear-gradient(180deg, #b28a33, #96742a);
+  color: #fdf6e4;
+  border: 1px solid rgba(255, 240, 205, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 250, 230, 0.35), 0 3px 10px rgba(20, 12, 4, 0.35);
+  text-shadow: 0 1px 2px rgba(60, 40, 8, 0.35);
+}
+.g-gold-btn:hover { filter: brightness(1.06); }
+.g-gold-btn:disabled { filter: saturate(0.4) brightness(0.9); }
+
+/* HUD chip bar */
+.g-hud {
+  background: var(--g-hud-bg);
+  color: var(--g-hud-text);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(250, 243, 228, 0.14);
+}
+
+/* title screen scrim panel */
+.g-scrim-panel {
+  background: var(--g-scrim);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(250, 243, 228, 0.16);
+}

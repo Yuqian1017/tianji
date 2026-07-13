@@ -18,6 +18,7 @@ import {
 } from './state.js';
 import { throwCoins, paipan } from '../modules/liuyao/engine.js';
 import { BG_SWITCH, BGM_SWITCH, PORTRAITS, portraitVisible, fallbackForNode } from './presentation.js';
+import './game-ui.css';
 
 const KP_SHORT = {
   'KP-LY-001': '认卦', 'KP-LY-002': '摇卦', 'KP-LY-003': '动变',
@@ -28,7 +29,7 @@ function Continue({ onClick, label = '继续 ▸' }) {
   return (
     <button
       onClick={onClick}
-      className="mt-4 w-full py-2 rounded-lg text-sm text-[var(--color-text-dim)] hover:text-[var(--color-text)] border border-[var(--color-border)] hover:border-[var(--color-gold-border)] transition-colors font-body"
+      className="g-quiet-btn mt-4 w-full py-2 rounded-lg text-sm font-body"
     >
       {label}
     </button>
@@ -39,7 +40,7 @@ function GenderButton({ value, set, current, label }) {
   return (
     <button
       onClick={() => set(value)}
-      className={`px-4 py-2 rounded-lg border text-sm font-body ${current === value ? 'border-[var(--color-gold-border)] text-[var(--color-gold)] bg-[var(--color-gold-bg-faint)]' : 'border-[var(--color-border)] text-[var(--color-text-dim)]'}`}
+      className={`px-4 py-2 rounded-lg border text-sm font-body ${current === value ? 'border-[var(--g-gold-line)] text-[var(--g-gold-deep)] bg-[var(--g-gold-wash)]' : 'border-[var(--g-gold-line-soft)] text-[var(--g-ink-dim)]'}`}
     >
       {label}
     </button>
@@ -48,14 +49,14 @@ function GenderButton({ value, set, current, label }) {
 
 function Hud({ save, chapter }) {
   return (
-    <div className="flex items-center justify-between text-xs font-body text-[var(--color-text-dim)] px-1">
-      <div className="flex gap-3">
-        <span>灵力 <b className="text-[var(--color-gold)]">{save.lingli}</b></span>
-        <span>好感 <b className="text-[var(--color-text)]">{save.favor}</b></span>
+    <div className="flex items-center justify-between text-xs font-body px-1 text-[var(--g-hud-text-dim)]">
+      <div className="g-hud flex gap-3 rounded-full px-3 py-1">
+        <span>灵力 <b className="text-amber-300">{save.lingli}</b></span>
+        <span>好感 <b className="text-[var(--g-hud-text)]">{save.favor}</b></span>
       </div>
-      <div className="flex gap-2">
+      <div className="g-hud flex gap-2 rounded-full px-3 py-1">
         {(chapter.knowledgePoints || []).map((kp) => (
-          <span key={kp} className={save.pendingReview.includes(kp) ? 'text-[var(--color-gold)]' : ''}>
+          <span key={kp} className={save.pendingReview.includes(kp) ? 'text-amber-300' : ''}>
             {KP_SHORT[kp]}·{save.mastery[kp] || '—'}{save.pendingReview.includes(kp) ? '⟳' : ''}
           </span>
         ))}
@@ -202,8 +203,8 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
     console.error(`[game] node not found: ${save.currentNodeId}`);
     return (
       <div className="p-6 text-center space-y-3">
-        <div className="text-sm text-[var(--color-text)]">存档指向了不存在的节点（{String(save.currentNodeId)}）。这是数据 bug，请回报。</div>
-        <button onClick={onExit} className="px-4 py-2 rounded-lg border border-[var(--color-border)] text-sm">返回</button>
+        <div className="text-sm text-[var(--g-ink)]">存档指向了不存在的节点（{String(save.currentNodeId)}）。这是数据 bug，请回报。</div>
+        <button onClick={onExit} className="px-4 py-2 rounded-lg border border-[var(--g-gold-line-soft)] text-sm">返回</button>
       </div>
     );
   }
@@ -231,11 +232,11 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   } else if (node.type === 'sceneHeader') {
     body = (
       <div className="text-center py-10 space-y-3 cursor-pointer" onClick={() => advance(node.next)}>
-        <div className="text-xs tracking-[0.4em] text-[var(--color-text-dim)] font-body">第{['','一','二','三','四','五','六','七','八'][node.scene]}幕</div>
-        <div className="text-2xl font-bold font-display text-[var(--color-text)]">{T(node.title)}</div>
-        <div className="text-sm text-[var(--color-text-dim)] font-body">{node.time}</div>
-        {node.ambience && <div className="text-xs text-[var(--color-text-dim)] font-body opacity-70">{T(node.ambience)}</div>}
-        <div className="text-xs text-[var(--color-text-dim)] pt-4 animate-pulse">点击继续</div>
+        <div className="text-xs tracking-[0.4em] text-[var(--g-ink-dim)] font-body">第{['','一','二','三','四','五','六','七','八'][node.scene]}幕</div>
+        <div className="text-2xl font-bold font-display text-[var(--g-ink)]">{T(node.title)}</div>
+        <div className="text-sm text-[var(--g-ink-dim)] font-body">{node.time}</div>
+        {node.ambience && <div className="text-xs text-[var(--g-ink-dim)] font-body opacity-70">{T(node.ambience)}</div>}
+        <div className="text-xs text-[var(--g-ink-dim)] pt-4 animate-pulse">点击继续</div>
       </div>
     );
   } else if (node.type === 'narration' || node.type === 'dialogue') {
@@ -244,20 +245,20 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
     const favorMutator = node.effects?.favor ? (s) => applyFavor(s, node.effects.favor) : undefined;
     body = (
       <div className={clickable ? 'cursor-pointer' : ''} onClick={clickable ? () => advance(node.next, favorMutator) : undefined}>
-        {node.aside && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed mb-2 font-body">{T(node.aside)}</div>}
+        {node.aside && <div className="text-[13.5px] italic text-[var(--g-ink-dim)] leading-relaxed mb-2 font-body">{T(node.aside)}</div>}
         {node.type === 'dialogue' ? (
-          <div className="leading-loose font-body text-[var(--color-text)]">「{nodeText()}」</div>
+          <div className="leading-[1.95] text-[17px] font-body text-[var(--g-ink)]">「{nodeText()}」</div>
         ) : (
-          <div className="leading-loose text-[var(--color-text)] font-body whitespace-pre-line">{nodeText()}</div>
+          <div className="leading-[1.95] text-[16.5px] text-[var(--g-ink)] font-body whitespace-pre-line">{nodeText()}</div>
         )}
         {isResume ? (
           activeCast?.paused === true ? (
             <Continue onClick={resumeCast} label="——继续摇卦——" />
           ) : (
-            <div className="mt-3 text-center text-xs text-[var(--color-text-dim)] font-body">（摇卦进行中——掷上方铜钱）</div>
+            <div className="mt-3 text-center text-xs text-[var(--g-ink-dim)] font-body">（摇卦进行中——掷上方铜钱）</div>
           )
         ) : (
-          <div className="text-right text-xs text-[var(--color-text-dim)] mt-2 opacity-50 animate-pulse">▸</div>
+          <div className="text-right text-xs text-[var(--g-ink-dim)] mt-2 opacity-50 animate-pulse">▸</div>
         )}
       </div>
     );
@@ -276,17 +277,17 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       }
       body = (
         <div>
-          {resp?.aside && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed mb-3 font-body">{T(resp.aside)}</div>}
+          {resp?.aside && <div className="text-sm italic text-[var(--g-ink-dim)] leading-relaxed mb-3 font-body">{T(resp.aside)}</div>}
           {resp && (resp.speaker ? (
-            <div className="leading-loose font-body">
-              <span className="text-[var(--color-gold)] font-medium">{T(resp.speaker)}</span>
-              <span className="text-[var(--color-text-dim)]">：「</span>
-              <span className="text-[var(--color-text)]">{T(resp.text)}</span>
-              <span className="text-[var(--color-text-dim)]">」</span>
+            <div className="leading-[1.95] text-[16px] font-body">
+              <span className="text-[var(--g-gold-deep)] font-medium">{T(resp.speaker)}</span>
+              <span className="text-[var(--g-ink-dim)]">：「</span>
+              <span className="text-[var(--g-ink)]">{T(resp.text)}</span>
+              <span className="text-[var(--g-ink-dim)]">」</span>
             </div>
           ) : (
             // speaker-less response = pure narration beat (e.g. ch2 act-3 silent option)
-            <div className="leading-loose text-[var(--color-text)] font-body whitespace-pre-line">{T(resp.text)}</div>
+            <div className="leading-[1.95] text-[16px] text-[var(--g-ink)] font-body whitespace-pre-line">{T(resp.text)}</div>
           ))}
           <Continue onClick={() => {
             if (node.type === 'scoredChoice') {
@@ -316,13 +317,13 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       };
       body = (
         <div className="space-y-3">
-          {node.prompt && <div className="leading-loose text-[var(--color-text)] font-body whitespace-pre-line mb-2">{T(node.prompt)}</div>}
-          {node.context && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed font-body">{T(node.context)}</div>}
+          {node.prompt && <div className="leading-loose text-[var(--g-ink)] font-body whitespace-pre-line mb-2">{T(node.prompt)}</div>}
+          {node.context && <div className="text-sm italic text-[var(--g-ink-dim)] leading-relaxed font-body">{T(node.context)}</div>}
           {node.options.map((option, i) => (
             <button
               key={i}
               onClick={() => pick(option)}
-              className="w-full text-left px-4 py-3 rounded-lg border border-[var(--color-border)] hover:border-[var(--color-gold-border)] hover:bg-[var(--color-gold-bg-faint)] transition-colors text-sm leading-relaxed text-[var(--color-text)] font-body"
+              className="g-option w-full text-left px-4 py-3 rounded-lg text-[15px] leading-relaxed font-body"
             >
               {option.dynamic ? (dynamicOptionText(option.key, save.natalHexagram) ?? T(option.text)) : T(option.text)}
             </button>
@@ -332,25 +333,25 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
     }
   } else if (node.type === 'castInteraction') {
     body = (
-      <div className="text-center text-sm text-[var(--color-text-dim)] font-body py-2">
+      <div className="text-center text-sm text-[var(--g-ink-dim)] font-body py-2">
         {node.aside ? T(node.aside) : '——摇卦进行中，心思只在一件事上——'}
       </div>
     );
   } else if (node.type === 'chapterEnd') {
     body = (
       <div className="space-y-5 py-2">
-        <div className="text-center text-xl font-display text-[var(--color-text)]">{node.title || '【第一章 · 终】'}</div>
-        <div className="text-center text-sm text-[var(--color-gold)] font-body">章节通关 · 灵力 +{node.rewards?.lingli || 0}</div>
+        <div className="text-center text-xl font-display text-[var(--g-ink)]">{node.title || '【第一章 · 终】'}</div>
+        <div className="text-center text-sm text-[var(--g-gold-deep)] font-body">章节通关 · 灵力 +{node.rewards?.lingli || 0}</div>
         {node.hooks?.length > 0 && (
           <div className="space-y-2">
-            <div className="text-xs text-[var(--color-text-dim)] font-body">悬而未决：</div>
+            <div className="text-xs text-[var(--g-ink-dim)] font-body">悬而未决：</div>
             {node.hooks.map((h, i) => (
-              <div key={i} className="text-sm text-[var(--color-text)] font-body leading-relaxed">· {T(h)}</div>
+              <div key={i} className="text-sm text-[var(--g-ink)] font-body leading-relaxed">· {T(h)}</div>
             ))}
           </div>
         )}
         {node.nextChapterTeaser && (
-          <div className="text-sm text-[var(--color-text-dim)] italic font-body leading-relaxed border-t border-[var(--color-border)] pt-3">
+          <div className="text-sm text-[var(--g-ink-dim)] italic font-body leading-relaxed border-t border-[var(--g-gold-line-soft)] pt-3">
             {T(node.nextChapterTeaser)}
           </div>
         )}
@@ -361,7 +362,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   } else {
     // Unknown node type — fail loudly (never render blank and continue silently).
     console.error(`[game] unknown node type "${node.type}" at ${save.currentNodeId}`);
-    body = <div className="text-sm text-[var(--color-text-dim)]">未知节点类型：{node.type}（数据 bug，请回报）</div>;
+    body = <div className="text-sm text-[var(--g-ink-dim)]">未知节点类型：{node.type}（数据 bug，请回报）</div>;
   }
 
   // PLACEHOLDER-RENDER-2
@@ -403,7 +404,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
 
       {/* toast */}
       {toast && (
-        <div className="absolute top-12 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-[var(--color-surface)]/95 border border-[var(--color-gold-border)] text-sm text-[var(--color-gold)] shadow-md font-body">
+        <div className="absolute top-12 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full g-paper-panel text-sm text-[var(--g-gold-deep)] font-body font-medium">
           {toast.text}
         </div>
       )}
@@ -411,7 +412,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       {/* cast panel: centered overlay during casting */}
       {activeCast && castNode && (
         <div className="absolute inset-x-0 top-[8%] z-20 flex justify-center px-4">
-          <div className="w-full max-w-md max-h-[64vh] overflow-y-auto rounded-xl shadow-xl bg-[var(--color-surface)]/97">
+          <div className="w-full max-w-md max-h-[64vh] overflow-y-auto rounded-xl">
             <CastPanel
               node={castNode}
               settings={save.settings}
@@ -435,9 +436,9 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       {/* main content: dialog box (bottom) for text nodes; centered overlay card otherwise */}
       {isDialogNode ? (
         <div className="absolute bottom-0 inset-x-0 z-20 px-4 pb-4">
-          <div className="max-w-3xl mx-auto rounded-xl border border-[var(--color-gold-border)]/60 bg-[var(--color-surface)]/94 shadow-xl px-6 py-4 min-h-[120px] backdrop-blur-sm">
+          <div className="max-w-3xl mx-auto g-paper-panel rounded-xl px-6 py-5 min-h-[132px]">
             {node.type === 'dialogue' && (
-              <div className="inline-block -mt-7 mb-1 px-3 py-1 rounded-md bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)] text-[var(--color-gold)] text-sm font-medium font-body shadow-sm">
+              <div className="inline-block -mt-9 mb-1.5 px-4 py-1 rounded-md g-name-plate text-sm font-medium font-body">
                 {T(node.speaker)}
               </div>
             )}
@@ -446,14 +447,14 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
         </div>
       ) : (
         <div className="absolute inset-0 z-10 flex items-center justify-center px-4 overflow-y-auto py-14">
-          <div className="w-full max-w-xl rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/96 shadow-xl p-6 backdrop-blur-sm">
+          <div className="w-full max-w-xl g-paper-panel rounded-xl p-6">
             {body}
           </div>
         </div>
       )}
 
       {/* exit */}
-      <button onClick={onExit} className="absolute bottom-1 left-3 z-30 text-xs text-white/70 hover:text-white font-body">
+      <button onClick={onExit} className="g-hud absolute bottom-2 left-3 z-30 text-xs rounded-full px-3 py-1 hover:text-white font-body">
         ← 存档并退出
       </button>
     </div>
@@ -462,26 +463,26 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
 
 function SaveSummary({ save, chapter = CHAPTER_1 }) {
   return (
-    <div className="border border-[var(--color-border)] rounded-lg p-3 space-y-2 text-sm font-body">
-      <div className="text-xs text-[var(--color-text-dim)]">本章结算</div>
+    <div className="border border-[var(--g-gold-line-soft)] rounded-lg p-3 space-y-2 text-sm font-body">
+      <div className="text-xs text-[var(--g-ink-dim)]">本章结算</div>
       <div className="flex justify-between">
-        <span>灵力 <b className="text-[var(--color-gold)]">{save.lingli}</b></span>
+        <span>灵力 <b className="text-[var(--g-gold-deep)]">{save.lingli}</b></span>
         <span>沈疏桐好感 <b>{save.favor}</b></span>
       </div>
       <div className="space-y-1">
         {(chapter.knowledgePoints || []).map((kp) => (
           <div key={kp} className="flex justify-between text-xs">
-            <span className="text-[var(--color-text-dim)]">{KP_SHORT[kp]}（{kp}）</span>
+            <span className="text-[var(--g-ink-dim)]">{KP_SHORT[kp]}（{kp}）</span>
             <span>
               {save.mastery[kp] || '未接触'}
-              {save.pendingReview.includes(kp) && <span className="text-[var(--color-gold)]"> · 待复习</span>}
+              {save.pendingReview.includes(kp) && <span className="text-[var(--g-gold-deep)]"> · 待复习</span>}
             </span>
           </div>
         ))}
       </div>
       {save.natalHexagram && (
-        <div className="text-xs text-[var(--color-text-dim)] border-t border-[var(--color-border)] pt-2">
-          本命卦：<b className="text-[var(--color-text)]">{save.natalHexagram.benGua}</b>
+        <div className="text-xs text-[var(--g-ink-dim)] border-t border-[var(--g-gold-line-soft)] pt-2">
+          本命卦：<b className="text-[var(--g-ink)]">{save.natalHexagram.benGua}</b>
           {save.natalHexagram.bianGua && save.natalHexagram.movingLines?.length > 0 && (
             <span> 之 {save.natalHexagram.bianGua}</span>
           )}
@@ -498,24 +499,24 @@ function SettingsForm({ onSubmit }) {
   const [seniorGender, setSeniorGender] = useState('female');
   return (
     <div className="space-y-5 py-2">
-      <div className="text-center text-lg font-display text-[var(--color-text)]">入门造册</div>
+      <div className="text-center text-lg font-display text-[var(--g-ink)]">入门造册</div>
       <div className="space-y-2">
-        <div className="text-xs text-[var(--color-text-dim)] font-body">道号（你的名字）</div>
+        <div className="text-xs text-[var(--g-ink-dim)] font-body">道号（你的名字）</div>
         <input
           value={name} onChange={(e) => setName(e.target.value)} maxLength={12}
           placeholder="报上名来"
-          className="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-transparent text-[var(--color-text)] font-body outline-none focus:border-[var(--color-gold-border)]"
+          className="w-full px-3 py-2 rounded-lg border border-[var(--g-gold-line-soft)] bg-transparent text-[var(--g-ink)] font-body outline-none focus:border-[var(--g-gold-line)]"
         />
       </div>
       <div className="space-y-2">
-        <div className="text-xs text-[var(--color-text-dim)] font-body">你的身份</div>
+        <div className="text-xs text-[var(--g-ink-dim)] font-body">你的身份</div>
         <div className="flex gap-2">
           <GenderButton value="female" set={setPlayerGender} current={playerGender} label="女弟子" />
           <GenderButton value="male" set={setPlayerGender} current={playerGender} label="男弟子" />
         </div>
       </div>
       <div className="space-y-2">
-        <div className="text-xs text-[var(--color-text-dim)] font-body">引路人（内门弟子沈疏桐）</div>
+        <div className="text-xs text-[var(--g-ink-dim)] font-body">引路人（内门弟子沈疏桐）</div>
         <div className="flex gap-2">
           <GenderButton value="female" set={setSeniorGender} current={seniorGender} label="师姐" />
           <GenderButton value="male" set={setSeniorGender} current={seniorGender} label="师兄" />
@@ -524,7 +525,7 @@ function SettingsForm({ onSubmit }) {
       <button
         disabled={!name.trim()}
         onClick={() => onSubmit({ playerName: name.trim(), playerGender, seniorGender })}
-        className="w-full py-2.5 rounded-lg bg-[var(--color-gold-bg-faint)] border border-[var(--color-gold-border)] text-[var(--color-gold)] font-medium disabled:opacity-40 font-body"
+        className="w-full py-2.5 rounded-lg bg-[var(--g-gold-wash)] border border-[var(--g-gold-line)] text-[var(--g-gold-deep)] font-medium disabled:opacity-40 font-body"
       >
         入山门
       </button>
