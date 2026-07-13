@@ -110,7 +110,8 @@ BGM_SWITCH['qn-s3-header'] = `${A}/bgm-dawn.mp3`;
 BG_SWITCH['ch2-s1-header'] = `${A}/bg-cangjinge.webp`;
 BG_SWITCH['ch2-s2-header'] = `${A}/bg-mingshitang.webp`;
 BG_SWITCH['ch2-s3-header'] = `${A}/bg-mingshitang.webp`;
-// 3.2 点验开工 in-scene switch is wired post-merge on the 3.2 anchor node (see CH2_SCENE note below)
+BG_SWITCH['ch2-s3-230'] = `${A}/bg-cangjinge.webp`;   // 3.2 点验开工（明蓍堂→藏经阁 in-scene）
+BGM_SWITCH['ch2-s3-230'] = `${A}/bgm-mystery.mp3`;
 BG_SWITCH['ch2-s4-header'] = `${A}/bg-cangjinge.webp`;
 BG_SWITCH['ch2-s5-header'] = `${A}/bg-cangjinge.webp`;
 BG_SWITCH['ch2-s6-header'] = `${A}/bg-mingshitang.webp`;

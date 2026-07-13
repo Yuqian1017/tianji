@@ -268,14 +268,17 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       body = (
         <div>
           {resp?.aside && <div className="text-sm italic text-[var(--color-text-dim)] leading-relaxed mb-3 font-body">{T(resp.aside)}</div>}
-          {resp && (
+          {resp && (resp.speaker ? (
             <div className="leading-loose font-body">
               <span className="text-[var(--color-gold)] font-medium">{T(resp.speaker)}</span>
               <span className="text-[var(--color-text-dim)]">：「</span>
               <span className="text-[var(--color-text)]">{T(resp.text)}</span>
               <span className="text-[var(--color-text-dim)]">」</span>
             </div>
-          )}
+          ) : (
+            // speaker-less response = pure narration beat (e.g. ch2 act-3 silent option)
+            <div className="leading-loose text-[var(--color-text)] font-body whitespace-pre-line">{T(resp.text)}</div>
+          ))}
           <Continue onClick={() => {
             if (node.type === 'scoredChoice') {
               advance(option.next, (s) => applyScoredChoice(s, node, option));
