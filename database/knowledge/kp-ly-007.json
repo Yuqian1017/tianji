@@ -1,0 +1,53 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-3 script lint.",
+  "sourceDoc": "docs/script/CHAPTER_3_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-007",
+ "domain": "liuyao",
+ "domainCn": "六爻（六亲）",
+ "name": "五行相生相克（循环）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-005"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-13",
+   "by": "落听潮 — 跟随制审计第三批（双典籍互证 + 引擎 10/10 程序化对撞）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "五行相生章第十一／金生水﹐水生木﹐木生火﹐火生土﹐土生金。",
+   "source": "《增删卜易·五行相生章第十一》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 817-819",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（快照 zengshanbuyi-wiki-950329-2026-07-12.html）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "五行相克章第十二／金克木﹐木克土﹐土克水﹐水克火﹐火克金。",
+   "source": "《增删卜易·五行相克章第十二》",
+   "locator": "ctext wiki chapter=950329，提取行 839-841",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "六親相生相克： 生我者為父母，我生者為子孫，克我者為官鬼，我克者為妻財．比和者為兄弟．",
+   "source": "《卜筮正宗·六親相生相克》（王洪绪辑）",
+   "locator": "ctext wiki chapter=889452，提取行 285",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（本卡引作生克循环的应用互证；其安亲含义归 KP-LY-008 主引）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  }
+ ],
+ "engineCrossCheck": "2026-07-13：生五+克五共 10 关系与 src/modules/liuyao/engine.js wuxingRelation() 程序化对撞 10/10 match（见 witness JSON engineCrossCheck 字段）",
+ "scopeNote": "练气期口径：只教两条循环句本身（相生一圈、相克一圈）与『隔一位相克』的记法直觉；旺衰/月建日辰生克/回头生克等断法应用全部超纲（增删两章的断法句照录存证不入教学）。",
+ "modernExplain": "（整理者转述）五行金木水火土之间有两种固定关系，各成一个循环：相生——金生水、水生木、木生火、火生土、土生金（母生子，滋养）；相克——金克木、木克土、土克水、水克火、火克金（制约压制）。任取两行，非生即克即同类。第二章装卦时每爻已带五行（支里带着五行），本课起这些五行开始『互相说话』。",
+ "gameLine": "五行不是五个名字，是一圈生、一圈克：金生水生木生火生土，转回金；金克木克土克水克火，也转回金。两个爻碰面，非生即克，非克即同类——记熟这两圈，卦就活了。",
+ "usedInChoicePoints": [
+  "CH3-CP-01"
+ ]
+}

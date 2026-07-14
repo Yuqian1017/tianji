@@ -1,0 +1,54 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-3 script lint.",
+  "sourceDoc": "docs/script/CHAPTER_3_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-009",
+ "domain": "liuyao",
+ "domainCn": "六爻（六亲）",
+ "name": "六亲主事（用神初步·简化口径）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-006",
+  "KP-LY-008"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-13",
+   "by": "落听潮 — 跟随制审计第三批（双典籍互证：卜筮正宗用神分類定例 × 增删用神章第八）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "父母爻：……占天地、城池、墻垣﹐宅舍、屋宇﹐舟車、衣服、雨具、綢緞﹐布匹、章奏、文書及書館文契也以父母爻為用神﹐物類亦多在變通﹐一切庇護我身者是也。",
+   "source": "《增删卜易·用神章第八》父母爻条（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 741",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（「文書及書館文契」＝书册以父母爻为用神的直接见证——本章剧情主锚）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "官鬼爻：占功名、官府、雷霆鬼神、妻占夫皆以官鬼爻為用神。占亂臣賊盜邪崇也以官鬼爻為用神﹐物類亦多﹐一切拘束我身者是也。",
+   "source": "《增删卜易·用神章第八》官鬼爻条",
+   "locator": "ctext wiki chapter=950329，提取行 743",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（「亂臣賊盜」＝裁页内应以官鬼爻为用神的直接见证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "父母爻：凡占祖父母、父母、師長……及牆城、宅舍、舟車、衣服、雨具、求雨、綢布氈貨、章奏文章、館室，俱以父母爻為用神。／官鬼爻：凡占功名、官府、雷電、鬼神、丈夫……亂臣、盜賊、邪崇、憂疑、病症、尸首、逆風，俱以官鬼爻為用神。／子孫爻：凡占兒女、孫、侄……藥材、僧道、六畜、禽鳥、順風、解憂避禍，及問天時、日月星斗，俱以子孫爻為用神。",
+   "source": "《卜筮正宗·十八論·用神分類定例第一》（王洪绪辑，父母/官鬼/子孙三条；兄弟/妻财两条同段照录存证）",
+   "locator": "ctext wiki chapter=889452，提取行 1935-1943",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（与增删用神章互证一致：章奏文章×文書書館／盜賊×賊盜／解憂避禍）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  }
+ ],
+ "engineCrossCheck": "不适用（主事分类为解读层知识，引擎排盘不涉及；排盘侧的六亲安法对撞见 KP-LY-008）",
+ "simplificationNote": "练气期简化口径：①只锚三亲主事——父母（文书/书册/屋舍，『一切庇護我身者』）、官鬼（贼盗/忧疑/祸祟，『一切拘束我身者』）、子孙（解忧避祸）；兄弟/妻财主事在剧情中由{{senior}}口头带过，不教不考。②只教『问什么事，看哪一亲』的择爻直觉（用神＝这件事在卦里的代表），用神旺衰/元神忌神/生克断吉凶全部超纲——第三章止步于『找对爻』，不判吉凶。",
+ "modernExplain": "（整理者转述）六亲不只是名分，各有所主之事：问一件事，先找它归哪一亲——那一爻就是这件事在卦里的『代表』（用神）。父母爻主庇护我的事物：长辈师长、屋舍舟车、衣服文书书册；官鬼爻主拘束我的事物：官府功名、贼盗祸祟、忧疑病症；子孙爻主解忧避祸之神。问书，看父母；问贼，看官鬼；问解法，看子孙——找对了爻，卦才答得上你问的事。",
+ "gameLine": "卦答话认亲不认人：书册屋舍是父母——庇护你的都是；贼盗忧疑是官鬼——拘着你的都是；解忧的那口气，是子孙。问什么事，先找对哪一亲——找错了爻，卦答的就是别人的事。",
+ "usedInChoicePoints": [
+  "CH3-CP-03"
+ ]
+}

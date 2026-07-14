@@ -1,0 +1,61 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-3 script lint.",
+  "sourceDoc": "docs/script/CHAPTER_3_SCRIPT_v1.md 附录 A"
+ },
+ "id": "KP-LY-008",
+ "domain": "liuyao",
+ "domainCn": "六爻（六亲）",
+ "name": "六亲安法（生克定亲，宫五行为我）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-004",
+  "KP-LY-007"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-13",
+   "by": "落听潮 — 跟随制审计第三批（双典籍互证 + 引擎 25/25+6/6 程序化对撞）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "六親相生相克： 生我者為父母，我生者為子孫，克我者為官鬼，我克者為妻財．比和者為兄弟．",
+   "source": "《卜筮正宗·六親相生相克》（王洪绪辑）",
+   "locator": "ctext wiki chapter=889452，提取行 285",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（快照 bushizhengzong-wiki-889452-2026-07-12.html）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=889452"
+  },
+  {
+   "text": "六親歌章第五／乾兌宮金兄、土父、木財、火鬼、水子。乾兌宮八卦都屬金／坎宮水兄、火財、土鬼、金父、木子。坎宮八卦都屬水。／坤艮宮土兄、火父、木鬼、水財、金子。坤艮宮八卦都屬土。／離宮火兄、水鬼、土子、木父﹐金財。離宮八卦都屬火。／震巽木兄、水父、金鬼、火子、土財。震巽宮八卦都屬木。",
+   "source": "《增删卜易·六親歌章第五》（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 657-667",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（25 格与引擎 getLiuqin 对撞全 match）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "如占得乾為天：父母戌土⚊世／兄弟申金⚊／官鬼午火⚊／父母辰土⚊應／妻財寅木⚊／子孫子水⚊／照乾宮金兄、土父、木財、火鬼、水子、裝之﹐所以辰、戌土為父母﹐申金為兄弟﹐火為官鬼﹐木是妻財﹐水是子孫﹐餘卦仿此。",
+   "source": "《增删卜易·六親歌章第五》乾为天实装例",
+   "locator": "ctext wiki chapter=950329，提取行 669-683",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（六爻逐位与引擎 PURE_GUA_LIUQIN 乾行 6/6 对撞一致）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "……須要先念渾天甲子、六親歌﹐占出卦來會裝五行六親。再學變動……",
+   "source": "《增删卜易》学序自述",
+   "locator": "ctext wiki chapter=950329，提取行 545",
+   "witness": "database/sources/ctext/liuqin-sanjian-2026-07-13.json（原书教学次序：渾天甲子→六親歌——与游戏第二/三章顺序同构）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "2026-07-13：六親歌 25 格与 engine.js getLiuqin() 对撞 25/25 match；乾为天 dressed chart 与 data.js PURE_GUA_LIUQIN 6/6 match（见 witness JSON engineCrossCheck 字段）",
+ "scopeNote": "『我』＝卦宫五行（第二章 KP-LY-004 已教『同宫同姓』——本课回收：籍贯的五行就是这张卦的『我』）。变卦六亲仍照本卦宫推（《增删·动变章》「變出之爻安六親者仍照正卦而推」，KP-LY-003 卡已存证）——本章只提一句不展开。伏神/卦身等全部超纲。",
+ "modernExplain": "（整理者转述）装完地支五行之后，以卦宫的五行为『我』，把每一爻的五行与『我』相较，得出该爻的六亲名分：生我的是父母，我生的是子孙，克我的是官鬼，我克的是妻财，与我同类的是兄弟。如乾宫属金：土爻生金为父母、水爻为子孙（金生水）、火爻为官鬼（火克金）、木爻为妻财（金克木）、金爻为兄弟。初学可照六親歌或全图查，装熟自能由生克现推。",
+ "gameLine": "宫的五行是『我』——生我的叫父母，我生的叫子孙，克我的叫官鬼，我克的叫妻财，跟我同类的叫兄弟。一圈生克比下来，六个爻从此各有名分。",
+ "usedInChoicePoints": [
+  "CH3-CP-02"
+ ]
+}
