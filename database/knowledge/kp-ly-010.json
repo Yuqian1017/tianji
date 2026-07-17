@@ -1,0 +1,46 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-4 script lint + audit-chapter4-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_4_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-010",
+ "domain": "liuyao",
+ "domainCn": "六爻（旺衰）",
+ "name": "月建（月令提纲·生克沖合）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-005",
+  "KP-LY-007",
+  "KP-LY-009"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-17",
+   "by": "落听潮 — 跟随制审计第四批（《增删》四處生克沖合框架；witness 保真+引擎对撞 audit-chapter4-canon.mjs 全绿）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "1、月建能生克沖合／此卦世爻戌土如在寅卯月占卦﹐被寅卯之木傷克﹐卽為世爻受傷。自占吉凶者謂之休囚不利。若在辰月占卦﹐辰沖戌土﹐戌為月破﹐此謂之世爻逢月破﹐卽如自己身子如破格也﹐百無所為。若在巳午月占卦﹐巳午之火乃是官鬼﹐能生戌土﹐謂之火旺土相﹐世爻逢旺相﹐諸事可為。若在未丑月占卦﹐此兩月土旺之時亦能幫扶戌土﹐此世爻戌土亦謂之旺相﹐亦以為吉。若在戌月占卦﹐世爻戌土而為月建﹐此旺相以當時也﹐自占吉凶﹐諸事享通。若在申、酉﹐亥、子月占卦此戌土皆為泄气之時﹐謂之世爻休囚無力。此謂之月建能生克、沖合世爻戌土之用神也。要知何以謂之用神者﹐自占吉凶用此世爻為主﹐不說世爻而曰用神﹐占父母以父母爻為用神。",
+   "source": "《增删卜易》「1、月建能生克沖合」全段（野鹤老人，乾为天世爻戌土 worked example）",
+   "locator": "ctext wiki chapter=950329，提取行 565-567",
+   "witness": "database/sources/ctext/wangshuai-sichu-2026-07-17.json（十二支月对世爻戌土完整枚举——寅卯克/辰沖=月破/巳午生/未丑幫扶/戌臨=當時/申酉亥子泄气）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "自占吉凶者以世爻為用神﹐此卦世臨戌土﹐卽以此戌土自己之身。宜于旺相﹐最怕休囚。宜逢巳午之火相生﹐忌寅卯之木而相克﹐又不宜世爻落空﹐更不宜世爻臨月破。此世爻戌土有四處生克沖合。",
+   "source": "《增删卜易》四處生克沖合总纲（同段）",
+   "locator": "ctext wiki chapter=950329，提取行 563",
+   "witness": "database/sources/ctext/wangshuai-sichu-2026-07-17.json（「宜于旺相﹐最怕休囚」＝旺衰二字的本经定义句；「此世爻戌土有四處生克沖合」＝框架句）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter4-canon.mjs：月建/日辰十二支×世爻戌土分类 24 项、辰戌沖/卯戌合、乾为天六爻+世应位 vs wuxingRelation/BRANCH_RELATIONS/PURE_GUA_LIUQIN/JINGFANG 全 match（2026-07-17）",
+ "simplificationNote": "练气期简化口径：①月建对用神四种作用一堂课教齐——生我＝旺相、克我＝休囚、沖我＝月破、臨月建＝當時；同类幫扶并入旺相（原文口径「亦謂之旺相」）。②申酉亥子月「泄气休囚」口头带过，不细分泄（我生）/耗（我克）——原文并称「泄气之時」。③月破只立一句话概念（「沖＝破，如器有裂纹，百無所為」），月破救应/实破填实全部超纲。④月建即当月地支（起卦先写年月日——「凡問事先寫年月日辰」），干支纪月推法不展开，剧情内直接给出。",
+ "modernExplain": "（整理者转述）起卦要先写下年、月、日——月建就是当月的地支，是这个月的『提纲』。它对用神有四种手势：生用神，用神旺相有力；克用神，用神休囚无力；沖用神，叫月破——像器物裂了纹，百无所为；用神恰是月建同字，叫当时——正在权上。同类五行则是幫扶，也算旺相。判卦第一步，先看用神在月建手里是什么处境。",
+ "gameLine": "先看月份，再看卦。月建当值如主考——生你则旺，克你则囚，沖你则破，同字则你正当时。同一爻，换个月份问，答数就换——不是卦变了，是月令换了人。",
+ "usedInChoicePoints": []
+}

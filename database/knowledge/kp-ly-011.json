@@ -1,0 +1,37 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-4 script lint + audit-chapter4-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_4_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-011",
+ "domain": "liuyao",
+ "domainCn": "六爻（旺衰）",
+ "name": "日辰（日主司权·生克沖合）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-010"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-17",
+   "by": "落听潮 — 跟随制审计第四批（《增删》四處生克沖合框架；witness 保真+引擎对撞 audit-chapter4-canon.mjs 全绿）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "2、日辰能生克沖合／此卦世爻戌土﹐若在寅卯日占卦﹐寅卯之木能克戌土﹐此世爻受日辰傷克不利之象。若在辰日占卦﹐辰沖戌土﹐謂之世爻暗動。若在巳午日占卦﹐巳午之火卽是官鬼能生戌土。此謂之世爻逢官鬼而生旺﹐諸事皆吉。若在未丑日占卦﹐土遇土而幫扶﹐此戌土亦為得助。若在戌日占卦﹐謂之世爻臨日建當令得權。若在申酉亥子日占卦﹐此戌土無克無生。此謂之日建能生克沖合用神也。",
+   "source": "《增删卜易》「2、日辰能生克沖合」全段（野鹤老人，同一世爻戌土逐日推演）",
+   "locator": "ctext wiki chapter=950329，提取行 569-571",
+   "witness": "database/sources/ctext/wangshuai-sichu-2026-07-17.json（与月建段同构镜像＋两个新名目：辰日沖戌＝暗動、戌日臨日建＝當令得權；申酉亥子日「無克無生」受向描述如实照录）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter4-canon.mjs：月建/日辰十二支×世爻戌土分类 24 项、辰戌沖/卯戌合、乾为天六爻+世应位 vs wuxingRelation/BRANCH_RELATIONS/PURE_GUA_LIUQIN/JINGFANG 全 match（2026-07-17）",
+ "simplificationNote": "练气期简化口径：①生/克/幫扶/臨四类与月建完全同构（学一遍用两次），课堂上让玩家自己推。②两个新名目单独立住：日辰沖用神＝暗動（只立名与「静爻逢沖则动」半句直觉，暗動吉凶机理超纲下章）；臨日建＝當令得權。③申酉亥子日原文作「無克無生」（受向：没有谁作用于用神）——与月建段「泄气」（出向）是同一事实两面，教学按月建口径带过，勿造不对称疑难。④日辰即当日地支，剧情内直接给出。",
+ "modernExplain": "（整理者转述）月建管一个月的令，日辰管当天的权。它对用神的手势与月建同构：寅卯日克戌＝受伤；巳午日生戌＝生旺；未丑日土遇土＝得助。两个新名目：辰日沖戌，叫暗動——静爻被日辰一沖，暗中就动了（怎么个动法，下章再说）；戌日占卦，用神恰临日建，叫當令得權。一样的字，月里遇到叫月破，日里遇到叫暗動——名目不同，轻重也不同。",
+ "gameLine": "月建管一月，日辰管一天——今日的字，权最重。沖你则暗動，臨你则得权。昨日问和今日问，卦不同天——先看今天是什么日子。",
+ "usedInChoicePoints": []
+}

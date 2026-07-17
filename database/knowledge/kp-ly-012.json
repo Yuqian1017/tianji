@@ -1,0 +1,52 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-4 script lint + audit-chapter4-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_4_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-012",
+ "domain": "liuyao",
+ "domainCn": "六爻（旺衰）",
+ "name": "旺衰合断初步（四處框架·生克相较）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-010",
+  "KP-LY-011"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-17",
+   "by": "落听潮 — 跟随制审计第四批（《增删》四處生克沖合框架；witness 保真+引擎对撞 audit-chapter4-canon.mjs 全绿）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "以上四處若得全來生合用神者﹐諸占全吉。倘有三處相生一處相克﹐也以吉斷。若有兩處克兩處生者﹐須看旺衰。生用神之神旺相者則以吉斷﹐克用神之神旺相者可以凶推。尚遇三處相克一處相生﹐若得相生之爻旺相者也可斷為克處逢凶中得解。若值休囚者有生之名無生之實﹐與四處俱來克者同斷﹐諸占大凶。",
+   "source": "《增删卜易》四處合断段（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 581",
+   "witness": "database/sources/ctext/wangshuai-sichu-2026-07-17.json（合断五档全覆盖：四生全吉／三生一克吉断／两两相持看旺衰／三克一生视生爻旺衰／四克大凶）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "3、卦中之動爻能生克沖合／此卦世爻戌土﹐倘卦中第二爻寅木發動能克戌土﹐第四爻午火官鬼發動能生戌土﹐第三爻辰土發動能沖戌土﹐此謂之卦中之動爻能生克沖合用神。",
+   "source": "《增删卜易》「3、卦中之動爻能生克沖合」全段",
+   "locator": "ctext wiki chapter=950329，提取行 573-575",
+   "witness": "database/sources/ctext/wangshuai-sichu-2026-07-17.json（四处之三，本章半句带过不考，照录存证备第五章）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "4、世爻發動變出之爻能回頭生克沖合／世爻發動﹐動而必變﹐變出巳午之火謂之回頭生世。變出寅卯之木謂之回頭克世﹐變出辰土謂之回頭沖世﹐變出卯木謂之合世。此謂之用神自動變出之爻能生克沖合用神也。",
+   "source": "《增删卜易》「4、世爻發動變出之爻能回頭生克沖合」全段",
+   "locator": "ctext wiki chapter=950329，提取行 577-579",
+   "witness": "database/sources/ctext/wangshuai-sichu-2026-07-17.json（四处之四，半句带过不考；「變出卯木謂之合世」＝卯戌六合直接见证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter4-canon.mjs：月建/日辰十二支×世爻戌土分类 24 项、辰戌沖/卯戌合、乾为天六爻+世应位 vs wuxingRelation/BRANCH_RELATIONS/PURE_GUA_LIUQIN/JINGFANG 全 match（2026-07-17）",
+ "simplificationNote": "练气期简化口径：①四處框架总览立住（月建/日辰/動爻/變爻），但本章只教前两处的实操——動爻/變爻半句带过不考（「还有两处手，等你认得动爻再说」，第五章候选）。②合断简化为三档口诀：生多克少吉、克多生少凶、两两相持看旺衰（生方旺则吉、克方旺则凶）；原文「三克一生凶中得解／有生之名無生之實」细目照录存证超纲。③本章只在月建+日辰两处内数生克（两处即出结论），四处齐数是第五章的事。",
+ "modernExplain": "（整理者转述）用神的处境不由一只手定——月建、日辰、卦里的動爻、用神自己变出的爻，四处都能生克沖合它。四处查完数一数：全来生合，诸占全吉；生多克少，也以吉断；克多生少，以凶推；两边打平，就看旺衰——帮你的那方旺，事可为；伤你的那方旺，事难成。练气期先学数月建、日辰这两处——两处出手，多数卦已见分晓。",
+ "gameLine": "断卦如断案——证词不止一张嘴。月建一句，日辰一句，坐下的、动着的各有一句。数一数：帮你的多，事可为；伤你的多，事难成；打平了，看谁正当令——旺者的话，作数。",
+ "usedInChoicePoints": []
+}
