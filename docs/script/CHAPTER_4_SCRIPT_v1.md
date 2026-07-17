@@ -1,11 +1,15 @@
 # 第四章《旺衰》剧本 v1
 
-- 版本：v1.0（2026-07-17）
-- 状态：**草稿，待 /iterative-review 收敛**（收敛后呈宗主过目；过目通过前不进数据化）
+- 版本：v1.1（2026-07-17）
+- 状态：**审查收敛，待宗主过目**（过目通过前不进数据化）
 - 依据：`docs/PRD.md` v2（§ 4 教学体系）、`docs/HANDOFF_2026-07-14_ch4.md` § 3 第 1 条、`docs/design/CHAPTER_4_PREP.md`（策划案，已过目）、`docs/design/LOVE_AND_SYSTEMS_DESIGN.md` § 1（好感档位）
 - 性质：**人读版剧本**。结构化数据为数据化阶段工作。
 - 知识审计：跟随制审计第四批已完成（commit `ff272be`）——witness `wangshuai-sichu-2026-07-17.json`（提取行 545-593 程序化摘录）+ 三层对撞脚本 `audit-chapter4-canon.mjs` 85 checks 全绿（witness 保真／引擎 24+2+8 项／KP 引用链）。KP 卡见 `database/knowledge/kp-ly-01{0,1,2}.json` 与附录 A。
-- 审查历史（/iterative-review）：待首轮。
+- 审查历史（/iterative-review，2026-07-17）：
+  - R1（opus，全量）：知识/引擎/正典/账目/红线轴全绿（独立重跑 85 checks + paipan 四卦 + 提取对撞 + 跨章 grep + 称谓扫描）；**0 P0**，1 P1（教学块 📘 灵力标记缺失——与前三章 parity 断裂）+ 3 P2（wrong 选项缺 source_ref／出纳册幕位引错／引用框架）→ P1+2P2 修（`86ba320`），P2-3 **驳回 false positive**（ch3 L602 台词实在，reviewer 裸文本 grep 被 bold 标记干扰——其自己 evidence log 里栽过同款坑）
+  - R2（opus，修复验证+八新角度）：R1 四项全 VERIFIED-FIXED；摇卦契约/装卦连续性/幕间时间/好感边界/认知负荷/§0 自洽六轴 clean；**新抓 1 P1**——幕四起 58 处旁白裸「她」指沈疏桐破男版 E2E（ch1-3 基线全用 `{{ta}}`，硬计数+裸「他」反向验证钉死）→ 逐行指代分诊修复（`bea8360`，白芷 5 处保留，L649 对白内误伤当场回退）
+  - R3（sonnet，delta）：**convergence verified，0 新 findings**——107 处 `{{ta}}` 逐一核对全指沈疏桐；diff 49/49 行手术级（每行恰一处她→`{{ta}}`）；括号 425/425 平衡、bold 916 偶数；audit 重跑绿；模板变量计数前后一致；一个星号奇偶 heuristic 假阳性追溯至 f78727f 原始风格排除
+  - 剩余已知事项：附录 C 第 11 条「已知留白」如实声明待宗主裁定，无未披露缺陷
 
 ---
 
