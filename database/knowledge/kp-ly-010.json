@@ -13,12 +13,17 @@
   "KP-LY-007",
   "KP-LY-009"
  ],
- "status": "reviewed",
+ "status": "accepted",
  "statusHistory": [
   {
    "status": "reviewed",
    "at": "2026-07-17",
    "by": "落听潮 — 跟随制审计第四批（《增删》四處生克沖合框架；witness 保真+引擎对撞 audit-chapter4-canon.mjs 全绿）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-17",
+   "by": "宗主 — 过目通过（「你自己审，自己往下推」，裁定委托落听潮执行；四轮审查收敛在案：R1-R3 技术轴 + R4 教学引导性专项）"
   }
  ],
  "safetyLevel": null,
