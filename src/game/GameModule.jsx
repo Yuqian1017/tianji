@@ -59,6 +59,9 @@ export default function GameModule() {
   const ch2 = CHAPTERS['ch2'];
   const ch2Done = save?.completedChapters?.includes('ch2');
   const ch2Available = ch2 && finished; // 主线顺序: 第一章通关解锁第二章
+  const ch3 = CHAPTERS['ch3'];
+  const ch3Done = save?.completedChapters?.includes('ch3');
+  const ch3Available = ch3 && ch2Done;  // 第二章通关解锁第三章
 
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center">
@@ -86,7 +89,7 @@ export default function GameModule() {
         )}
         {finished && (
           <div className="text-sm text-amber-200 font-body drop-shadow">
-            ✦ 第一章通关{ch2Done ? ' · 第二章通关' : ''} · 灵力 {save.lingli} · 好感 {save.favor}
+            ✦ 第一章通关{ch2Done ? ' · 第二章通关' : ''}{ch3Done ? ' · 第三章通关' : ''} · 灵力 {save.lingli} · 好感 {save.favor}
           </div>
         )}
         {ch2Available && !ch2Done && !hasProgress && (
@@ -97,6 +100,16 @@ export default function GameModule() {
         {ch2Done && (
           <button onClick={() => startChapter('ch2')} className="w-full py-2.5 rounded-lg border border-amber-200/70 text-amber-100 text-sm font-body hover:bg-white/10 shadow">
             重温 · 第二章《装卦》
+          </button>
+        )}
+        {ch3Available && !ch3Done && !hasProgress && (
+          <button onClick={() => startChapter('ch3')} className="w-full py-3 rounded-lg bg-amber-50/90 border border-amber-300 text-amber-900 font-medium font-body shadow-lg">
+            ▶ 继续主线 · 第三章《六亲》
+          </button>
+        )}
+        {ch3Done && (
+          <button onClick={() => startChapter('ch3')} className="w-full py-2.5 rounded-lg border border-amber-200/70 text-amber-100 text-sm font-body hover:bg-white/10 shadow">
+            重温 · 第三章《六亲》
           </button>
         )}
         {bonusUnlocked && (

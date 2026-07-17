@@ -149,9 +149,12 @@ export function DressingBoard({ board }) {
             <div key={i} className="flex items-center gap-2">
               <span className="text-[10px] w-7 text-[var(--g-ink-dim)] font-body">{YAO_LABELS[i]}</span>
               <div className="flex-1"><YaoLine total={total} /></div>
-              <span className="text-xs w-11 text-right font-body">
+              <span className={`text-xs text-right font-body ${board.revealed?.some((x) => x.liuqin) ? 'w-24' : 'w-11'}`}>
                 {r ? (
-                  <b className="text-[var(--g-gold-deep)]">{r.branch}<span className="opacity-70 font-normal">{r.wuxing}</span></b>
+                  <b className="text-[var(--g-gold-deep)]">
+                    {r.branch}<span className="opacity-70 font-normal">{r.wuxing}</span>
+                    {r.liuqin && <span className="text-[var(--g-seal)] font-medium">·{r.liuqin}</span>}
+                  </b>
                 ) : (
                   <span className="opacity-25">·</span>
                 )}

@@ -194,6 +194,15 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
       setActiveDressing(node.board || null);
       advance(node.next);
     }
+    if (node?.type === 'favorBranch') {
+      // silent route by favor threshold (ch3 章末称谓分支). Pure routing, idempotent.
+      // Fail loudly on malformed data rather than guessing a default path.
+      if (!node.pass || !node.fail) {
+        console.error(`[game] favorBranch missing pass/fail at ${save.currentNodeId}`);
+      } else {
+        advance(save.favor >= (node.threshold ?? 25) ? node.pass : node.fail);
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [save.currentNodeId, node?.type]);
 
@@ -230,7 +239,7 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
   // ── per-type rendering ────────────────────────────────────────────
   let body = null;
 
-  if (node.type === 'teachMoment' || node.type === 'dressingUpdate') {
+  if (node.type === 'teachMoment' || node.type === 'dressingUpdate' || node.type === 'favorBranch') {
     body = null; // settled by effect; brief blank frame before advance
   } else if (node.type === 'settings') {
     body = <SettingsForm onSubmit={(settings) => advance(node.next, (s) => ({ ...s, settings }))} />;

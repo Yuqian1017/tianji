@@ -48,6 +48,10 @@ export const NPC_PORTRAITS = {
   '郑司书': `${A}/portrait-zheng-cut.webp`,
   '顾小满': `${A}/portrait-gu-cut.webp`,
   '韩长老': `${A}/portrait-han-cut.webp`,
+  // ch3 修书房三人 (2026-07-14)
+  '宋补之': `${A}/portrait-song-cut.webp`,
+  '崔小砚': `${A}/portrait-cui-cut.webp`,
+  '白芷': `${A}/portrait-baizhi-cut.webp`,
 };
 
 // Portrait visibility: ch1 from scene 2 onward; ch2 throughout (沈疏桐全程在场);
@@ -56,6 +60,7 @@ export function portraitVisible(nodeId) {
   const ch1 = /^ch1-s(\d)/.exec(nodeId || '');
   if (ch1) return Number(ch1[1]) >= 2;
   if (/^ch2-s\d/.test(nodeId || '')) return true;
+  if (/^ch3-s\d/.test(nodeId || '')) return true;
   const qn = /^qn-s(\d)/.exec(nodeId || '');
   if (qn) return Number(qn[1]) >= 3;
   return false;
@@ -96,6 +101,13 @@ export function fallbackForNode(nodeId) {
     return {
       bg: CH2_SCENE_BG[s] || `${A}/title-art.webp`,
       bgm: CH2_SCENE_BGM[s] || null,
+    };
+  }
+  if (/^ch3-/.test(nodeId || '')) {
+    const s = Number(/^ch3-s(\d)/.exec(nodeId)?.[1] || 0);
+    return {
+      bg: CH3_SCENE_BG[s] || `${A}/title-art.webp`,
+      bgm: CH3_SCENE_BGM[s] || null,
     };
   }
   const m = /^ch1-s(\d)/.exec(nodeId || '');
@@ -144,6 +156,31 @@ const CH2_SCENE_BGM = {
   7: `${A}/bgm-dawn.mp3`,
 };
 
+// ── Chapter 3《六亲》 (2026-07-14) ──────────────────────────────────
+// Scene arc: 旧卦重问(明蓍堂·夜) → 五行两圈(夜) → 装亲(夜) → 碑廊考较(次日辰) →
+// 修书房走访(白日) + 5.3b 集市寻访(晌午, ch3-s5-300 stable anchor) → 案卦(明蓍堂·夜) → 章末(夜半).
+BG_SWITCH['ch3-s1-header'] = `${A}/bg-mingshitang.webp`;
+BG_SWITCH['ch3-s4-header'] = `${A}/bg-chenguang.webp`;      // 辰时碑廊 (晨光图最贴)
+BG_SWITCH['ch3-s5-header'] = `${A}/bg-xiushufang.webp`;
+BG_SWITCH['ch3-s5-300'] = `${A}/bg-jishi.webp`;             // 5.3b 山脚集市 (stable anchor id)
+BG_SWITCH['ch3-s6-header'] = `${A}/bg-mingshitang.webp`;
+BG_SWITCH['ch3-s7-header'] = `${A}/bg-mingshitang.webp`;
+BGM_SWITCH['ch3-s1-header'] = `${A}/bgm-ritual.mp3`;
+BGM_SWITCH['ch3-s4-header'] = `${A}/bgm-main.mp3`;
+BGM_SWITCH['ch3-s6-header'] = `${A}/bgm-ritual.mp3`;
+BGM_SWITCH['ch3-s7-header'] = `${A}/bgm-dawn.mp3`;
+
+const CH3_SCENE_BG = {
+  1: `${A}/bg-mingshitang.webp`, 2: `${A}/bg-mingshitang.webp`, 3: `${A}/bg-mingshitang.webp`,
+  4: `${A}/bg-chenguang.webp`, 5: `${A}/bg-xiushufang.webp`, 6: `${A}/bg-mingshitang.webp`,
+  7: `${A}/bg-mingshitang.webp`,
+};
+const CH3_SCENE_BGM = {
+  1: `${A}/bgm-ritual.mp3`, 2: `${A}/bgm-ritual.mp3`, 3: `${A}/bgm-ritual.mp3`,
+  4: `${A}/bgm-main.mp3`, 5: `${A}/bgm-main.mp3`, 6: `${A}/bgm-ritual.mp3`,
+  7: `${A}/bgm-dawn.mp3`,
+};
+
 export const PRELOAD_IMAGES = [
   `${A}/title-art.webp`, `${A}/bg-shanmen.webp`, `${A}/bg-jieyindian.webp`,
   `${A}/bg-langting.webp`, `${A}/bg-cangjinge.webp`, `${A}/bg-mingshitang.webp`,
@@ -151,4 +188,7 @@ export const PRELOAD_IMAGES = [
   `${A}/portrait-shen-f-cut.webp`, `${A}/portrait-shen-m-cut.webp`,
   `${A}/portrait-zheng-cut.webp`, `${A}/portrait-gu-cut.webp`, `${A}/portrait-han-cut.webp`,
   `${A}/ui-corner-cloud.webp`,
+  // ch3 (2026-07-14)
+  `${A}/bg-xiushufang.webp`, `${A}/bg-jishi.webp`,
+  `${A}/portrait-song-cut.webp`, `${A}/portrait-cui-cut.webp`, `${A}/portrait-baizhi-cut.webp`,
 ];
