@@ -82,9 +82,12 @@ export default function GameModule() {
       </div>
 
       <div className="g-scrim-panel rounded-2xl px-5 py-4 space-y-3">
-        {hasProgress && !finished && (
+        {hasProgress && (
+          // any in-progress node shows the resume button — previously gated on !finished(ch1),
+          // which swallowed it for saves mid-ch2/ch3 (player could only replay-reset; real bug
+          // found in visual pass 2026-07-14)
           <button onClick={continueSave} className="w-full py-3 rounded-lg bg-amber-100/90 border border-amber-300 text-amber-900 font-medium font-body shadow-lg">
-            继续修行（{save.settings.playerName || '无名'} · 灵力 {save.lingli}）
+            继续修行（{save.settings.playerName || '无名'} · {CHAPTERS[save.currentChapter || 'ch1']?.title ? `《${CHAPTERS[save.currentChapter || 'ch1'].title}》· ` : ''}灵力 {save.lingli}）
           </button>
         )}
         {finished && (

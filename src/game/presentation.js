@@ -126,15 +126,17 @@ BGM_SWITCH['qn-s1-header'] = `${A}/bgm-main.mp3`;
 BGM_SWITCH['qn-s3-header'] = `${A}/bgm-dawn.mp3`;
 
 // ── Chapter 2《装卦》 (M2) ──────────────────────────────────────────
-// 藏经阁内景无专图：复用 bg-cangjinge（阁前）（HANDOFF/script §0-8，M3 可补内景图）。
-// Scene arc: 点验(阁) → 授课(明蓍堂) → 点验(阁) → 缺位/伪页(阁·夜) → 案卦(明蓍堂·夜) → 灯(夜半)。
+// 藏经阁内景 bg-cangjinge-nei 已入库（2026-07-14 补图接线）：阁前用 bg-cangjinge，
+// 二层内景（木梯之上/点验案前）切 nei。
+// Scene arc: 点验(阁前→二层) → 授课(明蓍堂) → 点验(二层) → 缺位/伪页(二层·夜) → 案卦(明蓍堂·夜) → 灯(夜半)。
 BG_SWITCH['ch2-s1-header'] = `${A}/bg-cangjinge.webp`;
+BG_SWITCH['ch2-s1-150'] = `${A}/bg-cangjinge-nei.webp`;   // 上二层的木梯（阁前→内景）
 BG_SWITCH['ch2-s2-header'] = `${A}/bg-mingshitang.webp`;
 BG_SWITCH['ch2-s3-header'] = `${A}/bg-mingshitang.webp`;
-BG_SWITCH['ch2-s3-230'] = `${A}/bg-cangjinge.webp`;   // 3.2 点验开工（明蓍堂→藏经阁 in-scene）
+BG_SWITCH['ch2-s3-230'] = `${A}/bg-cangjinge-nei.webp`;   // 3.2 点验开工（明蓍堂→二层内景）
 BGM_SWITCH['ch2-s3-230'] = `${A}/bgm-mystery.mp3`;
-BG_SWITCH['ch2-s4-header'] = `${A}/bg-cangjinge.webp`;
-BG_SWITCH['ch2-s5-header'] = `${A}/bg-cangjinge.webp`;
+BG_SWITCH['ch2-s4-header'] = `${A}/bg-cangjinge-nei.webp`;
+BG_SWITCH['ch2-s5-header'] = `${A}/bg-cangjinge-nei.webp`;
 BG_SWITCH['ch2-s6-header'] = `${A}/bg-mingshitang.webp`;
 BG_SWITCH['ch2-s7-header'] = `${A}/bg-mingshitang.webp`;
 BGM_SWITCH['ch2-s1-header'] = `${A}/bgm-mystery.mp3`;
@@ -146,8 +148,8 @@ BGM_SWITCH['ch2-s7-header'] = `${A}/bgm-dawn.mp3`;
 // ch2 resume fallbacks (scene-level; s3 splits 明蓍堂→藏经阁 mid-scene — fallback picks 阁 as
 // the longer half; resuming inside 3.1 shows 阁 briefly until next header, accepted P3)
 const CH2_SCENE_BG = {
-  1: `${A}/bg-cangjinge.webp`, 2: `${A}/bg-mingshitang.webp`, 3: `${A}/bg-cangjinge.webp`,
-  4: `${A}/bg-cangjinge.webp`, 5: `${A}/bg-cangjinge.webp`, 6: `${A}/bg-mingshitang.webp`,
+  1: `${A}/bg-cangjinge.webp`, 2: `${A}/bg-mingshitang.webp`, 3: `${A}/bg-cangjinge-nei.webp`,
+  4: `${A}/bg-cangjinge-nei.webp`, 5: `${A}/bg-cangjinge-nei.webp`, 6: `${A}/bg-mingshitang.webp`,
   7: `${A}/bg-mingshitang.webp`,
 };
 const CH2_SCENE_BGM = {
@@ -188,7 +190,7 @@ export const PRELOAD_IMAGES = [
   `${A}/portrait-shen-f-cut.webp`, `${A}/portrait-shen-m-cut.webp`,
   `${A}/portrait-zheng-cut.webp`, `${A}/portrait-gu-cut.webp`, `${A}/portrait-han-cut.webp`,
   `${A}/ui-corner-cloud.webp`,
-  // ch3 (2026-07-14)
-  `${A}/bg-xiushufang.webp`, `${A}/bg-jishi.webp`,
+  // ch3 batch (2026-07-14) + ch2 interior retrofit
+  `${A}/bg-xiushufang.webp`, `${A}/bg-jishi.webp`, `${A}/bg-cangjinge-nei.webp`,
   `${A}/portrait-song-cut.webp`, `${A}/portrait-cui-cut.webp`, `${A}/portrait-baizhi-cut.webp`,
 ];

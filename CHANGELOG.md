@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-07-14 - 验证缺口清理：番外回归 + 视觉 pass（抓 1 真 bug）+ 藏经阁内景接线
+
+- **番外《钱囊》新门槛位回归**：ch2 通关+好感 15 档按钮出现、全程通关 qn-end、好感 +7/灵力 +5 精确——handoff 未验证 #4 关闭。
+- **视觉 pass 抓真 bug**：存档指在 ch2/ch3 中途时标题页「继续修行」被 `!finished(ch1)` 条件吞掉，玩家只能重温（重置章首丢进度）——修为 `hasProgress` 即显 + 标签动态带当前章名（「《六亲》· 灵力 64」）。
+- **ch3 视觉两屏过审**：修书房（宋补之围裙沾浆一手刷子一手裱纸，人设命中）+ 山脚集市（白芷头巾拧衣裳配「工钱结清了的」）——双人构图宽屏舒展。
+- **bg-cangjinge-nei 接线**：ch2 木梯节点（s1-150）+ 点验开工（s3-230）+ s4/s5 header 切内景，场景 fallback 同步，PRELOAD 补图——二层书架帙卷内景实渲染截图确认。
+- Push：98 commits 分段推送至 origin/master（`ac24ae3` 双向一致，宗主 2026-07-14 授权）。
+
+
 ## 2026-07-14 - 第三章《六亲》数据化 + 四轮 E2E 全绿（三章主线全线可玩）
 
 - **引擎扩展**（`8418139`）：favorBranch 静默路由节点（threshold/pass/fail，畸形数据 fail-loudly）+ DressingBoard 六亲显示列（「丑土·官鬼」，宽度自适应，ch2 向后兼容）+ ch3 场景演出配置（xiushufang/jishi/chenguang 弧线 + 集市锚 `ch3-s5-300`）+ 三新 NPC 立绘注册 + GameModule 第三章入口。
