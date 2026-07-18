@@ -5,6 +5,7 @@ import { CHAPTER_3 } from './chapter3.js';
 import { CHAPTER_4 } from './chapter4.js';
 import { CHAPTER_QIANNANG } from './qiannang.js';
 import { CHAPTER_SIJIAO1 } from './sijiao1.js';
+import { CHAPTER_5 } from './chapter5.js';
 
 export const CHAPTERS = {
   [CHAPTER_1.id]: CHAPTER_1,
@@ -13,5 +14,6 @@ export const CHAPTERS = {
   [CHAPTER_4.id]: CHAPTER_4,
   [CHAPTER_QIANNANG.id]: CHAPTER_QIANNANG,
   [CHAPTER_SIJIAO1.id]: CHAPTER_SIJIAO1,
+  [CHAPTER_5.id]: CHAPTER_5,
 };
-export { CHAPTER_1, CHAPTER_2, CHAPTER_3, CHAPTER_4, CHAPTER_QIANNANG, CHAPTER_SIJIAO1 };
+export { CHAPTER_1, CHAPTER_2, CHAPTER_3, CHAPTER_4, CHAPTER_5, CHAPTER_QIANNANG, CHAPTER_SIJIAO1 };

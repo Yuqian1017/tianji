@@ -40,11 +40,11 @@ const TEASER_ALLOWED = ['动爻', '動爻']; // ch5 teaser 预告第六课动爻
 // Node ids whose rendered text may contain bare 她 (= 白芷, natally female).
 // Fill with actual ids at transcription-merge time; lint fails loudly on any other 她.
 const BAIZHI_SHE_WHITELIST = new Set([
-  // 白芷 refs only (natally female; 沈疏桐 is always {{ta}}). Verified at merge 2026-07-17.
-  'ch4-s5-480', 'ch4-s5-520', 'ch4-s5-530', 'ch4-s5-550', // 5.4 捎话段
-  'ch4-s6-040',  // 6.1 in-dialogue pair (插销是她走前才换的新)
-  'ch4-end',     // hook ⑤ quotes 白芷所惧
+  'ch5-s5-120', 'ch5-s5-130', // 幕五对白指白芷（§ 0 第 39 行口径）
+  'ch5-end',                  // hooks「她与本命卦的半句话」——ch4-end 同款先例
 ]);
+// 仇神 single-point whitelist (§ 0 第 7 条): the one naming node in act 2
+const QIUSHEN_WHITELIST_MAX = 1; // rendered-text nodes containing 仇神 must be ≤ this
 
 const failures = [];
 const warnings = [];
@@ -351,7 +351,7 @@ for (const [id, node] of Object.entries(nodes)) {
 }
 
 // ── Report ──────────────────────────────────────────────────────────
-console.log(`chapter-4 script lint: ${failures.length} failure(s), ${warnings.length} warning(s)`);
+console.log(`chapter-5 script lint: ${failures.length} failure(s), ${warnings.length} warning(s)`);
 for (const w of warnings) console.warn('  ⚠', w);
 if (failures.length) {
   for (const f of failures) console.error('  ✗', f);
