@@ -1,0 +1,46 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-5 script lint + audit-chapter5-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_5_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-015",
+ "domain": "liuyao",
+ "domainCn": "六爻（元神忌神）",
+ "name": "用神多现·择旺（择爻+判旺联用）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-009",
+  "KP-LY-010",
+  "KP-LY-011"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-17",
+   "by": "落听潮 — 跟随制审计第五批（章第九定义+章第十总纲；witness 保真+引擎对撞 audit-chapter5-canon.mjs 全绿；宗主委托自审口径）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "此卦辰土⚊未土⚊戌土⚊三重父母爻﹐當擇其旺者而用之﹐今辰土父母臨月建﹐卽用辰土為用神",
+   "source": "《增删卜易·用神元神忌神仇神章第九》乾为天占父例（野鹤老人，辰月）",
+   "locator": "ctext wiki chapter=950329，提取行 769（节选——全段含六沖近病断法禁词区，只摘此句）",
+   "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（「臨月建卽用辰土」＝择旺实操判据的原文活例；三重含变爻，剧本化用限静卦两现）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "若兩爻俱動或都不發動﹐擇其旺者為用神",
+   "source": "《增删卜易·用神章第八》占父母条（第四批 witness 已录同句）",
+   "locator": "ctext wiki chapter=950329，提取行 595",
+   "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（用神两现择旺总则——与 769 活例互证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter5-canon.mjs：元神/忌神方向语义（生我/克我）、大有三角（应巳官鬼/元神寅木/忌神子水）、明夷同支两现+伏神事实、乾为天辰戌异支、亥沖巳、卯月丁亥日方向组 vs wuxingRelation/BRANCH_RELATIONS/paipan 全 match（2026-07-17）",
+ "simplificationNote": "练气期简化口径：①用神两现→择其旺者。结构事实：同宫同亲必同五行，月建日辰生克对两现恒平——分高下实际靠**临与沖**（临月建/日辰者取之；逢沖破者弃之）。②两判据俱无事（平局）→取临世应者（边界口径，明夷两丑土即此例）。③三现及动爻优先（「一爻动则用动者」）超纲，第六章候选。",
+ "modernExplain": "（整理者转述）问一件事，卦里却有两个用神——两个父母爻、两个官鬼爻，用哪个？书上说：择其旺者。同亲的两爻五行必同，月建日辰的生克两边一样——真正分高下的是临与沖：谁临月建日辰，谁就正当值，用它；谁被沖破，谁就靠不住，弃它。两边都平平——看谁坐着世应的位子，近我者为用。",
+ "gameLine": "两个同名的爻，像两个同名的人——衙门点名，先点正当值的那个；当值的不在，点坐得离你近的那个。",
+ "usedInChoicePoints": []
+}

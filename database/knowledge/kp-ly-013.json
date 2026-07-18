@@ -1,0 +1,38 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-5 script lint + audit-chapter5-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_5_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-013",
+ "domain": "liuyao",
+ "domainCn": "六爻（元神忌神）",
+ "name": "元神忌神（概念·生克网初步）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-007",
+  "KP-LY-009"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-17",
+   "by": "落听潮 — 跟随制审计第五批（章第九定义+章第十总纲；witness 保真+引擎对撞 audit-chapter5-canon.mjs 全绿；宗主委托自审口径）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "用神﹐卽前各類之用神也。元神﹐生用神之神卽為元神。忌神克用神之爻也。仇神者克元神而生忌神也。",
+   "source": "《增删卜易·用神元神忌神仇神章第九》定义四句（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 753",
+   "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（生用神者＝元神／克用神者＝忌神——本经定义句；仇神半句立名不考）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter5-canon.mjs：元神/忌神方向语义（生我/克我）、大有三角（应巳官鬼/元神寅木/忌神子水）、明夷同支两现+伏神事实、乾为天辰戌异支、亥沖巳、卯月丁亥日方向组 vs wuxingRelation/BRANCH_RELATIONS/paipan 全 match（2026-07-17）",
+ "simplificationNote": "练气期简化口径：①只立元神/忌神两名——生用神者元神（帮手）、克用神者忌神（对头）；判定用 KP-007 生克循环即可（无新机制）。②仇神（克元神生忌神）半句立名不考（月破/暗動同款待遇，第六章候选）。③关系网止步一层（用神的帮手与对头），元神的元神等递归不展开。",
+ "modernExplain": "（整理者转述）一个爻的处境不只看月建日辰——卦里的其他爻也在出手。生用神的那个爻，叫元神：它是用神的帮手、粮道。克用神的那个爻，叫忌神：它是用神的对头、来犯之敌。找用神是第三课的功夫，找它的帮手和对头——顺着生克圈再走一步就是。",
+ "gameLine": "卦里没有孤爻。找到用神，再看两眼：谁生它——那是它的粮道；谁克它——那是它的敌兵。粮道和敌兵都认清了，这张卦的仗才看得懂。",
+ "usedInChoicePoints": []
+}

@@ -30,6 +30,7 @@
     "audit:chapter2": "node scripts/validation/audit-chapter2-script.mjs",
     "audit:chapter3": "node scripts/validation/audit-chapter3-script.mjs",
     "audit:chapter4": "node scripts/validation/audit-chapter4-script.mjs",
+    "audit:chapter5-canon": "node scripts/validation/audit-chapter5-canon.mjs",
     "audit:chapter4-canon": "node scripts/validation/audit-chapter4-canon.mjs",
     "audit:meihua": "node scripts/validation/audit-meihua.mjs",
     "audit:yijing": "node scripts/validation/audit-yijing-core.mjs",

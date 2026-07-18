@@ -1,0 +1,46 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-5 script lint + audit-chapter5-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_5_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-014",
+ "domain": "liuyao",
+ "domainCn": "六爻（元神忌神）",
+ "name": "元神衰旺（帮你的人站不站得住）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-010",
+  "KP-LY-011",
+  "KP-LY-013"
+ ],
+ "status": "reviewed",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-17",
+   "by": "落听潮 — 跟随制审计第五批（章第九定义+章第十总纲；witness 保真+引擎对撞 audit-chapter5-canon.mjs 全绿；宗主委托自审口径）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "元神𨿽生用神﹐須要旺相﹐方可生得用神。元神能生用神者有五：元神旺相或臨日月或日月動爻生扶者一也。",
+   "source": "《增删卜易·元神忌神衰旺章第十》总纲起句＋条件一（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 775（起句）",
+   "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（「須要旺相方可生得用神」＝本 KP 全部原文依据；条件一前两支【旺相/臨日月】不涉动爻——练气期口径来源）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "以上元神無力生用神﹐無用之元神也﹐𨿽有如無。",
+   "source": "《增删卜易·元神忌神衰旺章第十》无力总断（同章）",
+   "locator": "ctext wiki chapter=950329，提取行 795（尾句）",
+   "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（「雖有如無」＝元神休囚的教学金句原文；六条件涉未教概念整体存证）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter5-canon.mjs：元神/忌神方向语义（生我/克我）、大有三角（应巳官鬼/元神寅木/忌神子水）、明夷同支两现+伏神事实、乾为天辰戌异支、亥沖巳、卯月丁亥日方向组 vs wuxingRelation/BRANCH_RELATIONS/paipan 全 match（2026-07-17）",
+ "simplificationNote": "练气期简化口径：①元神自身也要过 ch4 的秤（月建/日辰）：元神旺＝真帮手，生得动用神；元神休囚＝「雖有如無」，帮不上。②章第十的五/六/五/七条件枚举涉动变或未教静态概念（长生帝旺/旬空/三墓/衰绝），全部超纲存证——本章只用「旺相/临日月」两支。③对称半句：忌神休囚亦克不动（不单独立目，她口头带过）。",
+ "modernExplain": "（整理者转述）帮你的人，自己得先站得住。元神虽是用神的粮道，可它自己也有旺衰——也得过月建日辰那杆秤。元神旺相或临日月，才生得动用神，是真帮手；元神休囚无力，书上四个字说尽了：虽有如无——看着有条粮道，其实是断的。看卦先找帮手，找到帮手，再称一称帮手的斤两。",
+ "gameLine": "帮你的人自己站不站得住？站得住，是靠山；站不住——虽有如无，你比没人帮还险，因为你以为有人帮。",
+ "usedInChoicePoints": []
+}
