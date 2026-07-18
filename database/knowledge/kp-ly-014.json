@@ -13,12 +13,17 @@
   "KP-LY-011",
   "KP-LY-013"
  ],
- "status": "reviewed",
+ "status": "accepted",
  "statusHistory": [
   {
    "status": "reviewed",
    "at": "2026-07-17",
    "by": "落听潮 — 跟随制审计第五批（章第九定义+章第十总纲；witness 保真+引擎对撞 audit-chapter5-canon.mjs 全绿；宗主委托自审口径）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-17",
+   "by": "宗主 — 委托自审通过（「你自己审，自己往下推」授权链；两轮审查收敛在案：R1 七轴全量 + R2 delta）"
   }
  ],
  "safetyLevel": null,
