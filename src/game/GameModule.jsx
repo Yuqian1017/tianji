@@ -53,6 +53,11 @@ export default function GameModule() {
   const bonusQiannang = CHAPTERS['qiannang'];
   const bonusUnlocked = bonusQiannang && save?.completedChapters?.includes('ch2') && (save?.favor ?? 0) >= 8;
   const bonusDone = save?.completedChapters?.includes('qiannang');
+  // 私教章①《演卦》 gate: ch4 通关 + 好感 ≥35 + natalHexagram 存在（策划案 § 5 + 剧本注记）
+  const sijiao1 = CHAPTERS['sijiao1'];
+  const sijiao1Unlocked = sijiao1 && save?.completedChapters?.includes('ch4')
+    && (save?.favor ?? 0) >= 35 && !!save?.natalHexagram?.throws;
+  const sijiao1Done = save?.completedChapters?.includes('sijiao1');
 
   const hasProgress = save?.currentNodeId;
   const finished = save?.completedChapters?.includes(CHAPTER_1.id);
@@ -131,6 +136,11 @@ export default function GameModule() {
         {bonusUnlocked && (
           <button onClick={() => startChapter('qiannang')} className="w-full py-3 rounded-lg bg-rose-50/85 border border-rose-200 text-rose-800 font-medium font-body shadow-lg">
             {bonusDone ? '重温番外 ·《钱囊》' : '✧ 番外解锁 ·《钱囊》'}
+          </button>
+        )}
+        {sijiao1Unlocked && (
+          <button onClick={() => startChapter('sijiao1')} className="w-full py-3 rounded-lg bg-rose-50/85 border border-rose-200 text-rose-800 font-medium font-body shadow-lg">
+            {sijiao1Done ? '重温私教 ·《演卦》' : '✧ 私教解锁 ·《演卦》'}
           </button>
         )}
         <button onClick={startNew} className="w-full py-3 rounded-lg border border-white/60 text-white font-body hover:bg-white/10 transition-colors shadow-lg backdrop-blur-sm">

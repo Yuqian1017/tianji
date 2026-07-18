@@ -14,7 +14,7 @@ import CastPanel, { DressingBoard } from './CastPanel.jsx';
 import {
   persistSave, renderTemplate, pickVariant,
   applyTeachMoment, applyScoredChoice, applyFavor, applyChapterEnd,
-  dynamicOptionText, natalPalaceText,
+  dynamicOptionText, natalPalaceText, natalDressingBoard,
 } from './state.js';
 import { throwCoins, paipan } from '../modules/liuyao/engine.js';
 import { BG_SWITCH, BGM_SWITCH, PORTRAITS, NPC_PORTRAITS, portraitVisible, fallbackForNode } from './presentation.js';
@@ -191,7 +191,9 @@ export default function Player({ save, setSave, onExit, chapter = CHAPTER_1 }) {
     if (node?.type === 'dressingUpdate') {
       // 装卦盘 state event — board carries FULL cumulative state (idempotent), so no
       // processed-guard needed: StrictMode double-run re-commits the same next id harmlessly.
-      setActiveDressing(node.board || null);
+      setActiveDressing(node.dynamicNatalBoard
+        ? natalDressingBoard(save.natalHexagram, node.dynamicNatalBoard)
+        : (node.board || null));
       advance(node.next);
     }
     if (node?.type === 'favorBranch') {

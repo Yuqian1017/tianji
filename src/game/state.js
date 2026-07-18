@@ -162,3 +162,28 @@ export function applyChapterEnd(save, node, chapterId) {
   }
   return next;
 }
+
+// sijiao1《演卦》: dynamic natal dressing board — builds a DressingBoard-compatible
+// FULL cumulative board from the player's natal cast at three reveal stages.
+// stage: 'branches' (支+五行) | 'marks' (+世应) | 'full' (+六亲).
+// Board facts are date-independent (palace/najia/liuqin; 六神/空亡 not rendered).
+// Fail loudly: missing/invalid natal → warn + null (board:null clears the panel).
+export function natalDressingBoard(natal, stage) {
+  if (!natal?.throws || natal.throws.length !== 6) {
+    console.warn('[game] natalDressingBoard called without a valid natal hexagram');
+    return null;
+  }
+  const r = paipan(natal.throws, { year: 2026, month: 1, day: 1, hour: 0, minute: 0 });
+  const revealed = r.lines.map((l) => {
+    const entry = { pos: l.position, branch: l.branch, wuxing: l.wuxingCn };
+    if (stage === 'full') entry.liuqin = l.liuqin;
+    return entry;
+  });
+  const marks = (stage === 'marks' || stage === 'full')
+    ? {
+        world: r.lines.find((l) => l.isWorld)?.position ?? null,
+        response: r.lines.find((l) => l.isResponse)?.position ?? null,
+      }
+    : null;
+  return { throws: natal.throws, revealed, marks };
+}
