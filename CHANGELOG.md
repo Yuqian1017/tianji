@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-17 (续) - 第五章《元神忌神》全链（宗主委托自审模式）
+
+- **feat(ch5): E2E 矩阵四轮全绿** — optimal 女 47 种子（190/57 精确，七幕探针全中：知心开场/粮道/虽有如无/人证元神/归魂/暗動/巳月）/ 43 档线分离带（fail 链全程 trail 实证「按档不按线」，零知心泄漏）/ 错线 B·C·B 40 种子（170/45，通关不锁，三卡入待复习）/ 男版 47（190/57 一致，male_ta+师兄+白芷保留三探针中，她收拢/师妹泄漏探针零命中）。console 零错误。
+- **feat(ch5): 数据化 248 节点** — 双 agent 转录（A 125 + B 123）一次合并；audit:chapter5 lint 首跑全绿（37/10 对账）；lint 新四机检（favorBranch45 双链零 favor/全章禁 junior/仇神单点/wangshuai 全禁）；registry+GameModule 接线（第五章入口/重温/通关横幅）。
+- **docs(ch5): 剧本 v1.1 两轮收敛（委托口径）** — R1 opus 七轴全量（1 P0 幕三物理错位——append 锚被中途修正移动的管线教训 + 1 P1 裸她 + 3 P2）→ R2 Explore delta（5 项全 VERIFIED + 抓 1 处修复未传播）。KP-LY-013/014/015 accepted。
+- **feat(ch5): 跟随制审计第五批** — witness yuanji-shuaiwang（11 passages 程序化摘录 751-815+595）+ audit:chapter5-canon 60 checks 三层全绿；两处首跑抓错（CJK sort 断言 bug/「595 已在第四批」误记）。
+- **feat(ch5): 策划案 CHAPTER_5_PREP** — 自审 6 findings 折毕（含 KP-015 同支退化重构：择旺三层判据 秤→临沖→临世应）；案卦 64 静卦系统扫描定火天大有（应巳官鬼三角/归魂/亥沖巳暗動回响位）；占期卯月丁亥日=守窗第七夜干支自洽。
+
 ## 2026-07-17 - 第四章《旺衰》全链（审计→剧本→四轮审查→数据化→E2E 四轮全绿）
 
 - **feat(sijiao1): 私教章①《演卦》全链** — 剧本 v1（255 行五幕：柴棚/盘账/你的卦/演卦/有人把它当回事）→ 单轮审查（0 blocker，5 findings 全折修：时间量词/集市 backfill re-anchor/占位符约定/清盘+terminal 注记）→ 数据化 95 节点 + natalDressingBoard 三档 helper（node 层对撞 paipan 全 MATCH + null fail-loud）+ Player dynamicNatalBoard 分支 + gate 三条件 → E2E optimal 全绿（153/47 精确，掌握度零变动，动态盘视觉截图：水泽节坎宫六亲全对+占位符替换成功）。console 零错误。
