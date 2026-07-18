@@ -40,7 +40,10 @@ const TEASER_ALLOWED = ['元神', '忌神']; // only inside ch4-end.nextChapterT
 // Node ids whose rendered text may contain bare 她 (= 白芷, natally female).
 // Fill with actual ids at transcription-merge time; lint fails loudly on any other 她.
 const BAIZHI_SHE_WHITELIST = new Set([
-  // populated after merge — see § below
+  // 白芷 refs only (natally female; 沈疏桐 is always {{ta}}). Verified at merge 2026-07-17.
+  'ch4-s5-480', 'ch4-s5-520', 'ch4-s5-530', 'ch4-s5-550', // 5.4 捎话段
+  'ch4-s6-040',  // 6.1 in-dialogue pair (插销是她走前才换的新)
+  'ch4-end',     // hook ⑤ quotes 白芷所惧
 ]);
 
 const failures = [];
