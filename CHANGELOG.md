@@ -2,6 +2,7 @@
 
 ## 2026-07-17 - 第四章《旺衰》全链（审计→剧本→四轮审查→数据化→E2E 四轮全绿）
 
+- **feat(sijiao1): 私教章①《演卦》全链** — 剧本 v1（255 行五幕：柴棚/盘账/你的卦/演卦/有人把它当回事）→ 单轮审查（0 blocker，5 findings 全折修：时间量词/集市 backfill re-anchor/占位符约定/清盘+terminal 注记）→ 数据化 95 节点 + natalDressingBoard 三档 helper（node 层对撞 paipan 全 MATCH + null fail-loud）+ Player dynamicNatalBoard 分支 + gate 三条件 → E2E optimal 全绿（153/47 精确，掌握度零变动，动态盘视觉截图：水泽节坎宫六亲全对+占位符替换成功）。console 零错误。
 - **test(ch4): E2E 矩阵四轮全绿** — optimal 女 148/40（pass 链实走）/ fail 链专测（种子 10→锚点 19<25，fail010-030 实走，favor 20 等值）/ 错线 B·C·B 133/35（verdicts 入 choiceLog，三 KP 待复习不锁进度）/ 男版 148/40（「多谢师兄」渲染实证、零师姐泄漏、零裸她泄漏）。console 四轮累积零错误；wangshuai 视觉截图过审（初爻「巳火·父母·旺」）。横向观察：重温模式重复计分为 Player 层既有行为，留真人玩测批裁定。
 - **feat(ch4): 数据化合并 + 接线** — 双 agent 转录（A 幕一~四 167 节点 / B 幕五~七 161 节点）合并 328 节点；audit:chapter4 lint 首跑全绿（0 fail 0 warn，灵力 37 好感 10）；registry + GameModule 入口；CastPanel wangshuai 显示位；fixedDate 契约评估结论=零改动（fixed 模式不走运行时排盘）。脚本先行修复：崔小砚「多谢师姐」→{{senior}}（B agent 上报的男版穿帮）。lint 新增四机检：禁词扫描/favorBranch 前称谓中性/裸她白名单/wangshuai 限位。
 - **docs(ch4): 剧本 v1.2 过目通过（宗主委托）** — 四轮审查收敛：R1 opus 全量（0 P0/1 P1/3 P2，1 驳回 false positive）→ R2 opus（新抓 P1 代词回归 58 处裸她→{{ta}}）→ R3 sonnet delta（convergence verified）→ R4 教学引导性专项（宗主指令「不要写得太生涩」——3 表达层修润：十二支圈 de-collision/相持局词锚/泄气机理白话）。KP-LY-010/011/012 升 accepted。
