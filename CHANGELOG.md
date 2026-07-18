@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-17 - 第四章《旺衰》全链（审计→剧本→四轮审查→数据化→E2E 四轮全绿）
+
+- **test(ch4): E2E 矩阵四轮全绿** — optimal 女 148/40（pass 链实走）/ fail 链专测（种子 10→锚点 19<25，fail010-030 实走，favor 20 等值）/ 错线 B·C·B 133/35（verdicts 入 choiceLog，三 KP 待复习不锁进度）/ 男版 148/40（「多谢师兄」渲染实证、零师姐泄漏、零裸她泄漏）。console 四轮累积零错误；wangshuai 视觉截图过审（初爻「巳火·父母·旺」）。横向观察：重温模式重复计分为 Player 层既有行为，留真人玩测批裁定。
+- **feat(ch4): 数据化合并 + 接线** — 双 agent 转录（A 幕一~四 167 节点 / B 幕五~七 161 节点）合并 328 节点；audit:chapter4 lint 首跑全绿（0 fail 0 warn，灵力 37 好感 10）；registry + GameModule 入口；CastPanel wangshuai 显示位；fixedDate 契约评估结论=零改动（fixed 模式不走运行时排盘）。脚本先行修复：崔小砚「多谢师姐」→{{senior}}（B agent 上报的男版穿帮）。lint 新增四机检：禁词扫描/favorBranch 前称谓中性/裸她白名单/wangshuai 限位。
+- **docs(ch4): 剧本 v1.2 过目通过（宗主委托）** — 四轮审查收敛：R1 opus 全量（0 P0/1 P1/3 P2，1 驳回 false positive）→ R2 opus（新抓 P1 代词回归 58 处裸她→{{ta}}）→ R3 sonnet delta（convergence verified）→ R4 教学引导性专项（宗主指令「不要写得太生涩」——3 表达层修润：十二支圈 de-collision/相持局词锚/泄气机理白话）。KP-LY-010/011/012 升 accepted。
+- **feat(ch4): 剧本 v1 完稿（994 行）** — 七幕：隔页的点/月令当值/今日司权/数生克/人证的时令/窗台与临/旺者作数 + 附录 A/B/C。剧本层 14 逐字引文 + 跨章 14 正典句程序化对撞全中。固定卦象四张 paipan 实测（卯月辛巳日）：乾为天复盘/风地观谱页/山地剥复读/地泽临案卦。
+- **feat(ch4): 跟随制审计第四批** — witness wangshuai-sichu-2026-07-17.json（11 passages 程序化摘录，提取行 545-593）+ audit-chapter4-canon.mjs 三层对撞 85 checks 全绿 + KP-LY-010/011/012 建卡。
+
 ## 2026-07-14 - Session 收官：第四章策划案过目（自审抓 2 假引用）+ 交接文档
 
 - **策划案自审**（宗主委托「你自己审了觉得可以就行」）：12 条正典锚点 grep 对撞——10 逐字 ✓、2 条凭记忆的假引用当场抓出修正（树洞句丢加粗标记；巳火「她收着不说」只存在于设计注层、正文无此台词——如实分层）。ch3 P0 教训递归应用到自己文档，升格为红线 #10「引用必 grep」。
