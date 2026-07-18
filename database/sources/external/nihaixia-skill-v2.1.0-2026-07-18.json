@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "external.nihaixia-skill.ec03c594",
+  "title": "倪海厦 skill · 经方中医 AI",
+  "sourceRole": "secondary_school_commentary_candidate",
+  "status": "metadata_only_blocked",
+  "retrievedAt": "2026-07-18",
+  "homepage": "https://jangviktor-web.github.io/nihaixia/",
+  "repository": {
+    "url": "https://github.com/jangviktor-web/nihaixia",
+    "defaultBranch": "StableV2026.5.23",
+    "commit": "ec03c594ed239b570e997cbd396c2fc186b6ad91",
+    "tree": "ec03c594ed239b570e997cbd396c2fc186b6ad91"
+  },
+  "repositoryInventory": {
+    "filesExcludingGit": 32,
+    "markdownFiles": 28,
+    "bytes": 4586211,
+    "lines": 51258,
+    "moduleFiles": 9,
+    "caseFiles": 6,
+    "researchFiles": 10,
+    "licenseFiles": 0,
+    "sourceMarkers": 263,
+    "pageMentions": 27,
+    "unavailableLocalPathMentions": 4,
+    "urlMentions": 53
+  },
+  "declaredCoverage": {
+    "source": "repository_readme_claims_not_independently_verified",
+    "shanghanLines": 129,
+    "jinguiChapters": 23,
+    "huangdiNeijingChapters": 71,
+    "materiaMedicaEntries": 345,
+    "cases": 849,
+    "referencePages": 2452,
+    "referenceCharacters": 3500000,
+    "lectureSets": 10
+  },
+  "license": {
+    "readmeClaim": "MulanPSL-2.0",
+    "repositoryMetadata": null,
+    "repositoryLicenseFilePresent": false,
+    "status": "unresolved",
+    "finding": "README 声称 MulanPSL-2.0 并链接 LICENSE，但固定 commit 的仓库树没有 LICENSE，GitHub 仓库元数据也未识别许可证。"
+  },
+  "rawWitnesses": {
+    "availableInPinnedRepository": false,
+    "finding": "README 的 v2.0.0 变更记录说明约 110 MB 原始参考资料已从仓库移除；研究索引仍指向不可访问的本地 Windows books 路径。"
+  },
+  "provenanceFindings": [
+    {
+      "id": "distilled-secondary-content",
+      "severity": "blocking",
+      "finding": "现存模块是讲义与案例的蒸馏整理，不是可替代《伤寒论》《金匮要略》《黄帝内经》等原典的文本见证。"
+    },
+    {
+      "id": "coarse-source-labels",
+      "severity": "blocking",
+      "finding": "多数来源标记只到讲义名称，缺少稳定版本、页码或段落锚点，无法支持逐条主张追溯。"
+    },
+    {
+      "id": "missing-raw-witnesses",
+      "severity": "blocking",
+      "finding": "仓库未包含 README 所述原始 PDF 与讲义，无法在当前固定版本内复核蒸馏内容。"
+    },
+    {
+      "id": "unresolved-license",
+      "severity": "blocking",
+      "finding": "README 的许可声明与仓库树不一致，且讲义、病例等第三方内容的再授权范围未得到证明。"
+    }
+  ],
+  "coverageGapAssessment": [
+    {
+      "externalPaths": ["modules/01_shanghan_sun.md", "modules/02_shanghan_other.md"],
+      "topic": "伤寒论六经方证与倪派讲解",
+      "existingDatabaseTargets": ["database/tcm/skill-v3/references/44-经典-伤寒论六经方证条文.md"],
+      "assessment": "基础主题已覆盖；外部仓库增加的是学派讲解与蒸馏内容，不构成独立原典缺口。",
+      "ingestionStatus": "discovery_only"
+    },
+    {
+      "externalPaths": ["modules/04_jingui.md"],
+      "topic": "金匮要略方证与倪派讲解",
+      "existingDatabaseTargets": ["database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md"],
+      "assessment": "基础主题已覆盖；应先完成《金匮要略》底本逐条回接，再讨论学派解释层。",
+      "ingestionStatus": "discovery_only"
+    },
+    {
+      "externalPaths": ["modules/05_huangdi_neijing.md", "modules/08_huangdi_detail.md"],
+      "topic": "黄帝内经篇章与倪派讲解",
+      "existingDatabaseTargets": [
+        "database/tcm/skill-v3/references/42-经典-素问要义.md",
+        "database/tcm/skill-v3/references/43-经典-灵枢与难经要义.md"
+      ],
+      "assessment": "主题已覆盖但《灵枢》逐条 provenance 尚未完成；外部整理稿只能提供待查篇目线索。",
+      "ingestionStatus": "discovery_only"
+    },
+    {
+      "externalPaths": ["modules/09_zhenjiu_bencao.md"],
+      "topic": "针灸与本草讲解",
+      "existingDatabaseTargets": [
+        "database/tcm/skill-v3/references/15-23*",
+        "database/tcm/skill-v3/references/38-41*"
+      ],
+      "assessment": "现有数据库已有中药和针灸完整 inventory；该模块可帮助列出学派差异，不足以校正药味、剂量、穴位或操作。",
+      "ingestionStatus": "discovery_only"
+    },
+    {
+      "externalPaths": ["modules/03_yian.md", "distilled_cases.md", "cases/*"],
+      "topic": "医案语料",
+      "existingDatabaseTargets": [],
+      "assessment": "暴露出独立的医案 provenance schema 缺口；在原始医案、作者、时间、版本、隐私和许可可核验前不吸收病例内容。",
+      "ingestionStatus": "blocked_structural_gap"
+    },
+    {
+      "externalPaths": ["modules/06_liangdong.md", "modules/07_bimen_hantang.md"],
+      "topic": "访谈、闭门课与汉唐文章",
+      "existingDatabaseTargets": [],
+      "assessment": "暴露出学派讲义/口述史分层缺口；该层必须与经典原文和现代医学主张分离。",
+      "ingestionStatus": "blocked_structural_gap"
+    },
+    {
+      "externalPaths": ["references/research/*"],
+      "topic": "写作、时间线、教学法与外部观点研究",
+      "existingDatabaseTargets": ["docs/PRD.md"],
+      "assessment": "可作为产品研究线索，不是中医知识数据库来源；研究索引指向的原始 books 路径当前不可访问。",
+      "ingestionStatus": "discovery_only"
+    }
+  ],
+  "ingestionDecision": {
+    "mode": "metadata_only",
+    "allowedUses": [
+      "gap_discovery",
+      "school_commentary_candidate_inventory",
+      "primary_source_hunting"
+    ],
+    "forbiddenUses": [
+      "classical_primary_witness",
+      "accepted_claim_source",
+      "runtime_medical_guidance",
+      "bulk_content_copy"
+    ],
+    "promotionRequirements": [
+      "取得与固定版本对应的实际许可证及第三方材料授权边界",
+      "恢复可核验的原始讲义或 PDF 见证",
+      "为每条候选主张补齐版本、页码或稳定段落锚点",
+      "将原典引文与独立的一手典籍见证逐字复核",
+      "把倪海厦学派阐释与古籍原文分层保存"
+    ]
+  },
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": [],
+  "evidenceUrls": [
+    "https://github.com/jangviktor-web/nihaixia/tree/ec03c594ed239b570e997cbd396c2fc186b6ad91",
+    "https://github.com/jangviktor-web/nihaixia/blob/ec03c594ed239b570e997cbd396c2fc186b6ad91/README.md",
+    "https://api.github.com/repos/jangviktor-web/nihaixia",
+    "https://api.github.com/repos/jangviktor-web/nihaixia/git/trees/ec03c594ed239b570e997cbd396c2fc186b6ad91?recursive=1"
+  ]
+}

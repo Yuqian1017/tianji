@@ -3,7 +3,7 @@
 - 中文名：主要来源与溯源清单
 - 文档状态：来源基线
 - 版本：0.1
-- 更新日期：2026-07-10
+- 更新日期：2026-07-18
 - 配套文档：`PRD.md`、`DATABASE_COVERAGE_MATRIX.md`
 
 ## 1. 用途
@@ -28,6 +28,7 @@
 | `alternate_raw` | 保留作差异、历史或备选路线对照的副本 |
 | `historical_spec` | 证明旧产品意图和开发顺序的历史规格 |
 | `candidate_reference` | 可用于提取候选知识条目的整理资料 |
+| `metadata_only_blocked` | 只登记固定版本、许可、范围和溯源缺口；正文不得进入候选/accepted/runtime |
 | `primary_or_textbook_text` | 原典或教材文本层；仍需记录版本、权利和整理状态 |
 | `runtime_truth` | 能证明当前产品实际行为的代码或数据；不自动成为知识权威 |
 | `normalized` | 已转为稳定 schema，但尚未必校勘 |
@@ -92,6 +93,25 @@
 | 安全限制 | 剂量主要来自七版教材，Skill 自述尚未按现行《药典》校准；不可据此直接开方或替代诊疗 |
 | 允许用途 | 内部研究、候选提取、当前 TCM 静态表审计、安全规则设计、非商业范围内按许可使用 |
 | 发布门槛 | 许可审查、现行标准校核、项目独立复核、条目级安全策略 |
+
+### SRC-EXT-NIHAIXIA-SKILL
+
+| 字段 | 值 |
+|---|---|
+| 名称 | 倪海厦 skill · 经方中医 AI 外部候选来源 |
+| 来源 | `https://jangviktor-web.github.io/nihaixia/`；`https://github.com/jangviktor-web/nihaixia` |
+| 固定版本 | 默认分支 `StableV2026.5.23`；commit/tree `ec03c594ed239b570e997cbd396c2fc186b6ad91` |
+| 项目档案 | `database/sources/external/nihaixia-skill-v2.1.0-2026-07-18.json` |
+| 审计日期 | 2026-07-18 |
+| 状态 | `metadata_only_blocked` + `secondary_school_commentary_candidate` |
+| 当前仓库规模 | 32 个非 Git 文件、28 个 Markdown、9 个模块、6 个案例文件、10 个研究文件；约 4.59 MB / 51,258 行 |
+| 自述覆盖 | 129 条伤寒、23 章金匮、71 篇内经、345 味本草、849 案例、10 套讲课资料；这些是 README 声明，尚未独立授证 |
+| 可用价值 | 发现倪派讲授主题、建立待查缺口、寻找一手讲义和原典锚点 |
+| 覆盖映射 | 伤寒、金匮、内经、针灸/本草与现有库重叠；医案 provenance、学派讲义/口述史是结构缺口；研究稿只作产品线索。7 组均保持 discovery-only 或 blocked |
+| 许可结论 | README 声称 MulanPSL-2.0，但固定仓库树无 `LICENSE`，GitHub 元数据未识别许可证；第三方讲义/病例再授权范围也未证明 |
+| 溯源断点 | README 说明 v2.0.0 已移除约 110 MB 原始资料；研究索引保留的 Windows `books` 路径不可访问，多数正文只标讲义名称而无稳定页码/段落 |
+| 禁止用途 | 不得作为《伤寒论》《金匮要略》《黄帝内经》等原典见证，不得直接校正 accepted 主张，不得进入运行时医疗知识，不批量复制正文 |
+| 晋升门槛 | 取得实际许可和第三方权利边界；恢复原始讲义/PDF；逐条补版本和页码；古籍引文与独立一手见证复核；学派阐释与原典分层 |
 
 ### SRC-PKG-TIANJI-RUNTIME
 
@@ -689,8 +709,9 @@
 | TCM-CLASSIC-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-quote-provenance.json`；`database/tcm/adjudications/tcm-classic-quote-adjudications.json` | `42-经典-素问要义.md` 的 111 段显式引文与本地《黄帝内经素问》逐段文本比对 | 经典引文连续/省略分段命中、人工形态裁决与 normalized 修正记录 | 83 段机械定位、28 段人工裁决、0 段待人工、1 条拼接误引覆盖校正；Skill 原包保持原哈希；文本命中不授证解释、医学等价或产品用途 |
 | TCM-FOOD-MEDICINE-ADJUDICATIONS | `database/tcm/normalized/tcm-food-medicine-adjudications.json` | 106 项目录、Skill A 清单 15 项、8 条食疗/药食配方和 38 个原料引用 | 食品身份、部位/炮制缺口和配方继承裁决 | 目录身份已固定；全部具体产品用法 blocked |
 | TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
+| TCM-NIHAIXIA-CANDIDATE | `database/sources/external/nihaixia-skill-v2.1.0-2026-07-18.json` | 倪海厦 Skill 固定 commit、仓库规模、自述覆盖、许可冲突、原始见证断点和吸收边界 | 发现倪派资料可能覆盖的数据库缺口并寻找一手来源 | 仅元数据；不复制正文，不充当原典、accepted 主张或运行时来源 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
-| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 9 个来源组、252 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
+| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、262 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
 ## 7. 当前 Runtime 来源组
@@ -710,7 +731,7 @@
 | 当前产品定义 | `docs/PRD.md` | 历史 `APP-SPEC*` 与 `GAME-DESIGN.md` | 旧规格提供证据和设计资产，不覆盖新 PRD 决策 |
 | 玄学 raw source | `compendium-new/` | `compendium-vision-api/` | 重复内容不双重计票；只记录实质差异 |
 | 相术规范知识 | `database/xiangshu/` 中逐条 source-pinned core | `compendium-new/10-xiangshu/` 与当前 runtime | compendium 保留 raw；有典籍见证的传统判断可进入文化层，无出处或冲突扩写保持候选/blocked |
-| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、医经/本草/方书、药典/监管与 106 项食药目录快照 | Skill 补广度；传统内容由典籍与版本见证授证，现代药典/监管只授证现行身份、安全和使用边界 |
+| 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、医经/本草/方书、药典/监管与 106 项食药目录快照；倪海厦 Skill 仅作 metadata-only 缺口发现来源 | Skill 补广度；传统内容由典籍与版本见证授证，现代药典/监管只授证现行身份、安全和使用边界；外部学派整理稿不能越过许可与逐条溯源门槛 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
 | 未来规范数据库 | 逐域建立；周易、紫微、奇门、风水、五运、子午、TCM 安全与共享城市已有规范核心 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 

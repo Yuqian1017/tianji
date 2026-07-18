@@ -20,6 +20,8 @@
 | `xuanxue_compendium` | 玄学 compendium canonical 历史资料与旧规格 |
 | `xuanxue_compendium_mirror` | vision-api 历史镜像或后续分化版本 |
 | `shared_wikisource_witnesses` | 维基文库等固定文本见证 |
+| `shared_ctext_witnesses` | 中国哲学书电子化计划等固定文本或目录见证 |
+| `external_source_manifests` | 外部二手资料的固定版本、许可、溯源与吸收边界档案 |
 | `xiangshu_source_registry` | 相术典籍见证清单 |
 | `shared_datasets` | GeoNames 等外部数据集 |
 | `licenses` | 外部来源许可文本 |

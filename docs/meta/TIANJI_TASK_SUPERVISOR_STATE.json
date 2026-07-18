@@ -1,11 +1,11 @@
 {
   "project": "天机卷",
   "version": "1.0",
-  "updatedAt": "2026-07-11",
+  "updatedAt": "2026-07-18",
   "currentPhaseId": "V0",
   "currentStage": "数据库与排盘正确性验证",
   "overallPercent": 58,
-  "currentFocus": "中医典籍逐条回接原文：《素问要义》111 段引文首轮裁决完成，83 段机械定位、28 段人工分类、0 段待人工；相术并行保留影印校勘与真实图片验证。",
+  "currentFocus": "中医典籍逐条回接原文：《素问要义》首轮完成；倪海厦 Skill 仅登记为 metadata-only 二手候选；相术并行保留影印校勘与真实图片验证。",
   "nextDecision": "按《素问》同一合同扩展到灵枢、难经、伤寒、金匮和医家温病资料。",
   "antiDriftRule": "传统文化数据库不得用现代监管资料替代典籍来源，也不得因现代不可验证删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。",
   "activePlan": ".planning/2026-07-09-2026-07-09-tianji-database-validation/",
@@ -140,6 +140,14 @@
     }
   ],
   "activeTasks": [
+    {
+      "id": "TJI-VAL-021",
+      "name": "倪海厦 Skill 二手来源与许可边界审计",
+      "status": "completed",
+      "phase": "V0",
+      "doneWhen": "固定仓库 commit、内容结构、来源断点和许可状态；只登记二手候选元数据，不把蒸馏内容晋升为原典或运行时医疗知识。",
+      "owner": "Codex"
+    },
     {
       "id": "TJI-VAL-001",
       "name": "建立全库 validation inventory 与证据合同",
@@ -359,6 +367,9 @@
     { "name": "可玩核心循环", "state": "not_started", "rule": "至少完成一个学习到渡劫的可玩闭环。" }
   ],
   "recentEvidence": [
+    "TJI-VAL-021 完成：倪海厦 Skill 固定 commit ec03c594ed239b570e997cbd396c2fc186b6ad91，仅登记 metadata；许可、原始讲义与逐条页码缺口阻止正文晋升",
+    "中央来源库补齐 9 份 CText 见证与 1 份外部来源档案，现为 11 个来源组、262 个文件；5 项专项测试 0 fail",
+    "来源登记完成后全库 validation 196/196 通过，production build 通过；全仓 lint 仍有 10 个与本批无关的既有错误",
     "database/xuanxue/compendium-new/ 是当前 canonical 上游资料",
     "database/xuanxue/compendium-vision-api/ 是近似副本，仅相术任务路径不同",
     "database/tcm/skill-v3/ 含 50 个 references 文件、原文库与 CC BY-NC 4.0 许可证",
@@ -453,7 +464,7 @@
     "《素问要义》111 段显式引文首轮完成：83 段机械定位、28 段人工形态裁决、0 段待人工",
     "normalized 覆盖层校正 1 条拼接误引，Skill 原包保持原哈希；王冰注、后世口诀、现代括注和遗篇已与《素问》核心正文分层",
     "《素问》引文 provenance 共 693 项 0 fail；所有记录 blocked，文本命中与形态裁决不授证解释、现代医学类比或用法",
-    "中央来源库已索引 9 个来源组、252 个文件；逐文件 canonical 路径、字节数和 SHA256 可重建",
+    "中央来源库已索引 11 个来源组、262 个文件；逐文件 canonical 路径、字节数和 SHA256 可重建",
     "vision-api compendium 当前为 46 个相同镜像和 24 个历史变体，不再笼统称为完整副本"
   ]
 }

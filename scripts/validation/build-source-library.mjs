@@ -34,6 +34,16 @@ const GROUPS = [
     sourceRole: 'public_text_witness_or_repository_metadata',
   },
   {
+    id: 'shared_ctext_witnesses',
+    root: 'database/sources/ctext',
+    sourceRole: 'public_text_witness_or_repository_metadata',
+  },
+  {
+    id: 'external_source_manifests',
+    root: 'database/sources/external',
+    sourceRole: 'external_secondary_source_metadata',
+  },
+  {
     id: 'xiangshu_source_registry',
     root: 'database/xiangshu/sources',
     sourceRole: 'classical_witness_manifest',
@@ -109,7 +119,7 @@ const byGroup = Object.fromEntries(GROUPS.map(group => [
 const output = {
   schemaVersion: 1,
   doctrine: 'single_canonical_file_with_central_registry',
-  generatedAt: '2026-07-11',
+  generatedAt: '2026-07-18',
   root: 'database/sources',
   counts: {
     entries: entries.length,

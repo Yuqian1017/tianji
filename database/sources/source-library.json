@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "doctrine": "single_canonical_file_with_central_registry",
-  "generatedAt": "2026-07-11",
+  "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 252,
+    "entries": 262,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -12,6 +12,8 @@
       "xuanxue_compendium": 70,
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
+      "shared_ctext_witnesses": 9,
+      "external_source_manifests": 1,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
       "licenses": 1
@@ -2831,6 +2833,116 @@
       "format": "json",
       "bytes": 95744,
       "sha256": "597f936ea2c0849b086b39c33077a1c09cbeb0ae68bb11042d25d2a5bd1743a6",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.d6a40b4cbfe437ad",
+      "group": "shared_ctext_witnesses",
+      "title": "bushizhengzong-wiki-889452-2026-07-12.html",
+      "canonicalPath": "database/sources/ctext/bushizhengzong-wiki-889452-2026-07-12.html",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "html",
+      "bytes": 281860,
+      "sha256": "3295d67b7053bcd804738d30c54ea4e8a603cdd8774e096251d96d6b3f18a91d",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.816e727a4c75f591",
+      "group": "shared_ctext_witnesses",
+      "title": "liuqin-sanjian-2026-07-13.json",
+      "canonicalPath": "database/sources/ctext/liuqin-sanjian-2026-07-13.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 6910,
+      "sha256": "a2fc71f12864941a75ae7e1921001abaeafe576e4873bb29560fee4cd54dab57",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.e8e8d1f2b5d25bb2",
+      "group": "shared_ctext_witnesses",
+      "title": "shuo-gua-2026-07-12.html",
+      "canonicalPath": "database/sources/ctext/shuo-gua-2026-07-12.html",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "html",
+      "bytes": 136187,
+      "sha256": "3efe2493fafda64efdfbc13a4519cbe188a05b6d4bc587529d2ec2ded264a57c",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.16217fac97664c7b",
+      "group": "shared_ctext_witnesses",
+      "title": "wangshuai-sichu-2026-07-17.json",
+      "canonicalPath": "database/sources/ctext/wangshuai-sichu-2026-07-17.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 10008,
+      "sha256": "2c336b1317de3866d874169fe6b8dae517ba8ed4b490b2b67ed7e5686dd55639",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.9d753feb638f1241",
+      "group": "shared_ctext_witnesses",
+      "title": "xi-ci-shang-2026-07-12.html",
+      "canonicalPath": "database/sources/ctext/xi-ci-shang-2026-07-12.html",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "html",
+      "bytes": 173401,
+      "sha256": "248b9f06349325739b54d54f0d9feb34d5eea72969205af19a53ae5181a3cecc",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.f8159f7aff29193e",
+      "group": "shared_ctext_witnesses",
+      "title": "yuanji-shuaiwang-2026-07-17.json",
+      "canonicalPath": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 11221,
+      "sha256": "fb770027ce557e76d0848fb0a1432c6c843cf355df06042ecc740e325109d209",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.7f984dabf546c5f5",
+      "group": "shared_ctext_witnesses",
+      "title": "zengshanbuyi-wiki-950329-2026-07-12.html",
+      "canonicalPath": "database/sources/ctext/zengshanbuyi-wiki-950329-2026-07-12.html",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "html",
+      "bytes": 263531,
+      "sha256": "3a7ce023a27621b3e12e4110762340fd5ce14a2457dab5442df7cfc48cae8161",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.6faf0009ded746c3",
+      "group": "shared_ctext_witnesses",
+      "title": "zhouyi-xici-shuogua-2026-07-12.json",
+      "canonicalPath": "database/sources/ctext/zhouyi-xici-shuogua-2026-07-12.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 2558,
+      "sha256": "613da18968edb94c4363afa475b9383bd67428238897654f465b858a11ac4696",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.b037aba7b7e09bbf",
+      "group": "shared_ctext_witnesses",
+      "title": "zhuanggua-sanjian-2026-07-12.json",
+      "canonicalPath": "database/sources/ctext/zhuanggua-sanjian-2026-07-12.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 9583,
+      "sha256": "ccce9e90fd170f768f26d6d6ad0bc6f18e850514c41f45c84628ac4e6a944c6c",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.external_source_manifests.45d2070648c9a785",
+      "group": "external_source_manifests",
+      "title": "nihaixia-skill-v2.1.0-2026-07-18.json",
+      "canonicalPath": "database/sources/external/nihaixia-skill-v2.1.0-2026-07-18.json",
+      "sourceRole": "external_secondary_source_metadata",
+      "format": "json",
+      "bytes": 6827,
+      "sha256": "0af68d4f09b3aaf0fbdc98af47b6ab4ce7b45b7f713c833c8ac8f7f62514b7c4",
       "relationshipStatus": "standalone"
     },
     {
