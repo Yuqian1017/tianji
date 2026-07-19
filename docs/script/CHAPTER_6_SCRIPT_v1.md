@@ -1,7 +1,10 @@
 # 第六章《动爻》剧本 v1
 
-- 版本：v1.0（2026-07-18）
-- 状态：**草稿——审查收敛前**
+- 版本：v1.1（2026-07-18）
+- 状态：**审查收敛（委托口径）——数据化就绪**
+- 审查历史（/iterative-review，2026-07-18，委托自审口径）：
+  - R1（opus，全量七轴——知识/引擎/正典/账目/结构/引导性/红线专项，ch4/ch5 失败模式前置 checklist）：PASS-WITH-FIXES——0 P0＋3 P1（935 衍逗号／📘 教学块标记全缺【ch4 R1 同款缺陷类复发——lint 机检化】／KP-017 缺独立引导块）＋5 P2（辨伪句逗号与字数／「布好局」化用误标逐字／「旬日」欠账 22 日／演卦 lint 关键词碰撞）→ 全折（`c808366`），另抓幕六影子时序反转（折毕）
+  - R2（Explore 只读 delta）：8/8 findings＋2 接缝抽查全 VERIFIED、零回归（935 byte-level 对撞／📘×6 与 ch5 同构对位／好感总账 10 逐条加总／四处账目互洽）→ **CONVERGED**
 - 依据：`docs/PRD.md` v2（§ 4 教学体系）、`docs/design/CHAPTER_6_PREP.md`（策划案，fresh-context 自审 PASS-WITH-FIXES 折毕 + natal 作业式修正 + 案卦观之剥定稿）、`docs/design/LOVE_AND_SYSTEMS_DESIGN.md` § 1（好感档位）
 - 性质：**人读版剧本**。结构化数据为数据化阶段工作。
 - 知识审计：跟随制审计第六批已完成（commit `56d306b`）——witness `dongyao-andong-2026-07-18.json`（10 passages，校准锚 7/7）+ `audit-chapter6-canon.mjs` 90 checks 全绿。KP 卡 `kp-ly-01{6,7,8}.json` accepted；`kp-ly-015.json` 补「择动」canonicalText（595 后半句）。
