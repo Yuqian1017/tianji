@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "external.nihaisha-nishi-tcm.e3cb5135",
+  "title": "nihaisha-nishi-tcm",
+  "sourceRole": "secondary_course_evidence_and_classical_locator_candidate",
+  "status": "reviewed_locator_only_blocked_for_content_ingestion",
+  "retrievedAt": "2026-07-18",
+  "repository": {
+    "url": "https://github.com/JuneYaooo/nihaisha-nishi-tcm",
+    "defaultBranch": "main",
+    "commit": "e3cb51359a5ef9fc0725132814d474168bb8de24",
+    "tree": "fe50e135ddaec3f405bf72e117fdfee06f23a970",
+    "commitDate": "2026-07-18T17:40:23+08:00"
+  },
+  "repositoryInventory": {
+    "files": 3094,
+    "blobBytes": 144091937,
+    "markdownFiles": 62,
+    "pythonFiles": 26,
+    "jsonFiles": 11,
+    "jsonlFiles": 3,
+    "screenshotWebpFiles": 2986,
+    "screenshotBytes": 75189484,
+    "referenceFiles": 69,
+    "referenceBytes": 67933136,
+    "screenshotCountsByModule": {
+      "shanghan": 649,
+      "jingui": 656,
+      "zhongjingXinfa": 68,
+      "clinicalCases": 88,
+      "bagang": 33,
+      "fuyang": 37,
+      "yijinjing": 28,
+      "tianji": 527,
+      "huangdi": 272,
+      "bencao": 127,
+      "acupuncture": 501
+    }
+  },
+  "license": {
+    "repositoryMetadata": null,
+    "repositoryLicenseFilePresent": false,
+    "declaredUseBoundary": "personal study, research, technical exchange, and non-commercial material organization",
+    "thirdPartyRightsNotice": "Courses, screenshots, transcriptions, PDF text, and related materials remain subject to their respective rights holders and may require separate permission.",
+    "status": "no_standard_open_source_license_and_third_party_rights_unresolved"
+  },
+  "evidenceArchitecture": {
+    "courseDistillation": "Secondary summaries and study modules derived from Ni Haisha courses.",
+    "screenshotEvidence": "2,986 repository WebP images indexed by course and timestamp; useful to verify that a board or slide appeared, not that its claim is true.",
+    "pdfEvidence": {
+      "documents": 22,
+      "physicalPageCards": 10538,
+      "evidenceCardBytes": 28785111,
+      "characters": 8814414,
+      "primaryCourseOrIntegratedDocuments": 11,
+      "primaryCourseOrIntegratedPages": 3080,
+      "primaryCourseOrIntegratedCharacters": 4094113,
+      "recommendedSupplementDocuments": 11,
+      "recommendedSupplementPages": 7458,
+      "recommendedSupplementCharacters": 4720301,
+      "sourcePdfFilesBundled": false,
+      "documentsWithSourceSha256": 0,
+      "documentsWithEditionOrPublicationMetadata": 0,
+      "finding": "Stable page-card IDs and extracted page text are useful locators, but the manifest does not identify an edition, publisher, publication year, source URL, or source-file hash for any of the 22 PDFs."
+    },
+    "textEvidence": {
+      "documents": 1,
+      "records": 183,
+      "characters": 9174,
+      "sourceRole": "ni_recommended_supplement_not_course_or_primary_witness"
+    },
+    "externalRagAssets": {
+      "bundledInRepository": false,
+      "declaredDataset": "JuneYao/nihaisha-rag-assets",
+      "declaredRevision": "production-2026-07-15",
+      "declaredFiles": 5,
+      "declaredBytes": 3679424241,
+      "auditStatus": "not_retrieved_not_independently_verified"
+    }
+  },
+  "classicalSignalAudit": {
+    "method": "Count unique page-evidence records whose extracted text contains the simplified or traditional title form. These are locator signals, not verified quotations or complete-work coverage.",
+    "lingshu": {
+      "uniquePageCards": 207,
+      "documents": 17,
+      "standaloneSourceManifestEntry": false
+    },
+    "nanjing": {
+      "uniquePageCards": 227,
+      "documents": 16,
+      "standaloneSourceManifestEntry": false
+    },
+    "shanghanlun": {
+      "uniquePageCards": 1159,
+      "documents": 19,
+      "directCourseAndSupplementSources": [
+        "pdf-evidence:58423f817a06",
+        "pdf-evidence:125053a536e3",
+        "pdf-evidence:da46832bcbe0",
+        "text-evidence:77af3a7c9960"
+      ]
+    },
+    "jinguiYaolue": {
+      "uniquePageCards": 59,
+      "documents": 13,
+      "directCourseAndSupplementSources": [
+        "pdf-evidence:fcf026a0b4f9",
+        "pdf-evidence:ffec061c095e",
+        "pdf-evidence:64bc78fc08a4"
+      ]
+    }
+  },
+  "crossRepositoryCorrectionReview": {
+    "upstreamDecisionRows": 51,
+    "targetedSearchTokens": 58,
+    "tokensFoundAnywhereInTianjiTcm": 13,
+    "directCorrectionsApplied": 0,
+    "findings": [
+      {
+        "id": "raw-witness-orthography",
+        "terms": ["大黄蛰虫丸", "心下鞭", "瓜蒌桂枝汤", "斑蟊", "玉金", "表症", "里症", "虚症", "实症", "阳明症"],
+        "disposition": "preserve_raw_and_flag_only",
+        "reason": "Matches occur in Tianji raw witness or textbook files. A correction made to upstream ASR or production prose cannot authorize rewriting a separate witness."
+      },
+      {
+        "id": "context-specific-homographs",
+        "terms": ["鹿衔草", "黄连、黄柏、大黄"],
+        "disposition": "no_direct_conflict",
+        "reason": "The upstream decision concerns a specific formula or course context; Tianji occurrences are not the same claim."
+      },
+      {
+        "id": "curated-terminology-variant",
+        "terms": ["兼症"],
+        "disposition": "independent_source_or_style_review_required",
+        "reason": "The upstream repository normalized its own production layer to 兼证, but this is not a primary textual witness or sufficient authority to rewrite Tianji by itself."
+      }
+    ]
+  },
+  "classicalValidationRouting": [
+    {
+      "work": "黄帝内经灵枢",
+      "tianjiTargets": [
+        "database/tcm/skill-v3/references/43-经典-灵枢与难经要义.md",
+        "database/tcm/skill-v3/sources/黄帝内经灵枢.txt"
+      ],
+      "externalUse": "Use the 207 page-card signals and course screenshots to locate cited passages, transcription differences, and teaching claims.",
+      "authorityBoundary": "No standalone Lingshu source is registered upstream; course or later-book references cannot replace an independently identified Lingshu edition.",
+      "ingestionStatus": "locator_only_independent_primary_witness_required"
+    },
+    {
+      "work": "难经",
+      "tianjiTargets": [
+        "database/tcm/skill-v3/references/43-经典-灵枢与难经要义.md",
+        "database/tcm/skill-v3/sources/难经.txt"
+      ],
+      "externalUse": "Use the 227 page-card signals to find course claims and candidate chapter numbers for independent checking.",
+      "authorityBoundary": "The upstream PDF manifest has no standalone Nanjing document; title mentions inside course and later books are secondary locators only.",
+      "ingestionStatus": "locator_only_independent_primary_witness_required"
+    },
+    {
+      "work": "伤寒论",
+      "tianjiTargets": [
+        "database/tcm/skill-v3/references/44-经典-伤寒论六经方证条文.md",
+        "database/tcm/skill-v3/sources/伤寒论.txt"
+      ],
+      "externalUse": "Use course page cards, Ni commentary, recommended-book indexes, and correction decisions to locate clause variants and suspected transcription errors.",
+      "authorityBoundary": "Course transcripts, Ni commentary, mixed commentary/translation PDFs, and extracted DOC clauses must remain separate from the classical base text.",
+      "ingestionStatus": "locator_only_independent_primary_witness_required"
+    },
+    {
+      "work": "金匮要略",
+      "tianjiTargets": [
+        "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+        "database/tcm/skill-v3/sources/金匮要略.txt"
+      ],
+      "externalUse": "Use the two course PDFs and the separately labeled recommended supplement to locate chapter, formula, and wording candidates.",
+      "authorityBoundary": "The recommended supplement explicitly mixes original text, notes, translation, and later explanation; it cannot be treated as a uniform classical witness.",
+      "ingestionStatus": "locator_only_independent_primary_witness_required"
+    }
+  ],
+  "adoptionDecision": {
+    "mode": "ingest_transformed_metadata_and_validation_routes_only",
+    "absorbedIntoDatabase": [
+      "repository provenance and fixed tree",
+      "evidence-layer inventory and counts",
+      "classical title signal counts",
+      "cross-repository correction comparison",
+      "four-work classical validation routes"
+    ],
+    "forbiddenUses": [
+      "bulk_course_or_screenshot_copy",
+      "classical_primary_witness",
+      "accepted_claim_source_without_independent_check",
+      "runtime_medical_guidance",
+      "automatic_correction_of_tianji_raw_witnesses",
+      "commercial_reuse_without_rights_clearance"
+    ],
+    "promotionRequirements": [
+      "identify an independent edition-level classical witness with stable bibliographic metadata",
+      "bind each candidate claim to work, chapter or clause, edition, locator, and quoted text",
+      "separate course speech, transcription, commentary, later translation, OCR, and classical text",
+      "verify source-file identity and rights before copying any upstream content",
+      "keep medical actions, doses, diagnosis, prognosis, and cases blocked from product use"
+    ]
+  },
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": [],
+  "evidenceUrls": [
+    "https://github.com/JuneYaooo/nihaisha-nishi-tcm/tree/e3cb51359a5ef9fc0725132814d474168bb8de24",
+    "https://github.com/JuneYaooo/nihaisha-nishi-tcm/blob/e3cb51359a5ef9fc0725132814d474168bb8de24/README.md",
+    "https://github.com/JuneYaooo/nihaisha-nishi-tcm/blob/e3cb51359a5ef9fc0725132814d474168bb8de24/docs/USE_AND_RISK_NOTICE.md",
+    "https://github.com/JuneYaooo/nihaisha-nishi-tcm/blob/e3cb51359a5ef9fc0725132814d474168bb8de24/references/pdf-evidence/source-manifest.json",
+    "https://github.com/JuneYaooo/nihaisha-nishi-tcm/blob/e3cb51359a5ef9fc0725132814d474168bb8de24/references/pdf-evidence/correction-decisions.md"
+  ]
+}

@@ -76,9 +76,11 @@ V0 期间暂停教学/游戏实现和新的横向功能扩展。
 
 ## 下一决策
 
-中央来源库已建立：`database/sources/source-library.json` 索引 11 个来源组、264 个文件并固定 canonical 路径和 SHA256；后来加入的 9 份 CText 见证、2 份外部来源档案和 xuanxue-database-skill 的 MIT 许可已纳入索引，vision-api compendium 的 70 个内容文件中，46 个仍与 canonical 相同、24 个已成为历史变体。该索引解决“参考文献散落在哪里”，不替代逐条内容校勘。
+中央来源库已建立：`database/sources/source-library.json` 索引 11 个来源组、265 个文件并固定 canonical 路径和 SHA256；后来加入的 9 份 CText 见证、3 份外部来源档案和 xuanxue-database-skill 的 MIT 许可已纳入索引，vision-api compendium 的 70 个内容文件中，46 个仍与 canonical 相同、24 个已成为历史变体。该索引解决“参考文献散落在哪里”，不替代逐条内容校勘。
 
 倪海厦 Skill 外部仓库已按 commit `ec03c594ed239b570e997cbd396c2fc186b6ad91` 建立 metadata-only 来源档案。它可以列出倪派资料覆盖主题并辅助寻找缺口，但当前仓库没有 README 所链接的许可证文件，原始讲义/PDF 已从仓库移除，正文多为缺少页码锚点的蒸馏整理。因此不复制其正文，不用它校正 accepted 数据，也不进入运行时；后续只有在取得许可、恢复原始见证并逐条回接独立典籍后才可晋升。
+
+`nihaisha-nishi-tcm` 已按 commit `e3cb51359a5ef9fc0725132814d474168bb8de24` 完成固定审计：3,094 文件中有 2,986 张课程截图，22 份 PDF 来源记录生成 10,538 张页卡；《灵枢》《难经》《伤寒论》《金匮要略》均可获得定位线索。仓库无标准开源许可证，22 份 PDF 均缺版本/出版项和源文件 SHA256，且原 PDF 未随仓库提供。天机卷只吸收证据层盘点、异文警报和四部典籍验证路由，不复制课程正文、截图或病例，不自动改写 raw 或 accepted 数据。
 
 `xuanxue-database-skill` 已按 commit `926d0b56154c8764b68e9ddf2661949e9b5b5f11` 登记为 MIT 数据库设计来源。三库模型中的匿名命例、事前断语、实际应事、方法关联和失败记录保留可用于 P2 实战复盘；天机卷候选 schema 已补齐断语冻结、排盘/流派版本、证伪条件、证据等级、完整分母和隐私合同。个人结果不提升典籍权威，不自动更新 KP 掌握度，高风险预测不计分；候选 schema 完成产品和隐私评审前不进入 runtime。
 

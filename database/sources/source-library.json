@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 264,
+    "entries": 265,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -13,7 +13,7 @@
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
       "shared_ctext_witnesses": 9,
-      "external_source_manifests": 2,
+      "external_source_manifests": 3,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
       "licenses": 2
@@ -2932,6 +2932,17 @@
       "format": "json",
       "bytes": 9583,
       "sha256": "ccce9e90fd170f768f26d6d6ad0bc6f18e850514c41f45c84628ac4e6a944c6c",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.external_source_manifests.2f363b58a9086a54",
+      "group": "external_source_manifests",
+      "title": "nihaisha-nishi-tcm-2026-07-18.json",
+      "canonicalPath": "database/sources/external/nihaisha-nishi-tcm-2026-07-18.json",
+      "sourceRole": "external_secondary_source_metadata",
+      "format": "json",
+      "bytes": 9889,
+      "sha256": "0e599506af8bfba962af0b7ee5733b359244030354c9111374d04d9c5f4b55e4",
       "relationshipStatus": "standalone"
     },
     {

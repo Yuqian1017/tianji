@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-18 (续二) - 审计 nihaisha-nishi-tcm 并接回四部典籍验证主线
+
+- 固定 `JuneYaooo/nihaisha-nishi-tcm` commit `e3cb51359a5ef9fc0725132814d474168bb8de24`；登记 3,094 文件、2,986 张截图、22 文献/10,538 页级证据卡和外置 RAG 边界。
+- 将课程蒸馏、截图、PDF 页卡、倪师推荐补充、OCR/转录、病例和古籍候选分层；无标准开源许可、无原 PDF、无版本/源哈希的内容不得复制或晋升为原典。
+- 对上游 51 条勘误拆出 58 个目标词形与天机 TCM 交叉检查；13 个有命中，0 条直接覆盖。新增《灵枢》《难经》《伤寒论》《金匮要略》 locator-only 验证路由，中央来源库更新为 11 组、265 文件。
+
 ## 2026-07-18 (续) - 吸收 xuanxue-database-skill 的实战证据结构
 
 - 固定 `yanouyuan-bit/xuanxue-database-skill` commit `926d0b56154c8764b68e9ddf2661949e9b5b5f11`；登记 14 文件/858 行、MIT 许可、三库模型和直接采用风险，许可证文本单独存入 `database/licenses/`。
