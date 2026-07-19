@@ -34,6 +34,7 @@
 | VAL-TCM-009 | P0 | 中医 | `24-30` 方剂总论、正方、附方、场景选方与现代适应证 | 医疗/来源/身份/安全/疗效 | V1+现代官方 comparator | pass | 820 条非空行、8 表/171 表格行、81 标题、186 个格式化定义、180 个显式附方实体、522 条重叠窄风险视图和 21 finding 共 11,762 项 0 fail；182 个教材正方逐分册计数匹配，另有 4 个经典锚点；附方声明 182 但第 25 分册正文少 2，全部方名、组成、剂量、给药、毒性、急症、妊娠和现代适应证字段 blocked |
 | VAL-TCM-010 | P0 | 中医 | `42-48` 经典、医家、温病、食疗、药食两用与旧食疗 runtime | 医疗/来源/食品身份/安全/疗效 | V1+现代官方 comparator | pass | 1,142 条非空行、8 表/79 表格行、145 标题、603 条重叠窄风险视图和 20 finding 共 14,281 项 0 fail；A级/食疗级/药食两用均为来源自述；106 项目录另由 VAL-TCM-011 逐项裁决；旧 `tcm-data` 无 importer，八字健康食疗 runtime blocked，全部候选 blocked |
 | VAL-TCM-011 | P0 | 中医 | 国家卫健委 106 项食药物质目录、Skill A 级清单与明确食疗/药食配方主张 | 食品身份/部位/限制/配方继承 | V2+官方公告 | pass | 106 项按 87+6+9+4 固定；Skill A 级 15 项中 13 项匹配、2 项不在目录；8 条配方主张的 38 个原料引用为 18 匹配、5 身份/炮制缺口、15 不在目录；48 项 0 fail，全部产品用法 blocked |
+| VAL-TCM-012 | P0 | 中医/典籍 | `42-43`《素问》《灵枢》《难经》整理稿显式引文来源与形态 | 典籍文本/版本见证/逐条引用 | V2+本地全文+公共转录校勘 | pass | 《素问》111 段为 83 定位/28 人工/0 待办；《灵枢》《难经》98 段为 75 定位/23 人工/0 待办，1,073 项 0 fail；3 条实际来自《素问》，3 处本地转录差异获 CText/Wikisource 支持；全部 blocked，不授证解释或现代用法 |
 | VAL-SOURCE-002 | P1 | 中医/来源 | 倪海厦 Skill 外部仓库的版本、规模、许可、原始见证和可吸收边界 | 来源/许可/溯源 | V1+固定仓库审计 | pass | 固定 commit `ec03c594...`；32 文件/51,258 行；README 许可声明与仓库树不一致，原始参考资料已移除且本地 books 路径不可访问；只登记 metadata，runtime 字段为 0，正文不得晋升为原典或 accepted 主张 |
 | VAL-SOURCE-003 | P1 | 数据库/教学 | xuanxue-database-skill 的三库 schema、回测合同、许可和天机卷吸收边界 | 来源/结构/隐私/证据 | V1+固定仓库审计 | pass | 固定 commit `926d0b56...`；14 文件/858 行，MIT LICENSE 完整；吸收匿名命例、冻结断语、观察与方法关联，拒绝少量应验自动验证、经典/个人可靠度混写和现实结果自动改变掌握度；候选 schema runtime 字段为 0 |
 | VAL-SOURCE-004 | P1 | 中医/典籍 | `nihaisha-nishi-tcm` 课程证据库、页卡、古籍候选、许可和四部典籍路由 | 来源/许可/经典定位/勘误 | V1+固定仓库审计+交叉检查 | pass | 固定 commit `e3cb5135...`；3,094 文件、2,986 截图、22 文献/10,538 页卡；无标准开源许可，22 文献均缺版本/源哈希；51 条勘误交叉检查后 0 条直接覆盖，灵枢/难经/伤寒/金匮均保持 locator-only |
@@ -148,6 +149,10 @@
 | F-TCM-065 | P1 | VAL-TCM-009 | vulnerable_population_scope_blocked | 62 条涉及妊娠、儿童、老人或虚弱人群的文字未形成可验证剂量/禁忌合同 | 特殊人群字段全部 blocked，后续需方剂级权威来源和临床审查 |
 | F-TCM-066 | P1 | VAL-TCM-009 | attached_formula_entities_partially_remediated | 分册自称 182 个附方；现已从显式“附”条目恢复 180 个独立实体并固定来源行 | 180 个实体继续 blocked；不得把来源声明自动补成 182 |
 | F-TCM-075 | P1 | VAL-TCM-009 | attached_formula_source_count_gap_blocked | 第 25 分册声明 45 个附方，但正文只明确列出 43 个；其余五册声明与显式实体数吻合 | 保留 2 个来源缺口，不把别名、加减描述或其他方名猜作缺失附方 |
+| F-TCM-076 | P1 | VAL-TCM-012 | cross_work_attribution_separated | `43-经典-灵枢与难经要义.md` 有 3 条置于《灵枢》段落的显式引文只在本地《素问》连续命中 | imported Skill 保持不动；normalized provenance 标记 `crossSource` 并记录《素问》行号，不得继续作为《灵枢》直引 |
+| F-TCM-077 | P1 | VAL-TCM-012 | public_witness_supported_transcription_variants | 本地底本出现“入国间俗/间所便”“九侯”“肺手太阳之脉”，与整理稿读法不一致 | CText/Wikisource 支持“问俗/问所便”“九候”“肺手太阴”；校勘结论写入 overlay，raw 底本不改写，版本级影印校勘仍 open |
+| F-TCM-078 | P1 | VAL-TCM-012 | editorial_prose_separated | `FAST`、现代红旗症状串和“虚实核对”被引号抽取，但不是《灵枢》《难经》原文 | 明确裁为现代编辑文字，禁止以经典引文呈现；其独立现代证据与产品资格另审 |
+| F-TCM-079 | P1 | VAL-TCM-012 | non_verbatim_forms_classified | 其余 20 条未连续命中项包含删节、拼接、列表压缩、补主语、现代括注与轻微省字 | 每条绑定本地来源行和形态裁决；可追溯不等于逐字引文，更不授证医学解释或现实使用 |
 | F-XIANG-001 | P1 | VAL-XIANG-001 | boundary_overreach_corrected | 旧运行时把无出处扩写直接当结论，首轮修复又把“无现代验证”误当成传统内容应整体排除 | 保留几何隔离，但改为典籍见证优先：有出处条目进入带引用文化层，无出处/冲突扩写保持候选或 blocked；不删除 raw |
 | F-XIANG-002 | P1 | VAL-XIANG-001 | geometry_contract_remediated | 手指间距实际为度数却按 `0.06` 阈值判宽窄；掌丘估计返回字符串却按数值比较，且 21 点骨架本身不覆盖掌丘表面 | 指缝只显示逐指角度；删除 `moundEstimates` 计算、展示与 prompt 消费，合成关键点回归固定能力边界 |
 | F-XIANG-003 | P1 | VAL-XIANG-001 | rotation_dependency_remediated | 面部对称性直接比较图片 x 坐标，小指关节判断直接比较 y 坐标；同一关键点旋转后结果改变 | 分别沿面部中轴法向和无名指轴投影；30°/90° 合成旋转属性测试固定结果不变 |
@@ -248,6 +253,7 @@
 | 2026-07-11 | VAL-XIANG-003 | `audit-xiangshu-classical-sources.mjs`；《神相全编》CText p12/p48/p318/p554/p594/p605/p608/p700 等界定摘录 | 额、眉、眼、鼻、口、颏六组旧文共 49 条非空记录进入逐组裁决；累计 191 条已裁决、95 条待出处，34 段摘录、42 条规范主张、24 条旧文裁决共 453 项 0 fail。原典传统判断与旧库现代人格、能力、健康扩写分层，整组旧文不进入 runtime |
 | 2026-07-11 | VAL-XIANG-004 | `audit-xiangshu-classical-sources.mjs`；《神相全编》CText p535 气色；Helena Fenwick Dale `Indian Palmistry/The Lines`；产品元数据逐行裁决 | 386 条 raw 非空行全部分类：100 条结构、286 条已裁决、0 条无人裁决；7 个来源记录、37 段摘录、45 条主张、41 条旧文裁决共 534 项 0 fail。气色传统断语与脏腑医学等价分开；命运/太阳/肝线归入西式历史见证；婚姻线等未定位项继续 blocked；影印页校勘 open |
 | 2026-07-11 | VAL-TCM-012 | `audit:tcm-classic-quotes`；`42-经典-素问要义.md`；本地 `黄帝内经素问.txt` 固定哈希见证 | 抽取 111 段显式引文：12 段原字符连续命中、63 段规范化连续命中、7 段省略分段命中、29 段待人工裁决；561 项 0 fail。所有记录 blocked；本批只授证文本命中与定位，不授证解释、现代医学等价、剂量或产品用途 |
+| 2026-07-18 | VAL-TCM-012 | `audit:tcm-classic-ref43-quotes`；本地《灵枢》《难经》《素问》；CText/Wikisource 公共转录见证；`nihaisha-nishi-tcm` 页卡 locator | 98 段显式引文为 6 原字符、60 规范化、9 省略分段、23 人工、0 待办；3 条跨书《素问》引文、3 处公共见证支持的本地转录差异和 3 条现代编辑文字均已分层；1,073 项 0 fail，全部 blocked |
 | 2026-07-11 | VAL-SOURCE-001 | `audit:source-library`；9 个声明来源组；逐文件 SHA256、字节数、路径和镜像关系复算 | 252 个来源文件全部进入中央索引并可解析；46 个 compendium 镜像相同、24 个为历史变体；2 项专项测试 0 fail。通过只授证来源文件盘点与完整性，不授证内容正确性或产品资格 |
 | 2026-07-11 | VAL-TCM-013 | `tcm-classic-quote-adjudications.json`；原样保留的 `42-经典-素问要义.md`；`audit:tcm-classic-quotes` | 原 29 条机械未命中项完成逐条裁决：1 条拼接误引在 normalized 覆盖层校正，28 条按删节/拼接/改写/编辑说明/后世注语/文本变体分类；Skill 原包保持原哈希。现为 83 条机械定位、28 条人工形态裁决、0 条待人工，693 项 0 fail。王冰注、后世口诀、现代括注和遗篇与核心篇章保持分层；全部 blocked |
 | 2026-07-18 | VAL-SOURCE-002 | 固定 GitHub commit/tree `ec03c594ed239b570e997cbd396c2fc186b6ad91`；仓库树/README/研究索引；`external-source-manifests.test.mjs`；`audit:source-library` | 倪海厦 Skill 32 文件/51,258 行完成元数据审计；许可声明、原始讲义和页码级溯源均有阻断项，不吸收正文；7 组覆盖映射全部 discovery-only/blocked；中央来源库补入 9 份 CText 见证和该档案，现为 262 文件/11 组，5 项专项测试 0 fail |

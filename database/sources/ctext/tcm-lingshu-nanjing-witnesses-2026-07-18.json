@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "source.tcm.ref43.public-transcription-witnesses.2026-07-18",
+  "title": "《灵枢》《难经》公共转录本校勘见证",
+  "fetchedAt": "2026-07-18",
+  "scope": "reference_43_local_transcription_correction_witnesses",
+  "doctrine": "public_transcriptions_are_collation_witnesses_not_edition_level_primary_sources",
+  "retrieval": {
+    "method": "HTTP GET with redirects and a browser-compatible user agent",
+    "hashMeaning": "SHA256 and bytes identify the exact HTML response retrieved for this audit; dynamic pages may produce a different response hash on a later retrieval.",
+    "archivalBoundary": "Only transformed metadata and short public-domain passage witnesses are stored here; fetched HTML is not copied into the repository."
+  },
+  "witnesses": [
+    {
+      "id": "ctext-lingshu-jingmai",
+      "work": "黄帝内经灵枢",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/huangdi-neijing/jing-mai/zhs",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "cbada41600e3eecc30919dd986c2e2f7fd292975c1eb5851115784933dee817e",
+      "retrievedHtmlBytes": 218476,
+      "locator": "经脉第十",
+      "supports": "The lung channel heading reads 肺手太阴之脉, not the local witness transcription 肺手太阳之脉.",
+      "excerpt": "肺手太阴之脉",
+      "limitations": "Open digital transcription; useful for cross-witness collation but not a substitute for an identified print edition or image facsimile."
+    },
+    {
+      "id": "wikisource-lingshu-jingmai",
+      "work": "黄帝内经灵枢",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/zh-hans/黄帝內經/靈樞第三卷",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "660f7c6054c2ce8be2f7fca7b5014144b1ff4380bc4a4d477e6cb236807e9aea",
+      "retrievedHtmlBytes": 88345,
+      "locator": "卷三·经脉第十",
+      "supports": "Independently agrees with the CText reading 肺手太阴之脉.",
+      "excerpt": "肺手太阴之脉",
+      "limitations": "Community-maintained digital transcription; not an edition-level facsimile witness."
+    },
+    {
+      "id": "ctext-lingshu-shizhuan",
+      "work": "黄帝内经灵枢",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/huangdi-neijing/shi-zhuan/zhs",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "f803ad2ff63cc70f2a632edef2361a206929f48d03749e4efa1e2cd40e3afb21",
+      "retrievedHtmlBytes": 125548,
+      "locator": "师传第二十九",
+      "supports": "The passage reads 入国问俗 and 临病人问所便, where the local witness has 间 for both 问 characters.",
+      "excerpt": "入国问俗，入家问讳，上堂问礼，临病人问所便",
+      "limitations": "Open digital transcription; used only to flag a local transcription error and not to promote the surrounding medical interpretation."
+    },
+    {
+      "id": "ctext-nanjing-catalog",
+      "work": "难经",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/nan-jing/zhs",
+      "sourceRole": "public_work_catalog_and_transcription_entry",
+      "retrievedHtmlSha256": "96bc56bf7e9a5fa5bdfc368fabca7bb0826a7a61ca2fe6b133b005af4d017f48",
+      "retrievedHtmlBytes": 82103,
+      "locator": "难经 work entry",
+      "supports": "Registers a public transcription route for the work; this retrieved page is not used as evidence for the 十八难 wording correction.",
+      "excerpt": "难经",
+      "limitations": "Catalog-level route only for this audit."
+    },
+    {
+      "id": "wikisource-nanjing-shibanan",
+      "work": "难经",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/八十一難經",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "bd4ee57aeadf7898a65e2a3fbdb9199553b2aa7a339e21f6e6a5537ac2b7c512",
+      "retrievedHtmlBytes": 178744,
+      "locator": "十八难",
+      "supports": "The passage reads 九候者，浮中沉, supporting 候 over the local witness transcription 侯.",
+      "excerpt": "三部者，寸关尺也；九候者，浮中沉也",
+      "limitations": "Community-maintained digital transcription; used for character-level collation, not semantic or clinical acceptance."
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": []
+}

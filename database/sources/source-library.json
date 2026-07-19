@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 265,
+    "entries": 266,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -12,7 +12,7 @@
       "xuanxue_compendium": 70,
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
-      "shared_ctext_witnesses": 9,
+      "shared_ctext_witnesses": 10,
       "external_source_manifests": 3,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
@@ -2866,6 +2866,17 @@
       "format": "html",
       "bytes": 136187,
       "sha256": "3efe2493fafda64efdfbc13a4519cbe188a05b6d4bc587529d2ec2ded264a57c",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.5c048bcc53cdad2e",
+      "group": "shared_ctext_witnesses",
+      "title": "tcm-lingshu-nanjing-witnesses-2026-07-18.json",
+      "canonicalPath": "database/sources/ctext/tcm-lingshu-nanjing-witnesses-2026-07-18.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 4463,
+      "sha256": "bb56d7d4fb7a5d789b8b9bc65b114da6834c3325a1589e0b190e009762460b39",
       "relationshipStatus": "standalone"
     },
     {

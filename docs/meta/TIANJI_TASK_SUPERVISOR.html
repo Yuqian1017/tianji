@@ -69,8 +69,8 @@
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
       overallPercent: 58,
-      currentFocus: '按《素问》同一合同校勘 `43-经典-灵枢与难经要义.md` 的 98 段显式引文；区分底本命中、删节拼接、跨书转引、编辑文字、现代扩写和异文。',
-      nextDecision: '完成《灵枢》《难经》引文 provenance 与人工形态裁决后，继续 `44-经典-伤寒论六经方证条文.md`；nihaisha-nishi-tcm 只作页级定位和异文警报。',
+      currentFocus: '按同一 provenance 合同校勘 `44-经典-伤寒论六经方证条文.md`；先完整提取显式引文，再区分原文命中、删节拼接、注家文字、现代扩写和版本异文。',
+      nextDecision: '完成《伤寒论》显式引文来源与形态裁决后，继续 `45-经典-金匮要略杂病方证条文.md`；nihaisha-nishi-tcm 继续只作页级定位和异文警报。',
       antiDriftRule: '现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -89,10 +89,13 @@
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
-        'TJI-VAL-024 启动：ref43 共提取 98 段显式引文，首轮机械匹配 68 段，30 段进入人工形态/跨书/编辑文字裁决',
+        'TJI-VAL-025 启动：下一批按同一合同校勘 ref44《伤寒论》，经文、方证整理、注家/课程解释和现代扩写分层',
+        'TJI-VAL-024 完成：ref43 共 98 段显式引文，75 段机械定位、23 段人工形态裁决、0 段待人工；1,073 项 0 fail',
+        'ref43 识别 3 条实际来自《素问》的跨书引文；CText/Wikisource 支持问/间、候/侯、太阴/太阳三处本地转录差异',
+        'nihaisha-nishi-tcm 在 ref43 只贡献 3 个二手页卡 locator，不替代《灵枢》《难经》见证；中央来源库现为 11 组、266 文件',
         'TJI-VAL-023 完成：nihaisha-nishi-tcm 固定 commit e3cb51359a5ef9fc0725132814d474168bb8de24；3,094 文件、2,986 截图、22 文献/10,538 页卡已分层审计',
         '上游 51 条勘误拆出 58 个词形与天机 TCM 交叉检查，13 个有命中、0 条直接覆盖；四部典籍全部建立 locator-only 路由',
-        '中央来源库现为 11 组、265 文件；12 项来源专项测试 0 fail；课程正文、截图、病例和页卡全文均未复制',
+        '课程正文、截图、病例和页卡全文均未复制；公共转录见证只保存转换后的定位、短摘录和抓取响应哈希',
         'TJI-VAL-022 完成：xuanxue-database-skill 固定 commit 926d0b56154c8764b68e9ddf2661949e9b5b5f11，14 文件/858 行与 MIT 许可已登记',
         '实战证据候选 schema 已拆分典籍 authority、个人 practice outcome 与 KP mastery；断语事前冻结、排盘/流派版本、完整分母、隐私和高风险排除均进入合同',
         '中央来源库现为 11 组、264 文件；9 项来源专项与全库 validation 200/200 通过，production build 和本批定向 lint 通过',

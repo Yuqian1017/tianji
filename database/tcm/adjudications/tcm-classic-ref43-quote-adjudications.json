@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "scope": "reference_43_lingshu_nanjing_quote_form_adjudications",
+  "doctrine": "classify_non_verbatim_form_without_promoting_content_or_rewriting_raw_witnesses",
+  "publicWitnessPath": "database/sources/ctext/tcm-lingshu-nanjing-witnesses-2026-07-18.json",
+  "records": [
+    {
+      "id": "tcm.classic.ref43.quote.L0026Q1",
+      "quoteText": "精脱者耳聋;气脱者目不明;津脱者腠理开、汗大泄;液脱者骨属屈伸不利、脑髓消、胫酸耳鸣;血脱者色白、夭然不泽",
+      "category": "abridged_and_normalized_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [206] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compresses the six-depletion passage, drops 色夭 and 其脉空虚, and normalizes 耳数鸣 to 耳鸣."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0030Q1",
+      "quoteText": "平人不食饮**七日而死**,水谷精气津液皆尽故也",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [212] }],
+      "relatedSourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [340, 341] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Traceable most closely to Lingshu line 212 with particles omitted; Nanjing 43 contains a related but differently worded seven-day explanation."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0036Q1",
+      "quoteText": "老者之气血衰,肌肉枯,气道涩……营气衰少而卫气内代,故**昼不精,夜不瞑**",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [142] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Uses an ellipsis but also removes particles and a middle clause, so the normalized segments are not a verbatim continuous quotation."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0047Q2",
+      "quoteText": "胃厚色黑大骨及肥者皆**胜毒**,瘦而薄胃者皆不胜毒",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [318] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops punctuation and the connective 故其 while retaining the source contrast. Textual provenance does not validate the claim as a modern dosing rule."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0060Q4",
+      "quoteText": "FAST",
+      "category": "modern_emergency_mnemonic",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern stroke-recognition abbreviation embedded in editorial prose, not wording from Lingshu."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0062Q2",
+      "quoteText": "上之皮夭以坚,如牛领之皮",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [484] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compresses 疽者...上之皮夭以坚，上如牛领之皮 and removes the repeated 上."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0062Q4",
+      "quoteText": "其状赤黑,死不治;不衰,急斩之",
+      "category": "stitched_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [483] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Stitches two clauses around the omitted sentence 不赤黑，不死 and drops the final prohibition."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0062Q5",
+      "quoteText": "红肿热痛进展快、位于头面颈咽、发热",
+      "category": "modern_editorial_red_flag",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [483, 484] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern symptom grouping and red-flag summary, not wording from Lingshu."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0069Q1",
+      "quoteText": "入国问俗,入家问讳,上堂问礼,**临病人问所便**",
+      "category": "external_witness_supported_local_transcription_correction",
+      "verdict": "non_verbatim_against_local_but_public_witness_supported",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [199] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-lingshu-shizhuan"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:d2b093656655#p90"],
+      "note": "The local witness has 间俗 and 间所便. CText supports the reference reading 问俗 and 问所便; the raw local file remains unchanged."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0073Q1",
+      "quoteText": "**青黑为痛,黄赤为热,白为寒**;黄而膏润为脓",
+      "category": "stitched_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [298, 301] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Joins clauses from two different passages in the same chapter."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0081Q1",
+      "quoteText": "**新内勿刺、已醉勿刺、新怒勿刺、新劳勿刺、已饱勿刺、已饥勿刺、已渴勿刺**,大惊大恐必定其气,乘车来者卧而休之如食顷,出行来者坐而休之如行十里顷",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [73] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops the reciprocal 已刺勿... clauses and repeated 乃刺之 wording from the twelve prohibitions."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0082Q1",
+      "quoteText": "形肉已夺、大夺血之后、大汗出之后、大泄之后、**新产及大血之后**",
+      "category": "compiled_source_list",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [362] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Concatenates the five items while removing the 一夺 through 五夺 labels and concluding sentence."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0084Q1",
+      "quoteText": "针能杀生人,不能起死者",
+      "category": "editorially_prefixed_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [358] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "The local passage reads 能杀生人，不能起死者; the reference adds 针 as an editorial subject."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0085Q1",
+      "quoteText": "一经上实下虚,必有横络盛加于大经,视而泻之,此所谓**解结**",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [446] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops 而不通者 and 令之不通 from the source sentence."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0089Q2",
+      "quoteText": "三部者,寸关尺也;九候者,浮中沉也",
+      "category": "external_witness_supported_local_transcription_correction",
+      "verdict": "non_verbatim_against_local_but_public_witness_supported",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [163] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["wikisource-nanjing-shibanan"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:90a0473d9b3b#p44", "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:d2b093656655#p43"],
+      "note": "The local witness has 九侯. Wikisource and two upstream secondary page-card locators support 九候; the raw local file remains unchanged."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0102Q1",
+      "quoteText": "督之为病,脊强而厥;任之为病,男子七疝、女子瘕聚;冲之为病,逆气而里急;带之为病,腹满,**腰溶溶若坐水中**;阳维为病苦寒热,阴维为病苦心痛",
+      "category": "stitched_and_normalized_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [249, 250, 252, 253, 254] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Stitches separate 奇经病 clauses, omits intervening clauses, changes 若心痛 to 苦心痛, and normalizes the local 妇子 to 女子."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0107Q1",
+      "quoteText": "忧愁思虑则伤心;形寒饮冷则伤肺;恚怒气逆伤肝;饮食劳倦伤脾;久坐湿地、强力入水则伤肾",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [375] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops 上而不下 from the liver clause and regularizes punctuation."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0108Q1",
+      "quoteText": "病欲得寒而欲见人者,病在**腑**(阳);病欲得温而不欲见人、恶闻人声者,病在**脏**(阴)",
+      "category": "abridged_source_quote_with_editorial_gloss",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [397] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Condenses the answer, moves 恶闻人声 into the quoted contrast, and adds modern editorial parentheticals 阳 and 阴."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0109Q1",
+      "quoteText": "积者阴气也,五脏所生,其始发有常处,**其痛不离其部**;聚者阳气也,六腑所成,其始发无根本,**其痛无常处**",
+      "category": "stitched_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [417] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Selects and reorders clauses from a longer repeated contrast within one source line."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0113Q1",
+      "quoteText": "七传者死(传其所胜),间脏者生(传其所生)",
+      "category": "compiled_source_quote_with_parenthetical_gloss",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [406, 407] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compiles the question and answer into parenthetical shorthand; the answer first says 传其子 and later 传其所生."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0120Q3",
+      "quoteText": "虚实核对",
+      "category": "modern_editorial_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [368, 369, 370] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Skill-level safety workflow label, not wording from Nanjing."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0126Q2",
+      "quoteText": "肺手太阴之脉",
+      "category": "external_witness_supported_local_transcription_correction",
+      "verdict": "non_verbatim_against_local_but_two_public_witnesses_supported",
+      "sourceLocations": [{ "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [80] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-lingshu-jingmai", "wikisource-lingshu-jingmai"],
+      "secondaryLocatorRefs": [],
+      "note": "The local witness reads 肺手太阳之脉. CText and Wikisource independently support 太阴; the raw local file remains unchanged."
+    },
+    {
+      "id": "tcm.classic.ref43.quote.L0127Q1",
+      "quoteText": "有名无形",
+      "category": "minor_omission_in_compiled_quote",
+      "verdict": "non_verbatim_traceable_across_two_works",
+      "sourceLocations": [
+        { "sourceId": "huangdi-neijing-lingshu-local-text", "lines": [257] },
+        { "sourceId": "nanjing-local-text", "lines": [221, 314] }
+      ],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Both local works use 有名而无形; the reference drops 而 while explicitly discussing the two-work relationship."
+    }
+  ]
+}

@@ -746,12 +746,14 @@
 | TCM-FORMULA-CATALOG-CANDIDATES | `database/tcm/normalized/tcm-formula-catalog-candidates.json` | `24-30` 完整原文 inventory、186 个格式化定义、180 个显式附方实体、522 条重叠窄风险视图和 21 个重点裁决 | 方剂身份/计数、剂量、禁忌、毒性、急症与现代疗效风险可审计候选层 | 附方声明 182、显式实体 180且第 25 分册缺 2；所有记录 blocked |
 | TCM-CLASSICS-FOOD-CANDIDATES | `database/tcm/normalized/tcm-classics-food-candidates.json` | `42-48` 完整原文 inventory、603 条重叠窄风险视图、20 个重点裁决和旧食疗 runtime 状态 | 经典/医家、食药身份、剂量、禁忌、急症与疾病替代风险候选层 | A/B/食疗/药食标签不授予资格；所有记录 blocked |
 | TCM-CLASSIC-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-quote-provenance.json`；`database/tcm/adjudications/tcm-classic-quote-adjudications.json` | `42-经典-素问要义.md` 的 111 段显式引文与本地《黄帝内经素问》逐段文本比对 | 经典引文连续/省略分段命中、人工形态裁决与 normalized 修正记录 | 83 段机械定位、28 段人工裁决、0 段待人工、1 条拼接误引覆盖校正；Skill 原包保持原哈希；文本命中不授证解释、医学等价或产品用途 |
+| TCM-CLASSIC-REF43-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-ref43-quote-provenance.json`；`database/tcm/adjudications/tcm-classic-ref43-quote-adjudications.json` | `43-经典-灵枢与难经要义.md` 的 98 段显式引文与本地《灵枢》《难经》《素问》逐段文本比对 | 连续/省略分段命中、跨书识别、人工形态裁决、公共转录校勘与倪海厦页卡二手定位 | 75 段机械定位、23 段人工裁决、0 段待人工；3 条《素问》跨书引文、3 处本地转录差异；所有记录 blocked，不授证解释或现代用法 |
+| TCM-LINGSHU-NANJING-PUBLIC-WITNESSES | `database/sources/ctext/tcm-lingshu-nanjing-witnesses-2026-07-18.json` | CText《灵枢·经脉》《师传》、CText《难经》入口、Wikisource《灵枢》第三卷与《八十一难经》 | “问/间”“候/侯”“太阴/太阳”三处字符级校勘；固定 URL、抓取响应字节数与 SHA256 | 公共转录本不是已识别版本影印；动态网页重抓哈希可能变化，只作校勘见证 |
 | TCM-FOOD-MEDICINE-ADJUDICATIONS | `database/tcm/normalized/tcm-food-medicine-adjudications.json` | 106 项目录、Skill A 清单 15 项、8 条食疗/药食配方和 38 个原料引用 | 食品身份、部位/炮制缺口和配方继承裁决 | 目录身份已固定；全部具体产品用法 blocked |
 | TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-NIHAIXIA-CANDIDATE | `database/sources/external/nihaixia-skill-v2.1.0-2026-07-18.json` | 倪海厦 Skill 固定 commit、仓库规模、自述覆盖、许可冲突、原始见证断点和吸收边界 | 发现倪派资料可能覆盖的数据库缺口并寻找一手来源 | 仅元数据；不复制正文，不充当原典、accepted 主张或运行时来源 |
 | TCM-NIHAISHA-NISHI-CANDIDATE | `database/sources/external/nihaisha-nishi-tcm-2026-07-18.json` | 3,094 文件固定树、2,986 张截图、22 文献/10,538 页卡、四部经典定位信号、51 条勘误交叉检查与许可边界 | 为灵枢、难经、伤寒、金匮逐条校勘提供页级定位和异文警报 | 只吸收转换后的元数据与验证路由；无标准开源许可、无原 PDF/版本哈希，不复制正文或自动改库 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
-| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、265 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
+| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、266 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
 ## 7. 当前 Runtime 来源组

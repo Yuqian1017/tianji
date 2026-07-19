@@ -1,0 +1,5400 @@
+{
+  "audit": "tcm-classic-ref43-quote-provenance",
+  "generatedAt": "2026-07-18",
+  "scope": "reference_43_lingshu_nanjing_explicit_quotes",
+  "counts": {
+    "quotes": 98,
+    "located": 75,
+    "exactText": 6,
+    "normalizedContiguous": 60,
+    "segmentedEllipsis": 9,
+    "unresolved": 23,
+    "manualAdjudicated": 23,
+    "pendingManual": 0,
+    "crossSource": 3,
+    "publicWitnessSupported": 3,
+    "secondaryLocatorLinked": 2,
+    "checks": 1073,
+    "failures": 0
+  },
+  "boundaries": [
+    "A text match proves only that the quoted character sequence occurs in a selected local witness.",
+    "Manual form adjudication records abridgement, stitching, editorial prose, and transcription variants without accepting a traditional interpretation or modern medical claim.",
+    "CText and Wikisource are public transcription witnesses used for character-level collation; they are not identified edition-level facsimiles.",
+    "nihaisha-nishi-tcm page cards are secondary locators only and cannot replace Lingshu or Nanjing witnesses.",
+    "Raw Skill references and local source texts remain unchanged; corrections are overlays in adjudication and provenance data.",
+    "No quote, dose, treatment, diagnosis, prognosis, or self-care instruction becomes runtime eligible through this inventory."
+  ],
+  "failures": [],
+  "checks": [
+    {
+      "id": "doctrine",
+      "pass": true,
+      "detail": "classical_source_first"
+    },
+    {
+      "id": "scope",
+      "pass": true,
+      "detail": "reference_43_lingshu_nanjing_explicit_quotes"
+    },
+    {
+      "id": "schema-version",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "status",
+      "pass": true,
+      "detail": "text_match_and_manual_form_adjudication_not_content_acceptance"
+    },
+    {
+      "id": "record-count",
+      "pass": true,
+      "detail": 98
+    },
+    {
+      "id": "expected-quote-count",
+      "pass": true,
+      "detail": 98
+    },
+    {
+      "id": "expected-located-count",
+      "pass": true,
+      "detail": 75
+    },
+    {
+      "id": "expected-exact-count",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "expected-normalized-count",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "id": "expected-segmented-count",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "expected-unresolved-count",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "expected-manual-count",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "pending-manual-zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "id": "expected-cross-source-count",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "id": "expected-public-witness-records",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "id": "expected-secondary-locator-records",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "source-hash:ref43",
+      "pass": true,
+      "detail": "database/tcm/skill-v3/references/43-经典-灵枢与难经要义.md"
+    },
+    {
+      "id": "source-hash:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "database/tcm/skill-v3/sources/黄帝内经灵枢.txt"
+    },
+    {
+      "id": "source-hash:nanjing-local-text",
+      "pass": true,
+      "detail": "database/tcm/skill-v3/sources/难经.txt"
+    },
+    {
+      "id": "source-hash:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "database/tcm/skill-v3/sources/黄帝内经素问.txt"
+    },
+    {
+      "id": "source-hash:ref43-manual-adjudications",
+      "pass": true,
+      "detail": "database/tcm/adjudications/tcm-classic-ref43-quote-adjudications.json"
+    },
+    {
+      "id": "source-hash:ref43-public-transcription-witnesses",
+      "pass": true,
+      "detail": "database/sources/ctext/tcm-lingshu-nanjing-witnesses-2026-07-18.json"
+    },
+    {
+      "id": "source-hash:nihaisha-nishi-tcm-locator-manifest",
+      "pass": true,
+      "detail": "database/sources/external/nihaisha-nishi-tcm-2026-07-18.json"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0025Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0025Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0025Q1",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0025Q1",
+      "pass": true,
+      "detail": 126
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0025Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0025Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0025Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0025Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0025Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0025Q1:huangdi-neijing-lingshu-local-text:62",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0025Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0025Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0025Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0025Q2",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0025Q2",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0025Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0025Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0025Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0025Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0025Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0025Q2:huangdi-neijing-lingshu-local-text:62",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0025Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0026Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": 26
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": 53
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": "abridged_and_normalized_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0026Q1",
+      "pass": true,
+      "detail": "Compresses the six-depletion passage, drops 色夭 and 其脉空虚, and normalizes 耳数鸣 to 耳鸣."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0026Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0026Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0026Q1:huangdi-neijing-lingshu-local-text:206",
+      "pass": true,
+      "detail": 206
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0027Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0027Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0027Q1",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0027Q1",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0027Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0027Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0027Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0027Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0027Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0027Q1:huangdi-neijing-lingshu-local-text:141",
+      "pass": true,
+      "detail": 141
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0027Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0027Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0027Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0027Q2",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0027Q2",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0027Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0027Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0027Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0027Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0027Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0027Q2:huangdi-neijing-lingshu-local-text:145",
+      "pass": true,
+      "detail": 145
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0027Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0027Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0027Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0027Q3",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0027Q3",
+      "pass": true,
+      "detail": 18
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0027Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0027Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0027Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0027Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0027Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0027Q3:huangdi-neijing-lingshu-local-text:146",
+      "pass": true,
+      "detail": 146
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0027Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0028Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0028Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0028Q1",
+      "pass": true,
+      "detail": 28
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0028Q1",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0028Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0028Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0028Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0028Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0028Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0028Q1:huangdi-neijing-lingshu-local-text:216",
+      "pass": true,
+      "detail": 216
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0028Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0030Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": 30
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0030Q1",
+      "pass": true,
+      "detail": "Traceable most closely to Lingshu line 212 with particles omitted; Nanjing 43 contains a related but differently worded seven-day explanation."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0030Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0030Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0030Q1:huangdi-neijing-lingshu-local-text:212",
+      "pass": true,
+      "detail": 212
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0030Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0030Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0030Q1:nanjing-local-text:340",
+      "pass": true,
+      "detail": 340
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0030Q1:nanjing-local-text:341",
+      "pass": true,
+      "detail": 341
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0030Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0030Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0030Q2",
+      "pass": true,
+      "detail": 30
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0030Q2",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0030Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0030Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0030Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0030Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0030Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0030Q2:huangdi-neijing-lingshu-local-text:334",
+      "pass": true,
+      "detail": 334
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0030Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0034Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0034Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0034Q1",
+      "pass": true,
+      "detail": 34
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0034Q1",
+      "pass": true,
+      "detail": 30
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0034Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0034Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0034Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0034Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0034Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0034Q1:huangdi-neijing-lingshu-local-text:415",
+      "pass": true,
+      "detail": 415
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0034Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0034Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0034Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0034Q2",
+      "pass": true,
+      "detail": 34
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0034Q2",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0034Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0034Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0034Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0034Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0034Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0034Q2:huangdi-neijing-lingshu-local-text:415",
+      "pass": true,
+      "detail": 415
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0034Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0034Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0034Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0034Q3",
+      "pass": true,
+      "detail": 34
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0034Q3",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0034Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0034Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0034Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0034Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0034Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0034Q3:huangdi-neijing-lingshu-local-text:415",
+      "pass": true,
+      "detail": 415
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0034Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0035Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0035Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0035Q1",
+      "pass": true,
+      "detail": 35
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0035Q1",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0035Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0035Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0035Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0035Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0035Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0035Q1:huangdi-neijing-lingshu-local-text:473",
+      "pass": true,
+      "detail": 473
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0035Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0035Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0035Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0035Q2",
+      "pass": true,
+      "detail": 35
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0035Q2",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0035Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0035Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0035Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0035Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0035Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0035Q2:huangdi-neijing-lingshu-local-text:474",
+      "pass": true,
+      "detail": 474
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0035Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0036Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": 38
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0036Q1",
+      "pass": true,
+      "detail": "Uses an ellipsis but also removes particles and a middle clause, so the normalized segments are not a verbatim continuous quotation."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0036Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0036Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0036Q1:huangdi-neijing-lingshu-local-text:142",
+      "pass": true,
+      "detail": 142
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0037Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0037Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0037Q1",
+      "pass": true,
+      "detail": 37
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0037Q1",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0037Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0037Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0037Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0037Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0037Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0037Q1:huangdi-neijing-lingshu-local-text:267",
+      "pass": true,
+      "detail": 267
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0037Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0042Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0042Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0042Q1",
+      "pass": true,
+      "detail": 42
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0042Q1",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0042Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0042Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0042Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0042Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0042Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0042Q1:huangdi-neijing-lingshu-local-text:50",
+      "pass": true,
+      "detail": 50
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0042Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0042Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0042Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0042Q2",
+      "pass": true,
+      "detail": 42
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0042Q2",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0042Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0042Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0042Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0042Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0042Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0042Q2:huangdi-neijing-lingshu-local-text:50",
+      "pass": true,
+      "detail": 50
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0042Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0042Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0042Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0042Q3",
+      "pass": true,
+      "detail": 42
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0042Q3",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0042Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0042Q3",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0042Q3:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-suwen-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0042Q3:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0042Q3:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0042Q3:huangdi-neijing-suwen-local-text:206",
+      "pass": true,
+      "detail": 206
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0042Q3",
+      "pass": true,
+      "detail": "cross_source_text_match_only_not_content_acceptance"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0043Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0043Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0043Q1",
+      "pass": true,
+      "detail": 43
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0043Q1",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0043Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0043Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0043Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0043Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0043Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0043Q1:huangdi-neijing-lingshu-local-text:322",
+      "pass": true,
+      "detail": 322
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0043Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0047Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0047Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0047Q1",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0047Q1",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0047Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0047Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0047Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0047Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0047Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0047Q1:huangdi-neijing-lingshu-local-text:317",
+      "pass": true,
+      "detail": 317
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0047Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0047Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": 26
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0047Q2",
+      "pass": true,
+      "detail": "Drops punctuation and the connective 故其 while retaining the source contrast. Textual provenance does not validate the claim as a modern dosing rule."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0047Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0047Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0047Q2:huangdi-neijing-lingshu-local-text:318",
+      "pass": true,
+      "detail": 318
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0051Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0051Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0051Q1",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0051Q1",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0051Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0051Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0051Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0051Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0051Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0051Q1:huangdi-neijing-lingshu-local-text:392",
+      "pass": true,
+      "detail": 392
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0051Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0051Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0051Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0051Q2",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0051Q2",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0051Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0051Q2",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0051Q2:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-suwen-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0051Q2:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0051Q2:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0051Q2:huangdi-neijing-suwen-local-text:357",
+      "pass": true,
+      "detail": 357
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0051Q2",
+      "pass": true,
+      "detail": "cross_source_text_match_only_not_content_acceptance"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0051Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0051Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0051Q3",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0051Q3",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0051Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0051Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0051Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0051Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "exact_text"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0051Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0051Q3:huangdi-neijing-lingshu-local-text:392",
+      "pass": true,
+      "detail": 392
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0051Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0051Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0051Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0051Q4",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0051Q4",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0051Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0051Q4",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0051Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0051Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "exact_text"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0051Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0051Q4:huangdi-neijing-lingshu-local-text:394",
+      "pass": true,
+      "detail": 394
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0051Q4",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0052Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0052Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0052Q1",
+      "pass": true,
+      "detail": 52
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0052Q1",
+      "pass": true,
+      "detail": 18
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0052Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0052Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0052Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0052Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0052Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0052Q1:huangdi-neijing-lingshu-local-text:345",
+      "pass": true,
+      "detail": 345
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0052Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0053Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0053Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0053Q1",
+      "pass": true,
+      "detail": 53
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0053Q1",
+      "pass": true,
+      "detail": 26
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0053Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0053Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0053Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0053Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0053Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0053Q1:huangdi-neijing-lingshu-local-text:467",
+      "pass": true,
+      "detail": 467
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0053Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0054Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0054Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0054Q1",
+      "pass": true,
+      "detail": 54
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0054Q1",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0054Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0054Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0054Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0054Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0054Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0054Q1:huangdi-neijing-lingshu-local-text:173",
+      "pass": true,
+      "detail": 173
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0054Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0054Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0054Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0054Q2",
+      "pass": true,
+      "detail": 54
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0054Q2",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0054Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0054Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0054Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0054Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0054Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0054Q2:huangdi-neijing-lingshu-local-text:193",
+      "pass": true,
+      "detail": 193
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0054Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0060Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0060Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0060Q1",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0060Q1",
+      "pass": true,
+      "detail": 23
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0060Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0060Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0060Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0060Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0060Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0060Q1:huangdi-neijing-lingshu-local-text:167",
+      "pass": true,
+      "detail": 167
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0060Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0060Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0060Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0060Q2",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0060Q2",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0060Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0060Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0060Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0060Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0060Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0060Q2:huangdi-neijing-lingshu-local-text:167",
+      "pass": true,
+      "detail": 167
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0060Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0060Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0060Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0060Q3",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0060Q3",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0060Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0060Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0060Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0060Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0060Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0060Q3:huangdi-neijing-lingshu-local-text:164",
+      "pass": true,
+      "detail": 164
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0060Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0060Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": "modern_emergency_mnemonic"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0060Q4",
+      "pass": true,
+      "detail": "Modern stroke-recognition abbreviation embedded in editorial prose, not wording from Lingshu."
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0062Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0062Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0062Q1",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0062Q1",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0062Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0062Q1",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0062Q1:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-suwen-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0062Q1:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0062Q1:huangdi-neijing-suwen-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0062Q1:huangdi-neijing-suwen-local-text:30",
+      "pass": true,
+      "detail": 30
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0062Q1",
+      "pass": true,
+      "detail": "cross_source_text_match_only_not_content_acceptance"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0062Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0062Q2",
+      "pass": true,
+      "detail": "Compresses 疽者...上之皮夭以坚，上如牛领之皮 and removes the repeated 上."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0062Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0062Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0062Q2:huangdi-neijing-lingshu-local-text:484",
+      "pass": true,
+      "detail": 484
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0062Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0062Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0062Q3",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0062Q3",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0062Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0062Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0062Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0062Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0062Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0062Q3:huangdi-neijing-lingshu-local-text:483",
+      "pass": true,
+      "detail": 483
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0062Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0062Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": "stitched_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0062Q4",
+      "pass": true,
+      "detail": "Stitches two clauses around the omitted sentence 不赤黑，不死 and drops the final prohibition."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0062Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0062Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0062Q4:huangdi-neijing-lingshu-local-text:483",
+      "pass": true,
+      "detail": 483
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0062Q5"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": 62
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": "modern_editorial_red_flag"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0062Q5",
+      "pass": true,
+      "detail": "Modern symptom grouping and red-flag summary, not wording from Lingshu."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0062Q5:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0062Q5:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0062Q5:huangdi-neijing-lingshu-local-text:483",
+      "pass": true,
+      "detail": 483
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0062Q5:huangdi-neijing-lingshu-local-text:484",
+      "pass": true,
+      "detail": 484
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0069Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": 69
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": "external_witness_supported_local_transcription_correction"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": "non_verbatim_against_local_but_public_witness_supported"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0069Q1",
+      "pass": true,
+      "detail": "The local witness has 间俗 and 间所便. CText supports the reference reading 问俗 and 问所便; the raw local file remains unchanged."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0069Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0069Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0069Q1:huangdi-neijing-lingshu-local-text:199",
+      "pass": true,
+      "detail": 199
+    },
+    {
+      "id": "public-witness:tcm.classic.ref43.quote.L0069Q1:ctext-lingshu-shizhuan",
+      "pass": true,
+      "detail": "ctext-lingshu-shizhuan"
+    },
+    {
+      "id": "secondary-locator:tcm.classic.ref43.quote.L0069Q1:external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:d2b093656655#p90",
+      "pass": true,
+      "detail": "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:d2b093656655#p90"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0069Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0069Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0069Q2",
+      "pass": true,
+      "detail": 69
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0069Q2",
+      "pass": true,
+      "detail": 29
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0069Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0069Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0069Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0069Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0069Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0069Q2:huangdi-neijing-lingshu-local-text:201",
+      "pass": true,
+      "detail": 201
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0069Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0069Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0069Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0069Q3",
+      "pass": true,
+      "detail": 69
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0069Q3",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0069Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0069Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0069Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0069Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0069Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0069Q3:huangdi-neijing-lingshu-local-text:201",
+      "pass": true,
+      "detail": 201
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0069Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0073Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": 73
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": "stitched_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0073Q1",
+      "pass": true,
+      "detail": "Joins clauses from two different passages in the same chapter."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0073Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0073Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0073Q1:huangdi-neijing-lingshu-local-text:298",
+      "pass": true,
+      "detail": 298
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0073Q1:huangdi-neijing-lingshu-local-text:301",
+      "pass": true,
+      "detail": 301
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0073Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0073Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0073Q2",
+      "pass": true,
+      "detail": 73
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0073Q2",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0073Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0073Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0073Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0073Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0073Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0073Q2:huangdi-neijing-lingshu-local-text:300",
+      "pass": true,
+      "detail": 300
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0073Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0074Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0074Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0074Q1",
+      "pass": true,
+      "detail": 74
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0074Q1",
+      "pass": true,
+      "detail": 29
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0074Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0074Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0074Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0074Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0074Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0074Q1:huangdi-neijing-lingshu-local-text:31",
+      "pass": true,
+      "detail": 31
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0074Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0074Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0074Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0074Q2",
+      "pass": true,
+      "detail": 74
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0074Q2",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0074Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0074Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0074Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0074Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0074Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0074Q2:huangdi-neijing-lingshu-local-text:35",
+      "pass": true,
+      "detail": 35
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0074Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0075Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0075Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0075Q1",
+      "pass": true,
+      "detail": 75
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0075Q1",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0075Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0075Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0075Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0075Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0075Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0075Q1:huangdi-neijing-lingshu-local-text:436",
+      "pass": true,
+      "detail": 436
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0075Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0075Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0075Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0075Q2",
+      "pass": true,
+      "detail": 75
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0075Q2",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0075Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0075Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0075Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0075Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0075Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0075Q2:huangdi-neijing-lingshu-local-text:436",
+      "pass": true,
+      "detail": 436
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0075Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0080Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0080Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0080Q1",
+      "pass": true,
+      "detail": 80
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0080Q1",
+      "pass": true,
+      "detail": 24
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0080Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0080Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0080Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0080Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0080Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0080Q1:huangdi-neijing-lingshu-local-text:10",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0080Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0080Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0080Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0080Q2",
+      "pass": true,
+      "detail": 80
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0080Q2",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0080Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0080Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0080Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0080Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0080Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0080Q2:huangdi-neijing-lingshu-local-text:7",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0080Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0081Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": 81
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": 73
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0081Q1",
+      "pass": true,
+      "detail": "Drops the reciprocal 已刺勿... clauses and repeated 乃刺之 wording from the twelve prohibitions."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0081Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0081Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0081Q1:huangdi-neijing-lingshu-local-text:73",
+      "pass": true,
+      "detail": 73
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0082Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": 82
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": 33
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": "compiled_source_list"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0082Q1",
+      "pass": true,
+      "detail": "Concatenates the five items while removing the 一夺 through 五夺 labels and concluding sentence."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0082Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0082Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0082Q1:huangdi-neijing-lingshu-local-text:362",
+      "pass": true,
+      "detail": 362
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0083Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0083Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0083Q1",
+      "pass": true,
+      "detail": 83
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0083Q1",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0083Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0083Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0083Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0083Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0083Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0083Q1:huangdi-neijing-lingshu-local-text:310",
+      "pass": true,
+      "detail": 310
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0083Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0083Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0083Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0083Q2",
+      "pass": true,
+      "detail": 83
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0083Q2",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0083Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0083Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0083Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0083Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0083Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0083Q2:huangdi-neijing-lingshu-local-text:310",
+      "pass": true,
+      "detail": 310
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0083Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0084Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": 84
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": "editorially_prefixed_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0084Q1",
+      "pass": true,
+      "detail": "The local passage reads 能杀生人，不能起死者; the reference adds 针 as an editorial subject."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0084Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0084Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0084Q1:huangdi-neijing-lingshu-local-text:358",
+      "pass": true,
+      "detail": 358
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0084Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0084Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0084Q2",
+      "pass": true,
+      "detail": 84
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0084Q2",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0084Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0084Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0084Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0084Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0084Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0084Q2:huangdi-neijing-lingshu-local-text:329",
+      "pass": true,
+      "detail": 329
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0084Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0085Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": 85
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": 31
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0085Q1",
+      "pass": true,
+      "detail": "Drops 而不通者 and 令之不通 from the source sentence."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0085Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0085Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0085Q1:huangdi-neijing-lingshu-local-text:446",
+      "pass": true,
+      "detail": 446
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0085Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0085Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0085Q2",
+      "pass": true,
+      "detail": 85
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0085Q2",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0085Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0085Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0085Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0085Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0085Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0085Q2:huangdi-neijing-lingshu-local-text:105",
+      "pass": true,
+      "detail": 105
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0085Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0089Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0089Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0089Q1",
+      "pass": true,
+      "detail": 89
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0089Q1",
+      "pass": true,
+      "detail": 33
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0089Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0089Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0089Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0089Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0089Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0089Q1:nanjing-local-text:27",
+      "pass": true,
+      "detail": 27
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0089Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0089Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": 89
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": "external_witness_supported_local_transcription_correction"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": "non_verbatim_against_local_but_public_witness_supported"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0089Q2",
+      "pass": true,
+      "detail": "The local witness has 九侯. Wikisource and two upstream secondary page-card locators support 九候; the raw local file remains unchanged."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0089Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0089Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0089Q2:nanjing-local-text:163",
+      "pass": true,
+      "detail": 163
+    },
+    {
+      "id": "public-witness:tcm.classic.ref43.quote.L0089Q2:wikisource-nanjing-shibanan",
+      "pass": true,
+      "detail": "wikisource-nanjing-shibanan"
+    },
+    {
+      "id": "secondary-locator:tcm.classic.ref43.quote.L0089Q2:external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:90a0473d9b3b#p44",
+      "pass": true,
+      "detail": "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:90a0473d9b3b#p44"
+    },
+    {
+      "id": "secondary-locator:tcm.classic.ref43.quote.L0089Q2:external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:d2b093656655#p43",
+      "pass": true,
+      "detail": "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:d2b093656655#p43"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0090Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0090Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0090Q1",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0090Q1",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0090Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0090Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0090Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0090Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0090Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0090Q1:nanjing-local-text:451",
+      "pass": true,
+      "detail": 451
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0090Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0091Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0091Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0091Q1",
+      "pass": true,
+      "detail": 91
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0091Q1",
+      "pass": true,
+      "detail": 50
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0091Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0091Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0091Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0091Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0091Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0091Q1:nanjing-local-text:104",
+      "pass": true,
+      "detail": 104
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0091Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0091Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0091Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0091Q2",
+      "pass": true,
+      "detail": 91
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0091Q2",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0091Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0091Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0091Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0091Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0091Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0091Q2:nanjing-local-text:113",
+      "pass": true,
+      "detail": 113
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0091Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0091Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0091Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0091Q3",
+      "pass": true,
+      "detail": 91
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0091Q3",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0091Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0091Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0091Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0091Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0091Q3:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0091Q3:nanjing-local-text:113",
+      "pass": true,
+      "detail": 113
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0091Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0092Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0092Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0092Q1",
+      "pass": true,
+      "detail": 92
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0092Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0092Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0092Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0092Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0092Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0092Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0092Q1:nanjing-local-text:139",
+      "pass": true,
+      "detail": 139
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0092Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0093Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0093Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0093Q1",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0093Q1",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0093Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0093Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0093Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0093Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0093Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0093Q1:nanjing-local-text:75",
+      "pass": true,
+      "detail": 75
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0093Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0093Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0093Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0093Q2",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0093Q2",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0093Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0093Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0093Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0093Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0093Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0093Q2:nanjing-local-text:182",
+      "pass": true,
+      "detail": 182
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0093Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0093Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0093Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0093Q3",
+      "pass": true,
+      "detail": 93
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0093Q3",
+      "pass": true,
+      "detail": 15
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0093Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0093Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0093Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0093Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0093Q3:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0093Q3:nanjing-local-text:186",
+      "pass": true,
+      "detail": 186
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0093Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0097Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0097Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0097Q1",
+      "pass": true,
+      "detail": 97
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0097Q1",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0097Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0097Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0097Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0097Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0097Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0097Q1:nanjing-local-text:70",
+      "pass": true,
+      "detail": 70
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0097Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0098Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0098Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0098Q1",
+      "pass": true,
+      "detail": 98
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0098Q1",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0098Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0098Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0098Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0098Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0098Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0098Q1:nanjing-local-text:300",
+      "pass": true,
+      "detail": 300
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0098Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0099Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0099Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0099Q1",
+      "pass": true,
+      "detail": 99
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0099Q1",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0099Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0099Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0099Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0099Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0099Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0099Q1:nanjing-local-text:314",
+      "pass": true,
+      "detail": 314
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0099Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0099Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0099Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0099Q2",
+      "pass": true,
+      "detail": 99
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0099Q2",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0099Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0099Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0099Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0099Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0099Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0099Q2:nanjing-local-text:268",
+      "pass": true,
+      "detail": 268
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0099Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0099Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0099Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0099Q3",
+      "pass": true,
+      "detail": 99
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0099Q3",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0099Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0099Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0099Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0099Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "exact_text"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0099Q3:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0099Q3:nanjing-local-text:269",
+      "pass": true,
+      "detail": 269
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0099Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0099Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0099Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0099Q4",
+      "pass": true,
+      "detail": 99
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0099Q4",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0099Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0099Q4",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0099Q4:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0099Q4:nanjing-local-text",
+      "pass": true,
+      "detail": "exact_text"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0099Q4:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0099Q4:nanjing-local-text:270",
+      "pass": true,
+      "detail": 270
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0099Q4",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0099Q5",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0099Q5"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0099Q5",
+      "pass": true,
+      "detail": 99
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0099Q5",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0099Q5",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0099Q5",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0099Q5:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0099Q5:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0099Q5:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0099Q5:nanjing-local-text:271",
+      "pass": true,
+      "detail": 271
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0099Q5",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0099Q6",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0099Q6"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0099Q6",
+      "pass": true,
+      "detail": 99
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0099Q6",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0099Q6",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0099Q6",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0099Q6:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0099Q6:nanjing-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0099Q6:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0099Q6:nanjing-local-text:483",
+      "pass": true,
+      "detail": 483
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0099Q6",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0102Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": 102
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": 71
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": "stitched_and_normalized_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0102Q1",
+      "pass": true,
+      "detail": "Stitches separate 奇经病 clauses, omits intervening clauses, changes 若心痛 to 苦心痛, and normalizes the local 妇子 to 女子."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text:249",
+      "pass": true,
+      "detail": 249
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text:250",
+      "pass": true,
+      "detail": 250
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text:252",
+      "pass": true,
+      "detail": 252
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text:253",
+      "pass": true,
+      "detail": 253
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0102Q1:nanjing-local-text:254",
+      "pass": true,
+      "detail": 254
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0107Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": 107
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": 42
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": "abridged_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0107Q1",
+      "pass": true,
+      "detail": "Drops 上而不下 from the liver clause and regularizes punctuation."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0107Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0107Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0107Q1:nanjing-local-text:375",
+      "pass": true,
+      "detail": 375
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0108Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": 108
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": 47
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": "abridged_source_quote_with_editorial_gloss"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0108Q1",
+      "pass": true,
+      "detail": "Condenses the answer, moves 恶闻人声 into the quoted contrast, and adds modern editorial parentheticals 阳 and 阴."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0108Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0108Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0108Q1:nanjing-local-text:397",
+      "pass": true,
+      "detail": 397
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0108Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0108Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0108Q2",
+      "pass": true,
+      "detail": 108
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0108Q2",
+      "pass": true,
+      "detail": 34
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0108Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0108Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0108Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0108Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0108Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0108Q2:nanjing-local-text:402",
+      "pass": true,
+      "detail": 402
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0108Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0109Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": 109
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": "stitched_source_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0109Q1",
+      "pass": true,
+      "detail": "Selects and reorders clauses from a longer repeated contrast within one source line."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0109Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0109Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0109Q1:nanjing-local-text:417",
+      "pass": true,
+      "detail": 417
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0111Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0111Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0111Q1",
+      "pass": true,
+      "detail": 111
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0111Q1",
+      "pass": true,
+      "detail": 36
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0111Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0111Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0111Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0111Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0111Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0111Q1:nanjing-local-text:432",
+      "pass": true,
+      "detail": 432
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0111Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0111Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0111Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0111Q2",
+      "pass": true,
+      "detail": 111
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0111Q2",
+      "pass": true,
+      "detail": 29
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0111Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0111Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0111Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0111Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0111Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0111Q2:nanjing-local-text:435",
+      "pass": true,
+      "detail": 435
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0111Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0113Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": 113
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": 21
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": "compiled_source_quote_with_parenthetical_gloss"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0113Q1",
+      "pass": true,
+      "detail": "Compiles the question and answer into parenthetical shorthand; the answer first says 传其子 and later 传其所生."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0113Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0113Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0113Q1:nanjing-local-text:406",
+      "pass": true,
+      "detail": 406
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0113Q1:nanjing-local-text:407",
+      "pass": true,
+      "detail": 407
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0117Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0117Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0117Q1",
+      "pass": true,
+      "detail": 117
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0117Q1",
+      "pass": true,
+      "detail": 35
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0117Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0117Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0117Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0117Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0117Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0117Q1:nanjing-local-text:493",
+      "pass": true,
+      "detail": 493
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0117Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0118Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0118Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0118Q1",
+      "pass": true,
+      "detail": 118
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0118Q1",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0118Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0118Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0118Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0118Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0118Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0118Q1:nanjing-local-text:502",
+      "pass": true,
+      "detail": 502
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0118Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0118Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0118Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0118Q2",
+      "pass": true,
+      "detail": 118
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0118Q2",
+      "pass": true,
+      "detail": 19
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0118Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0118Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0118Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0118Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0118Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0118Q2:nanjing-local-text:535",
+      "pass": true,
+      "detail": 535
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0118Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0118Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0118Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0118Q3",
+      "pass": true,
+      "detail": 118
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0118Q3",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0118Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0118Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0118Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0118Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0118Q3:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0118Q3:nanjing-local-text:536",
+      "pass": true,
+      "detail": 536
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0118Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0119Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0119Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0119Q1",
+      "pass": true,
+      "detail": 119
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0119Q1",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0119Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0119Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0119Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0119Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0119Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0119Q1:nanjing-local-text:545",
+      "pass": true,
+      "detail": 545
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0119Q1:nanjing-local-text:546",
+      "pass": true,
+      "detail": 546
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0119Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0120Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0120Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0120Q1",
+      "pass": true,
+      "detail": 120
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0120Q1",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0120Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0120Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0120Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0120Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "segmented_ellipsis"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0120Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0120Q1:nanjing-local-text:90",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0120Q1:nanjing-local-text:566",
+      "pass": true,
+      "detail": 566
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0120Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0120Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0120Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0120Q2",
+      "pass": true,
+      "detail": 120
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0120Q2",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0120Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0120Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0120Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0120Q2:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0120Q2:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0120Q2:nanjing-local-text:90",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0120Q2",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0120Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": 120
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": "modern_editorial_label"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": "not_a_classical_quote"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0120Q3",
+      "pass": true,
+      "detail": "Skill-level safety workflow label, not wording from Nanjing."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0120Q3:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0120Q3:nanjing-local-text",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0120Q3:nanjing-local-text:368",
+      "pass": true,
+      "detail": 368
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0120Q3:nanjing-local-text:369",
+      "pass": true,
+      "detail": 369
+    },
+    {
+      "id": "adjudication-related-line:tcm.classic.ref43.quote.L0120Q3:nanjing-local-text:370",
+      "pass": true,
+      "detail": 370
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0121Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0121Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0121Q1",
+      "pass": true,
+      "detail": 121
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0121Q1",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0121Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0121Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0121Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0121Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0121Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0121Q1:nanjing-local-text:551",
+      "pass": true,
+      "detail": 551
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0121Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0126Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0126Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0126Q1",
+      "pass": true,
+      "detail": 126
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0126Q1",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0126Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0126Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0126Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0126Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "exact_text"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0126Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0126Q1:huangdi-neijing-lingshu-local-text:80",
+      "pass": true,
+      "detail": 80
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0126Q1",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0126Q2"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": 126
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": "external_witness_supported_local_transcription_correction"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": "non_verbatim_against_local_but_two_public_witnesses_supported"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0126Q2",
+      "pass": true,
+      "detail": "The local witness reads 肺手太阳之脉. CText and Wikisource independently support 太阴; the raw local file remains unchanged."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0126Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0126Q2:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0126Q2:huangdi-neijing-lingshu-local-text:80",
+      "pass": true,
+      "detail": 80
+    },
+    {
+      "id": "public-witness:tcm.classic.ref43.quote.L0126Q2:ctext-lingshu-jingmai",
+      "pass": true,
+      "detail": "ctext-lingshu-jingmai"
+    },
+    {
+      "id": "public-witness:tcm.classic.ref43.quote.L0126Q2:wikisource-lingshu-jingmai",
+      "pass": true,
+      "detail": "wikisource-lingshu-jingmai"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0126Q3",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0126Q3"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0126Q3",
+      "pass": true,
+      "detail": 126
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0126Q3",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0126Q3",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0126Q3",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0126Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0126Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "exact_text"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0126Q3:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0126Q3:huangdi-neijing-lingshu-local-text:43",
+      "pass": true,
+      "detail": 43
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0126Q3",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0126Q4",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0126Q4"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0126Q4",
+      "pass": true,
+      "detail": 126
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0126Q4",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0126Q4",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0126Q4",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "known-match-source:tcm.classic.ref43.quote.L0126Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "match-type:tcm.classic.ref43.quote.L0126Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "normalized_contiguous"
+    },
+    {
+      "id": "match-snippet-count:tcm.classic.ref43.quote.L0126Q4:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "match-line:tcm.classic.ref43.quote.L0126Q4:huangdi-neijing-lingshu-local-text:103",
+      "pass": true,
+      "detail": 103
+    },
+    {
+      "id": "located-contract:tcm.classic.ref43.quote.L0126Q4",
+      "pass": true,
+      "detail": "text_match_only_not_content_adjudication"
+    },
+    {
+      "id": "unique:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": "tcm.classic.ref43.quote.L0127Q1"
+    },
+    {
+      "id": "reference-line:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": 127
+    },
+    {
+      "id": "quote-text:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "blocked:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": "blocked"
+    },
+    {
+      "id": "cross-source:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "id": "unresolved-contract:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": "manual_form_adjudication_complete_not_content_acceptance"
+    },
+    {
+      "id": "adjudication-category:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": "minor_omission_in_compiled_quote"
+    },
+    {
+      "id": "adjudication-verdict:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": "non_verbatim_traceable_across_two_works"
+    },
+    {
+      "id": "adjudication-note:tcm.classic.ref43.quote.L0127Q1",
+      "pass": true,
+      "detail": "Both local works use 有名而无形; the reference drops 而 while explicitly discussing the two-work relationship."
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0127Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": "huangdi-neijing-lingshu-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0127Q1:huangdi-neijing-lingshu-local-text",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0127Q1:huangdi-neijing-lingshu-local-text:257",
+      "pass": true,
+      "detail": 257
+    },
+    {
+      "id": "adjudication-known-source:tcm.classic.ref43.quote.L0127Q1:nanjing-local-text",
+      "pass": true,
+      "detail": "nanjing-local-text"
+    },
+    {
+      "id": "adjudication-snippet-count:tcm.classic.ref43.quote.L0127Q1:nanjing-local-text",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0127Q1:nanjing-local-text:221",
+      "pass": true,
+      "detail": 221
+    },
+    {
+      "id": "adjudication-source-line:tcm.classic.ref43.quote.L0127Q1:nanjing-local-text:314",
+      "pass": true,
+      "detail": 314
+    },
+    {
+      "id": "cross-source-identities",
+      "pass": true,
+      "detail": [
+        "tcm.classic.ref43.quote.L0042Q3",
+        "tcm.classic.ref43.quote.L0051Q2",
+        "tcm.classic.ref43.quote.L0062Q1"
+      ]
+    }
+  ]
+}
