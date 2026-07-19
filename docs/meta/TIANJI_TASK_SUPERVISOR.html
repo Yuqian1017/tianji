@@ -41,12 +41,12 @@
         <h1>天机卷任务监督器</h1>
         <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
-      <div id="percent" class="percent">61%</div>
+      <div id="percent" class="percent">62%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">`47` 温病 365 段显式引文首轮完成；当前进入 `48《医学衷中参西录》`。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">完成 `46-48` 后重排剩余 TCM 本草/方书逐条校勘和全库其他知识域 backlog。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">`42-48` 共 1,470 段显式引文首轮完成；当前回到理论、本草、方剂和病种逐条原典回接。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">重排 TCM `01-41`、相术影印校勘和全库其余验证 backlog。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容。</p></article>
     </section>
 
@@ -68,9 +68,9 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 61,
-      currentFocus: '`47` 温病 365 段显式引文首轮完成：278 段机械定位、87 段非连续命中人工定位、0 待人工；当前进入 `48《医学衷中参西录》`。',
-      nextDecision: '完成 `48` 医家资料来源裁决后，重排剩余 TCM 本草/方书逐条校勘与全库其他知识域 backlog。',
+      overallPercent: 62,
+      currentFocus: '`42-48` 共 1,470 段显式引文首轮来源、形态与归属裁决完成，七批待人工均为 0；当前回到理论、本草、方剂和病种逐条原典回接。',
+      nextDecision: '重排 TCM `01-41`、相术影印校勘和全库其余验证 backlog。',
       antiDriftRule: '现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -81,7 +81,7 @@
         { id: 'P4', name: '叙事、NPC 与长期养成', status: 'pending', progress: 0, doneWhen: '养成机制能增强学习动机。' }
       ],
       gates: [
-        { name: '排盘与数据库正确性', state: 'classical_source_adjudication_in_progress', rule: '确定性排盘维持既有证据；解释层改按典籍见证逐条裁决。' },
+        { name: '排盘与数据库正确性', state: 'classical_quote_batch_complete_claim_validation_in_progress', rule: '确定性排盘维持既有证据；`42-48` 引文首轮已完成，其他解释条目继续逐条裁决。' },
         { name: 'Product A 复用决策', state: 'partial', rule: '八字与六爻的壳层和已验证确定性结构可继续，解释层逐字段 gate。' },
         { name: '主线定义', state: 'hold', rule: 'PRD 关闭 correctness、安全与数据合同阻塞项后再确认。' },
         { name: '数据库来源可追踪', state: 'source_doctrine_corrected', rule: '传统条目必须回指典籍、版本见证、定位和原文。' },
@@ -89,6 +89,10 @@
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
+        'TJI-VAL-027 完成：ref48 共 256 段显式引文为 149 段机械定位、107 段人工形态裁决，另有 13 段机械命中兼特殊归属裁决、0 段待人工；4,591 项 0 fail',
+        'ref48 校正闟缺字、脉搏力减而谵语益甚、若用开破之药开之三处参考文字；raw 保持不动',
+        'ref48 分开 16 条外部经典、19 条后世具名转引/医案/评论和 7 条现代编辑语；nihaisha-nishi-tcm 本批 0 条二级 locator',
+        '42-48 共 1,470 段显式引文首轮完成；中央来源库现为 11 组、272 文件；TJI-VAL-027 关闭，当前回到理论、本草、方剂和病种逐条原典回接',
         'TJI-VAL-027 子批次 ref47 完成：365 段显式引文为 278 段机械定位、87 段非连续命中人工定位、0 段待人工；6,176 项 0 fail',
         'ref47 另有 13 段机械命中兼特殊归属裁决；确认 2 条参考错误、10 条后世按语/具名转引、18 条现代编辑语和 7 条编码/OCR 裁决',
         'A1J8 必须按出现位置区分䐜与撑；湿热病篇复合传承的王孟英、徐洄溪等按语已与薛氏文本分层；raw 不改写',

@@ -734,7 +734,7 @@
 | TCM-DISEASES | `references/31-37*` | 52 个主病种、689 条非空行、22 表/133 表格行 | 病种、证型、鉴别、红线、调护候选 | 红线已做首轮现代 comparator；全部治疗字段 blocked，不替代现代医学诊断 |
 | TCM-ACUPOINTS | `references/38-41*` | 763 条非空行、27 表/471 表格行；361 经穴、40 奇穴、定位、27 病证配穴、外治分级 | 全原文 inventory、穴位/外治候选和来源差异审计 | 官方仅授证现行 362/51 范围；逐名为二级转录，定位、疗效及家庭操作全部 blocked |
 | TCM-CLASSICS | `references/42-45*` | 素问、灵枢、难经、伤寒、金匮要义与条文 | 经典出处、课程与解释 | 492 段显式引文首轮来源裁决完成；古方剂量不进入现代用药依据 |
-| TCM-WENBING-AUTHORS | `references/46-48*` | 医学心悟、温病三书、衷中参西录 | 医家观点、温病与历史课程 | ref46 的 357 段与 ref47 的 365 段显式引文首轮完成；ref48 待继续；医家观点和时代内容不覆盖教材安全层 |
+| TCM-WENBING-AUTHORS | `references/46-48*` | 医学心悟、温病三书、衷中参西录 | 医家观点、温病与历史课程 | ref46-48 共 978 段显式引文首轮完成、待人工均为 0；医家观点和时代内容不覆盖教材安全层 |
 | TCM-SAFETY | `references/安全-配伍妊娠禁忌与毒性药.md` | 配伍、妊娠、毒性、马兜铃酸、方剂级警示、忌口 | 第一批规范化；所有涉药消费硬门槛 | 仍需现行标准和项目复核 |
 | TCM-SAFETY-CORE | `database/tcm/normalized/tcm-safety-core.json` | 28 项法定毒性中药 blocklist、来源和产品资格 | 当前唯一 accepted 的中医规范安全切片 | 不含药典剂量、妊娠、配伍、方剂或穴位授证 |
 | TCM-PHARM-CANDIDATES | `database/tcm/normalized/tcm-pharmacopoeia-candidates.json` | 100 行/101 味原始剂量、2025 目录身份、2020 历史正文对照、名称裁决和急救标记 | 全量可审计候选层 | 101 味全部 blocked；不是 accepted 剂量库 |
@@ -756,12 +756,14 @@
 | TCM-YIXUEXINWU-PUBLIC-WITNESSES | `database/sources/ctext/tcm-yixuexinwu-public-witnesses-2026-07-18.json` | CText《医学心悟》版本元数据、Wikisource 全本与中醫笈成清经纶堂本整理文本 | “擀/捋”、十中之一二/什一、冷饮食/冷冻饮料食、耆/芪及缺字传播校勘；固定 URL、响应字节数与 SHA256 | 中醫笈成为绑定可识别扫描本的编辑转录，不是逐字影印转录；公共转录重复错误不算独立多数证据 |
 | TCM-CLASSIC-REF47-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-ref47-quote-provenance.json`；`database/tcm/adjudications/tcm-classic-ref47-quote-adjudications.json` | `47-温病-卫气营血三焦方证条文.md` 的 365 段显式引文与《温热论》《湿热病篇》《温病条辨》《温热经纬》及《素问》逐段比对 | 版本异文、复合传承文本、后世按语/具名转引、现代编辑语、转码占位符和参考稿错误分层 | 278 段机械定位、87 段非连续命中人工定位，另有 13 段机械命中兼特殊归属裁决；0 待人工、2 条参考修正、全部 blocked |
 | TCM-WENBING-PUBLIC-WITNESSES | `database/sources/ctext/tcm-wenbing-public-witnesses-2026-07-18.json` | 中醫笈成绑定扫描本的《温热论》《温热经纬》《温病条辨》整理文本；Wikisource《温热论》《湿热条辨》；CText《温病条辨》版本入口 | “出口”“津与汗”、肺经气分、撑不死、䐜/㿗/䗪/𤺏及按语边界校勘；固定 URL、响应字节数与 SHA256 | 公共转录不构成无争议定本；稀见字仍是所选版本读法，所有现实使用字段 blocked |
+| TCM-CLASSIC-REF48-QUOTE-PROVENANCE | `database/tcm/normalized/tcm-classic-ref48-quote-provenance.json`；`database/tcm/adjudications/tcm-classic-ref48-quote-adjudications.json` | `48-医家-衷中参西录要义.md` 的 256 段显式引文与《医学衷中参西录》及六部嵌套经典逐段比对 | 原文、经典转引、后世具名评论、现代编辑语、OCR 缺字和参考稿缩写分层 | 149 段机械定位、107 段人工形态裁决，另有 13 段机械命中兼特殊归属裁决；0 待人工、3 条参考修正、全部 blocked |
+| TCM-YIXUEZHONGZHONG-PUBLIC-WITNESSES | `database/sources/ctext/tcm-yixuezhongzhong-public-witnesses-2026-07-18.json` | 中醫笈成所标河北人民出版社 1977 年 2 版整理文本、Wikisource 全本、CText 版本缺失入口、宣统元年铅印本书目线索 | 闟辟、脉搏力减而谵语益甚、若用开破之药开之三组校勘；固定 URL、响应字节数与 SHA256 | 1977 本仍是编辑转录；Wikisource 与本地为同一错误链；CText 与书目页不裁决字符；现实使用字段全部 blocked |
 | TCM-FOOD-MEDICINE-ADJUDICATIONS | `database/tcm/normalized/tcm-food-medicine-adjudications.json` | 106 项目录、Skill A 清单 15 项、8 条食疗/药食配方和 38 个原料引用 | 食品身份、部位/炮制缺口和配方继承裁决 | 目录身份已固定；全部具体产品用法 blocked |
 | TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-NIHAIXIA-CANDIDATE | `database/sources/external/nihaixia-skill-v2.1.0-2026-07-18.json` | 倪海厦 Skill 固定 commit、仓库规模、自述覆盖、许可冲突、原始见证断点和吸收边界 | 发现倪派资料可能覆盖的数据库缺口并寻找一手来源 | 仅元数据；不复制正文，不充当原典、accepted 主张或运行时来源 |
 | TCM-NIHAISHA-NISHI-CANDIDATE | `database/sources/external/nihaisha-nishi-tcm-2026-07-18.json` | 3,094 文件固定树、2,986 张截图、22 文献/10,538 页卡、四部经典定位信号、51 条勘误交叉检查与许可边界 | 为灵枢、难经、伤寒、金匮逐条校勘提供页级定位和异文警报 | 只吸收转换后的元数据与验证路由；无标准开源许可、无原 PDF/版本哈希，不复制正文或自动改库 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
-| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、270 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
+| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、272 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
 ## 7. 当前 Runtime 来源组

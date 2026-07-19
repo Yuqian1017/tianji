@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 270,
+    "entries": 272,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -12,7 +12,7 @@
       "xuanxue_compendium": 70,
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
-      "shared_ctext_witnesses": 14,
+      "shared_ctext_witnesses": 16,
       "external_source_manifests": 3,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
@@ -2847,6 +2847,17 @@
       "relationshipStatus": "standalone"
     },
     {
+      "id": "source.shared_ctext_witnesses.180fdc08b2097f30",
+      "group": "shared_ctext_witnesses",
+      "title": "dongyao-andong-2026-07-18.json",
+      "canonicalPath": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 6144,
+      "sha256": "80185efcee8bfaba7f3909894014adc1694771d2e79036682864df78d0067511",
+      "relationshipStatus": "standalone"
+    },
+    {
       "id": "source.shared_ctext_witnesses.816e727a4c75f591",
       "group": "shared_ctext_witnesses",
       "title": "liuqin-sanjian-2026-07-13.json",
@@ -2921,6 +2932,17 @@
       "format": "json",
       "bytes": 4789,
       "sha256": "3750090ca0b78db9878cebf1cc79138835cff35eec81b669d5ff553a9da7781a",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.afac9e76ba0e3619",
+      "group": "shared_ctext_witnesses",
+      "title": "tcm-yixuezhongzhong-public-witnesses-2026-07-18.json",
+      "canonicalPath": "database/sources/ctext/tcm-yixuezhongzhong-public-witnesses-2026-07-18.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 4786,
+      "sha256": "949824ec2c115dd10ac1c4e60014de5399f5ee053ce6ec4659aaa2e26b056b88",
       "relationshipStatus": "standalone"
     },
     {

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "source.tcm.ref48.public-transcription-witnesses.2026-07-18",
+  "title": "《医学衷中参西录》公共底本、转录与版本线索",
+  "fetchedAt": "2026-07-18",
+  "scope": "reference_48_local_transcription_wording_and_edition_witnesses",
+  "doctrine": "identified_editions_and_public_transcriptions_are_collation_witnesses_not_automatic_content_authority",
+  "retrieval": {
+    "method": "HTTP GET with redirects and browser-compatible headers; Wikisource was read through its public MediaWiki parse API",
+    "hashMeaning": "SHA256 and bytes identify the exact HTML or JSON response retrieved for this audit; dynamic pages may later produce a different response hash.",
+    "archivalBoundary": "Only transformed metadata and short public-domain passage witnesses are stored here; fetched HTML and JSON remain outside the repository."
+  },
+  "witnesses": [
+    {
+      "id": "jicheng-yixuezhongzhong-hebei-1977-second-edition",
+      "work": "医学衷中参西录",
+      "platform": "中醫笈成",
+      "url": "https://jicheng.tw/tcm/book/醫學衷中參西錄/index.html",
+      "sourceRole": "identified_edited_public_transcription_witness",
+      "retrievedHtmlSha256": "6e7c559bd57b0c4f0cc5af3db859d168d269e1894f8937729806edd169e8098b",
+      "retrievedHtmlBytes": 3990177,
+      "edition": "《医学衷中参西录》，河北人民出版社 1977 年 2 版",
+      "locator": "肺劳治法；论伤寒温病神昏谵语；流产后满闷；医案体例",
+      "supports": "Restores 肺脏具闟闢之机; reads 脉搏力减而谵语益甚; reads 若用开破之药开之，胀满去而其人或至于虚脱; confirms the recurring 病因、证候、诊断、处方、方解、效果 headings.",
+      "excerpt": "肺臟具闟闢之機；脈搏力減，而譫語益甚；若用開破之藥開之，脹滿去而其人或至於虛脫",
+      "limitations": "An edited transcription based on a modern published edition, not a diplomatic scan transcription; it can collate characters but cannot by itself establish the earliest reading."
+    },
+    {
+      "id": "wikisource-yixuezhongzhong-full",
+      "work": "医学衷中参西录",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/醫學衷中參西錄",
+      "apiUrl": "https://zh.wikisource.org/w/api.php?action=parse&page=醫學衷中參西錄&prop=wikitext&format=json",
+      "sourceRole": "public_transcription_error_propagation_witness",
+      "retrievedJsonSha256": "ac74f93ad41e5a3f6a8fb3255b93747eee6cae575e8f11fac10aebd0f98489ae",
+      "retrievedJsonBytes": 1667440,
+      "metadata": "张锡纯；清；公元1909",
+      "locator": "full work wikitext",
+      "supports": "Provides a full public transcription and work metadata, but its 153 mechanically matched quotations are exactly the same set as the local source.",
+      "excerpt": "author = 张锡纯；times = 清；年 = 公元1909",
+      "limitations": "Because it repeats the local blank-character pattern and adds no unique quote matches, it is treated as the same transcription chain rather than an independent character-level vote."
+    },
+    {
+      "id": "ctext-yixuezhongzhong-version-missing",
+      "work": "医学衷中参西录",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/wiki.pl?if=gb&res=518746",
+      "urn": "ctp:wb518746",
+      "sourceRole": "public_work_index_and_unidentified_transcription_locator",
+      "retrievedHtmlSha256": "944c67c3a7795ebde1acb35334b20687ba811c0d42848c4417a4901d95465989",
+      "retrievedHtmlBytes": 18149,
+      "locator": "work index with 23 chapter links",
+      "supports": "Identifies 张锡纯 and 清 and exposes a public work index.",
+      "excerpt": "作者：张锡纯；朝代：清；版本：暂缺",
+      "limitations": "The version field is explicitly 暂缺, so this page is not used to settle edition-specific readings."
+    },
+    {
+      "id": "guoxuedashi-yixuezhongzhong-xuantong-catalog",
+      "work": "医学衷中参西录",
+      "platform": "国学大师",
+      "url": "https://www.guoxuedashi.net/shumu/814992o.html",
+      "sourceRole": "bibliographic_edition_locator_only",
+      "retrievedHtmlSha256": "8d9ecfaee2ccd6da9237931709ba3c001f9731856f2c3846d6e1edc2c6efd6cb",
+      "retrievedHtmlBytes": 26971,
+      "locator": "edition catalog entry",
+      "supports": "Records a 清宣统元年天津新华印书局铅印本 edition lead for future scan inspection.",
+      "excerpt": "清宣统元年天津新华印书局铅印本",
+      "limitations": "Bibliographic metadata only. No page image or passage was inspected in this audit, so it does not support any character-level correction."
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": []
+}
