@@ -24,6 +24,11 @@
    "status": "accepted",
    "at": "2026-07-17",
    "by": "宗主 — 委托自审通过（「你自己审，自己往下推」授权链；两轮审查收敛在案：R1 七轴全量 + R2 delta）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-18",
+   "by": "落听潮 — ch6 批补「择动」canonicalText（595 后半句，第五批 witness 已录零新引文；委托自审授权链）——状态维持 accepted"
   }
  ],
  "safetyLevel": null,
@@ -41,10 +46,17 @@
    "locator": "ctext wiki chapter=950329，提取行 595",
    "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（用神两现择旺总则——与 769 活例互证）",
    "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "如一爻動者擇其動者為用神。",
+   "source": "《增删卜易·用神章第八》两现择用总则后半句（野鹤老人）——ch6「择动」延伸",
+   "locator": "ctext wiki chapter=950329，提取行 595（与「擇其旺者為用神」同行同源）",
+   "witness": "database/sources/ctext/yuanji-shuaiwang-2026-07-17.json（第五批已录全行，本条零新引文）",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
   }
  ],
  "engineCrossCheck": "audit-chapter5-canon.mjs：元神/忌神方向语义（生我/克我）、大有三角（应巳官鬼/元神寅木/忌神子水）、明夷同支两现+伏神事实、乾为天辰戌异支、亥沖巳、卯月丁亥日方向组 vs wuxingRelation/BRANCH_RELATIONS/paipan 全 match（2026-07-17）",
- "simplificationNote": "练气期简化口径：①用神两现→择其旺者。结构事实：同宫同亲必同五行，月建日辰生克对两现恒平——分高下实际靠**临与沖**（临月建/日辰者取之；逢沖破者弃之）。②两判据俱无事（平局）→取临世应者（边界口径，明夷两丑土即此例）。③三现及动爻优先（「一爻动则用动者」）超纲，第六章候选。",
+ "simplificationNote": "练气期简化口径：①用神两现→择其旺者。结构事实：同宫同亲必同五行，月建日辰生克对两现恒平——分高下实际靠**临与沖**（临月建/日辰者取之；逢沖破者弃之）。②两判据俱无事（平局）→取临世应者（边界口径，明夷两丑土即此例）。③三现仍超纲；动爻优先（「如一爻動者擇其動者為用神」）已于 ch6 入账为本 KP 复习延伸（「择动」——同名两现一动一静取动者，非新 KP，见 CHAPTER_6_PREP § 1）。",
  "modernExplain": "（整理者转述）问一件事，卦里却有两个用神——两个父母爻、两个官鬼爻，用哪个？书上说：择其旺者。同亲的两爻五行必同，月建日辰的生克两边一样——真正分高下的是临与沖：谁临月建日辰，谁就正当值，用它；谁被沖破，谁就靠不住，弃它。两边都平平——看谁坐着世应的位子，近我者为用。",
  "gameLine": "两个同名的爻，像两个同名的人——衙门点名，先点正当值的那个；当值的不在，点坐得离你近的那个。",
  "usedInChoicePoints": []

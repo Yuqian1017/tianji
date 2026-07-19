@@ -1,0 +1,59 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-6 script lint + audit-chapter6-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_6_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-018",
+ "domain": "liuyao",
+ "domainCn": "六爻（动爻）",
+ "name": "暗動与日破（沖之两果·辨伪）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-010",
+  "KP-LY-011",
+  "KP-LY-012",
+  "KP-LY-016"
+ ],
+ "status": "accepted",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-18",
+   "by": "落听潮 — 跟随制审计第六批（暗動章/日辰章/動散章 witness 保真+引擎对撞 audit-chapter6-canon.mjs；宗主委托自审口径）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-18",
+   "by": "宗主 — 委托自审通过（「你自己审，自己往下推」授权链；策划案 fresh-context 审查 PASS-WITH-FIXES 折毕 + audit-chapter6-canon 90 checks 全绿在案）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "靜爻旺相日辰沖之為暗動﹐靜爻休囚日辰沖之為破﹐暗動者有喜有忌。用神休囚得元神暗動以相生；忌神明動于卦中﹐得元神暗動而生用神﹐此皆謂之喜也。用神休囚無助﹐若遇忌神克害用神﹐此皆謂之忌也。占以暗動福來而不知﹐禍來而不覺。",
+   "source": "《增删卜易·暗動章第二十二》定义（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 1361",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "沖旺相之靜爻﹐旣為暗動﹐沖衰弱之靜爻為日破﹐爻之旺而靜者沖之則為暗動﹐愈得其力﹐爻之衰而靜者﹐沖之則為日破﹐愈加無用",
+   "source": "《增删卜易·日辰章第十七》（节选）",
+   "locator": "ctext wiki chapter=950329，提取行 1079（节选——同段沖空卽起/沖合卽開属禁词区，只录此连续子串）",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "占以日辰而沖動爻﹐謂之沖散﹐又以爻動沖爻﹐亦能沖散﹐予屢試之﹐旺相者沖之不散﹐有气者沖之不散﹐休囚者間有沖散﹐亦千百中之一二也﹐其故何也？神兆機于動﹐動必有因。",
+   "source": "《增删卜易·動散章第二十三》辨伪（节选）",
+   "locator": "ctext wiki chapter=950329，提取行 1383（节选）",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter6-canon.mjs：亥沖巳三态——ch5 卯月丁亥沖大有应巳（旺→暗動）vs ch6 辰月辛亥沖观之剥二爻静巳（泄气→日破）vs 五爻动巳（沖散辨伪位）——月建换景 paipan 对撞；暗動/日破分界=旺衰判断（KP-012 秤）（2026-07-18）",
+ "simplificationNote": "练气期简化口径：①同一记日辰沖，先称被沖静爻的斤两：旺相=暗動（暗里出手，愈得其力）；休囚=日破（愈加無用）。②暗動喜忌枚举（元神暗動相生等）本章只用「元神暗動」概念不展开组合断法。③沖散辨伪立场从野鹤：動爻被日沖不轻言散——「神兆機于動」；沖空/沖起/合住/沖實超纲仍禁。④ch4 立名（月破章邻位）/ch5 大有实例（玩家先猜出名词）两次铺垫后本章正式开账。",
+ "modernExplain": "（整理者转述）袖里的手。一枚静爻被日辰沖着，会怎样？先称它的斤两：旺相的爻，这一沖就是暗动——看着没动，暗里已经出了手，福来而不知，祸来而不觉；休囚的爻，这一沖就是日破——空袖子，一沖就断。同一记沖，两种结果，分界还是那杆旺衰的秤。至于发动的爻被日辰沖——书上有人说散了，野鹤说：动必有因，不轻言散。",
+ "gameLine": "袖里的手。看着没动，日辰一沖，暗里已经出了手——福来而不知，祸来而不觉。",
+ "usedInChoicePoints": []
+}

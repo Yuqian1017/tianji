@@ -1,0 +1,60 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-6 script lint + audit-chapter6-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_6_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-016",
+ "domain": "liuyao",
+ "domainCn": "六爻（动爻）",
+ "name": "動爻生克（四处之三·動者力大）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-003",
+  "KP-LY-007",
+  "KP-LY-010",
+  "KP-LY-011",
+  "KP-LY-012"
+ ],
+ "status": "accepted",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-18",
+   "by": "落听潮 — 跟随制审计第六批（動爻/暗動章段 witness 保真+引擎对撞 audit-chapter6-canon.mjs；宗主委托自审口径）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-18",
+   "by": "宗主 — 委托自审通过（「你自己审，自己往下推」授权链；策划案 fresh-context 审查 PASS-WITH-FIXES 折毕 + audit-chapter6-canon 90 checks 全绿在案）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "3、卦中之動爻能生克沖合／此卦世爻戌土﹐倘卦中第二爻寅木發動能克戌土﹐第四爻午火官鬼發動能生戌土﹐第三爻辰土發動能沖戌土﹐此謂之卦中之動爻能生克沖合用神。",
+   "source": "《增删卜易·用神章第八》四处生克第三处（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 573-575",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "六爻安靜旺相之爻﹐可以生得休囚之爻﹐亦可以克得休囚之爻﹐蓋旺相者有力之人也。",
+   "source": "《增删卜易·動靜生克章第十四》总纲",
+   "locator": "ctext wiki chapter=950329，提取行 903",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "酉金發動𨿽則休囚﹐動而能克旺相之卯木﹐卯木當令能克丑未二土﹐今旣木被金傷﹐亦難克土﹐餘仿此。",
+   "source": "《增删卜易·動靜生克章第十四》兌之歸妹例",
+   "locator": "ctext wiki chapter=950329，提取行 935",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter6-canon.mjs：观之剥五爻辛巳官鬼独发（辰月泄气而动）、动爻与他爻生克方向 vs wuxingRelation、動靜例卦（坤/兌之歸妹）paipan 对撞（2026-07-18）",
+ "simplificationNote": "练气期简化口径：①四处框架（ch4 立）第 3 处填格——卦中發動之爻是「活爻」，能生克沖合用神。②機理对比横杆：静爻只有旺相者能生克休囚者；動爻**虽休囚亦能生克旺相**——「動者力大」不看令。③動爻间互相生克的复杂链（连动/接续相生）超纲不入。",
+ "modernExplain": "（整理者转述）前两处（月建/日辰）是天上的力，第三处是卦里自己的力：发动的爻。站着的爻要凭时令说话——旺相的才压得住休囚的；可一旦发动，就不一样了——衰着的爻动起来，照样能伤当令的爻。动，本身就是力量。",
+ "gameLine": "站着的人，借的是时令的力；出手的人，使的是自己的劲——所以衰着的人也敢动手。",
+ "usedInChoicePoints": []
+}

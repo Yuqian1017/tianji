@@ -1,0 +1,58 @@
+{
+ "_meta": {
+  "schemaNote": "camelCase for JS consumption; canonical texts are verbatim transcription-witness quotes (原文照录), modernExplain is 整理者转述 (DB-008 separation). Consumed by chapter-6 script lint + audit-chapter6-canon.mjs KP chain layer.",
+  "sourceDoc": "docs/design/CHAPTER_6_PREP.md § 1（剧本附录 A 数据化期同步）"
+ },
+ "id": "KP-LY-017",
+ "domain": "liuyao",
+ "domainCn": "六爻（动爻）",
+ "name": "變爻回頭生克（四处之四·動必有果）",
+ "difficulty": "必修",
+ "prereqIds": [
+  "KP-LY-003",
+  "KP-LY-007",
+  "KP-LY-016"
+ ],
+ "status": "accepted",
+ "statusHistory": [
+  {
+   "status": "reviewed",
+   "at": "2026-07-18",
+   "by": "落听潮 — 跟随制审计第六批（動爻/暗動章段 witness 保真+引擎对撞 audit-chapter6-canon.mjs；宗主委托自审口径）"
+  },
+  {
+   "status": "accepted",
+   "at": "2026-07-18",
+   "by": "宗主 — 委托自审通过（「你自己审，自己往下推」授权链；策划案 fresh-context 审查 PASS-WITH-FIXES 折毕 + audit-chapter6-canon 90 checks 全绿在案）"
+  }
+ ],
+ "safetyLevel": null,
+ "canonicalTexts": [
+  {
+   "text": "4、世爻發動變出之爻能回頭生克沖合／世爻發動﹐動而必變﹐變出巳午之火謂之回頭生世。變出寅卯之木謂之回頭克世﹐變出辰土謂之回頭沖世﹐變出卯木謂之合世。此謂之用神自動變出之爻能生克沖合用神也。",
+   "source": "《增删卜易·用神章第八》四处生克第四处（野鹤老人）",
+   "locator": "ctext wiki chapter=950329，提取行 577-579",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "卦有動爻﹐動而必變﹐夫變出之爻能生克沖合本位之動爻﹐不能生克他爻﹐而他爻與本位之動爻﹐亦不能生克變爻。",
+   "source": "《增删卜易·動變生克沖合章第十五》总纲边界",
+   "locator": "ctext wiki chapter=950329，提取行 939",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  },
+  {
+   "text": "然則變爻誰能制之？惟日月能生之、克之、沖之、令之何也？日月如天﹐能生克動爻、靜爻、變爻、飛爻、伏爻、而諸爻不能傷日月。",
+   "source": "《增删卜易·動變生克沖合章第十五》變爻归制（节选）",
+   "locator": "ctext wiki chapter=950329，提取行 955（节选——飛爻/伏爻词属超纲，剧本不引此句全文，存证用）",
+   "witness": "database/sources/ctext/dongyao-andong-2026-07-18.json",
+   "url": "https://ctext.org/wiki.pl?if=gb&chapter=950329"
+  }
+ ],
+ "engineCrossCheck": "audit-chapter6-canon.mjs：观之剥五爻巳動变丙子子孙（子水克巳火=回頭克）、natal 水泽节初爻巳動变戊寅子孙（寅木生巳火=回頭生）——回頭两式引擎实测；變爻六亲照本宫安（引擎 bianYao.liuqin 契约）（2026-07-18）",
+ "simplificationNote": "练气期简化口径：①動而必變（ch1 KP-003 旧知识）→ 變出之爻**只回頭作用于本位動爻**（生/克/沖/合四式），不及他爻——边界铁律。②「惟日月能制變爻」点到即止（飛爻/伏爻不提）。③變爻自身旺衰细则不展开；化進神/化退神/化空超纲仍禁。",
+ "modernExplain": "（整理者转述）动了，就必然变出一个新爻来。这枚变出来的爻只干一件事：回头找它的主人——生它、克它、沖它、合它。它不管别的爻，别的爻也管不了它——能管住变爻的，只有月建日辰这两片天。所以动作的后果，只落在动作的人身上。",
+ "gameLine": "动手的人，先受自己动作的后果——他打出一招，招底下翻出来的东西，只咬他自己。",
+ "usedInChoicePoints": []
+}
