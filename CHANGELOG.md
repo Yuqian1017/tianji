@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-18 (续) - 吸收 xuanxue-database-skill 的实战证据结构
+
+- 固定 `yanouyuan-bit/xuanxue-database-skill` commit `926d0b56154c8764b68e9ddf2661949e9b5b5f11`；登记 14 文件/858 行、MIT 许可、三库模型和直接采用风险，许可证文本单独存入 `database/licenses/`。
+- 新建 `database/learning/practice-evidence-schema-candidate.json`：保留匿名命例、方法关联、事前断语、实际结果和复盘关系，补齐断语冻结、排盘/流派版本、证伪条件、证据等级、完整分母与隐私合同。
+- 明确个人应验不能提升典籍/知识权威，不能自动更新 KP 掌握度；高风险医疗、法律、财务和安全预测不计分。中央来源库更新为 11 组、264 文件。
+
 ## 2026-07-18 - 登记倪海厦二手候选来源并补齐中央来源索引
 
 - 固定审计 `jangviktor-web/nihaixia` commit `ec03c594ed239b570e997cbd396c2fc186b6ad91`，只保存来源元数据、规模、7 组覆盖缺口映射、许可冲突、原始见证缺口和吸收边界，不复制仓库中的蒸馏正文。

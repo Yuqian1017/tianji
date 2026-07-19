@@ -55,7 +55,7 @@ const GROUPS = [
   },
   {
     id: 'licenses',
-    files: ['database/licenses/UNICODE_LICENSE_V3.txt'],
+    root: 'database/licenses',
     sourceRole: 'source_license',
   },
 ];

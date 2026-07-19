@@ -35,6 +35,7 @@
 | VAL-TCM-010 | P0 | 中医 | `42-48` 经典、医家、温病、食疗、药食两用与旧食疗 runtime | 医疗/来源/食品身份/安全/疗效 | V1+现代官方 comparator | pass | 1,142 条非空行、8 表/79 表格行、145 标题、603 条重叠窄风险视图和 20 finding 共 14,281 项 0 fail；A级/食疗级/药食两用均为来源自述；106 项目录另由 VAL-TCM-011 逐项裁决；旧 `tcm-data` 无 importer，八字健康食疗 runtime blocked，全部候选 blocked |
 | VAL-TCM-011 | P0 | 中医 | 国家卫健委 106 项食药物质目录、Skill A 级清单与明确食疗/药食配方主张 | 食品身份/部位/限制/配方继承 | V2+官方公告 | pass | 106 项按 87+6+9+4 固定；Skill A 级 15 项中 13 项匹配、2 项不在目录；8 条配方主张的 38 个原料引用为 18 匹配、5 身份/炮制缺口、15 不在目录；48 项 0 fail，全部产品用法 blocked |
 | VAL-SOURCE-002 | P1 | 中医/来源 | 倪海厦 Skill 外部仓库的版本、规模、许可、原始见证和可吸收边界 | 来源/许可/溯源 | V1+固定仓库审计 | pass | 固定 commit `ec03c594...`；32 文件/51,258 行；README 许可声明与仓库树不一致，原始参考资料已移除且本地 books 路径不可访问；只登记 metadata，runtime 字段为 0，正文不得晋升为原典或 accepted 主张 |
+| VAL-SOURCE-003 | P1 | 数据库/教学 | xuanxue-database-skill 的三库 schema、回测合同、许可和天机卷吸收边界 | 来源/结构/隐私/证据 | V1+固定仓库审计 | pass | 固定 commit `926d0b56...`；14 文件/858 行，MIT LICENSE 完整；吸收匿名命例、冻结断语、观察与方法关联，拒绝少量应验自动验证、经典/个人可靠度混写和现实结果自动改变掌握度；候选 schema runtime 字段为 0 |
 | VAL-WY-001 | P1 | 五运六气 | 十干中运、主客运太少、十二支司天在泉、主客六气与日级边界标签 | 传统来源确定性 | V2+V5 | pass | 《素问》《医宗金鉴》与教材交叉固定有限规则；60 年、3,325 项 0 fail；桌面/390×844 通过；古法时刻、派生层与现实解释不在授证范围 |
 | VAL-ZWL-001 | P1 | 子午流注 | 12 时辰、民用时间边界、12 经脉顺序与基础文化展示 | 来源忠实性+有限表 | V2+V5 | pass | 《针灸大成》固定 12 行与循环；全天 1,440 分钟、4,457 项 0 fail；午时心经文本冲突已裁定；完整针法与医学解释 excluded |
 | VAL-LY-001 | P1 | 六爻 | 纳甲、世应、六亲、六神、旬空、伏神、变卦 | 精确/流派确定性 | V3+V5 | pass | 京房八宫纳甲口径；17,026 项项目内全量检查 0 fail，`iching-shifa@1.8.0` 64 静卦与 4,032 动卦对拍 0 mismatch；Playwright 桌面/390px 全六老阳样例通过 |
@@ -64,6 +65,7 @@
 | F-BZ-004 | P1 | VAL-BZ-004 | resolved_school_difference | 旧表把两支同现直接显示为“午未合火”，混淆六合关系与有条件的合化，且未披露火/土分歧 | runtime 改为“午未合”；`huaCandidates` 保留火/土，不判断条件时不宣称合化 |
 | F-BZ-005 | P2 | VAL-SHARED-001 | remediated | 日柱改由历法适配层计算；UTC 与 Pacific/Apia 同一输入回归一致，39,447 日连续性通过 | 保持跨 TZ 回归 |
 | F-SOURCE-002 | P1 | VAL-SOURCE-002 | verified_blocked | 倪海厦 Skill README 声称 MulanPSL-2.0，但固定仓库无 LICENSE，且 v2.0.0 已移除约 110 MB 原始参考资料，多数蒸馏条目无法回接稳定页码 | 仅允许缺口发现；取得许可、恢复原始见证并逐条回接独立典籍前，不吸收正文或校正 accepted 数据 |
+| F-SOURCE-003 | P1 | VAL-SOURCE-003 | adapted_with_blockers | 外部三库模型把“经典所载、个人应验、试用、存疑”放进单一可靠度字段，并允许 3 次应验晋升“已验证”；没有冻结版本、分母、证据等级或排盘口径 | 天机卷拆分 authorityStatus/practiceStatus，要求事前锁定和完整分母；禁止自动提升知识权威或掌握度，产品/隐私评审前 schema 保持 blocked |
 | F-FS-001 | P1 | VAL-FS-001 | verified_remediated | 二十四山把每卦前两山的地元龙/天元龙整列对调，并误标 7 山玄空阴阳 | 24 山有限表与独立实现全量一致 |
 | F-FS-002 | P1 | VAL-FS-001 | verified_remediated | 山盘/向盘错误地直接按实际坐山/向首阴阳定顺逆 | 改为入中星原宫的同元龙阴阳；216 盘从 1,648 字段差异降为 0 |
 | F-FS-003 | P1 | VAL-FS-001 | verified_remediated | 月飞星把公历月当节令月，未按十二节切换 | 复用精确节令历法；2020-2026 与 tyme4ts 10,228 时刻 0 mismatch |
@@ -248,3 +250,4 @@
 | 2026-07-11 | VAL-SOURCE-001 | `audit:source-library`；9 个声明来源组；逐文件 SHA256、字节数、路径和镜像关系复算 | 252 个来源文件全部进入中央索引并可解析；46 个 compendium 镜像相同、24 个为历史变体；2 项专项测试 0 fail。通过只授证来源文件盘点与完整性，不授证内容正确性或产品资格 |
 | 2026-07-11 | VAL-TCM-013 | `tcm-classic-quote-adjudications.json`；原样保留的 `42-经典-素问要义.md`；`audit:tcm-classic-quotes` | 原 29 条机械未命中项完成逐条裁决：1 条拼接误引在 normalized 覆盖层校正，28 条按删节/拼接/改写/编辑说明/后世注语/文本变体分类；Skill 原包保持原哈希。现为 83 条机械定位、28 条人工形态裁决、0 条待人工，693 项 0 fail。王冰注、后世口诀、现代括注和遗篇与核心篇章保持分层；全部 blocked |
 | 2026-07-18 | VAL-SOURCE-002 | 固定 GitHub commit/tree `ec03c594ed239b570e997cbd396c2fc186b6ad91`；仓库树/README/研究索引；`external-source-manifests.test.mjs`；`audit:source-library` | 倪海厦 Skill 32 文件/51,258 行完成元数据审计；许可声明、原始讲义和页码级溯源均有阻断项，不吸收正文；7 组覆盖映射全部 discovery-only/blocked；中央来源库补入 9 份 CText 见证和该档案，现为 262 文件/11 组，5 项专项测试 0 fail |
+| 2026-07-18 | VAL-SOURCE-003 | 固定 GitHub commit/tree `926d0b56154c8764b68e9ddf2661949e9b5b5f11`/`06afe033...`；MIT LICENSE；三库 schema/回测指南；`xuanxue-database-skill-schema.test.mjs`；`audit:source-library` | 14 文件/858 行完成设计审计；MIT 许可单独归档；天机卷候选 schema 强制事前冻结、版本化排盘、证伪条件、完整分母、隐私和高风险排除，且不自动改变权威/掌握度；中央来源库现为 264 文件/11 组，9 项来源专项测试 0 fail |

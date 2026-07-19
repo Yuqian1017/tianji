@@ -24,7 +24,8 @@
 
 | 资产 | 实际规模 | 当前角色 |
 |---|---:|---|
-| `database/sources/` | 262 个来源文件的中央索引；11 个来源组 | 全项目参考文献、典籍见证、外部数据与现代边界证据统一入口；正文仍保留单一 canonical 路径；外部二手资料只登记固定版本与吸收边界 |
+| `database/sources/` | 264 个来源文件的中央索引；11 个来源组 | 全项目参考文献、典籍见证、外部数据与现代边界证据统一入口；正文仍保留单一 canonical 路径；外部二手资料和设计来源分别登记版本与吸收边界 |
+| `database/learning/practice-evidence-schema-candidate.json` | 6 类实战证据实体、7 条不可跨越 invariant | 吸收外部三库模型后严格化的候选 schema；记录盘例、冻结断语、观察、裁决和学习复盘，不授予知识权威或自动掌握度 |
 | `database/xuanxue/compendium-new/` | 72 文件，其中 70 个 Markdown，约 19,416 行 Markdown | 当前玄学 canonical raw source 与历史产品规格 |
 | `database/xuanxue/compendium-vision-api/` | 70 个内容文件；46 个与 canonical 相同、24 个历史变体 | 相术 Vision API 旧/备选路线及历史分化证据，不再笼统视为完整副本 |
 | `database/tcm/skill-v3/` | 99 文件 | 中医 raw/reference source |

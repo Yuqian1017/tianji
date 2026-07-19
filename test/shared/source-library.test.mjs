@@ -9,7 +9,7 @@ test('central source library inventories every declared source group', async () 
   const index = JSON.parse(await readFile(indexPath, 'utf8'));
 
   assert.equal(index.doctrine, 'single_canonical_file_with_central_registry');
-  assert.equal(index.entries.length, 262);
+  assert.equal(index.entries.length, 264);
   assert.deepEqual(index.counts.byGroup, {
     tcm_original_texts: 43,
     tcm_curated_references: 50,
@@ -18,10 +18,10 @@ test('central source library inventories every declared source group', async () 
     xuanxue_compendium_mirror: 70,
     shared_wikisource_witnesses: 2,
     shared_ctext_witnesses: 9,
-    external_source_manifests: 1,
+    external_source_manifests: 2,
     xiangshu_source_registry: 1,
     shared_datasets: 1,
-    licenses: 1,
+    licenses: 2,
   });
   assert.equal(index.counts.identicalCompendiumMirrors, 46);
   assert.equal(index.counts.historicalCompendiumVariants, 24);

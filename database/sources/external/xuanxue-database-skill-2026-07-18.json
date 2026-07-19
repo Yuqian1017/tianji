@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "external.xuanxue-database-skill.926d0b56",
+  "title": "xuanxue-database-skill",
+  "sourceRole": "external_database_design_reference",
+  "status": "reviewed_schema_reference",
+  "retrievedAt": "2026-07-18",
+  "repository": {
+    "url": "https://github.com/yanouyuan-bit/xuanxue-database-skill",
+    "defaultBranch": "main",
+    "commit": "926d0b56154c8764b68e9ddf2661949e9b5b5f11",
+    "tree": "06afe033a72bfe7a8216af068a3c037824eb3909"
+  },
+  "repositoryInventory": {
+    "files": 14,
+    "bytes": 41175,
+    "lines": 858,
+    "skillFiles": 1,
+    "referenceFiles": 5,
+    "templateFiles": 6,
+    "licenseFiles": 1
+  },
+  "license": {
+    "spdx": "MIT",
+    "repositoryMetadata": "MIT",
+    "repositoryLicenseFilePresent": true,
+    "status": "verified_for_repository_content",
+    "localLicensePath": "database/licenses/XUANXUE_DATABASE_SKILL_MIT.txt",
+    "noticeRequirement": "Copyright and permission notice must accompany copied or substantially adapted portions."
+  },
+  "contentScope": {
+    "type": "database_schema_and_workflow",
+    "systems": ["bazi", "liuyao", "ziwei"],
+    "storageModes": ["notion", "local_markdown"],
+    "threeLibraryModel": [
+      "chart_and_conclusion",
+      "event_and_backtest",
+      "method_and_reference"
+    ],
+    "containsClassicalFullText": false,
+    "containsStructuredTraditionalKnowledge": false,
+    "containsRealUserCases": false
+  },
+  "usefulDesignElements": [
+    "pseudonymous case labels and explicit privacy reminders",
+    "relations among chart cases, pre-event claims, observed outcomes, and methods",
+    "falsifiable claim guidance with a time window and non-occurrence condition",
+    "preservation of failed claims instead of deleting them",
+    "local-first Markdown option with portable structured fields"
+  ],
+  "designFindings": [
+    {
+      "id": "authority-and-outcomes-conflated",
+      "severity": "blocking_for_direct_adoption",
+      "finding": "The single reliability field mixes classical attestation, personal outcome history, trial state, and doubt; these are different evidence dimensions."
+    },
+    {
+      "id": "small-sample-promotion",
+      "severity": "blocking_for_direct_adoption",
+      "finding": "Three positive records can promote a method to verified; this cannot establish general validity and omits base rates, selection effects, and unresolved observations."
+    },
+    {
+      "id": "claim-freeze-missing",
+      "severity": "blocking_for_direct_adoption",
+      "finding": "The workflow encourages pre-event claims but does not define immutable claim versions, lock time, edit history, or proof that the claim preceded the outcome."
+    },
+    {
+      "id": "adjudication-subjective",
+      "severity": "requires_adaptation",
+      "finding": "Supported and partially supported ratings lack an event ontology, independent reviewer contract, evidence class, and default metric treatment."
+    },
+    {
+      "id": "chart-provenance-missing",
+      "severity": "requires_adaptation",
+      "finding": "Chart records omit engine version, school contract, civil-time precision, timezone, and source snapshot needed to reproduce a reading."
+    },
+    {
+      "id": "privacy-foundation-useful",
+      "severity": "positive",
+      "finding": "Pseudonyms, optional exact birth data, fictional examples, and cloud-versus-local privacy reminders are sound defaults to retain."
+    }
+  ],
+  "adoptionDecision": {
+    "mode": "adapt_schema_concepts_only",
+    "target": "database/learning/practice-evidence-schema-candidate.json",
+    "allowedUses": [
+      "practice_case_schema_design",
+      "tool_to_learning_reflection_design",
+      "privacy_and_portability_requirements",
+      "source_attributed_workflow_research"
+    ],
+    "rejectedUses": [
+      "classical_primary_witness",
+      "traditional_knowledge_correction",
+      "automatic_method_verification",
+      "automatic_mastery_update_from_real_world_outcomes",
+      "high_stakes_prediction_scoring"
+    ]
+  },
+  "productEligibility": "design_reference_only",
+  "runtimeEligibleFields": [],
+  "evidenceUrls": [
+    "https://github.com/yanouyuan-bit/xuanxue-database-skill/tree/926d0b56154c8764b68e9ddf2661949e9b5b5f11",
+    "https://github.com/yanouyuan-bit/xuanxue-database-skill/blob/926d0b56154c8764b68e9ddf2661949e9b5b5f11/SKILL.md",
+    "https://github.com/yanouyuan-bit/xuanxue-database-skill/blob/926d0b56154c8764b68e9ddf2661949e9b5b5f11/references/schemas.md",
+    "https://github.com/yanouyuan-bit/xuanxue-database-skill/blob/926d0b56154c8764b68e9ddf2661949e9b5b5f11/references/backtest-guide.md",
+    "https://github.com/yanouyuan-bit/xuanxue-database-skill/blob/926d0b56154c8764b68e9ddf2661949e9b5b5f11/LICENSE"
+  ]
+}

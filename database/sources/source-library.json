@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 262,
+    "entries": 264,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -13,10 +13,10 @@
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
       "shared_ctext_witnesses": 9,
-      "external_source_manifests": 1,
+      "external_source_manifests": 2,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
-      "licenses": 1
+      "licenses": 2
     },
     "identicalCompendiumMirrors": 46,
     "historicalCompendiumVariants": 24
@@ -2946,6 +2946,17 @@
       "relationshipStatus": "standalone"
     },
     {
+      "id": "source.external_source_manifests.17dde6154612c2d0",
+      "group": "external_source_manifests",
+      "title": "xuanxue-database-skill-2026-07-18.json",
+      "canonicalPath": "database/sources/external/xuanxue-database-skill-2026-07-18.json",
+      "sourceRole": "external_secondary_source_metadata",
+      "format": "json",
+      "bytes": 4719,
+      "sha256": "e879e44c9a78424a5b7684fdea43b92d547d4ad5ab16bee9806f75806b4f2b4d",
+      "relationshipStatus": "standalone"
+    },
+    {
       "id": "source.xiangshu_source_registry.e6a30649790257bd",
       "group": "xiangshu_source_registry",
       "title": "xiangshu-source-manifest.json",
@@ -2976,6 +2987,17 @@
       "format": "txt",
       "bytes": 1995,
       "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.licenses.0403b5d1bf4c8885",
+      "group": "licenses",
+      "title": "XUANXUE_DATABASE_SKILL_MIT.txt",
+      "canonicalPath": "database/licenses/XUANXUE_DATABASE_SKILL_MIT.txt",
+      "sourceRole": "source_license",
+      "format": "txt",
+      "bytes": 1092,
+      "sha256": "0f3a906ad28d252462f8387541d6a474cca071da07d8e4699dcbbad1122f99d1",
       "relationshipStatus": "standalone"
     }
   ]

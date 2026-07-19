@@ -29,6 +29,7 @@
 | `historical_spec` | 证明旧产品意图和开发顺序的历史规格 |
 | `candidate_reference` | 可用于提取候选知识条目的整理资料 |
 | `metadata_only_blocked` | 只登记固定版本、许可、范围和溯源缺口；正文不得进入候选/accepted/runtime |
+| `reviewed_schema_reference` | 已审计的外部结构/流程设计来源；可按许可改造，但不自动成为知识内容或 runtime 合同 |
 | `primary_or_textbook_text` | 原典或教材文本层；仍需记录版本、权利和整理状态 |
 | `runtime_truth` | 能证明当前产品实际行为的代码或数据；不自动成为知识权威 |
 | `normalized` | 已转为稳定 schema，但尚未必校勘 |
@@ -112,6 +113,24 @@
 | 溯源断点 | README 说明 v2.0.0 已移除约 110 MB 原始资料；研究索引保留的 Windows `books` 路径不可访问，多数正文只标讲义名称而无稳定页码/段落 |
 | 禁止用途 | 不得作为《伤寒论》《金匮要略》《黄帝内经》等原典见证，不得直接校正 accepted 主张，不得进入运行时医疗知识，不批量复制正文 |
 | 晋升门槛 | 取得实际许可和第三方权利边界；恢复原始讲义/PDF；逐条补版本和页码；古籍引文与独立一手见证复核；学派阐释与原典分层 |
+
+### SRC-EXT-XUANXUE-DATABASE-SKILL
+
+| 字段 | 值 |
+|---|---|
+| 名称 | xuanxue-database-skill 外部数据库设计来源 |
+| 来源 | `https://github.com/yanouyuan-bit/xuanxue-database-skill` |
+| 固定版本 | `main` commit `926d0b56154c8764b68e9ddf2661949e9b5b5f11`；tree `06afe033a72bfe7a8216af068a3c037824eb3909` |
+| 项目档案 | `database/sources/external/xuanxue-database-skill-2026-07-18.json` |
+| 审计日期 | 2026-07-18 |
+| 状态 | `reviewed_schema_reference` + `external_database_design_reference` |
+| 规模 | 14 文件、858 行、约 41 KB；1 个 Skill、5 个 reference、6 个模板和 1 个 LICENSE |
+| 许可 | MIT；许可证副本 `database/licenses/XUANXUE_DATABASE_SKILL_MIT.txt` 已纳入中央来源索引 |
+| 内容性质 | 八字、六爻、紫微的个人命例/应事/方法三库 schema，支持 Notion 与本地 Markdown；不含原典全文、结构化传统知识或真实案例 |
+| 可吸收内容 | 匿名命例、命盘-断语-应事-方法关联、事前可证伪写法、失败记录保留、本地优先与可迁移字段 |
+| 直接采用风险 | 单一可靠度字段混合经典地位与个人战绩；3 次应验即可“已验证”；缺断语不可变版本、完整分母、证据等级、排盘版本和流派口径 |
+| 天机卷改造 | 生成 `database/learning/practice-evidence-schema-candidate.json`；个人结果与典籍权威、KP 掌握度彻底分离，加入事前冻结、证伪合同、隐私和高风险排除 |
+| 产品边界 | 当前只作设计候选，不进入 runtime；完成产品、隐私、迁移和 UI 工作流评审后再决定启用 |
 
 ### SRC-PKG-TIANJI-RUNTIME
 
@@ -711,7 +730,7 @@
 | TCM-VALIDATION-SOURCES | `database/tcm/sources/` | 药典/监管 5 份；穴位/外治 3 份；病种红线、理论诊断、中药、方剂、经典/食疗 comparator、106 项食药目录各 1 份，共 14 个文件 | 重建候选层和复核来源漂移 | 历史/二手 comparator 不覆盖官方现行来源；各快照的证据边界单独记录 |
 | TCM-NIHAIXIA-CANDIDATE | `database/sources/external/nihaixia-skill-v2.1.0-2026-07-18.json` | 倪海厦 Skill 固定 commit、仓库规模、自述覆盖、许可冲突、原始见证断点和吸收边界 | 发现倪派资料可能覆盖的数据库缺口并寻找一手来源 | 仅元数据；不复制正文，不充当原典、accepted 主张或运行时来源 |
 | TCM-RUNTIME-LEGACY | `database/tcm/legacy/runtime-consumption-baseline-9ff07ff.json` | 旧 34 题、28 药物标签、22 计量项、30 去重穴位和风险动作 | 可逆审计与逐项复核 | `removed_pending_review`，不是候选处方或操作建议 |
-| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、262 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
+| CENTRAL-SOURCE-LIBRARY | `database/sources/source-library.json` | 11 个来源组、264 个文件的角色、canonical 路径、字节数、SHA256 与镜像关系 | 全项目统一参考文献和典籍入口 | 索引完整不授证内容正确性；正文不复制，迁移必须保留兼容映射 |
 | TCM-ORIGINALS | `sources/` | 42 个原文 txt 与整理状态 | 引用核对、缺口研读、争议追溯 | 已整理/未整理必须分别标；现代教材可能有独立权利 |
 
 ## 7. 当前 Runtime 来源组
@@ -733,6 +752,7 @@
 | 相术规范知识 | `database/xiangshu/` 中逐条 source-pinned core | `compendium-new/10-xiangshu/` 与当前 runtime | compendium 保留 raw；有典籍见证的传统判断可进入文化层，无出处或冲突扩写保持候选/blocked |
 | 中医候选 reference | `tcm/skill-v3/references/` | `compendium-new/08-zhongyi/`、当前 app legacy、原文 `sources/`、医经/本草/方书、药典/监管与 106 项食药目录快照；倪海厦 Skill 仅作 metadata-only 缺口发现来源 | Skill 补广度；传统内容由典籍与版本见证授证，现代药典/监管只授证现行身份、安全和使用边界；外部学派整理稿不能越过许可与逐条溯源门槛 |
 | 当前产品行为 | 当前 `src/` 与 `server/` | CHANGELOG 与历史规格 | 代码证明“现在怎么工作”，测试证明到什么程度 |
+| 实战证据候选 schema | `database/learning/practice-evidence-schema-candidate.json` | `xuanxue-database-skill` 三库模型与天机卷 PRD 的工具/掌握度闭环 | 外部模型提供结构灵感；天机卷版本强制分离典籍权威、个人观察与 KP 掌握度，当前不授予 runtime 资格 |
 | 未来规范数据库 | 逐域建立；周易、紫微、奇门、风水、五运、子午、TCM 安全与共享城市已有规范核心 | 所有 raw/runtime 来源 | 不允许把某个 raw package 目录直接改名为 canonical database；每域要通过裁决和证据 gate |
 
 ## 9. 条目级溯源合同

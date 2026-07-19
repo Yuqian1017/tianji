@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "id": "tianji.practice-evidence.v0",
+  "status": "design_candidate_not_runtime",
+  "purpose": "Record reproducible practice cases, frozen claims, later observations, and learning reflections without treating personal outcomes as proof of classical authority or knowledge correctness.",
+  "sourceAdaptation": {
+    "externalSourceId": "external.xuanxue-database-skill.926d0b56",
+    "license": "MIT",
+    "retainedConcepts": [
+      "pseudonymous cases",
+      "case-claim-outcome-method relations",
+      "pre-event falsifiable wording",
+      "failed-claim preservation",
+      "portable structured records"
+    ],
+    "tianjiCorrections": [
+      "separate source authority from personal outcome summaries",
+      "freeze and version claims before observation",
+      "record engine and school contracts for chart reproducibility",
+      "preserve unresolved and missing follow-up in every denominator",
+      "prevent outcomes from automatically changing learning mastery"
+    ]
+  },
+  "invariants": [
+    "accepted_knowledge_requires_source_adjudication_not_practice_outcomes",
+    "classical_attestation_and_personal_outcomes_are_separate_dimensions",
+    "practice_outcomes_never_automatically_change_mastery",
+    "locked_claim_content_is_immutable_and_corrections_are_append_only",
+    "unresolved_missing_and_excluded_records_remain_visible",
+    "high_stakes_medical_legal_financial_and_safety_claims_are_not_scored",
+    "personally_identifying_data_is_minimized_and_pseudonymous_by_default"
+  ],
+  "entities": {
+    "practiceCase": {
+      "required": [
+        "id",
+        "subjectRef",
+        "domain",
+        "chartSnapshotRef",
+        "engineContract",
+        "schoolContract",
+        "createdAt",
+        "privacyClass"
+      ],
+      "fields": {
+        "subjectRef": "pseudonymous stable subject id",
+        "domain": "bazi | liuyao | ziwei | qimen | meihua | fengshui | other",
+        "chartSnapshotRef": "immutable chart or input snapshot id",
+        "engineContract": "engine id, semantic version or commit, algorithm mode, and timezone data version",
+        "schoolContract": "declared school, day boundary, calendar, leap-month, true-solar-time, and other domain-specific choices",
+        "inputPrecision": "which civil time, place, timezone, and uncertainty fields were actually known",
+        "privacyClass": "pseudonymous | private_sensitive | synthetic",
+        "exactBirthDataRef": "optional encrypted/local-only reference; never a public display field"
+      }
+    },
+    "methodReference": {
+      "required": [
+        "id",
+        "domain",
+        "knowledgePointIds",
+        "sourceRefs",
+        "authorityStatus",
+        "practiceStatus"
+      ],
+      "fields": {
+        "knowledgePointIds": "accepted or candidate Tianji knowledge point ids",
+        "sourceRefs": "edition- and location-aware classical or school references",
+        "authorityStatus": "untraced | candidate | source_attested | adjudicated",
+        "practiceStatus": "unassessed | trialing | insufficient_data | user_observed_signal | user_observed_conflict",
+        "schoolScope": "school or interpretation contract to which this method belongs"
+      },
+      "rule": "Practice status cannot promote authority status."
+    },
+    "predictionClaim": {
+      "required": [
+        "id",
+        "caseId",
+        "methodIds",
+        "statement",
+        "createdAt",
+        "lockedAt",
+        "timeWindow",
+        "observableCriteria",
+        "disconfirmationCriteria",
+        "riskClass",
+        "status"
+      ],
+      "immutableAfterLock": [
+        "caseId",
+        "methodIds",
+        "statement",
+        "createdAt",
+        "timeWindow",
+        "observableCriteria",
+        "disconfirmationCriteria",
+        "primaryClaim"
+      ],
+      "fields": {
+        "timeWindow": "closed start/end interval with timezone",
+        "observableCriteria": "predeclared event category and minimum observable threshold",
+        "disconfirmationCriteria": "what non-occurrence or contrary event resolves the claim against support",
+        "primaryClaim": "whether this was the single primary claim selected before the outcome window",
+        "riskClass": "cultural_low_stakes | personal_reflection | high_stakes_excluded",
+        "status": "locked_pending | resolved | expired_unreviewed | invalidated"
+      }
+    },
+    "outcomeObservation": {
+      "required": [
+        "id",
+        "claimId",
+        "observedAt",
+        "resultSummary",
+        "evidenceClass",
+        "followUpStatus"
+      ],
+      "fields": {
+        "eventTime": "event time or bounded interval when known",
+        "resultSummary": "observable result without rewriting the original claim",
+        "evidenceClass": "self_report | contemporaneous_record | third_party_report | objective_record",
+        "privateEvidenceRef": "optional local/private reference, never copied into public learning content",
+        "followUpStatus": "complete | partial | missing | lost"
+      }
+    },
+    "adjudication": {
+      "required": [
+        "id",
+        "claimId",
+        "observationIds",
+        "result",
+        "reviewedAt",
+        "reviewerMode",
+        "rationale",
+        "metricEligibility"
+      ],
+      "fields": {
+        "result": "supported | partially_supported | not_supported | indeterminate | invalidated",
+        "reviewerMode": "self_review | second_reader | rule_based",
+        "metricEligibility": "eligible | excluded_high_stakes | excluded_not_preregistered | excluded_missing_evidence | excluded_invalid_contract",
+        "rationale": "comparison against the frozen criteria; no post-hoc claim rewrite"
+      }
+    },
+    "learningReflection": {
+      "required": [
+        "id",
+        "caseId",
+        "knowledgePointIds",
+        "reflection",
+        "nextLearningAction",
+        "masteryEffect"
+      ],
+      "fields": {
+        "masteryEffect": "none",
+        "nextLearningAction": "review_source | compare_school | replay_chart | practice_again | no_action"
+      },
+      "rule": "Real-world outcome ratings may schedule reflection but do not award or remove mastery."
+    }
+  },
+  "metricContract": {
+    "label": "user_observed_outcome_summary_not_method_truth",
+    "eligibleRecordRequirements": [
+      "claim locked before the outcome window",
+      "engine and school contracts present",
+      "time window and observable criteria present",
+      "follow-up complete",
+      "risk class is cultural_low_stakes or personal_reflection",
+      "adjudication metricEligibility is eligible"
+    ],
+    "requiredDenominators": [
+      "locked_total",
+      "resolved_eligible",
+      "supported",
+      "partially_supported",
+      "not_supported",
+      "indeterminate",
+      "expired_unreviewed",
+      "missing_follow_up",
+      "excluded"
+    ],
+    "partialSupportDefault": "reported_separately_not_counted_as_supported",
+    "automaticAuthorityPromotion": false,
+    "automaticMasteryUpdate": false,
+    "minimumSampleRule": "No sample count alone permits a verified or generally valid label."
+  },
+  "privacyContract": {
+    "defaultSubjectIdentity": "pseudonymous",
+    "publicExportDefault": "deny",
+    "publicExportRequires": "explicit subject consent, case-level redaction review, and exclusion of high-stakes content",
+    "publicExportAllowedFields": [
+      "domain",
+      "synthetic_or_pseudonymous_case_id",
+      "method_ids",
+      "frozen_claim",
+      "coarsened_time_window",
+      "adjudication_result"
+    ],
+    "publicExportDeniedFields": [
+      "real_name",
+      "exact_birth_datetime",
+      "exact_birth_location",
+      "contact_information",
+      "private_evidence"
+    ],
+    "cloudExactBirthDataDefault": "do_not_store"
+  },
+  "productEligibility": "blocked_pending_product_and_privacy_review",
+  "runtimeEligibleFields": []
+}
