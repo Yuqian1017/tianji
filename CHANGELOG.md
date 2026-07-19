@@ -6,6 +6,13 @@
 - 以标明河北人民出版社 1977 年 2 版的公共整理文本校正闟缺字、“脉减谵甚”和“若开破之则胀去人脱”；raw 不改写。
 - 分开 16 条外部经典、19 条后世具名转引/医案/评论和 7 条现代编辑语；`nihaisha-nishi-tcm` 本批未覆盖独立版本见证。`42-48` 共 1,470 段首轮完成，中央来源库更新为 11 组、272 文件，`TJI-VAL-027` 关闭。
 
+## 2026-07-19 (ch6 batch — script/data)
+
+- **script**: CHAPTER_6_SCRIPT_v1.md v1.1 — 826→880+ 行七幕：换月/铃响/出手的人（KP-016）/那半分指着的爻（观之剥+择动+CP-01+回頭克）/錾记（CP-02）/袖里的手（暗動日破+CP-03+natal 作业 favorBranch）/三个旧字。两轮审查收敛（R1 PASS-WITH-FIXES 3P1+5P2 全折；R2 delta 8/8 零回归）。
+- **data**: chapter6.js 320 节点（双 agent 转录 A:188+B:132 合并，dangling 0）；registry+GameModule 解锁链；DressingBoard bian 可选列（变爻「→子·子孙」）。
+- **lint**: audit-chapter6-script.mjs 首跑 3 fail（我方 lint 杜撰 kpId 字段——testsKp 才是引擎正字段）修正后 ALL GREEN（favor 10/lingli 37/巳线 span 19/📘 parity 6——审律建议的教学块标记机检化落地）；audit:chapter6 npm script 注册；eslint ignore .worktrees（并行 session 工作区噪音）。
+- **canon 回归**: audit-chapter6-canon 90/90 维持全绿；vite build ✓。
+
 ## 2026-07-18 (ch6 batch — planning)
 
 - **design**: CHAPTER_6_PREP.md — ch6《动爻》策划案：KP-LY-016/017/018（動爻生克/變爻回頭/暗動与日破），「四处」框架收口章；案卦=风地观之山地剥（384 组合引擎扫描，ch4「点偏半分」页五爻辛巳官鬼今夜动+变卦回归 ch1 山地剥）；占期辰月辛亥日（亥沖巳三态对比教具）；「择动」入账为 KP-015 复习延伸；bonus 章②裁定 ch6 后。

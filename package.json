@@ -90,7 +90,8 @@
     "audit:xiangshu-sources": "npm run build:xiangshu-inventory && node scripts/validation/audit-xiangshu-classical-sources.mjs",
     "validate:supervisor": "node scripts/validate-task-supervisor.mjs",
     "preview": "vite preview",
-    "audit:chapter6-canon": "node scripts/validation/audit-chapter6-canon.mjs"
+    "audit:chapter6-canon": "node scripts/validation/audit-chapter6-canon.mjs",
+    "audit:chapter6": "node scripts/validation/audit-chapter6-script.mjs"
   },
   "dependencies": {
     "@fal-ai/client": "^1.9.4",
