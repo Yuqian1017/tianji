@@ -15,7 +15,10 @@
 // Strategy: optimal line = always first option (chapter data lists optimal first).
 // Click priority: throw button > continue buttons > first option > cursor-pointer node.
 
-function runWalker({ startButtonText = null, stopWhen = null, stepBudget = 1200 } = {}) {
+// cpPicks: { '<nodeId>': <optionIndex> } — for choice nodes whose optimal answer is
+// NOT the first option (ch6 CP-03 lists the correct pick second by design), or to
+// drive wrong-line runs. Applies when save.currentNodeId matches; falls back to first.
+function runWalker({ startButtonText = null, stopWhen = null, stepBudget = 1200, cpPicks = {} } = {}) {
   window.__walker = { steps: 0, stuck: 0, done: false, error: null, lastNode: null, nodeTrail: [] };
   const W = window.__walker;
   const getSave = () => { try { return JSON.parse(localStorage.getItem('tianji-game-save')); } catch { return null; } };
@@ -39,8 +42,12 @@ function runWalker({ startButtonText = null, stopWhen = null, stepBudget = 1200 
       if (throwBtn) { W.stuck = 0; throwBtn.click(); return; }
       const contBtn = buttons.find((b) => /存档并返回|继续摇卦|继续 ▸/.test(b.textContent));
       if (contBtn) { W.stuck = 0; contBtn.click(); return; }
-      const optBtn = buttons.find((b) => b.className.includes('text-left'));
-      if (optBtn) { W.stuck = 0; optBtn.click(); return; }
+      const optBtns = buttons.filter((b) => b.className.includes('text-left'));
+      if (optBtns.length) {
+        const pick = cpPicks[nid];
+        const target = (pick !== undefined && optBtns[pick]) ? optBtns[pick] : optBtns[0];
+        W.stuck = 0; target.click(); return;
+      }
       const clickable = document.querySelector('.cursor-pointer');
       if (clickable) { W.stuck = 0; clickable.click(); return; }
       W.stuck++;
