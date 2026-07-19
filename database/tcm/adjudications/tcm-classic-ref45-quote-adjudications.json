@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "scope": "reference_45_jingui_quote_form_adjudications",
+  "doctrine": "classify_non_verbatim_form_without_promoting_content_or_rewriting_raw_witnesses",
+  "publicWitnessPath": "database/sources/ctext/tcm-jingui-public-witnesses-2026-07-18.json",
+  "records": [
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q2",
+      "quoteText": "若治风湿者,发其汗,**但微微似欲出汗者,风湿俱去也**;汗大出者,但风气去,湿气在",
+      "category": "reordered_source_clauses",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [58] }],
+      "relatedSourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [147] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Reverses the order of two clauses from one source passage, placing the treatment rule before the explanation of excessive sweating."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q3",
+      "quoteText": "发汗祛湿",
+      "category": "modern_editorial_summary_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [58] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern shorthand used by the reference commentary, not wording from Jingui Yaolue."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q6",
+      "quoteText": "若发其汗则恶寒甚,加温针则发热甚,数下之则淋甚",
+      "category": "minor_omission_in_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [83] }],
+      "relatedSourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [152] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops 其 from 其恶寒甚 and regularizes punctuation; otherwise traceable to the Jingui and Shanghan duplicate passage."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q6",
+      "quoteText": "**虚劳虚烦不得眠,酸枣汤(酸枣仁汤)主之**",
+      "category": "source_quote_with_modern_parenthetical_alias",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [248] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "The source reads 酸枣汤; the reference inserts the modern parenthetical alias 酸枣仁汤 inside the quotation."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q3",
+      "quoteText": "咳即胸中隐隐痛……咳唾脓血,吐如米粥,始萌可救,脓成则死",
+      "category": "stitched_across_adjacent_source_passages",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [263, 264] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Stitches the initial symptom from one question and the prognosis clauses from the following passage."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q5",
+      "quoteText": "火逆上气,咽喉不利,止逆下气者,**麦门冬汤**主之",
+      "category": "wording_error_against_local_and_public_witnesses",
+      "verdict": "reference_wording_not_supported",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [287] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-jingui-feiwei", "wikisource-jingui-full"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:fcf026a0b4f9#p97"],
+      "note": "The local text, CText, and Wikisource read 大逆上气. The reference and the Nihaisha course page card read 火逆上气, showing that the secondary course locator cannot override the classical witnesses."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q7",
+      "quoteText": "咳而上气,其人喘,**目如脱状**",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [299] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops 此为肺胀 from the middle of the source sentence."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q3",
+      "quoteText": "心下有痰饮,胸胁支满,**目眩**,苓桂朮甘汤主之",
+      "category": "orthographic_formula_name_variant",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [505] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "The local witness writes 苓桂术甘汤 while the reference uses 朮; the passage is otherwise traceable."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q4",
+      "quoteText": "短气有微饮,**当从小便去之**,苓桂朮甘汤主之,肾气丸亦主之",
+      "category": "minor_omission_and_orthographic_variant",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [509] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops the opening 夫 and writes 朮 where the local witness has 术."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0058Q5",
+      "quoteText": "六府气绝于外者,手足寒;五藏气绝于内者,利不禁",
+      "category": "abridged_parallel_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [835] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compresses two parallel clauses by omitting 上气脚缩 and 下甚者，手足不仁."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0059Q2",
+      "quoteText": "其身甲错,腹皮急,按之濡,腹无积聚,身无热",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [894] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Drops 如肿状 and 脉数 from the source passage."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0060Q1",
+      "quoteText": "腹中痛,发作有时……得食而呕",
+      "category": "stitched_across_two_worm_passages",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [929, 933] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Joins the 甘草粉蜜汤 worm-pain passage with the following 蛔厥 passage."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0066Q2",
+      "quoteText": "妇人怀妊,腹中㽲痛",
+      "category": "external_witness_supported_local_ocr_correction",
+      "verdict": "non_verbatim_against_local_but_two_public_witnesses_supported",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [952] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-jingui-renchen", "wikisource-jingui-full"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:fcf026a0b4f9#p262"],
+      "note": "The local file has OCR placeholder A2K0痛. CText and Wikisource support 㽲痛; the Nihaisha page card modernizes it to 绞痛 and remains locator-only."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0067Q3",
+      "quoteText": "热在里,结在膀胱",
+      "category": "external_witness_supported_local_ocr_correction",
+      "verdict": "non_verbatim_against_local_but_two_public_witnesses_supported",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [992] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-jingui-chanhou", "wikisource-jingui-full"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:fcf026a0b4f9#p268"],
+      "note": "The local file reads 膀肽. CText and Wikisource support 膀胱; the raw file remains unchanged and the Nihaisha page card is only a secondary locator."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q4",
+      "quoteText": "妇人年五十所,病下利(利一作血)数十日不止,暮即发热,少腹里急,腹满,手掌烦热,**唇口干燥**……曾经半产,瘀血在少腹不去",
+      "category": "abridged_source_quote_with_textual_variant_gloss",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [1032] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Adds the editorial textual-variant gloss 利一作血 inside the quotation and abridges the intervening question and answer."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0072Q2",
+      "quoteText": "灶中灰埋人",
+      "category": "modern_editorial_shorthand",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [1129] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compresses 取灶中灰两石余以埋人 into a modern shorthand label."
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q4",
+      "quoteText": "凡蟹未遇霜,多毒",
+      "category": "abridged_quote_with_orthographic_normalization",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "jingui-yaolue-local-text", "lines": [1268] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Normalizes the local 蠏 to 蟹 and omits the following qualification 其熟者，乃可食之."
+    }
+  ]
+}

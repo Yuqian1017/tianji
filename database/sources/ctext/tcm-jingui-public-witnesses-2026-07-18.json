@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "source.tcm.ref45.public-transcription-witnesses.2026-07-18",
+  "title": "《金匮要略》公共转录本校勘见证",
+  "fetchedAt": "2026-07-18",
+  "scope": "reference_45_local_transcription_and_wording_witnesses",
+  "doctrine": "public_transcriptions_are_collation_witnesses_not_edition_level_primary_sources",
+  "retrieval": {
+    "method": "HTTP GET with redirects and a browser-compatible user agent",
+    "hashMeaning": "SHA256 and bytes identify the exact HTML response retrieved for this audit; dynamic pages may produce a different response hash on a later retrieval.",
+    "archivalBoundary": "Only transformed metadata and short public-domain passage witnesses are stored here; fetched HTML is not copied into the repository."
+  },
+  "witnesses": [
+    {
+      "id": "ctext-jingui-feiwei",
+      "work": "金匮要略",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/jinkui-yaolue/7/zhs",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "a546e7f3c38b40137c96ac32c658d210555eb1dd5b07dba7d4c8b0722e400e9f",
+      "retrievedHtmlBytes": 137572,
+      "locator": "肺痿肺痈咳嗽上气病脉证治第七",
+      "supports": "Reads 大逆上气, agreeing with the local text and disagreeing with the reference wording 火逆上气.",
+      "excerpt": "大逆上气，咽喉不利，止逆下气者，麦门冬汤主之",
+      "limitations": "Open digital transcription; useful for character-level collation but not a substitute for an identified print edition or image facsimile."
+    },
+    {
+      "id": "ctext-jingui-renchen",
+      "work": "金匮要略",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/jinkui-yaolue/20/zhs",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "62ed1e38a35df8b23719852af92f81f12f206a05a5ac60432a6b72215f430722",
+      "retrievedHtmlBytes": 112835,
+      "locator": "妇人妊娠病脉证并治第二十",
+      "supports": "Preserves 㽲痛 where the local file contains OCR placeholder A2K0痛.",
+      "excerpt": "妇人怀娠，腹中㽲痛，当归芍药散主之",
+      "limitations": "The witness has 怀娠 while the local file and reference have 怀妊; it is used only to support the 㽲 character."
+    },
+    {
+      "id": "ctext-jingui-chanhou",
+      "work": "金匮要略",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/jinkui-yaolue/21/zhs",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "52dfa9cc73bd85d37158635e16e1d558350c9858fc01cc4b1813c3dd30ae534d",
+      "retrievedHtmlBytes": 113209,
+      "locator": "妇人产后病脉证治第二十一",
+      "supports": "Reads 结在膀胱, correcting the local OCR/transcription 膀肽.",
+      "excerpt": "热在里，结在膀胱也",
+      "limitations": "Open digital transcription used only for character-level collation."
+    },
+    {
+      "id": "wikisource-jingui-full",
+      "work": "金匮要略",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/金匱要略",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "006893b7fd1cf464299cb1866856a9bd11f5c636cde0faaa29132b3295d86083",
+      "retrievedHtmlBytes": 217708,
+      "locator": "肺痿第七、妇人妊娠第二十、妇人产后第二十一",
+      "supports": "Independently reads 大逆上氣, 腹中㽲痛, and 結在膀胱.",
+      "excerpt": "大逆上氣；腹中㽲痛；結在膀胱",
+      "limitations": "Community-maintained digital transcription; used only as an independent collation witness."
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": []
+}

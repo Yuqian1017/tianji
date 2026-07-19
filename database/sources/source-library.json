@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 267,
+    "entries": 268,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -12,7 +12,7 @@
       "xuanxue_compendium": 70,
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
-      "shared_ctext_witnesses": 11,
+      "shared_ctext_witnesses": 12,
       "external_source_manifests": 3,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
@@ -2866,6 +2866,17 @@
       "format": "html",
       "bytes": 136187,
       "sha256": "3efe2493fafda64efdfbc13a4519cbe188a05b6d4bc587529d2ec2ded264a57c",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.18c09f6dd48e4e26",
+      "group": "shared_ctext_witnesses",
+      "title": "tcm-jingui-public-witnesses-2026-07-18.json",
+      "canonicalPath": "database/sources/ctext/tcm-jingui-public-witnesses-2026-07-18.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 3778,
+      "sha256": "117e91baf8647bd2ec49cc2a2a0a9b93fb8e01af1fe1ae3af7623c8b261f0977",
       "relationshipStatus": "standalone"
     },
     {

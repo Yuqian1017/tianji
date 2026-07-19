@@ -1,0 +1,4836 @@
+{
+  "schemaVersion": 1,
+  "doctrine": "classical_source_first",
+  "generatedAt": "2026-07-18",
+  "scope": "reference_45_jingui_explicit_quotes",
+  "status": "text_match_and_manual_form_adjudication_not_content_acceptance",
+  "sourceRefs": {
+    "ref45": {
+      "path": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "sha256": "18a7d6b563660b6958eb24365543a38b0b045b2349b8249f05b8de689df6e987"
+    },
+    "jingui-yaolue-local-text": {
+      "path": "database/tcm/skill-v3/sources/金匮要略.txt",
+      "sha256": "9d96ad3b03c0886975521ab53e3c71a684e8ea300c2bdc86d8e6ef75a56de277"
+    },
+    "shanghanlun-local-text": {
+      "path": "database/tcm/skill-v3/sources/伤寒论.txt",
+      "sha256": "667fbb30d6d41d0ac2e82f7817cebad0d9529a3f136e49ce6d79a99d26da0fbd"
+    },
+    "huangdi-neijing-suwen-local-text": {
+      "path": "database/tcm/skill-v3/sources/黄帝内经素问.txt",
+      "sha256": "ca9f5592564f787898e5f0488ef6b14950c80287af78b8ac88ba6a2d9b4f340f"
+    },
+    "huangdi-neijing-lingshu-local-text": {
+      "path": "database/tcm/skill-v3/sources/黄帝内经灵枢.txt",
+      "sha256": "7e2538e82bedf48bbf810969b1b643f16f6d94d1cc486d62ddc1a60b18916d19"
+    },
+    "nanjing-local-text": {
+      "path": "database/tcm/skill-v3/sources/难经.txt",
+      "sha256": "f80c0011c8c20acf9aece6a7c11ae8b4ce3d13e46fc0ce6997efa74363e380a3"
+    },
+    "ref45-manual-adjudications": {
+      "path": "database/tcm/adjudications/tcm-classic-ref45-quote-adjudications.json",
+      "sha256": "70b1114e22186a270eff00543f3c9537e9e45a8cf096ed875bc4df8fdc4eb649"
+    },
+    "ref45-public-transcription-witnesses": {
+      "path": "database/sources/ctext/tcm-jingui-public-witnesses-2026-07-18.json",
+      "sha256": "117e91baf8647bd2ec49cc2a2a0a9b93fb8e01af1fe1ae3af7623c8b261f0977"
+    },
+    "nihaisha-nishi-tcm-locator-manifest": {
+      "path": "database/sources/external/nihaisha-nishi-tcm-2026-07-18.json",
+      "sha256": "0e599506af8bfba962af0b7ee5733b359244030354c9111374d04d9c5f4b55e4"
+    }
+  },
+  "counts": {
+    "quotes": 113,
+    "located": 96,
+    "exactText": 14,
+    "normalizedContiguous": 71,
+    "segmentedEllipsis": 11,
+    "unresolved": 17,
+    "manualAdjudicated": 17,
+    "pendingManual": 0,
+    "multiSource": 4,
+    "sourceMismatch": 0,
+    "externalClassicalAllusion": 1,
+    "publicWitnessSupported": 3,
+    "secondaryLocatorLinked": 3
+  },
+  "boundaries": [
+    "A text match proves only that the quoted character sequence occurs in a selected local witness.",
+    "Manual form adjudication records abridgement, stitching, editorial prose, OCR errors, and transcription variants without accepting a traditional interpretation or modern medical claim.",
+    "CText and Wikisource are public transcription witnesses used for character-level collation; they are not identified edition-level facsimiles.",
+    "nihaisha-nishi-tcm page cards are secondary locators only; where a page card repeats 火逆 or modernizes 㽲痛, it cannot override the independent classical witnesses.",
+    "Duplicate matches in Jingui Yaolue and Shanghanlun are retained as parallel textual witnesses, with Jingui Yaolue selected for this reference.",
+    "Raw Skill references and local source texts remain unchanged; corrections are overlays in adjudication and provenance data.",
+    "No quote, dose, treatment, diagnosis, prognosis, emergency instruction, or self-care instruction becomes runtime eligible through this inventory."
+  ],
+  "records": [
+    {
+      "id": "tcm.classic.ref45.quote.L0005Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 5,
+      "quoteText": "不可一日再服",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            426
+          ],
+          "sourceSnippets": [
+            "右以水三升，煮取一升，去滓，内蜜二升，煎令水气尽，取二升。强人服七合，弱人服五合。不差，明日更服，不可一日再服。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          426
+        ],
+        "sourceSnippets": [
+          "右以水三升，煮取一升，去滓，内蜜二升，煎令水气尽，取二升。强人服七合，弱人服五合。不差，明日更服，不可一日再服。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0009Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 9,
+      "quoteText": "见肝之病,知肝传脾,**当先实脾**……中工不晓相传,见肝之病,不解实脾,惟治肝也",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            7
+          ],
+          "sourceSnippets": [
+            "问曰：上工治未病，何也？师曰：夫治未病者，见肝之病，知肝传脾，当先实脾。四季脾王不受邪，即勿补之。中工不晓相传，见肝之病，不解实脾，惟治肝也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          7
+        ],
+        "sourceSnippets": [
+          "问曰：上工治未病，何也？师曰：夫治未病者，见肝之病，知肝传脾，当先实脾。四季脾王不受邪，即勿补之。中工不晓相传，见肝之病，不解实脾，惟治肝也。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0009Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 9,
+      "quoteText": "虚虚实实,补不足,损有余",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            9
+          ],
+          "sourceSnippets": [
+            "经曰：“虚虚实实，补不足，损有余。”是其义也。余藏准此。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          9
+        ],
+        "sourceSnippets": [
+          "经曰：“虚虚实实，补不足，损有余。”是其义也。余藏准此。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0010Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 10,
+      "quoteText": "一者,经络受邪,入藏府,为内所因也;二者,四肢九窍,血脉相传,壅塞不通,为外皮肤所中也;三者,**房室、金刃、虫兽所伤**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            10
+          ],
+          "sourceSnippets": [
+            "夫人禀五常，因风气而生长。风气虽能生万物，亦能害万物，如水能浮舟，亦能覆舟。若五藏元真通畅，人即安和。客气邪风，中人多死。千般疢难，不越三条；一者，经络受邪，入藏府，为内所因也；二者，四肢九窍，血脉相传，壅塞不通，为外皮肤所中也；三者，房室、金刃、虫兽所伤。以此详之，病由都尽。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          10
+        ],
+        "sourceSnippets": [
+          "夫人禀五常，因风气而生长。风气虽能生万物，亦能害万物，如水能浮舟，亦能覆舟。若五藏元真通畅，人即安和。客气邪风，中人多死。千般疢难，不越三条；一者，经络受邪，入藏府，为内所因也；二者，四肢九窍，血脉相传，壅塞不通，为外皮肤所中也；三者，房室、金刃、虫兽所伤。以此详之，病由都尽。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0011Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 11,
+      "quoteText": "若五藏元真通畅,人即安和",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            10
+          ],
+          "sourceSnippets": [
+            "夫人禀五常，因风气而生长。风气虽能生万物，亦能害万物，如水能浮舟，亦能覆舟。若五藏元真通畅，人即安和。客气邪风，中人多死。千般疢难，不越三条；一者，经络受邪，入藏府，为内所因也；二者，四肢九窍，血脉相传，壅塞不通，为外皮肤所中也；三者，房室、金刃、虫兽所伤。以此详之，病由都尽。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          10
+        ],
+        "sourceSnippets": [
+          "夫人禀五常，因风气而生长。风气虽能生万物，亦能害万物，如水能浮舟，亦能覆舟。若五藏元真通畅，人即安和。客气邪风，中人多死。千般疢难，不越三条；一者，经络受邪，入藏府，为内所因也；二者，四肢九窍，血脉相传，壅塞不通，为外皮肤所中也；三者，房室、金刃、虫兽所伤。以此详之，病由都尽。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0011Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 11,
+      "quoteText": "适中经络,未流传藏府,**即医治之**,四肢才觉重滞,即导引、吐纳、针灸、膏摩,**勿令九窍闭塞**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            11
+          ],
+          "sourceSnippets": [
+            "若人能养慎，不令邪风干忤经络。适中经络，未流传藏府，即医治之，四肢才觉重滞，即导引、吐纳、针灸、膏摩，勿令九窍闭塞；更能无犯王法、禽兽灾伤，房室勿令竭乏，服食节其冷热苦酸辛甘，不遣形体有衰，病则无由入其腠理。腠者，是三焦通会元真之处，为血气所注；理者，是皮肤藏府之文理也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          11
+        ],
+        "sourceSnippets": [
+          "若人能养慎，不令邪风干忤经络。适中经络，未流传藏府，即医治之，四肢才觉重滞，即导引、吐纳、针灸、膏摩，勿令九窍闭塞；更能无犯王法、禽兽灾伤，房室勿令竭乏，服食节其冷热苦酸辛甘，不遣形体有衰，病则无由入其腠理。腠者，是三焦通会元真之处，为血气所注；理者，是皮肤藏府之文理也。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0011Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 11,
+      "quoteText": "服食节其冷热苦酸辛甘",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            11
+          ],
+          "sourceSnippets": [
+            "若人能养慎，不令邪风干忤经络。适中经络，未流传藏府，即医治之，四肢才觉重滞，即导引、吐纳、针灸、膏摩，勿令九窍闭塞；更能无犯王法、禽兽灾伤，房室勿令竭乏，服食节其冷热苦酸辛甘，不遣形体有衰，病则无由入其腠理。腠者，是三焦通会元真之处，为血气所注；理者，是皮肤藏府之文理也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          11
+        ],
+        "sourceSnippets": [
+          "若人能养慎，不令邪风干忤经络。适中经络，未流传藏府，即医治之，四肢才觉重滞，即导引、吐纳、针灸、膏摩，勿令九窍闭塞；更能无犯王法、禽兽灾伤，房室勿令竭乏，服食节其冷热苦酸辛甘，不遣形体有衰，病则无由入其腠理。腠者，是三焦通会元真之处，为血气所注；理者，是皮肤藏府之文理也。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0012Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 12,
+      "quoteText": "夫病痼疾,加以卒病,**当先治其卒病,后乃治其痼疾也**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            27
+          ],
+          "sourceSnippets": [
+            "夫病痼疾，加以卒病，当先治其卒病，后乃治其痼疾也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          27
+        ],
+        "sourceSnippets": [
+          "夫病痼疾，加以卒病，当先治其卒病，后乃治其痼疾也。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0014Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 14,
+      "quoteText": "鼻头色青,腹中痛,苦冷者死",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            12
+          ],
+          "sourceSnippets": [
+            "问曰：病人有气色见于面部，愿闻其说。师曰：鼻头色青，腹中痛，苦冷者死；鼻头色微黑色，有水气；色黄者，胸上有寒；色白者，亡血也。设微赤，非时者死；其目正圆者痓，不治。又色青为痛，色黑为劳，色赤为风，色黄者便难，色鲜明者有留饮。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          12
+        ],
+        "sourceSnippets": [
+          "问曰：病人有气色见于面部，愿闻其说。师曰：鼻头色青，腹中痛，苦冷者死；鼻头色微黑色，有水气；色黄者，胸上有寒；色白者，亡血也。设微赤，非时者死；其目正圆者痓，不治。又色青为痛，色黑为劳，色赤为风，色黄者便难，色鲜明者有留饮。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0014Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 14,
+      "quoteText": "语声寂然喜惊呼者,骨节间病",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            13
+          ],
+          "sourceSnippets": [
+            "师曰：病人语声寂然喜惊呼者，骨节间病；语声喑喑然不彻者，心膈间病；语声啾啾然细而长者，头中病。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          13
+        ],
+        "sourceSnippets": [
+          "师曰：病人语声寂然喜惊呼者，骨节间病；语声喑喑然不彻者，心膈间病；语声啾啾然细而长者，头中病。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0014Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 14,
+      "quoteText": "息摇肩者,心中坚",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            14
+          ],
+          "sourceSnippets": [
+            "师曰：息摇肩者，心中坚；息引胸中上气者咳；息张口短气者，肺痿唾沫。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          14
+        ],
+        "sourceSnippets": [
+          "师曰：息摇肩者，心中坚；息引胸中上气者咳；息张口短气者，肺痿唾沫。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0014Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 14,
+      "quoteText": "**息张口短气者,肺痿唾沫**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            14
+          ],
+          "sourceSnippets": [
+            "师曰：息摇肩者，心中坚；息引胸中上气者咳；息张口短气者，肺痿唾沫。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          14
+        ],
+        "sourceSnippets": [
+          "师曰：息摇肩者，心中坚；息引胸中上气者咳；息张口短气者，肺痿唾沫。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0014Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 14,
+      "quoteText": "呼吸动摇振振者,不治",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            15
+          ],
+          "sourceSnippets": [
+            "师曰：吸而微数，其病在中焦，实也，当下之即愈，虚者不治；在上焦者，其吸促；在下焦者，其吸远，此皆难治。呼吸动摇振振者，不治。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          15
+        ],
+        "sourceSnippets": [
+          "师曰：吸而微数，其病在中焦，实也，当下之即愈，虚者不治；在上焦者，其吸促；在下焦者，其吸远，此皆难治。呼吸动摇振振者，不治。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0015Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 15,
+      "quoteText": "病者素不应食,而反暴思之,必发热也",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            28
+          ],
+          "sourceSnippets": [
+            "师曰：五藏病各有得者愈，五藏病各有所恶，各随其所不喜者为病。病者素不应食，而反暴思之，必发热也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          28
+        ],
+        "sourceSnippets": [
+          "师曰：五藏病各有得者愈，五藏病各有所恶，各随其所不喜者为病。病者素不应食，而反暴思之，必发热也。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0015Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 15,
+      "quoteText": "诸病在藏,欲攻之,**当随其所得而攻之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            29
+          ],
+          "sourceSnippets": [
+            "夫诸病在藏，欲攻之，当随其所得而攻之，如渴者，与猪苓汤。余皆仿此。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          29
+        ],
+        "sourceSnippets": [
+          "夫诸病在藏，欲攻之，当随其所得而攻之，如渴者，与猪苓汤。余皆仿此。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 44,
+      "quoteText": "小便不利,大便反快,**但当利其小便**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            54
+          ],
+          "sourceSnippets": [
+            "太阳病，关节疼痛而烦，脉沉而细者，此名湿痹。湿痹之候，小便不利，大便反快，但当利其小便。"
+          ]
+        },
+        {
+          "sourceId": "shanghanlun-local-text",
+          "work": "伤寒论",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            145
+          ],
+          "sourceSnippets": [
+            "太阳病，关节疼痛而烦，脉沉而细者，此名湿痹。湿痹之候，其人小便不利，大便反快，但当利其小便。湿家之为病，一身尽疼，发热，身色如似熏黄。湿家，其人但头汗出，背强，欲得被覆向火，若下之早，则哕、胸满、小便不利、舌上如胎者，以丹田有热，胸中有寒，渴欲得水，而不能饮，口燥烦也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          54
+        ],
+        "sourceSnippets": [
+          "太阳病，关节疼痛而烦，脉沉而细者，此名湿痹。湿痹之候，小便不利，大便反快，但当利其小便。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": true,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 44,
+      "quoteText": "若治风湿者,发其汗,**但微微似欲出汗者,风湿俱去也**;汗大出者,但风气去,湿气在",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "reordered_source_clauses",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              58
+            ],
+            "sourceSnippets": [
+              "风湿相搏，一身尽疼痛，法当汗出而解，值天阴雨不止，医云此可发汗，汗之病不愈者，何也？盖发其汗，汗大出者，但风气去，湿气在，是故不愈也。若治风湿者，发其汗，但微微似欲出汗者，风湿俱去也。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [
+          {
+            "sourceId": "shanghanlun-local-text",
+            "lines": [
+              147
+            ],
+            "sourceSnippets": [
+              "问曰：风湿相搏，一身尽疼痛，法当汗出而解。值天阴雨不止，医云此可发汗，汗之病不愈者，何也？答曰：发其汗，汗大出者，但风气去，湿气在，是故不愈也。若治风湿者，发其汗，但微微似欲出汗者，风湿俱去也。"
+            ]
+          }
+        ],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Reverses the order of two clauses from one source passage, placing the treatment rule before the explanation of excessive sweating."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 44,
+      "quoteText": "发汗祛湿",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "modern_editorial_summary_label",
+        "verdict": "not_a_classical_quote",
+        "sourceLocations": [],
+        "relatedSourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              58
+            ],
+            "sourceSnippets": [
+              "风湿相搏，一身尽疼痛，法当汗出而解，值天阴雨不止，医云此可发汗，汗之病不愈者，何也？盖发其汗，汗大出者，但风气去，湿气在，是故不愈也。若治风湿者，发其汗，但微微似欲出汗者，风湿俱去也。"
+            ]
+          }
+        ],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Modern shorthand used by the reference commentary, not wording from Jingui Yaolue."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 44,
+      "quoteText": "脉浮身重,汗出恶风",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            68
+          ],
+          "sourceSnippets": [
+            "风湿，脉浮，身重，汗出，恶风者，防己黄芪汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          68
+        ],
+        "sourceSnippets": [
+          "风湿，脉浮，身重，汗出，恶风者，防己黄芪汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 44,
+      "quoteText": "汗出恶寒,身热而渴",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            84
+          ],
+          "sourceSnippets": [
+            "太阳中热者，暍是也。汗出恶寒，身热而渴，白虎加人参汤主之。"
+          ]
+        },
+        {
+          "sourceId": "shanghanlun-local-text",
+          "work": "伤寒论",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            150
+          ],
+          "sourceSnippets": [
+            "太阳中热者，暍是也。其人汗出恶寒，身热而渴也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          84
+        ],
+        "sourceSnippets": [
+          "太阳中热者，暍是也。汗出恶寒，身热而渴，白虎加人参汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": true,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0044Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 44,
+      "quoteText": "若发其汗则恶寒甚,加温针则发热甚,数下之则淋甚",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "minor_omission_in_source_quote",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              83
+            ],
+            "sourceSnippets": [
+              "太阳中暍，发热恶寒，身重而疼痛，其脉弦细芤迟。小便已，洒洒然毛耸，手足逆冷，小有劳，身即热，口开，前板齿燥。若发其汗，则其恶寒甚；加温针，则发热甚；数下之，则淋甚。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [
+          {
+            "sourceId": "shanghanlun-local-text",
+            "lines": [
+              152
+            ],
+            "sourceSnippets": [
+              "太阳中暍者，发热，恶寒，身重而疼痛，其脉弦细芤迟，小便已，洒洒然毛耸，手足逆冷，小有劳，身即热，口开，前板齿燥。若发汗则恶寒甚，加温针则发热甚，数下之则淋甚。"
+            ]
+          }
+        ],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Drops 其 from 其恶寒甚 and regularizes punctuation; otherwise traceable to the Jingui and Shanghan duplicate passage."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0045Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 45,
+      "quoteText": "意欲食复不能食,常默默,欲卧不能卧,欲行不能行……如寒无寒,如热无热,口苦,小便赤",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            94
+          ],
+          "sourceSnippets": [
+            "论曰：百合病者，百脉一宗，悉致其病也。意欲食，复不能食，常默默，欲卧不能卧，欲行不能行，饮食或有美时，或有不用闻食臭时，如寒无寒，如热无热，口苦，小便赤，诸药不能治，得药则剧吐利，如有神灵者，身形如和，其脉微数。每溺时头痛者，六十日乃愈；若溺时头不痛，淅然者，四十日愈；若溺快然，但头眩者，二十日愈。其证或未病而预见，或病四五日而出，或病二十日、或一月微见者，各随证治之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          94
+        ],
+        "sourceSnippets": [
+          "论曰：百合病者，百脉一宗，悉致其病也。意欲食，复不能食，常默默，欲卧不能卧，欲行不能行，饮食或有美时，或有不用闻食臭时，如寒无寒，如热无热，口苦，小便赤，诸药不能治，得药则剧吐利，如有神灵者，身形如和，其脉微数。每溺时头痛者，六十日乃愈；若溺时头不痛，淅然者，四十日愈；若溺快然，但头眩者，二十日愈。其证或未病而预见，或病四五日而出，或病二十日、或一月微见者，各随证治之。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0045Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 45,
+      "quoteText": "蚀于喉为惑,蚀于阴为狐……目赤如鸠眼",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            122,
+            133
+          ],
+          "sourceSnippets": [
+            "狐惑之为病，状如伤寒，默默欲眠，目不得闭，卧起不安，蚀于喉为惑，蚀于阴为狐，不欲饮食，恶闻食臭，其面目乍赤、乍黑、乍白。蚀于上部则声喝，甘草泻心汤主之。",
+            "病者脉数，无热，微烦，默默但欲卧，汗出，初得之三四日，目赤如鸠眼；七八日，目四眦黑。若能食者，脓已成也，赤豆当归散主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          122,
+          133
+        ],
+        "sourceSnippets": [
+          "狐惑之为病，状如伤寒，默默欲眠，目不得闭，卧起不安，蚀于喉为惑，蚀于阴为狐，不欲饮食，恶闻食臭，其面目乍赤、乍黑、乍白。蚀于上部则声喝，甘草泻心汤主之。",
+          "病者脉数，无热，微烦，默默但欲卧，汗出，初得之三四日，目赤如鸠眼；七八日，目四眦黑。若能食者，脓已成也，赤豆当归散主之。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0046Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 46,
+      "quoteText": "邪在于络,**肌肤不仁**;邪在于经,**即重不胜**;邪入于府,**即不识人**;邪入于藏,**舌即难言,口吐涎**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            171
+          ],
+          "sourceSnippets": [
+            "寸口脉浮而紧，紧则为寒，浮则为虚，寒虚相搏，邪在皮肤。浮者血虚，络脉空虚，贼邪不泻，或左或右，邪气反缓，正气即急，正气引邪，喎僻不遂。邪在于络，肌肤不仁；邪在于经，即重不胜；邪入于府，即不识人；邪入于藏，舌即难言，口吐涎。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          171
+        ],
+        "sourceSnippets": [
+          "寸口脉浮而紧，紧则为寒，浮则为虚，寒虚相搏，邪在皮肤。浮者血虚，络脉空虚，贼邪不泻，或左或右，邪气反缓，正气即急，正气引邪，喎僻不遂。邪在于络，肌肤不仁；邪在于经，即重不胜；邪入于府，即不识人；邪入于藏，舌即难言，口吐涎。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0046Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 46,
+      "quoteText": "诸肢节疼痛,身体魁羸,脚肿如脱",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            188
+          ],
+          "sourceSnippets": [
+            "诸肢节疼痛，身体魁羸，脚肿如脱，头眩短气，温温欲吐，桂枝芍药知母汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          188
+        ],
+        "sourceSnippets": [
+          "诸肢节疼痛，身体魁羸，脚肿如脱，头眩短气，温温欲吐，桂枝芍药知母汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0046Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 46,
+      "quoteText": "病历节,不可屈伸,疼痛",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            193
+          ],
+          "sourceSnippets": [
+            "病历节，不可屈伸，疼痛，乌头汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          193
+        ],
+        "sourceSnippets": [
+          "病历节，不可屈伸，疼痛，乌头汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "夫尊荣人,骨弱肌肤盛,重因疲劳汗出,卧不时动摇,加被微风,遂得之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            217
+          ],
+          "sourceSnippets": [
+            "问曰：血痹病从何得之？师曰：夫尊荣人，骨弱肌肤盛，重因疲劳汗出，卧不时动摇，加被微风，遂得之。但以脉自微涩，在寸口、关上小紧，宜针引阳气，令脉和紧去则愈。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          217
+        ],
+        "sourceSnippets": [
+          "问曰：血痹病从何得之？师曰：夫尊荣人，骨弱肌肤盛，重因疲劳汗出，卧不时动摇，加被微风，遂得之。但以脉自微涩，在寸口、关上小紧，宜针引阳气，令脉和紧去则愈。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "外证身体不仁,如风痹状",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            218
+          ],
+          "sourceSnippets": [
+            "血痹阴阳俱微，寸口关上微，尺中小紧，外证身体不仁，如风痹状，黄芪桂枝五物汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          218
+        ],
+        "sourceSnippets": [
+          "血痹阴阳俱微，寸口关上微，尺中小紧，外证身体不仁，如风痹状，黄芪桂枝五物汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "夫男子平人,**脉大为劳,极虚亦为劳**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            222
+          ],
+          "sourceSnippets": [
+            "夫男子平人，脉大为劳，极虚亦为劳。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          222
+        ],
+        "sourceSnippets": [
+          "夫男子平人，脉大为劳，极虚亦为劳。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "虚劳里急,诸不足",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            242
+          ],
+          "sourceSnippets": [
+            "虚劳里急，诸不足，黄芪建中汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          242
+        ],
+        "sourceSnippets": [
+          "虚劳里急，诸不足，黄芪建中汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "虚劳腰痛,少腹拘急,小便不利",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            243
+          ],
+          "sourceSnippets": [
+            "虚劳腰痛，少腹拘急，小便不利者，八味肾气丸主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          243
+        ],
+        "sourceSnippets": [
+          "虚劳腰痛，少腹拘急，小便不利者，八味肾气丸主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "**虚劳虚烦不得眠,酸枣汤(酸枣仁汤)主之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "source_quote_with_modern_parenthetical_alias",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              248
+            ],
+            "sourceSnippets": [
+              "虚劳虚烦不得眠，酸枣汤主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "The source reads 酸枣汤; the reference inserts the modern parenthetical alias 酸枣仁汤 inside the quotation."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0047Q7",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 47,
+      "quoteText": "内有干血,**肌肤甲错,两目黯黑**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            252
+          ],
+          "sourceSnippets": [
+            "五劳虚极羸瘦，腹满不能饮食，食伤、忧伤、饮伤、房室伤、饥伤、劳伤、经络营卫气伤，内有干血，肌肤甲错，两目黯黑。缓中补虚，大黄䗪虫丸主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          252
+        ],
+        "sourceSnippets": [
+          "五劳虚极羸瘦，腹满不能饮食，食伤、忧伤、饮伤、房室伤、饥伤、劳伤、经络营卫气伤，内有干血，肌肤甲错，两目黯黑。缓中补虚，大黄䗪虫丸主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "**脉数虚者为肺痿,数实者为肺痈**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            263
+          ],
+          "sourceSnippets": [
+            "问曰：热在上焦者，因咳为肺痿。肺痿之病何从得之？师曰：或从汗出，或从呕吐，或从消渴，小便利数，或从便难，又被快药下利，重亡津液，故得之。曰：寸口脉数，其人咳，口中反有浊唾涎沫者何？师曰：为肺痿之病。若口中辟辟燥，咳即胸中隐隐痛，脉反滑数，此为肺痈，咳唾脓血。脉数虚者为肺痿，数实者为肺痈。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          263
+        ],
+        "sourceSnippets": [
+          "问曰：热在上焦者，因咳为肺痿。肺痿之病何从得之？师曰：或从汗出，或从呕吐，或从消渴，小便利数，或从便难，又被快药下利，重亡津液，故得之。曰：寸口脉数，其人咳，口中反有浊唾涎沫者何？师曰：为肺痿之病。若口中辟辟燥，咳即胸中隐隐痛，脉反滑数，此为肺痈，咳唾脓血。脉数虚者为肺痿，数实者为肺痈。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "口中反有浊唾涎沫",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            263
+          ],
+          "sourceSnippets": [
+            "问曰：热在上焦者，因咳为肺痿。肺痿之病何从得之？师曰：或从汗出，或从呕吐，或从消渴，小便利数，或从便难，又被快药下利，重亡津液，故得之。曰：寸口脉数，其人咳，口中反有浊唾涎沫者何？师曰：为肺痿之病。若口中辟辟燥，咳即胸中隐隐痛，脉反滑数，此为肺痈，咳唾脓血。脉数虚者为肺痿，数实者为肺痈。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          263
+        ],
+        "sourceSnippets": [
+          "问曰：热在上焦者，因咳为肺痿。肺痿之病何从得之？师曰：或从汗出，或从呕吐，或从消渴，小便利数，或从便难，又被快药下利，重亡津液，故得之。曰：寸口脉数，其人咳，口中反有浊唾涎沫者何？师曰：为肺痿之病。若口中辟辟燥，咳即胸中隐隐痛，脉反滑数，此为肺痈，咳唾脓血。脉数虚者为肺痿，数实者为肺痈。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "咳即胸中隐隐痛……咳唾脓血,吐如米粥,始萌可救,脓成则死",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "stitched_across_adjacent_source_passages",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              263,
+              264
+            ],
+            "sourceSnippets": [
+              "问曰：热在上焦者，因咳为肺痿。肺痿之病何从得之？师曰：或从汗出，或从呕吐，或从消渴，小便利数，或从便难，又被快药下利，重亡津液，故得之。曰：寸口脉数，其人咳，口中反有浊唾涎沫者何？师曰：为肺痿之病。若口中辟辟燥，咳即胸中隐隐痛，脉反滑数，此为肺痈，咳唾脓血。脉数虚者为肺痿，数实者为肺痈。",
+              "问曰：病咳逆，脉之，何以知此为肺痈？当有脓血，吐之则死，其脉何类？师曰：寸口脉微而数，微则为风，数则为热；微则汗出，数则恶寒。风中于卫，呼气不入；热过于荣，吸而不出。风伤皮毛，热伤血脉。风舍于肺，其人则咳，口干喘满，咽燥不渴，时唾浊沫，时时振寒。热之所过，血为之凝滞，畜结痈脓，吐如米粥。始萌可救，脓成则死。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Stitches the initial symptom from one question and the prognosis clauses from the following passage."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "咳而上气,**喉中水鸡声**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            271
+          ],
+          "sourceSnippets": [
+            "咳而上气，喉中水鸡声，射干麻黄汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          271
+        ],
+        "sourceSnippets": [
+          "咳而上气，喉中水鸡声，射干麻黄汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "火逆上气,咽喉不利,止逆下气者,**麦门冬汤**主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "wording_error_against_local_and_public_witnesses",
+        "verdict": "reference_wording_not_supported",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              287
+            ],
+            "sourceSnippets": [
+              "大逆上气，咽喉不利，止逆下气者，麦门冬汤主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [
+          "ctext-jingui-feiwei",
+          "wikisource-jingui-full"
+        ],
+        "secondaryLocatorRefs": [
+          "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:fcf026a0b4f9#p97"
+        ],
+        "note": "The local text, CText, and Wikisource read 大逆上气. The reference and the Nihaisha course page card read 火逆上气, showing that the secondary course locator cannot override the classical witnesses."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "咳有微热烦满,**胸中甲错**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            321
+          ],
+          "sourceSnippets": [
+            "《千金》苇茎汤  治咳有微热烦满，胸中甲错，是为肺痈。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          321
+        ],
+        "sourceSnippets": [
+          "《千金》苇茎汤  治咳有微热烦满，胸中甲错，是为肺痈。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q7",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "咳而上气,其人喘,**目如脱状**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "abridged_source_quote",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              299
+            ],
+            "sourceSnippets": [
+              "咳而上气，此为肺胀，其人喘，目如脱状，脉浮大者，越婢加半夏汤主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Drops 此为肺胀 from the middle of the source sentence."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q8",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "烦躁而喘",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            303
+          ],
+          "sourceSnippets": [
+            "肺胀，咳而上气，烦躁而喘，脉浮者，心下有水，小青龙加石膏汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          303
+        ],
+        "sourceSnippets": [
+          "肺胀，咳而上气，烦躁而喘，脉浮者，心下有水，小青龙加石膏汤主之。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0048Q9",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 48,
+      "quoteText": "上气,面浮肿,肩息,其脉浮大,不治",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            265
+          ],
+          "sourceSnippets": [
+            "上气，面浮肿，肩息，其脉浮大，不治。又加利，尤甚。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          265
+        ],
+        "sourceSnippets": [
+          "上气，面浮肿，肩息，其脉浮大，不治。又加利，尤甚。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0049Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 49,
+      "quoteText": "奔豚病,**从少腹起,上冲咽喉,发作欲死,复还止,皆从惊恐得之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            328
+          ],
+          "sourceSnippets": [
+            "师曰：奔豚病，从少腹起，上冲咽喉，发作欲死，复还止，皆从惊恐得之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          328
+        ],
+        "sourceSnippets": [
+          "师曰：奔豚病，从少腹起，上冲咽喉，发作欲死，复还止，皆从惊恐得之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0050Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 50,
+      "quoteText": "**阳微阴弦,即胸痹而痛**……阳虚知在上焦",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            343
+          ],
+          "sourceSnippets": [
+            "师曰：夫脉当取太过不及，阳微阴弦，即胸痹而痛。所以然者，责其极虚也。今阳虚知在上焦，所以胸痹、心痛者，以其阴弦故也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          343
+        ],
+        "sourceSnippets": [
+          "师曰：夫脉当取太过不及，阳微阴弦，即胸痹而痛。所以然者，责其极虚也。今阳虚知在上焦，所以胸痹、心痛者，以其阴弦故也。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0050Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 50,
+      "quoteText": "喘息咳唾,**胸背痛,短气**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            345
+          ],
+          "sourceSnippets": [
+            "胸痹之病，喘息咳唾，胸背痛，短气，寸口脉沉而迟，关上小紧数，栝蒌薤白白酒汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          345
+        ],
+        "sourceSnippets": [
+          "胸痹之病，喘息咳唾，胸背痛，短气，寸口脉沉而迟，关上小紧数，栝蒌薤白白酒汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0050Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 50,
+      "quoteText": "胸痹不得卧,**心痛彻背**者",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            349
+          ],
+          "sourceSnippets": [
+            "胸痹不得卧，心痛彻背者，栝蒌薤白半夏汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          349
+        ],
+        "sourceSnippets": [
+          "胸痹不得卧，心痛彻背者，栝蒌薤白半夏汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0050Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 50,
+      "quoteText": "胸满,胁下逆抢心",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            352
+          ],
+          "sourceSnippets": [
+            "胸痹心中痞，留气结在胸，胸满，胁下逆抢心，枳实薤白桂枝汤主之，人参汤亦主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          352
+        ],
+        "sourceSnippets": [
+          "胸痹心中痞，留气结在胸，胸满，胁下逆抢心，枳实薤白桂枝汤主之，人参汤亦主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0050Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 50,
+      "quoteText": "人参汤亦主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            352
+          ],
+          "sourceSnippets": [
+            "胸痹心中痞，留气结在胸，胸满，胁下逆抢心，枳实薤白桂枝汤主之，人参汤亦主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          352
+        ],
+        "sourceSnippets": [
+          "胸痹心中痞，留气结在胸，胸满，胁下逆抢心，枳实薤白桂枝汤主之，人参汤亦主之。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0050Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 50,
+      "quoteText": "**心痛彻背,背痛彻心**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            374
+          ],
+          "sourceSnippets": [
+            "心痛彻背，背痛彻心，乌头赤石脂丸主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          374
+        ],
+        "sourceSnippets": [
+          "心痛彻背，背痛彻心，乌头赤石脂丸主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "病者腹满,**按之不痛为虚,痛者为实**,可下之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            384
+          ],
+          "sourceSnippets": [
+            "病者腹满，按之不痛为虚，痛者为实，可下之。舌黄未下者，下之黄自去。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          384
+        ],
+        "sourceSnippets": [
+          "病者腹满，按之不痛为虚，痛者为实，可下之。舌黄未下者，下之黄自去。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "腹满时减,复如故,此为寒,当与温药",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            385
+          ],
+          "sourceSnippets": [
+            "腹满时减，复如故，此为寒，当与温药。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          385
+        ],
+        "sourceSnippets": [
+          "腹满时减，复如故，此为寒，当与温药。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "**腹满不减,减不足言,当须下之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            407
+          ],
+          "sourceSnippets": [
+            "腹满不减，减不足言，当须下之，宜大承气汤。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          407
+        ],
+        "sourceSnippets": [
+          "腹满不减，减不足言，当须下之，宜大承气汤。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "心胸中大寒痛,呕不能饮食……上冲皮起,出见有头足,上下痛而不可触近",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            411
+          ],
+          "sourceSnippets": [
+            "心胸中大寒痛，呕不能饮食，腹中寒，上冲皮起，出见有头足，上下痛而不可触近，大建中汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          411
+        ],
+        "sourceSnippets": [
+          "心胸中大寒痛，呕不能饮食，腹中寒，上冲皮起，出见有头足，上下痛而不可触近，大建中汤主之。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "绕脐痛,若发则白汗出,手足厥冷",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            423
+          ],
+          "sourceSnippets": [
+            "腹痛，脉弦而紧，弦则卫气不行，即恶寒，紧则不欲食，邪正相搏，即为寒疝。绕脐痛，若发则白汗出，手足厥冷，其脉沉弦者，大乌头煎主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          423
+        ],
+        "sourceSnippets": [
+          "腹痛，脉弦而紧，弦则卫气不行，即恶寒，紧则不欲食，邪正相搏，即为寒疝。绕脐痛，若发则白汗出，手足厥冷，其脉沉弦者，大乌头煎主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "不可一日再服",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            426
+          ],
+          "sourceSnippets": [
+            "右以水三升，煮取一升，去滓，内蜜二升，煎令水气尽，取二升。强人服七合，弱人服五合。不差，明日更服，不可一日再服。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          426
+        ],
+        "sourceSnippets": [
+          "右以水三升，煮取一升，去滓，内蜜二升，煎令水气尽，取二升。强人服七合，弱人服五合。不差，明日更服，不可一日再服。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0051Q7",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 51,
+      "quoteText": "寒疝腹中痛,及胁痛里急",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            427
+          ],
+          "sourceSnippets": [
+            "寒疝腹中痛，及胁痛里急者，当归生姜羊肉汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          427
+        ],
+        "sourceSnippets": [
+          "寒疝腹中痛，及胁痛里急者，当归生姜羊肉汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0052Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 52,
+      "quoteText": "身体重,腰中冷,**如坐水中**……腰以下冷痛,腹重如带五千钱",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            479
+          ],
+          "sourceSnippets": [
+            "肾着之病，其人身体重，腰中冷，如坐水中，形如水状，反不渴，小便自利，饮食如故，病属下焦，身劳汗出，衣里冷湿，久久得之，腰以下冷痛，腹重如带五千钱，甘姜苓术汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          479
+        ],
+        "sourceSnippets": [
+          "肾着之病，其人身体重，腰中冷，如坐水中，形如水状，反不渴，小便自利，饮食如故，病属下焦，身劳汗出，衣里冷湿，久久得之，腰以下冷痛，腹重如带五千钱，甘姜苓术汤主之。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0052Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 52,
+      "quoteText": "积者,藏病也,终不移;聚者,府病也,发作有时,展转痛移,为可治",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            486
+          ],
+          "sourceSnippets": [
+            "问曰：病有积、有聚、有䅽气，何谓也？师曰：积者，藏病也，终不移；聚者，府病也，发作有时，展转痛移，为可治；䅽气者，胁下痛，按之则愈，复发，为䅽气。诸积大法：脉来细而附骨者，乃积也。寸口积在胸中；微出寸口，积在喉中；关上积在脐旁；上关上，积在心下；微下关，积在少腹。尺中，积在气冲；脉出左，积在左；脉出右，积在右；脉两出，积在中央。各以其部处之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          486
+        ],
+        "sourceSnippets": [
+          "问曰：病有积、有聚、有䅽气，何谓也？师曰：积者，藏病也，终不移；聚者，府病也，发作有时，展转痛移，为可治；䅽气者，胁下痛，按之则愈，复发，为䅽气。诸积大法：脉来细而附骨者，乃积也。寸口积在胸中；微出寸口，积在喉中；关上积在脐旁；上关上，积在心下；微下关，积在少腹。尺中，积在气冲；脉出左，积在左；脉出右，积在右；脉两出，积在中央。各以其部处之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 53,
+      "quoteText": "其人素盛今瘦,水走肠间,沥沥有声,谓之**痰饮**;饮后水流在胁下,咳唾引痛,谓之**悬饮**;饮水流行,归于四肢,当汗出而不汗出,身体疼重,谓之**溢饮**;咳逆倚息,短气不得卧,其形如肿,谓之**支饮**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            490
+          ],
+          "sourceSnippets": [
+            "问曰：四饮何以为异？师曰：其人素盛今瘦，水走肠间，沥沥有声，谓之痰饮；饮后水流在胁下，咳唾引痛，谓之悬饮；饮水流行，归于四肢，当汗出而不汗出，身体疼重，谓之溢饮；咳逆倚息，短气不得卧，其形如肿，谓之支饮。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          490
+        ],
+        "sourceSnippets": [
+          "问曰：四饮何以为异？师曰：其人素盛今瘦，水走肠间，沥沥有声，谓之痰饮；饮后水流在胁下，咳唾引痛，谓之悬饮；饮水流行，归于四肢，当汗出而不汗出，身体疼重，谓之溢饮；咳逆倚息，短气不得卧，其形如肿，谓之支饮。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 53,
+      "quoteText": "病痰饮者,**当以温药和之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            504
+          ],
+          "sourceSnippets": [
+            "病痰饮者，当以温药和之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          504
+        ],
+        "sourceSnippets": [
+          "病痰饮者，当以温药和之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 53,
+      "quoteText": "心下有痰饮,胸胁支满,**目眩**,苓桂朮甘汤主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "orthographic_formula_name_variant",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              505
+            ],
+            "sourceSnippets": [
+              "心下有痰饮，胸胁支满，目眩，苓桂术甘汤主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "The local witness writes 苓桂术甘汤 while the reference uses 朮; the passage is otherwise traceable."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 53,
+      "quoteText": "短气有微饮,**当从小便去之**,苓桂朮甘汤主之,肾气丸亦主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "minor_omission_and_orthographic_variant",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              509
+            ],
+            "sourceSnippets": [
+              "夫短气有微饮，当从小便去之，苓桂术甘汤主之，肾气丸亦主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Drops the opening 夫 and writes 朮 where the local witness has 术."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 53,
+      "quoteText": "其人苦**冒眩**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            535
+          ],
+          "sourceSnippets": [
+            "心下有支饮，其人苦冒眩，泽泻汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          535
+        ],
+        "sourceSnippets": [
+          "心下有支饮，其人苦冒眩，泽泻汤主之。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0053Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 53,
+      "quoteText": "凡食少饮多,水停心下,甚者则悸,微者短气",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            500
+          ],
+          "sourceSnippets": [
+            "夫病人饮水多，必暴喘满。凡食少饮多，水停心下，甚者则悸，微者短气。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          500
+        ],
+        "sourceSnippets": [
+          "夫病人饮水多，必暴喘满。凡食少饮多，水停心下，甚者则悸，微者短气。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0054Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 54,
+      "quoteText": "男子消渴,**小便反多,以饮一斗,小便一斗**,肾气丸主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            592
+          ],
+          "sourceSnippets": [
+            "男子消渴，小便反多，以饮一斗，小便一斗，肾气丸主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          592
+        ],
+        "sourceSnippets": [
+          "男子消渴，小便反多，以饮一斗，小便一斗，肾气丸主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0054Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 54,
+      "quoteText": "小便如粟状,小腹弦急,痛引脐中",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            599
+          ],
+          "sourceSnippets": [
+            "淋之为病，小便如粟状，小腹弦急，痛引脐中。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          599
+        ],
+        "sourceSnippets": [
+          "淋之为病，小便如粟状，小腹弦急，痛引脐中。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0054Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 54,
+      "quoteText": "**淋家不可发汗**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            601
+          ],
+          "sourceSnippets": [
+            "淋家不可发汗，发汗则必便血。"
+          ]
+        },
+        {
+          "sourceId": "shanghanlun-local-text",
+          "work": "伤寒论",
+          "matchType": "exact_text",
+          "sourceLines": [
+            933
+          ],
+          "sourceSnippets": [
+            "淋家不可发汗。发汗必便血。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          601
+        ],
+        "sourceSnippets": [
+          "淋家不可发汗，发汗则必便血。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": true,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0055Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 55,
+      "quoteText": "诸有水者,**腰以下肿,当利小便;腰以上肿,当发汗乃愈**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            640
+          ],
+          "sourceSnippets": [
+            "师曰：诸有水者，腰以下肿，当利小便；腰以上肿，当发汗乃愈。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          640
+        ],
+        "sourceSnippets": [
+          "师曰：诸有水者，腰以下肿，当利小便；腰以上肿，当发汗乃愈。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0055Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 55,
+      "quoteText": "**经为血,血不利则为水,名曰血分**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            641
+          ],
+          "sourceSnippets": [
+            "师曰：寸口脉沉而迟，沉则为水，迟则为寒，寒水相搏。趺阳脉伏，水谷不化，脾气衰则鹜溏，胃气衰则身肿。少阳脉卑，少阴脉细，男子则小便不利，妇人则经水不通。经为血，血不利则为水，名曰血分。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          641
+        ],
+        "sourceSnippets": [
+          "师曰：寸口脉沉而迟，沉则为水，迟则为寒，寒水相搏。趺阳脉伏，水谷不化，脾气衰则鹜溏，胃气衰则身肿。少阳脉卑，少阴脉细，男子则小便不利，妇人则经水不通。经为血，血不利则为水，名曰血分。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0055Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 55,
+      "quoteText": "水病脉出者死",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            632
+          ],
+          "sourceSnippets": [
+            "少阴脉紧而沉，紧则为痛，沉则为水，小便即难。脉得诸沉，当责有水，身体肿重。水病脉出者死。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          632
+        ],
+        "sourceSnippets": [
+          "少阴脉紧而沉，紧则为痛，沉则为水，小便即难。脉得诸沉，当责有水，身体肿重。水病脉出者死。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0056Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 56,
+      "quoteText": "黄家所得,**从湿得之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            694
+          ],
+          "sourceSnippets": [
+            "师曰：病黄疸，发热烦喘，胸满口燥者，以病发时，火劫其汗，两热所得。然黄家所得，从湿得之。一身尽发热而黄，肚热，热在里，当下之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          694
+        ],
+        "sourceSnippets": [
+          "师曰：病黄疸，发热烦喘，胸满口燥者，以病发时，火劫其汗，两热所得。然黄家所得，从湿得之。一身尽发热而黄，肚热，热在里，当下之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0056Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 56,
+      "quoteText": "**诸病黄家,但利其小便**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            711
+          ],
+          "sourceSnippets": [
+            "诸病黄家，但利其小便。假令脉浮，当以汗解之，宜桂枝加黄芪汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          711
+        ],
+        "sourceSnippets": [
+          "诸病黄家，但利其小便。假令脉浮，当以汗解之，宜桂枝加黄芪汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0056Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 56,
+      "quoteText": "**疸而渴者,其疸难治;疸而不渴者,其疸可治**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            698
+          ],
+          "sourceSnippets": [
+            "疸而渴者，其疸难治；疸而不渴者，其疸可治。发于阴部，其人必呕；阳部，其人振寒而发热也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          698
+        ],
+        "sourceSnippets": [
+          "疸而渴者，其疸难治；疸而不渴者，其疸可治。发于阴部，其人必呕；阳部，其人振寒而发热也。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0056Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 56,
+      "quoteText": "黄疸之病,当以十八日为期",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            697
+          ],
+          "sourceSnippets": [
+            "黄疸之病，当以十八日为期，治之十日以上瘥，反极为难治。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          697
+        ],
+        "sourceSnippets": [
+          "黄疸之病，当以十八日为期，治之十日以上瘥，反极为难治。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "病人胸满,**唇痿舌青**,口燥,**但欲嗽水,不欲咽**……腹不满,**其人言我满**,为有瘀血",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            743
+          ],
+          "sourceSnippets": [
+            "病人胸满，唇痿舌青，口燥，但欲嗽水，不欲咽，无寒热，脉微大来迟，腹不满，其人言我满，为有瘀血。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          743
+        ],
+        "sourceSnippets": [
+          "病人胸满，唇痿舌青，口燥，但欲嗽水，不欲咽，无寒热，脉微大来迟，腹不满，其人言我满，为有瘀血。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "病者如热状,烦满,口干燥而渴,**其脉反无热**,此为阴伏,是瘀血也",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            744
+          ],
+          "sourceSnippets": [
+            "病者如热状，烦满，口干燥而渴，其脉反无热，此为阴伏，是瘀血也，当下之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          744
+        ],
+        "sourceSnippets": [
+          "病者如热状，烦满，口干燥而渴，其脉反无热，此为阴伏，是瘀血也，当下之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "心气不足,吐血衄血",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            762
+          ],
+          "sourceSnippets": [
+            "心气不足，吐血，衄血，泻心汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          762
+        ],
+        "sourceSnippets": [
+          "心气不足，吐血，衄血，泻心汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "下血,先便后血,此**远血**也",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            757
+          ],
+          "sourceSnippets": [
+            "下血，先便后血，此远血也，黄土汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          757
+        ],
+        "sourceSnippets": [
+          "下血，先便后血，此远血也，黄土汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "先血后便,此**近血**也",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            761
+          ],
+          "sourceSnippets": [
+            "下血，先血后便，此近血也，赤小豆当归散主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          761
+        ],
+        "sourceSnippets": [
+          "下血，先血后便，此近血也，赤小豆当归散主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "夫吐血,咳逆上气,其脉数而有热,**不得卧者,死**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            739
+          ],
+          "sourceSnippets": [
+            "夫吐血，咳逆上气，其脉数而有热，不得卧者，死。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          739
+        ],
+        "sourceSnippets": [
+          "夫吐血，咳逆上气，其脉数而有热，不得卧者，死。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0057Q7",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 57,
+      "quoteText": "酒客咳者,必致吐血",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            740
+          ],
+          "sourceSnippets": [
+            "夫酒客咳者，必致吐血，此因极饮过度所致也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          740
+        ],
+        "sourceSnippets": [
+          "夫酒客咳者，必致吐血，此因极饮过度所致也。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0058Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 58,
+      "quoteText": "朝食暮吐,暮食朝吐,宿谷不化",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            774
+          ],
+          "sourceSnippets": [
+            "趺阳脉浮而涩，浮则为虚，涩则伤脾，脾伤则不磨，朝食暮吐，暮食朝吐，宿谷不化，名曰胃反。脉紧而涩，其病难治。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          774
+        ],
+        "sourceSnippets": [
+          "趺阳脉浮而涩，浮则为虚，涩则伤脾，脾伤则不磨，朝食暮吐，暮食朝吐，宿谷不化，名曰胃反。脉紧而涩，其病难治。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0058Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 58,
+      "quoteText": "**食已即吐者,大黄甘草汤主之**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            807
+          ],
+          "sourceSnippets": [
+            "食已即吐者，大黄甘草汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          807
+        ],
+        "sourceSnippets": [
+          "食已即吐者，大黄甘草汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0058Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 58,
+      "quoteText": "病人欲吐者,不可下之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            775
+          ],
+          "sourceSnippets": [
+            "病人欲吐者，不可下之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          775
+        ],
+        "sourceSnippets": [
+          "病人欲吐者，不可下之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0058Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 58,
+      "quoteText": "哕而腹满,视其前后,知何部不利,利之即愈",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            776
+          ],
+          "sourceSnippets": [
+            "哕而腹满，视其前后，知何部不利，利之即愈。"
+          ]
+        },
+        {
+          "sourceId": "shanghanlun-local-text",
+          "work": "伤寒论",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            862
+          ],
+          "sourceSnippets": [
+            "伤寒哕而腹满，视其前后，知何部不利，利之即愈。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          776
+        ],
+        "sourceSnippets": [
+          "哕而腹满，视其前后，知何部不利，利之即愈。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": true,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0058Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 58,
+      "quoteText": "六府气绝于外者,手足寒;五藏气绝于内者,利不禁",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "abridged_parallel_source_quote",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              835
+            ],
+            "sourceSnippets": [
+              "夫六府气绝于外者，手足寒，上气脚缩；五藏气绝于内者，利不禁，下甚者，手足不仁。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Compresses two parallel clauses by omitting 上气脚缩 and 下甚者，手足不仁."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0059Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 59,
+      "quoteText": "**以手掩肿上,热者为有脓,不热者为无脓**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            893
+          ],
+          "sourceSnippets": [
+            "师曰：诸痈肿，欲知有脓无脓，以手掩肿上，热者为有脓，不热者为无脓。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          893
+        ],
+        "sourceSnippets": [
+          "师曰：诸痈肿，欲知有脓无脓，以手掩肿上，热者为有脓，不热者为无脓。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0059Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 59,
+      "quoteText": "其身甲错,腹皮急,按之濡,腹无积聚,身无热",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "abridged_source_quote",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              894
+            ],
+            "sourceSnippets": [
+              "肠痈之为病，其身甲错，腹皮急，按之濡，如肿状，腹无积聚，身无热，脉数，此为腹内有痈脓，薏苡附子败酱散主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Drops 如肿状 and 脉数 from the source passage."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0059Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 59,
+      "quoteText": "**少腹肿痞,按之即痛如淋,小便自调,时时发热,自汗出,复恶寒**……脉洪数者,脓已成,不可下也",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            898
+          ],
+          "sourceSnippets": [
+            "肠痈者，少腹肿痞，按之即痛，如淋，小便自调，时时发热，自汗出，复恶寒。其脉迟紧者，脓未成，可下之，当有血。脉洪数者，脓已成，不可下也。大黄牡丹汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          898
+        ],
+        "sourceSnippets": [
+          "肠痈者，少腹肿痞，按之即痛，如淋，小便自调，时时发热，自汗出，复恶寒。其脉迟紧者，脓未成，可下之，当有血。脉洪数者，脓已成，不可下也。大黄牡丹汤主之。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0060Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 60,
+      "quoteText": "腹中痛,发作有时……得食而呕",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "stitched_across_two_worm_passages",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              929,
+              933
+            ],
+            "sourceSnippets": [
+              "蛔虫之为病，令人吐涎，心痛，发作有时，毒药不止，甘草粉蜜汤主之。",
+              "蛔厥者，当吐蛔。今病者静而复时烦，此为藏寒，蛔上入膈，故烦。须臾复止，得食而呕，又烦者，蛔闻食臭出，其人常自吐蛔。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Joins the 甘草粉蜜汤 worm-pain passage with the following 蛔厥 passage."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0064Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 64,
+      "quoteText": "有故无殒",
+      "expectedSourceIds": [
+        "huangdi-neijing-suwen-local-text"
+      ],
+      "externalClassicalAllusion": true,
+      "sourceMatches": [
+        {
+          "sourceId": "huangdi-neijing-suwen-local-text",
+          "work": "黄帝内经素问",
+          "matchType": "exact_text",
+          "sourceLines": [
+            948
+          ],
+          "sourceSnippets": [
+            "黄帝问曰：妇人重身，毒之何如？岐伯曰：有故无殒，亦无殒也。帝曰：愿闻其故何谓也？岐伯曰：大积大聚，其可犯也，衰其太半而止，过者死。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "huangdi-neijing-suwen-local-text",
+        "work": "黄帝内经素问",
+        "matchType": "exact_text",
+        "sourceLines": [
+          948
+        ],
+        "sourceSnippets": [
+          "黄帝问曰：妇人重身，毒之何如？岐伯曰：有故无殒，亦无殒也。帝曰：愿闻其故何谓也？岐伯曰：大积大聚，其可犯也，衰其太半而止，过者死。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "external_classical_allusion_text_match_only_not_content_acceptance",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0066Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 66,
+      "quoteText": "平脉,阴脉小弱,其人渴,不能食,无寒热",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            942
+          ],
+          "sourceSnippets": [
+            "师曰：妇人得平脉，阴脉小弱，其人渴，不能食，无寒热，名妊娠，桂枝汤主之。于法六十日当有此证，设有医治逆者，却一月，加吐下者，则绝之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          942
+        ],
+        "sourceSnippets": [
+          "师曰：妇人得平脉，阴脉小弱，其人渴，不能食，无寒热，名妊娠，桂枝汤主之。于法六十日当有此证，设有医治逆者，却一月，加吐下者，则绝之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0066Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 66,
+      "quoteText": "妇人怀妊,腹中㽲痛",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "external_witness_supported_local_ocr_correction",
+        "verdict": "non_verbatim_against_local_but_two_public_witnesses_supported",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              952
+            ],
+            "sourceSnippets": [
+              "妇人怀妊，腹中A2K0痛，当归芍药散主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [
+          "ctext-jingui-renchen",
+          "wikisource-jingui-full"
+        ],
+        "secondaryLocatorRefs": [
+          "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:fcf026a0b4f9#p262"
+        ],
+        "note": "The local file has OCR placeholder A2K0痛. CText and Wikisource support 㽲痛; the Nihaisha page card modernizes it to 绞痛 and remains locator-only."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0067Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 67,
+      "quoteText": "一者病痓,二者病郁冒,三者大便难",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            979
+          ],
+          "sourceSnippets": [
+            "问曰：新产妇人有三病，一者病痓，二者病郁冒，三者大便难，何谓也？师曰：新产血虚，多汗出，喜中风，故令病痓；亡血复汗，寒多，故令郁冒；亡津液，胃燥，故大便难。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          979
+        ],
+        "sourceSnippets": [
+          "问曰：新产妇人有三病，一者病痓，二者病郁冒，三者大便难，何谓也？师曰：新产血虚，多汗出，喜中风，故令病痓；亡血复汗，寒多，故令郁冒；亡津液，胃燥，故大便难。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0067Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 67,
+      "quoteText": "新产血虚,多汗出",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            979
+          ],
+          "sourceSnippets": [
+            "问曰：新产妇人有三病，一者病痓，二者病郁冒，三者大便难，何谓也？师曰：新产血虚，多汗出，喜中风，故令病痓；亡血复汗，寒多，故令郁冒；亡津液，胃燥，故大便难。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          979
+        ],
+        "sourceSnippets": [
+          "问曰：新产妇人有三病，一者病痓，二者病郁冒，三者大便难，何谓也？师曰：新产血虚，多汗出，喜中风，故令病痓；亡血复汗，寒多，故令郁冒；亡津液，胃燥，故大便难。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0067Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 67,
+      "quoteText": "热在里,结在膀胱",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "external_witness_supported_local_ocr_correction",
+        "verdict": "non_verbatim_against_local_but_two_public_witnesses_supported",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              992
+            ],
+            "sourceSnippets": [
+              "产后七八日，无太阳证，少腹坚痛，此恶露不尽。不大便，烦躁发热，切脉微实，再倍发热，日晡时烦躁者，不食，食则讝语，至夜即愈，宜大承气汤主之。热在里，结在膀肽也。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [
+          "ctext-jingui-chanhou",
+          "wikisource-jingui-full"
+        ],
+        "secondaryLocatorRefs": [
+          "external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:fcf026a0b4f9#p268"
+        ],
+        "note": "The local file reads 膀肽. CText and Wikisource support 膀胱; the raw file remains unchanged and the Nihaisha page card is only a secondary locator."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "妇人**咽中如有炙脔**,**半夏厚朴汤**主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1019
+          ],
+          "sourceSnippets": [
+            "妇人咽中如有炙脔，半夏厚朴汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1019
+        ],
+        "sourceSnippets": [
+          "妇人咽中如有炙脔，半夏厚朴汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "妇人**藏躁,喜悲伤欲哭,象如神灵所作,数欠伸,甘麦大枣汤**主之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1023
+          ],
+          "sourceSnippets": [
+            "妇人藏躁，喜悲伤欲哭，象如神灵所作，数欠伸，甘麦大枣汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1023
+        ],
+        "sourceSnippets": [
+          "妇人藏躁，喜悲伤欲哭，象如神灵所作，数欠伸，甘麦大枣汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "亦补脾气",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            1026
+          ],
+          "sourceSnippets": [
+            "右三味，以水六升，煮取三升，温分三服。亦补脾气。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          1026
+        ],
+        "sourceSnippets": [
+          "右三味，以水六升，煮取三升，温分三服。亦补脾气。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "妇人年五十所,病下利(利一作血)数十日不止,暮即发热,少腹里急,腹满,手掌烦热,**唇口干燥**……曾经半产,瘀血在少腹不去",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "abridged_source_quote_with_textual_variant_gloss",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              1032
+            ],
+            "sourceSnippets": [
+              "问曰：妇人年五十所，病下利数十日不止，暮即发热，少腹里急，腹满，手掌烦热，唇口干燥，何也？师曰：此病属带下。何以故？曾经半产，瘀血在少腹不去，何以知之？其证唇口干燥，故知之。当以温经汤主之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Adds the editorial textual-variant gloss 利一作血 inside the quotation and abridges the intervening question and answer."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "亦主妇人少腹寒,**久不受胎**,兼取崩中去血,或月水来过多,及至期不来",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1035
+          ],
+          "sourceSnippets": [
+            "右十二味，以水一斗，煮取三升，分温三服。亦主妇人少腹寒，久不受胎，兼取崩中去血，或月水来过多，及至期不来。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1035
+        ],
+        "sourceSnippets": [
+          "右十二味，以水一斗，煮取三升，分温三服。亦主妇人少腹寒，久不受胎，兼取崩中去血，或月水来过多，及至期不来。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "妇人之病,因虚、积冷、结气……**非有鬼神**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            1030
+          ],
+          "sourceSnippets": [
+            "妇人之病，因虚、积冷、结气，为诸经水断绝至有历年，血寒积结胞门，寒伤经络。凝坚在上，呕吐涎唾，久成肺痈，形体损分；在中盘结，绕脐寒疝，或两胁疼痛，与藏相连；或结热中，痛在关元。脉数无疮，肌若鱼鳞，时着男子，非止女身。在下未多，经候不匀。冷阴掣痛，少腹恶寒，或引腰脊，下根气街，气冲急痛，膝胫疼烦，奄忽眩冒，状如厥癫，或有忧惨，悲伤多嗔，此皆带下，非有鬼神，久则羸瘦，脉虚多寒。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          1030
+        ],
+        "sourceSnippets": [
+          "妇人之病，因虚、积冷、结气，为诸经水断绝至有历年，血寒积结胞门，寒伤经络。凝坚在上，呕吐涎唾，久成肺痈，形体损分；在中盘结，绕脐寒疝，或两胁疼痛，与藏相连；或结热中，痛在关元。脉数无疮，肌若鱼鳞，时着男子，非止女身。在下未多，经候不匀。冷阴掣痛，少腹恶寒，或引腰脊，下根气街，气冲急痛，膝胫疼烦，奄忽眩冒，状如厥癫，或有忧惨，悲伤多嗔，此皆带下，非有鬼神，久则羸瘦，脉虚多寒。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0068Q7",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 68,
+      "quoteText": "陷经漏下",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1044
+          ],
+          "sourceSnippets": [
+            "妇人陷经，漏下，黑不解，胶姜汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1044
+        ],
+        "sourceSnippets": [
+          "妇人陷经，漏下，黑不解，胶姜汤主之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0072Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 72,
+      "quoteText": "徐徐抱解,**不得截绳**,上下安被卧之……一人以手按据胸上,数动之;一人摩捋臂胫,屈伸之……如此一炊顷,气从口出,呼吸眼开,而犹引按莫置",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            1125
+          ],
+          "sourceSnippets": [
+            "徐徐抱解，不得截绳，上下安被卧之。一人以脚踏其两肩，手少挽其发，常弦弦勿纵之；一人以手按据胸上，数动之；一人摩捋臂胫，屈伸之。若已殭，但渐渐强屈之，并按其腹。如此一炊顷，气从口出，呼吸眼开，而犹引按莫置，亦勿苦劳之。须臾可少与桂汤及粥清，含与之，令濡喉，渐渐能咽，及稍止。若向令两人以管吹其两耳，罙好。此法最善，无不活也。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          1125
+        ],
+        "sourceSnippets": [
+          "徐徐抱解，不得截绳，上下安被卧之。一人以脚踏其两肩，手少挽其发，常弦弦勿纵之；一人以手按据胸上，数动之；一人摩捋臂胫，屈伸之。若已殭，但渐渐强屈之，并按其腹。如此一炊顷，气从口出，呼吸眼开，而犹引按莫置，亦勿苦劳之。须臾可少与桂汤及粥清，含与之，令濡喉，渐渐能咽，及稍止。若向令两人以管吹其两耳，罙好。此法最善，无不活也。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0072Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 72,
+      "quoteText": "灶中灰埋人",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "modern_editorial_shorthand",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              1129
+            ],
+            "sourceSnippets": [
+              "取灶中灰两石余以埋人，从头至足。水出七孔，即活。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Compresses 取灶中灰两石余以埋人 into a modern shorthand label."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "六畜自死,皆疫死,则有毒",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1151
+          ],
+          "sourceSnippets": [
+            "六畜自死，皆疫死，则有毒，不可食之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1151
+        ],
+        "sourceSnippets": [
+          "六畜自死，皆疫死，则有毒，不可食之。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q2",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "秽饭、馁肉、臭鱼,食之皆伤人",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1149
+          ],
+          "sourceSnippets": [
+            "秽饭，馁肉，臭鱼，食之皆伤人。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1149
+        ],
+        "sourceSnippets": [
+          "秽饭，馁肉，臭鱼，食之皆伤人。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q3",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "菌仰卷及赤色者不可食",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            1291
+          ],
+          "sourceSnippets": [
+            "菌仰卷及赤色者不可食。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          1291
+        ],
+        "sourceSnippets": [
+          "菌仰卷及赤色者不可食。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q4",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "凡蟹未遇霜,多毒",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [],
+      "selectedSourceMatch": null,
+      "matchType": "unresolved",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "manual_form_adjudication_complete_not_content_acceptance",
+      "manualAdjudication": {
+        "category": "abridged_quote_with_orthographic_normalization",
+        "verdict": "non_verbatim_traceable",
+        "sourceLocations": [
+          {
+            "sourceId": "jingui-yaolue-local-text",
+            "lines": [
+              1268
+            ],
+            "sourceSnippets": [
+              "凡蠏未遇霜，多毒。其熟者，乃可食之。"
+            ]
+          }
+        ],
+        "relatedSourceLocations": [],
+        "externalWitnessIds": [],
+        "secondaryLocatorRefs": [],
+        "note": "Normalizes the local 蠏 to 蟹 and omits the following qualification 其熟者，乃可食之."
+      },
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q5",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "**夜食诸姜蒜葱等,伤人心**",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "normalized_contiguous",
+          "sourceLines": [
+            1318
+          ],
+          "sourceSnippets": [
+            "夜食诸姜、蒜、葱等，伤人心。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "normalized_contiguous",
+        "sourceLines": [
+          1318
+        ],
+        "sourceSnippets": [
+          "夜食诸姜、蒜、葱等，伤人心。"
+        ]
+      },
+      "matchType": "normalized_contiguous",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q6",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "醉后勿饱食",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            1357
+          ],
+          "sourceSnippets": [
+            "醉后勿饱食，发寒热。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          1357
+        ],
+        "sourceSnippets": [
+          "醉后勿饱食，发寒热。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0073Q7",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 73,
+      "quoteText": "凡诸毒,多是假毒以投……宜煮甘草荠苨汁饮之",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "segmented_ellipsis",
+          "sourceLines": [
+            1377
+          ],
+          "sourceSnippets": [
+            "凡诸毒，多是假毒以投，不知时，宜煮甘草荠苨汁饮之，通除诸毒药。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "segmented_ellipsis",
+        "sourceLines": [
+          1377
+        ],
+        "sourceSnippets": [
+          "凡诸毒，多是假毒以投，不知时，宜煮甘草荠苨汁饮之，通除诸毒药。"
+        ]
+      },
+      "matchType": "segmented_ellipsis",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    },
+    {
+      "id": "tcm.classic.ref45.quote.L0079Q1",
+      "referenceId": "ref45",
+      "referencePath": "database/tcm/skill-v3/references/45-经典-金匮要略杂病方证条文.md",
+      "referenceLine": 79,
+      "quoteText": "下利数十日",
+      "expectedSourceIds": [
+        "jingui-yaolue-local-text"
+      ],
+      "externalClassicalAllusion": false,
+      "sourceMatches": [
+        {
+          "sourceId": "jingui-yaolue-local-text",
+          "work": "金匮要略",
+          "matchType": "exact_text",
+          "sourceLines": [
+            1032
+          ],
+          "sourceSnippets": [
+            "问曰：妇人年五十所，病下利数十日不止，暮即发热，少腹里急，腹满，手掌烦热，唇口干燥，何也？师曰：此病属带下。何以故？曾经半产，瘀血在少腹不去，何以知之？其证唇口干燥，故知之。当以温经汤主之。"
+          ]
+        }
+      ],
+      "selectedSourceMatch": {
+        "sourceId": "jingui-yaolue-local-text",
+        "work": "金匮要略",
+        "matchType": "exact_text",
+        "sourceLines": [
+          1032
+        ],
+        "sourceSnippets": [
+          "问曰：妇人年五十所，病下利数十日不止，暮即发热，少腹里急，腹满，手掌烦热，唇口干燥，何也？师曰：此病属带下。何以故？曾经半产，瘀血在少腹不去，何以知之？其证唇口干燥，故知之。当以温经汤主之。"
+        ]
+      },
+      "matchType": "exact_text",
+      "multiSource": false,
+      "sourceMismatch": false,
+      "reviewStatus": "text_match_only_not_content_adjudication",
+      "manualAdjudication": null,
+      "productEligibility": "blocked",
+      "runtimeEligibleFields": []
+    }
+  ]
+}
