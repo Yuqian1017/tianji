@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "source.tcm.ref44.public-transcription-witnesses.2026-07-18",
+  "title": "《伤寒论》及后世评注公共转录本校勘见证",
+  "fetchedAt": "2026-07-18",
+  "scope": "reference_44_local_transcription_and_attribution_witnesses",
+  "doctrine": "public_transcriptions_are_collation_witnesses_not_edition_level_primary_sources",
+  "retrieval": {
+    "method": "HTTP GET with redirects and a browser-compatible user agent",
+    "hashMeaning": "SHA256 and bytes identify the exact HTML response retrieved for this audit; dynamic pages may produce a different response hash on a later retrieval.",
+    "archivalBoundary": "Only transformed metadata and short public-domain passage witnesses are stored here; fetched HTML is not copied into the repository."
+  },
+  "witnesses": [
+    {
+      "id": "ctext-shanghanlun-song",
+      "work": "伤寒论",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/wiki.pl?chapter=960797&if=gb",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "6f534655aa76fface56444e63e2d860a01acdbedbc87a8b2533458e9e443700a",
+      "retrievedHtmlBytes": 318412,
+      "locator": "宋本伤寒论公共转录页",
+      "supports": "Supports 項背強幾幾 and 身濈然汗出而解 where the local file contains an OCR placeholder or a different transmitted wording.",
+      "excerpt": "項背強幾幾；身濈然汗出而解",
+      "limitations": "Open digital transcription; useful for character-level collation but not a substitute for an identified print edition or image facsimile."
+    },
+    {
+      "id": "wikisource-shanghanlun",
+      "work": "伤寒论",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/傷寒論",
+      "sourceRole": "public_transcription_collation_witness",
+      "retrievedHtmlSha256": "a4c64db425d27abe1b70048b7c3065693f502591b29b61accdcf97ec58ee4a64",
+      "retrievedHtmlBytes": 240448,
+      "locator": "辨太阳病脉证并治下",
+      "supports": "Independently supports 身濈然汗出而解 for the passage represented locally as 身濈然汗出解也.",
+      "excerpt": "身濈然汗出而解",
+      "limitations": "Community-maintained digital transcription; used only as a collation witness."
+    },
+    {
+      "id": "wikisource-shanghan-fuyi",
+      "work": "伤寒附翼",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/傷寒附翼",
+      "sourceRole": "later_commentary_attribution_witness",
+      "retrievedHtmlSha256": "90122ba0edc50923898d4c57e93ef89e09f896c59f35208c196f90bdfdff752b",
+      "retrievedHtmlBytes": 202929,
+      "locator": "卷上·桂枝汤",
+      "supports": "Attributes 此为仲景群方之魁 to the later commentary 伤寒附翼 rather than to the body text of 伤寒论.",
+      "excerpt": "此为仲景群方之魁",
+      "limitations": "Later commentary witness used to correct attribution; it is not evidence that the phrase occurs in the 伤寒论 body text."
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": []
+}

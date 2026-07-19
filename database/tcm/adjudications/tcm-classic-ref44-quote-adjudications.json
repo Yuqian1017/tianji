@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "scope": "reference_44_shanghan_quote_form_adjudications",
+  "doctrine": "classify_non_verbatim_form_without_promoting_content_or_rewriting_raw_witnesses",
+  "publicWitnessPath": "database/sources/ctext/tcm-shanghan-public-witnesses-2026-07-18.json",
+  "records": [
+    {
+      "id": "tcm.classic.ref44.quote.L0004Q1",
+      "quoteText": "六经提纲+主要方证的经典条文+方名",
+      "category": "modern_editorial_scope_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Skill-level description of the reference file's scope, not wording from Shanghanlun."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0012Q2",
+      "quoteText": "时行者,非其时而有其气",
+      "category": "abridged_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [119] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compresses 凡时行者 and 此非其时而有其气 from the same long passage into one clause."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0039Q1",
+      "quoteText": "群方之魁",
+      "category": "later_commentary_misattributed_as_body_text",
+      "verdict": "not_in_shanghan_body_traceable_to_later_commentary",
+      "sourceLocations": [],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["wikisource-shanghan-fuyi"],
+      "secondaryLocatorRefs": [],
+      "note": "The phrase is traceable to Ke Qin's later Shanghan Fuyi commentary, not to the body text of Shanghanlun."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0040Q2",
+      "quoteText": "项背强几几,无汗恶风",
+      "category": "external_witness_supported_local_ocr_correction",
+      "verdict": "non_verbatim_against_local_but_public_witness_supported",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [220] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-shanghanlun-song"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:pdf-evidence:58423f817a06#p46"],
+      "note": "The local file contains OCR placeholder A2K4A2K4. The CText witness supports 几几; the raw local file remains unchanged."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0041Q1",
+      "quoteText": "脉浮紧……不汗出而**烦躁**者",
+      "category": "abridged_segmented_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [238] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Abridges one sentence with an ellipsis; the first segment is too short for the automatic segmented matcher."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0046Q4",
+      "quoteText": "强人服一钱匕,羸人服半钱,平旦服……得快下利后,**糜粥自养**",
+      "category": "abridged_across_duplicate_recensions",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [457, 1234] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Abridges the dosing passage and omits 温服之 and intervening instructions; two local duplicate recensions preserve slightly different wording."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0047Q2",
+      "quoteText": "少腹鞕满,小便自利,其人如狂者,血证谛也,**抵当汤**主之",
+      "category": "stitched_across_duplicate_recensions",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [394, 397, 1217] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Combines 少腹鞕满, 血证谛, and 抵当汤主之 from related duplicate passages rather than quoting one continuous sentence."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0060Q3",
+      "quoteText": "痞、满、燥、实",
+      "category": "later_formula_theory_summary",
+      "verdict": "not_in_shanghan_body_traceable_to_later_summary",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{ "sourceId": "fangjixue-seventh-edition-local-text", "lines": [762] }],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "A later summary of the Dachengqi Tang pattern. The local Fangjixue source explicitly attributes the four-character formulation to predecessors."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0062Q1",
+      "quoteText": "津液内竭,虽鞕,不可攻之,当须自欲大便,宜**蜜煎导**而通之。若土瓜根及大猪胆汁,皆可为导",
+      "category": "conflated_duplicate_recensions",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [601, 1184] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Combines the first local recension's 大猪胆汁 with the duplicate recension's omission of 及与, so it is not verbatim to either line."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0064Q1",
+      "quoteText": "但头汗出,身无汗,剂颈而还,小便不利,渴引水浆者,此为瘀热在里,身必发黄",
+      "category": "stitched_across_duplicate_recensions",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [610, 1221] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Uses 此为瘀热在里 from one local recension and 身必发黄 from the duplicate recension."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0070Q3",
+      "quoteText": "上焦得通,津液得下,胃气因和,**身濈然汗出而解**",
+      "category": "external_witness_supported_local_transcription_variant",
+      "verdict": "non_verbatim_against_local_but_two_public_witnesses_supported",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [596] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["ctext-shanghanlun-song", "wikisource-shanghanlun"],
+      "secondaryLocatorRefs": ["external.nihaisha-nishi-tcm.e3cb5135:text-evidence:77af3a7c9960#s114"],
+      "note": "The local file reads 身濈然汗出解也. CText and Wikisource support 身濈然汗出而解; the raw local file remains unchanged."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0092Q1",
+      "quoteText": "蚘厥者……得食而呕,又烦者,蚘闻食臭出,其人常自吐蚘",
+      "category": "abridged_segmented_source_quote",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [786] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Abridges a longer passage; the opening segment 蚘厥者 is too short for the automatic segmented matcher."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0117Q1",
+      "quoteText": "**咽喉干燥者**,不可发汗;**淋家**发汗必便血;**疮家**虽身疼痛,汗出则痓;**衄家**汗出必额上陷、直视不得眠;**亡血家**发汗则寒栗而振;**汗家**重发汗必恍惚心乱;尺中迟(**营气不足血少**)者不可发汗",
+      "category": "compiled_multi_passage_list_with_normalization",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [258, 331, 332, 333, 334, 335, 336] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compiles seven separate prohibitions, omits words within several clauses, and normalizes the local 荣气 to 营气."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0118Q4",
+      "quoteText": "太阳病,外证未解,不可下,下之为逆",
+      "category": "conflated_duplicate_recensions",
+      "verdict": "non_verbatim_traceable",
+      "sourceLocations": [{ "sourceId": "shanghanlun-local-text", "lines": [252, 1154] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Combines the shorter wording of one duplicate recension with the omission pattern of the other."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0122Q1",
+      "quoteText": "**虚虚实实,医杀之耳**",
+      "category": "declared_cross_work_stitched_and_reordered_quote",
+      "verdict": "non_verbatim_traceable_to_nanjing",
+      "sourceLocations": [{ "sourceId": "nanjing-local-text", "lines": [90] }],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "The Nanjing passage reads 实实虚虚 and later 如此死者，医杀之耳; the reference reverses the paired phrase and stitches two clauses."
+    },
+    {
+      "id": "tcm.classic.ref44.quote.L0122Q2",
+      "quoteText": "涉药四关",
+      "category": "modern_editorial_workflow_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Skill-level workflow label, not wording from Shanghanlun or the declared related classics."
+    }
+  ]
+}

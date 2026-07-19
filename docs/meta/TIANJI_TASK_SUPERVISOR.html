@@ -41,12 +41,12 @@
         <h1>天机卷任务监督器</h1>
         <div id="stage" class="muted">数据库与排盘正确性验证</div>
       </div>
-      <div id="percent" class="percent">58%</div>
+      <div id="percent" class="percent">59%</div>
     </header>
 
     <section class="summary">
-      <article class="panel"><h2>当前重点</h2><p id="focus">中医典籍逐条回接原文；xuanxue-database-skill 已转为不污染典籍权威与掌握度的实战证据候选 schema；相术并行保留影印与真实图片验证。</p></article>
-      <article class="panel"><h2>下一决策</h2><p id="next">按《素问》同一合同扩展到灵枢、难经、伤寒、金匮和医家温病；实战证据 schema 留待 P2 产品/隐私评审。</p></article>
+      <article class="panel"><h2>当前重点</h2><p id="focus">《伤寒论》170 段显式引文已完成；当前按同一合同逐条校勘《金匮要略》。</p></article>
+      <article class="panel"><h2>下一决策</h2><p id="next">完成《金匮要略》后继续医家与温病资料；倪海厦资料继续只作二级定位和异文警报。</p></article>
       <article class="panel"><h2>反漂移规则</h2><p id="rule">现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容。</p></article>
     </section>
 
@@ -68,9 +68,9 @@
   <script>
     const fallback = {
       currentStage: '数据库与排盘正确性验证',
-      overallPercent: 58,
-      currentFocus: '按同一 provenance 合同校勘 `44-经典-伤寒论六经方证条文.md`；先完整提取显式引文，再区分原文命中、删节拼接、注家文字、现代扩写和版本异文。',
-      nextDecision: '完成《伤寒论》显式引文来源与形态裁决后，继续 `45-经典-金匮要略杂病方证条文.md`；nihaisha-nishi-tcm 继续只作页级定位和异文警报。',
+      overallPercent: 59,
+      currentFocus: '按同一 provenance 合同校勘 `45-经典-金匮要略杂病方证条文.md`；完整提取显式引文，并区分《金匮》正文、《伤寒论》复本、后世注家/医家文字、现代扩写和版本异文。',
+      nextDecision: '完成《金匮要略》显式引文来源与形态裁决后，继续 `46-48` 医家与温病资料；nihaisha-nishi-tcm 继续只作页级定位和异文警报。',
       antiDriftRule: '现代监管资料不能替代典籍来源，也不能据此删除真实古籍内容；无逐条出处的内容不能进入 accepted/runtime。',
       phases: [
         { id: 'V0', name: '数据库与排盘正确性验证', status: 'in_progress', progress: 98, doneWhen: '所有 runtime 数据进入 ledger，高风险内容有明确门槛。' },
@@ -89,7 +89,10 @@
         { name: '教学答案可信', state: 'blocked', rule: 'AI 不能单独充当规范答案源。' }
       ],
       recentEvidence: [
-        'TJI-VAL-025 启动：下一批按同一合同校勘 ref44《伤寒论》，经文、方证整理、注家/课程解释和现代扩写分层',
+        'TJI-VAL-026 启动：下一批按同一合同校勘 ref45《金匮要略》，正文、《伤寒论》复本、注家/课程解释和现代扩写分层',
+        'TJI-VAL-025 完成：ref44 共 170 段显式引文，154 段机械定位、16 段人工形态裁决、0 段待人工；2,149 项 0 fail',
+        'ref44 保留 9 条《伤寒》《金匮》复本见证和 4 条声明互参；来源错配 0；群方之魁归回《伤寒附翼》后世评语',
+        'CText/Wikisource 支持项背强几几和身濈然汗出而解；nihaisha-nishi-tcm 只贡献 2 个二级 locator；中央来源库现为 11 组、267 文件',
         'TJI-VAL-024 完成：ref43 共 98 段显式引文，75 段机械定位、23 段人工形态裁决、0 段待人工；1,073 项 0 fail',
         'ref43 识别 3 条实际来自《素问》的跨书引文；CText/Wikisource 支持问/间、候/侯、太阴/太阳三处本地转录差异',
         'nihaisha-nishi-tcm 在 ref43 只贡献 3 个二手页卡 locator，不替代《灵枢》《难经》见证；中央来源库现为 11 组、266 文件',

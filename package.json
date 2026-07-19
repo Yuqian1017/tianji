@@ -69,6 +69,8 @@
     "audit:tcm-classic-quotes": "npm run build:tcm-classic-quotes && node scripts/validation/audit-tcm-classic-quote-provenance.mjs",
     "build:tcm-classic-ref43-quotes": "node scripts/validation/build-tcm-ref43-quote-provenance.mjs",
     "audit:tcm-classic-ref43-quotes": "npm run build:tcm-classic-ref43-quotes && node scripts/validation/audit-tcm-ref43-quote-provenance.mjs",
+    "build:tcm-classic-ref44-quotes": "node scripts/validation/build-tcm-ref44-quote-provenance.mjs",
+    "audit:tcm-classic-ref44-quotes": "npm run build:tcm-classic-ref44-quotes && node scripts/validation/audit-tcm-ref44-quote-provenance.mjs",
     "build:tcm-food-medicine-directory": "node scripts/validation/build-tcm-food-medicine-directory.mjs",
     "audit:tcm-food-medicine-directory": "npm run build:tcm-food-medicine-directory && node scripts/validation/audit-tcm-food-medicine-directory.mjs",
     "audit:wuyun": "node scripts/validation/audit-wuyun.mjs",

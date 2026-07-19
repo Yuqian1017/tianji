@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 266,
+    "entries": 267,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -12,7 +12,7 @@
       "xuanxue_compendium": 70,
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
-      "shared_ctext_witnesses": 10,
+      "shared_ctext_witnesses": 11,
       "external_source_manifests": 3,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
@@ -2877,6 +2877,17 @@
       "format": "json",
       "bytes": 4463,
       "sha256": "bb56d7d4fb7a5d789b8b9bc65b114da6834c3325a1589e0b190e009762460b39",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.6200453b93da0614",
+      "group": "shared_ctext_witnesses",
+      "title": "tcm-shanghan-public-witnesses-2026-07-18.json",
+      "canonicalPath": "database/sources/ctext/tcm-shanghan-public-witnesses-2026-07-18.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 3106,
+      "sha256": "71d0d93c755df24988263b4521869407a9500ce7e95182e5a344f361c643a946",
       "relationshipStatus": "standalone"
     },
     {
