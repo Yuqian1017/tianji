@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "root": "database/sources",
   "counts": {
-    "entries": 269,
+    "entries": 270,
     "byGroup": {
       "tcm_original_texts": 43,
       "tcm_curated_references": 50,
@@ -12,7 +12,7 @@
       "xuanxue_compendium": 70,
       "xuanxue_compendium_mirror": 70,
       "shared_wikisource_witnesses": 2,
-      "shared_ctext_witnesses": 13,
+      "shared_ctext_witnesses": 14,
       "external_source_manifests": 3,
       "xiangshu_source_registry": 1,
       "shared_datasets": 1,
@@ -2899,6 +2899,17 @@
       "format": "json",
       "bytes": 3106,
       "sha256": "71d0d93c755df24988263b4521869407a9500ce7e95182e5a344f361c643a946",
+      "relationshipStatus": "standalone"
+    },
+    {
+      "id": "source.shared_ctext_witnesses.705433735ff0b1a1",
+      "group": "shared_ctext_witnesses",
+      "title": "tcm-wenbing-public-witnesses-2026-07-18.json",
+      "canonicalPath": "database/sources/ctext/tcm-wenbing-public-witnesses-2026-07-18.json",
+      "sourceRole": "public_text_witness_or_repository_metadata",
+      "format": "json",
+      "bytes": 6818,
+      "sha256": "2fbe6a1333b34fd10c5959cbf4e4944b5d1699a244330837ea1d084a3618b7ff",
       "relationshipStatus": "standalone"
     },
     {

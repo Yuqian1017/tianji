@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "source.tcm.ref47.public-transcription-witnesses.2026-07-18",
+  "title": "温病四书公共底本与转录校勘见证",
+  "fetchedAt": "2026-07-18",
+  "scope": "reference_47_wenbing_textual_and_attribution_witnesses",
+  "doctrine": "identified_scan_based_texts_and_public_transcriptions_are_collation_witnesses_not_automatic_content_authority",
+  "retrieval": {
+    "method": "HTTP GET with redirects and a browser-compatible user agent; Wikisource was read through its public MediaWiki parse API",
+    "hashMeaning": "SHA256 and bytes identify the exact HTML or JSON response retrieved for this audit; dynamic pages may produce a different response hash later.",
+    "archivalBoundary": "Only transformed metadata and short public-domain passage witnesses are stored here; fetched HTML and JSON remain outside the repository."
+  },
+  "witnesses": [
+    {
+      "id": "jicheng-wenrelun-scan-linked-edition",
+      "work": "温热论",
+      "platform": "中醫笈成",
+      "url": "https://jicheng.tw/tcm/book/溫熱論/index.html",
+      "sourceRole": "identified_scan_linked_edited_transcription",
+      "retrievedHtmlSha256": "9b91e3345031b815b3008c6dd776b0f4dffbd212c094b03053f355685ccb2b9c",
+      "retrievedHtmlBytes": 44979,
+      "locator": "work metadata; 察舌; 論濕邪",
+      "supports": "Identifies the text as 葉桂口述、顧景文等錄 and states that the edition is excerpted from the Peking University Library scan of 溫熱經緯, with 周氏醫學叢書 also consulted. It reads 舌脹大不能出口 and 救陰不在血而在津汗.",
+      "excerpt": "舌脹大不能出口者；救陰不在血，而在津汗",
+      "limitations": "This is an edited transcription assembled from identified witnesses, not a diplomatic transcription of one print."
+    },
+    {
+      "id": "wikisource-wenrelun-huaxiuyun-version",
+      "work": "温热论",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/溫熱論",
+      "apiUrl": "https://zh.wikisource.org/w/api.php?action=parse&page=溫熱論&prop=wikitext&format=json&formatversion=2",
+      "sourceRole": "public_transcription_version_witness",
+      "retrievedJsonSha256": "c8861bb9b0436da7d0e7f5c7426a5c204a4dde16eae5a4a067359dfa17b505b4",
+      "retrievedJsonBytes": 16323,
+      "locator": "華岫雲本; 察舌; 論濕邪",
+      "supports": "Independently reads 舌脹大不能出口 and 救陰不在血而在津汗. It does not contain 先自彷徨, demonstrating that the public versions are not character-identical.",
+      "excerpt": "舌脹大不能出口者；救陰不在血，而在津汗",
+      "limitations": "The page includes modern editorial framing and represents one public recension, not a universal base text."
+    },
+    {
+      "id": "jicheng-wenrejingwei-peking-scan-edition",
+      "work": "温热经纬",
+      "platform": "中醫笈成",
+      "url": "https://jicheng.tw/tcm/book/溫熱經緯/index.html",
+      "sourceRole": "identified_scan_based_collation_and_commentary_witness",
+      "retrievedHtmlSha256": "bda072f7d6bf7fa9bbd2c8c0ed7404fb4b368d684521ba746d5c753d41da9acc",
+      "retrievedHtmlBytes": 1100573,
+      "locator": "北京大學圖書館掃描本; 葉香巖外感溫熱篇; 薛生白濕熱病篇",
+      "supports": "Identifies 王士雄 and the Peking University Library scan. It records 先自彷徨 with a 唐本 variant, 救陰不在血而在津與汗 with another 唐本 variant, and visibly separates 雄按、汪按、楊云、徐洄溪等 later commentary from transmitted base text.",
+      "excerpt": "先自彷徨矣；救陰不在血，而在津與汗；雄按：徐洄溪云",
+      "limitations": "This is a nineteenth-century anthology and commentary layer. A match in it must be attributed to base text, recension note, or later commentator rather than automatically to 葉桂 or 薛雪."
+    },
+    {
+      "id": "wikisource-shiretiaobian-46-clause-transcription",
+      "work": "湿热条辨",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/濕熱條辨",
+      "apiUrl": "https://zh.wikisource.org/w/api.php?action=parse&page=濕熱條辨&prop=wikitext&format=json&formatversion=2",
+      "sourceRole": "public_46_clause_base_text_transcription",
+      "retrievedJsonSha256": "34454a59a542c31456860c1c96ecacbadfc67826c5037bc53f8f6ab245895947",
+      "retrievedJsonBytes": 28401,
+      "locator": "full work wikitext; clauses 一 through 四十六",
+      "supports": "Labels the work 清薛雪著、自注 and notes that 溫熱經緯 includes it as 濕熱病篇. The retrieved wikitext contains 46 numbered clauses.",
+      "excerpt": "清 薛雪 著、自注；《溫熱經緯》收錄為「濕熱病篇」",
+      "limitations": "The 46-clause public text does not settle the authorship of every annotation or later-added clause; 溫熱經緯 itself flags recension and interpolation concerns."
+    },
+    {
+      "id": "jicheng-wenbingtiaobian-cuhk-loc-edition",
+      "work": "温病条辨",
+      "platform": "中醫笈成",
+      "url": "https://jicheng.tw/tcm/book/溫病條辨/index.html",
+      "sourceRole": "identified_scan_based_edited_transcription_witness",
+      "retrievedHtmlSha256": "04766a2a80fc8bfdc6d1604b87ca1e2046db82015c9dafe19f27d360ef3dc8cf",
+      "retrievedHtmlBytes": 1083636,
+      "locator": "粤東惠濟倉重刊本 linked to CUHK and Library of Congress copies; selected passages",
+      "supports": "Reads 凡暑傷肺經氣分之輕證皆可用之 and 餓不死的傷寒、撐不死的痢疾. It restores context-specific characters hidden by the local placeholders: 䐜脹, 㿗疝, 䗪蟲, and 𤺏.",
+      "excerpt": "肺經氣分之輕證；撐不死的痢疾；䐜脹；㿗疝；䗪蟲；𤺏",
+      "limitations": "The page is an edited transcription tied to identified scans. Rare-character readings remain edition-specific until the scan image is independently inspected."
+    },
+    {
+      "id": "ctext-wenbingtiaobian-tu-edition-index",
+      "work": "温病条辨",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=339444",
+      "sourceRole": "public_work_and_edition_metadata",
+      "retrievedHtmlSha256": "794993d054fe5fbdc57b26eceb23bebe7068156867d8d216562c7db01a05148b",
+      "retrievedHtmlBytes": 33814,
+      "locator": "work index and edition metadata",
+      "supports": "Identifies 吳鞠通 as author and the edition as the 六安涂氏求我齋所刊書 copy.",
+      "excerpt": "作者：吳鞠通；版本：《六安涂氏求我齋所刊書》本",
+      "limitations": "Index metadata establishes work and edition identity but does not by itself resolve the selected character readings."
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": []
+}
