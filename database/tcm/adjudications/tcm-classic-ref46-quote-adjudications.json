@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "id": "tcm.classic.ref46.quote-adjudications",
+  "referenceId": "ref46",
+  "reviewedAt": "2026-07-18",
+  "reviewer": "Codex manual review of every non-contiguous candidate against the local text and selected public witnesses",
+  "defaultUnresolvedPolicy": {
+    "category": "abridged_or_modernized_source_paragraph",
+    "verdict": "traceable_to_reviewed_source_paragraph_non_verbatim",
+    "minimumBigramRecall": 0.6,
+    "reviewedLocatorFingerprint": "4e13d5f70221e207fb4fe84d5a1a37d9bcb62e9d5e20f2ee755b6927d7b500b7",
+    "note": "The reference wording is an abridgement, punctuation rewrite, or modernized teaching form. The source location was manually reviewed; it is a locator, not a verbatim match or content endorsement."
+  },
+  "expectedSourceOverrides": {
+    "tcm.classic.ref46.quote.L0135Q1": "shanghanlun-local-text"
+  },
+  "referenceCorrections": [
+    {
+      "id": "tcm.classic.ref46.quote.L0172Q2",
+      "originalText": "或救什一",
+      "correctedText": "或救十中之一二",
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition"],
+      "reason": "The reference compresses the prognosis to roughly one in ten, while the identified-scan-based witness reads one or two in ten; the local transcription is truncated after 或救."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0248Q1",
+      "originalText": "常以手从心捋至脐下,俾瘀露下行",
+      "correctedText": "常以手从心擀至脐下,俾瘀露下行",
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition"],
+      "reason": "The identified-scan-based witness reads 擀, not 捋; CText, Wikisource, and the local transcription all leave this character blank."
+    }
+  ],
+  "specialRecords": [
+    {
+      "id": "tcm.classic.ref46.quote.L0014Q1",
+      "quoteText": "渴而能消水、喜冷、溺短赤、便结、脉数=热;不渴或假渴不能消水、喜热汤、手足厥冷、溺清长、便溏、脉迟=寒。",
+      "category": "abridged_teaching_form_over_corrupted_local_transcription",
+      "verdict": "traceable_with_public_witness_correction",
+      "sourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [111]}],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition", "wikisource-yixuexinwu-full"],
+      "secondaryLocatorRefs": [],
+      "note": "The reference is a teaching compression. The local and Wikisource strings contain the nonsensical OCR insertion 喜冷冻饮料食; the identified-scan-based witness reads 喜冷饮食."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0040Q2",
+      "quoteText": "当用而不用之误/不当用而用之误/当用而用之不得其法之误",
+      "category": "editorial_cross_section_synthesis",
+      "verdict": "editorial_pattern_traceable_across_eight_method_sections",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [124, 133, 144, 151, 160, 168, 177, 187]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "This slash-delimited wording is the compiler's synthesis of the recurring error taxonomy across the eight treatment-method essays, not a continuous quotation."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0040Q3",
+      "quoteText": "为什么不能随便发汗/清热/进补",
+      "category": "modern_editorial_teaching_question",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [124, 168, 187]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern learner-facing question written by the reference compiler."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0058Q1",
+      "quoteText": "参芪归术,和平之性,温存之温也,春日煦煦是也;附子姜桂,辛辣之性,温热之温也,夏日烈烈是也。和煦之日人人可近,燥烈之日非积雪凝寒不可近。",
+      "category": "abridged_quote_with_local_ocr_omission",
+      "verdict": "traceable_with_public_witness_restoring_huangqi",
+      "sourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [181]}],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition"],
+      "secondaryLocatorRefs": [],
+      "note": "The local transcription drops the character represented by 耆/芪; the identified-scan-based witness reads 參、耆、歸、術."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0058Q5",
+      "quoteText": "温补无害",
+      "category": "modern_editorial_straw_phrase",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [184]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern label for the misconception rebutted by the surrounding classical passage."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0058Q6",
+      "quoteText": "补药不能乱吃",
+      "category": "modern_editorial_teaching_phrase",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [184]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern learner-facing summary, not wording from the work."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0074Q5",
+      "quoteText": "经证/腑证",
+      "category": "modern_editorial_comparison_label",
+      "verdict": "not_a_continuous_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [211, 212, 215]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Slash-delimited editorial label for a distinction discussed across the 经腑论 passages."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0097Q1",
+      "quoteText": "为什么煎药服药要讲规矩",
+      "category": "modern_editorial_teaching_question",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [41]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern learner-facing question based on the compiler's summary of 医中百误歌."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0101Q4",
+      "quoteText": "叩齿咽津",
+      "category": "modern_comparative_practice_label",
+      "verdict": "not_wording_from_yixuexinwu",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [57]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "The work describes swallowing saliva but does not use this four-character label; the label is a modern comparison."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0103Q3",
+      "quoteText": "调养依从性比补药重要",
+      "category": "modern_editorial_interpretation",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [64]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern interpretation of the 人参果 allegory."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0107Q2",
+      "quoteText": "为什么这个症状定位到这条经",
+      "category": "modern_editorial_teaching_question",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [377]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern summary of the repeated question-and-answer teaching format in volume two."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0116Q2",
+      "quoteText": "渴不渴、消水不消水",
+      "category": "editorial_teaching_shorthand",
+      "verdict": "traceable_to_two_source_discussions_non_verbatim",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [111, 567]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "A compiler shorthand joining the general cold/heat distinction and the six-channel thirst discussion."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0140Q1",
+      "quoteText": "存目+组成据原文",
+      "category": "database_editorial_storage_rule",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Internal database handling label written by the reference compiler."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0161Q2",
+      "quoteText": "治咳先治因",
+      "category": "modern_editorial_summary",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [1518]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern summary of the bell analogy, not the work's wording."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0166Q4",
+      "quoteText": "外寒内饮/痰热",
+      "category": "modern_cross_textbook_comparison_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [1544]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern comparison to later textbook pattern names."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0172Q2",
+      "quoteText": "或救什一",
+      "category": "reference_abbreviation_and_local_transcription_truncation",
+      "verdict": "reference_wording_corrected_by_identified_scan_based_witness",
+      "sourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [1654, 1655]}],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition"],
+      "secondaryLocatorRefs": [],
+      "note": "The local text stops at 或救; the public identified-scan-based transcription reads 或救十中之一二, which is more specific than the reference's 或救什一."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0207Q3",
+      "quoteText": "见胀满即消导",
+      "category": "modern_editorial_warning_phrase",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [2352]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern shorthand for the error warned against in the source paragraph."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0209Q1",
+      "quoteText": "人参、芪、术为敛汗之圣药",
+      "category": "normalized_character_variant_over_local_ocr_omission",
+      "verdict": "traceable_with_public_witness_restoring_huangqi",
+      "sourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [2375]}],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition", "ctext-yixuexinwu-selected-searches", "wikisource-yixuexinwu-full"],
+      "secondaryLocatorRefs": [],
+      "note": "The local, CText, and Wikisource transcriptions leave a blank. The identified-scan-based witness reads 耆; the reference normalizes that name to modern 芪."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0214Q3",
+      "quoteText": "切忌误伤蒂丁(悬雍垂)、舌下根",
+      "category": "stitched_editorial_warning",
+      "verdict": "traceable_to_two_distinct_source_passages_non_verbatim",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [2478, 2486]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "The compiler joins two separate cautions and adds the modern anatomical gloss 悬雍垂."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0248Q1",
+      "quoteText": "常以手从心捋至脐下,俾瘀露下行",
+      "category": "reference_character_error_over_shared_transcription_gap",
+      "verdict": "reference_wording_corrected_by_identified_scan_based_witness",
+      "sourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [3178]}],
+      "relatedSourceLocations": [],
+      "externalWitnessIds": ["jicheng-yixuexinwu-jinglun-edition", "ctext-yixuexinwu-selected-searches", "wikisource-yixuexinwu-full"],
+      "secondaryLocatorRefs": [],
+      "note": "CText, Wikisource, and the local file all omit the disputed character. The identified-scan-based witness reads 擀, so the reference's 捋 is not retained as canonical wording."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0262Q1",
+      "quoteText": "感染好转/恶化",
+      "category": "modern_clinical_interpretation_label",
+      "verdict": "not_a_classical_quote",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [3432, 3433, 3434]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Modern interpretation of 五善七恶, not wording from the work."
+    },
+    {
+      "id": "tcm.classic.ref46.quote.L0270Q3",
+      "quoteText": "少阴急下",
+      "category": "modern_editorial_doctrine_label",
+      "verdict": "traceable_to_multiple_source_passages_non_verbatim",
+      "sourceLocations": [],
+      "relatedSourceLocations": [{"sourceId": "yixuexinwu-local-text", "lines": [516, 519, 520, 532, 540, 544]}],
+      "externalWitnessIds": [],
+      "secondaryLocatorRefs": [],
+      "note": "Compact editorial label for Cheng's repeated use of urgent purgation in the Shaoyin teaching section."
+    }
+  ]
+}

@@ -37,6 +37,7 @@
 | VAL-TCM-012 | P0 | 中医/典籍 | `42-43`《素问》《灵枢》《难经》整理稿显式引文来源与形态 | 典籍文本/版本见证/逐条引用 | V2+本地全文+公共转录校勘 | pass | 《素问》111 段为 83 定位/28 人工/0 待办；《灵枢》《难经》98 段为 75 定位/23 人工/0 待办，1,073 项 0 fail；3 条实际来自《素问》，3 处本地转录差异获 CText/Wikisource 支持；全部 blocked，不授证解释或现代用法 |
 | VAL-TCM-014 | P0 | 中医/典籍 | `44-经典-伤寒论六经方证条文.md` 显式引文来源与形态 | 典籍文本/复本见证/逐条引用 | V2+本地全文+公共转录校勘 | pass | 170 段为 154 机械定位/16 人工/0 待办；9 条同时见《金匮》、4 条声明互参、0 来源错配；后世《伤寒附翼》评语、OCR 占位符和公共转录异文已分层；2,149 项 0 fail，全部 blocked |
 | VAL-TCM-015 | P0 | 中医/典籍 | `45-经典-金匮要略杂病方证条文.md` 显式引文来源与形态 | 典籍文本/复本见证/逐条引用 | V2+本地全文+公共转录校勘 | pass | 113 段为 96 机械定位/17 人工/0 待办；4 条同时见《伤寒》、1 条《素问》用语、0 来源错配；大逆/火逆、A2K0/㽲、膀肽/膀胱已分层；1,453 项 0 fail，全部 blocked |
+| VAL-TCM-016 | P0 | 中医/医家 | `46-医家-医学心悟要义.md` 显式引文来源与形态 | 医家原著/转引经典/逐条引用 | V2+本地全文+可识别底本公共转录校勘 | pass | 357 段为 240 机械定位/117 人工/0 待办；95 条近似段落定位以指纹冻结，22 条特殊裁决；修正“擀/捋”和“十中之一二/什一”，15 条现代编辑语分层；5,481 项 0 fail，全部 blocked |
 | VAL-SOURCE-002 | P1 | 中医/来源 | 倪海厦 Skill 外部仓库的版本、规模、许可、原始见证和可吸收边界 | 来源/许可/溯源 | V1+固定仓库审计 | pass | 固定 commit `ec03c594...`；32 文件/51,258 行；README 许可声明与仓库树不一致，原始参考资料已移除且本地 books 路径不可访问；只登记 metadata，runtime 字段为 0，正文不得晋升为原典或 accepted 主张 |
 | VAL-SOURCE-003 | P1 | 数据库/教学 | xuanxue-database-skill 的三库 schema、回测合同、许可和天机卷吸收边界 | 来源/结构/隐私/证据 | V1+固定仓库审计 | pass | 固定 commit `926d0b56...`；14 文件/858 行，MIT LICENSE 完整；吸收匿名命例、冻结断语、观察与方法关联，拒绝少量应验自动验证、经典/个人可靠度混写和现实结果自动改变掌握度；候选 schema runtime 字段为 0 |
 | VAL-SOURCE-004 | P1 | 中医/典籍 | `nihaisha-nishi-tcm` 课程证据库、页卡、古籍候选、许可和四部典籍路由 | 来源/许可/经典定位/勘误 | V1+固定仓库审计+交叉检查 | pass | 固定 commit `e3cb5135...`；3,094 文件、2,986 截图、22 文献/10,538 页卡；无标准开源许可，22 文献均缺版本/源哈希；51 条勘误交叉检查后 0 条直接覆盖，灵枢/难经/伤寒/金匮均保持 locator-only |
@@ -165,6 +166,12 @@
 | F-TCM-087 | P1 | VAL-TCM-015 | duplicate_shanghan_witnesses_preserved | 4 条显式引文同时在本地《金匮要略》《伤寒论》连续命中 | 保留两书定位并按 ref45 语境选《金匮》；复本重复不是来源冲突 |
 | F-TCM-088 | P1 | VAL-TCM-015 | external_suwen_allusion_separated | “有故无殒”只在本地《素问》连续命中，整理稿用它说明《金匮》妊娠方的历史语境 | 标为外部经典用语，不算《金匮》正文，也不算来源错配 |
 | F-TCM-089 | P1 | VAL-TCM-015 | non_verbatim_and_editorial_forms_classified | 17 条人工项包含相邻段拼接、删节、语序重排、方名异体、版本括注和现代缩写 | 每条绑定来源行与形态裁决；可追溯不等于逐字引文，不授证医学解释、急救或现实使用 |
+| F-TCM-090 | P1 | VAL-TCM-016 | scan_based_character_correction | 整理稿作“常以手从心捋至脐下”，本地、CText、Wikisource 均缺该字；绑定香港中文大学扫描本的中醫笈成整理文本作“擀” | overlay 采用“擀”并保留版本限定；raw 不改写，待独立逐页检查扫描本后再提升见证等级 |
+| F-TCM-091 | P1 | VAL-TCM-016 | quantitative_compression_rejected | 整理稿“或救什一”把可识别底本的“或救十中之一二”压成不同的比例；本地 raw 在“或救”后截断 | 不把“什一”视作等价原文；normalized 修正为底本读法，raw 保持原样 |
+| F-TCM-092 | P1 | VAL-TCM-016 | shared_transcription_error_propagation | 本地与 Wikisource 均作“喜冷冻饮料食”，而可识别底本整理文本作“喜冷饮食” | 共同错误不能按见证数量投票；Wikisource 在此只证明传播链，校勘采用“喜冷饮食”并保留版本边界 |
+| F-TCM-093 | P1 | VAL-TCM-016 | missing_herb_character_normalized | 本地/CText/Wikisource 多处出现“参、 、归、术”“人参、 、术”缺字，可识别底本作“耆” | 记录“耆→芪”的异体/现代药名规范化和缺字依据，不把整理稿现代字形伪装成 raw 原字符 |
+| F-TCM-094 | P1 | VAL-TCM-016 | editorial_quotes_separated | 15 条双引号文字是现代教学问题、比较标签、解释或数据库规则，例如“为什么不能随便发汗”“感染好转/恶化” | 改判 editorial，不作为《医学心悟》直引；独立教学价值和现代证据另审 |
+| F-TCM-095 | P1 | VAL-TCM-016 | reviewed_approximate_locators_frozen | 95 条非连续形式可稳定回接《医学心悟》同一段，主要涉及删节、标点重排、括注、等号化表达和现代缩写 | 逐条人工检查并冻结定位指纹；来源可追踪不等于逐字引文，也不授证解释或现实使用 |
 | F-XIANG-001 | P1 | VAL-XIANG-001 | boundary_overreach_corrected | 旧运行时把无出处扩写直接当结论，首轮修复又把“无现代验证”误当成传统内容应整体排除 | 保留几何隔离，但改为典籍见证优先：有出处条目进入带引用文化层，无出处/冲突扩写保持候选或 blocked；不删除 raw |
 | F-XIANG-002 | P1 | VAL-XIANG-001 | geometry_contract_remediated | 手指间距实际为度数却按 `0.06` 阈值判宽窄；掌丘估计返回字符串却按数值比较，且 21 点骨架本身不覆盖掌丘表面 | 指缝只显示逐指角度；删除 `moundEstimates` 计算、展示与 prompt 消费，合成关键点回归固定能力边界 |
 | F-XIANG-003 | P1 | VAL-XIANG-001 | rotation_dependency_remediated | 面部对称性直接比较图片 x 坐标，小指关节判断直接比较 y 坐标；同一关键点旋转后结果改变 | 分别沿面部中轴法向和无名指轴投影；30°/90° 合成旋转属性测试固定结果不变 |
@@ -268,6 +275,7 @@
 | 2026-07-18 | VAL-TCM-012 | `audit:tcm-classic-ref43-quotes`；本地《灵枢》《难经》《素问》；CText/Wikisource 公共转录见证；`nihaisha-nishi-tcm` 页卡 locator | 98 段显式引文为 6 原字符、60 规范化、9 省略分段、23 人工、0 待办；3 条跨书《素问》引文、3 处公共见证支持的本地转录差异和 3 条现代编辑文字均已分层；1,073 项 0 fail，全部 blocked |
 | 2026-07-18 | VAL-TCM-014 | `audit:tcm-classic-ref44-quotes`；本地《伤寒论》《金匮要略》《素问》《灵枢》《难经》《方剂学》；CText/Wikisource；`nihaisha-nishi-tcm` 二级 locator | 170 段为 22 原字符、114 规范化、18 省略分段、16 人工、0 待办；9 条《伤寒》《金匮》复本命中、4 条声明跨书、0 来源错配；公共见证修正 1 个 OCR 占位符和 1 处转录异文，2,149 项 0 fail，全部 blocked |
 | 2026-07-18 | VAL-TCM-015 | `audit:tcm-classic-ref45-quotes`；本地《金匮要略》《伤寒论》《素问》《灵枢》《难经》；CText/Wikisource；`nihaisha-nishi-tcm` 二级 locator | 113 段为 14 原字符、71 规范化、11 省略分段、17 人工、0 待办；4 条《金匮》《伤寒》复本、1 条《素问》用语、0 来源错配；确认“大逆”并校正 A2K0/㽲、膀肽/膀胱，1,453 项 0 fail，全部 blocked |
+| 2026-07-18 | VAL-TCM-016 | `audit:tcm-classic-ref46-quotes`；本地《医学心悟》及相关经典；CText/Wikisource；中醫笈成清经纶堂本整理文本 | 357 段为 82 原字符、150 规范化、8 省略分段、117 人工、0 待办；95 条近似段落定位冻结、22 条特殊裁决、2 条参考文字修正、15 条现代编辑语；5,481 项 0 fail，全部 blocked |
 | 2026-07-11 | VAL-SOURCE-001 | `audit:source-library`；9 个声明来源组；逐文件 SHA256、字节数、路径和镜像关系复算 | 252 个来源文件全部进入中央索引并可解析；46 个 compendium 镜像相同、24 个为历史变体；2 项专项测试 0 fail。通过只授证来源文件盘点与完整性，不授证内容正确性或产品资格 |
 | 2026-07-11 | VAL-TCM-013 | `tcm-classic-quote-adjudications.json`；原样保留的 `42-经典-素问要义.md`；`audit:tcm-classic-quotes` | 原 29 条机械未命中项完成逐条裁决：1 条拼接误引在 normalized 覆盖层校正，28 条按删节/拼接/改写/编辑说明/后世注语/文本变体分类；Skill 原包保持原哈希。现为 83 条机械定位、28 条人工形态裁决、0 条待人工，693 项 0 fail。王冰注、后世口诀、现代括注和遗篇与核心篇章保持分层；全部 blocked |
 | 2026-07-18 | VAL-SOURCE-002 | 固定 GitHub commit/tree `ec03c594ed239b570e997cbd396c2fc186b6ad91`；仓库树/README/研究索引；`external-source-manifests.test.mjs`；`audit:source-library` | 倪海厦 Skill 32 文件/51,258 行完成元数据审计；许可声明、原始讲义和页码级溯源均有阻断项，不吸收正文；7 组覆盖映射全部 discovery-only/blocked；中央来源库补入 9 份 CText 见证和该档案，现为 262 文件/11 组，5 项专项测试 0 fail |

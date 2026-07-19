@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "source.tcm.ref46.public-transcription-witnesses.2026-07-18",
+  "title": "《医学心悟》公共底本与转录校勘见证",
+  "fetchedAt": "2026-07-18",
+  "scope": "reference_46_local_transcription_and_wording_witnesses",
+  "doctrine": "identified_scan_based_texts_and_public_transcriptions_are_collation_witnesses_not_automatic_content_authority",
+  "retrieval": {
+    "method": "HTTP GET with redirects and a browser-compatible user agent; Wikisource was read through its public MediaWiki parse API",
+    "hashMeaning": "SHA256 and bytes identify the exact HTML or JSON response retrieved for this audit; dynamic pages may produce a different response hash later.",
+    "archivalBoundary": "Only transformed metadata and short public-domain passage witnesses are stored here; fetched HTML, JSON, and scans remain outside the repository."
+  },
+  "witnesses": [
+    {
+      "id": "ctext-yixuexinwu-zhaozhaoxiang-index",
+      "work": "医学心悟",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=97313",
+      "sourceRole": "identified_scan_aligned_public_transcription_metadata",
+      "retrievedHtmlSha256": "63d2d7adf85009bfdf6c43469638d674b503b0a369567680bffc1bb43af2a7dc",
+      "retrievedHtmlBytes": 27554,
+      "locator": "work index and edition metadata",
+      "supports": "Identifies 程国彭 as author and the aligned image source as the 《庄兆祥教授知足书室藏书》 copy.",
+      "excerpt": "作者：程国彭；版本：《庄兆祥教授知足书室藏书》本",
+      "limitations": "The public transcription is OCR-aligned but still contains blank or corrupted characters; the index metadata does not itself resolve individual readings."
+    },
+    {
+      "id": "ctext-yixuexinwu-selected-searches",
+      "work": "医学心悟",
+      "platform": "Chinese Text Project",
+      "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=97313",
+      "sourceRole": "public_transcription_error_witness",
+      "retrievedHtmlSha256": [
+        "e7bb5c41a21fcb71e22f9f2a94a1a0748028486f15067200a217d5233cbcf893",
+        "fadcb4f70adbea116059626e778e9fcf2a37121184388fe20e912c4670adcfc6"
+      ],
+      "retrievedHtmlBytes": 27312,
+      "locator": "卷四·自汗盗汗；卷四·产后将护法",
+      "supports": "Confirms that the public OCR transcription shares the local blank after 人参 and the blank after 常以手从心; those gaps therefore cannot validate an inserted character by themselves.",
+      "excerpt": "人参、 、术；常以手从心 至脐下",
+      "limitations": "Used as error-propagation evidence, not as support for the missing characters."
+    },
+    {
+      "id": "wikisource-yixuexinwu-full",
+      "work": "医学心悟",
+      "platform": "Wikisource",
+      "url": "https://zh.wikisource.org/wiki/醫學心悟",
+      "apiUrl": "https://zh.wikisource.org/w/api.php?action=parse&page=醫學心悟&prop=wikitext&format=json",
+      "sourceRole": "public_transcription_error_propagation_witness",
+      "retrievedJsonSha256": "ea719b0fcb0025d66ce8d176b7bd162752ecafab5dd9901550af52c9d9bc52c1",
+      "retrievedJsonBytes": 821969,
+      "locator": "full work wikitext",
+      "supports": "Independently exposes a full public transcription but repeats 喜冷冻饮料食 and the same missing characters found in the local file.",
+      "excerpt": "喜冷冻饮料食；人参、 、术；常以手从心 至脐下",
+      "limitations": "Because the same corruption is repeated, this is not an independent character-level witness for those readings."
+    },
+    {
+      "id": "jicheng-yixuexinwu-jinglun-edition",
+      "work": "医学心悟",
+      "platform": "中醫笈成",
+      "url": "https://jicheng.tw/tcm/book/醫學心悟/index.html",
+      "sourceRole": "identified_scan_based_edited_public_transcription_witness",
+      "retrievedHtmlSha256": "8ca2b9b687015d981f75d3324ea03b66cf4b66f55bdcbb43282706c988edd360",
+      "retrievedHtmlBytes": 1113302,
+      "locator": "清經綸堂本（香港中文大學圖書館掃描本）; 寒熱虛實表里陰陽辨；真心痛；自汗；產後將護法",
+      "supports": "Reads 喜冷飲食, 人參、耆、術, 或救十中之一二, and 常以手從心擀至臍下. These readings expose one local OCR insertion, two local omissions/truncations, and two reference wording problems.",
+      "excerpt": "喜冷飲食；人參、耆、術；或救十中之一二；常以手從心擀至臍下",
+      "limitations": "An edited transcription tied to an identified scan, not a diplomatic facsimile transcription. Character-level corrections remain edition-specific until the scan is independently inspected."
+    }
+  ],
+  "productEligibility": "blocked",
+  "runtimeEligibleFields": []
+}
