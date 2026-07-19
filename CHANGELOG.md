@@ -6,6 +6,12 @@
 - 以标明河北人民出版社 1977 年 2 版的公共整理文本校正闟缺字、“脉减谵甚”和“若开破之则胀去人脱”；raw 不改写。
 - 分开 16 条外部经典、19 条后世具名转引/医案/评论和 7 条现代编辑语；`nihaisha-nishi-tcm` 本批未覆盖独立版本见证。`42-48` 共 1,470 段首轮完成，中央来源库更新为 11 组、272 文件，`TJI-VAL-027` 关闭。
 
+## 2026-07-19 (ch6 batch — E2E, chapter complete)
+
+- **E2E**: ch6 四轮矩阵全绿（console+server 双零错误）——①optimal 女 190/57→**227/67 精确**（CP×3 optimal、三 KP 掌握、pass 链 5 节点实走、装卦盘视觉截图：五爻动爻 Ⅰ○ 金标+**bian 列「→子·子孙」实渲染**、中途账目 194/58 吻合）②fail 43→判定 44<45 fail 链 010-030 实走、197/45 精确、CP 全 wrong+三 KP 待复习不锁死 ③**边界档线分离** 45→判定 46≥45 pass（错线但档到→pass；与②构成 threshold 两侧双向实证）192/47 ④男版 optimal 227/67、tick 级探针全程零「师姐/她」泄漏、「师兄」渲染 6 次实证。
+- **tooling**: walker `cpPicks` by nodeId 固化入 chapter-walker.js——ch6 CP-03 正解列 B（三题挑对测验设计）打破「optimal 恒首项」假设；首轮 227 差 5 即由此暴露（CP-03 误选 A=wrong），cpPicks 修复后精确命中。
+- **第六章《动爻》全链收官**：策划案（自审折毕）→ 审计第六批（witness 10 passages+90 checks）→ 剧本 v1.1（两轮收敛）→ 数据化 320 节点（lint ALL GREEN）→ E2E 四轮。KP-LY-016/017/018 accepted。
+
 ## 2026-07-19 (ch6 batch — script/data)
 
 - **script**: CHAPTER_6_SCRIPT_v1.md v1.1 — 826→880+ 行七幕：换月/铃响/出手的人（KP-016）/那半分指着的爻（观之剥+择动+CP-01+回頭克）/錾记（CP-02）/袖里的手（暗動日破+CP-03+natal 作业 favorBranch）/三个旧字。两轮审查收敛（R1 PASS-WITH-FIXES 3P1+5P2 全折；R2 delta 8/8 零回归）。
